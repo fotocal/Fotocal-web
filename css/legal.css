@@ -1,0 +1,64 @@
+/* Fotocal — legal pages */
+@import url("style.css");
+
+.legal-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(251, 246, 236, 0.85);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--gold-border-soft);
+}
+.legal-header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 0;
+}
+.legal-main { padding: 3.5rem 0 5rem; }
+.legal-card {
+  background: var(--white);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(1.8rem, 5vw, 3.5rem);
+}
+.legal-card h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+  font-weight: 550; line-height: 1.15; letter-spacing: -.015em;
+  margin-bottom: .4rem;
+}
+.legal-updated { color: var(--muted); font-size: .88rem; margin-bottom: 2.2rem; }
+.legal-card h2 {
+  font-family: var(--font-display); font-size: 1.45rem; font-weight: 600;
+  margin: 2.4rem 0 .8rem; color: var(--ink);
+}
+.legal-card h3 { font-size: 1.05rem; font-weight: 700; margin: 1.6rem 0 .5rem; color: var(--gold-dark); }
+.legal-card p { margin-bottom: .9rem; color: #4A3D24; font-size: .97rem; }
+.legal-card ul, .legal-card ol { margin: 0 0 1rem 1.4rem; color: #4A3D24; font-size: .97rem; }
+.legal-card ul { list-style: disc; }
+.legal-card ol { list-style: decimal; }
+.legal-card li { margin-bottom: .45rem; }
+.legal-card a { color: var(--gold-dark); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold-border); }
+.legal-card a:hover { text-decoration-color: var(--gold); }
+.legal-card table {
+  width: 100%; border-collapse: collapse; margin: 1rem 0 1.4rem; font-size: .9rem;
+}
+.legal-card th, .legal-card td {
+  text-align: left; padding: .6rem .8rem;
+  border: 1px solid var(--gold-border-soft);
+}
+.legal-card th { background: var(--cream); color: var(--gold-dark); font-weight: 700; }
+.legal-callout {
+  background: var(--cream); border: 1px solid var(--gold-border);
+  border-radius: var(--r-md); padding: 1.1rem 1.4rem; margin: 1.2rem 0;
+}
+.legal-callout p { margin: 0; }
+.back-link { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; color: var(--gold-dark); font-size: .92rem; }
+.back-link:hover { color: var(--ink); }
+.legal-footer {
+  border-top: 1px solid var(--gold-border-soft);
+  padding: 2rem 0; text-align: center; color: var(--muted); font-size: .85rem;
+}
+.legal-footer a { color: var(--gold-dark); font-weight: 600; }
+
+/* language blocks */
+[data-lang-block] { display: none; }
+[data-lang-block].visible { display: block; }

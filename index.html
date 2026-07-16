@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotocal — Una foto. Todas tus calorías, al instante.</title>
+  <meta name="description" content="Fotocal es la app de nutrición con IA: fotografía tu comida y obtén calorías, macros y una puntuación de calidad al instante. Escáner de códigos de barras, diario de comidas, Coach Kal y mucho más.">
+  <meta name="keywords" content="contador de calorías, escáner de comida, IA nutrición, macros, app calorías foto, Fotocal">
+  <link rel="canonical" href="https://fotocal.github.io/Fotocal-web/">
+  <meta name="theme-color" content="#FBF6EC">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Fotocal — Una foto. Todas tus calorías, al instante.">
+  <meta property="og:description" content="Fotografía tu comida y la IA te da calorías, macros y una puntuación de calidad con alternativas más saludables. Disponible en Google Play.">
+  <meta property="og:url" content="https://fotocal.github.io/Fotocal-web/">
+  <meta property="og:image" content="https://fotocal.github.io/Fotocal-web/assets/og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fotocal — Una foto. Todas tus calorías, al instante.">
+  <meta name="twitter:description" content="Fotografía tu comida y la IA te da calorías, macros y puntuación de calidad. Disponible en Google Play.">
+  <meta name="twitter:image" content="https://fotocal.github.io/Fotocal-web/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Fotocal",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "HealthApplication",
+    "description": "App de nutrición con IA: fotografía tu comida y obtén calorías, macros y puntuación de calidad al instante.",
+    "offers": [
+      { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "name": "Pro Mensual" },
+      { "@type": "Offer", "price": "16.99", "priceCurrency": "EUR", "name": "Pro 3 Meses" },
+      { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR", "name": "Pro Anual" }
+    ],
+    "installUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav">
+      <a class="nav-logo" href="#top" aria-label="Fotocal">
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo-apple"/></svg>
+        <span>Fotocal</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#funciones" data-i18n="nav.features">Funciones</a>
+        <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#precios" data-i18n="nav.pricing">Precios</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Change language">
+          <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+        </button>
+        <a class="btn btn-cta btn-nav" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="i-play" aria-hidden="true"><path d="M4 2.5v19l11-9.5L4 2.5z" fill="currentColor"/><path d="M15 12l4.2-2.4c1.1.6 1.1 4.2 0 4.8L15 12z" fill="currentColor" opacity=".75"/></svg>
+          <span data-i18n="nav.cta">Google Play</span>
+        </a>
+        <button class="nav-burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="floaties" aria-hidden="true">
+        <span class="floaty" style="--fx:6%;--fy:18%;--fd:0s">🥑</span>
+        <span class="floaty" style="--fx:88%;--fy:14%;--fd:1.2s">🍓</span>
+        <span class="floaty" style="--fx:12%;--fy:62%;--fd:2.1s">🥗</span>
+        <span class="floaty" style="--fx:90%;--fy:58%;--fd:.6s">🍊</span>
+        <span class="floaty" style="--fx:78%;--fy:82%;--fd:1.7s">🫐</span>
+        <span class="floaty" style="--fx:4%;--fy:86%;--fd:2.6s">🥦</span>
+      </div>
+
+      <div class="container">
+        <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">📸 Nutrición con IA · Android</p>
+        <h1 class="hero-title reveal" data-i18n-html="hero.title">Una foto. Todas tus calorías, <em class="accent">al instante</em>.</h1>
+
+        <div class="hero-split">
+          <div class="hero-copy reveal" style="--rd:.15s">
+            <p class="hero-sub" data-i18n="hero.sub">Fotocal reconoce tu comida con inteligencia artificial: calorías, macros y una puntuación de calidad con alternativas más saludables. Sin pesar, sin buscar en listas infinitas, sin complicarte.</p>
+            <div class="hero-ctas">
+              <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Descargar en Google Play">
+                <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
+                  <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
+                  <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
+                  <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
+                  <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
+                </svg>
+                <span class="play-badge-text">
+                  <small data-i18n="hero.badgeTop">DISPONIBLE EN</small>
+                  <strong>Google Play</strong>
+                </span>
+              </a>
+              <a class="btn btn-ghost" href="#como-funciona" data-i18n="hero.secondary">Ver cómo funciona ↓</a>
+            </div>
+            <ul class="hero-perks">
+              <li data-i18n="hero.perk1">✦ Prueba gratis de 3 días</li>
+              <li data-i18n="hero.perk2">✦ Funciona sin conexión</li>
+              <li data-i18n="hero.perk3">✦ En español e inglés</li>
+            </ul>
+          </div>
+
+          <!-- Phone mockup -->
+          <div class="hero-phone reveal" style="--rd:.3s">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="app-top">
+                  <div>
+                    <p class="app-hello" data-i18n="phone.hello">Hola, Laura 👋</p>
+                    <p class="app-date" data-i18n="phone.date">Miércoles, 16 de julio</p>
+                  </div>
+                  <div class="app-streak">🔥 12</div>
+                </div>
+                <div class="app-ring-card">
+                  <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="52" class="ring-bg"/>
+                    <circle cx="60" cy="60" r="52" class="ring-fg" id="calRing"/>
+                  </svg>
+                  <div class="ring-label">
+                    <strong>1.284</strong>
+                    <span data-i18n="phone.kcalLeft">de 1.900 kcal</span>
+                  </div>
+                </div>
+                <div class="app-macros">
+                  <div class="macro"><span data-i18n="phone.protein">Proteína</span><div class="macro-bar"><i style="--w:72%"></i></div><small>86g</small></div>
+                  <div class="macro"><span data-i18n="phone.carbs">Carbos</span><div class="macro-bar"><i style="--w:55%"></i></div><small>132g</small></div>
+                  <div class="macro"><span data-i18n="phone.fat">Grasas</span><div class="macro-bar"><i style="--w:48%"></i></div><small>41g</small></div>
+                </div>
+                <div class="app-meal">
+                  <span class="app-meal-emoji">🥗</span>
+                  <div><strong data-i18n="phone.meal1">Ensalada César</strong><small data-i18n="phone.meal1sub">Comida · 420 kcal</small></div>
+                  <span class="app-score">8/10</span>
+                </div>
+                <div class="app-meal">
+                  <span class="app-meal-emoji">🍳</span>
+                  <div><strong data-i18n="phone.meal2">Tortilla de espinacas</strong><small data-i18n="phone.meal2sub">Desayuno · 310 kcal</small></div>
+                  <span class="app-score">9/10</span>
+                </div>
+                <div class="app-fab">📷</div>
+              </div>
+            </div>
+            <div class="phone-chip chip-1">
+              <span>💧</span><div><strong>1,5 L</strong><small data-i18n="phone.water">Agua hoy</small></div>
+            </div>
+            <div class="phone-chip chip-2">
+              <span>👟</span><div><strong>8.412</strong><small data-i18n="phone.steps">pasos</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SOCIAL PROOF ═══════════ -->
+    <section class="proof">
+      <div class="container proof-inner reveal">
+        <div class="proof-stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="proof-quote" data-i18n="proof.q1">“Por fin una app en la que apuntar lo que como no es un trabajo más.”</p>
+        <span class="proof-dot" aria-hidden="true">·</span>
+        <p class="proof-quote" data-i18n="proof.q2">“La foto lo reconoce todo, hasta el plato de mi abuela.”</p>
+        <span class="proof-dot" aria-hidden="true">·</span>
+        <p class="proof-quote" data-i18n="proof.q3">“Coach Kal me responde mejor que mi grupo del gym.”</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURES ═══════════ -->
+    <section class="section" id="funciones">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="feat.kicker">Funciones</p>
+        <h2 class="section-title reveal" data-i18n-html="feat.title">Todo lo que comes, <em class="accent">entendido</em>.</h2>
+
+        <!-- Big AI scan card -->
+        <div class="scan-card reveal">
+          <div class="scan-copy">
+            <span class="pill" data-i18n="feat.scanPill">✨ La estrella de Fotocal</span>
+            <h3 data-i18n="feat.scanTitle">Escáner de comida con IA</h3>
+            <p data-i18n="feat.scanBody">Apunta con la cámara a cualquier plato — casero, de restaurante o de tupper — y en segundos tienes calorías, proteínas, carbohidratos y grasas. Además, cada comida recibe una puntuación de calidad y sugerencias de alternativas más saludables.</p>
+            <ul class="scan-list">
+              <li data-i18n="feat.scanLi1">Reconoce platos completos y raciones</li>
+              <li data-i18n="feat.scanLi2">Puntuación de calidad de 1 a 10</li>
+              <li data-i18n="feat.scanLi3">Alternativas más sanas al momento</li>
+            </ul>
+          </div>
+          <div class="scan-visual" aria-hidden="true">
+            <div class="scan-photo">
+              <span class="scan-food">🥘</span>
+              <div class="scan-line"></div>
+              <div class="scan-corners"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="scan-result">
+              <strong data-i18n="feat.scanResName">Paella de verduras</strong>
+              <div class="scan-macros">
+                <span>486 kcal</span><span>P 14g</span><span>C 68g</span><span>G 16g</span>
+              </div>
+              <div class="scan-quality"><span data-i18n="feat.scanResQ">Calidad</span> <b>8/10</b> 🌿</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature grid -->
+        <div class="feat-grid">
+          <article class="feat-card reveal"><span class="feat-icon">‖▌‖</span><h4 data-i18n="feat.f1t">Escáner de código de barras</h4><p data-i18n="feat.f1b">Escanea cualquier producto del súper y añádelo a tu diario en un segundo.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">📖</span><h4 data-i18n="feat.f2t">Escáner de menús</h4><p data-i18n="feat.f2b">Fotografía la carta del restaurante y descubre la opción que mejor encaja contigo.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">🍽️</span><h4 data-i18n="feat.f3t">Diario de comidas</h4><p data-i18n="feat.f3b">Desayuno, comida, cena y snacks con objetivos de calorías y macros a tu medida.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">💧</span><h4 data-i18n="feat.f4t">Registro de agua</h4><p data-i18n="feat.f4b">Controla tu hidratación diaria con un toque.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">📈</span><h4 data-i18n="feat.f5t">Peso con gráficas</h4><p data-i18n="feat.f5b">Registra tu peso y visualiza tu progreso con gráficas claras y motivadoras.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">👟</span><h4 data-i18n="feat.f6t">Pasos automáticos</h4><p data-i18n="feat.f6b">Tus pasos se cuentan solos gracias a Health Connect. Sin abrir la app.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">💬</span><h4 data-i18n="feat.f7t">Coach Kal (IA)</h4><p data-i18n="feat.f7b">Tu entrenador nutricional por chat, disponible 24/7 para dudas y consejos.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">📝</span><h4 data-i18n="feat.f8t">Diario de ánimo</h4><p data-i18n="feat.f8b">Apunta cómo te sientes cada día y descubre cómo se relaciona con lo que comes.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">🔥</span><h4 data-i18n="feat.f9t">Rachas</h4><p data-i18n="feat.f9b">Mantén viva tu racha diaria y convierte el hábito en un juego.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">🗞️</span><h4 data-i18n="feat.f10t">Resumen semanal</h4><p data-i18n="feat.f10b">Cada semana, un recap con tus logros, tendencias y áreas de mejora.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">🎯</span><h4 data-i18n="feat.f11t">Recomendaciones personalizadas</h4><p data-i18n="feat.f11b">Consejos que se adaptan a tus objetivos, tus gustos y tu ritmo de vida.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">⏰</span><h4 data-i18n="feat.f12t">Recordatorios inteligentes</h4><p data-i18n="feat.f12b">Avisos en el momento justo para que no se te escape ninguna comida.</p></article>
+          <article class="feat-card reveal"><span class="feat-icon">✈️</span><h4 data-i18n="feat.f13t">Modo sin conexión</h4><p data-i18n="feat.f13b">Registra todo aunque no tengas internet. Se sincroniza cuando vuelvas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ HOW IT WORKS ═══════════ -->
+    <section class="section section-alt" id="como-funciona">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="how.kicker">Cómo funciona</p>
+        <h2 class="section-title reveal" data-i18n-html="how.title">Tres pasos. <em class="accent">Cero fricción</em>.</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <span class="step-emoji">📸</span>
+            <h3 data-i18n="how.s1t">Haz la foto</h3>
+            <p data-i18n="how.s1b">Abre Fotocal y fotografía tu plato, el código de barras o la carta del restaurante.</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step reveal" style="--rd:.15s">
+            <span class="step-num">02</span>
+            <span class="step-emoji">🤖</span>
+            <h3 data-i18n="how.s2t">La IA lo analiza</h3>
+            <p data-i18n="how.s2b">En segundos: calorías, macros, puntuación de calidad y alternativas más saludables.</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step reveal" style="--rd:.3s">
+            <span class="step-num">03</span>
+            <span class="step-emoji">🌱</span>
+            <h3 data-i18n="how.s3t">Registra y mejora</h3>
+            <p data-i18n="how.s3b">Tu diario, tus rachas y Coach Kal te acompañan hacia tus objetivos, día a día.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ COACH KAL ═══════════ -->
+    <section class="section" id="coach">
+      <div class="container coach-split">
+        <div class="coach-chat reveal" aria-hidden="true">
+          <div class="chat-head"><span class="chat-avatar">🧑‍🍳</span><div><strong>Coach Kal</strong><small class="chat-status" data-i18n="coach.status">En línea · IA</small></div></div>
+          <div class="chat-bubble user" data-i18n="coach.msg1">Hoy ceno fuera, ¿qué pido en un italiano? 🍝</div>
+          <div class="chat-bubble bot" data-i18n="coach.msg2">¡Buena elección! Prueba una pasta al pomodoro con proteína extra (pollo o gambas) y comparte el postre. Te quedan 640 kcal para hoy: encaja perfecto 👌</div>
+          <div class="chat-bubble user" data-i18n="coach.msg3">¿Y si caigo en el tiramisú? 😅</div>
+          <div class="chat-bubble bot" data-i18n="coach.msg4">Un tiramisú son ~450 kcal. Disfrútalo sin culpa y mañana te preparo un desayuno más ligero. Un postre no rompe tu progreso, abandonarlo sí 💪</div>
+          <div class="chat-typing"><i></i><i></i><i></i></div>
+        </div>
+        <div class="coach-copy reveal" style="--rd:.15s">
+          <p class="kicker" data-i18n="coach.kicker">Tu coach de bolsillo</p>
+          <h2 class="section-title" data-i18n-html="coach.title">Conoce a <em class="accent">Coach Kal</em></h2>
+          <p class="coach-body" data-i18n="coach.body">Un entrenador nutricional con IA que conoce tu diario, tus objetivos y tu día a día. Pregúntale qué cocinar, qué pedir fuera de casa o por qué te has estancado: Coach Kal responde con consejos concretos, realistas y sin sermones.</p>
+          <ul class="coach-perks">
+            <li data-i18n="coach.p1">💬 Respuestas al momento, 24/7</li>
+            <li data-i18n="coach.p2">🎯 Consejos basados en tus datos reales</li>
+            <li data-i18n="coach.p3">🤝 Motivación sin culpa ni dietas extremas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRICING ═══════════ -->
+    <section class="section section-alt" id="precios">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="price.kicker">Precios</p>
+        <h2 class="section-title reveal" data-i18n-html="price.title">Empieza gratis. <em class="accent">Crece cuando quieras</em>.</h2>
+        <p class="section-sub reveal" data-i18n="price.sub">Descarga gratis y prueba Fotocal. Cuando estés a tope, Fotocal Pro desbloquea escaneos ilimitados y todas las funciones premium.</p>
+
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <h3 data-i18n="price.mName">Pro Mensual</h3>
+            <p class="price-amount">6,99&nbsp;€<span data-i18n="price.perMonth">/mes</span></p>
+            <p class="price-note" data-i18n="price.mNote">Flexibilidad total, cancela cuando quieras.</p>
+            <ul>
+              <li data-i18n="price.li1">Escaneos con IA ilimitados</li>
+              <li data-i18n="price.li2">Coach Kal sin límites</li>
+              <li data-i18n="price.li3">Recaps semanales y recomendaciones</li>
+              <li data-i18n="price.li4">Todas las funciones premium</li>
+            </ul>
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="price.cta">Empezar en Google Play</a>
+          </article>
+
+          <article class="price-card price-featured reveal" style="--rd:.15s">
+            <span class="price-flag" data-i18n="price.yFlag">MÁS POPULAR — AHORRA 58%</span>
+            <h3 data-i18n="price.yName">Pro Anual</h3>
+            <p class="price-amount">34,99&nbsp;€<span data-i18n="price.perYear">/año</span></p>
+            <p class="price-note" data-i18n="price.yNote">Equivale a 2,92 €/mes · Incluye 3 días de prueba gratis.</p>
+            <ul>
+              <li data-i18n="price.yLi0">🎁 3 días de prueba gratuita</li>
+              <li data-i18n="price.li1b">Escaneos con IA ilimitados</li>
+              <li data-i18n="price.li2b">Coach Kal sin límites</li>
+              <li data-i18n="price.li3b">Recaps semanales y recomendaciones</li>
+              <li data-i18n="price.li4b">Todas las funciones premium</li>
+            </ul>
+            <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="price.yCta">Probar gratis 3 días</a>
+          </article>
+
+          <article class="price-card reveal" style="--rd:.3s">
+            <h3 data-i18n="price.qName">Pro 3 Meses</h3>
+            <p class="price-amount">16,99&nbsp;€<span data-i18n="price.perQuarter">/3 meses</span></p>
+            <p class="price-note" data-i18n="price.qNote">Un empujón de una temporada completa.</p>
+            <ul>
+              <li data-i18n="price.li1c">Escaneos con IA ilimitados</li>
+              <li data-i18n="price.li2c">Coach Kal sin límites</li>
+              <li data-i18n="price.li3c">Recaps semanales y recomendaciones</li>
+              <li data-i18n="price.li4c">Todas las funciones premium</li>
+            </ul>
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="price.cta2">Empezar en Google Play</a>
+          </article>
+        </div>
+        <p class="price-fine reveal" data-i18n="price.fine">Suscripciones gestionadas por Google Play. Renovación automática, cancelable en cualquier momento desde la Play Store.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="section about" id="sobre">
+      <div class="container about-inner reveal">
+        <p class="kicker" data-i18n="about.kicker">Nuestra misión</p>
+        <h2 class="about-title" data-i18n-html="about.title">Comer bien no debería ser <em class="accent">un segundo trabajo</em>.</h2>
+        <p class="about-body" data-i18n="about.body">Creamos Fotocal porque contar calorías era tan pesado que casi nadie aguantaba más de una semana. Nuestra misión es hacer la alimentación saludable sin esfuerzo: una foto en vez de una báscula, un coach en vez de una tabla de Excel, y pequeños hábitos que sí se mantienen. La tecnología hace el trabajo duro para que tú solo tengas que disfrutar de comer mejor.</p>
+        <div class="about-stats">
+          <div><strong>&lt; 5s</strong><span data-i18n="about.s1">por análisis de foto</span></div>
+          <div><strong>13+</strong><span data-i18n="about.s2">funciones en una app</span></div>
+          <div><strong>2</strong><span data-i18n="about.s3">idiomas: español e inglés</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="section section-alt" id="faq">
+      <div class="container container-narrow">
+        <p class="kicker reveal">FAQ</p>
+        <h2 class="section-title reveal" data-i18n-html="faq.title">Preguntas <em class="accent">frecuentes</em></h2>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q1">¿Fotocal es gratis?</span><i class="faq-plus"></i></summary>
+            <p data-i18n="faq.a1">Sí. Puedes descargar Fotocal gratis y usar sus funciones básicas. Fotocal Pro (mensual, trimestral o anual) desbloquea los escaneos con IA ilimitados, Coach Kal sin límites y todas las funciones premium. El plan anual incluye 3 días de prueba gratuita.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q2">¿Qué tan precisa es la IA?</span><i class="faq-plus"></i></summary>
+            <p data-i18n="faq.a2">Fotocal utiliza modelos de IA de última generación para identificar alimentos y estimar raciones. Las estimaciones son muy buenas para el uso diario, y siempre puedes ajustar cantidades o ingredientes manualmente antes de guardar.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q3">¿Funciona sin conexión?</span><i class="faq-plus"></i></summary>
+            <p data-i18n="faq.a3">Sí. Fotocal tiene modo sin conexión completo: puedes registrar comidas, agua y peso sin internet, y todo se sincroniza automáticamente cuando recuperes la conexión. El análisis por foto con IA sí requiere conexión.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q4">¿Qué pasa con mis datos y mi privacidad?</span><i class="faq-plus"></i></summary>
+            <p data-i18n-html="faq.a4">Tus datos son tuyos. Usamos servicios seguros para almacenar tu información, nunca vendemos tus datos y puedes eliminar tu cuenta y todos tus datos en cualquier momento. Lee nuestra <a href="privacy-policy/">Política de Privacidad</a> para todos los detalles.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q5">¿Cómo funciona la prueba gratuita y cómo cancelo?</span><i class="faq-plus"></i></summary>
+            <p data-i18n="faq.a5">El plan anual incluye 3 días de prueba gratis: si cancelas antes de que termine, no se te cobra nada. Las suscripciones se gestionan desde Google Play y puedes cancelarlas en cualquier momento en Play Store → Perfil → Pagos y suscripciones.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q6">¿Se sincroniza con Health Connect?</span><i class="faq-plus"></i></summary>
+            <p data-i18n="faq.a6">Sí. Fotocal se conecta con Health Connect de Android para contar tus pasos automáticamente, sin gastar batería ni requerir que abras la app.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q7">¿Puedo escanear códigos de barras y menús de restaurante?</span><i class="faq-plus"></i></summary>
+            <p data-i18n="faq.a7">Sí, ambos. El escáner de códigos de barras identifica productos del supermercado al instante, y el escáner de menús analiza la carta del restaurante para recomendarte las opciones que mejor encajan con tus objetivos.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q8">¿Cómo elimino mi cuenta?</span><i class="faq-plus"></i></summary>
+            <p data-i18n-html="faq.a8">Desde la app: Perfil → Ajustes → Eliminar cuenta. También puedes solicitarlo por email. Tienes todas las instrucciones en nuestra <a href="account-deletion/">página de eliminación de cuenta</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FINAL CTA ═══════════ -->
+    <section class="final-cta">
+      <div class="container final-inner reveal">
+        <div class="final-emojis" aria-hidden="true">🥑 🍓 🥗 🍊 🫐</div>
+        <h2 data-i18n-html="cta.title">Tu próxima comida ya puede <em class="accent-light">contarse sola</em>.</h2>
+        <p data-i18n="cta.sub">Descarga Fotocal y descubre lo fácil que es comer mejor cuando la IA hace el trabajo pesado.</p>
+        <a class="play-badge play-badge-light" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Descargar en Google Play">
+          <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
+            <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
+            <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
+            <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
+            <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
+          </svg>
+          <span class="play-badge-text">
+            <small data-i18n="cta.badgeTop">DISPONIBLE EN</small>
+            <strong>Google Play</strong>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#top"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo-apple"/></svg><span>Fotocal</span></a>
+        <p data-i18n="footer.tag">Nutrición con IA. Una foto y sabes qué comes.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fotocal_app?igsh=MWRvNGRkMXMwNmZicw==" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="mailto:esmarketstop@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.app">App</h5>
+        <a href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Google Play</a>
+        <a href="#funciones" data-i18n="footer.features">Funciones</a>
+        <a href="#precios" data-i18n="footer.pricing">Precios</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.contact">Contacto</h5>
+        <a href="mailto:esmarketstop@gmail.com" data-i18n="footer.support">Soporte por email</a>
+        <a href="https://www.instagram.com/fotocal_app?igsh=MWRvNGRkMXMwNmZicw==" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.legal">Legal</h5>
+        <a href="privacy-policy/" data-i18n="footer.privacy">Política de Privacidad</a>
+        <a href="terms/" data-i18n="footer.terms">Términos de Servicio</a>
+        <a href="account-deletion/" data-i18n="footer.deletion">Eliminación de cuenta</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Fotocal · <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+      <p data-i18n="footer.made">Hecho con 🥑 para gente que quiere comer mejor.</p>
+    </div>
+  </footer>
+
+  <!-- Logo symbol (golden apple with camera aperture leaf) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="logo-apple" viewBox="0 0 48 48">
+        <path d="M24 12c-7 -5 -16 -1.5 -16 9c0 9 7 19 13 19c1.6 0 2.2 -.9 3 -.9s1.4 .9 3 .9c6 0 13 -10 13 -19c0 -10.5 -9 -14 -16 -9z" fill="#E8A50C"/>
+        <path d="M24 12c0 -5 3.5 -8 8 -8c0 5 -3.5 8 -8 8z" fill="#7FA84B"/>
+        <circle cx="24" cy="27" r="7.5" fill="none" stroke="#FBF6EC" stroke-width="2.6"/>
+        <circle cx="24" cy="27" r="2.6" fill="#FBF6EC"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

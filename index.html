@@ -88,13 +88,22 @@
           </div>
 
           <div class="flow-visual reveal" style="--rd:.12s">
-            <div class="phone phone-tilt">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot"
-                     data-src="assets/img/screens/home.png"
-                     data-label="Home screen — calorie ring"></div>
+            <div class="hero-stage">
+              <div class="phone phone-tilt">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="screen-slot" data-eager
+                       data-src="assets/img/screens/result.jpg"
+                       data-w="540" data-h="1152"
+                       data-label-key="hero.slot"
+                       data-label="Scan result — 550 kcal detected from one photo"></div>
+                </div>
               </div>
+              <!-- Decorative only: the same bowl, off the plate. No copy attached. -->
+              <figure class="deco-shot" aria-hidden="true">
+                <img src="assets/img/bowl.jpg" alt="" width="534" height="533"
+                     loading="lazy" decoding="async">
+              </figure>
             </div>
           </div>
 
@@ -121,6 +130,7 @@
               <div class="phone-screen">
                 <div class="screen-slot"
                      data-src="assets/img/screens/scan.png"
+                     data-label-key="how.s1slot"
                      data-label="Scan screen — camera pointed at a plate"></div>
               </div>
             </div>
@@ -134,8 +144,10 @@
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <div class="screen-slot"
-                     data-src="assets/img/screens/result.png"
-                     data-label="Scan result — detected food + macros"></div>
+                     data-src="assets/img/screens/analyzing.jpg"
+                     data-w="540" data-h="1152"
+                     data-label-key="how.s2slot"
+                     data-label="Analysing a meal photo with AI"></div>
               </div>
             </div>
           </div>
@@ -148,8 +160,10 @@
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <div class="screen-slot"
-                     data-src="assets/img/screens/diary.png"
-                     data-label="Meal diary — the day's logged meals"></div>
+                     data-src="assets/img/screens/home.jpg"
+                     data-w="540" data-h="1152"
+                     data-label-key="how.s3slot"
+                     data-label="Home screen — calorie ring and the day's meals"></div>
               </div>
             </div>
           </div>
@@ -169,12 +183,26 @@
         <!-- 1 — AI photo scanning (image left) -->
         <div class="flow-row reveal">
           <div class="flow-visual">
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot"
-                     data-src="assets/img/screens/analysis.png"
-                     data-label="Scan result detail — quality score + alternatives"></div>
+            <div class="phone-duo">
+              <div class="phone phone-back" aria-hidden="true">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="screen-slot"
+                       data-src="assets/img/screens/insights.jpg"
+                       data-w="540" data-h="1152"
+                       data-label-key="f.scan.slot2"
+                       data-label="AI insights and recommendations for the scanned meal"></div>
+                </div>
+              </div>
+              <div class="phone phone-front">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="screen-slot"
+                       data-src="assets/img/screens/analysis.jpg"
+                       data-w="540" data-h="1152"
+                       data-label-key="f.scan.slot"
+                       data-label="Scan result detail — health score and portion adjustment"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -193,11 +221,13 @@
         <!-- 2 — Coach Kal (image right) -->
         <div class="flow-row flip reveal">
           <div class="flow-visual">
-            <div class="phone">
+            <div class="phone phone-lean-l">
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <div class="screen-slot"
-                     data-src="assets/img/screens/coach.png"
+                     data-src="assets/img/screens/coach.jpg"
+                     data-w="540" data-h="1152"
+                     data-label-key="f.coach.slot"
                      data-label="Coach Kal chat"></div>
               </div>
             </div>
@@ -222,6 +252,7 @@
               <div class="phone-screen">
                 <div class="screen-slot"
                      data-src="assets/img/screens/weekly-report.png"
+                     data-label-key="f.report.slot"
                      data-label="Weekly Report"></div>
               </div>
             </div>
@@ -241,12 +272,14 @@
         <!-- 4 — Progress (image right) -->
         <div class="flow-row flip reveal">
           <div class="flow-visual">
-            <div class="phone">
+            <div class="phone phone-lean-r">
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <div class="screen-slot"
-                     data-src="assets/img/screens/progress.png"
-                     data-label="Progress — weight + body measurements"></div>
+                     data-src="assets/img/screens/progress.jpg"
+                     data-w="540" data-h="1152"
+                     data-label-key="f.progress.slot"
+                     data-label="Weight screen — current weight and BMI"></div>
               </div>
             </div>
           </div>

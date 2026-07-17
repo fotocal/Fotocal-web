@@ -359,14 +359,29 @@
         needed to go live with real screens. */
   var CAMERA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>';
 
+  /* Slot labels live in the dictionary, so they exist in EN *and* ES.
+     data-label is only a hard fallback if the key is ever missing. */
+  function slotLabel(slot) {
+    var D = window.FOTOCAL_I18N || {};
+    var key = slot.getAttribute("data-label-key");
+    var lang = "en";
+    try {
+      var saved = localStorage.getItem("fotocal-lang");
+      if (saved === "es" || saved === "en") lang = saved;
+    } catch (e) {}
+    var v = (D[lang] && D[lang][key]) || (D.en && D.en[key]);
+    return v || slot.getAttribute("data-label") || "";
+  }
+
   document.querySelectorAll(".screen-slot").forEach(function (slot) {
     var src = slot.getAttribute("data-src");
-    var label = slot.getAttribute("data-label") || "";
+    var key = slot.getAttribute("data-label-key");
+    var label = slotLabel(slot);
 
     /* Paint the placeholder immediately. */
     slot.innerHTML =
       '<div class="slot-icon">' + CAMERA + '</div>' +
-      '<div class="slot-label">' + label + '</div>' +
+      '<div class="slot-label"' + (key ? ' data-i18n="' + key + '"' : '') + '>' + label + '</div>' +
       '<div class="slot-note" data-i18n="slot.pending"></div>' +
       '<div class="slot-path">' + (src || "").replace(BASE, "") + '</div>';
 
@@ -376,8 +391,17 @@
       var el = document.createElement("img");
       el.src = src;
       el.alt = label;
-      el.loading = "lazy";
+      /* Explicit intrinsic size: the frame is aspect-ratio locked, so this
+         just keeps the browser from ever reflowing around the image. */
+      el.setAttribute("width", slot.getAttribute("data-w") || "540");
+      el.setAttribute("height", slot.getAttribute("data-h") || "1152");
       el.decoding = "async";
+      if (slot.hasAttribute("data-eager")) {
+        el.loading = "eager";
+        el.setAttribute("fetchpriority", "high");
+      } else {
+        el.loading = "lazy";
+      }
       slot.replaceWith(el);
     };
     img.src = src;

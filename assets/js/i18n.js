@@ -44,7 +44,8 @@ window.FOTOCAL_I18N = {
     "hero.perk2": "Works offline",
     "hero.perk3": "English & Spanish",
     "cta.badgeTop": "GET IT ON",
-    "hero.slot": "Home screen — calorie ring",
+    "hero.slot": "Scan result — 550 kcal detected from one photo",
+    "hero.deco": "A balanced bowl, photographed and scanned with Fotocal",
 
     /* ── How it works ── */
     "how.kicker": "How it works",
@@ -54,11 +55,11 @@ window.FOTOCAL_I18N = {
     "how.s1b": "Open Fotocal and photograph your plate. Home-cooked, restaurant, or last night's leftovers — it all works.",
     "how.s1slot": "Scan screen — camera pointed at a plate",
     "how.s2t": "The AI analyses it",
-    "how.s2b": "In seconds it identifies the food, estimates the portion, and works out calories, macros and a quality score.",
-    "how.s2slot": "Scan result — detected food + macros",
+    "how.s2b": "In seconds it identifies the food, estimates the portion, and works out calories, macros and a health score.",
+    "how.s2slot": "Analysing a meal photo with AI",
     "how.s3t": "It's logged",
     "how.s3b": "The meal drops straight into your diary and your day updates itself. Nothing else for you to do.",
-    "how.s3slot": "Meal diary — the day's logged meals",
+    "how.s3slot": "Home screen — calorie ring and the day's meals",
 
     /* ── Feature storytelling ── */
     "feat.kicker": "Inside the app",
@@ -67,11 +68,12 @@ window.FOTOCAL_I18N = {
 
     "f.scan.pill": "The core of Fotocal",
     "f.scan.t": "AI photo scanning",
-    "f.scan.b": "Most tracking apps make you find your food in a database and guess the portion. Fotocal looks at the plate instead. You get calories and macros, a quality score from 1 to 10, and a suggestion for what would make the meal better — and you can always adjust anything before you save it.",
+    "f.scan.b": "Most tracking apps make you find your food in a database and guess the portion. Fotocal looks at the plate instead. You get calories and macros, a health score out of 100, and a suggestion for what would make the meal better — and you can always adjust anything before you save it.",
     "f.scan.li1": "Recognises whole dishes, not just single ingredients",
-    "f.scan.li2": "Quality score with healthier alternatives",
+    "f.scan.li2": "Health score out of 100, with clear recommendations",
     "f.scan.li3": "Edit the portion or ingredients before saving",
-    "f.scan.slot": "Scan result detail — quality score + alternatives",
+    "f.scan.slot": "Scan result detail — health score and portion adjustment",
+    "f.scan.slot2": "AI insights and recommendations for the scanned meal",
 
     "f.coach.pill": "Your pocket coach",
     "f.coach.t": "Coach Kal, your AI nutrition coach",
@@ -95,7 +97,7 @@ window.FOTOCAL_I18N = {
     "f.progress.li1": "Weight logging with clear charts",
     "f.progress.li2": "Body measurements over time",
     "f.progress.li3": "Trends that ignore the daily noise",
-    "f.progress.slot": "Progress — weight + body measurements",
+    "f.progress.slot": "Weight screen — current weight and BMI",
 
     /* ── Smaller feature cards ── */
     "more.kicker": "And the rest",
@@ -196,7 +198,8 @@ window.FOTOCAL_I18N = {
     "hero.perk2": "Funciona sin conexión",
     "hero.perk3": "En inglés y español",
     "cta.badgeTop": "DISPONIBLE EN",
-    "hero.slot": "Pantalla de inicio — anillo de calorías",
+    "hero.slot": "Resultado del escaneo — 550 kcal detectadas con una foto",
+    "hero.deco": "Un bol equilibrado, fotografiado y escaneado con Fotocal",
 
     /* ── How it works ── */
     "how.kicker": "Cómo funciona",
@@ -206,11 +209,11 @@ window.FOTOCAL_I18N = {
     "how.s1b": "Abre Fotocal y fotografía tu plato. Casero, de restaurante o las sobras de ayer: funciona igual.",
     "how.s1slot": "Pantalla de escaneo — cámara apuntando a un plato",
     "how.s2t": "La IA lo analiza",
-    "how.s2b": "En segundos identifica la comida, estima la ración y calcula calorías, macros y una puntuación de calidad.",
-    "how.s2slot": "Resultado del escaneo — comida detectada + macros",
+    "how.s2b": "En segundos identifica la comida, estima la ración y calcula calorías, macros y una puntuación de salud.",
+    "how.s2slot": "Analizando la foto de una comida con IA",
     "how.s3t": "Queda registrado",
     "how.s3b": "La comida entra directa en tu diario y tu día se actualiza solo. No tienes que hacer nada más.",
-    "how.s3slot": "Diario de comidas — las comidas del día",
+    "how.s3slot": "Pantalla de inicio — anillo de calorías y las comidas del día",
 
     /* ── Feature storytelling ── */
     "feat.kicker": "Dentro de la app",
@@ -219,11 +222,12 @@ window.FOTOCAL_I18N = {
 
     "f.scan.pill": "El núcleo de Fotocal",
     "f.scan.t": "Escaneo de fotos con IA",
-    "f.scan.b": "Casi todas las apps te obligan a buscar la comida en una base de datos y adivinar la ración. Fotocal mira el plato. Obtienes calorías y macros, una puntuación de calidad del 1 al 10 y una sugerencia para mejorar la comida, y siempre puedes ajustar lo que quieras antes de guardar.",
+    "f.scan.b": "Casi todas las apps te obligan a buscar la comida en una base de datos y adivinar la ración. Fotocal mira el plato. Obtienes calorías y macros, una puntuación de salud sobre 100 y una sugerencia para mejorar la comida, y siempre puedes ajustar lo que quieras antes de guardar.",
     "f.scan.li1": "Reconoce platos enteros, no solo ingredientes sueltos",
-    "f.scan.li2": "Puntuación de calidad con alternativas más sanas",
+    "f.scan.li2": "Puntuación de salud sobre 100, con recomendaciones claras",
     "f.scan.li3": "Edita la ración o los ingredientes antes de guardar",
-    "f.scan.slot": "Detalle del escaneo — puntuación + alternativas",
+    "f.scan.slot": "Detalle del escaneo — puntuación de salud y ajuste de ración",
+    "f.scan.slot2": "Ideas y recomendaciones de la IA para la comida escaneada",
 
     "f.coach.pill": "Tu coach de bolsillo",
     "f.coach.t": "Coach Kal, tu entrenador nutricional con IA",
@@ -247,7 +251,7 @@ window.FOTOCAL_I18N = {
     "f.progress.li1": "Registro de peso con gráficas claras",
     "f.progress.li2": "Medidas corporales a lo largo del tiempo",
     "f.progress.li3": "Tendencias que ignoran el ruido diario",
-    "f.progress.slot": "Progreso — peso + medidas corporales",
+    "f.progress.slot": "Pantalla de peso — peso actual e IMC",
 
     /* ── Smaller feature cards ── */
     "more.kicker": "Y lo demás",

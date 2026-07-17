@@ -298,13 +298,12 @@
       }, 0);
     });
 
-    /* Pointer convenience on desktop only. */
-    if (window.matchMedia("(hover: hover) and (min-width: 900px)").matches &&
-        item.closest(".nav-links")) {
-      var t;
-      item.addEventListener("mouseenter", function () { clearTimeout(t); toggle(item, true); });
-      item.addEventListener("mouseleave", function () { t = setTimeout(function () { toggle(item, false); }, 180); });
-    }
+    /* NOTE: deliberately click-only — no hover-to-open.
+       A hover handler here fights the click handler (hover opens the panel,
+       then the click that follows immediately toggles it shut, so the menu
+       looks broken on desktop). Click-only is also what every comparable
+       app-marketing site in this category does, and it is the only thing
+       that behaves correctly on touch. Do not add mouseenter/mouseleave. */
   });
 
   document.addEventListener("click", function () { closeAll(); });

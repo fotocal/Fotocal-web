@@ -1,0 +1,535 @@
+/* TEST-PASTE-áéíóúñ¿¡€ */
+body { color: red; }/* ═══════════════════════════════════════════════════════════════
+   FOTOCAL — content page components
+   Used by: /blog/, /subscription/, /about/, /contact/
+   Loaded AFTER assets/css/site.css, which stays the single source of
+   truth for palette, type, buttons, nav, footer, phone mockups, cards,
+   FAQ and the .flow-row alternating layout.
+
+   WHY THIS FILE EXISTS (and is not merged into site.css)
+   These four pages needed components that the home page never had —
+   a Free-vs-Premium comparison table, blog post cards, an empty state,
+   contact route cards, a values grid. Rather than grow site.css (which
+   every page loads, and which other work touches concurrently), the
+   page-only components live here. site.css is untouched.
+
+   RULES
+   1. Add NOTHING here that belongs in site.css. No palette, no fonts,
+      no nav, no footer. Only components used by the four content pages.
+   2. Every colour comes from a var() defined in site.css :root.
+      Never hard-code a hex — the theme must stay changeable in one place.
+   3. Mobile-first, exactly like site.css: base styles are the phone
+      layout, min-width media queries scale up.
+   4. This file must be saved as UTF-8.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════
+   PAGE HERO
+   A shorter, centred hero for interior pages. The home page keeps its
+   own two-column hero — this is deliberately calmer so interior pages
+   do not compete with it.
+   ═══════════════════════════════════════════════ */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0 3.25rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-soft);
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: -260px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 760px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,30,99,.13), transparent 66%);
+  pointer-events: none;
+}
+.page-hero > * { position: relative; }
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 6.4vw, 3.4rem);
+  font-weight: 550;
+  line-height: 1.13;
+  letter-spacing: -.02em;
+  margin-bottom: .9rem;
+}
+.page-hero .lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 62ch;
+  margin: 0 auto;
+}
+.page-hero .lead + .lead { margin-top: .9rem; }
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: .75rem;
+  justify-content: center; margin-top: 1.9rem;
+}
+
+/* ═══════════════════════════════════════════════
+   PROSE
+   Long-form editorial copy. The brief asked for real depth, so these
+   pages carry multi-paragraph sections rather than one-line bullets —
+   this keeps that readable instead of turning into a wall of text.
+   ═══════════════════════════════════════════════ */
+.prose { max-width: 68ch; }
+.prose.mx-auto { margin-inline: auto; }
+.prose p {
+  color: var(--ink-soft);
+  margin-bottom: 1.05rem;
+  font-size: 1rem;
+}
+.prose p:last-child { margin-bottom: 0; }
+.prose .lead-p {
+  font-size: 1.12rem;
+  color: var(--ink);
+  line-height: 1.6;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.6vw, 1.75rem);
+  font-weight: 550;
+  line-height: 1.24;
+  letter-spacing: -.015em;
+  margin: 2rem 0 .7rem;
+}
+.prose h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 1.5rem 0 .4rem;
+}
+.prose a { color: var(--pink); font-weight: 600; text-decoration: underline; }
+.prose .check-list { margin: 1.1rem 0 1.4rem; }
+
+/* Pull quote — used once per page at most, for the line that matters. */
+.pull {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.36;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  border-left: 3px solid transparent;
+  border-image: var(--grad) 1;
+  padding: .2rem 0 .2rem 1.25rem;
+  margin: 1.75rem 0;
+}
+
+/* ═══════════════════════════════════════════════
+   CALLOUT
+   A flagged aside. Three tones — default (warm/neutral), .callout-info
+   (pink accent, for the good news) and .callout-quiet (for the medical
+   note and other small print that must be read but must not shout).
+   ═══════════════════════════════════════════════ */
+.callout {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+  padding: 1.15rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  margin: 1.75rem 0;
+}
+.callout-icon {
+  width: 34px; height: 34px; flex: none;
+  border-radius: 10px;
+  display: grid; place-items: center;
+  background: var(--grad-wash);
+  border: 1px solid var(--border-pink);
+  color: var(--pink);
+}
+.callout-icon svg { width: 17px; height: 17px; }
+.callout h4 {
+  font-size: .97rem;
+  font-weight: 700;
+  margin-bottom: .25rem;
+}
+.callout p {
+  font-size: .9rem;
+  color: var(--muted);
+  margin: 0;
+}
+.callout p + p { margin-top: .5rem; }
+.callout a { color: var(--pink); font-weight: 600; text-decoration: underline; }
+
+.callout-info {
+  background: var(--grad-wash);
+  border-color: var(--border-pink);
+}
+.callout-info p { color: var(--ink-soft); }
+
+.callout-quiet {
+  background: var(--cream-2);
+  box-shadow: none;
+}
+.callout-quiet .callout-icon {
+  background: var(--white);
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+/* ═══════════════════════════════════════════════
+   FREE vs PREMIUM COMPARISON
+   A real <table> — it is tabular data, so it should be a table for
+   screen readers. It stays a table at every width; the type and padding
+   just tighten on small screens. Feature labels are kept short enough
+   that three columns fit a 320px phone without horizontal scrolling.
+   ═══════════════════════════════════════════════ */
+.cmp-wrap {
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.cmp {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .82rem;
+}
+.cmp caption {
+  padding: 1.1rem 1rem .35rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+}
+.cmp th, .cmp td {
+  padding: .8rem .6rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-soft);
+}
+.cmp thead th {
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--cream-2);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.cmp thead th:first-child { width: 46%; }
+.cmp thead th.is-pro { color: var(--pink); }
+.cmp tbody th {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: .84rem;
+}
+.cmp tbody th small {
+  display: block;
+  font-weight: 400;
+  font-size: .74rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: .15rem;
+}
+.cmp td { color: var(--ink-soft); text-align: center; }
+.cmp td.is-pro { background: rgba(233,30,99,.035); font-weight: 600; }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+
+/* Yes / no / limited markers */
+.mk { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; }
+.mk svg { width: 11px; height: 11px; stroke-width: 3.2; }
+.mk-yes { background: var(--grad); color: #fff; }
+.mk-no  { background: var(--cream-3); color: var(--muted); }
+.cmp .lim { font-size: .78rem; color: var(--muted); font-weight: 500; }
+
+@media (min-width: 600px) {
+  .cmp { font-size: .92rem; }
+  .cmp th, .cmp td { padding: 1rem 1.1rem; }
+  .cmp thead th { font-size: .72rem; }
+  .cmp tbody th { font-size: .93rem; }
+  .cmp caption { padding: 1.4rem 1.4rem .5rem; }
+}
+
+/* ═══════════════════════════════════════════════
+   PLAN DETAIL CARDS  (Subscription page)
+   Richer than the home page's .plan teaser: these carry the per-plan
+   feature list, the saving badge and their own CTA.
+   ═══════════════════════════════════════════════ */
+.plans-detail { display: grid; gap: 1.5rem; margin-top: 2.5rem; }
+.plan-d {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  padding: 1.75rem 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s cubic-bezier(.2,.8,.3,1), box-shadow .3s ease, border-color .3s ease;
+}
+.plan-d:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-color: var(--border); }
+.plan-d-best {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    var(--grad) border-box;
+  box-shadow: var(--shadow-card);
+}
+.plan-d-best:hover { box-shadow: var(--shadow-soft); }
+.plan-d-head { text-align: center; padding-bottom: 1.1rem; border-bottom: 1px solid var(--border-soft); }
+.plan-d-name {
+  font-size: .76rem; font-weight: 800; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: .55rem;
+}
+.plan-d-price {
+  font-family: var(--font-display);
+  font-size: 2.35rem; font-weight: 600; line-height: 1; margin-bottom: .35rem;
+}
+.plan-d-price span {
+  font-family: var(--font-body); font-size: .85rem; font-weight: 500; color: var(--muted);
+}
+.plan-d-equiv { font-size: .84rem; color: var(--muted); }
+.plan-d-equiv b { color: var(--ink); font-weight: 600; }
+.plan-d-save {
+  display: inline-block; margin-top: .6rem;
+  font-size: .7rem; font-weight: 800; letter-spacing: .06em;
+  color: var(--pink); background: var(--grad-wash);
+  border: 1px solid var(--border-pink); border-radius: 999px;
+  padding: .25rem .7rem;
+}
+.plan-d-body { flex: 1; padding: 1.1rem 0 1.3rem; }
+.plan-d-body .check-list li { font-size: .89rem; margin-bottom: .45rem; }
+.plan-d-trial {
+  font-size: .82rem; font-weight: 600; color: var(--ink-soft);
+  background: var(--grad-wash); border: 1px solid var(--border-pink);
+  border-radius: var(--r-sm); padding: .6rem .75rem; margin-bottom: .9rem;
+}
+.plan-d-none {
+  font-size: .8rem; color: var(--muted);
+  background: var(--cream-2); border: 1px solid var(--border-soft);
+  border-radius: var(--r-sm); padding: .6rem .75rem; margin-bottom: .9rem;
+}
+.plan-d-sku {
+  margin-top: .9rem; text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .64rem; color: var(--muted); opacity: .7; word-break: break-all;
+}
+
+@media (min-width: 900px) {
+  .plans-detail { grid-template-columns: repeat(3, 1fr); align-items: start; }
+  /* The yearly plan is the recommended one, so it sits centre and lifts. */
+  .plan-d-best { transform: translateY(-12px); }
+  .plan-d-best:hover { transform: translateY(-16px); }
+}
+
+/* ═══════════════════════════════════════════════
+   BLOG
+   ───────────────────────────────────────────────
+   HOW TO ADD A REAL POST LATER — the short version:
+   1. Write the post at /blog/<slug>/index.html.
+   2. Copy the <article class="post-card"> template that is commented
+      out inside /blog/index.html, paste it into .post-grid, and fill
+      in the title, summary, date and href.
+   3. Delete the .empty-state block once the first real post is live.
+   Everything below is the styling those cards need.
+   ═══════════════════════════════════════════════ */
+.post-grid { display: grid; gap: 1.5rem; margin-top: 2.25rem; }
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s cubic-bezier(.2,.8,.3,1), box-shadow .3s ease, border-color .3s ease;
+}
+.post-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--border); }
+
+/* Cover area. Falls back to a warm gradient when a post has no image,
+   so a card is never a broken box. */
+.post-cover {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background:
+    radial-gradient(110% 90% at 20% 0%, rgba(233,30,99,.16), transparent 62%),
+    linear-gradient(150deg, var(--cream-2) 0%, var(--cream-3) 100%);
+  border-bottom: 1px solid var(--border-soft);
+  display: grid; place-items: center;
+  color: var(--pink);
+}
+.post-cover img { width: 100%; height: 100%; object-fit: cover; }
+.post-cover svg { width: 30px; height: 30px; opacity: .5; }
+
+.post-body { display: flex; flex-direction: column; flex: 1; padding: 1.3rem 1.35rem 1.4rem; }
+.post-tag {
+  align-self: flex-start;
+  font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--pink); background: var(--grad-wash);
+  border: 1px solid var(--border-pink); border-radius: 999px;
+  padding: .24rem .65rem; margin-bottom: .7rem;
+}
+.post-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.22rem; font-weight: 600; line-height: 1.28;
+  letter-spacing: -.01em; margin-bottom: .45rem;
+}
+.post-card h3 a { transition: color .2s ease; }
+.post-card h3 a:hover { color: var(--pink); }
+.post-card > .post-body > p { font-size: .91rem; color: var(--muted); flex: 1; margin-bottom: 1rem; }
+.post-meta {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .76rem; color: var(--muted);
+  border-top: 1px solid var(--border-soft); padding-top: .85rem;
+}
+.post-meta .dot { opacity: .45; }
+
+/* A card marked as a design example, not a published article.
+   The label is part of the card, not a tooltip, so it cannot be missed
+   and the card can never be mistaken for real content. */
+.post-card-demo { border-style: dashed; border-color: var(--border-pink); box-shadow: none; }
+.post-card-demo:hover { transform: none; box-shadow: none; }
+.demo-ribbon {
+  display: flex; align-items: center; gap: .45rem;
+  background: var(--grad-wash);
+  border-bottom: 1px solid var(--border-pink);
+  padding: .5rem .9rem;
+  font-size: .68rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--pink);
+}
+.demo-ribbon svg { width: 13px; height: 13px; flex: none; }
+.post-card-demo h3, .post-card-demo .post-body > p { opacity: .75; }
+
+/* Empty state — honest, not apologetic. */
+.empty-state {
+  text-align: center;
+  background: var(--white);
+  border: 1.5px dashed var(--border-pink);
+  border-radius: var(--r-xl);
+  padding: 3rem 1.5rem;
+  margin-top: 2.25rem;
+}
+.empty-mark {
+  width: 58px; height: 58px; margin: 0 auto 1.25rem;
+  border-radius: 17px;
+  background: var(--grad-wash); border: 1px solid var(--border-pink);
+  display: grid; place-items: center; color: var(--pink);
+}
+.empty-mark svg { width: 26px; height: 26px; }
+.empty-state h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 550; line-height: 1.2; margin-bottom: .6rem;
+}
+.empty-state p { color: var(--muted); max-width: 48ch; margin: 0 auto 1.6rem; font-size: .96rem; }
+.empty-actions { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+
+/* Topic cards — what the blog will cover. */
+.topic-grid { display: grid; gap: 1.25rem; margin-top: 2.25rem; }
+.topic-card { text-align: left; }
+.topic-card h4 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin-bottom: .4rem; }
+.topic-card p { font-size: .9rem; color: var(--muted); }
+.topic-card .check-list { margin-top: .9rem; }
+.topic-card .check-list li { font-size: .85rem; margin-bottom: .35rem; }
+
+@media (min-width: 700px) {
+  .post-grid { grid-template-columns: repeat(2, 1fr); }
+  .topic-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1000px) {
+  .post-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+   ═══════════════════════════════════════════════ */
+.contact-grid { display: grid; gap: 1.25rem; margin-top: 2.25rem; }
+.contact-card { display: flex; flex-direction: column; text-align: left; }
+.contact-card h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin-bottom: .4rem; }
+.contact-card > p { font-size: .91rem; color: var(--muted); flex: 1; margin-bottom: 1.1rem; }
+.contact-card .btn { align-self: flex-start; }
+.contact-card .check-list { margin-bottom: 1.1rem; }
+.contact-card .check-list li { font-size: .85rem; margin-bottom: .3rem; }
+
+/* The address itself, shown in full as well as linked — some people
+   would rather copy it than launch a mail client. */
+.mail-strip {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: .6rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .75rem 1.4rem;
+  box-shadow: var(--shadow-sm);
+  margin: 1.5rem auto 0;
+  width: fit-content;
+  max-width: 100%;
+}
+.mail-strip svg { width: 18px; height: 18px; color: var(--pink); flex: none; }
+.mail-strip a {
+  font-weight: 700; color: var(--ink); font-size: 1rem;
+  word-break: break-all; text-decoration: underline;
+  text-decoration-color: var(--border-pink); text-underline-offset: 3px;
+  transition: color .2s ease;
+}
+.mail-strip a:hover { color: var(--pink); }
+
+@media (min-width: 700px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ═══════════════════════════════════════════════
+   ABOUT — values grid
+   ═══════════════════════════════════════════════ */
+.value-grid { display: grid; gap: 1.25rem; margin-top: 2.25rem; }
+.value-card { text-align: left; }
+.value-card h4 { font-size: 1.02rem; font-weight: 700; margin-bottom: .35rem; }
+.value-card p { font-size: .89rem; color: var(--muted); }
+
+@media (min-width: 620px) { .value-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .value-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ═══════════════════════════════════════════════
+   SHARED SMALL BITS
+   ═══════════════════════════════════════════════ */
+/* Numbered editorial list, used for step-by-step explanations in prose. */
+.num-list { counter-reset: n; margin: 1.25rem 0; }
+.num-list li {
+  counter-increment: n;
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+.num-list li::before {
+  content: counter(n);
+  position: absolute; left: 0; top: -.1em;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--grad); color: #fff;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem;
+  box-shadow: var(--shadow-cta);
+}
+.num-list li b { color: var(--ink); }
+
+/* Cross-links to the other content pages, used at the foot of a section. */
+.next-links { display: grid; gap: 1rem; margin-top: 2rem; }
+.next-link {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-md); padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.next-link:hover { transform: translateY(-3px); border-color: var(--border-pink); }
+.next-link strong { display: block; font-size: .97rem; margin-bottom: .1rem; }
+.next-link span { font-size: .85rem; color: var(--muted); }
+.next-link .arw { color: var(--pink); font-size: 1.2rem; flex: none; }
+
+@media (min-width: 700px) { .next-links { grid-template-columns: repeat(2, 1fr); } }
+
+/* Section intro block, centred, used above grids on these pages. */
+.sec-head { text-align: center; margin-bottom: .5rem; }
+.sec-head .section-sub { margin-inline: auto; }

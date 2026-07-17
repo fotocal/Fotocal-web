@@ -263,10 +263,14 @@
       toggle(item);
     });
 
-    /* Keyboard: Down opens and moves into the panel; Esc closes. */
+    /* Keyboard: Down opens and moves into the panel; Esc closes.
+       stopPropagation matters: without it this event also bubbles to the
+       item-level handler below, which would see focus already on link[0]
+       and advance to link[1] — silently skipping the first entry. */
     btn.addEventListener("keydown", function (e) {
       if (e.key === "ArrowDown") {
         e.preventDefault();
+        e.stopPropagation();
         toggle(item, true);
         var first = item.querySelector("a");
         if (first) first.focus();

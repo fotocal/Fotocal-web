@@ -351,6 +351,38 @@ body.nav-locked { overflow: hidden; }
 .phone-tilt { transform: rotate(2deg); transition: transform .6s cubic-bezier(.2,.8,.3,1); }
 .phone-tilt:hover { transform: rotate(0) translateY(-6px); }
 
+/* Alternating lean, so the feature rows don't read as the same block repeated */
+.phone-lean-l,
+.phone-lean-r { transition: transform .6s cubic-bezier(.2,.8,.3,1); }
+.phone-lean-l { transform: rotate(-2.5deg); }
+.phone-lean-r { transform: rotate(2.5deg); }
+.phone-lean-l:hover,
+.phone-lean-r:hover { transform: rotate(0) translateY(-6px); }
+
+/* ── Hero stage: the device, plus one decorative photo tucked under it.
+      The photo is pure decoration (aria-hidden, empty alt) — it illustrates
+      nothing specific, so no copy is attached to it. */
+.hero-stage { position: relative; width: min(260px, 74vw); }
+.deco-shot {
+  position: absolute; z-index: 4; margin: 0;
+  left: -30px; bottom: 26px;
+  width: 118px; aspect-ratio: 1 / 1;
+  border-radius: 24px; overflow: hidden;
+  border: 5px solid var(--cream);
+  box-shadow: var(--shadow-lift);
+  transform: rotate(-7deg);
+  transition: transform .6s cubic-bezier(.2,.8,.3,1);
+}
+.deco-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-stage:hover .deco-shot { transform: rotate(-3deg) translateY(-4px); }
+
+/* ── Paired devices: a second screen peeking out from behind the first.
+      The back device is decorative depth — hidden on narrow screens, where
+      it would only push the layout sideways. */
+.phone-duo { position: relative; width: min(260px, 74vw); }
+.phone-duo .phone-front { position: relative; z-index: 2; transform: rotate(2.5deg); }
+.phone-duo .phone-back  { display: none; }
+
 /* Screenshot placeholder.
    .screen-slot is the ONLY thing in the markup. assets/js/layout.js tries to
    load data-src; if the PNG exists it swaps in a real <img>, otherwise this
@@ -672,9 +704,24 @@ body.nav-locked { overflow: hidden; }
   .flow-row:not(.flip) .flow-copy   { order: 2; }
 
   .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; }
+
+  .phone-duo .phone-back {
+    display: block;
+    position: absolute; z-index: 1;
+    top: 7%; left: -27%; width: 80%;
+    transform: rotate(-7deg);
+    transition: transform .6s cubic-bezier(.2,.8,.3,1);
+  }
+  .phone-duo:hover .phone-back { transform: rotate(-9deg) translate(-6px, -6px); }
+  .flow-row.flip .phone-duo .phone-back { left: auto; right: -27%; transform: rotate(7deg); }
+  .flow-row.flip .phone-duo:hover .phone-back { transform: rotate(9deg) translate(6px, -6px); }
+
+  .deco-shot { left: -44px; bottom: 34px; width: 148px; }
 }
 
 /* ≥ 1100px */
 @media (min-width: 1100px) {
   .phone { width: 280px; }
+  .hero-stage, .phone-duo { width: 280px; }
+  .phone-duo .phone-back { width: 80%; }
 }

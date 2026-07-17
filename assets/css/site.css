@@ -725,3 +725,19 @@ body.nav-locked { overflow: hidden; }
   .hero-stage, .phone-duo { width: 280px; }
   .phone-duo .phone-back { width: 80%; }
 }
+
+
+
+/* ============================================================
+   STICKY HEADER
+   .nav-wrap already carries position:sticky, but layout.js injects
+   the nav into #site-nav, and a sticky element can only travel
+   inside its own parent's box. #site-nav is exactly nav-height
+   tall, so the header had nowhere to stick and scrolled away with
+   it. Making the holder sticky pins the header for the whole page.
+   ============================================================ */
+#site-nav { position: sticky; top: 0; z-index: 100; }
+
+/* Pinned header must not cover in-page anchor targets. */
+html { scroll-padding-top: calc(var(--nav-h) + 24px); }
+[id] { scroll-margin-top: calc(var(--nav-h) + 24px); }

@@ -3,42 +3,549 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subscription — Fotocal</title>
-  <meta name="description" content="Fotocal subscription plans and pricing. Coming soon.">
-  <meta name="robots" content="noindex">
+  <title>Subscription &amp; pricing — Fotocal</title>
+  <meta name="description" content="Fotocal pricing: free forever with 3 AI scans a day and unlimited Coach Kal. Premium from €2.92/month — €6.99 monthly, €16.99 for 3 months, €34.99 yearly. 3-day free trial on the yearly plan.">
+  <meta name="keywords" content="Fotocal pricing, Fotocal premium, calorie app subscription, AI food scanner price">
+  <link rel="canonical" href="https://fotocal.github.io/Fotocal-web/subscription/">
   <meta name="theme-color" content="#FDF9F0">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Subscription &amp; pricing — Fotocal">
+  <meta property="og:description" content="Free forever with 3 AI scans a day and unlimited Coach Kal. Premium from about €2.92/month. 3-day free trial on the yearly plan.">
+  <meta property="og:url" content="https://fotocal.github.io/Fotocal-web/subscription/">
+  <meta property="og:image" content="https://fotocal.github.io/Fotocal-web/assets/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subscription &amp; pricing — Fotocal">
+  <meta name="twitter:description" content="Free forever with 3 AI scans a day and unlimited Coach Kal. Premium from about €2.92/month.">
+  <meta name="twitter:image" content="https://fotocal.github.io/Fotocal-web/assets/og-image.png">
+
   <link rel="icon" type="image/png" href="../assets/img/logo.png">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="apple-touch-icon" href="../assets/img/logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+
+  <!-- Prices here must match the real Google Play products:
+       fotocal_monthly_pro €6.99 · fotocal_threemonth_pro €16.99 ·
+       fotocal_yearly_pro €34.99 (the only one with a 3-day trial).
+       All include Spanish VAT at 21%. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Fotocal",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "HealthApplication",
+    "description": "AI nutrition app: photograph your meal and get calories, macros and a quality score instantly. Free plan includes 3 AI scans a day and unlimited Coach Kal.",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Free" },
+      { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "name": "Premium Monthly" },
+      { "@type": "Offer", "price": "16.99", "priceCurrency": "EUR", "name": "Premium 3 Months" },
+      { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR", "name": "Premium Yearly" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <div id="site-nav"></div>
 
   <main id="main">
-    <section class="soon">
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section class="page-hero">
       <div class="container">
-        <div class="soon-inner mx-auto">
-          <div class="soon-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <span class="pill" data-i18n="soon.badge">Coming soon</span>
-          <h1 data-i18n-html="soon.title">This page is <em class="accent">on its way</em>.</h1>
-          <p data-i18n="soon.body">We are still writing this one. In the meantime, the app itself is ready — and everything about how Fotocal works is on the home page.</p>
-          <div class="soon-actions">
-            <a class="btn btn-outline" href="../" data-i18n="soon.home">Back to home</a>
-            <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="soon.play">Get the app</a>
+        <span class="kicker reveal" data-i18n="sub.kicker">Subscription</span>
+        <h1 class="reveal" data-i18n-html="sub.title">Everything Fotocal can do, <em class="accent">unlocked</em>.</h1>
+        <p class="lead reveal" data-i18n="sub.lead">Fotocal is free to download and free to use every day. Premium removes the daily limit on AI photo scans and switches on the deeper analysis — weekly reports, personalised recommendations, sync and an ad-free app.</p>
+        <p class="lead reveal" data-i18n="sub.lead2">Three lengths, one set of features. The longer you commit, the less it costs per month. That is the whole pricing model — no tiers to decode, no add-ons.</p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+             target="_blank" rel="noopener" data-i18n="sub.hero.cta">Get Fotocal on Google Play</a>
+          <a class="btn btn-outline" href="#compare" data-i18n="sub.hero.compare">Compare free and Premium ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ COACH KAL IS FREE ═══════════════════
+         Stated before the plans, deliberately. It is the feature people
+         most assume is paywalled, and it is not. -->
+    <section class="section-tight">
+      <div class="container-narrow">
+        <div class="callout callout-info reveal">
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 20.5l1.5-4.2A8.4 8.4 0 0 1 3.6 12a8.4 8.4 0 0 1 8.4-8.5h.5A8.4 8.4 0 0 1 21 11.5z"/></svg>
+          </div>
+          <div>
+            <h4 data-i18n="sub.kal.h">Coach Kal is free. For everyone, with no limit.</h4>
+            <p data-i18n="sub.kal.b">Your AI nutrition coach is not a Premium feature and never has been. Ask Coach Kal as many questions as you like, on the free plan, forever. It is the part of Fotocal most likely to actually change how you eat, so putting it behind a paywall would be backwards.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════ THE PLANS ═══════════════════ -->
+    <section class="section section-alt" id="plans">
+      <div class="container">
+        <div class="sec-head">
+          <span class="kicker reveal" data-i18n="sub.plans.kicker">The plans</span>
+          <h2 class="section-title reveal" data-i18n-html="sub.plans.title">Pick a length. <em class="accent">Same Premium</em> either way.</h2>
+          <p class="section-sub reveal" data-i18n="sub.plans.sub">Every plan unlocks exactly the same features. The only difference is how long it runs and what that works out to per month.</p>
+        </div>
+
+        <div class="plans-detail">
+
+          <!-- Monthly -->
+          <article class="plan-d reveal">
+            <div class="plan-d-head">
+              <p class="plan-d-name" data-i18n="sub.p.m.name">Monthly</p>
+              <p class="plan-d-price">6,99&nbsp;&euro;<span data-i18n="sub.p.m.per">/month</span></p>
+              <p class="plan-d-equiv" data-i18n="sub.p.m.equiv">Billed every month.</p>
+            </div>
+            <div class="plan-d-body">
+              <p class="plan-d-none" data-i18n="sub.p.m.trial">No free trial on this plan — billing starts straight away.</p>
+              <p style="font-size:.89rem;color:var(--muted);margin-bottom:1rem" data-i18n="sub.p.m.note">The flexible one. Good if you want to try Premium properly for a month without thinking further ahead than that.</p>
+              <ul class="check-list">
+                <li data-i18n="sub.u1.t">Unlimited AI food scans</li>
+                <li data-i18n="sub.cmp.r7">Advanced nutrition insights</li>
+                <li data-i18n="sub.cmp.r8">Weekly reports</li>
+                <li data-i18n="sub.cmp.r9">Personalised plans &amp; recommendations</li>
+                <li data-i18n="sub.cmp.r10">Sync</li>
+                <li data-i18n="sub.u6.t">No ads</li>
+              </ul>
+            </div>
+            <a class="btn btn-outline btn-block" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+               target="_blank" rel="noopener" data-i18n="sub.p.cta">Get it on Google Play</a>
+            <p class="plan-d-sku">fotocal_monthly_pro</p>
+          </article>
+
+          <!-- Yearly — most popular, only one with a trial -->
+          <article class="plan-d plan-d-best reveal" style="--rd:.08s">
+            <span class="plan-flag" data-i18n="sub.p.y.flag">MOST POPULAR</span>
+            <div class="plan-d-head">
+              <p class="plan-d-name" data-i18n="sub.p.y.name">Yearly</p>
+              <p class="plan-d-price">34,99&nbsp;&euro;<span data-i18n="sub.p.y.per">/year</span></p>
+              <p class="plan-d-equiv" data-i18n-html="sub.p.y.equiv">Works out at <b>about €2.92 a month</b>.</p>
+              <span class="plan-d-save" data-i18n="sub.p.y.save">Saves about 58% vs monthly</span>
+            </div>
+            <div class="plan-d-body">
+              <p class="plan-d-trial" data-i18n="sub.p.y.trial">Includes a 3-day free trial. Cancel before it ends and you are not charged.</p>
+              <p style="font-size:.89rem;color:var(--muted);margin-bottom:1rem" data-i18n="sub.p.y.note">The cheapest way to use Fotocal, and the only plan with a free trial. Best if you already know you want to build the habit over a full year.</p>
+              <ul class="check-list">
+                <li data-i18n="sub.u1.t">Unlimited AI food scans</li>
+                <li data-i18n="sub.cmp.r7">Advanced nutrition insights</li>
+                <li data-i18n="sub.cmp.r8">Weekly reports</li>
+                <li data-i18n="sub.cmp.r9">Personalised plans &amp; recommendations</li>
+                <li data-i18n="sub.cmp.r10">Sync</li>
+                <li data-i18n="sub.u6.t">No ads</li>
+              </ul>
+            </div>
+            <a class="btn btn-cta btn-block" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+               target="_blank" rel="noopener" data-i18n="sub.p.ctaY">Start the 3-day free trial</a>
+            <p class="plan-d-sku">fotocal_yearly_pro</p>
+          </article>
+
+          <!-- 3 months -->
+          <article class="plan-d reveal" style="--rd:.16s">
+            <div class="plan-d-head">
+              <p class="plan-d-name" data-i18n="sub.p.q.name">3 months</p>
+              <p class="plan-d-price">16,99&nbsp;&euro;<span data-i18n="sub.p.q.per">/3 months</span></p>
+              <p class="plan-d-equiv" data-i18n-html="sub.p.q.equiv">Works out at <b>about €5.66 a month</b>.</p>
+              <span class="plan-d-save" data-i18n="sub.p.q.save">Saves about 19% vs monthly</span>
+            </div>
+            <div class="plan-d-body">
+              <p class="plan-d-none" data-i18n="sub.p.q.trial">No free trial on this plan — billing starts straight away.</p>
+              <p style="font-size:.89rem;color:var(--muted);margin-bottom:1rem" data-i18n="sub.p.q.note">The middle ground. A full season is long enough for a habit to take hold without committing to a year.</p>
+              <ul class="check-list">
+                <li data-i18n="sub.u1.t">Unlimited AI food scans</li>
+                <li data-i18n="sub.cmp.r7">Advanced nutrition insights</li>
+                <li data-i18n="sub.cmp.r8">Weekly reports</li>
+                <li data-i18n="sub.cmp.r9">Personalised plans &amp; recommendations</li>
+                <li data-i18n="sub.cmp.r10">Sync</li>
+                <li data-i18n="sub.u6.t">No ads</li>
+              </ul>
+            </div>
+            <a class="btn btn-outline btn-block" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+               target="_blank" rel="noopener" data-i18n="sub.p.cta">Get it on Google Play</a>
+            <p class="plan-d-sku">fotocal_threemonth_pro</p>
+          </article>
+        </div>
+
+        <!-- The trial caveat, said plainly rather than in small print -->
+        <div class="container-narrow" style="padding:0;margin-top:2.5rem">
+          <div class="callout reveal">
+            <div class="callout-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="sub.trial.h">The free trial is on the yearly plan only</h4>
+              <p data-i18n="sub.trial.b">This is worth being clear about, because plenty of apps are not. The 3-day free trial comes with the yearly plan. The monthly and 3-month plans do not have a trial — if you pick one of those, billing starts immediately.</p>
+              <p data-i18n="sub.trial.b2">If you want to try Premium at no cost, start the yearly plan and cancel inside 3 days. You will not be charged. If you would rather not deal with a trial at all, the monthly plan is the simplest option.</p>
+            </div>
+          </div>
+
+          <p class="reveal" style="font-size:.85rem;color:var(--muted);text-align:center;max-width:60ch;margin:1.5rem auto 0"
+             data-i18n="sub.vat">All prices are in euros and include Spanish VAT at 21%. What you see here is what you pay — there is nothing added at checkout.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FREE vs PREMIUM ═══════════════════ -->
+    <section class="section" id="compare">
+      <div class="container-narrow">
+        <div class="sec-head">
+          <span class="kicker reveal" data-i18n="sub.cmp.kicker">Free vs Premium</span>
+          <h2 class="section-title reveal" data-i18n-html="sub.cmp.title">What you get, <em class="accent">line by line</em>.</h2>
+          <p class="section-sub reveal" data-i18n="sub.cmp.sub">The free plan is a real product, not a demo — you can log every meal, every day, forever, without paying. Here is exactly where the line sits.</p>
+        </div>
+
+        <div class="cmp-wrap reveal">
+          <table class="cmp">
+            <caption data-i18n="sub.cmp.caption">Fotocal free plan compared with Fotocal Premium</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="sub.cmp.colFeature">Feature</th>
+                <th scope="col" data-i18n="sub.cmp.colFree">Free</th>
+                <th scope="col" class="is-pro" data-i18n="sub.cmp.colPro">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r1">AI food scans</span><small data-i18n="sub.cmp.r1s">Photograph a meal and get calories, macros and a quality score.</small></th>
+                <td><span class="lim" data-i18n="sub.cmp.r1free">3 per day</span></td>
+                <td class="is-pro"><span data-i18n="sub.cmp.r1pro">Unlimited</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r2">Coach Kal</span><small data-i18n="sub.cmp.r2s">Your AI nutrition coach — free for everyone, on every plan.</small></th>
+                <td><span class="lim" data-i18n="sub.cmp.r2free">Unlimited</span></td>
+                <td class="is-pro"><span data-i18n="sub.cmp.r2pro">Unlimited</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r3">Meal diary</span><small data-i18n="sub.cmp.r3s">Log breakfast, lunch, dinner and snacks against your targets.</small></th>
+                <td><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r4">Weight &amp; progress tracking</span><small data-i18n="sub.cmp.r4s">Log your weight and measurements and watch the trend.</small></th>
+                <td><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r5">Water &amp; steps</span><small data-i18n="sub.cmp.r5s">Daily hydration, plus steps via Health Connect.</small></th>
+                <td><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r6">Offline mode</span><small data-i18n="sub.cmp.r6s">Log with no signal. The AI scan itself still needs a connection.</small></th>
+                <td><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r7">Advanced nutrition insights</span><small data-i18n="sub.cmp.r7s">The deeper read on your macros and patterns, beyond the daily totals.</small></th>
+                <td><span class="mk mk-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></span><span class="sr-only" data-i18n="sub.cmp.no">Not included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r8">Weekly reports</span><small data-i18n="sub.cmp.r8s">A weekly pull-together of trends, wins and what slipped.</small></th>
+                <td><span class="mk mk-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></span><span class="sr-only" data-i18n="sub.cmp.no">Not included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r9">Personalised plans &amp; recommendations</span><small data-i18n="sub.cmp.r9s">Guidance shaped around your goals and what you actually log.</small></th>
+                <td><span class="mk mk-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></span><span class="sr-only" data-i18n="sub.cmp.no">Not included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r10">Sync</span><small data-i18n="sub.cmp.r10s">Your data kept in step and carried to a new phone.</small></th>
+                <td><span class="mk mk-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></span><span class="sr-only" data-i18n="sub.cmp.no">Not included</span></td>
+                <td class="is-pro"><span class="mk mk-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="sr-only" data-i18n="sub.cmp.yes">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="sub.cmp.r11">Ads</span><small data-i18n="sub.cmp.r11s">Premium removes ads from the app entirely.</small></th>
+                <td><span class="lim" data-i18n="sub.cmp.r11free">Yes</span></td>
+                <td class="is-pro"><span data-i18n="sub.cmp.r11pro">None</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ WHAT PREMIUM UNLOCKS ═══════════════════
+         Alternating image-left / text-right, same .flow-row rhythm as
+         the home page. Phone screens use the shared .screen-slot
+         placeholder — drop the PNG at the data-src path and it swaps
+         itself in. No fake screenshots. -->
+    <section class="section section-alt" id="unlocks">
+      <div class="container">
+        <div class="sec-head">
+          <span class="kicker reveal" data-i18n="sub.unl.kicker">What Premium unlocks</span>
+          <h2 class="section-title reveal" data-i18n-html="sub.unl.title">Six things that <em class="accent">switch on</em>.</h2>
+          <p class="section-sub reveal" data-i18n="sub.unl.sub">Not a longer list of the same thing — these are the parts of Fotocal that need Premium, and what each one actually does for you.</p>
+        </div>
+
+        <div class="flow-row reveal">
+          <div class="flow-visual">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-slot" data-src="../assets/img/screens/scan.png" data-label="Scan screen — unlimited scanning"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="sub.u1.pill">The main one</span>
+            <h3 data-i18n="sub.u1.t">Unlimited AI food scans</h3>
+            <p data-i18n="sub.u1.b">The free plan gives you 3 AI photo scans a day, which covers breakfast, lunch and dinner. It is genuinely enough to use Fotocal properly. What it does not cover is the day with a snack, a coffee, something at a friend&#39;s place and dinner out — and that is exactly the day you most want logged, because it is the one you would never reconstruct accurately from memory.</p>
+            <p data-i18n="sub.u1.b2">Premium removes the counter. Scan eleven times in a day if that is what your day looked like. The point of photo logging is that it is cheap enough to do every single time, and a daily limit quietly works against that.</p>
+            <ul class="check-list">
+              <li data-i18n="sub.u1.li1">No daily cap — scan as often as you eat</li>
+              <li data-i18n="sub.u1.li2">The messy days get logged too, not just the tidy ones</li>
+              <li data-i18n="sub.u1.li3">Same scanner, same speed, just no counter</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flow-row flip reveal">
+          <div class="flow-visual">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-slot" data-src="../assets/img/screens/insights.png" data-label="Advanced insights — nutrition breakdown"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="sub.u2.pill">Deeper analysis</span>
+            <h3 data-i18n="sub.u2.t">Advanced nutrition insights</h3>
+            <p data-i18n="sub.u2.b">Daily totals tell you whether you hit your calories. They do not tell you that your protein is consistently low on the days you eat out, or that your week falls apart on Thursdays rather than at the weekend like you assumed. Advanced insights look across your logged data for the patterns underneath the numbers.</p>
+            <p data-i18n="sub.u2.b2">This is the part that turns tracking into understanding. Anyone can see a number. Knowing which of your habits is actually driving it is the useful bit — and that only becomes visible with enough logged days to look across.</p>
+            <ul class="check-list">
+              <li data-i18n="sub.u2.li1">Patterns across your macros, not just daily totals</li>
+              <li data-i18n="sub.u2.li2">Where your week reliably goes off track</li>
+              <li data-i18n="sub.u2.li3">Built from your own logged data, not averages of other people</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flow-row reveal">
+          <div class="flow-visual">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-slot" data-src="../assets/img/screens/weekly-report.png" data-label="Weekly report — the week's trends"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="sub.u3.pill">Every week</span>
+            <h3 data-i18n="sub.u3.t">Weekly reports</h3>
+            <p data-i18n="sub.u3.b">A single day is noise. One big dinner is not a trend, and one perfect Tuesday is not progress. The weekly report is where a week&#39;s worth of logging gets pulled into something you can actually act on: how your calories and macros really landed, which habits held, where things slipped, and one or two specific things worth changing next week.</p>
+            <p data-i18n="sub.u3.b2">It is deliberately not a scoreboard. There is no grade and nothing to fail. It is a summary written to be read on a Sunday evening and to leave you with one clear idea for the week ahead.</p>
+            <ul class="check-list">
+              <li data-i18n="sub.u3.li1">Trends across the whole week, not a single day</li>
+              <li data-i18n="sub.u3.li2">What went well, said as plainly as what did not</li>
+              <li data-i18n="sub.u3.li3">One or two concrete changes, not a lecture</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flow-row flip reveal">
+          <div class="flow-visual">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-slot" data-src="../assets/img/screens/plan.png" data-label="Personalised plan & recommendations"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="sub.u4.pill">Made for you</span>
+            <h3 data-i18n="sub.u4.t">Personalised plans &amp; recommendations</h3>
+            <p data-i18n="sub.u4.b">Generic advice is easy to give and easy to ignore, because it is not about you. Premium recommendations are shaped around your goals, your logged meals and how your week is actually going — so a suggestion arrives when it is relevant rather than as a list of rules you were meant to memorise on day one.</p>
+            <p data-i18n="sub.u4.b2">They adapt as you do. Change your goal, change what you eat, or have a genuinely bad fortnight, and what Fotocal suggests moves with you instead of repeating the same advice at you.</p>
+            <ul class="check-list">
+              <li data-i18n="sub.u4.li1">Built around your goals and your real logged data</li>
+              <li data-i18n="sub.u4.li2">Adapts as your goals and habits change</li>
+              <li data-i18n="sub.u4.li3">Suggestions when they are relevant, not a rulebook</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flow-row reveal">
+          <div class="flow-visual">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-slot" data-src="../assets/img/screens/sync.png" data-label="Sync — data carried across devices"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="sub.u5.pill">Your data, kept</span>
+            <h3 data-i18n="sub.u5.t">Sync</h3>
+            <p data-i18n="sub.u5.b">Months of logging is worth something, and it should not be tied to one handset. Sync keeps your diary, your weight history and your progress in step and carries them over when you change phone. Fotocal is offline-first, so you can always log without a connection — sync is what makes that data safe rather than stranded.</p>
+            <ul class="check-list">
+              <li data-i18n="sub.u5.li1">Your diary and history carried to a new phone</li>
+              <li data-i18n="sub.u5.li2">Works with offline-first logging, not against it</li>
+              <li data-i18n="sub.u5.li3">Months of data that is not stuck on one device</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flow-row flip reveal">
+          <div class="flow-visual">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-slot" data-src="../assets/img/screens/home.png" data-label="The app with no ads"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="sub.u6.pill">Quieter</span>
+            <h3 data-i18n="sub.u6.t">No ads</h3>
+            <p data-i18n="sub.u6.b">Premium removes ads from the app completely. Logging a meal takes a few seconds, and an ad in the middle of those few seconds is friction in exactly the wrong place — the whole design goal is that tracking is too quick to talk yourself out of.</p>
+            <ul class="check-list">
+              <li data-i18n="sub.u6.li1">No ads anywhere in the app</li>
+              <li data-i18n="sub.u6.li2">Nothing between you and logging a meal</li>
+              <li data-i18n="sub.u6.li3">Your subscription is what pays for the app instead</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ BILLING & CANCELLING ═══════════════════ -->
+    <section class="section" id="billing">
+      <div class="container-narrow">
+        <div class="sec-head">
+          <span class="kicker reveal" data-i18n="sub.bill.kicker">Billing &amp; cancelling</span>
+          <h2 class="section-title reveal" data-i18n-html="sub.bill.title">Handled by <em class="accent">Google Play</em>.</h2>
+        </div>
+
+        <div class="prose reveal">
+          <p data-i18n="sub.bill.p1">Fotocal is an Android app, so every subscription is bought, billed and cancelled through Google Play. We never see or store your card details — Google handles the payment side entirely.</p>
+          <p data-i18n="sub.bill.p2">That has a practical upside: whatever you need to do with your subscription, you do it in one place you already have on your phone, and it works the same way as every other subscription you have there.</p>
+
+          <h3 data-i18n="sub.bill.h3">How to cancel</h3>
+          <ol class="num-list">
+            <li data-i18n-html="sub.bill.s1">Open the <b>Play Store</b> app on your phone.</li>
+            <li data-i18n-html="sub.bill.s2">Tap your <b>profile icon</b> in the top right.</li>
+            <li data-i18n-html="sub.bill.s3">Go to <b>Payments and subscriptions → Subscriptions</b>.</li>
+            <li data-i18n-html="sub.bill.s4">Select <b>Fotocal</b> and tap <b>Cancel subscription</b>.</li>
+          </ol>
+          <p data-i18n="sub.bill.after">You keep Premium until the end of the period you have already paid for — cancelling does not cut you off on the spot. After that you drop back to the free plan, and your logged data stays exactly where it is.</p>
+        </div>
+
+        <div class="callout reveal">
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+          </div>
+          <div>
+            <h4 data-i18n="sub.bill.renew.h">It renews automatically</h4>
+            <p data-i18n="sub.bill.renew.b">Every plan renews on its own until you cancel — that is how Google Play subscriptions work. You can cancel at any time, and if you are on the yearly trial, cancelling within the 3 days means you are not charged at all.</p>
+          </div>
+        </div>
+
+        <div class="callout reveal">
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h4 data-i18n="sub.bill.refund.h">Refunds</h4>
+            <p data-i18n="sub.bill.refund.b">Refunds are handled under Google Play&#39;s own refund policy, since Google is the seller. If something has gone wrong with a charge, email us and we will help you sort it out — but the refund itself goes through Google Play.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FAQ ═══════════════════ -->
+    <section class="section section-alt" id="faq">
+      <div class="container-narrow">
+        <div class="sec-head">
+          <span class="kicker reveal" data-i18n="sub.faq.kicker">FAQ</span>
+          <h2 class="section-title reveal" data-i18n-html="sub.faq.title">Subscription <em class="accent">questions</em></h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q1">Can I use Fotocal without paying?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a1">Yes, indefinitely. The free plan gives you 3 AI photo scans a day, unlimited Coach Kal, the meal diary, weight and progress tracking, water, steps and offline mode. Plenty of people will never need more than that. Premium is for when the daily scan limit starts getting in your way or you want the weekly reports and deeper insights.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q2">Which plans have a free trial?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a2">Only the yearly plan. It comes with a 3-day free trial, and if you cancel before the 3 days are up you are not charged. The monthly and 3-month plans start billing immediately.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q3">Do all three plans unlock the same things?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a3">Yes. There is one Premium and every plan unlocks all of it. The only thing you are choosing is how long it runs and what it works out to per month.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q4">Is Coach Kal really free?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a4">Really. Coach Kal is unlimited on the free plan and always has been. It is not a trial, not a teaser, and there is no message cap.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q5">Do the prices include tax?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a5">Yes. Prices are in euros and include Spanish VAT at 21%. Nothing is added on top at checkout.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q6">What happens to my data if I cancel?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a6">It stays. You drop back to the free plan and keep your diary, your weight history and everything else you have logged — you just go back to 3 AI scans a day. Nothing is deleted because you stopped paying.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q7">Can I switch plans?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a7">Yes, through Google Play, in the same Subscriptions screen where you cancel. Google handles the proration when you change.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="sub.faq.q8">How do I cancel?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="sub.faq.a8">In the Play Store app: your profile icon → Payments and subscriptions → Subscriptions → Fotocal → Cancel subscription. You keep Premium until the period you have paid for runs out.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-inner reveal">
+          <h2 data-i18n-html="sub.cta.title">Start free. <em class="accent-light">Upgrade if it earns it</em>.</h2>
+          <p data-i18n="sub.cta.sub">Download Fotocal, use it free for as long as you like, and go Premium only when the daily scan limit is the thing standing in your way.</p>
+          <a class="play-badge play-badge-light" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+             target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play"
+             style="margin-inline:auto;display:inline-flex">
+            <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
+              <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
+              <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
+              <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
+              <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
+            </svg>
+            <span class="play-badge-text">
+              <small data-i18n="cta.badgeTop">GET IT ON</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="site-footer"></div>
 
+  <!-- Load order matters: i18n.js -> i18n-pages.js -> layout.js -> main.js -->
   <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/i18n-pages.js"></script>
   <script src="../assets/js/layout.js" data-page="subscription"></script>
   <script src="../assets/js/main.js"></script>
 </body>

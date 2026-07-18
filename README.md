@@ -1,4 +1,4 @@
-# Fotocal — Marketing Websit e
+# Fotocal — Marketing Website
 
 Static marketing site for **Fotocal**, the AI-powered calorie & health tracking app for Android ([Google Play](https://play.google.com/store/apps/details?id=com.fotokal.app)).
 
@@ -11,7 +11,7 @@ Static marketing site for **Fotocal**, the AI-powered calorie & health tracking 
 | Terms of Service | `/terms/` | Subscriptions, auto-renewal, free trial |
 | Account Deletion | `/account-deletion/` | Google Play account-deletion requirement |
 
-## Stack edit CAP
+## Stack
 
 Pure static HTML/CSS/JS — no build step. Fonts: Fraunces + Instrument Sans (Google Fonts).
 Language toggle (ES/EN) persisted in `localStorage`.

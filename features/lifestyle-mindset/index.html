@@ -17,6 +17,19 @@
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/features/lifestyle-mindset/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/features/lifestyle-mindset/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/lifestyle-mindset/">
+
+  <style>
+.fc-fphone{width:236px;max-width:66vw;margin:2.4rem auto 0;border-radius:36px;background:linear-gradient(160deg,#2A1B12,#3a2a1e);padding:9px;box-shadow:0 34px 66px -30px rgba(42,27,18,.55);position:relative}
+.fc-fphone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:38%;height:15px;background:#2A1B12;border-radius:0 0 14px 14px;z-index:2}
+.fc-fphone img{display:block;width:100%;height:auto;border-radius:29px}
+.fc-related{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:960px;margin:2rem auto 0}
+.fc-rcard{display:block;background:var(--white,#fff);border:1px solid var(--border,rgba(176,124,86,.22));border-radius:18px;padding:1.15rem 1.2rem;text-decoration:none;box-shadow:0 8px 22px -14px rgba(42,27,18,.35);transition:transform .18s,box-shadow .18s}
+.fc-rcard:hover{transform:translateY(-4px);box-shadow:0 16px 34px -16px rgba(42,27,18,.4)}
+.fc-rkicker{font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--pink,#E91E63)}
+.fc-rtitle{display:block;margin-top:.35rem;font-weight:600;color:var(--ink,#2A1B12);font-size:1.02rem;line-height:1.3}
+.fc-rarrow{color:var(--muted,#8A7B6E);font-size:.85rem;margin-top:.55rem;display:inline-block}
+@media(max-width:760px){.fc-related{grid-template-columns:1fr;max-width:420px}}
+  </style>
 </head>
 <body>
 
@@ -38,7 +51,11 @@
           </div>
         </div>
       </div>
-    </section>
+    
+        <div class="fc-fphone reveal">
+          <img src="/assets/img/screens/coach.jpg" width="540" height="1170" alt="Coach Kal chat in Fotocal giving personalised, supportive nutrition guidance" loading="lazy" decoding="async">
+        </div>
+      </section>
 
     <!-- HABIT LOOP -->
     <section class="section section-alt">
@@ -102,6 +119,35 @@
     </section>
 
     <!-- FINAL CTA -->
+    
+    <!-- Related reading (internal links: feature -> blog) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal">Guides</span>
+          <h2 class="section-title reveal" data-i18n="feat.related">Keep reading</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="feat.relatedSub">Short, practical reads that go deeper on this topic.</p>
+        </div>
+        <div class="fc-related">
+          <a class="fc-rcard reveal" href="/blog/how-to-stay-consistent-with-healthy-habits/">
+            <span class="fc-rkicker">Article</span>
+            <span class="fc-rtitle">How to stay consistent with healthy habits</span>
+            <span class="fc-rarrow">Read →</span>
+          </a>
+          <a class="fc-rcard reveal" href="/blog/mindful-eating-beginners-guide/">
+            <span class="fc-rkicker">Article</span>
+            <span class="fc-rtitle">Mindful eating: a beginner\u2019s guide</span>
+            <span class="fc-rarrow">Read →</span>
+          </a>
+          <a class="fc-rcard reveal" href="/blog/emotional-eating/">
+            <span class="fc-rkicker">Article</span>
+            <span class="fc-rtitle">Understanding emotional eating</span>
+            <span class="fc-rarrow">Read →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="final-cta">
       <div class="container">
         <div class="final-inner reveal">

@@ -42,7 +42,10 @@
   var PAGE = me.getAttribute("data-page") || "";
 
   var PLAY_URL = "https://play.google.com/store/apps/details?id=com.fotokal.app";
-  var IG_URL   = "https://www.instagram.com/fotocal_app?igsh=MWRvNGRkMXMwNmZicw==";
+  var IG_URL   = "https://www.instagram.com/getfotocal.app";
+  var FB_URL   = "https://www.facebook.com/share/1Cv2zLbpPc/";
+  var TIKTOK_URL = "https://vm.tiktok.com/ZN81Sd9mQ/";
+  var YT_URL   = "https://youtube.com/@getfotocal";
   /* Official support address — taken from the existing Google Play
      compliance pages (privacy-policy / terms / account-deletion).
      Do not change without changing those too. */
@@ -165,11 +168,20 @@
             logoHTML(u("")) +
             '<p data-i18n="footer.tag"></p>' +
             '<div class="footer-social">' +
-              '<a href="' + IG_URL + '" target="_blank" rel="noopener" aria-label="Instagram">' +
+              '<a href="' + FB_URL + '" target="_blank" rel="noopener" aria-label="Fotocal on Facebook">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
+                '<rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13.2 21v-6.4h2.1l.4-2.6h-2.5V10c0-.8.3-1.3 1.4-1.3h1.2V6.3c-.6-.1-1.2-.1-1.8-.1-1.9 0-3.1 1.1-3.1 3.3v1.9H8.7v2.6h2.2V21"/></svg></a>' +
+              '<a href="' + IG_URL + '" target="_blank" rel="noopener" aria-label="Fotocal on Instagram">' +
                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
                 '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/>' +
                 '<circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg></a>' +
-              '<a href="mailto:' + SUPPORT + '" aria-label="Email">' +
+              '<a href="' + TIKTOK_URL + '" target="_blank" rel="noopener" aria-label="Fotocal on TikTok">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<path d="M14 4c.3 1.9 1.6 3.4 3.6 3.7v2.4c-1.3 0-2.5-.4-3.6-1.1v5.2a4.6 4.6 0 1 1-4.6-4.6c.3 0 .5 0 .8.1"/></svg></a>' +
+              '<a href="' + YT_URL + '" target="_blank" rel="noopener" aria-label="Fotocal on YouTube">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true">' +
+                '<rect x="2.5" y="6" width="19" height="12" rx="3.5"/><path d="M10.5 9.4l4.3 2.6-4.3 2.6z" fill="currentColor" stroke="none"/></svg></a>' +
+              '<a href="mailto:' + SUPPORT + '" aria-label="Email Fotocal">' +
                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
                 '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a>' +
             '</div>' +

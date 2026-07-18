@@ -131,6 +131,30 @@
   ]
 }
   </script>
+
+  <style>
+/* Trust bar */
+.fc-trust{padding:2.4rem 0 .4rem}
+.fc-trust-inner{max-width:1080px;margin:0 auto;padding:0 1.25rem;text-align:center}
+.fc-trust-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem;margin-top:1rem}
+.fc-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.62rem .95rem;border-radius:999px;background:var(--white,#fff);border:1px solid var(--border,rgba(176,124,86,.22));box-shadow:0 5px 16px -12px rgba(42,27,18,.4);font-size:.9rem;font-weight:600;color:var(--ink-soft,#4A3A2E);line-height:1}
+.fc-chip .fc-ck{color:var(--green,#0FA968);flex:0 0 auto}
+.fc-trust-badge{margin-top:1.3rem;display:flex;justify-content:center}
+/* Pricing */
+.fc-price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:940px;margin:2.2rem auto 0;align-items:stretch}
+.fc-card{position:relative;background:var(--white,#fff);border:1px solid var(--border,rgba(176,124,86,.22));border-radius:22px;padding:1.7rem 1.4rem;box-shadow:var(--shadow-card,0 10px 30px -14px rgba(42,27,18,.2));display:flex;flex-direction:column;text-align:center}
+.fc-card-best{border:0;box-shadow:var(--shadow-soft,0 18px 44px -20px rgba(42,27,18,.3));transform:translateY(-8px);background:linear-gradient(var(--white,#fff),var(--white,#fff)) padding-box,var(--grad,linear-gradient(135deg,#FF8A3D,#F2306B)) border-box;border:2px solid transparent}
+.fc-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad,linear-gradient(135deg,#FF8A3D,#F2306B));color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(242,48,107,.6)}
+.fc-plan-name{font-weight:700;color:var(--muted,#8A7B6E);font-size:.92rem;letter-spacing:.03em;text-transform:uppercase}
+.fc-plan-price{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:2.5rem;color:var(--ink,#2A1B12);line-height:1.05;margin:.45rem 0 .05rem}
+.fc-plan-per{color:var(--muted,#8A7B6E);font-size:.9rem}
+.fc-plan-note{margin-top:.6rem;font-size:.92rem;color:var(--ink-soft,#4A3A2E)}
+.fc-plan-equiv{margin-top:.6rem;font-size:.9rem;color:var(--green,#0FA968);font-weight:700}
+.fc-price-badge{display:flex;justify-content:center;margin-top:1.8rem}
+.fc-price-fine{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;justify-content:center;margin-top:1.2rem;font-size:.86rem;color:var(--muted,#8A7B6E)}
+.fc-price-fine span{display:inline-flex;align-items:center;gap:.4rem}
+@media(max-width:820px){.fc-price-grid{grid-template-columns:1fr;max-width:400px}.fc-card-best{transform:none}}
+  </style>
 </head>
 <body>
 
@@ -195,6 +219,32 @@
     </section>
 
     <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+
+    <!-- ═══════════════ TRUST BAR (honest, no fabricated metrics) ═══════════════ -->
+    <section class="fc-trust" aria-label="Why you can trust Fotocal">
+      <div class="fc-trust-inner">
+        <span class="kicker reveal" data-i18n="trust.kicker">Built to be trusted</span>
+        <div class="fc-trust-grid reveal">
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.ai">AI-powered · GPT-4o vision</span></span>
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.privacy">Privacy-first · Your data is never sold</span></span>
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.gdpr">GDPR-compliant</span></span>
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.offline">Works fully offline</span></span>
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.langs">English & Spanish</span></span>
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.trial">3-day free trial · Cancel anytime</span></span>
+          <span class="fc-chip"><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trust.health">Health Connect compatible</span></span>
+          <!-- REAL GOOGLE PLAY RATING SLOT: once you have genuine reviews, uncomment and fill in.
+          <span class="fc-chip"><svg width="16" height="16" viewBox="0 0 20 20" fill="#E8A50C" aria-hidden="true"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><strong>4.x</strong>&nbsp;Google Play</span>
+          -->
+        </div>
+        <div class="fc-trust-badge reveal">
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play">
+            <svg class="play-badge-icon" width="22" height="24" viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 234 79 12c-9-8-21-11-32-6l253 253z"/><path fill="#FBBC04" d="M404 312l-79-45-88 88 88 88 79-45c26-15 26-71 0-86z"/><path fill="#4285F4" d="M47 6C40 10 36 18 36 29v454c0 11 4 19 11 23l253-253z"/><path fill="#34A853" d="M47 506c7 4 17 3 32-5l246-222-88-88z"/></svg>
+            <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="how-it-works">
       <div class="container">
         <div class="text-center">
@@ -425,6 +475,50 @@
     </section>
 
     <!-- ═══════════════════ COMPARISON ═══════════════════ -->
+    
+    <!-- ═══════════════ PRICING ═══════════════ -->
+    <section class="fc-pricing section" id="pricing">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="price.kicker">Subscription</span>
+          <h2 class="section-title reveal" data-i18n-html="price.title">Start with a <em class="accent">3-day free trial</em>.</h2>
+          <p class="section-sub reveal" data-i18n="price.sub">One subscription unlocks everything — pick the length that suits you.</p>
+        </div>
+        <div class="fc-price-grid">
+          <article class="fc-card reveal">
+            <span class="fc-plan-name" data-i18n="price.m.name">Monthly</span>
+            <div class="fc-plan-price" data-i18n="price.m.amt">€6.99</div>
+            <span class="fc-plan-per" data-i18n="price.m.per">/month</span>
+            <p class="fc-plan-note" data-i18n="price.m.note">The flexible one.</p>
+          </article>
+          <article class="fc-card reveal">
+            <span class="fc-plan-name" data-i18n="price.q.name">3 Months</span>
+            <div class="fc-plan-price" data-i18n="price.q.amt">€16.99</div>
+            <span class="fc-plan-per" data-i18n="price.q.per">every 3 months</span>
+            <p class="fc-plan-note" data-i18n="price.q.note">≈ €5.66/month.</p>
+          </article>
+          <article class="fc-card fc-card-best reveal">
+            <span class="fc-badge" data-i18n="price.y.badge">Best value</span>
+            <span class="fc-plan-name" data-i18n="price.y.name">Yearly</span>
+            <div class="fc-plan-price" data-i18n="price.y.amt">€34.99</div>
+            <span class="fc-plan-per" data-i18n="price.y.per">/year</span>
+            <p class="fc-plan-equiv" data-i18n="price.y.equiv">≈ €2.92/month — save the most.</p>
+          </article>
+        </div>
+        <div class="fc-price-badge">
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play">
+            <svg class="play-badge-icon" width="22" height="24" viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 234 79 12c-9-8-21-11-32-6l253 253z"/><path fill="#FBBC04" d="M404 312l-79-45-88 88 88 88 79-45c26-15 26-71 0-86z"/><path fill="#4285F4" d="M47 6C40 10 36 18 36 29v454c0 11 4 19 11 23l253-253z"/><path fill="#34A853" d="M47 506c7 4 17 3 32-5l246-222-88-88z"/></svg>
+            <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <div class="fc-price-fine reveal">
+          <span><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.trial">3-day free trial</span></span>
+          <span><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.cancel">Cancel anytime in Google Play</span></span>
+          <span><svg class="fc-ck" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.vary">Prices may vary by country</span></span>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="compare">
       <div class="container">
         <div class="text-center">

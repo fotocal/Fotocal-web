@@ -1,357 +1,393 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/</loc>
+    <loc>https://getfotocal.com/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/privacy-policy/</loc>
+    <loc>https://getfotocal.com/privacy-policy/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/terms/</loc>
+    <loc>https://getfotocal.com/terms/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/account-deletion/</loc>
+    <loc>https://getfotocal.com/account-deletion/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/</loc>
+    <loc>https://getfotocal.com/blog/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-count-calories-accurately/</loc>
+    <loc>https://getfotocal.com/blog/how-to-count-calories-accurately/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/tdee-how-many-calories-you-need/</loc>
+    <loc>https://getfotocal.com/blog/tdee-how-many-calories-you-need/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/calorie-deficit-for-fat-loss/</loc>
+    <loc>https://getfotocal.com/blog/calorie-deficit-for-fat-loss/</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/common-calorie-counting-mistakes/</loc>
+    <loc>https://getfotocal.com/blog/common-calorie-counting-mistakes/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/do-calories-matter-or-food-quality/</loc>
+    <loc>https://getfotocal.com/blog/do-calories-matter-or-food-quality/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/track-calories-without-weighing/</loc>
+    <loc>https://getfotocal.com/blog/track-calories-without-weighing/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-read-nutrition-labels/</loc>
+    <loc>https://getfotocal.com/blog/how-to-read-nutrition-labels/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/macronutrients-101/</loc>
+    <loc>https://getfotocal.com/blog/macronutrients-101/</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-much-protein-per-day/</loc>
+    <loc>https://getfotocal.com/blog/how-much-protein-per-day/</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/carbs-are-not-the-enemy/</loc>
+    <loc>https://getfotocal.com/blog/carbs-are-not-the-enemy/</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/dietary-fat-how-much-and-which-kinds/</loc>
+    <loc>https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-set-your-macros-for-weight-loss/</loc>
+    <loc>https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/fiber-the-underrated-nutrient/</loc>
+    <loc>https://getfotocal.com/blog/fiber-the-underrated-nutrient/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/why-micronutrients-matter/</loc>
+    <loc>https://getfotocal.com/blog/why-micronutrients-matter/</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/added-sugar-vs-natural-sugar/</loc>
+    <loc>https://getfotocal.com/blog/added-sugar-vs-natural-sugar/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-lose-weight-sustainably/</loc>
+    <loc>https://getfotocal.com/blog/how-to-lose-weight-sustainably/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/why-the-scale-is-not-the-whole-story/</loc>
+    <loc>https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/weight-loss-plateaus/</loc>
+    <loc>https://getfotocal.com/blog/weight-loss-plateaus/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-fast-should-you-lose-weight/</loc>
+    <loc>https://getfotocal.com/blog/how-fast-should-you-lose-weight/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/the-truth-about-starvation-mode/</loc>
+    <loc>https://getfotocal.com/blog/the-truth-about-starvation-mode/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/maintaining-weight-loss/</loc>
+    <loc>https://getfotocal.com/blog/maintaining-weight-loss/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/emotional-eating/</loc>
+    <loc>https://getfotocal.com/blog/emotional-eating/</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-sleep-affects-your-weight/</loc>
+    <loc>https://getfotocal.com/blog/how-sleep-affects-your-weight/</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/what-a-balanced-plate-looks-like/</loc>
+    <loc>https://getfotocal.com/blog/what-a-balanced-plate-looks-like/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/high-protein-breakfast-ideas/</loc>
+    <loc>https://getfotocal.com/blog/high-protein-breakfast-ideas/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/healthy-snacks-that-satisfy/</loc>
+    <loc>https://getfotocal.com/blog/healthy-snacks-that-satisfy/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-eat-healthy-on-a-budget/</loc>
+    <loc>https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/eating-out-without-wrecking-your-diet/</loc>
+    <loc>https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-build-a-healthy-grocery-list/</loc>
+    <loc>https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/meal-prep-for-beginners/</loc>
+    <loc>https://getfotocal.com/blog/meal-prep-for-beginners/</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/portion-control-simple-tricks/</loc>
+    <loc>https://getfotocal.com/blog/portion-control-simple-tricks/</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/hydration-and-weight/</loc>
+    <loc>https://getfotocal.com/blog/hydration-and-weight/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/plan-a-week-of-meals-in-30-minutes/</loc>
+    <loc>https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/batch-cooking-save-time-eat-better/</loc>
+    <loc>https://getfotocal.com/blog/batch-cooking-save-time-eat-better/</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/mindful-eating-beginners-guide/</loc>
+    <loc>https://getfotocal.com/blog/mindful-eating-beginners-guide/</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-stop-overeating-at-night/</loc>
+    <loc>https://getfotocal.com/blog/how-to-stop-overeating-at-night/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/intuitive-eating-vs-calorie-counting/</loc>
+    <loc>https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-handle-cravings-without-guilt/</loc>
+    <loc>https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/do-you-need-to-exercise-to-lose-weight/</loc>
+    <loc>https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/cardio-vs-strength-training-for-fat-loss/</loc>
+    <loc>https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-many-calories-does-exercise-burn/</loc>
+    <loc>https://getfotocal.com/blog/how-many-calories-does-exercise-burn/</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/building-muscle-while-losing-fat/</loc>
+    <loc>https://getfotocal.com/blog/building-muscle-while-losing-fat/</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/neat-the-hidden-calorie-burn/</loc>
+    <loc>https://getfotocal.com/blog/neat-the-hidden-calorie-burn/</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/how-to-stay-consistent-with-healthy-habits/</loc>
+    <loc>https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/does-protein-timing-matter/</loc>
+    <loc>https://getfotocal.com/blog/does-protein-timing-matter/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/intermittent-fasting-what-the-evidence-says/</loc>
+    <loc>https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/low-carb-vs-low-fat/</loc>
+    <loc>https://getfotocal.com/blog/low-carb-vs-low-fat/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/the-truth-about-detox-diets-and-cleanses/</loc>
+    <loc>https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/are-cheat-meals-helpful-or-harmful/</loc>
+    <loc>https://getfotocal.com/blog/are-cheat-meals-helpful-or-harmful/</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/why-crash-diets-fail/</loc>
+    <loc>https://getfotocal.com/blog/why-crash-diets-fail/</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/high-protein-diet-benefits-and-how-to-start/</loc>
+    <loc>https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/understanding-your-basal-metabolic-rate/</loc>
+    <loc>https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/best-foods-for-weight-loss/</loc>
+    <loc>https://getfotocal.com/blog/best-foods-for-weight-loss/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fotocal.github.io/Fotocal-web/blog/does-meal-timing-matter-for-weight-loss/</loc>
+    <loc>https://getfotocal.com/blog/does-meal-timing-matter-for-weight-loss/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/weight-loss/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/nutrition-diet/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/lifestyle-mindset/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/about/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/contact/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/subscription/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

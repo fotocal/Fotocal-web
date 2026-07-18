@@ -19,6 +19,8 @@ window.FOTOCAL_I18N = {
 
   /* ══════════════════════ ENGLISH (default) ══════════════════════ */
   en: {
+    "feat.related": "Keep reading",
+    "feat.relatedSub": "Short, practical reads that go deeper on this topic.",
     "trust.kicker": "Built to be trusted",
     "trust.ai": "AI-powered · GPT-4o vision",
     "trust.privacy": "Privacy-first · Your data is never sold",
@@ -203,6 +205,8 @@ window.FOTOCAL_I18N = {
 
   /* ══════════════════════ SPANISH ══════════════════════ */
   es: {
+    "feat.related": "Sigue leyendo",
+    "feat.relatedSub": "Lecturas breves y prácticas para profundizar en este tema.",
     "trust.kicker": "Hecho para dar confianza",
     "trust.ai": "Con IA · visión GPT-4o",
     "trust.privacy": "Privacidad ante todo · Tus datos nunca se venden",

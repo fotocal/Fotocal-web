@@ -1,4 +1,4 @@
-# Fotocal — Marketing Website 
+# Fotocal — Marketing Website
 
 Static marketing site for **Fotocal**, the AI-powered calorie & health tracking app for Android ([Google Play](https://play.google.com/store/apps/details?id=com.fotokal.app)).
 

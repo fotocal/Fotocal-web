@@ -80,19 +80,8 @@
      automatically — the <img> is tried first and the inline SVG below is
      only shown if that file 404s. Swapping the logo = dropping in one file. */
   function logoHTML(href) {
-    return '<a class="nav-logo" href="' + href + '" aria-label="Fotocal — ' +
-      'home">' +
-      '<img class="logo-mark is-tile" src="' + u("assets/img/logo.png") + '" alt="" ' +
-        'width="32" height="32" data-logo-img hidden>' +
-      '<svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" data-logo-fallback>' +
-        '<defs><linearGradient id="fcLogoG" x1="0" y1="0" x2="1" y2="1">' +
-          '<stop offset="0" stop-color="#E91E63"/><stop offset="1" stop-color="#FF7A3D"/>' +
-        '</linearGradient></defs>' +
-        '<path d="M24 12c-7-5-16-1.5-16 9 0 9 7 19 13 19 1.6 0 2.2-.9 3-.9s1.4.9 3 .9c6 0 13-10 13-19 0-10.5-9-14-16-9z" fill="url(#fcLogoG)"/>' +
-        '<path d="M24 12c0-5 3.5-8 8-8 0 5-3.5 8-8 8z" fill="#3FA37A"/>' +
-        '<circle cx="24" cy="27" r="7.5" fill="none" stroke="#FDF9F0" stroke-width="2.6"/>' +
-        '<circle cx="24" cy="27" r="2.6" fill="#FDF9F0"/>' +
-      '</svg>' +
+    return '<a class="nav-logo" href="' + href + '" aria-label="Fotocal — home">' +
+      '<img class="logo-mark is-tile" src="' + u("assets/img/logo.png") + '" alt="" width="32" height="32">' +
       '<span>Fotocal</span></a>';
   }
 

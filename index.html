@@ -48,8 +48,88 @@
       { "@type": "Offer", "price": "16.99", "priceCurrency": "EUR", "name": "3 Months" },
       { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR", "name": "Yearly" }
     ],
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
     "installUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app"
   }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the photo scanning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fotocal uses current AI vision models to identify food and estimate portions, and it is good enough that the numbers are genuinely useful day to day. It is an estimate, not a laboratory measurement — mixed dishes, stews and anything layered or hidden under sauce are the hardest cases. You can always correct the portion or the ingredients before you save, and a corrected estimate is still far faster than searching a database."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to weigh my food?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Estimating the portion from the photo is the whole point. If you want to be precise on a particular meal you can enter the weight by hand, but nothing requires it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mostly, yes. You can log meals, water and weight with no connection and everything syncs once you are back online. The AI photo analysis itself needs a connection, because that is where the recognition happens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Fotocal free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can download Fotocal and try it free for 3 days. After that a subscription unlocks unlimited AI scans, unlimited Coach Kal and all premium features — €6.99 monthly, €16.99 for 3 months, or €34.99 yearly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subscriptions are handled by Google Play, so you cancel there: Play Store → your profile → Payments and subscriptions → Subscriptions. Cancel before the 3-day trial ends and you are not charged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your data is yours. We never sell it, and you can delete your account and everything in it at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which languages does the app support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "English and Spanish, both in the app and on this site."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getfotocal.com/"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -454,6 +534,37 @@
   </main>
 
   <div id="site-footer"></div>
+
+
+  <!-- Sticky mobile app CTA -->
+  <style>
+.fc-appbar{position:fixed;left:0;right:0;bottom:0;z-index:60;transform:translateY(130%);transition:transform .32s cubic-bezier(.4,0,.2,1);padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,253,248,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--border,rgba(176,124,86,.22));box-shadow:0 -10px 30px -14px rgba(42,27,18,.30)}
+.fc-appbar.show{transform:translateY(0)}
+.fc-appbar-inner{display:flex;align-items:center;gap:12px;max-width:560px;margin:0 auto}
+.fc-appbar-logo{border-radius:11px;flex:0 0 auto;box-shadow:0 3px 10px -4px rgba(42,27,18,.4)}
+.fc-appbar-txt{display:flex;flex-direction:column;line-height:1.18;flex:1 1 auto;min-width:0}
+.fc-appbar-txt strong{font-size:15px;color:var(--ink,#2A1B12);font-weight:700}
+.fc-appbar-txt span{font-size:12px;color:var(--muted,#8A7B6E)}
+.fc-appbar-cta{flex:0 0 auto;background:var(--grad,linear-gradient(135deg,#FF8A3D,#F2306B));color:#fff;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 10px 22px -9px rgba(242,48,107,.55)}
+.fc-appbar-x{flex:0 0 auto;background:transparent;border:0;font-size:24px;line-height:1;color:var(--muted,#8A7B6E);width:34px;height:46px;cursor:pointer;border-radius:50%}
+body.fc-appbar-on{padding-bottom:78px}
+@media(min-width:768px){.fc-appbar{display:none!important}body.fc-appbar-on{padding-bottom:0}}
+  </style>
+  <div class="fc-appbar" id="fcAppbar" hidden>
+    <div class="fc-appbar-inner">
+      <img class="fc-appbar-logo" src="assets/img/logo.png" width="40" height="40" alt="Fotocal app icon" decoding="async">
+      <div class="fc-appbar-txt"><strong>Fotocal</strong><span data-i18n="cta.stickyNote">Free · 3-day trial · Android</span></div>
+      <a class="fc-appbar-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.get">Get the app</a>
+      <button class="fc-appbar-x" id="fcAppbarX" type="button" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+  <script>
+  (function(){var b=document.getElementById("fcAppbar"),x=document.getElementById("fcAppbarX");if(!b)return;try{if(sessionStorage.getItem("fc-appbar-x"))return;}catch(e){}
+  function on(){if(window.scrollY>520){b.hidden=false;requestAnimationFrame(function(){b.classList.add("show");document.body.classList.add("fc-appbar-on");});window.removeEventListener("scroll",on);}}
+  window.addEventListener("scroll",on,{passive:true});
+  x.addEventListener("click",function(){b.classList.remove("show");document.body.classList.remove("fc-appbar-on");try{sessionStorage.setItem("fc-appbar-x","1");}catch(e){}setTimeout(function(){b.hidden=true;},320);});
+  })();
+  </script>
 
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/layout.js" data-page="home"></script>

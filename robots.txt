@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fotocal.github.io/Fotocal-web/sitemap.xml
+Sitemap: https://getfotocal.com/sitemap.xml

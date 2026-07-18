@@ -19,6 +19,8 @@ window.FOTOCAL_I18N = {
 
   /* ══════════════════════ ENGLISH (default) ══════════════════════ */
   en: {
+    "cta.get": "Get the app",
+    "cta.stickyNote": "Free · 3-day trial · Android",
     /* ── Nav ── */
     "nav.skip": "Skip to content",
     "nav.home": "Home",
@@ -173,6 +175,8 @@ window.FOTOCAL_I18N = {
 
   /* ══════════════════════ SPANISH ══════════════════════ */
   es: {
+    "cta.get": "Descarga la app",
+    "cta.stickyNote": "Gratis · 3 días de prueba · Android",
     /* ── Nav ── */
     "nav.skip": "Saltar al contenido",
     "nav.home": "Inicio",

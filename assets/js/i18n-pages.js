@@ -71,24 +71,18 @@
       "sub.p.y.per": "/year",
       "sub.p.y.equiv": "Works out at <b>about €2.92 a month</b>.",
       "sub.p.y.note": "The cheapest way to use Fotocal, and the only plan with a free trial. Best if you already know you want to build the habit over a full year.",
-      "sub.p.y.trial": "Includes a 3-day free trial. Cancel before it ends and you are not charged.",
+      "sub.p.y.trial": "Includes a 5-day free trial. Cancel before it ends and you are not charged.",
       "sub.p.y.flag": "MOST POPULAR",
       "sub.p.y.save": "Saves about 58% vs monthly",
 
-      "sub.p.q.name": "3 months",
-      "sub.p.q.per": "/3 months",
-      "sub.p.q.equiv": "Works out at <b>about €5.66 a month</b>.",
-      "sub.p.q.note": "The middle ground. A full season is long enough for a habit to take hold without committing to a year.",
-      "sub.p.q.trial": "No free trial on this plan — billing starts straight away.",
-      "sub.p.q.save": "Saves about 19% vs monthly",
 
       "sub.p.cta": "Get it on Google Play",
-      "sub.p.ctaY": "Start the 3-day free trial",
+      "sub.p.ctaY": "Start the 5-day free trial",
 
       /* The trial caveat, stated plainly rather than buried. */
       "sub.trial.h": "The free trial is on the yearly plan only",
-      "sub.trial.b": "This is worth being clear about, because plenty of apps are not. The 3-day free trial comes with the yearly plan. The monthly and 3-month plans do not have a trial — if you pick one of those, billing starts immediately.",
-      "sub.trial.b2": "If you want to try Premium at no cost, start the yearly plan and cancel inside 3 days. You will not be charged. If you would rather not deal with a trial at all, the monthly plan is the simplest option.",
+      "sub.trial.b": "This is worth being clear about, because plenty of apps are not. The 5-day free trial comes with the yearly plan. The monthly plan does not have a trial — if you pick it, billing starts immediately.",
+      "sub.trial.b2": "If you want to try Premium at no cost, start the yearly plan and cancel inside the 5 days. You will not be charged. If you would rather not deal with a trial at all, the monthly plan is the simplest option.",
 
       "sub.vat": "All prices are in euros and include Spanish VAT at 21%. What you see here is what you pay — there is nothing added at checkout.",
 
@@ -124,8 +118,6 @@
       "sub.cmp.r5": "Water & steps",
       "sub.cmp.r5s": "Daily hydration, plus steps via Health Connect.",
 
-      "sub.cmp.r6": "Offline mode",
-      "sub.cmp.r6s": "Log with no signal. The AI scan itself still needs a connection.",
 
       "sub.cmp.r7": "Advanced nutrition insights",
       "sub.cmp.r7s": "The deeper read on your macros and patterns, beyond the daily totals.",
@@ -187,9 +179,9 @@
 
       "sub.u5.pill": "Your data, kept",
       "sub.u5.t": "Sync",
-      "sub.u5.b": "Months of logging is worth something, and it should not be tied to one handset. Sync keeps your diary, your weight history and your progress in step and carries them over when you change phone. Fotocal is offline-first, so you can always log without a connection — sync is what makes that data safe rather than stranded.",
+      "sub.u5.b": "Months of logging is worth something, and it should not be tied to one handset. Sync keeps your diary, your weight history and your progress in step and carries them over when you change phone — so the record you have built is safe rather than stranded on old hardware.",
       "sub.u5.li1": "Your diary and history carried to a new phone",
-      "sub.u5.li2": "Works with offline-first logging, not against it",
+      "sub.u5.li2": "Your history follows your account, not your handset",
       "sub.u5.li3": "Months of data that is not stuck on one device",
       "sub.u5.slot": "Sync — data carried across devices",
 
@@ -213,7 +205,7 @@
       "sub.bill.s4": "Select <b>Fotocal</b> and tap <b>Cancel subscription</b>.",
       "sub.bill.after": "You keep Premium until the end of the period you have already paid for — cancelling does not cut you off on the spot. After that you drop back to the free plan, and your logged data stays exactly where it is.",
       "sub.bill.renew.h": "It renews automatically",
-      "sub.bill.renew.b": "Every plan renews on its own until you cancel — that is how Google Play subscriptions work. You can cancel at any time, and if you are on the yearly trial, cancelling within the 3 days means you are not charged at all.",
+      "sub.bill.renew.b": "Every plan renews on its own until you cancel — that is how Google Play subscriptions work. You can cancel at any time, and if you are on the yearly trial, cancelling within the 5 days means you are not charged at all.",
       "sub.bill.refund.h": "Refunds",
       "sub.bill.refund.b": "Refunds are handled under Google Play's own refund policy, since Google is the seller. If something has gone wrong with a charge, email us and we will help you sort it out — but the refund itself goes through Google Play.",
 
@@ -221,9 +213,9 @@
       "sub.faq.kicker": "FAQ",
       "sub.faq.title": "Subscription <em class=\"accent\">questions</em>",
       "sub.faq.q1": "Can I use Fotocal without paying?",
-      "sub.faq.a1": "Yes, indefinitely. The free plan gives you 3 AI photo scans a day, unlimited Coach Kal, the meal diary, weight and progress tracking, water, steps and offline mode. Plenty of people will never need more than that. Premium is for when the daily scan limit starts getting in your way or you want the weekly reports and deeper insights.",
+      "sub.faq.a1": "Yes, indefinitely. The free plan gives you 3 AI photo scans a day, unlimited Coach Kal, the meal diary, weight and progress tracking, water and steps. Plenty of people will never need more than that. Premium is for when the daily scan limit starts getting in your way or you want the weekly reports and deeper insights.",
       "sub.faq.q2": "Which plans have a free trial?",
-      "sub.faq.a2": "Only the yearly plan. It comes with a 3-day free trial, and if you cancel before the 3 days are up you are not charged. The monthly and 3-month plans start billing immediately.",
+      "sub.faq.a2": "Only the yearly plan. It comes with a 5-day free trial, and if you cancel before the 5 days are up you are not charged. The monthly plan starts billing immediately.",
       "sub.faq.q3": "Do all three plans unlock the same things?",
       "sub.faq.a3": "Yes. There is one Premium and every plan unlocks all of it. The only thing you are choosing is how long it runs and what it works out to per month.",
       "sub.faq.q4": "Is Coach Kal really free?",
@@ -311,7 +303,7 @@
       "about.mission.title": "Make understanding your own eating <em class=\"accent\">effortless</em>.",
       "about.mission.p1": "If tracking is hard, you stop. That is not a character flaw, it is arithmetic — anything you have to do three times a day has to be nearly free or it will not survive the month. Every app that made you search a database, find your food, guess the portion and confirm it was asking for a few minutes a day, and a few minutes a day is more than almost anyone will pay.",
       "about.mission.p2": "So the goal was to make it cost a photo. Point the camera at the plate, and the work happens on our side rather than yours. That is not a gimmick — it is the only version of tracking we have seen that people are still doing in month three, because it is the only one cheap enough to keep doing.",
-      "about.mission.p3": "Everything else follows from that. Offline-first, because you eat in places with no signal and a tracker that fails at a restaurant is not a tracker. Coach Kal free and unlimited, because the part most likely to change how you eat should not be the part you have to pay for. Progress shown as trends rather than daily numbers, because a single morning on a scale means nothing and panicking about it helps nobody.",
+      "about.mission.p3": "Everything else follows from that. Logging by photo, voice or barcode, because the fastest method is the one you will actually use. Coach Kal free and unlimited, because the part most likely to change how you eat should not be the part you have to pay for. Progress shown as trends rather than daily numbers, because a single morning on a scale means nothing and panicking about it helps nobody.",
 
       "about.empower.kicker": "Your data, your understanding",
       "about.empower.title": "Knowledge in <em class=\"accent\">your own hands</em>, every day.",
@@ -335,8 +327,8 @@
       "about.v3.b": "Photo analysis gives an estimate, not a lab result. Stews, mixed dishes and anything under a sauce are genuinely hard. We say so, and you can correct any scan before you save it.",
       "about.v4.t": "No promises we cannot keep",
       "about.v4.b": "We will not tell you that you will lose a specific amount in a specific time. Nobody honest can. Fotocal shows you what you are doing — what happens next depends on a lot of things that are not an app.",
-      "about.v5.t": "Works anywhere",
-      "about.v5.b": "Offline-first, deliberately. You eat in basements, on planes and in places with no bars of signal, and a tracker that only works on good Wi-Fi is not one.",
+      "about.v5.t": "Two languages, first-class",
+      "about.v5.b": "Built Spanish-first and English-equal. Every screen, every Coach Kal answer and every report reads naturally in both — eating well should not require reading in your second language.",
       "about.v6.t": "Your data is yours",
       "about.v6.b": "We do not sell it. You can delete your account and everything in it whenever you want, and it is a normal option in the app rather than a form you have to beg through.",
 
@@ -454,23 +446,17 @@
       "sub.p.y.per": "/año",
       "sub.p.y.equiv": "Sale a <b>unos 2,92 € al mes</b>.",
       "sub.p.y.note": "La forma más barata de usar Fotocal y el único plan con prueba gratis. Ideal si ya sabes que quieres construir el hábito durante todo un año.",
-      "sub.p.y.trial": "Incluye 3 días de prueba gratis. Si cancelas antes de que terminen, no se te cobra nada.",
+      "sub.p.y.trial": "Incluye 5 días de prueba gratis. Si cancelas antes de que terminen, no se te cobra nada.",
       "sub.p.y.flag": "MÁS POPULAR",
       "sub.p.y.save": "Ahorras un 58% aprox. frente al mensual",
 
-      "sub.p.q.name": "3 meses",
-      "sub.p.q.per": "/3 meses",
-      "sub.p.q.equiv": "Sale a <b>unos 5,66 € al mes</b>.",
-      "sub.p.q.note": "El término medio. Una temporada entera da tiempo a que cuaje el hábito sin comprometerte a un año.",
-      "sub.p.q.trial": "Este plan no tiene prueba gratis: el cobro empieza directamente.",
-      "sub.p.q.save": "Ahorras un 19% aprox. frente al mensual",
 
       "sub.p.cta": "Descargar en Google Play",
-      "sub.p.ctaY": "Empezar los 3 días gratis",
+      "sub.p.ctaY": "Empezar los 5 días gratis",
 
       "sub.trial.h": "La prueba gratis es solo del plan anual",
-      "sub.trial.b": "Merece la pena dejarlo claro, porque muchas apps no lo hacen. Los 3 días de prueba gratis vienen con el plan anual. Los planes mensual y de 3 meses no tienen prueba: si eliges uno de esos, el cobro empieza de inmediato.",
-      "sub.trial.b2": "Si quieres probar Premium sin coste, empieza el plan anual y cancela dentro de los 3 días. No se te cobrará nada. Y si prefieres no lidiar con una prueba, el plan mensual es la opción más sencilla.",
+      "sub.trial.b": "Merece la pena dejarlo claro, porque muchas apps no lo hacen. Los 5 días de prueba gratis vienen con el plan anual. El plan mensual no tiene prueba: si lo eliges, el cobro empieza de inmediato.",
+      "sub.trial.b2": "Si quieres probar Premium sin coste, empieza el plan anual y cancela dentro de los 5 días. No se te cobrará nada. Y si prefieres no lidiar con una prueba, el plan mensual es la opción más sencilla.",
 
       "sub.vat": "Todos los precios están en euros e incluyen el IVA español del 21%. Lo que ves aquí es lo que pagas: no se añade nada al finalizar la compra.",
 
@@ -503,8 +489,6 @@
       "sub.cmp.r5": "Agua y pasos",
       "sub.cmp.r5s": "Hidratación diaria y pasos a través de Health Connect.",
 
-      "sub.cmp.r6": "Modo sin conexión",
-      "sub.cmp.r6s": "Registra sin cobertura. El escaneo con IA sí necesita conexión.",
 
       "sub.cmp.r7": "Análisis nutricional avanzado",
       "sub.cmp.r7s": "La lectura profunda de tus macros y tus patrones, más allá de los totales del día.",
@@ -565,9 +549,9 @@
 
       "sub.u5.pill": "Tus datos, a salvo",
       "sub.u5.t": "Sincronización",
-      "sub.u5.b": "Meses de registro valen algo, y no deberían estar atados a un solo móvil. La sincronización mantiene al día tu diario, tu histórico de peso y tu progreso, y se los lleva contigo cuando cambias de teléfono. Fotocal es offline-first, así que siempre puedes registrar sin conexión: la sincronización es lo que hace que esos datos estén a salvo en vez de atrapados.",
+      "sub.u5.b": "Meses de registro valen algo, y no deberían estar atados a un solo móvil. La sincronización mantiene al día tu diario, tu histórico de peso y tu progreso, y se los lleva contigo cuando cambias de teléfono — para que el historial que has construido esté a salvo en vez de atrapado en un móvil viejo.",
       "sub.u5.li1": "Tu diario y tu histórico se trasladan a un móvil nuevo",
-      "sub.u5.li2": "Funciona con el registro sin conexión, no contra él",
+      "sub.u5.li2": "Tu historial sigue a tu cuenta, no a tu móvil",
       "sub.u5.li3": "Meses de datos que no se quedan en un solo dispositivo",
       "sub.u5.slot": "Sincronización — datos entre dispositivos",
 
@@ -590,16 +574,16 @@
       "sub.bill.s4": "Selecciona <b>Fotocal</b> y toca <b>Cancelar suscripción</b>.",
       "sub.bill.after": "Mantienes Premium hasta el final del periodo que ya has pagado: cancelar no te corta en el acto. Después vuelves al plan gratuito, y tus datos registrados se quedan exactamente donde están.",
       "sub.bill.renew.h": "Se renueva automáticamente",
-      "sub.bill.renew.b": "Todos los planes se renuevan solos hasta que canceles: así funcionan las suscripciones de Google Play. Puedes cancelar cuando quieras, y si estás en la prueba del plan anual, cancelar dentro de los 3 días significa que no se te cobra nada.",
+      "sub.bill.renew.b": "Todos los planes se renuevan solos hasta que canceles: así funcionan las suscripciones de Google Play. Puedes cancelar cuando quieras, y si estás en la prueba del plan anual, cancelar dentro de los 5 días significa que no se te cobra nada.",
       "sub.bill.refund.h": "Reembolsos",
       "sub.bill.refund.b": "Los reembolsos se gestionan según la propia política de Google Play, ya que Google es el vendedor. Si ha habido algún problema con un cobro, escríbenos y te ayudamos a resolverlo, pero el reembolso en sí pasa por Google Play.",
 
       "sub.faq.kicker": "FAQ",
       "sub.faq.title": "Preguntas sobre la <em class=\"accent\">suscripción</em>",
       "sub.faq.q1": "¿Puedo usar Fotocal sin pagar?",
-      "sub.faq.a1": "Sí, indefinidamente. El plan gratuito te da 3 escaneos con IA al día, Coach Kal ilimitado, el diario de comidas, seguimiento de peso y progreso, agua, pasos y modo sin conexión. Mucha gente no necesitará nunca más que eso. Premium es para cuando el límite diario de escaneos empiece a estorbarte o quieras los informes semanales y el análisis profundo.",
+      "sub.faq.a1": "Sí, indefinidamente. El plan gratuito te da 3 escaneos con IA al día, Coach Kal ilimitado, el diario de comidas, seguimiento de peso y progreso, agua y pasos. Mucha gente no necesitará nunca más que eso. Premium es para cuando el límite diario de escaneos empiece a estorbarte o quieras los informes semanales y el análisis profundo.",
       "sub.faq.q2": "¿Qué planes tienen prueba gratis?",
-      "sub.faq.a2": "Solo el plan anual. Viene con 3 días de prueba gratis, y si cancelas antes de que terminen no se te cobra nada. Los planes mensual y de 3 meses empiezan a cobrar de inmediato.",
+      "sub.faq.a2": "Solo el plan anual. Viene con 5 días de prueba gratis, y si cancelas antes de que terminen no se te cobra nada. El plan mensual empieza a cobrar de inmediato.",
       "sub.faq.q3": "¿Los tres planes desbloquean lo mismo?",
       "sub.faq.a3": "Sí. Hay un único Premium y todos los planes lo desbloquean entero. Lo único que eliges es cuánto dura y a cuánto sale al mes.",
       "sub.faq.q4": "¿Coach Kal es gratis de verdad?",
@@ -687,7 +671,7 @@
       "about.mission.title": "Que entender lo que comes <em class=\"accent\">no cueste esfuerzo</em>.",
       "about.mission.p1": "Si registrar cuesta, lo dejas. Eso no es un defecto de carácter, es aritmética: cualquier cosa que tengas que hacer tres veces al día tiene que salir casi gratis o no aguantará el mes. Todas las apps que te obligaban a buscar en una base de datos, encontrar tu comida, adivinar la ración y confirmarla te estaban pidiendo unos minutos al día, y unos minutos al día es más de lo que casi nadie va a pagar.",
       "about.mission.p2": "Así que el objetivo era que costara una foto. Apuntas la cámara al plato y el trabajo pasa a nuestro lado en vez del tuyo. Eso no es un truco: es la única versión del registro que hemos visto que la gente sigue haciendo al tercer mes, porque es la única lo bastante barata como para seguir haciéndola.",
-      "about.mission.p3": "Todo lo demás sale de ahí. Offline-first, porque comes en sitios sin cobertura y un registro que falla en un restaurante no es un registro. Coach Kal gratis e ilimitado, porque la parte que más probablemente cambie cómo comes no debería ser la parte por la que hay que pagar. El progreso mostrado como tendencia y no como número diario, porque una mañana suelta en la báscula no significa nada y agobiarse con ella no ayuda a nadie.",
+      "about.mission.p3": "Todo lo demás sale de ahí. Registro por foto, voz o código de barras, porque el método más rápido es el que de verdad vas a usar. Coach Kal gratis e ilimitado, porque la parte que más probablemente cambie cómo comes no debería ser la parte por la que hay que pagar. El progreso mostrado como tendencia y no como número diario, porque una mañana suelta en la báscula no significa nada y agobiarse con ella no ayuda a nadie.",
 
       "about.empower.kicker": "Tus datos, tu comprensión",
       "about.empower.title": "El conocimiento en <em class=\"accent\">tus propias manos</em>, cada día.",
@@ -711,8 +695,8 @@
       "about.v3.b": "El análisis por foto da una estimación, no un resultado de laboratorio. Los guisos, los platos mezclados y todo lo que va bajo una salsa son difíciles de verdad. Lo decimos, y puedes corregir cualquier escaneo antes de guardarlo.",
       "about.v4.t": "Sin promesas que no podamos cumplir",
       "about.v4.b": "No te vamos a decir que perderás una cantidad concreta en un tiempo concreto. Nadie honesto puede. Fotocal te enseña lo que estás haciendo; lo que pase después depende de muchas cosas que no son una app.",
-      "about.v5.t": "Funciona en cualquier sitio",
-      "about.v5.b": "Offline-first, a propósito. Comes en sótanos, en aviones y en sitios sin una raya de cobertura, y un registro que solo funciona con buen wifi no es un registro.",
+      "about.v5.t": "Dos idiomas, de primera",
+      "about.v5.b": "Construida primero en español y a la par en inglés. Cada pantalla, cada respuesta de Coach Kal y cada informe se leen con naturalidad en los dos — comer bien no debería exigir leer en tu segundo idioma.",
       "about.v6.t": "Tus datos son tuyos",
       "about.v6.b": "No los vendemos. Puedes eliminar tu cuenta y todo lo que contiene cuando quieras, y es una opción normal dentro de la app, no un formulario que hay que suplicar.",
 

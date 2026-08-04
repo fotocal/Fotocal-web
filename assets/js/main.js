@@ -62,6 +62,12 @@
       if (v != null) el.setAttribute("aria-label", v);
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-alt");
+      var v = dict[k] != null ? dict[k] : fallback[k];
+      if (v != null) el.setAttribute("alt", v);
+    });
+
     /* Reflect the choice in the language dropdown (trigger + option ticks). */
     var trig = document.getElementById("langCurrent");
     if (trig) {
@@ -168,4 +174,48 @@
       });
     });
   });
+
+  /* ═══════════ Hero parallax (home page only) ═══════════
+     Gentle mouse-move parallax on the hero illustration and its
+     floating chips. Each element declares its depth via data-par
+     (positive = moves with the cursor, negative = against it).
+     Pointer-fine + no-reduced-motion only, and rAF-throttled, so it
+     costs nothing on phones and respects accessibility settings. */
+  var heroStage = document.getElementById("heroStage");
+  var finePointer = window.matchMedia("(pointer: fine)").matches;
+  var noMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (heroStage && finePointer && !noMotion) {
+    var parEls = heroStage.querySelectorAll("[data-par]");
+    var pmx = 0, pmy = 0, raf = null;
+    var paint = function () {
+      raf = null;
+      parEls.forEach(function (el) {
+        var d = parseFloat(el.getAttribute("data-par")) || 0;
+        el.style.transform = "translate3d(" + (pmx * d) + "px," + (pmy * d) + "px,0)";
+      });
+    };
+    heroStage.addEventListener("mousemove", function (e) {
+      var r = heroStage.getBoundingClientRect();
+      pmx = ((e.clientX - r.left) / r.width - 0.5);   /* -0.5 .. 0.5 */
+      pmy = ((e.clientY - r.top) / r.height - 0.5);
+      if (!raf) raf = requestAnimationFrame(paint);
+    });
+    heroStage.addEventListener("mouseleave", function () {
+      pmx = 0; pmy = 0;
+      if (!raf) raf = requestAnimationFrame(paint);
+    });
+  }
+
+  /* ═══════════ Card spotlight (home page only) ═══════════
+     The .log-card::before layer paints a radial highlight at
+     --mx/--my; this just keeps those props under the cursor. */
+  if (finePointer) {
+    document.querySelectorAll(".log-card").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        card.style.setProperty("--my", (e.clientY - r.top) + "px");
+      });
+    });
+  }
 })();

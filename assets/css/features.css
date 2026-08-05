@@ -1,0 +1,141 @@
+/* ═══════════════════════════════════════════════════════════════
+   FOTOCAL — /features/ page styles
+   Loaded AFTER site.css and home.css and reuses their components:
+   .illus, .log-card/.log-media/.log-body (spotlight cards),
+   .hero-perk chips, .bubble-list, .micro-chip, .score-badge.
+   Only what is unique to this page lives here.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Page hero ─── */
+.fx-hero { position: relative; padding: 3.2rem 0 1rem; overflow: hidden; text-align: center; }
+.fx-hero::before {
+  content: ""; position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
+  width: 720px; height: 480px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(255,122,61,.16), transparent 65%);
+  filter: blur(40px);
+}
+.fx-hero .container-narrow { position: relative; }
+.fx-hero .section-sub { margin-inline: auto; }
+
+/* jump pills */
+.fx-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; margin-top: 1.6rem; }
+.fx-jump a {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-size: .85rem; font-weight: 650; color: var(--ink-soft);
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 999px; padding: .55rem 1rem;
+  box-shadow: 0 4px 14px -10px rgba(27,35,64,.35);
+  transition: transform .25s ease, border-color .25s ease, color .25s ease;
+}
+.fx-jump a:hover { transform: translateY(-2px); border-color: var(--border-pink); color: var(--pink); }
+.fx-jump a b {
+  font-size: .68rem; font-weight: 800; color: var(--pink);
+  background: var(--grad-wash); border-radius: 999px; padding: .15rem .5rem;
+}
+
+/* ─── Chapter headers: ghost number + title ─── */
+.fx-chap { position: relative; text-align: center; padding-top: 1.2rem; margin-bottom: .8rem; }
+.fx-chap-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(4.6rem, 13vw, 7.5rem);
+  font-weight: 600; line-height: 1; letter-spacing: -.03em;
+  background: linear-gradient(180deg, rgba(233,30,99,.16), rgba(255,122,61,.02));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  user-select: none;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .fx-chap-num { color: rgba(233,30,99,.12); }
+}
+.fx-chap .section-title { margin-top: -1.35em; position: relative; }
+.fx-chap .section-sub { margin-inline: auto; }
+
+/* ─── Feature rows (chapter 1 & 2) ─── */
+.fx-row { border: 0 !important; }
+.fx-row .illus { max-width: 430px; width: 100%; }
+.fx-num {
+  display: inline-grid; place-items: center;
+  width: 34px; height: 34px; border-radius: 10px; margin-bottom: .9rem;
+  background: var(--grad); color: #fff;
+  font-family: var(--font-display); font-weight: 700; font-size: .95rem;
+  box-shadow: var(--shadow-cta);
+}
+.fx-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.15rem; }
+
+/* ─── Full-nutrition duo: big image + overlapped score card ─── */
+.fx-duo { position: relative; max-width: 460px; width: 100%; margin-inline: auto; }
+.fx-duo .fx-duo-main { max-width: none; }
+.fx-duo-b {
+  position: absolute; z-index: 3;
+  right: -16px; bottom: -26px;
+  width: 46%;
+  border-radius: 20px; overflow: hidden;
+  border: 5px solid var(--cream);
+  box-shadow: var(--shadow-lift);
+  transform: rotate(3deg);
+  transition: transform .5s cubic-bezier(.2,.8,.3,1);
+}
+.fx-duo:hover .fx-duo-b { transform: rotate(1deg) translateY(-5px); }
+.fx-duo-b img { display: block; width: 100%; height: auto; }
+@media (min-width: 900px) { .fx-duo-b { right: -34px; } }
+
+/* ─── Chapter 3 cards: media tops handled by .log-card/.log-media ─── */
+.fx-cards { display: grid; gap: 1.2rem; margin-top: 2.4rem; }
+.fx-cards .log-media { aspect-ratio: 1 / 1; }
+@media (min-width: 900px) { .fx-cards { grid-template-columns: repeat(3, 1fr); } }
+
+/* daily-tracking tile composition (no artwork — data tiles) */
+.fx-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  place-content: center; height: 100%; padding: 1.4rem;
+  background:
+    radial-gradient(120% 90% at 80% 0%, rgba(233,30,99,.09), transparent 55%),
+    linear-gradient(160deg, #FBE9D2, #F5DCBE);
+}
+.fx-stat {
+  background: var(--white); border-radius: 16px; padding: .85rem .9rem;
+  box-shadow: var(--shadow-card);
+  display: flex; flex-direction: column; gap: .3rem;
+  transition: transform .4s cubic-bezier(.2,.8,.3,1);
+}
+.log-card:hover .fx-stat:nth-child(odd)  { transform: translateY(-4px); }
+.log-card:hover .fx-stat:nth-child(even) { transform: translateY(4px); }
+.fx-stat-ico {
+  width: 28px; height: 28px; border-radius: 9px;
+  display: grid; place-items: center; color: #fff;
+}
+.fx-stat-ico svg { width: 15px; height: 15px; }
+.fx-stat b { font-size: 1rem; line-height: 1.1; color: var(--ink); }
+.fx-stat small { font-size: .68rem; font-weight: 650; color: var(--muted); letter-spacing: .03em; }
+.fx-bar { height: 6px; border-radius: 4px; background: var(--cream-3); overflow: hidden; }
+.fx-bar span { display: block; height: 100%; border-radius: 4px; }
+
+/* ─── Goal sections (folded topic pages) ─── */
+.fx-goal-grid { display: grid; gap: 1.2rem; margin-top: 2.4rem; }
+@media (min-width: 900px) { .fx-goal-grid { grid-template-columns: repeat(3, 1fr); } }
+.fx-goal {
+  display: flex; flex-direction: column;
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl); padding: 1.7rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .32s cubic-bezier(.2,.8,.3,1), box-shadow .32s ease, border-color .32s ease;
+}
+.fx-goal:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--border); }
+.fx-goal-ico {
+  width: 46px; height: 46px; border-radius: 14px; margin-bottom: 1rem;
+  display: grid; place-items: center; color: #fff;
+  box-shadow: 0 8px 18px -8px rgba(27,35,64,.35);
+}
+.fx-goal-ico svg { width: 22px; height: 22px; }
+.fx-goal-ico-wl { background: var(--grad); }
+.fx-goal-ico-nd { background: linear-gradient(135deg, #17B26A, #0E9355); }
+.fx-goal-ico-lm { background: linear-gradient(135deg, #F59E0B, #F97316); }
+.fx-goal h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: -.01em; margin-bottom: .55rem; }
+.fx-goal > p { font-size: .93rem; color: var(--muted); margin-bottom: 1rem; }
+.fx-goal .check-list { margin-bottom: 1.3rem; }
+.fx-goal .check-list li { font-size: .9rem; margin-bottom: .45rem; }
+.fx-goal-cta { margin-top: auto; display: flex; align-items: center; gap: 1rem; }
+.fx-goal-cta .btn-ghost { font-weight: 700; font-size: .9rem; }
+
+/* Anchor offset is inherited from site.css scroll-margin rules. */

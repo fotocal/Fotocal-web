@@ -56,11 +56,7 @@
   /* ── Nav model — single source of truth ── */
   var NAV = [
     { id: "home",         key: "nav.home",         href: u("") },
-    { id: "features",     key: "nav.features",     children: [
-        { key: "nav.weightLoss",   href: u("features/weight-loss/") },
-        { key: "nav.nutrition",    href: u("features/nutrition-diet/") },
-        { key: "nav.lifestyle",    href: u("features/lifestyle-mindset/") }
-      ] },
+    { id: "features",     key: "nav.features",     href: u("features/") },
     { id: "blog",         key: "nav.blog",         href: u("blog/") },
     { id: "subscription", key: "nav.subscription", href: u("subscription/") },
     { id: "about",        key: "nav.about",        children: [
@@ -195,9 +191,10 @@
           '</div>' +
           '<div class="footer-col">' +
             '<h5 data-i18n="nav.features"></h5>' +
-            '<a href="' + u("features/weight-loss/") + '" data-i18n="nav.weightLoss"></a>' +
-            '<a href="' + u("features/nutrition-diet/") + '" data-i18n="nav.nutrition"></a>' +
-            '<a href="' + u("features/lifestyle-mindset/") + '" data-i18n="nav.lifestyle"></a>' +
+            '<a href="' + u("features/") + '" data-i18n="nav.features"></a>' +
+            '<a href="' + u("features/#weight-loss") + '" data-i18n="nav.weightLoss"></a>' +
+            '<a href="' + u("features/#nutrition-diet") + '" data-i18n="nav.nutrition"></a>' +
+            '<a href="' + u("features/#lifestyle-mindset") + '" data-i18n="nav.lifestyle"></a>' +
           '</div>' +
           '<div class="footer-col">' +
             '<h5 data-i18n="footer.company"></h5>' +

@@ -41,6 +41,127 @@
     en: {
 
       /* ─────────────────────────────────────────────
+         FEATURES (/features/)
+         ───────────────────────────────────────────── */
+      "fx.kicker": "Inside the app",
+      "fx.title": "Ten features. <em class=\"accent\">One beautiful app</em>.",
+      "fx.sub": "Everything Fotocal does, on one page — from the photo that logs your lunch to the report that sums up your week. In English y en español.",
+      "fx.jump1": "Capture",
+      "fx.jump2": "Understand",
+      "fx.jump3": "Stay on track",
+      "fx.jump4": "Your goal",
+
+      "fx.c1.title": "Capture anything <em class=\"accent\">in seconds</em>.",
+      "fx.c1.sub": "Five ways to log a meal — photo, barcode, voice, recipe or menu. Whichever is fastest right now is the right one.",
+
+      "fx.f1.t": "AI food scan — snap a photo, know your meal instantly",
+      "fx.f1.b": "Point your camera at any plate and get calories, macros and a health score in seconds — no weighing, no searching.",
+      "fx.f1.c1": "Whole dishes, not just ingredients",
+      "fx.f1.c2": "Edit anything before saving",
+      "fx.f1.alt": "Illustration: a phone photographs a breakfast plate while calorie bubbles appear over each food",
+
+      "fx.f2.t": "Barcode scanner — scan any product, see what's really inside",
+      "fx.f2.b": "Instant health score, full nutrition, and healthier swaps for packaged foods.",
+      "fx.f2.c1": "Health score at a glance",
+      "fx.f2.c2": "Healthier swaps suggested",
+      "fx.f2.alt": "Illustration: hands scanning a product barcode with a phone, a health score dial on screen",
+
+      "fx.f3.t": "Voice logging — just say what you ate",
+      "fx.f3.b": "Speak naturally and it's logged with calories and macros, hands-free.",
+      "fx.f3.c1": "Natural language, EN & ES",
+      "fx.f3.c2": "Perfect for busy mornings",
+      "fx.f3.alt": "Illustration: a woman speaks to her phone and a glowing microphone with food icons rises from it",
+
+      "fx.f4.t": "Recipe by photo — turn any dish into a full recipe",
+      "fx.f4.b": "Photograph a home-cooked meal and get its ingredients and macros, ready to save.",
+      "fx.f4.c1": "Ingredients + macros included",
+      "fx.f4.c2": "Save it, cook it again",
+      "fx.f4.alt": "Illustration: a phone photographs a paella and shows a recipe card with ingredients and macros",
+
+      "fx.f5.t": "Restaurant menu scanner — eating out? We pick your best dish",
+      "fx.f5.b": "Photograph the menu and get the dish that best fits your remaining calories and goal.",
+      "fx.f5.c1": "Estimated calories per dish",
+      "fx.f5.c2": "Best pick for your day, highlighted",
+      "fx.f5.alt": "Illustration: at a restaurant, a phone scans the menu and highlights the best dish with a green badge",
+
+      "fx.c2.title": "Understand <em class=\"accent\">what you eat</em>.",
+      "fx.c2.sub": "Logging is only half the story. Fotocal turns every meal into knowledge you can actually use.",
+
+      "fx.f6.t": "AI Coach — your personal nutrition coach, 24/7",
+      "fx.f6.b": "Ask anything, plan your meals, or scan for advice — smart guidance from your real data.",
+      "fx.f6.b1t": "Ask",
+      "fx.f6.b1s": "Any food question, any hour — answered from your actual diary.",
+      "fx.f6.b2t": "Plan",
+      "fx.f6.b2s": "Meal ideas that fit your remaining calories and your goals.",
+      "fx.f6.b3t": "Scan",
+      "fx.f6.b3s": "Point the camera and get advice on the spot, before you eat.",
+      "fx.f6.alt": "Illustration: a woman relaxes with a mug while chatting with Coach Kal, a friendly robot, on her phone",
+
+      "fx.f7.t": "Full nutrition — every nutrient, not just calories",
+      "fx.f7.b": "Complete macros plus micronutrients — vitamins, minerals, fiber, sugar, sodium, NOVA processing level, and glucose & satiety scores.",
+      "fx.f7.x1": "Vitamins",
+      "fx.f7.x2": "Minerals",
+      "fx.f7.x3": "Fiber",
+      "fx.f7.x4": "Sugar",
+      "fx.f7.x5": "Sodium",
+      "fx.f7.x6": "NOVA level",
+      "fx.f7.x7": "Glucose score",
+      "fx.f7.x8": "Satiety score",
+      "fx.f7.score": "Health score per meal — with smarter swaps",
+      "fx.f7.alt": "Illustration: a phone shows a nutrient-rich meal analysis surrounded by vitamin, iron and calcium badges",
+
+      "fx.c3.title": "Stay <em class=\"accent\">on track</em>.",
+      "fx.c3.sub": "Progress lives in weeks, not days. These are the features that keep the story moving forward.",
+
+      "fx.f8.tag": "Progress",
+      "fx.f8.t": "Progress & weight trends — watch your progress every week",
+      "fx.f8.b": "Clear weight-trend charts, BMI and goal tracking.",
+      "fx.f8.alt": "Illustration: a smiling woman shows her phone with a progress screen, weight chart and goal ring",
+
+      "fx.f9.tag": "Daily",
+      "fx.f9.t": "Daily tracking — build healthy habits every day",
+      "fx.f9.b": "Track water, steps, habits and streaks on one simple home screen.",
+      "fx.f9.s1": "glasses",
+      "fx.f9.s2": "steps",
+      "fx.f9.s3": "habits done",
+      "fx.f9.s4": "day streak",
+
+      "fx.f10.tag": "Weekly",
+      "fx.f10.t": "Weekly report — your week, beautifully summed up",
+      "fx.f10.b": "A clear weekly recap of everything you logged.",
+      "fx.f10.alt": "Illustration: a woman on a couch with coffee reviews her weekly summary — calories, macros and goals",
+
+      "fx.g.kicker": "Made for your goal",
+      "fx.g.title": "One app, <em class=\"accent\">your reasons</em>.",
+      "fx.g.sub": "Whatever brought you here — losing weight, eating smarter, or finally making habits stick — the same ten features bend to your goal.",
+      "fx.g.cta": "Start free",
+      "fx.g.blog": "Guides →",
+
+      "fx.g1.t": "For weight loss",
+      "fx.g1.b": "No crash diets, no banned foods — a repeatable loop that fits real life. Fotocal sets a realistic target aimed at a safe ~0.5–1 kg per week, the photo scan makes logging effortless enough to survive busy days, your calorie ring keeps you in a gentle deficit, and the trend chart smooths out the scale's daily noise so you see the real direction.",
+      "fx.g1.l1": "Realistic calorie & macro targets from your goal",
+      "fx.g1.l2": "Calorie ring shows the room left in your day",
+      "fx.g1.l3": "Trend chart, not scale panic",
+      "fx.g1.l4": "Coach Kal for plateaus and eating out",
+
+      "fx.g2.t": "For nutrition & diet",
+      "fx.g2.b": "Understand what you eat, not just how much. Every meal becomes a full nutrition picture — macros, micronutrients, health score and healthier swaps — and Fotocal never forces one diet on you: it tracks the numbers so your chosen approach becomes easy to follow.",
+      "fx.g2.l1": "Works with high-protein, low-carb, vegetarian or balanced eating",
+      "fx.g2.l2": "Health score teaches what \"good\" looks like",
+      "fx.g2.l3": "Small, realistic swaps — not lectures",
+      "fx.g2.l4": "Ask Coach Kal anything about food",
+
+      "fx.g3.t": "For lifestyle & mindset",
+      "fx.g3.b": "Small wins, repeated — that's the whole method. A photo makes logging effortless, streaks turn consistency into a game worth protecting, a quick mood note reveals how food and feelings connect, and the weekly report celebrates what went well instead of punishing what didn't. One indulgent meal doesn't undo progress; quitting does.",
+      "fx.g3.l1": "Streaks build momentum, not pressure",
+      "fx.g3.l2": "Mood & habit journal spots your patterns",
+      "fx.g3.l3": "Smart reminders when you tend to forget",
+      "fx.g3.l4": "Judgement-free coaching after a slip",
+
+      "fx.cta.title": "Try all ten, <em class=\"accent-light\">free for 5 days</em>.",
+      "fx.cta.sub": "Download Fotocal on Google Play and see every feature in action — the 5-day free trial unlocks all of Premium.",
+
+      /* ─────────────────────────────────────────────
          SUBSCRIPTION
          ───────────────────────────────────────────── */
       "sub.meta.title": "Subscription & pricing — Fotocal",
@@ -417,6 +538,127 @@
 
     /* ══════════════════════ SPANISH ══════════════════════ */
     es: {
+
+      /* ─────────────────────────────────────────────
+         FUNCIONES (/features/)
+         ───────────────────────────────────────────── */
+      "fx.kicker": "Dentro de la app",
+      "fx.title": "Diez funciones. <em class=\"accent\">Una app preciosa</em>.",
+      "fx.sub": "Todo lo que hace Fotocal, en una sola página: desde la foto que registra tu comida hasta el informe que resume tu semana. En español y en inglés.",
+      "fx.jump1": "Captura",
+      "fx.jump2": "Entiende",
+      "fx.jump3": "Mantén el rumbo",
+      "fx.jump4": "Tu objetivo",
+
+      "fx.c1.title": "Captura cualquier cosa <em class=\"accent\">en segundos</em>.",
+      "fx.c1.sub": "Cinco formas de registrar una comida: foto, código de barras, voz, receta o carta. La más rápida en ese momento es siempre la correcta.",
+
+      "fx.f1.t": "Escaneo de comida con IA — haz una foto y conoce tu comida al instante",
+      "fx.f1.b": "Apunta con la cámara a cualquier plato y obtén calorías, macros y una puntuación de salud en segundos — sin pesar, sin buscar.",
+      "fx.f1.c1": "Platos enteros, no solo ingredientes",
+      "fx.f1.c2": "Edita lo que quieras antes de guardar",
+      "fx.f1.alt": "Ilustración: un móvil fotografía un desayuno mientras aparecen burbujas de calorías sobre cada alimento",
+
+      "fx.f2.t": "Escáner de código de barras — escanea cualquier producto y ve lo que lleva de verdad",
+      "fx.f2.b": "Puntuación de salud al instante, nutrición completa y alternativas más sanas para los productos envasados.",
+      "fx.f2.c1": "Puntuación de salud de un vistazo",
+      "fx.f2.c2": "Alternativas más sanas sugeridas",
+      "fx.f2.alt": "Ilustración: unas manos escanean el código de barras de un producto con el móvil y aparece una puntuación de salud",
+
+      "fx.f3.t": "Registro por voz — solo di lo que has comido",
+      "fx.f3.b": "Habla con naturalidad y queda registrado con calorías y macros, sin usar las manos.",
+      "fx.f3.c1": "Lenguaje natural, ES e EN",
+      "fx.f3.c2": "Perfecto para mañanas con prisa",
+      "fx.f3.alt": "Ilustración: una mujer habla a su móvil y un micrófono brillante con iconos de comida flota sobre él",
+
+      "fx.f4.t": "Receta por foto — convierte cualquier plato en una receta completa",
+      "fx.f4.b": "Fotografía una comida casera y obtén sus ingredientes y macros, listos para guardar.",
+      "fx.f4.c1": "Con ingredientes + macros",
+      "fx.f4.c2": "Guárdala y repítela",
+      "fx.f4.alt": "Ilustración: un móvil fotografía una paella y muestra una ficha de receta con ingredientes y macros",
+
+      "fx.f5.t": "Escáner de cartas — ¿comes fuera? Elegimos tu mejor plato",
+      "fx.f5.b": "Fotografía la carta y obtén el plato que mejor encaja con tus calorías restantes y tu objetivo.",
+      "fx.f5.c1": "Calorías estimadas por plato",
+      "fx.f5.c2": "Tu mejor opción, resaltada",
+      "fx.f5.alt": "Ilustración: en un restaurante, un móvil escanea la carta y resalta el mejor plato con una insignia verde",
+
+      "fx.c2.title": "Entiende <em class=\"accent\">lo que comes</em>.",
+      "fx.c2.sub": "Registrar es solo la mitad de la historia. Fotocal convierte cada comida en conocimiento que de verdad puedes usar.",
+
+      "fx.f6.t": "Coach con IA — tu coach nutricional personal, 24/7",
+      "fx.f6.b": "Pregunta lo que quieras, planifica tus comidas o escanea para pedir consejo: orientación inteligente basada en tus datos reales.",
+      "fx.f6.b1t": "Pregunta",
+      "fx.f6.b1s": "Cualquier duda sobre comida, a cualquier hora — respondida desde tu diario real.",
+      "fx.f6.b2t": "Planifica",
+      "fx.f6.b2s": "Ideas de comidas que encajan con tus calorías restantes y tus objetivos.",
+      "fx.f6.b3t": "Escanea",
+      "fx.f6.b3s": "Apunta con la cámara y recibe consejo al momento, antes de comer.",
+      "fx.f6.alt": "Ilustración: una mujer se relaja con una taza mientras chatea con Coach Kal, un robot simpático, en su móvil",
+
+      "fx.f7.t": "Nutrición completa — cada nutriente, no solo las calorías",
+      "fx.f7.b": "Macros completos y micronutrientes: vitaminas, minerales, fibra, azúcar, sodio, nivel de procesamiento NOVA y puntuaciones de glucosa y saciedad.",
+      "fx.f7.x1": "Vitaminas",
+      "fx.f7.x2": "Minerales",
+      "fx.f7.x3": "Fibra",
+      "fx.f7.x4": "Azúcar",
+      "fx.f7.x5": "Sodio",
+      "fx.f7.x6": "Nivel NOVA",
+      "fx.f7.x7": "Puntuación de glucosa",
+      "fx.f7.x8": "Puntuación de saciedad",
+      "fx.f7.score": "Puntuación de salud por comida, con mejoras sugeridas",
+      "fx.f7.alt": "Ilustración: un móvil muestra el análisis de una comida rica en nutrientes rodeado de insignias de vitaminas, hierro y calcio",
+
+      "fx.c3.title": "Mantén <em class=\"accent\">el rumbo</em>.",
+      "fx.c3.sub": "El progreso vive en semanas, no en días. Estas son las funciones que hacen avanzar la historia.",
+
+      "fx.f8.tag": "Progreso",
+      "fx.f8.t": "Progreso y tendencia de peso — observa tu progreso cada semana",
+      "fx.f8.b": "Gráficas claras de tendencia de peso, IMC y seguimiento de objetivos.",
+      "fx.f8.alt": "Ilustración: una mujer sonriente muestra su móvil con la pantalla de progreso, gráfica de peso y anillo de objetivo",
+
+      "fx.f9.tag": "Diario",
+      "fx.f9.t": "Seguimiento diario — construye hábitos saludables cada día",
+      "fx.f9.b": "Agua, pasos, hábitos y rachas en una sola pantalla de inicio, bien simple.",
+      "fx.f9.s1": "vasos",
+      "fx.f9.s2": "pasos",
+      "fx.f9.s3": "hábitos hechos",
+      "fx.f9.s4": "días de racha",
+
+      "fx.f10.tag": "Semanal",
+      "fx.f10.t": "Informe semanal — tu semana, resumida con estilo",
+      "fx.f10.b": "Un resumen semanal claro de todo lo que registraste.",
+      "fx.f10.alt": "Ilustración: una mujer en el sofá con café revisa su resumen semanal — calorías, macros y objetivos",
+
+      "fx.g.kicker": "Hecha para tu objetivo",
+      "fx.g.title": "Una app, <em class=\"accent\">tus motivos</em>.",
+      "fx.g.sub": "Sea lo que sea lo que te trajo aquí — perder peso, comer mejor o conseguir por fin que los hábitos aguanten — las mismas diez funciones se adaptan a tu objetivo.",
+      "fx.g.cta": "Empieza gratis",
+      "fx.g.blog": "Guías →",
+
+      "fx.g1.t": "Para perder peso",
+      "fx.g1.b": "Sin dietas milagro y sin alimentos prohibidos: un bucle repetible que encaja en la vida real. Fotocal fija un objetivo realista de ~0,5–1 kg por semana, el escaneo por foto hace que registrar sea tan fácil que sobrevive a los días liados, tu anillo de calorías te mantiene en un déficit suave y la gráfica de tendencia suaviza el ruido diario de la báscula para que veas la dirección real.",
+      "fx.g1.l1": "Objetivos realistas de calorías y macros según tu meta",
+      "fx.g1.l2": "El anillo de calorías muestra el margen que te queda",
+      "fx.g1.l3": "Tendencia, no pánico a la báscula",
+      "fx.g1.l4": "Coach Kal para mesetas y comer fuera",
+
+      "fx.g2.t": "Para nutrición y dieta",
+      "fx.g2.b": "Entiende lo que comes, no solo cuánto. Cada comida se convierte en una imagen nutricional completa — macros, micronutrientes, puntuación de salud y mejoras sugeridas — y Fotocal nunca te impone una dieta: lleva los números para que tu enfoque elegido sea fácil de seguir.",
+      "fx.g2.l1": "Funciona con dietas altas en proteína, bajas en carbohidratos, vegetarianas o equilibradas",
+      "fx.g2.l2": "La puntuación de salud te enseña qué es \"bueno\"",
+      "fx.g2.l3": "Cambios pequeños y realistas, sin sermones",
+      "fx.g2.l4": "Pregúntale a Coach Kal lo que quieras sobre comida",
+
+      "fx.g3.t": "Para hábitos y mentalidad",
+      "fx.g3.b": "Pequeñas victorias repetidas: ese es todo el método. Una foto hace que registrar no cueste nada, las rachas convierten la constancia en un juego que quieres proteger, una nota rápida de ánimo revela cómo se conectan comida y emociones, y el informe semanal celebra lo que salió bien en vez de castigar lo que no. Una comida caprichosa no deshace tu progreso; abandonar, sí.",
+      "fx.g3.l1": "Las rachas crean impulso, no presión",
+      "fx.g3.l2": "El diario de ánimo y hábitos detecta tus patrones",
+      "fx.g3.l3": "Recordatorios inteligentes cuando sueles olvidarte",
+      "fx.g3.l4": "Coaching sin juicios después de un tropiezo",
+
+      "fx.cta.title": "Prueba las diez, <em class=\"accent-light\">gratis 5 días</em>.",
+      "fx.cta.sub": "Descarga Fotocal en Google Play y ve cada función en acción: la prueba gratis de 5 días desbloquea todo Premium.",
 
       /* ─────────────────────────────────────────────
          SUSCRIPCIÓN

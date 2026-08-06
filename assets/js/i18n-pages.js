@@ -40,6 +40,48 @@
     /* ══════════════════════ ENGLISH ══════════════════════ */
     en: {
 
+
+      /* ─────────────────────────────────────────────
+         SECTION PAGES (Features detail, About) + CONTACT FORM
+         ───────────────────────────────────────────── */
+      "sp.allFeatures": "All features",
+      "sp.weight-loss.heroAlt": "A woman checking her downward weight trend on her phone in a sunny kitchen",
+      "sp.weight-loss.bandAlt": "A balanced salmon and quinoa bowl beside a glowing calorie ring",
+      "sp.weight-loss.bandPill": "In practice",
+      "sp.weight-loss.bandTitle": "A deficit you barely notice",
+      "sp.weight-loss.bandBody": "Nothing dramatic — a plate you would eat anyway, photographed in a second, and a calorie ring that keeps you honest without running your life.",
+      "sp.nutrition-diet.heroAlt": "A colourful balanced bowl seen from above with protein, carb and fat badges floating over it",
+      "sp.lifestyle-mindset.heroAlt": "A woman journalling with a cup of tea by warm evening light",
+      "sp.lifestyle-mindset.bandAlt": "Small daily wins — a walk, a glass of water and a good night's sleep",
+      "sp.lifestyle-mindset.bandPill": "In practice",
+      "sp.lifestyle-mindset.bandTitle": "Small wins, stacked up",
+      "sp.lifestyle-mindset.bandBody": "A walk after lunch, a glass of water, a decent night's sleep. None of it is impressive on its own — repeated, it is the whole thing.",
+      "about.heroAlt": "A woman with a mug at a sunlit kitchen table with fresh food, a notebook and her phone",
+      "about.bandAlt": "An open notebook and pen beside a balanced plate and a glass of water",
+      "about.bandPill": "Why we built it",
+      "about.bandTitle": "A notebook, a plate, and no lectures",
+      "about.bandBody": "Fotocal started as the tool we wanted ourselves: something that tells you what is on your plate without turning dinner into data entry, and without an opinion about how you should live.",
+      "contact.heroAlt": "A woman with a mug reading replies on her phone in a cosy room",
+      "cf.jump": "Write a message",
+      "cf.kicker": "Send a message",
+      "cf.title": "Tell us what is going on.",
+      "cf.sub": "Two fields are all we need. Leave your email if you would like a reply — without it we can read your message but cannot write back.",
+      "cf.name": "Your name",
+      "cf.namePh": "What should we call you?",
+      "cf.nameErr": "Please tell us your name.",
+      "cf.email": "Your email",
+      "cf.optional": "(optional — needed for a reply)",
+      "cf.emailPh": "you@example.com",
+      "cf.emailErr": "That does not look like a valid email address.",
+      "cf.message": "Your message",
+      "cf.messagePh": "What happened, what you expected, and anything that would help us understand.",
+      "cf.messageErr": "Please write a little more so we can help.",
+      "cf.send": "Send message",
+      "cf.sending": "Sending…",
+      "cf.privacy": "We use what you send only to answer you. Nothing else.",
+      "cf.ok": "Thanks! We'll reply within 24 hours — please check your email.",
+      "cf.fail": "Sorry — that did not send. Please try again in a moment.",
+
       /* ── Subscription: artwork alt text ── */
       "sub.img1": "A woman smiling as she points at her phone showing the day's logged meals",
       "sub.img2": "Someone photographing a colourful salad bowl with their phone",
@@ -525,37 +567,33 @@
       "contact.meta.title": "Contact Us — Fotocal",
       "contact.kicker": "Contact",
       "contact.title": "Talk to <em class=\"accent\">an actual person</em>.",
-      "contact.lead": "One email address, read by the people who built the app. No ticket number, no chatbot, no support tier to escalate through.",
-      "contact.lead2": "Pick whichever applies below — it just pre-fills the subject line so we can find your email faster.",
-      "contact.mailLabel": "Email us at",
+      "contact.lead": "Send us a message and it goes straight to the people who built the app. No ticket number, no chatbot, no support tier to escalate through.",
+      "contact.lead2": "Fill in the form below — tell us what it is about and we will take it from there.",
 
       "contact.routes.kicker": "What is it about?",
-      "contact.routes.title": "Three ways in. <em class=\"accent\">Same inbox</em>.",
-      "contact.routes.sub": "All three go to the same address. The subject line just tells us what we are looking at before we open it.",
+      "contact.routes.title": "Three kinds of message. <em class=\"accent\">One form</em>.",
+      "contact.routes.sub": "All three reach the same inbox. Saying which one it is just helps us know what we are looking at before we open it.",
 
       "contact.r1.t": "Support & help",
       "contact.r1.b": "Something is broken, a scan is behaving strangely, you are stuck, or you have a question about your subscription or a charge. This is the one for almost everything.",
       "contact.r1.li1": "Bugs and crashes",
       "contact.r1.li2": "Scans, Coach Kal, syncing",
       "contact.r1.li3": "Subscriptions and billing",
-      "contact.r1.cta": "Email support",
 
       "contact.r2.t": "Privacy & your data",
       "contact.r2.b": "Anything about what we store, how we use it, or getting it deleted. If you want your account and data gone, the app can do it in a couple of taps — but you can also just ask us.",
       "contact.r2.li1": "Data access and deletion",
       "contact.r2.li2": "Questions about the Privacy Policy",
       "contact.r2.li3": "How your information is handled",
-      "contact.r2.cta": "Email about privacy",
 
       "contact.r3.t": "Business & press",
       "contact.r3.b": "Partnerships, press, or anything commercial. We are small and independent, so we read these ourselves — and we will tell you straight if it is not a fit.",
       "contact.r3.li1": "Partnerships and collaborations",
       "contact.r3.li2": "Press and media questions",
       "contact.r3.li3": "Anything commercial",
-      "contact.r3.cta": "Email about business",
 
       "contact.help.kicker": "Getting a good answer faster",
-      "contact.help.title": "What to <em class=\"accent\">put in the email</em>.",
+      "contact.help.title": "What to <em class=\"accent\">put in your message</em>.",
       "contact.help.p1": "None of this is required — send a one-line email if that is what you have and we will still reply. But if something is broken, these are the details that usually decide whether we can fix it in one reply or have to spend three emails asking you questions.",
       "contact.help.s1": "<b>Your phone and Android version.</b> Settings → About phone. A surprising number of bugs only happen on one manufacturer's build.",
       "contact.help.s2": "<b>What you were doing.</b> The screen you were on and the last thing you tapped before it went wrong.",
@@ -582,11 +620,53 @@
 
       "contact.cta.title": "We would rather hear it <em class=\"accent-light\">than not</em>.",
       "contact.cta.sub": "Bugs, confusion, blunt feedback, or an idea for something Fotocal should do — it all helps, and it all gets read.",
-      "contact.cta.btn": "Send us an email"
+      "contact.cta.btn": "Write a message"
     },
 
     /* ══════════════════════ SPANISH ══════════════════════ */
     es: {
+
+
+      /* ─────────────────────────────────────────────
+         PÁGINAS DE SECCIÓN + FORMULARIO DE CONTACTO
+         ───────────────────────────────────────────── */
+      "sp.allFeatures": "Todas las funciones",
+      "sp.weight-loss.heroAlt": "Una mujer mira en su móvil la tendencia descendente de su peso en una cocina soleada",
+      "sp.weight-loss.bandAlt": "Un bol equilibrado de salmón y quinoa junto a un anillo de calorías luminoso",
+      "sp.weight-loss.bandPill": "En la práctica",
+      "sp.weight-loss.bandTitle": "Un déficit que casi no se nota",
+      "sp.weight-loss.bandBody": "Nada dramático: un plato que ibas a comer igualmente, fotografiado en un segundo, y un anillo de calorías que te mantiene honesto sin gobernarte la vida.",
+      "sp.nutrition-diet.heroAlt": "Un bol equilibrado y colorido visto desde arriba con insignias de proteína, carbohidratos y grasa flotando",
+      "sp.lifestyle-mindset.heroAlt": "Una mujer escribe en su diario con una taza de té bajo una luz cálida de tarde",
+      "sp.lifestyle-mindset.bandAlt": "Pequeñas victorias diarias: un paseo, un vaso de agua y una buena noche de sueño",
+      "sp.lifestyle-mindset.bandPill": "En la práctica",
+      "sp.lifestyle-mindset.bandTitle": "Pequeñas victorias, acumuladas",
+      "sp.lifestyle-mindset.bandBody": "Un paseo después de comer, un vaso de agua, dormir bien. Nada de eso impresiona por separado; repetido, lo es todo.",
+      "about.heroAlt": "Una mujer con una taza en una mesa de cocina soleada con comida fresca, una libreta y su móvil",
+      "about.bandAlt": "Una libreta abierta y un bolígrafo junto a un plato equilibrado y un vaso de agua",
+      "about.bandPill": "Por qué la construimos",
+      "about.bandTitle": "Una libreta, un plato y ningún sermón",
+      "about.bandBody": "Fotocal nació como la herramienta que queríamos para nosotros: algo que te dice qué hay en tu plato sin convertir la cena en introducir datos, y sin opinar sobre cómo deberías vivir.",
+      "contact.heroAlt": "Una mujer con una taza lee respuestas en su móvil en una habitación acogedora",
+      "cf.jump": "Escribir un mensaje",
+      "cf.kicker": "Envíanos un mensaje",
+      "cf.title": "Cuéntanos qué pasa.",
+      "cf.sub": "Con dos campos nos vale. Deja tu correo si quieres respuesta: sin él podemos leer tu mensaje, pero no contestarte.",
+      "cf.name": "Tu nombre",
+      "cf.namePh": "¿Cómo te llamamos?",
+      "cf.nameErr": "Dinos tu nombre, por favor.",
+      "cf.email": "Tu correo",
+      "cf.optional": "(opcional — necesario para responderte)",
+      "cf.emailPh": "tu@ejemplo.com",
+      "cf.emailErr": "Ese correo no parece válido.",
+      "cf.message": "Tu mensaje",
+      "cf.messagePh": "Qué ha pasado, qué esperabas y cualquier cosa que nos ayude a entenderlo.",
+      "cf.messageErr": "Escribe un poco más para que podamos ayudarte.",
+      "cf.send": "Enviar mensaje",
+      "cf.sending": "Enviando…",
+      "cf.privacy": "Usamos lo que nos envías solo para responderte. Nada más.",
+      "cf.ok": "¡Gracias! Te responderemos en 24 horas — revisa tu correo.",
+      "cf.fail": "Lo sentimos, no se ha podido enviar. Inténtalo de nuevo en un momento.",
 
       /* ── Suscripción: texto alternativo de las imágenes ── */
       "sub.img1": "Una mujer sonríe mientras señala su móvil, que muestra las comidas registradas del día",
@@ -1062,37 +1142,33 @@
       "contact.meta.title": "Contacto — Fotocal",
       "contact.kicker": "Contacto",
       "contact.title": "Habla con <em class=\"accent\">una persona de verdad</em>.",
-      "contact.lead": "Una dirección de correo, leída por la gente que hizo la app. Sin número de ticket, sin chatbot, sin niveles de soporte por los que ir escalando.",
-      "contact.lead2": "Elige abajo lo que te encaje: lo único que hace es rellenar el asunto para que encontremos tu correo más rápido.",
-      "contact.mailLabel": "Escríbenos a",
+      "contact.lead": "Envíanos un mensaje y llega directo a las personas que hicieron la app. Sin número de ticket, sin chatbot y sin niveles de soporte que escalar.",
+      "contact.lead2": "Rellena el formulario de abajo: cuéntanos de qué se trata y nos encargamos.",
 
       "contact.routes.kicker": "¿De qué se trata?",
-      "contact.routes.title": "Tres vías. <em class=\"accent\">La misma bandeja</em>.",
-      "contact.routes.sub": "Las tres van a la misma dirección. El asunto solo nos dice qué tenemos delante antes de abrirlo.",
+      "contact.routes.title": "Tres tipos de mensaje. <em class=\"accent\">Un formulario</em>.",
+      "contact.routes.sub": "Los tres llegan a la misma bandeja. Decirnos cuál es solo nos ayuda a saber qué tenemos delante antes de abrirlo.",
 
       "contact.r1.t": "Soporte y ayuda",
       "contact.r1.b": "Algo no funciona, un escaneo se comporta raro, te has atascado o tienes una duda sobre tu suscripción o un cobro. Esta es la vía para casi todo.",
       "contact.r1.li1": "Errores y cierres inesperados",
       "contact.r1.li2": "Escaneos, Coach Kal, sincronización",
       "contact.r1.li3": "Suscripciones y cobros",
-      "contact.r1.cta": "Escribir a soporte",
 
       "contact.r2.t": "Privacidad y tus datos",
       "contact.r2.b": "Cualquier cosa sobre qué guardamos, cómo lo usamos o cómo borrarlo. Si quieres que tu cuenta y tus datos desaparezcan, la app lo hace en un par de toques, pero también puedes pedírnoslo sin más.",
       "contact.r2.li1": "Acceso y eliminación de datos",
       "contact.r2.li2": "Dudas sobre la Política de Privacidad",
       "contact.r2.li3": "Cómo se trata tu información",
-      "contact.r2.cta": "Escribir sobre privacidad",
 
       "contact.r3.t": "Negocio y prensa",
       "contact.r3.b": "Colaboraciones, prensa o cualquier cosa comercial. Somos pequeños e independientes, así que esto lo leemos nosotros, y te diremos claramente si no encaja.",
       "contact.r3.li1": "Colaboraciones y acuerdos",
       "contact.r3.li2": "Prensa y medios",
       "contact.r3.li3": "Cualquier asunto comercial",
-      "contact.r3.cta": "Escribir sobre negocio",
 
       "contact.help.kicker": "Cómo obtener una buena respuesta antes",
-      "contact.help.title": "Qué <em class=\"accent\">poner en el correo</em>.",
+      "contact.help.title": "Qué <em class=\"accent\">poner en tu mensaje</em>.",
       "contact.help.p1": "Nada de esto es obligatorio: mándanos un correo de una línea si es lo que tienes y te responderemos igual. Pero si algo no funciona, estos son los datos que suelen decidir si lo arreglamos en una respuesta o tenemos que gastar tres correos preguntándote cosas.",
       "contact.help.s1": "<b>Tu móvil y tu versión de Android.</b> Ajustes → Información del teléfono. Un número sorprendente de errores solo ocurre en la versión de un fabricante.",
       "contact.help.s2": "<b>Qué estabas haciendo.</b> En qué pantalla estabas y qué fue lo último que tocaste antes de que fallara.",
@@ -1119,7 +1195,7 @@
 
       "contact.cta.title": "Preferimos oírlo <em class=\"accent-light\">a no oírlo</em>.",
       "contact.cta.sub": "Errores, confusión, críticas sin filtro o una idea de algo que Fotocal debería hacer: todo ayuda y todo se lee.",
-      "contact.cta.btn": "Escríbenos un correo"
+      "contact.cta.btn": "Escribir un mensaje"
     }
   };
 

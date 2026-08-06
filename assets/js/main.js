@@ -68,6 +68,12 @@
       if (v != null) el.setAttribute("alt", v);
     });
 
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-ph");
+      var v = dict[k] != null ? dict[k] : fallback[k];
+      if (v != null) el.setAttribute("placeholder", v);
+    });
+
     /* ── Long-form content blocks ──
        Article prose is far too long to live in the dictionary, so a blog
        post ships both languages in its own markup, each wrapped in

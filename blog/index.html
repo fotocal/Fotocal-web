@@ -3,31 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Fotocal</title>
-  <meta name="description" content="The Fotocal blog: honest, practical writing on nutrition, weight loss, calorie counting, macros and the everyday habits behind eating better.">
-  <meta name="keywords" content="Fotocal blog, nutrition blog, weight loss habits, calorie tracking advice">
+  <title>Blog — nutrition, weight loss and habits, honestly | Fotocal</title>
+  <meta name="description" content="54 practical, no-nonsense guides on nutrition, calorie counting, weight loss, macros and the everyday habits behind eating better — from the Fotocal team.">
+  <meta name="keywords" content="Fotocal blog, nutrition blog, weight loss guides, calorie counting advice, macros, healthy habits">
   <link rel="canonical" href="https://getfotocal.com/blog/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/blog/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/">
   <meta name="theme-color" content="#FDF9F0">
 
-  <!-- No posts are published yet. Left indexable so the page can start
-       building authority, but there is deliberately no fake content on
-       it — see the empty state below. -->
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
-  <meta property="og:title" content="Blog — Fotocal">
-  <meta property="og:description" content="Honest, practical writing on nutrition, weight loss, calorie counting and the habits behind eating better.">
+  <meta property="og:title" content="Blog — nutrition, weight loss and habits, honestly">
+  <meta property="og:description" content="54 practical guides on nutrition, calorie counting, weight loss and the habits behind eating better.">
   <meta property="og:url" content="https://getfotocal.com/blog/">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Blog — Fotocal">
-  <meta name="twitter:description" content="Honest writing on nutrition, weight loss and the habits behind them.">
+  <meta name="twitter:title" content="Blog — nutrition, weight loss and habits, honestly">
+  <meta name="twitter:description" content="Practical guides on nutrition, weight loss and the habits behind them.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
 
   <link rel="icon" type="image/png" href="../assets/img/logo.png">
@@ -38,7 +33,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/blog.css">
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Fotocal Blog","url":"https://getfotocal.com/blog/","description":"Practical guides on nutrition, calorie counting, weight loss and healthy habits.","publisher":{"@type":"Organization","name":"Fotocal","logo":{"@type":"ImageObject","url":"https://getfotocal.com/assets/img/logo.png"}}}
+  </script>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://getfotocal.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://getfotocal.com/blog/"}]}
+  </script>
 </head>
 <body>
 
@@ -47,673 +49,751 @@
   <main id="main">
 
     <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="kicker reveal" data-i18n="blog.kicker">Blog</span>
-        <h1 class="reveal" data-i18n-html="blog.title">Notes on eating, <em class="accent">honestly</em>.</h1>
-        <p class="lead reveal" data-i18n="blog.lead">This is where we will write about nutrition, weight, and the habits that hold the whole thing together — the practical, unglamorous side of eating better that most of the internet skips over on its way to selling you something.</p>
+    <section class="bl-hero">
+      <div class="container-narrow">
+        <span class="kicker reveal" data-i18n="blog.kicker">The Fotocal blog</span>
+        <h1 class="section-title reveal" data-i18n-html="blog.title">Notes on eating, <em class="accent">honestly</em>.</h1>
+        <p class="section-sub reveal" data-i18n="blog.lead">Practical, unglamorous writing on nutrition, weight and the habits that hold the whole thing together — the part most of the internet skips on its way to selling you something.</p>
       </div>
     </section>
 
-    <!-- ═══════════════════ POSTS ═══════════════════
-         ┌──────────────────────────────────────────────────────────┐
-         │  HOW TO ADD A REAL POST — three steps                     │
-         │                                                          │
-         │  1. Write the post itself at:  /blog/<slug>/index.html    │
-         │     Easiest way: copy /blog/index.html, keep the <head>,  │
-         │     the #site-nav / #site-footer divs and the four        │
-         │     <script> tags, and replace <main> with your article.  │
-         │     Use  ../../assets/...  for the paths (one level       │
-         │     deeper), and data-page="blog" on layout.js.           │
-         │                                                          │
-         │  2. Copy the <article class="post-card"> TEMPLATE that is │
-         │     commented out just below, paste it inside the         │
-         │     .post-grid below, and fill in:                        │
-         │        · the tag        (Nutrition / Weight loss / ...)   │
-         │        · the title      + href to your new folder         │
-         │        · the summary    (2-3 sentences)                   │
-         │        · the date       + read time                       │
-         │     Add a cover image by putting an <img> inside          │
-         │     .post-cover — otherwise the warm gradient shows.      │
-         │                                                          │
-         │  3. Delete the .empty-state block and the "Design         │
-         │     preview" section below once the first real post is    │
-         │     live. Then unhide the .post-grid (remove the hidden   │
-         │     attribute).                                           │
-         │                                                          │
-         │  NOTE ON TRANSLATIONS: post titles/summaries are real     │
-         │  content, not UI. Either write the card text directly in  │
-         │  the markup (simplest — it stays in one language), or     │
-         │  add keys to assets/js/i18n-pages.js and use data-i18n    │
-         │  like the rest of the page. Do not half-do it.            │
-         └──────────────────────────────────────────────────────────┘
-
-    ═══════════ POST CARD TEMPLATE — copy me ═══════════
-    <article class="post-card reveal">
-      <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg0)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-      <div class="post-body">
-        <span class="post-tag">Nutrition</span>
-        <h3><a href="my-post-slug/">The title of the post goes here</a></h3>
-        <p>Two or three sentences summarising what the post covers, so a
-           reader can tell from the card whether it is worth their time.</p>
-        <div class="post-meta">
-          <time datetime="2026-07-20">20 July 2026</time>
-          <span class="dot">·</span>
-          <span>6 min read</span>
+    <!-- ═══════════════════ FEATURED ═══════════════════ -->
+    <section class="container bl-feature">
+      <article class="bl-feat-card reveal">
+        <div class="bl-feat-media">
+          <img src="../assets/img/blog/how-to-count-calories-accurately.svg" width="1200" height="675" fetchpriority="high" decoding="async" alt="">
         </div>
-      </div>
-    </article>
-    ═══════════ END TEMPLATE ═══════════ -->
+        <div class="bl-feat-body">
+          <span class="bl-feat-flag" data-i18n="blog.latest">Latest</span>
+          <h2><a href="how-to-count-calories-accurately/">How to Count Calories Accurately: A Beginner’s Guide</a></h2>
+          <p>Learn how to count calories accurately without burning out. A practical, no-nonsense beginner guide to portions, labels, and building a habit that lasts.</p>
+          <div class="bl-meta">
+            <span class="bl-tag" style="margin:0" data-i18n="blog.cat.calories">Calorie counting</span>
+            <span class="dot" aria-hidden="true">&middot;</span><span>July 18, 2026</span>
+            <span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <section class="section">
+    <!-- ═══════════════════ ALL POSTS ═══════════════════ -->
+    <section class="section" id="all-posts" style="padding-top:1rem">
       <div class="container">
+        <div class="bl-filters reveal" role="group" aria-label="Filter posts by category">
+          <button class="bl-chip" type="button" data-filter="all" aria-pressed="true"><span data-i18n="blog.all">All</span><span class="n">53</span></button>
+          <button class="bl-chip" type="button" data-filter="nutrition" aria-pressed="false"><span data-i18n="blog.cat.nutrition">Nutrition</span><span class="n">11</span></button>
+          <button class="bl-chip" type="button" data-filter="weightloss" aria-pressed="false"><span data-i18n="blog.cat.weightloss">Weight loss</span><span class="n">8</span></button>
+          <button class="bl-chip" type="button" data-filter="healthy" aria-pressed="false"><span data-i18n="blog.cat.healthy">Healthy eating</span><span class="n">7</span></button>
+          <button class="bl-chip" type="button" data-filter="mindset" aria-pressed="false"><span data-i18n="blog.cat.mindset">Mindset</span><span class="n">6</span></button>
+          <button class="bl-chip" type="button" data-filter="diet" aria-pressed="false"><span data-i18n="blog.cat.diet">Diet tips</span><span class="n">6</span></button>
+          <button class="bl-chip" type="button" data-filter="fitness" aria-pressed="false"><span data-i18n="blog.cat.fitness">Fitness</span><span class="n">5</span></button>
+          <button class="bl-chip" type="button" data-filter="calories" aria-pressed="false"><span data-i18n="blog.cat.calories">Calorie counting</span><span class="n">4</span></button>
+          <button class="bl-chip" type="button" data-filter="mealplan" aria-pressed="false"><span data-i18n="blog.cat.mealplan">Meal planning</span><span class="n">4</span></button>
+          <button class="bl-chip" type="button" data-filter="lifestyle" aria-pressed="false"><span data-i18n="blog.cat.lifestyle">Lifestyle</span><span class="n">2</span></button>
+        </div>
+        <p class="bl-count"><span id="blCount">53</span> <span data-i18n="blog.showing">articles</span></p>
 
-        <div class="post-grid">
-          <article class="post-card reveal">
-            <a href="how-to-count-calories-accurately/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calorie counting"><defs><linearGradient id="fcg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg1)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">CALORIE COUNTING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Calorie counting</span>
-                <h3>How to Count Calories Accurately: A Beginner’s Guide</h3>
-                <p>Learn how to count calories accurately without burning out. A practical, no-nonsense beginner guide to portions, labels, and building a habit that lasts.</p>
-                <div class="post-meta"><span>July 18, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+        <div class="bl-grid" id="blGrid">
+          <article class="bl-card reveal" data-cat="calories">
+            <a href="tdee-how-many-calories-you-need/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/tdee-how-many-calories-you-need.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
               </div>
-            </a>
-          </article>
-          <article class="post-card reveal">
-            <a href="tdee-how-many-calories-you-need/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calorie counting"><defs><linearGradient id="fcg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg2)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">CALORIE COUNTING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Calorie counting</span>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.calories">Calorie counting</span>
                 <h3>TDEE Explained: How Many Calories You Really Need</h3>
                 <p>Your TDEE is the number of calories you burn in a day. Here’s how to estimate it, why it changes, and how to use it to lose, gain or maintain weight.</p>
-                <div class="post-meta"><span>July 15, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>July 15, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="calorie-deficit-for-fat-loss/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg3)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="calorie-deficit-for-fat-loss/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/calorie-deficit-for-fat-loss.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>Calorie Deficit: The Only Rule That Actually Matters for Fat Loss</h3>
                 <p>Every diet that works, works because it creates a calorie deficit. Here’s what a deficit is, how big it should be, and how to sustain one without misery.</p>
-                <div class="post-meta"><span>July 12, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>July 12, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="common-calorie-counting-mistakes/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calorie counting"><defs><linearGradient id="fcg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg4)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">CALORIE COUNTING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Calorie counting</span>
+          <article class="bl-card reveal" data-cat="calories">
+            <a href="common-calorie-counting-mistakes/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/common-calorie-counting-mistakes.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.calories">Calorie counting</span>
                 <h3>7 Common Calorie Counting Mistakes That Stall Progress</h3>
                 <p>Counting calories but not losing weight? These seven common tracking mistakes explain most stalled progress — and each one is easy to fix.</p>
-                <div class="post-meta"><span>July 9, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>July 9, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="do-calories-matter-or-food-quality/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg5)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="do-calories-matter-or-food-quality/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/do-calories-matter-or-food-quality.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Do Calories Really Matter, or Is It All About Food Quality?</h3>
                 <p>“A calorie is a calorie” vs “focus on whole foods” — this guide settles the debate and shows why both quantity and quality matter for real results.</p>
-                <div class="post-meta"><span>July 6, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>July 6, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="track-calories-without-weighing/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calorie counting"><defs><linearGradient id="fcg6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg6)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">CALORIE COUNTING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Calorie counting</span>
+          <article class="bl-card reveal" data-cat="calories">
+            <a href="track-calories-without-weighing/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/track-calories-without-weighing.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.calories">Calorie counting</span>
                 <h3>How to Track Calories Without Weighing Every Meal</h3>
                 <p>No kitchen scale? You can still track calories well using hand portions, visual cues and photo logging. A practical guide to accurate estimation.</p>
-                <div class="post-meta"><span>July 3, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>July 3, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-read-nutrition-labels/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg7)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="how-to-read-nutrition-labels/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-read-nutrition-labels.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>How to Read Nutrition Labels: A Practical Guide</h3>
                 <p>Serving sizes, % daily value, added sugars and sneaky marketing — learn to read nutrition labels quickly and avoid the most common traps.</p>
-                <div class="post-meta"><span>June 30, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>June 30, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="macronutrients-101/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg8)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="macronutrients-101/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/macronutrients-101.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Macronutrients 101: Protein, Carbs and Fat Explained</h3>
                 <p>A clear beginner’s guide to the three macronutrients — what each does, how many calories they provide, and how to balance them for your goals.</p>
-                <div class="post-meta"><span>June 27, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>7 min read</span></div>
+                <div class="bl-meta"><span>June 27, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>7 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-much-protein-per-day/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg9)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="how-much-protein-per-day/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-much-protein-per-day.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>How Much Protein Do You Really Need Per Day?</h3>
                 <p>The RDA is a floor, not a target. Here’s how much protein you actually need for muscle, fat loss and satiety — with simple ways to hit it.</p>
-                <div class="post-meta"><span>June 24, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>June 24, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="carbs-are-not-the-enemy/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg10" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg10)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="carbs-are-not-the-enemy/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/carbs-are-not-the-enemy.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Carbs Aren’t the Enemy: A Balanced Look at Carbohydrates</h3>
                 <p>Carbs have been blamed for weight gain for decades. Here’s what carbohydrates actually do, which ones to favor, and why they don’t deserve the fear.</p>
-                <div class="post-meta"><span>June 21, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>June 21, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="dietary-fat-how-much-and-which-kinds/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg11" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg11)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="dietary-fat-how-much-and-which-kinds/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/dietary-fat-how-much-and-which-kinds.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Dietary Fat: How Much You Need and Which Kinds to Choose</h3>
                 <p>Fat isn’t fattening by default — it’s essential. Learn how much dietary fat you need, the difference between fat types, and how to choose wisely.</p>
-                <div class="post-meta"><span>June 18, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>June 18, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-set-your-macros-for-weight-loss/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg12" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg12)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="how-to-set-your-macros-for-weight-loss/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-set-your-macros-for-weight-loss.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>How to Set Your Macros for Weight Loss (Step by Step)</h3>
                 <p>A simple, no-nonsense method to calculate your calories and macros for fat loss — protein first, then fats and carbs — with an example.</p>
-                <div class="post-meta"><span>June 15, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>7 min read</span></div>
+                <div class="bl-meta"><span>June 15, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>7 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="fiber-the-underrated-nutrient/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg13" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg13)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="fiber-the-underrated-nutrient/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/fiber-the-underrated-nutrient.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Fiber: The Underrated Nutrient for Weight Control</h3>
                 <p>Fiber keeps you full, steadies blood sugar and supports gut health — yet most people fall short. Here’s how much you need and how to get it.</p>
-                <div class="post-meta"><span>June 12, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>June 12, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="why-micronutrients-matter/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg14" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg14)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="why-micronutrients-matter/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/why-micronutrients-matter.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Micronutrients: Why Vitamins and Minerals Still Matter When Counting Calories</h3>
                 <p>You can hit your calorie and macro targets and still eat poorly. Here’s why micronutrients matter and how to cover them without obsessing.</p>
-                <div class="post-meta"><span>June 9, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>June 9, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="added-sugar-vs-natural-sugar/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg15" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg15)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="added-sugar-vs-natural-sugar/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/added-sugar-vs-natural-sugar.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Understanding Sugar: Added vs Natural, and What Actually Matters</h3>
                 <p>Is the sugar in fruit as bad as the sugar in soda? Learn the real difference between added and natural sugars and how much sugar is too much.</p>
-                <div class="post-meta"><span>June 6, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>June 6, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-lose-weight-sustainably/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg16" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg16)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="how-to-lose-weight-sustainably/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-lose-weight-sustainably.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>How to Lose Weight Sustainably (Without Crash Dieting)</h3>
                 <p>Crash diets fail because they’re unlivable. Here’s a sustainable, evidence-based approach to weight loss you can actually maintain for life.</p>
-                <div class="post-meta"><span>June 3, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>7 min read</span></div>
+                <div class="bl-meta"><span>June 3, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>7 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="why-the-scale-is-not-the-whole-story/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg17" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg17)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="why-the-scale-is-not-the-whole-story/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/why-the-scale-is-not-the-whole-story.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>Why the Scale Isn’t the Whole Story</h3>
                 <p>The number on the scale swings for dozens of reasons that have nothing to do with fat. Here’s how to measure progress without losing your mind.</p>
-                <div class="post-meta"><span>May 31, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>May 31, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="weight-loss-plateaus/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg18" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg18)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="weight-loss-plateaus/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/weight-loss-plateaus.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>Weight Loss Plateaus: Why They Happen and How to Break Them</h3>
                 <p>Progress stalled? Plateaus are normal and fixable. Here are the real reasons weight loss stalls and practical ways to get moving again.</p>
-                <div class="post-meta"><span>May 28, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>May 28, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-fast-should-you-lose-weight/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg19" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg19)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="how-fast-should-you-lose-weight/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-fast-should-you-lose-weight.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>How Fast Should You Lose Weight?</h3>
                 <p>Faster isn’t better. Learn the ideal rate of weight loss to protect muscle, avoid rebound, and actually keep the weight off for good.</p>
-                <div class="post-meta"><span>May 25, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>May 25, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="the-truth-about-starvation-mode/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg20" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg20)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="the-truth-about-starvation-mode/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/the-truth-about-starvation-mode.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>The Truth About “Starvation Mode”</h3>
                 <p>Does eating too little stop weight loss? The real science of metabolic adaptation, debunked myths, and what actually happens when you undereat.</p>
-                <div class="post-meta"><span>May 22, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>May 22, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="maintaining-weight-loss/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weight loss"><defs><linearGradient id="fcg21" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F24B6B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg21)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">WEIGHT LOSS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Weight loss</span>
+          <article class="bl-card reveal" data-cat="weightloss">
+            <a href="maintaining-weight-loss/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/maintaining-weight-loss.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.weightloss">Weight loss</span>
                 <h3>Maintaining Weight Loss: The Part Nobody Talks About</h3>
                 <p>Losing weight is only half the battle. Here’s how to keep it off for good — the habits, mindset and small systems that make maintenance stick.</p>
-                <div class="post-meta"><span>May 19, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>May 19, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="emotional-eating/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindset"><defs><linearGradient id="fcg22" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg22)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 24 C-28 4 -24 -20 -8 -20 C-2 -20 0 -14 0 -12 C0 -14 2 -20 8 -20 C24 -20 28 4 0 24 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MINDSET</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Mindset</span>
+          <article class="bl-card reveal" data-cat="mindset">
+            <a href="emotional-eating/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/emotional-eating.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mindset">Mindset</span>
                 <h3>Emotional Eating: How to Recognize and Manage It</h3>
                 <p>Eating to soothe stress, boredom or sadness is human — but it can derail your goals. Here’s how to spot emotional eating and respond with kindness.</p>
-                <div class="post-meta"><span>May 16, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>May 16, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-sleep-affects-your-weight/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lifestyle"><defs><linearGradient id="fcg23" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2A20C"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg23)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="12"/><path d="M0 -28 L0 -20 M0 20 L0 28 M-28 0 L-20 0 M20 0 L28 0 M-20 -20 L-14 -14 M14 14 L20 20 M20 -20 L14 -14 M-14 14 L-20 20"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">LIFESTYLE</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Lifestyle</span>
+          <article class="bl-card reveal" data-cat="lifestyle">
+            <a href="how-sleep-affects-your-weight/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-sleep-affects-your-weight.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.lifestyle">Lifestyle</span>
                 <h3>How Sleep Affects Your Weight (More Than You Think)</h3>
                 <p>Poor sleep quietly sabotages weight loss by raising hunger, cravings and fat storage. Here’s the science and simple ways to sleep for a leaner body.</p>
-                <div class="post-meta"><span>May 13, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>May 13, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="what-a-balanced-plate-looks-like/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg24" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg24)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="what-a-balanced-plate-looks-like/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/what-a-balanced-plate-looks-like.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>What Does a Balanced Plate Actually Look Like?</h3>
                 <p>Forget complicated meal plans. The balanced-plate method is a simple visual system for building satisfying, goal-friendly meals without counting.</p>
-                <div class="post-meta"><span>May 10, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>May 10, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="high-protein-breakfast-ideas/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg25" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg25)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="high-protein-breakfast-ideas/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/high-protein-breakfast-ideas.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>High-Protein Breakfast Ideas to Keep You Full Till Lunch</h3>
                 <p>A high-protein breakfast curbs cravings and steadies energy all morning. Here are simple, satisfying ideas — from five-minute options to make-ahead.</p>
-                <div class="post-meta"><span>May 7, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>May 7, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="healthy-snacks-that-satisfy/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg26" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg26)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="healthy-snacks-that-satisfy/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/healthy-snacks-that-satisfy.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>Healthy Snacks That Actually Satisfy</h3>
                 <p>Snacking isn’t the enemy — the wrong snacks are. Here are filling, high-protein, high-fiber snack ideas that keep hunger away without wrecking your day.</p>
-                <div class="post-meta"><span>May 4, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>May 4, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-eat-healthy-on-a-budget/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg27" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg27)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="how-to-eat-healthy-on-a-budget/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-eat-healthy-on-a-budget.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>How to Eat Healthy on a Budget</h3>
                 <p>Healthy eating doesn’t have to be expensive. Here are practical strategies to hit your protein and nutrition goals without blowing your grocery budget.</p>
-                <div class="post-meta"><span>May 1, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>May 1, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="eating-out-without-wrecking-your-diet/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg28" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg28)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="eating-out-without-wrecking-your-diet/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/eating-out-without-wrecking-your-diet.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>Eating Out Without Wrecking Your Diet</h3>
                 <p>Restaurants don’t have to derail your goals. Learn simple strategies to enjoy eating out while staying roughly on track with your calories.</p>
-                <div class="post-meta"><span>April 28, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>April 28, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-build-a-healthy-grocery-list/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Meal planning"><defs><linearGradient id="fcg29" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#E8A50C"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg29)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-24 -16 H24 V22 H-24 Z M-24 -4 H24 M-13 -26 V-12 M13 -26 V-12"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MEAL PLANNING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Meal planning</span>
+          <article class="bl-card reveal" data-cat="mealplan">
+            <a href="how-to-build-a-healthy-grocery-list/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-build-a-healthy-grocery-list.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mealplan">Meal planning</span>
                 <h3>How to Build a Healthy Grocery List</h3>
                 <p>Healthy eating starts in the shopping cart. Learn how to build a grocery list that stocks your kitchen for success and keeps junk out of the house.</p>
-                <div class="post-meta"><span>April 25, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>April 25, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="meal-prep-for-beginners/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Meal planning"><defs><linearGradient id="fcg30" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#E8A50C"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg30)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-24 -16 H24 V22 H-24 Z M-24 -4 H24 M-13 -26 V-12 M13 -26 V-12"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MEAL PLANNING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Meal planning</span>
+          <article class="bl-card reveal" data-cat="mealplan">
+            <a href="meal-prep-for-beginners/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/meal-prep-for-beginners.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mealplan">Meal planning</span>
                 <h3>Meal Prep for Beginners: A Simple System</h3>
                 <p>Meal prep saves time, money and willpower. This beginner-friendly system shows you how to start without spending your whole Sunday in the kitchen.</p>
-                <div class="post-meta"><span>April 22, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>April 22, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="portion-control-simple-tricks/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg31" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg31)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="portion-control-simple-tricks/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/portion-control-simple-tricks.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>Portion Control: Simple Tricks That Actually Work</h3>
                 <p>Portion sizes have quietly ballooned. Here are practical, no-weighing portion-control tricks to eat the right amount without feeling deprived.</p>
-                <div class="post-meta"><span>April 19, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>April 19, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="hydration-and-weight/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lifestyle"><defs><linearGradient id="fcg32" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2A20C"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg32)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="12"/><path d="M0 -28 L0 -20 M0 20 L0 28 M-28 0 L-20 0 M20 0 L28 0 M-20 -20 L-14 -14 M14 14 L20 20 M20 -20 L14 -14 M-14 14 L-20 20"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">LIFESTYLE</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Lifestyle</span>
+          <article class="bl-card reveal" data-cat="lifestyle">
+            <a href="hydration-and-weight/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/hydration-and-weight.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.lifestyle">Lifestyle</span>
                 <h3>Hydration and Weight: How Much Water Do You Really Need?</h3>
                 <p>Water is quietly important for appetite, energy and performance. Learn how much you really need and how hydration supports your weight goals.</p>
-                <div class="post-meta"><span>April 16, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>April 16, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="plan-a-week-of-meals-in-30-minutes/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Meal planning"><defs><linearGradient id="fcg33" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#E8A50C"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg33)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-24 -16 H24 V22 H-24 Z M-24 -4 H24 M-13 -26 V-12 M13 -26 V-12"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MEAL PLANNING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Meal planning</span>
+          <article class="bl-card reveal" data-cat="mealplan">
+            <a href="plan-a-week-of-meals-in-30-minutes/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/plan-a-week-of-meals-in-30-minutes.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mealplan">Meal planning</span>
                 <h3>How to Plan a Week of Meals in 30 Minutes</h3>
                 <p>Meal planning doesn’t need to be complicated. This simple 30-minute weekly routine takes the daily “what’s for dinner?” stress off your plate.</p>
-                <div class="post-meta"><span>April 13, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>April 13, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="batch-cooking-save-time-eat-better/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Meal planning"><defs><linearGradient id="fcg34" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#E8A50C"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg34)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-24 -16 H24 V22 H-24 Z M-24 -4 H24 M-13 -26 V-12 M13 -26 V-12"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MEAL PLANNING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Meal planning</span>
+          <article class="bl-card reveal" data-cat="mealplan">
+            <a href="batch-cooking-save-time-eat-better/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/batch-cooking-save-time-eat-better.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mealplan">Meal planning</span>
                 <h3>Batch Cooking: Save Time and Eat Better</h3>
                 <p>Batch cooking turns one cooking session into a week of healthy meals. Here’s how to do it efficiently, what to cook, and how to store it safely.</p>
-                <div class="post-meta"><span>April 10, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>April 10, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="mindful-eating-beginners-guide/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindset"><defs><linearGradient id="fcg35" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg35)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 24 C-28 4 -24 -20 -8 -20 C-2 -20 0 -14 0 -12 C0 -14 2 -20 8 -20 C24 -20 28 4 0 24 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MINDSET</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Mindset</span>
+          <article class="bl-card reveal" data-cat="mindset">
+            <a href="mindful-eating-beginners-guide/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/mindful-eating-beginners-guide.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mindset">Mindset</span>
                 <h3>Mindful Eating: A Beginner’s Guide</h3>
                 <p>Mindful eating helps you enjoy food more and overeat less. Learn what it is, why it works, and simple ways to practice it at your next meal.</p>
-                <div class="post-meta"><span>April 7, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>April 7, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-stop-overeating-at-night/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindset"><defs><linearGradient id="fcg36" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg36)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 24 C-28 4 -24 -20 -8 -20 C-2 -20 0 -14 0 -12 C0 -14 2 -20 8 -20 C24 -20 28 4 0 24 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MINDSET</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Mindset</span>
+          <article class="bl-card reveal" data-cat="mindset">
+            <a href="how-to-stop-overeating-at-night/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-stop-overeating-at-night.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mindset">Mindset</span>
                 <h3>How to Stop Overeating at Night</h3>
                 <p>Nighttime eating derails many good days. Here’s why evening overeating happens and practical strategies to keep your nights on track.</p>
-                <div class="post-meta"><span>April 4, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>April 4, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="intuitive-eating-vs-calorie-counting/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindset"><defs><linearGradient id="fcg37" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg37)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 24 C-28 4 -24 -20 -8 -20 C-2 -20 0 -14 0 -12 C0 -14 2 -20 8 -20 C24 -20 28 4 0 24 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MINDSET</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Mindset</span>
+          <article class="bl-card reveal" data-cat="mindset">
+            <a href="intuitive-eating-vs-calorie-counting/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/intuitive-eating-vs-calorie-counting.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mindset">Mindset</span>
                 <h3>Intuitive Eating vs Calorie Counting: Can You Do Both?</h3>
                 <p>Intuitive eating and calorie counting are often framed as enemies. Here’s how they actually complement each other — and how to blend them.</p>
-                <div class="post-meta"><span>April 1, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>April 1, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-handle-cravings-without-guilt/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindset"><defs><linearGradient id="fcg38" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg38)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 24 C-28 4 -24 -20 -8 -20 C-2 -20 0 -14 0 -12 C0 -14 2 -20 8 -20 C24 -20 28 4 0 24 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MINDSET</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Mindset</span>
+          <article class="bl-card reveal" data-cat="mindset">
+            <a href="how-to-handle-cravings-without-guilt/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-handle-cravings-without-guilt.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mindset">Mindset</span>
                 <h3>How to Handle Cravings Without Guilt</h3>
                 <p>Cravings are normal, not a moral failing. Learn why they happen and how to satisfy them in a way that fits your goals — no guilt required.</p>
-                <div class="post-meta"><span>March 29, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>March 29, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="do-you-need-to-exercise-to-lose-weight/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fitness"><defs><linearGradient id="fcg39" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2306B"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg39)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-28 0 H28 M-24 -12 V12 M-16 -8 V8 M24 -12 V12 M16 -8 V8"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">FITNESS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Fitness</span>
+          <article class="bl-card reveal" data-cat="fitness">
+            <a href="do-you-need-to-exercise-to-lose-weight/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/do-you-need-to-exercise-to-lose-weight.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.fitness">Fitness</span>
                 <h3>Do You Need to Exercise to Lose Weight?</h3>
                 <p>Can you lose weight without the gym? Here’s the honest answer on diet vs exercise for fat loss — and why you still shouldn’t skip movement.</p>
-                <div class="post-meta"><span>March 26, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>March 26, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="cardio-vs-strength-training-for-fat-loss/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fitness"><defs><linearGradient id="fcg40" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2306B"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg40)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-28 0 H28 M-24 -12 V12 M-16 -8 V8 M24 -12 V12 M16 -8 V8"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">FITNESS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Fitness</span>
+          <article class="bl-card reveal" data-cat="fitness">
+            <a href="cardio-vs-strength-training-for-fat-loss/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/cardio-vs-strength-training-for-fat-loss.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.fitness">Fitness</span>
                 <h3>Cardio vs Strength Training for Fat Loss</h3>
                 <p>Should you do cardio or lift weights to lose fat? Here’s what each does, why the answer is “both,” and how to combine them effectively.</p>
-                <div class="post-meta"><span>March 23, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>March 23, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-many-calories-does-exercise-burn/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fitness"><defs><linearGradient id="fcg41" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2306B"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg41)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-28 0 H28 M-24 -12 V12 M-16 -8 V8 M24 -12 V12 M16 -8 V8"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">FITNESS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Fitness</span>
+          <article class="bl-card reveal" data-cat="fitness">
+            <a href="how-many-calories-does-exercise-burn/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-many-calories-does-exercise-burn.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.fitness">Fitness</span>
                 <h3>How Many Calories Does Exercise Actually Burn?</h3>
                 <p>Fitness trackers and cardio machines wildly overestimate calorie burn. Here’s a realistic look at exercise calories and why you shouldn’t “eat them back.”</p>
-                <div class="post-meta"><span>March 20, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>March 20, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="building-muscle-while-losing-fat/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fitness"><defs><linearGradient id="fcg42" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2306B"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg42)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-28 0 H28 M-24 -12 V12 M-16 -8 V8 M24 -12 V12 M16 -8 V8"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">FITNESS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Fitness</span>
+          <article class="bl-card reveal" data-cat="fitness">
+            <a href="building-muscle-while-losing-fat/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/building-muscle-while-losing-fat.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.fitness">Fitness</span>
                 <h3>Building Muscle While Losing Fat: Is It Possible?</h3>
                 <p>Body recomposition — losing fat and gaining muscle at once — is real but nuanced. Here’s who can do it, how, and what to realistically expect.</p>
-                <div class="post-meta"><span>March 17, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>March 17, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="neat-the-hidden-calorie-burn/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fitness"><defs><linearGradient id="fcg43" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2306B"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg43)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-28 0 H28 M-24 -12 V12 M-16 -8 V8 M24 -12 V12 M16 -8 V8"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">FITNESS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Fitness</span>
+          <article class="bl-card reveal" data-cat="fitness">
+            <a href="neat-the-hidden-calorie-burn/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/neat-the-hidden-calorie-burn.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.fitness">Fitness</span>
                 <h3>NEAT: The Hidden Calorie Burn You’re Ignoring</h3>
                 <p>NEAT — the calories you burn through everyday movement — can dwarf your workouts. Here’s what it is and how to use it for easier fat loss.</p>
-                <div class="post-meta"><span>March 14, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>March 14, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="how-to-stay-consistent-with-healthy-habits/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindset"><defs><linearGradient id="fcg44" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg44)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 24 C-28 4 -24 -20 -8 -20 C-2 -20 0 -14 0 -12 C0 -14 2 -20 8 -20 C24 -20 28 4 0 24 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">MINDSET</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Mindset</span>
+          <article class="bl-card reveal" data-cat="mindset">
+            <a href="how-to-stay-consistent-with-healthy-habits/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/how-to-stay-consistent-with-healthy-habits.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.mindset">Mindset</span>
                 <h3>How to Stay Consistent With Healthy Habits</h3>
                 <p>Consistency beats intensity every time. Learn practical, psychology-backed strategies to make healthy eating and exercise habits actually stick.</p>
-                <div class="post-meta"><span>March 11, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>March 11, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="does-protein-timing-matter/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg45" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg45)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="does-protein-timing-matter/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/does-protein-timing-matter.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>Protein Timing: Does It Actually Matter?</h3>
                 <p>Is the “anabolic window” real? Learn what the science says about protein timing, the 30-minute post-workout myth, and what actually matters.</p>
-                <div class="post-meta"><span>March 8, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>March 8, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="intermittent-fasting-what-the-evidence-says/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diet tips"><defs><linearGradient id="fcg46" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A50C"/><stop offset="1" stop-color="#0FA968"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg46)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -26 A18 18 0 0 1 11 8 L11 15 H-11 L-11 8 A18 18 0 0 1 0 -26 Z M-7 21 H7 M-5 27 H5"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">DIET TIPS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Diet tips</span>
+          <article class="bl-card reveal" data-cat="diet">
+            <a href="intermittent-fasting-what-the-evidence-says/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/intermittent-fasting-what-the-evidence-says.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.diet">Diet tips</span>
                 <h3>Intermittent Fasting: What the Evidence Says</h3>
                 <p>Is intermittent fasting magic or just calorie control in disguise? Here’s an evidence-based look at IF, its real benefits, and who it suits.</p>
-                <div class="post-meta"><span>March 5, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>March 5, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="low-carb-vs-low-fat/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diet tips"><defs><linearGradient id="fcg47" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A50C"/><stop offset="1" stop-color="#0FA968"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg47)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -26 A18 18 0 0 1 11 8 L11 15 H-11 L-11 8 A18 18 0 0 1 0 -26 Z M-7 21 H7 M-5 27 H5"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">DIET TIPS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Diet tips</span>
+          <article class="bl-card reveal" data-cat="diet">
+            <a href="low-carb-vs-low-fat/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/low-carb-vs-low-fat.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.diet">Diet tips</span>
                 <h3>Low-Carb vs Low-Fat: Which Is Better for You?</h3>
                 <p>The low-carb vs low-fat debate has raged for years. Here’s what the research actually shows and how to choose the approach that fits your life.</p>
-                <div class="post-meta"><span>March 2, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>March 2, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="the-truth-about-detox-diets-and-cleanses/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diet tips"><defs><linearGradient id="fcg48" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A50C"/><stop offset="1" stop-color="#0FA968"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg48)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -26 A18 18 0 0 1 11 8 L11 15 H-11 L-11 8 A18 18 0 0 1 0 -26 Z M-7 21 H7 M-5 27 H5"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">DIET TIPS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Diet tips</span>
+          <article class="bl-card reveal" data-cat="diet">
+            <a href="the-truth-about-detox-diets-and-cleanses/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/the-truth-about-detox-diets-and-cleanses.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.diet">Diet tips</span>
                 <h3>The Truth About “Detox” Diets and Cleanses</h3>
                 <p>Juice cleanses and detox teas promise to flush toxins and melt fat. Here’s what actually happens — and why your liver already does the job for free.</p>
-                <div class="post-meta"><span>February 27, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>February 27, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="are-cheat-meals-helpful-or-harmful/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diet tips"><defs><linearGradient id="fcg49" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A50C"/><stop offset="1" stop-color="#0FA968"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg49)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -26 A18 18 0 0 1 11 8 L11 15 H-11 L-11 8 A18 18 0 0 1 0 -26 Z M-7 21 H7 M-5 27 H5"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">DIET TIPS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Diet tips</span>
+          <article class="bl-card reveal" data-cat="diet">
+            <a href="are-cheat-meals-helpful-or-harmful/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/are-cheat-meals-helpful-or-harmful.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.diet">Diet tips</span>
                 <h3>Are Cheat Meals Helpful or Harmful?</h3>
                 <p>Cheat meals can relieve diet fatigue or trigger a downward spiral. Here’s how to tell the difference and use flexibility without derailing progress.</p>
-                <div class="post-meta"><span>February 24, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>February 24, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="why-crash-diets-fail/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diet tips"><defs><linearGradient id="fcg50" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A50C"/><stop offset="1" stop-color="#0FA968"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg50)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -26 A18 18 0 0 1 11 8 L11 15 H-11 L-11 8 A18 18 0 0 1 0 -26 Z M-7 21 H7 M-5 27 H5"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">DIET TIPS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Diet tips</span>
+          <article class="bl-card reveal" data-cat="diet">
+            <a href="why-crash-diets-fail/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/why-crash-diets-fail.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.diet">Diet tips</span>
                 <h3>Why Crash Diets Fail (and What to Do Instead)</h3>
                 <p>Crash diets promise fast results and deliver rebound weight gain. Here’s the science of why they fail and a sustainable alternative that works.</p>
-                <div class="post-meta"><span>February 21, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>February 21, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="high-protein-diet-benefits-and-how-to-start/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nutrition"><defs><linearGradient id="fcg51" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#12B98A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg51)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">NUTRITION</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Nutrition</span>
+          <article class="bl-card reveal" data-cat="nutrition">
+            <a href="high-protein-diet-benefits-and-how-to-start/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/high-protein-diet-benefits-and-how-to-start.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.nutrition">Nutrition</span>
                 <h3>High-Protein Diet: Benefits and How to Start</h3>
                 <p>A higher-protein diet supports fat loss, muscle and satiety. Here are the real benefits, how much to aim for, and easy ways to eat more protein.</p>
-                <div class="post-meta"><span>February 18, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>February 18, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="understanding-your-basal-metabolic-rate/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calorie counting"><defs><linearGradient id="fcg52" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#F2306B"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg52)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -30 C 14 -14 20 -6 20 6 C20 22 8 30 0 30 C-8 30 -20 22 -20 6 C-20 -2 -12 -6 -8 -14 C-4 -8 4 -8 0 -30 Z"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">CALORIE COUNTING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Calorie counting</span>
+          <article class="bl-card reveal" data-cat="calories">
+            <a href="understanding-your-basal-metabolic-rate/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/understanding-your-basal-metabolic-rate.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.calories">Calorie counting</span>
                 <h3>Understanding Your Basal Metabolic Rate (BMR)</h3>
                 <p>Your BMR is the energy your body burns just to stay alive. Learn what affects it, how to estimate it, and how it fits into your calorie needs.</p>
-                <div class="post-meta"><span>February 15, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>February 15, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="best-foods-for-weight-loss/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Healthy eating"><defs><linearGradient id="fcg53" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0FA968"/><stop offset="1" stop-color="#7DCE5A"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg53)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M26 -26 C-6 -24 -24 -6 -26 26 M-26 26 C 6 4 4 -6 26 -26 M-8 8 L10 -10"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">HEALTHY EATING</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Healthy eating</span>
+          <article class="bl-card reveal" data-cat="healthy">
+            <a href="best-foods-for-weight-loss/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/best-foods-for-weight-loss.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.healthy">Healthy eating</span>
                 <h3>The Best Foods for Weight Loss (High-Satiety Foods)</h3>
                 <p>No food is magic, but some keep you full for far fewer calories. Here are the high-satiety foods that make a calorie deficit feel almost easy.</p>
-                <div class="post-meta"><span>February 12, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 min read</span></div>
+                <div class="bl-meta"><span>February 12, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>6 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
-          <article class="post-card reveal">
-            <a href="does-meal-timing-matter-for-weight-loss/" style="display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit">
-              <div class="post-cover"><svg class="fc-cov" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diet tips"><defs><linearGradient id="fcg54" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8A50C"/><stop offset="1" stop-color="#0FA968"/></linearGradient></defs><rect width="400" height="225" fill="url(#fcg54)"/><circle cx="330" cy="34" r="120" fill="#fff" opacity=".10"/><circle cx="52" cy="210" r="92" fill="#000" opacity=".05"/><g transform="translate(200,96)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M0 -26 A18 18 0 0 1 11 8 L11 15 H-11 L-11 8 A18 18 0 0 1 0 -26 Z M-7 21 H7 M-5 27 H5"/></g><text x="200" y="182" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff" opacity=".92" letter-spacing=".6">DIET TIPS</text></svg></div>
-              <div class="post-body">
-                <span class="post-tag">Diet tips</span>
+          <article class="bl-card reveal" data-cat="diet">
+            <a href="does-meal-timing-matter-for-weight-loss/">
+              <div class="bl-card-media">
+                <img src="../assets/img/blog/does-meal-timing-matter-for-weight-loss.svg" width="1200" height="675" loading="lazy" decoding="async" alt="">
+              </div>
+              <div class="bl-card-body">
+                <span class="bl-tag" data-i18n="blog.cat.diet">Diet tips</span>
                 <h3>Does Meal Timing Matter for Weight Loss?</h3>
                 <p>Is late eating fattening? Do you need breakfast? Here’s what the evidence says about meal timing and frequency — and what actually matters.</p>
-                <div class="post-meta"><span>February 9, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 min read</span></div>
+                <div class="bl-meta"><span>February 9, 2026</span><span class="dot" aria-hidden="true">&middot;</span><span>5 <span data-i18n="blog.min">min read</span></span></div>
               </div>
             </a>
           </article>
         </div>
-
+        <p class="bl-empty" id="blEmpty" hidden data-i18n="blog.none">No articles in this category yet.</p>
       </div>
     </section>
 
-    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
+    <!-- ═══════════════════ CTA ═══════════════════ -->
     <section class="final-cta">
       <div class="container">
         <div class="final-inner reveal">
-          <h2 data-i18n-html="blog.cta.title">The app is <em class="accent-light">already written</em>, even if the blog is not.</h2>
-          <p data-i18n="blog.cta.sub">Fotocal is on Google Play now. The articles will follow.</p>
+          <h2 data-i18n-html="blog.cta.title">Reading is good. <em class="accent-light">Doing is better</em>.</h2>
+          <p data-i18n="blog.cta.sub">Put any of this into practice in about ten seconds a meal — photograph your plate and Fotocal handles the numbers.</p>
           <a class="play-badge play-badge-light" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
              target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play"
              style="margin-inline:auto;display:inline-flex">
@@ -723,10 +803,7 @@
               <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
               <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
             </svg>
-            <span class="play-badge-text">
-              <small data-i18n="cta.badgeTop">GET IT ON</small>
-              <strong>Google Play</strong>
-            </span>
+            <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
           </a>
         </div>
       </div>
@@ -736,7 +813,6 @@
 
   <div id="site-footer"></div>
 
-  <!-- Load order matters: i18n.js -> i18n-pages.js -> layout.js -> main.js -->
   <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/i18n-pages.js"></script>
   <script src="../assets/js/layout.js" data-page="blog"></script>

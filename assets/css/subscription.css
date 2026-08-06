@@ -1,0 +1,157 @@
+/* ═══════════════════════════════════════════════════════════════
+   FOTOCAL — /subscription/ page styles
+   Loaded after site.css + home.css; reuses .illus, .fc-card,
+   .fc-price-*, .log-card and the shared tokens.
+
+   IMAGE SLOTS
+   Six artwork slots are marked up with .img-slot. Each renders a
+   clearly-labelled placeholder until the real file exists. To go
+   live with an image, replace the .img-slot block with:
+       <div class="illus"><img src="../assets/img/subscription/NAME.webp"
+            width="W" height="H" alt="..." data-i18n-alt="KEY" loading="lazy"></div>
+   Nothing else needs to change — the slot and the image occupy the
+   same grid cell and the same aspect ratio.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Placeholder for artwork not yet supplied ─── */
+.img-slot {
+  position: relative; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: .5rem;
+  padding: 1.6rem 1.3rem; text-align: center;
+  border-radius: var(--r-xl);
+  background:
+    repeating-linear-gradient(135deg, rgba(233,30,99,.045) 0 12px, transparent 12px 24px),
+    linear-gradient(160deg, #FBE9D2, #F5DCBE);
+  border: 2px dashed rgba(233,30,99,.42);
+  color: var(--ink-soft);
+}
+.img-slot-n {
+  display: inline-grid; place-items: center;
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--grad); color: #fff;
+  font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
+  box-shadow: var(--shadow-cta);
+}
+.img-slot b { font-size: .95rem; color: var(--ink); }
+.img-slot code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .78rem; font-weight: 700; color: var(--pink);
+  background: var(--white); border: 1px solid var(--border-pink);
+  border-radius: 999px; padding: .22rem .6rem;
+}
+.img-slot small { font-size: .8rem; color: var(--muted); max-width: 34ch; line-height: 1.45; }
+.img-slot-3x2 { aspect-ratio: 3 / 2; }
+.img-slot-1x1 { aspect-ratio: 1 / 1; border-radius: 0; }
+.img-slot-21x9 { aspect-ratio: 21 / 9; }
+.img-slot-8x5 { aspect-ratio: 8 / 5; }
+@media (max-width: 600px) {
+  .img-slot-21x9 { aspect-ratio: 16 / 10; }
+  .img-slot small { display: none; }
+}
+
+/* ─── Hero ─── */
+.sb-hero { position: relative; padding: 3rem 0 2.4rem; overflow: hidden; }
+.sb-hero::before {
+  content: ""; position: absolute; top: -190px; right: -120px;
+  width: 460px; height: 420px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(255,122,61,.24), transparent 66%); filter: blur(48px);
+}
+.sb-hero .container { position: relative; }
+.sb-hero-grid { display: grid; gap: 2.4rem; align-items: center; }
+@media (min-width: 900px) { .sb-hero-grid { grid-template-columns: 1.02fr .98fr; gap: 3.2rem; } }
+.sb-hero h1 {
+  font-family: var(--font-display); font-weight: 550;
+  font-size: clamp(2.1rem, 6vw, 3.4rem); line-height: 1.1; letter-spacing: -.024em;
+  margin-bottom: 1rem;
+}
+.sb-hero .lead { color: var(--muted); font-size: 1.05rem; max-width: 52ch; margin-bottom: 1.6rem; }
+.sb-hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; }
+
+/* ─── Trial strip ─── */
+.sb-trial {
+  display: grid; gap: 1rem; margin-top: 2.2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 760px) { .sb-trial { grid-template-columns: repeat(3, 1fr); } }
+.sb-step {
+  position: relative; background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg); padding: 1.3rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s cubic-bezier(.2,.8,.3,1), border-color .3s ease;
+}
+.sb-step:hover { transform: translateY(-4px); border-color: var(--border-pink); }
+.sb-step-day {
+  font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--pink); margin-bottom: .45rem; display: block;
+}
+.sb-step b { display: block; font-size: 1rem; margin-bottom: .3rem; color: var(--ink); }
+.sb-step p { font-size: .88rem; color: var(--muted); margin: 0; }
+
+/* ─── Premium unlock cards (media on top) ─── */
+.sb-unlocks { display: grid; gap: 1.3rem; margin-top: 2.5rem; }
+@media (min-width: 860px) { .sb-unlocks { grid-template-columns: repeat(3, 1fr); } }
+.sb-unlock {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-sm);
+  transition: transform .32s cubic-bezier(.2,.8,.3,1), box-shadow .32s ease, border-color .32s ease;
+}
+.sb-unlock:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); border-color: var(--border); }
+.sb-unlock-media { aspect-ratio: 1 / 1; overflow: hidden; flex: none; background: var(--cream-2); }
+.sb-unlock-media > * { width: 100%; height: 100%; }
+.sb-unlock-media img { object-fit: cover; display: block; transition: transform .55s cubic-bezier(.2,.8,.3,1); }
+.sb-unlock:hover .sb-unlock-media img { transform: scale(1.045); }
+.sb-unlock-body { padding: 1.3rem 1.35rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.sb-unlock-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .4rem; }
+.sb-unlock-body > p { font-size: .91rem; color: var(--muted); margin-bottom: .9rem; }
+.sb-unlock .check-list li { font-size: .88rem; margin-bottom: .4rem; }
+
+/* smaller, icon-only unlocks */
+.sb-mini { display: grid; gap: 1.1rem; margin-top: 1.3rem; }
+@media (min-width: 700px) { .sb-mini { grid-template-columns: repeat(3, 1fr); } }
+.sb-mini-card {
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg); padding: 1.3rem 1.3rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s cubic-bezier(.2,.8,.3,1), border-color .3s ease;
+}
+.sb-mini-card:hover { transform: translateY(-4px); border-color: var(--border-pink); }
+.sb-mini-ico {
+  width: 42px; height: 42px; border-radius: 13px; margin-bottom: .85rem;
+  display: grid; place-items: center; color: #fff;
+  background: var(--grad); box-shadow: 0 8px 18px -8px rgba(233,30,99,.45);
+}
+.sb-mini-ico svg { width: 20px; height: 20px; }
+.sb-mini-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; }
+.sb-mini-card p { font-size: .88rem; color: var(--muted); }
+
+/* ─── Final CTA banner (mirrors the homepage banner) ─── */
+.sb-cta-sec { padding: 3.5rem 0 4.5rem; }
+.sb-banner {
+  position: relative; overflow: hidden; border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lift), 0 0 0 1px var(--border-soft);
+  background: #FBF0DF;
+}
+.sb-banner-img { position: absolute; inset: 0; }
+.sb-banner-img img { width: 100%; height: 100%; object-fit: cover; object-position: 78% 50%; }
+.sb-banner-img::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(252,243,229,.96) 0%, rgba(252,243,229,.88) 34%, rgba(252,243,229,0) 62%);
+}
+.sb-banner-inner { position: relative; z-index: 1; padding: 3.2rem 1.6rem; max-width: 34rem; }
+.sb-banner-inner h2 {
+  font-family: var(--font-display); font-size: clamp(1.75rem, 4.6vw, 2.6rem);
+  font-weight: 550; line-height: 1.14; letter-spacing: -.02em; color: var(--ink); margin-bottom: .8rem;
+}
+.sb-banner-inner p { color: var(--ink-soft); max-width: 42ch; margin-bottom: 1.7rem; }
+.sb-banner-note { display: block; margin-top: .9rem; font-size: .82rem; color: var(--muted); }
+@media (min-width: 900px) { .sb-banner-inner { padding: 4.6rem 0 4.6rem 3.4rem; } }
+@media (max-width: 620px) {
+  .sb-banner-img { position: relative; aspect-ratio: 16 / 9; }
+  .sb-banner-img::after { background: linear-gradient(180deg, rgba(252,243,229,0) 55%, rgba(252,243,229,.95) 96%); }
+  .sb-banner-inner { padding: .4rem 1.4rem 2.2rem; max-width: none; text-align: center; }
+  .sb-banner-inner p, .sb-banner-inner .play-badge { margin-inline: auto; }
+}
+/* when the banner is still a placeholder it must not be absolutely positioned */
+.sb-banner-img.is-slot { position: relative; }
+.sb-banner-img.is-slot::after { display: none; }

@@ -68,6 +68,25 @@
       if (v != null) el.setAttribute("alt", v);
     });
 
+    /* ── Long-form content blocks ──
+       Article prose is far too long to live in the dictionary, so a blog
+       post ships both languages in its own markup, each wrapped in
+       [data-lang]. Only the matching one is shown. `hidden` (not
+       display:none) is used so the hidden copy stays out of the
+       accessibility tree and out of find-in-page. */
+    var blocks = document.querySelectorAll("[data-lang-block]");
+    if (blocks.length) {
+      var wanted = next;
+      /* If a page has no block for the chosen language, fall back to the
+         default so the reader is never left with an empty article. */
+      var has = false;
+      blocks.forEach(function (el) { if (el.getAttribute("data-lang-block") === wanted) has = true; });
+      if (!has) wanted = DEFAULT_LANG;
+      blocks.forEach(function (el) {
+        el.hidden = el.getAttribute("data-lang-block") !== wanted;
+      });
+    }
+
     /* Reflect the choice in the language dropdown (trigger + option ticks). */
     var trig = document.getElementById("langCurrent");
     if (trig) {
@@ -204,6 +223,51 @@
       pmx = 0; pmy = 0;
       if (!raf) raf = requestAnimationFrame(paint);
     });
+  }
+
+  /* ═══════════ Blog category filter (listing page only) ═══════════
+     Pure client-side: every card carries data-cat, chips carry
+     data-filter. No pagination and no re-render — we just toggle
+     `hidden`, so filtering is instant and the page stays one static
+     document that GitHub Pages can serve straight from cache. */
+  var blGrid = document.getElementById("blGrid");
+  if (blGrid) {
+    var chips = document.querySelectorAll(".bl-chip");
+    var cards = blGrid.querySelectorAll(".bl-card");
+    var countEl = document.getElementById("blCount");
+    var emptyEl = document.getElementById("blEmpty");
+
+    var applyFilter = function (want) {
+      var shown = 0;
+      cards.forEach(function (c) {
+        var match = want === "all" || c.getAttribute("data-cat") === want;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      if (countEl) countEl.textContent = String(shown);
+      if (emptyEl) emptyEl.hidden = shown !== 0;
+      chips.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-filter") === want));
+      });
+    };
+
+    chips.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var want = btn.getAttribute("data-filter");
+        applyFilter(want);
+        /* Reflect the choice in the URL so a filtered view is shareable
+           and survives a refresh, without adding a history entry per click. */
+        var url = want === "all" ? location.pathname
+                                 : location.pathname + "?cat=" + encodeURIComponent(want);
+        history.replaceState(null, "", url);
+      });
+    });
+
+    /* Honour ?cat= on load. */
+    var initial = new URLSearchParams(location.search).get("cat");
+    if (initial && document.querySelector('.bl-chip[data-filter="' + CSS.escape(initial) + '"]')) {
+      applyFilter(initial);
+    }
   }
 
   /* ═══════════ Card spotlight (home page only) ═══════════

@@ -40,6 +40,60 @@
     /* ══════════════════════ ENGLISH ══════════════════════ */
     en: {
 
+      /* ── Subscription: artwork alt text ── */
+      "sub.img1": "A woman smiling as she points at her phone showing the day's logged meals",
+      "sub.img2": "Someone photographing a colourful salad bowl with their phone",
+      "sub.img3": "A phone projecting chat bubbles with food, water and activity icons",
+      "sub.img4": "Hands holding a phone showing calorie rings and weekly charts",
+      "sub.img5": "A spread of fresh, colourful healthy food on a warm cream table",
+
+      /* ── Subscription: 5-day trial timeline ── */
+      "sub.trial.head": "How the <em class=\"accent\">5-day trial</em> works.",
+      "sub.tl.d1": "Day 0",
+      "sub.tl.t1": "Start, pay nothing",
+      "sub.tl.b1": "Begin the yearly plan from Google Play. Premium switches on immediately and you are not charged.",
+      "sub.tl.d2": "Days 1–4",
+      "sub.tl.t2": "Use everything",
+      "sub.tl.b2": "Unlimited scans, deeper insights, weekly reports — the whole thing, with no feature held back.",
+      "sub.tl.d3": "Day 5",
+      "sub.tl.t3": "Keep it or cancel",
+      "sub.tl.b3": "Cancel any time before day 5 and you pay nothing at all. Do nothing and the yearly plan simply begins.",
+
+      /* ─────────────────────────────────────────────
+         BLOG (/blog/ + article pages)
+         Post titles and summaries are article content, not UI, so they
+         stay in the language the article is written in (English).
+         Everything around them — chrome, categories, meta, CTAs — is
+         translated here.
+         ───────────────────────────────────────────── */
+      "blog.kicker": "The Fotocal blog",
+      "blog.title": "Notes on eating, <em class=\"accent\">honestly</em>.",
+      "blog.lead": "Practical, unglamorous writing on nutrition, weight and the habits that hold the whole thing together — the part most of the internet skips on its way to selling you something.",
+      "blog.latest": "Latest",
+      "blog.all": "All",
+      "blog.showing": "articles",
+      "blog.none": "No articles in this category yet.",
+      "blog.min": "min read",
+      "blog.by": "Fotocal team",
+      "blog.prev": "Previous article",
+      "blog.next": "Next article",
+      "blog.more": "Keep reading",
+      "blog.moreSub": "More on this topic",
+      "blog.disclaimer": "This article is general information, not medical advice.",
+      "blog.cta.h": "Make it easier with Fotocal",
+      "blog.cta.p": "Photograph your plate and Fotocal works out the calories, macros and a health score in seconds — so putting any of this into practice takes moments, not minutes.",
+      "blog.cta.title": "Reading is good. <em class=\"accent-light\">Doing is better</em>.",
+      "blog.cta.sub": "Put any of this into practice in about ten seconds a meal — photograph your plate and Fotocal handles the numbers.",
+      "blog.cat.nutrition": "Nutrition",
+      "blog.cat.weightloss": "Weight loss",
+      "blog.cat.healthy": "Healthy eating",
+      "blog.cat.mindset": "Mindset",
+      "blog.cat.diet": "Diet tips",
+      "blog.cat.fitness": "Fitness",
+      "blog.cat.calories": "Calorie counting",
+      "blog.cat.mealplan": "Meal planning",
+      "blog.cat.lifestyle": "Lifestyle",
+
       /* ─────────────────────────────────────────────
          FEATURES (/features/)
          ───────────────────────────────────────────── */
@@ -357,9 +411,6 @@
          BLOG
          ───────────────────────────────────────────── */
       "blog.meta.title": "Blog — Fotocal",
-      "blog.kicker": "Blog",
-      "blog.title": "Notes on eating, <em class=\"accent\">honestly</em>.",
-      "blog.lead": "This is where we will write about nutrition, weight, and the habits that hold the whole thing together — the practical, unglamorous side of eating better that most of the internet skips over on its way to selling you something.",
       "blog.lead2": "Nothing is published yet. Rather than pad this page out with filler, we would rather leave it honest and start it properly.",
 
       "blog.topics.kicker": "What we will write about",
@@ -400,8 +451,6 @@
       "blog.demo.meta": "Date goes here",
       "blog.demo.read": "5 min read",
 
-      "blog.cta.title": "The app is <em class=\"accent-light\">already written</em>, even if the blog is not.",
-      "blog.cta.sub": "Fotocal is on Google Play now. The articles will follow.",
 
       /* ─────────────────────────────────────────────
          ABOUT
@@ -538,6 +587,59 @@
 
     /* ══════════════════════ SPANISH ══════════════════════ */
     es: {
+
+      /* ── Suscripción: texto alternativo de las imágenes ── */
+      "sub.img1": "Una mujer sonríe mientras señala su móvil, que muestra las comidas registradas del día",
+      "sub.img2": "Alguien fotografía un bol de ensalada lleno de color con su móvil",
+      "sub.img3": "Un móvil proyecta bocadillos de chat con iconos de comida, agua y actividad",
+      "sub.img4": "Unas manos sostienen un móvil con anillos de calorías y gráficas semanales",
+      "sub.img5": "Una mesa color crema llena de comida sana, fresca y colorida",
+
+      /* ── Suscripción: cronología de la prueba de 5 días ── */
+      "sub.trial.head": "Cómo funciona la <em class=\"accent\">prueba de 5 días</em>.",
+      "sub.tl.d1": "Día 0",
+      "sub.tl.t1": "Empieza sin pagar",
+      "sub.tl.b1": "Activa el plan anual desde Google Play. Premium se enciende al momento y no se te cobra nada.",
+      "sub.tl.d2": "Días 1–4",
+      "sub.tl.t2": "Úsalo todo",
+      "sub.tl.b2": "Escaneos ilimitados, análisis profundo, informes semanales: todo, sin ninguna función reservada.",
+      "sub.tl.d3": "Día 5",
+      "sub.tl.t3": "Sigue o cancela",
+      "sub.tl.b3": "Cancela en cualquier momento antes del día 5 y no pagas absolutamente nada. Si no haces nada, el plan anual simplemente empieza.",
+
+      /* ─────────────────────────────────────────────
+         BLOG (/blog/ + artículos)
+         Los títulos y resúmenes de los artículos son contenido, no UI:
+         se quedan en el idioma en que está escrito el artículo (inglés).
+         Todo lo que los rodea sí está traducido aquí.
+         ───────────────────────────────────────────── */
+      "blog.kicker": "El blog de Fotocal",
+      "blog.title": "Notas sobre comer, <em class=\"accent\">con honestidad</em>.",
+      "blog.lead": "Textos prácticos y sin glamur sobre nutrición, peso y los hábitos que lo sostienen todo — justo la parte que casi todo internet se salta camino de venderte algo.",
+      "blog.latest": "Lo último",
+      "blog.all": "Todos",
+      "blog.showing": "artículos",
+      "blog.none": "Aún no hay artículos en esta categoría.",
+      "blog.min": "min de lectura",
+      "blog.by": "Equipo Fotocal",
+      "blog.prev": "Artículo anterior",
+      "blog.next": "Artículo siguiente",
+      "blog.more": "Sigue leyendo",
+      "blog.moreSub": "Más sobre este tema",
+      "blog.disclaimer": "Este artículo es información general, no consejo médico.",
+      "blog.cta.h": "Hazlo más fácil con Fotocal",
+      "blog.cta.p": "Fotografía tu plato y Fotocal calcula las calorías, los macros y una puntuación de salud en segundos, así que llevar esto a la práctica cuesta momentos, no minutos.",
+      "blog.cta.title": "Leer está bien. <em class=\"accent-light\">Hacerlo, mejor</em>.",
+      "blog.cta.sub": "Pon cualquiera de estas ideas en práctica en unos diez segundos por comida: fotografía tu plato y Fotocal se encarga de los números.",
+      "blog.cat.nutrition": "Nutrición",
+      "blog.cat.weightloss": "Pérdida de peso",
+      "blog.cat.healthy": "Alimentación saludable",
+      "blog.cat.mindset": "Mentalidad",
+      "blog.cat.diet": "Consejos de dieta",
+      "blog.cat.fitness": "Ejercicio",
+      "blog.cat.calories": "Contar calorías",
+      "blog.cat.mealplan": "Planificar comidas",
+      "blog.cat.lifestyle": "Estilo de vida",
 
       /* ─────────────────────────────────────────────
          FUNCIONES (/features/)
@@ -846,9 +948,6 @@
          BLOG
          ───────────────────────────────────────────── */
       "blog.meta.title": "Blog — Fotocal",
-      "blog.kicker": "Blog",
-      "blog.title": "Apuntes sobre comer, <em class=\"accent\">con honestidad</em>.",
-      "blog.lead": "Aquí escribiremos sobre nutrición, peso y los hábitos que sostienen todo lo demás: la parte práctica y poco glamurosa de comer mejor que casi todo internet se salta de camino a venderte algo.",
       "blog.lead2": "Todavía no hay nada publicado. Antes que rellenar esta página con paja, preferimos dejarla honesta y empezarla como toca.",
 
       "blog.topics.kicker": "Sobre qué escribiremos",
@@ -889,8 +988,6 @@
       "blog.demo.meta": "Aquí irá la fecha",
       "blog.demo.read": "5 min de lectura",
 
-      "blog.cta.title": "La app <em class=\"accent-light\">ya está escrita</em>, aunque el blog no.",
-      "blog.cta.sub": "Fotocal está en Google Play ahora mismo. Los artículos vendrán después.",
 
       /* ─────────────────────────────────────────────
          SOBRE NOSOTROS

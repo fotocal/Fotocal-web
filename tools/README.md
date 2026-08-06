@@ -45,3 +45,21 @@ existing `glyph`/`pal` pairing so the art does not shuffle around:
 ```bash
 python3 tools/regen_covers.py
 ```
+
+## Spanish blog translations
+
+`tools/blog_es/b1.py … b9.py` hold the Spanish title, lead and body for
+every post, keyed by slug. `tools/inject_es.py` writes them into the
+article pages: each post ends up with both languages wrapped in
+`[data-lang-block]` elements, and `assets/js/main.js` shows whichever
+matches the language switch. A post with no Spanish entry falls back to
+English rather than rendering blank.
+
+Re-run after editing a translation (from the repository root):
+
+```bash
+python3 tools/inject_es.py
+```
+
+The script is idempotent — it strips its own previous injection before
+writing, so running it twice is safe.

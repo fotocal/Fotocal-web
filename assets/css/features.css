@@ -78,6 +78,9 @@
 }
 .fx-duo:hover .fx-duo-b { transform: rotate(1deg) translateY(-5px); }
 .fx-duo-b img { display: block; width: 100%; height: auto; }
+/* On narrow phones the negative offset pushed this card past the viewport
+   edge (2–4px of horizontal overflow); tuck it back inside instead. */
+@media (max-width: 620px) { .fx-duo-b { right: 0; bottom: -18px; width: 42%; } }
 @media (min-width: 900px) { .fx-duo-b { right: -34px; } }
 
 /* ─── Chapter 3 cards: media tops handled by .log-card/.log-media ─── */

@@ -24,6 +24,8 @@
 }
 
 * , *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+/* No overflow-x here: it would make the root a scroll container and break the
+   sticky header. The mobile drawer is clipped at its own element instead. */
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--nav-h) + 20px); }
 body {
   font-family: var(--font-body);
@@ -170,6 +172,49 @@ a:hover { text-decoration: underline; }
   letter-spacing: .03em; text-transform: uppercase;
 }
 .legal-content tr:last-child td { border-bottom: none; }
+
+/* ── Tables on phones ──
+   Three columns of prose cannot fit 320px, and a horizontally scrolling
+   table inside a legal document is miserable to read. Below 640px each
+   row becomes its own card and every cell is prefixed with the column
+   heading it belongs to (the data-label added in the markup). */
+@media (max-width: 640px) {
+  .legal-content table,
+  .legal-content tbody,
+  .legal-content tr,
+  .legal-content th,
+  .legal-content td { display: block; width: auto; }
+
+  .legal-content table {
+    border: 0; background: transparent; border-radius: 0;
+    margin: 1rem 0 1.75rem;
+  }
+  /* the first row is the header — its labels are repeated per cell instead */
+  .legal-content tr:first-child { display: none; }
+
+  .legal-content tr {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: .35rem .95rem .55rem;
+    margin-bottom: .8rem;
+  }
+  .legal-content td {
+    border-bottom: 1px solid var(--border-soft);
+    padding: .6rem 0;
+    font-size: .93rem;
+  }
+  .legal-content tr td:last-child { border-bottom: none; }
+  .legal-content td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: .68rem; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: .18rem;
+  }
+  /* a row with no labels (single-column) needs no prefix */
+  .legal-content td:not([data-label])::before { display: none; }
+}
 
 .back-link { font-weight: 600; }
 

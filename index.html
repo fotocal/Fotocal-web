@@ -248,15 +248,15 @@
             <div class="step-badge">1</div>
             <h3 data-i18n="how.s1t">Snap a photo</h3>
             <p data-i18n="how.s1b">Open Fotocal and photograph your plate. Home-cooked, restaurant, or last night's leftovers — it all works.</p>
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot"
-                     data-src="assets/img/screens/analyzing.jpg"
-                     data-w="540" data-h="1152"
-                     data-label-key="how.s1slot"
-                     data-label="Camera pointed at a plate, analysing"></div>
-              </div>
+            <!-- Step 1 is the real meal, not a screen — a plain photo, sized to the
+                 same footprint as the two devices so the row still lines up. -->
+            <div class="step-media">
+              <figure class="step-photo">
+                <img src="assets/img/steps/step1-meal.webp" width="880" height="1100"
+                     loading="lazy" decoding="async"
+                     alt="Avocado toast with cherry tomatoes and a fried egg on a grey plate"
+                     data-i18n-alt="how.s1alt">
+              </figure>
             </div>
           </div>
 
@@ -264,14 +264,15 @@
             <div class="step-badge">2</div>
             <h3 data-i18n="how.s2t">The AI reads it</h3>
             <p data-i18n="how.s2b">In seconds it identifies every ingredient, estimates the portion, and works out calories, macros, micronutrients and a health score.</p>
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot"
-                     data-src="assets/img/screens/result.jpg"
-                     data-w="540" data-h="1152"
-                     data-label-key="how.s2slot"
-                     data-label="Scan result — calories and macros detected"></div>
+            <div class="step-media">
+              <div class="phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="assets/img/steps/step2-scan.webp" width="540" height="1152"
+                       loading="lazy" decoding="async"
+                       alt="Scan result screen — protein, carbs and fat rings, fibre, sugar and sodium, and the day's totals"
+                       data-i18n-alt="how.s2alt">
+                </div>
               </div>
             </div>
           </div>
@@ -280,14 +281,15 @@
             <div class="step-badge">3</div>
             <h3 data-i18n="how.s3t">It's logged</h3>
             <p data-i18n="how.s3b">The meal drops straight into your diary and your whole day updates itself — calories left, macros, water, streak. Done.</p>
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot"
-                     data-src="assets/img/screens/home.jpg"
-                     data-w="540" data-h="1152"
-                     data-label-key="how.s3slot"
-                     data-label="Home screen — calorie ring and the day's meals"></div>
+            <div class="step-media">
+              <div class="phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="assets/img/steps/step3-home.webp" width="540" height="1152"
+                       loading="lazy" decoding="async"
+                       alt="Home screen — calories left, macro rings and the day's meals"
+                       data-i18n-alt="how.s3alt">
+                </div>
               </div>
             </div>
           </div>

@@ -59,6 +59,10 @@
 
 /* ─── Reset ─── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+/* NOTE: do not put overflow-x (hidden *or* clip) on html — either one makes the
+   root a scroll container, which silently kills `position: sticky` on the
+   navbar. The closed mobile drawer is kept from widening the page by clipping
+   it at .nav-mobile instead (see the drawer rules below). */
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
@@ -151,7 +155,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .btn-ghost { color: var(--pink); padding-inline: .4rem; }
 .btn-ghost:hover { transform: translateX(3px); }
 .btn-sm { padding: .6rem 1.1rem; font-size: .86rem; }
-.btn-block { display: flex; width: 100%; }
+/* Full-width buttons must be allowed to wrap. `.btn` is nowrap, and a long
+   label ("Get it on Google Play") set the card's min-content width, pushing
+   the whole card wider than its container on a 320px phone. */
+.btn-block { display: flex; width: 100%; white-space: normal; text-wrap: balance; }
 
 /* ─── Google Play badge ─── */
 .play-badge {
@@ -612,6 +619,12 @@ body.nav-locked { overflow: hidden; }
 }
 .footer-social a:hover { transform: translateY(-3px); border-color: var(--border-pink); }
 .footer-social svg { width: 18px; height: 18px; }
+/* Touch devices get the 44px minimum tap target; 38px is fine for a mouse. */
+@media (pointer: coarse) {
+  .footer-social { gap: .5rem; flex-wrap: wrap; }
+  .footer-social a { width: 44px; height: 44px; }
+  .footer-social svg { width: 20px; height: 20px; }
+}
 .footer-col h5 {
   font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
   color: var(--pink); margin-bottom: .8rem;

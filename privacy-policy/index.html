@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/legal.css">
+  <link rel="stylesheet" href="../assets/css/sections.css">
 </head>
 <body>
   <header class="legal-header">
@@ -38,6 +39,7 @@
 
         <!-- ═══════════ ESPAÑOL ═══════════ -->
         <div data-lang-block="es" class="visible">
+          <div class="legal-sym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h1>Política de Privacidad</h1>
           <p class="legal-updated">Última actualización: 3 de agosto de 2026</p>
 
@@ -108,12 +110,12 @@
           <h2>5. Proveedores de servicios (encargados del tratamiento)</h2>
           <table>
             <tr><th>Proveedor</th><th>Finalidad</th><th>Datos</th></tr>
-            <tr><td>Supabase</td><td>Base de datos, autenticación y almacenamiento en la nube</td><td>Datos de cuenta, diario, salud y fotos</td></tr>
-            <tr><td>OpenAI</td><td>Análisis de imágenes de comida y chat Coach Kal</td><td>Fotos de comida, mensajes de chat, contexto nutricional</td></tr>
-            <tr><td>PostHog</td><td>Analítica de producto (uso de la app)</td><td>Eventos de uso, identificadores técnicos</td></tr>
-            <tr><td>Sentry</td><td>Informes de fallos y diagnóstico de errores</td><td>Registros de errores, identificadores técnicos, diagnóstico del dispositivo/app</td></tr>
-            <tr><td>Google Play Billing</td><td>Gestión y cobro de suscripciones</td><td>Estado de compra (Google procesa el pago; nunca vemos tu tarjeta)</td></tr><tr><td>RevenueCat</td><td>Gestión de suscripciones y permisos premium</td><td>Estado de compra, identificador de usuario de la app, estado de suscripción</td></tr>
-            <tr><td>Health Connect (Google)</td><td>Lectura del recuento de pasos</td><td>Pasos diarios</td></tr><tr><td>Expo (notificaciones/OTA)</td><td>Notificaciones push y actualizaciones de la app</td><td>Token de notificaciones y contenido de la notificación (entregado vía FCM/APNs)</td></tr><tr><td>Open Food Facts</td><td>Búsqueda de productos por código de barras</td><td>Códigos de barras escaneados; productos que envíes</td></tr>
+            <tr><td data-label="Proveedor">Supabase</td><td data-label="Finalidad">Base de datos, autenticación y almacenamiento en la nube</td><td data-label="Datos">Datos de cuenta, diario, salud y fotos</td></tr>
+            <tr><td data-label="Proveedor">OpenAI</td><td data-label="Finalidad">Análisis de imágenes de comida y chat Coach Kal</td><td data-label="Datos">Fotos de comida, mensajes de chat, contexto nutricional</td></tr>
+            <tr><td data-label="Proveedor">PostHog</td><td data-label="Finalidad">Analítica de producto (uso de la app)</td><td data-label="Datos">Eventos de uso, identificadores técnicos</td></tr>
+            <tr><td data-label="Proveedor">Sentry</td><td data-label="Finalidad">Informes de fallos y diagnóstico de errores</td><td data-label="Datos">Registros de errores, identificadores técnicos, diagnóstico del dispositivo/app</td></tr>
+            <tr><td data-label="Proveedor">Google Play Billing</td><td data-label="Finalidad">Gestión y cobro de suscripciones</td><td data-label="Datos">Estado de compra (Google procesa el pago; nunca vemos tu tarjeta)</td></tr><tr><td data-label="Proveedor">RevenueCat</td><td data-label="Finalidad">Gestión de suscripciones y permisos premium</td><td data-label="Datos">Estado de compra, identificador de usuario de la app, estado de suscripción</td></tr>
+            <tr><td data-label="Proveedor">Health Connect (Google)</td><td data-label="Finalidad">Lectura del recuento de pasos</td><td data-label="Datos">Pasos diarios</td></tr><tr><td data-label="Proveedor">Expo (notificaciones/OTA)</td><td data-label="Finalidad">Notificaciones push y actualizaciones de la app</td><td data-label="Datos">Token de notificaciones y contenido de la notificación (entregado vía FCM/APNs)</td></tr><tr><td data-label="Proveedor">Open Food Facts</td><td data-label="Finalidad">Búsqueda de productos por código de barras</td><td data-label="Datos">Códigos de barras escaneados; productos que envíes</td></tr>
           </table>
           <p>Todos nuestros proveedores actúan bajo acuerdos de tratamiento de datos. Algunos pueden procesar datos fuera del Espacio Económico Europeo; en esos casos se aplican Cláusulas Contractuales Tipo u otros mecanismos válidos de transferencia internacional.</p>
 
@@ -152,6 +154,7 @@
 
         <!-- ═══════════ ENGLISH ═══════════ -->
         <div data-lang-block="en">
+          <div class="legal-sym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h1>Privacy Policy</h1>
           <p class="legal-updated">Last updated: August 3, 2026</p>
 
@@ -222,12 +225,12 @@
           <h2>5. Service providers (processors)</h2>
           <table>
             <tr><th>Provider</th><th>Purpose</th><th>Data</th></tr>
-            <tr><td>Supabase</td><td>Database, authentication and cloud storage</td><td>Account, diary, health data and photos</td></tr>
-            <tr><td>OpenAI</td><td>Food image analysis and Coach Kal chat</td><td>Food photos, chat messages, nutrition context</td></tr>
-            <tr><td>PostHog</td><td>Product analytics (app usage)</td><td>Usage events, technical identifiers</td></tr>
-            <tr><td>Sentry</td><td>Crash and error reporting</td><td>Crash logs, technical identifiers, device/app diagnostics</td></tr>
-            <tr><td>Google Play Billing</td><td>Subscription management and payments</td><td>Purchase state (Google processes payment; we never see your card)</td></tr><tr><td>RevenueCat</td><td>Subscription management and premium entitlements</td><td>Purchase state, app user identifier, subscription status</td></tr>
-            <tr><td>Health Connect (Google)</td><td>Reading step counts</td><td>Daily steps</td></tr><tr><td>Expo (notifications/OTA)</td><td>Push notifications and app updates</td><td>Notification token and notification content (delivered via FCM/APNs)</td></tr><tr><td>Open Food Facts</td><td>Barcode product lookup</td><td>Scanned barcodes; products you submit</td></tr>
+            <tr><td data-label="Provider">Supabase</td><td data-label="Purpose">Database, authentication and cloud storage</td><td data-label="Data">Account, diary, health data and photos</td></tr>
+            <tr><td data-label="Provider">OpenAI</td><td data-label="Purpose">Food image analysis and Coach Kal chat</td><td data-label="Data">Food photos, chat messages, nutrition context</td></tr>
+            <tr><td data-label="Provider">PostHog</td><td data-label="Purpose">Product analytics (app usage)</td><td data-label="Data">Usage events, technical identifiers</td></tr>
+            <tr><td data-label="Provider">Sentry</td><td data-label="Purpose">Crash and error reporting</td><td data-label="Data">Crash logs, technical identifiers, device/app diagnostics</td></tr>
+            <tr><td data-label="Provider">Google Play Billing</td><td data-label="Purpose">Subscription management and payments</td><td data-label="Data">Purchase state (Google processes payment; we never see your card)</td></tr><tr><td data-label="Provider">RevenueCat</td><td data-label="Purpose">Subscription management and premium entitlements</td><td data-label="Data">Purchase state, app user identifier, subscription status</td></tr>
+            <tr><td data-label="Provider">Health Connect (Google)</td><td data-label="Purpose">Reading step counts</td><td data-label="Data">Daily steps</td></tr><tr><td data-label="Provider">Expo (notifications/OTA)</td><td data-label="Purpose">Push notifications and app updates</td><td data-label="Data">Notification token and notification content (delivered via FCM/APNs)</td></tr><tr><td data-label="Provider">Open Food Facts</td><td data-label="Purpose">Barcode product lookup</td><td data-label="Data">Scanned barcodes; products you submit</td></tr>
           </table>
           <p>All our providers operate under data processing agreements. Some may process data outside the European Economic Area; in such cases Standard Contractual Clauses or other valid international transfer mechanisms apply.</p>
 

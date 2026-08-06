@@ -44,7 +44,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/home.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/sections.css">
 </head>
 <body>
 
@@ -53,12 +55,47 @@
   <main id="main">
 
     <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="page-hero">
+    <section class="sp-hero">
       <div class="container">
-        <span class="kicker reveal" data-i18n="about.kicker">About us</span>
-        <h1 class="reveal" data-i18n-html="about.title">We want you to <em class="accent">see what you eat</em> — as you eat it.</h1>
-        <p class="lead reveal" data-i18n="about.lead">Fotocal is an independent app, built small. No investors, no marketing department, no growth targets. Just a nutrition tracker built the way we thought one should work.</p>
-        <p class="lead reveal" data-i18n="about.lead2">This page is about why it exists and what we believe. It is deliberately short on biography and long on intent.</p>
+        <div class="sp-hero-grid">
+          <div class="reveal">
+            <span class="kicker" data-i18n="about.kicker">About us</span>
+            <h1 data-i18n-html="about.title">We want you to <em class="accent">see what you eat</em> — as you eat it.</h1>
+            <p class="lead" data-i18n="about.lead">Fotocal is an independent app, built small. No investors, no marketing department, no growth targets. Just a nutrition tracker built the way we thought one should work.</p>
+            <p class="lead" data-i18n="about.lead2">This page is about why it exists and what we believe. It is deliberately short on biography and long on intent.</p>
+            <div class="sp-hero-actions">
+              <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" data-i18n="cta.get">Get the app</a>
+              <a class="btn btn-outline" href="../features/" data-i18n="sp.allFeatures">All features</a>
+            </div>
+          </div>
+          <div class="reveal" style="--rd:.1s">
+            <div class="illus">
+              <img src="../assets/img/pages/about-hero.webp" width="900" height="1125" fetchpriority="high" decoding="async"
+                   alt="A woman with a mug at a sunlit kitchen table with fresh food, a notebook and her phone"
+                   data-i18n-alt="about.heroAlt">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ IMAGE BAND ═══════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="sp-band flip reveal">
+          <div class="sp-band-media">
+            <div class="illus">
+              <img src="../assets/img/pages/about-band.webp" width="900" height="1125" loading="lazy" decoding="async"
+                   alt="An open notebook and pen beside a balanced plate and a glass of water"
+                   data-i18n-alt="about.bandAlt">
+            </div>
+          </div>
+          <div class="sp-band-copy">
+            <span class="pill" data-i18n="about.bandPill">Why we built it</span>
+            <h2 data-i18n="about.bandTitle">A notebook, a plate, and no lectures</h2>
+            <p data-i18n="about.bandBody">Fotocal started as the tool we wanted ourselves: something that tells you what is on your plate without turning dinner into data entry, and without an opinion about how you should live.</p>
+          </div>
+        </div>
       </div>
     </section>
 

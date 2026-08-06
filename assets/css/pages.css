@@ -184,7 +184,11 @@
   border: 1px solid var(--border-soft);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-card);
-  overflow: hidden;
+  /* was `overflow: hidden`, which silently CUT the Premium column off on a
+     320px phone with no way to reach it. Scrolling keeps every column
+     reachable and still clips to the rounded corners. */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-top: 2rem;
 }
 .cmp {
@@ -206,6 +210,13 @@
   text-align: left;
   vertical-align: top;
   border-bottom: 1px solid var(--border-soft);
+}
+/* Tighten the cells on the narrowest phones so the table fits without
+   needing the horizontal scroll above in the common case. */
+@media (max-width: 420px) {
+  .cmp { font-size: .78rem; }
+  .cmp th, .cmp td { padding: .65rem .4rem; }
+  .cmp tbody th small { font-size: .7rem; }
 }
 .cmp thead th {
   font-size: .68rem;
@@ -476,7 +487,10 @@
 }
 .mail-strip a:hover { color: var(--pink); }
 
-@media (min-width: 700px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
+/* Three of these cards do not fit a tablet: at 768px they overflowed the
+   viewport by ~79px. Two across in the tablet band, three only from 900px. */
+@media (min-width: 700px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* ═══════════════════════════════════════════════
    ABOUT — values grid

@@ -78,6 +78,9 @@
 }
 .fx-duo:hover .fx-duo-b { transform: rotate(1deg) translateY(-5px); }
 .fx-duo-b img { display: block; width: 100%; height: auto; }
+/* On narrow phones the negative offset pushed this card past the viewport
+   edge (2–4px of horizontal overflow); tuck it back inside instead. */
+@media (max-width: 620px) { .fx-duo-b { right: 0; bottom: -18px; width: 42%; } }
 @media (min-width: 900px) { .fx-duo-b { right: -34px; } }
 
 /* ─── Chapter 3 cards: media tops handled by .log-card/.log-media ─── */
@@ -135,7 +138,9 @@
 .fx-goal > p { font-size: .93rem; color: var(--muted); margin-bottom: 1rem; }
 .fx-goal .check-list { margin-bottom: 1.3rem; }
 .fx-goal .check-list li { font-size: .9rem; margin-bottom: .45rem; }
-.fx-goal-cta { margin-top: auto; display: flex; align-items: center; gap: 1rem; }
+/* Two buttons sit here now. `.btn` is nowrap, so without wrapping the pair
+   set the card's min-content width and blew the grid out by up to 262px. */
+.fx-goal-cta { margin-top: auto; display: flex; align-items: center; gap: .6rem 1rem; flex-wrap: wrap; }
 .fx-goal-cta .btn-ghost { font-weight: 700; font-size: .9rem; }
 
 /* Anchor offset is inherited from site.css scroll-margin rules. */

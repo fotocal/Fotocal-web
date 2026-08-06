@@ -40,6 +40,13 @@
     /* ══════════════════════ ENGLISH ══════════════════════ */
     en: {
 
+      /* ── Subscription: artwork alt text ── */
+      "sub.img1": "A woman smiling as she points at her phone showing the day's logged meals",
+      "sub.img2": "Someone photographing a colourful salad bowl with their phone",
+      "sub.img3": "A phone projecting chat bubbles with food, water and activity icons",
+      "sub.img4": "Hands holding a phone showing calorie rings and weekly charts",
+      "sub.img5": "A spread of fresh, colourful healthy food on a warm cream table",
+
       /* ── Subscription: 5-day trial timeline ── */
       "sub.trial.head": "How the <em class=\"accent\">5-day trial</em> works.",
       "sub.tl.d1": "Day 0",
@@ -580,6 +587,13 @@
 
     /* ══════════════════════ SPANISH ══════════════════════ */
     es: {
+
+      /* ── Suscripción: texto alternativo de las imágenes ── */
+      "sub.img1": "Una mujer sonríe mientras señala su móvil, que muestra las comidas registradas del día",
+      "sub.img2": "Alguien fotografía un bol de ensalada lleno de color con su móvil",
+      "sub.img3": "Un móvil proyecta bocadillos de chat con iconos de comida, agua y actividad",
+      "sub.img4": "Unas manos sostienen un móvil con anillos de calorías y gráficas semanales",
+      "sub.img5": "Una mesa color crema llena de comida sana, fresca y colorida",
 
       /* ── Suscripción: cronología de la prueba de 5 días ── */
       "sub.trial.head": "Cómo funciona la <em class=\"accent\">prueba de 5 días</em>.",

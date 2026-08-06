@@ -1,0 +1,272 @@
+{
+ "how-to-count-calories-accurately": {
+  "category": "Calorie counting",
+  "glyph": "plate",
+  "pal": 0
+ },
+ "tdee-how-many-calories-you-need": {
+  "category": "Calorie counting",
+  "glyph": "chart",
+  "pal": 2
+ },
+ "calorie-deficit-for-fat-loss": {
+  "category": "Weight loss",
+  "glyph": "target",
+  "pal": 1
+ },
+ "common-calorie-counting-mistakes": {
+  "category": "Calorie counting",
+  "glyph": "flame",
+  "pal": 2
+ },
+ "do-calories-matter-or-food-quality": {
+  "category": "Nutrition",
+  "glyph": "flame",
+  "pal": 6
+ },
+ "track-calories-without-weighing": {
+  "category": "Calorie counting",
+  "glyph": "plate",
+  "pal": 4
+ },
+ "how-to-read-nutrition-labels": {
+  "category": "Nutrition",
+  "glyph": "barcode",
+  "pal": 0
+ },
+ "macronutrients-101": {
+  "category": "Nutrition",
+  "glyph": "fish",
+  "pal": 2
+ },
+ "how-much-protein-per-day": {
+  "category": "Nutrition",
+  "glyph": "fish",
+  "pal": 6
+ },
+ "carbs-are-not-the-enemy": {
+  "category": "Nutrition",
+  "glyph": "bread",
+  "pal": 1
+ },
+ "dietary-fat-how-much-and-which-kinds": {
+  "category": "Nutrition",
+  "glyph": "avocado",
+  "pal": 0
+ },
+ "how-to-set-your-macros-for-weight-loss": {
+  "category": "Weight loss",
+  "glyph": "fish",
+  "pal": 0
+ },
+ "fiber-the-underrated-nutrient": {
+  "category": "Nutrition",
+  "glyph": "grain",
+  "pal": 1
+ },
+ "why-micronutrients-matter": {
+  "category": "Nutrition",
+  "glyph": "sprout",
+  "pal": 5
+ },
+ "added-sugar-vs-natural-sugar": {
+  "category": "Nutrition",
+  "glyph": "berry",
+  "pal": 1
+ },
+ "how-to-lose-weight-sustainably": {
+  "category": "Weight loss",
+  "glyph": "shield",
+  "pal": 5
+ },
+ "why-the-scale-is-not-the-whole-story": {
+  "category": "Weight loss",
+  "glyph": "scale",
+  "pal": 3
+ },
+ "weight-loss-plateaus": {
+  "category": "Weight loss",
+  "glyph": "trend",
+  "pal": 5
+ },
+ "how-fast-should-you-lose-weight": {
+  "category": "Weight loss",
+  "glyph": "dumbbell",
+  "pal": 4
+ },
+ "the-truth-about-starvation-mode": {
+  "category": "Weight loss",
+  "glyph": "sun",
+  "pal": 3
+ },
+ "maintaining-weight-loss": {
+  "category": "Weight loss",
+  "glyph": "shield",
+  "pal": 6
+ },
+ "emotional-eating": {
+  "category": "Mindset",
+  "glyph": "brain",
+  "pal": 6
+ },
+ "how-sleep-affects-your-weight": {
+  "category": "Lifestyle",
+  "glyph": "moon",
+  "pal": 2
+ },
+ "what-a-balanced-plate-looks-like": {
+  "category": "Healthy eating",
+  "glyph": "list",
+  "pal": 0
+ },
+ "high-protein-breakfast-ideas": {
+  "category": "Healthy eating",
+  "glyph": "egg",
+  "pal": 0
+ },
+ "healthy-snacks-that-satisfy": {
+  "category": "Healthy eating",
+  "glyph": "apple",
+  "pal": 0
+ },
+ "how-to-eat-healthy-on-a-budget": {
+  "category": "Healthy eating",
+  "glyph": "basket",
+  "pal": 0
+ },
+ "eating-out-without-wrecking-your-diet": {
+  "category": "Healthy eating",
+  "glyph": "cutlery",
+  "pal": 1
+ },
+ "how-to-build-a-healthy-grocery-list": {
+  "category": "Meal planning",
+  "glyph": "basket",
+  "pal": 5
+ },
+ "meal-prep-for-beginners": {
+  "category": "Meal planning",
+  "glyph": "bowl",
+  "pal": 2
+ },
+ "portion-control-simple-tricks": {
+  "category": "Healthy eating",
+  "glyph": "plate",
+  "pal": 5
+ },
+ "hydration-and-weight": {
+  "category": "Lifestyle",
+  "glyph": "drop",
+  "pal": 4
+ },
+ "plan-a-week-of-meals-in-30-minutes": {
+  "category": "Meal planning",
+  "glyph": "list",
+  "pal": 4
+ },
+ "batch-cooking-save-time-eat-better": {
+  "category": "Meal planning",
+  "glyph": "bowl",
+  "pal": 3
+ },
+ "mindful-eating-beginners-guide": {
+  "category": "Mindset",
+  "glyph": "brain",
+  "pal": 0
+ },
+ "how-to-stop-overeating-at-night": {
+  "category": "Mindset",
+  "glyph": "moon",
+  "pal": 1
+ },
+ "intuitive-eating-vs-calorie-counting": {
+  "category": "Mindset",
+  "glyph": "heart",
+  "pal": 6
+ },
+ "how-to-handle-cravings-without-guilt": {
+  "category": "Mindset",
+  "glyph": "brain",
+  "pal": 1
+ },
+ "do-you-need-to-exercise-to-lose-weight": {
+  "category": "Fitness",
+  "glyph": "dumbbell",
+  "pal": 1
+ },
+ "cardio-vs-strength-training-for-fat-loss": {
+  "category": "Fitness",
+  "glyph": "dumbbell",
+  "pal": 5
+ },
+ "how-many-calories-does-exercise-burn": {
+  "category": "Fitness",
+  "glyph": "dumbbell",
+  "pal": 6
+ },
+ "building-muscle-while-losing-fat": {
+  "category": "Fitness",
+  "glyph": "dumbbell",
+  "pal": 0
+ },
+ "neat-the-hidden-calorie-burn": {
+  "category": "Fitness",
+  "glyph": "flame",
+  "pal": 0
+ },
+ "how-to-stay-consistent-with-healthy-habits": {
+  "category": "Mindset",
+  "glyph": "shield",
+  "pal": 0
+ },
+ "does-protein-timing-matter": {
+  "category": "Nutrition",
+  "glyph": "fish",
+  "pal": 1
+ },
+ "intermittent-fasting-what-the-evidence-says": {
+  "category": "Diet tips",
+  "glyph": "clock",
+  "pal": 2
+ },
+ "low-carb-vs-low-fat": {
+  "category": "Diet tips",
+  "glyph": "bread",
+  "pal": 3
+ },
+ "the-truth-about-detox-diets-and-cleanses": {
+  "category": "Diet tips",
+  "glyph": "leaf",
+  "pal": 1
+ },
+ "are-cheat-meals-helpful-or-harmful": {
+  "category": "Diet tips",
+  "glyph": "star",
+  "pal": 3
+ },
+ "why-crash-diets-fail": {
+  "category": "Diet tips",
+  "glyph": "shield",
+  "pal": 3
+ },
+ "high-protein-diet-benefits-and-how-to-start": {
+  "category": "Nutrition",
+  "glyph": "fish",
+  "pal": 4
+ },
+ "understanding-your-basal-metabolic-rate": {
+  "category": "Calorie counting",
+  "glyph": "chart",
+  "pal": 6
+ },
+ "best-foods-for-weight-loss": {
+  "category": "Healthy eating",
+  "glyph": "target",
+  "pal": 2
+ },
+ "does-meal-timing-matter-for-weight-loss": {
+  "category": "Diet tips",
+  "glyph": "clock",
+  "pal": 6
+ }
+}

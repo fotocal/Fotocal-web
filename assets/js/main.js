@@ -68,6 +68,25 @@
       if (v != null) el.setAttribute("alt", v);
     });
 
+    /* ── Long-form content blocks ──
+       Article prose is far too long to live in the dictionary, so a blog
+       post ships both languages in its own markup, each wrapped in
+       [data-lang]. Only the matching one is shown. `hidden` (not
+       display:none) is used so the hidden copy stays out of the
+       accessibility tree and out of find-in-page. */
+    var blocks = document.querySelectorAll("[data-lang-block]");
+    if (blocks.length) {
+      var wanted = next;
+      /* If a page has no block for the chosen language, fall back to the
+         default so the reader is never left with an empty article. */
+      var has = false;
+      blocks.forEach(function (el) { if (el.getAttribute("data-lang-block") === wanted) has = true; });
+      if (!has) wanted = DEFAULT_LANG;
+      blocks.forEach(function (el) {
+        el.hidden = el.getAttribute("data-lang-block") !== wanted;
+      });
+    }
+
     /* Reflect the choice in the language dropdown (trigger + option ticks). */
     var trig = document.getElementById("langCurrent");
     if (trig) {

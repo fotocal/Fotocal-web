@@ -295,7 +295,6 @@
       "sub.p.y.equiv": "Works out at <b>about €2.92 a month</b>.",
       "sub.p.y.note": "The cheapest way to use Fotocal, and the only plan with a free trial. Best if you already know you want to build the habit over a full year.",
       "sub.p.y.trial": "Includes a 5-day free trial. Cancel before it ends and you are not charged.",
-      "sub.p.y.flag": "MOST POPULAR",
       "sub.p.y.save": "Saves about 58% vs monthly",
 
 
@@ -320,6 +319,9 @@
       "sub.as3t": "No card for the free plan",
       "sub.as3b": "You can log every meal, every day, forever without ever entering payment details.",
       "sub.mini.label": "Also switched on",
+      "sub.imgAdv": "Weekly trend lines above habit tiles, on a tablet beside a cup of tea",
+      "sub.imgPlans": "A phone showing a short list of suggestions, standing beside a salmon and quinoa plate",
+      "sub.imgSync": "The same food diary open on a phone and a tablet, with a sync symbol between them",
 
       /* Comparison table */
       "sub.cmp.kicker": "Free vs Premium",
@@ -648,10 +650,6 @@
          rather than editing these lines by hand, or EN and ES
          will drift.
          ───────────────────────────────────────────── */
-      "fx.core.kicker": "The four ways in",
-      "fx.core.title": "Four ways to log, <em class=\"accent\">each with its own page</em>.",
-      "fx.core.sub": "Photo, barcode, voice or recipe. Whichever is fastest right now is the right one \u2014 and each has a page explaining exactly what you get.",
-      "fx.core.more": "Learn more \u2192",
       "fp.voice-logging.kicker": "Voice logging",
       "fp.voice-logging.h1": "Just say what you ate — <em class=\"accent\">in any language</em>.",
       "fp.voice-logging.lead": "Tap the microphone and talk normally. Fotocal works out which language you spoke, writes it down, picks out every food and the amount of it, estimates the calories and macros, and files the whole thing under the meal you choose. No typing, no searching, no scrolling a database.",
@@ -671,6 +669,10 @@
       "fp.voice-logging.relatedTitle": "Keep reading",
       "fp.voice-logging.relatedSub": "Short, practical reads that go deeper on tracking without the busywork.",
       "fp.voice-logging.navLabel": "Voice logging",
+      "fp.voice-logging.bandAlt": "A woman mid-cook in a sunlit kitchen, talking to the phone in her hand while vegetables wait on the board",
+      "fp.voice-logging.bandPill": "In practice",
+      "fp.voice-logging.bandTitle": "Hands full, meal logged",
+      "fp.voice-logging.bandBody": "Halfway through cooking is exactly when you cannot type. Say what went into the pan and it is recorded — no rinsing your hands first, no picking the phone up twice.",
       "fp.voice-logging.s1t": "Tap the microphone",
       "fp.voice-logging.s1b": "It sits on the logging screen alongside photo and barcode. Nothing to set up, no wake word, no separate account to connect.",
       "fp.voice-logging.s2t": "Talk like a person",
@@ -725,6 +727,10 @@
       "fp.recipe.relatedTitle": "Keep reading",
       "fp.recipe.relatedSub": "Practical guides for people who cook their own food.",
       "fp.recipe.navLabel": "Recipes",
+      "fp.recipe.bandAlt": "A saved recipe card showing a photo and a macro breakdown, standing beside the finished salmon dish",
+      "fp.recipe.bandPill": "In practice",
+      "fp.recipe.bandTitle": "Cook it once, log it in a tap after that",
+      "fp.recipe.bandBody": "The first time costs you an ingredient list. After that your own recipe sits in the library with its per-serving numbers already worked out, and logging Tuesday's dinner is as fast as logging a banana.",
       "fp.recipe.s1t": "Add the recipe",
       "fp.recipe.s1b": "Type the ingredients out, paste them in from wherever you found them, or photograph a written or printed recipe and let Fotocal read it off the page.",
       "fp.recipe.s2t": "Say how much it makes",
@@ -779,6 +785,10 @@
       "fp.scan-food.relatedTitle": "Keep reading",
       "fp.scan-food.relatedSub": "The thinking behind the numbers on the screen.",
       "fp.scan-food.navLabel": "Scan food",
+      "fp.scan-food.bandAlt": "A hand photographing a restaurant plate, with a health score and a healthier swap appearing beside it",
+      "fp.scan-food.bandPill": "In practice",
+      "fp.scan-food.bandTitle": "The restaurant plate you cannot look up",
+      "fp.scan-food.bandBody": "No barcode, no label, and no real idea what the kitchen put in it. One photo returns the calories, the score and one specific swap for next time — before the plate has gone cold.",
       "fp.scan-food.s1t": "Photograph the plate",
       "fp.scan-food.s1b": "Whatever is in front of you, however it was made. No good lighting required, no arranging the food, no reference coin next to the bowl.",
       "fp.scan-food.s2t": "The AI reads it",
@@ -839,6 +849,10 @@
       "fp.scan-barcode.relatedTitle": "Keep reading",
       "fp.scan-barcode.relatedSub": "How to get more out of what is printed on the pack.",
       "fp.scan-barcode.navLabel": "Scan barcode",
+      "fp.scan-barcode.bandAlt": "A hand holding a phone up to the barcode on a packet of granola, a similar packet on the shelf beside it",
+      "fp.scan-barcode.bandPill": "In practice",
+      "fp.scan-barcode.bandTitle": "Two packets, one aisle, four seconds",
+      "fp.scan-barcode.bandBody": "The front of the pack is marketing. The back is small print you were never going to read standing up in a supermarket. Scan both codes, compare what they actually contain, put one back.",
       "fp.scan-barcode.s1t": "Point at the barcode",
       "fp.scan-barcode.s1b": "Anywhere on the pack, any angle you can hold it at. It reads as soon as the code is in frame.",
       "fp.scan-barcode.s2t": "The product comes back",
@@ -874,6 +888,10 @@
       "fp.scan-barcode.rel1": "How to read nutrition labels",
       "fp.scan-barcode.rel2": "How to build a healthy grocery list",
       "fp.scan-barcode.rel3": "Added sugar vs natural sugar",
+      "fx.core.kicker": "The four ways in",
+      "fx.core.title": "Four ways to log, <em class=\"accent\">each with its own page</em>.",
+      "fx.core.sub": "Photo, barcode, voice or recipe. Whichever is fastest right now is the right one \u2014 and each has a page explaining exactly what you get.",
+      "fx.core.more": "Learn more \u2192",
 
       /* ─────────────────────────────────────────────
          GOAL PAGES  /features/{weight-loss,nutrition-diet,
@@ -1237,7 +1255,6 @@
       "sub.p.y.equiv": "Sale a <b>unos 2,92 € al mes</b>.",
       "sub.p.y.note": "La forma más barata de usar Fotocal y el único plan con prueba gratis. Ideal si ya sabes que quieres construir el hábito durante todo un año.",
       "sub.p.y.trial": "Incluye 5 días de prueba gratis. Si cancelas antes de que terminen, no se te cobra nada.",
-      "sub.p.y.flag": "MÁS POPULAR",
       "sub.p.y.save": "Ahorras un 58% aprox. frente al mensual",
 
 
@@ -1261,6 +1278,9 @@
       "sub.as3t": "El plan gratuito no pide tarjeta",
       "sub.as3b": "Puedes registrar cada comida, cada día, para siempre, sin introducir jamás datos de pago.",
       "sub.mini.label": "También se activa",
+      "sub.imgAdv": "Líneas de tendencia semanales sobre tarjetas de hábitos, en una tableta junto a una taza de té",
+      "sub.imgPlans": "Un móvil con una lista breve de sugerencias, apoyado junto a un plato de salmón con quinoa",
+      "sub.imgSync": "El mismo diario de comidas abierto en un móvil y en una tableta, con un símbolo de sincronización entre ambos",
 
       "sub.cmp.kicker": "Gratis vs Premium",
       "sub.cmp.title": "Qué incluye cada uno, <em class=\"accent\">línea por línea</em>.",
@@ -1583,10 +1603,6 @@
          rather than editing these lines by hand, or EN and ES
          will drift.
          ───────────────────────────────────────────── */
-      "fx.core.kicker": "Las cuatro v\u00edas de entrada",
-      "fx.core.title": "Cuatro formas de registrar, <em class=\"accent\">cada una con su p\u00e1gina</em>.",
-      "fx.core.sub": "Foto, c\u00f3digo de barras, voz o receta. La m\u00e1s r\u00e1pida en cada momento es la buena, y cada una tiene una p\u00e1gina que explica exactamente qu\u00e9 obtienes.",
-      "fx.core.more": "Saber m\u00e1s \u2192",
       "fp.voice-logging.kicker": "Registro por voz",
       "fp.voice-logging.h1": "Solo di lo que has comido — <em class=\"accent\">en cualquier idioma</em>.",
       "fp.voice-logging.lead": "Toca el micrófono y habla con normalidad. Fotocal averigua en qué idioma has hablado, lo transcribe, identifica cada alimento y su cantidad, estima las calorías y los macros y lo guarda en la comida que elijas. Sin escribir, sin buscar, sin recorrer una base de datos.",
@@ -1606,6 +1622,10 @@
       "fp.voice-logging.relatedTitle": "Sigue leyendo",
       "fp.voice-logging.relatedSub": "Lecturas breves y prácticas sobre cómo registrar sin que se convierta en trabajo.",
       "fp.voice-logging.navLabel": "Registro por voz",
+      "fp.voice-logging.bandAlt": "Una mujer cocinando en una cocina soleada, hablándole al móvil que sostiene mientras las verduras esperan en la tabla",
+      "fp.voice-logging.bandPill": "En la práctica",
+      "fp.voice-logging.bandTitle": "Con las manos ocupadas y la comida registrada",
+      "fp.voice-logging.bandBody": "A mitad de cocinar es justo cuando no puedes escribir. Di lo que ha ido a la sartén y queda registrado: sin lavarte las manos antes y sin coger el móvil dos veces.",
       "fp.voice-logging.s1t": "Toca el micrófono",
       "fp.voice-logging.s1b": "Está en la pantalla de registro, junto a la foto y el código de barras. Nada que configurar, ninguna palabra de activación, ninguna cuenta aparte que conectar.",
       "fp.voice-logging.s2t": "Habla como hablas",
@@ -1660,6 +1680,10 @@
       "fp.recipe.relatedTitle": "Sigue leyendo",
       "fp.recipe.relatedSub": "Guías prácticas para quien se cocina su propia comida.",
       "fp.recipe.navLabel": "Recetas",
+      "fp.recipe.bandAlt": "Una ficha de receta guardada con foto y desglose de macros, junto al plato de salmón terminado",
+      "fp.recipe.bandPill": "En la práctica",
+      "fp.recipe.bandTitle": "Cocínala una vez y regístrala con un toque a partir de ahí",
+      "fp.recipe.bandBody": "La primera vez te cuesta una lista de ingredientes. Después tu receta vive en la biblioteca con los números por ración ya calculados, y registrar la cena del martes es tan rápido como registrar un plátano.",
       "fp.recipe.s1t": "Añade la receta",
       "fp.recipe.s1b": "Escribe los ingredientes, pégalos de donde los hayas encontrado o fotografía una receta escrita o impresa y deja que Fotocal la lea.",
       "fp.recipe.s2t": "Di cuánto sale",
@@ -1714,6 +1738,10 @@
       "fp.scan-food.relatedTitle": "Sigue leyendo",
       "fp.scan-food.relatedSub": "Lo que hay detrás de los números de la pantalla.",
       "fp.scan-food.navLabel": "Escanear comida",
+      "fp.scan-food.bandAlt": "Una mano fotografiando un plato de restaurante, con una puntuación de salud y una alternativa más sana apareciendo al lado",
+      "fp.scan-food.bandPill": "En la práctica",
+      "fp.scan-food.bandTitle": "El plato de restaurante que no puedes buscar",
+      "fp.scan-food.bandBody": "Sin código de barras, sin etiqueta y sin saber muy bien qué le ha puesto la cocina. Una foto devuelve las calorías, la puntuación y un cambio concreto para la próxima vez, antes de que se enfríe el plato.",
       "fp.scan-food.s1t": "Fotografía el plato",
       "fp.scan-food.s1b": "Lo que tengas delante, esté hecho como esté. Sin buena luz, sin colocar la comida, sin poner una moneda al lado como referencia.",
       "fp.scan-food.s2t": "La IA lo lee",
@@ -1774,6 +1802,10 @@
       "fp.scan-barcode.relatedTitle": "Sigue leyendo",
       "fp.scan-barcode.relatedSub": "Cómo sacarle más a lo que viene impreso en el paquete.",
       "fp.scan-barcode.navLabel": "Escanear código",
+      "fp.scan-barcode.bandAlt": "Una mano acercando el móvil al código de barras de un paquete de granola, con otro paquete parecido al lado en la estantería",
+      "fp.scan-barcode.bandPill": "En la práctica",
+      "fp.scan-barcode.bandTitle": "Dos paquetes, un pasillo, cuatro segundos",
+      "fp.scan-barcode.bandBody": "La parte de delante del paquete es marketing. La de atrás es letra pequeña que no ibas a leer de pie en un supermercado. Escanea los dos códigos, compara lo que llevan de verdad y devuelve uno a la estantería.",
       "fp.scan-barcode.s1t": "Apunta al código",
       "fp.scan-barcode.s1b": "En cualquier parte del paquete y en cualquier ángulo en que puedas sujetarlo. Lo lee en cuanto el código entra en cuadro.",
       "fp.scan-barcode.s2t": "Aparece el producto",
@@ -1809,6 +1841,10 @@
       "fp.scan-barcode.rel1": "Cómo leer las etiquetas nutricionales",
       "fp.scan-barcode.rel2": "Cómo hacer una lista de la compra sana",
       "fp.scan-barcode.rel3": "Azúcar añadido vs azúcar natural",
+      "fx.core.kicker": "Las cuatro v\u00edas de entrada",
+      "fx.core.title": "Cuatro formas de registrar, <em class=\"accent\">cada una con su p\u00e1gina</em>.",
+      "fx.core.sub": "Foto, c\u00f3digo de barras, voz o receta. La m\u00e1s r\u00e1pida en cada momento es la buena, y cada una tiene una p\u00e1gina que explica exactamente qu\u00e9 obtienes.",
+      "fx.core.more": "Saber m\u00e1s \u2192",
 
       /* ─────────────────────────────────────────────
          GOAL PAGES  /features/{weight-loss,nutrition-diet,

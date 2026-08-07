@@ -106,7 +106,11 @@
             <a class="btn btn-outline btn-block" style="margin-top:auto" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="sub.p.cta">Get it on Google Play</a>
           </article>
           <article class="fc-card fc-card-best reveal" style="--rd:.1s">
-            <span class="fc-badge" data-i18n="sub.p.y.flag">MOST POPULAR</span>
+            <!-- Deliberately NOT "most popular": that is a claim about how many
+                 people choose it, and there is no figure behind it. This is the
+                 same badge the homepage uses, and it states a price fact the
+                 two cards on this page prove by themselves. -->
+            <span class="fc-badge" data-i18n="price.y.badge">Best value</span>
             <span class="fc-plan-name" data-i18n="price.y.name">Yearly</span>
             <div class="fc-plan-price" data-i18n="price.y.amt">€34.99</div>
             <span class="fc-plan-per" data-i18n="price.y.per">/year</span>
@@ -231,19 +235,28 @@
         <p class="sb-mini-label reveal" data-i18n="sub.mini.label">Also switched on</p>
         <div class="sb-mini">
           <article class="sb-mini-card reveal">
-            <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-            <h3 data-i18n="sub.u2.t">Advanced nutrition insights</h3>
-            <p data-i18n="sub.u2.li1">Patterns across your macros, not just daily totals</p>
+            <div class="sb-mini-media"><img src="../assets/img/subscription/adv-insights.webp" width="900" height="720" loading="lazy" decoding="async" alt="Weekly trend lines above habit tiles, on a tablet beside a cup of tea" data-i18n-alt="sub.imgAdv"></div>
+            <div class="sb-mini-body">
+              <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+              <h3 data-i18n="sub.u2.t">Advanced nutrition insights</h3>
+              <p data-i18n="sub.u2.li1">Patterns across your macros, not just daily totals</p>
+            </div>
           </article>
           <article class="sb-mini-card reveal" style="--rd:.08s">
-            <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
-            <h3 data-i18n="sub.u4.t">Personalised plans &amp; recommendations</h3>
-            <p data-i18n="sub.u4.li3">Adapts as your goals and your week change</p>
+            <div class="sb-mini-media"><img src="../assets/img/subscription/plans.webp" width="900" height="720" loading="lazy" decoding="async" alt="A phone showing a short list of suggestions, standing beside a salmon and quinoa plate" data-i18n-alt="sub.imgPlans"></div>
+            <div class="sb-mini-body">
+              <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+              <h3 data-i18n="sub.u4.t">Personalised plans &amp; recommendations</h3>
+              <p data-i18n="sub.u4.li3">Adapts as your goals and your week change</p>
+            </div>
           </article>
           <article class="sb-mini-card reveal" style="--rd:.16s">
-            <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-7.5-4M3 12a9 9 0 0 1 9-9 9 9 0 0 1 7.5 4"/><path d="M21 3v5h-5M3 21v-5h5"/></svg></div>
-            <h3 data-i18n="sub.u5.t">Sync across devices</h3>
-            <p data-i18n="sub.u5.li2">Your history follows your account, not your handset</p>
+            <div class="sb-mini-media"><img src="../assets/img/subscription/sync.webp" width="900" height="720" loading="lazy" decoding="async" alt="The same food diary open on a phone and a tablet, with a sync symbol between them" data-i18n-alt="sub.imgSync"></div>
+            <div class="sb-mini-body">
+              <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-7.5-4M3 12a9 9 0 0 1 9-9 9 9 0 0 1 7.5 4"/><path d="M21 3v5h-5M3 21v-5h5"/></svg></div>
+              <h3 data-i18n="sub.u5.t">Sync across devices</h3>
+              <p data-i18n="sub.u5.li2">Your history follows your account, not your handset</p>
+            </div>
           </article>
         </div>
       </div>

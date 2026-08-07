@@ -456,7 +456,7 @@ window.FOTOCAL_I18N = {
     "price.y.name": "Anual",
     "price.y.amt": "34,99 €",
     "price.y.per": "/año",
-    "price.y.badge": "Mejor valor",
+    "price.y.badge": "Mejor precio",
     "price.y.equiv": "≈ 2,92 €/mes — ahorra un 58 %",
     "price.y.trial": "Incluye la prueba gratis de 5 días",
     "price.f1": "Prueba gratis de 5 días",

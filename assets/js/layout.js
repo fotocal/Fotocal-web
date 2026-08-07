@@ -552,6 +552,13 @@
         el.setAttribute("fetchpriority", "high");
       } else {
         el.loading = "lazy";
+        /* main.js fades lazy images in by adding .is-loaded, but it does
+           its sweep once at boot — and this element is created later, from
+           inside a probe callback. Without marking it here it would sit at
+           opacity 0 forever, loaded but invisible. */
+        el.addEventListener("load", function () { el.classList.add("is-loaded"); }, { once: true });
+        el.addEventListener("error", function () { el.classList.add("is-loaded"); }, { once: true });
+        if (el.complete) el.classList.add("is-loaded");
       }
       slot.replaceWith(el);
     };

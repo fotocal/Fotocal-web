@@ -214,3 +214,32 @@
   content: ""; flex: 1; height: 1px;
   background: linear-gradient(90deg, var(--border), transparent);
 }
+
+/* ─── Mini-card artwork ───
+   These three were icon-only while the three above them carried images,
+   which made them read as lesser features rather than quieter ones. The
+   slot is 5:4 because that is the ratio the art was made at — a 1:1 slot
+   like the big cards use would crop 20% off each side and cut the phone
+   out of two of the three.
+
+   The icon stays, as a badge over the corner: it is the visual language
+   the rest of the page uses, and dropping it here would break the set. */
+.sb-mini-card { position: relative; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.sb-mini-media { aspect-ratio: 5 / 4; overflow: hidden; background: var(--cream-2); }
+.sb-mini-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .55s cubic-bezier(.2,.8,.3,1);
+}
+.sb-mini-card:hover .sb-mini-media img { transform: scale(1.045); }
+/* The badge straddles the image/body seam. It rides in the body in normal
+   flow with a negative top margin, NOT absolutely positioned against the
+   card: the card clips (overflow:hidden, for the image's rounded corners),
+   so anything anchored to its top edge gets sliced in half. */
+.sb-mini-card .sb-mini-ico {
+  position: relative; z-index: 2;
+  margin: -1.45rem 0 .8rem;
+  border: 3px solid var(--white);
+  width: 46px; height: 46px; border-radius: 15px;
+}
+.sb-mini-body { padding: 0 1.25rem 1.35rem; }
+.sb-mini-card h3 { margin-bottom: .3rem; }

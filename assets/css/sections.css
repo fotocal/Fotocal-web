@@ -270,3 +270,8 @@
 /* Four-up variant — the Features overview lists all four core pages,
    and 3-up left a single card stranded on its own row. */
 @media (min-width: 1000px) { .fc-related-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Landscape band art. The default .sp-band .illus caps at 440px, which
+   suits the portrait pieces but leaves a 5:4 image looking stranded in a
+   half-width column. */
+.sp-band .illus.sp-band-wide { max-width: 560px; }

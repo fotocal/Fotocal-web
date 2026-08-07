@@ -243,3 +243,15 @@
 }
 .sb-mini-body { padding: 0 1.25rem 1.35rem; }
 .sb-mini-card h3 { margin-bottom: .3rem; }
+
+/* ─── Hero artwork ───
+   The art is 2:3. Left to fill its grid column it came out 815px tall
+   against 565px of copy at 1440px (614px in Spanish), which read as
+   lopsided rather than tall. Capping the frame at 420px puts it at
+   630px — just past the copy, which looks deliberate.
+
+   The cap only binds from ~1024px up; below that the column is already
+   narrower than 420px, and on a phone it stops a 2:3 frame from eating
+   a whole screen at tablet widths. Nothing is cropped either way —
+   .illus sizes the image by its natural ratio. */
+.sb-hero-art { max-width: 420px; margin-inline: auto; }

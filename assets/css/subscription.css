@@ -155,3 +155,62 @@
 /* when the banner is still a placeholder it must not be absolutely positioned */
 .sb-banner-img.is-slot { position: relative; }
 .sb-banner-img.is-slot::after { display: none; }
+
+/* ═══════════════════════════════════════════════
+   PRICE ANCHOR  (hero)
+   The one question everyone arrives with, answered before the fold
+   instead of a full screen below it.
+   ═══════════════════════════════════════════════ */
+.sb-anchor {
+  margin: -.4rem 0 1.4rem;
+  font-size: .95rem; color: var(--ink-soft);
+  max-width: 46ch;
+  padding-left: .9rem;
+  border-left: 3px solid transparent;
+  border-image: var(--grad) 1;
+}
+.sb-anchor b { font-weight: 700; color: var(--ink); white-space: nowrap; }
+
+/* ═══════════════════════════════════════════════
+   REASSURANCE STRIP  (under the plans)
+   Sits where the decision is actually made. These three objections were
+   all answered on the page already — but 2000px further down, which is
+   no use to someone with a thumb over the button.
+   ═══════════════════════════════════════════════ */
+.sb-assure {
+  display: grid; gap: 1rem; margin-top: 2rem;
+  list-style: none;
+}
+@media (min-width: 800px) { .sb-assure { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
+.sb-assure li {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  grid-template-areas: "ico title" ".  body";
+  gap: .15rem .7rem;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  padding: 1.05rem 1.15rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.sb-assure li:hover { border-color: var(--border-pink); box-shadow: var(--shadow-card); }
+.sb-assure svg { grid-area: ico; width: 20px; height: 20px; color: var(--pink); margin-top: .12rem; }
+.sb-assure b { grid-area: title; font-size: .95rem; font-weight: 700; color: var(--ink); align-self: center; }
+.sb-assure span { grid-area: body; font-size: .86rem; color: var(--muted); line-height: 1.55; }
+
+/* ═══════════════════════════════════════════════
+   "ALSO SWITCHED ON" LABEL
+   Turns three big cards followed by three small ones into a stated
+   hierarchy rather than an apparent drop in effort.
+   ═══════════════════════════════════════════════ */
+.sb-mini-label {
+  margin: 2.1rem 0 .1rem;
+  font-size: .72rem; font-weight: 800; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--muted);
+  display: flex; align-items: center; gap: .85rem;
+}
+.sb-mini-label::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}

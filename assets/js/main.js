@@ -300,4 +300,48 @@
       });
     });
   }
+
+  /* ═══════════ Image load-in ═══════════
+     CSS starts lazy images at opacity 0 and this fades them in when the
+     bytes land. Two details that matter:
+
+       · `complete` is checked first. An image already in cache fires no
+         load event, so without this it would sit invisible forever.
+       · onerror marks it too. A 404 should show its alt text, which it
+         cannot do at opacity 0.  */
+  document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+    if (img.complete) { img.classList.add("is-loaded"); return; }
+    img.addEventListener("load", function () { img.classList.add("is-loaded"); }, { once: true });
+    img.addEventListener("error", function () { img.classList.add("is-loaded"); }, { once: true });
+  });
+
+  /* ═══════════ Reading progress ═══════════
+     Long-form pages only. On a short page the bar is already part-filled
+     when you arrive, which reads as a stuck loader rather than progress.
+     2.2 screens is the threshold where it starts being informative. */
+  var doc = document.documentElement;
+  var article = document.querySelector(".art-body, .legal-body, .prose");
+  if (article && doc.scrollHeight > window.innerHeight * 2.2) {
+    var bar = document.createElement("div");
+    bar.className = "read-bar";
+    bar.setAttribute("aria-hidden", "true");   /* decorative; the page is the content */
+    var fill = document.createElement("span");
+    bar.appendChild(fill);
+    document.body.appendChild(bar);
+
+    var ticking = false;
+    var draw = function () {
+      var max = doc.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      fill.style.width = Math.min(100, Math.max(0, pct)) + "%";
+      ticking = false;
+    };
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(draw);
+    }, { passive: true });
+    window.addEventListener("resize", draw, { passive: true });
+    draw();
+  }
 })();

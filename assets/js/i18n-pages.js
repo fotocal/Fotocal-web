@@ -309,6 +309,18 @@
 
       "sub.vat": "All prices are in euros and include Spanish VAT at 21%. What you see here is what you pay — there is nothing added at checkout.",
 
+      /* ── Subscription: price anchor, reassurance strip and the
+         secondary-unlock label. Added when the page was reviewed for
+         how it reads to someone deciding, not just for what it lists. ── */
+      "sub.anchor": "Premium is <b>€34.99 a year</b> — about <b>€2.92 a month</b> — or <b>€6.99</b> monthly. The free plan has no time limit and no card.",
+      "sub.as1t": "No lock-in",
+      "sub.as1b": "Cancel in two taps in Google Play. You keep Premium until the period you paid for runs out.",
+      "sub.as2t": "Your diary stays yours",
+      "sub.as2b": "Cancelling drops you to the free plan. Nothing you logged is deleted, hidden or held to ransom.",
+      "sub.as3t": "No card for the free plan",
+      "sub.as3b": "You can log every meal, every day, forever without ever entering payment details.",
+      "sub.mini.label": "Also switched on",
+
       /* Comparison table */
       "sub.cmp.kicker": "Free vs Premium",
       "sub.cmp.title": "What you get, <em class=\"accent\">line by line</em>.",
@@ -1237,6 +1249,18 @@
       "sub.trial.b2": "Si quieres probar Premium sin coste, empieza el plan anual y cancela dentro de los 5 días. No se te cobrará nada. Y si prefieres no lidiar con una prueba, el plan mensual es la opción más sencilla.",
 
       "sub.vat": "Todos los precios están en euros e incluyen el IVA español del 21%. Lo que ves aquí es lo que pagas: no se añade nada al finalizar la compra.",
+
+      /* ── Subscription: price anchor, reassurance strip and the
+         secondary-unlock label. Added when the page was reviewed for
+         how it reads to someone deciding, not just for what it lists. ── */
+      "sub.anchor": "Premium cuesta <b>34,99 € al año</b> — unos <b>2,92 € al mes</b> — o <b>6,99 €</b> al mes suelto. El plan gratuito no caduca y no pide tarjeta.",
+      "sub.as1t": "Sin permanencia",
+      "sub.as1b": "Se cancela con dos toques en Google Play. Conservas Premium hasta que termine el periodo que ya has pagado.",
+      "sub.as2t": "Tu diario sigue siendo tuyo",
+      "sub.as2b": "Al cancelar vuelves al plan gratuito. Nada de lo que has registrado se borra, se oculta ni se retiene.",
+      "sub.as3t": "El plan gratuito no pide tarjeta",
+      "sub.as3b": "Puedes registrar cada comida, cada día, para siempre, sin introducir jamás datos de pago.",
+      "sub.mini.label": "También se activa",
 
       "sub.cmp.kicker": "Gratis vs Premium",
       "sub.cmp.title": "Qué incluye cada uno, <em class=\"accent\">línea por línea</em>.",

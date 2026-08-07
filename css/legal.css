@@ -27,6 +27,43 @@
 /* No overflow-x here: it would make the root a scroll container and break the
    sticky header. The mobile drawer is clipped at its own element instead. */
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--nav-h) + 20px); }
+
+/* ═══════════════════════════════════════════════
+   INTERACTION LAYER
+   These pages do not load assets/css/site.css (they keep their own
+   lighter shell), so the polish that lives there has to be repeated
+   here or the legal pages are the only ones still painting a blue box
+   over the logo on tap. Keep the two copies in step.
+   ═══════════════════════════════════════════════ */
+html { -webkit-tap-highlight-color: transparent; }
+a, button, summary, [role="button"] { touch-action: manipulation; }
+
+:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 6px; }
+.nav-logo:focus-visible, .lang-current:focus-visible { outline-offset: 2px; }
+
+/* Press feedback, replacing the highlight that was just removed. */
+.nav-logo:active { opacity: .72; }
+.lang-current:active { background: rgba(233,30,99,.11); }
+.lang-item:active { background: var(--cream-3, var(--cream)); }
+.legal-toc a:active, .legal-footer a:active { color: var(--pink); }
+a:active { -webkit-tap-highlight-color: transparent; }
+
+/* Touch ergonomics — the table-of-contents rows are the densest link
+   list on the site and were well under the 44px minimum. */
+@media (pointer: coarse) {
+  .legal-toc nav a { min-height: 44px; display: flex; align-items: center; }
+  .lang-item { min-height: 44px; }
+  .legal-footer a { display: inline-block; padding-block: .3rem; }
+  /* These two are declared in this file rather than site.css, so the
+     matching rules over there never reached them. Measured at 35px and
+     29px before this. */
+  .nav-logo { min-height: 44px; }
+  .lang-current { min-height: 44px; }
+}
+
+/* Balanced headings, tidy paragraph endings — same as the main site. */
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
 body {
   font-family: var(--font-body);
   background: var(--cream);

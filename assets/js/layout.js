@@ -51,10 +51,28 @@
 
   var u = function (p) { return BASE + p; };
 
-  /* ── Nav model — single source of truth ── */
+  /* ── Nav model — single source of truth ──
+     Three shapes are supported:
+       href only                 -> plain link
+       children only             -> button that opens a panel
+       href AND children (split) -> the label is a real link, and a
+                                    separate caret button opens the panel
+
+     Features is the split kind on purpose. It has its own overview page
+     that people ask for by name, so clicking the word must go there —
+     but it now also fronts four dedicated pages, and burying those
+     behind a page visit would hide them. A label-that-navigates plus a
+     caret-that-discloses is the only arrangement that serves both, and
+     it keeps the caret a real button with its own aria-expanded. */
   var NAV = [
     { id: "home",         key: "nav.home",         href: u("") },
-    { id: "features",     key: "nav.features",     href: u("features/") },
+    { id: "features",     key: "nav.features",     href: u("features/"), children: [
+        { key: "nav.allFeatures",  href: u("features/") },
+        { key: "nav.scanFood",     href: u("features/scan-food/") },
+        { key: "nav.scanBarcode",  href: u("features/scan-barcode/") },
+        { key: "nav.voiceLogging", href: u("features/voice-logging/") },
+        { key: "nav.recipe",       href: u("features/recipe/") }
+      ] },
     { id: "blog",         key: "nav.blog",         href: u("blog/") },
     { id: "subscription", key: "nav.subscription", href: u("subscription/") },
     { id: "about",        key: "nav.about",        children: [
@@ -104,6 +122,30 @@
       var links = item.children.map(function (c) {
         return '<li><a href="' + c.href + '" data-i18n="' + c.key + '"></a></li>';
       }).join("");
+
+      /* Split: label navigates, caret discloses. */
+      if (item.href) {
+        var caretBtn = function (cls, id) {
+          return '<button class="' + cls + '" type="button" aria-expanded="false" ' +
+                 'aria-haspopup="true" aria-controls="' + id + '" ' +
+                 'data-i18n-aria="nav.moreIn">' + CARET + '</button>';
+        };
+
+        desktop += '<li class="nav-item nav-split" data-dropdown>' +
+          '<a class="nav-link" href="' + item.href + '"' + cur + ' data-i18n="' + item.key + '"></a>' +
+          caretBtn("nav-caret-btn", pid) +
+          '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
+          '</li>';
+
+        mobile += '<li class="m-item m-split" data-dropdown>' +
+          '<div class="m-split-row">' +
+            '<a class="m-link" href="' + item.href + '"' + cur + ' data-i18n="' + item.key + '"></a>' +
+            caretBtn("m-caret-btn", mid) +
+          '</div>' +
+          '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
+          '</li>';
+        return;
+      }
 
       desktop += '<li class="nav-item" data-dropdown>' +
         '<button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true" ' +
@@ -188,10 +230,11 @@
           '</div>' +
           '<div class="footer-col">' +
             '<h5 data-i18n="nav.features"></h5>' +
-            '<a href="' + u("features/") + '" data-i18n="nav.features"></a>' +
-            '<a href="' + u("features/#weight-loss") + '" data-i18n="nav.weightLoss"></a>' +
-            '<a href="' + u("features/#nutrition-diet") + '" data-i18n="nav.nutrition"></a>' +
-            '<a href="' + u("features/#lifestyle-mindset") + '" data-i18n="nav.lifestyle"></a>' +
+            '<a href="' + u("features/") + '" data-i18n="nav.allFeatures"></a>' +
+            '<a href="' + u("features/scan-food/") + '" data-i18n="nav.scanFood"></a>' +
+            '<a href="' + u("features/scan-barcode/") + '" data-i18n="nav.scanBarcode"></a>' +
+            '<a href="' + u("features/voice-logging/") + '" data-i18n="nav.voiceLogging"></a>' +
+            '<a href="' + u("features/recipe/") + '" data-i18n="nav.recipe"></a>' +
           '</div>' +
           '<div class="footer-col">' +
             '<h5 data-i18n="footer.company"></h5>' +
@@ -249,6 +292,14 @@
     return open;
   }
 
+  /* Only the links INSIDE the disclosed panel are arrow-key targets. On a
+     split item the label is itself an <a>, and a bare item.querySelectorAll("a")
+     would make it links[0] — ArrowDown would then "enter the menu" by landing
+     back on the thing you just pressed the caret next to. */
+  function panelLinks(item) {
+    return [].slice.call(item.querySelectorAll(".nav-panel a, .m-panel a"));
+  }
+
   document.querySelectorAll("[data-dropdown]").forEach(function (item) {
     var btn = item.querySelector("button");
     if (!btn) return;
@@ -267,7 +318,7 @@
         e.preventDefault();
         e.stopPropagation();
         toggle(item, true);
-        var first = item.querySelector("a");
+        var first = panelLinks(item)[0];
         if (first) first.focus();
       } else if (e.key === "Escape") {
         toggle(item, false);
@@ -275,7 +326,7 @@
     });
 
     item.addEventListener("keydown", function (e) {
-      var links = [].slice.call(item.querySelectorAll("a"));
+      var links = panelLinks(item);
       var i = links.indexOf(document.activeElement);
       if (e.key === "Escape") {
         e.preventDefault();

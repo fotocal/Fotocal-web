@@ -770,13 +770,35 @@ body.nav-locked { overflow: hidden; }
 }
 
 /* ═══════════════════════════════════════════════
-   "COMING SOON" STUB PAGES
+   CENTRED MESSAGE PAGE
+   Written for the "coming soon" stubs, which have all since become real
+   pages. /404.html is the only consumer now — the shell is exactly what
+   a not-found page wants, so it is reused rather than duplicated.
    ═══════════════════════════════════════════════ */
 .soon {
   min-height: calc(100vh - var(--nav-h) - 120px);
   display: grid; place-items: center; text-align: center; padding: 4rem 0;
 }
 .soon-inner { max-width: 46ch; }
+
+/* ─── 404 numeral ───
+   Set in the display face and washed with the brand gradient, so the
+   error reads as part of the site rather than as a browser artefact. */
+.nf-num {
+  font-family: var(--font-display);
+  font-size: clamp(5.5rem, 20vw, 11rem);
+  font-weight: 600; line-height: .88; letter-spacing: -.045em;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  margin-bottom: .6rem;
+  user-select: none;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .nf-num { -webkit-text-fill-color: currentColor; color: var(--pink); }
+}
+/* The card row is wider than the 46ch message column it sits under. */
+.nf-links { width: min(1000px, 100%); margin: 2.4rem auto 0; }
 .soon-mark {
   width: 62px; height: 62px; margin: 0 auto 1.5rem; border-radius: 18px;
   background: var(--grad-wash); border: 1px solid var(--border-pink);

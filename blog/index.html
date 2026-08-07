@@ -58,7 +58,13 @@
     </section>
 
     <!-- ═══════════════════ FEATURED ═══════════════════ -->
-    <section class="container bl-feature">
+    <!-- The featured article is a filterable item too, not a decoration
+         parked above the grid. It carries the same data-cat as any card,
+         so it is counted in the chips and hidden when the active filter
+         does not match it. Before this it stayed on screen under every
+         filter, so picking "Mindset" left a calorie-counting article
+         sitting at the top of the results. -->
+    <section class="container bl-feature" id="blFeature" data-cat="calories">
       <article class="bl-feat-card reveal">
         <div class="bl-feat-media">
           <img src="../assets/img/blog/how-to-count-calories-accurately.svg" width="1200" height="675" fetchpriority="high" decoding="async" alt="">
@@ -82,14 +88,14 @@
     <section class="section" id="all-posts" style="padding-top:1rem">
       <div class="container">
         <div class="bl-filters reveal" role="group" aria-label="Filter posts by category">
-          <button class="bl-chip" type="button" data-filter="all" aria-pressed="true"><span data-i18n="blog.all">All</span><span class="n">53</span></button>
+          <button class="bl-chip" type="button" data-filter="all" aria-pressed="true"><span data-i18n="blog.all">All</span><span class="n">54</span></button>
           <button class="bl-chip" type="button" data-filter="nutrition" aria-pressed="false"><span data-i18n="blog.cat.nutrition">Nutrition</span><span class="n">11</span></button>
           <button class="bl-chip" type="button" data-filter="weightloss" aria-pressed="false"><span data-i18n="blog.cat.weightloss">Weight loss</span><span class="n">8</span></button>
           <button class="bl-chip" type="button" data-filter="healthy" aria-pressed="false"><span data-i18n="blog.cat.healthy">Healthy eating</span><span class="n">7</span></button>
           <button class="bl-chip" type="button" data-filter="mindset" aria-pressed="false"><span data-i18n="blog.cat.mindset">Mindset</span><span class="n">6</span></button>
           <button class="bl-chip" type="button" data-filter="diet" aria-pressed="false"><span data-i18n="blog.cat.diet">Diet tips</span><span class="n">6</span></button>
           <button class="bl-chip" type="button" data-filter="fitness" aria-pressed="false"><span data-i18n="blog.cat.fitness">Fitness</span><span class="n">5</span></button>
-          <button class="bl-chip" type="button" data-filter="calories" aria-pressed="false"><span data-i18n="blog.cat.calories">Calorie counting</span><span class="n">4</span></button>
+          <button class="bl-chip" type="button" data-filter="calories" aria-pressed="false"><span data-i18n="blog.cat.calories">Calorie counting</span><span class="n">5</span></button>
           <button class="bl-chip" type="button" data-filter="mealplan" aria-pressed="false"><span data-i18n="blog.cat.mealplan">Meal planning</span><span class="n">4</span></button>
           <button class="bl-chip" type="button" data-filter="lifestyle" aria-pressed="false"><span data-i18n="blog.cat.lifestyle">Lifestyle</span><span class="n">2</span></button>
         </div>

@@ -48,6 +48,16 @@ window.FOTOCAL_I18N = {
     "nav.contactUs": "Contact Us",
     "nav.cta": "Get the app",
 
+    /* ── 404 ── */
+    "nf.title": "This page went missing.",
+    "nf.body": "The link may be out of date, or the address may have a typo in it. Nothing is broken on your side \u2014 here is the way back.",
+    "nf.home": "Back to home",
+    "nf.blog": "Read the blog",
+    "nf.go": "Go \u2192",
+    "nf.c1": "One photo, all your nutrition",
+    "nf.c2": "Everything the app does",
+    "nf.c3": "54 practical guides on eating better",
+
     /* ── Screenshot placeholders ── */
     "slot.pending": "Screenshot coming soon",
 
@@ -293,6 +303,16 @@ window.FOTOCAL_I18N = {
     "nav.aboutUs": "Sobre nosotros",
     "nav.contactUs": "Contacto",
     "nav.cta": "Descargar",
+
+    /* ── 404 ── */
+    "nf.title": "Esta página se ha perdido.",
+    "nf.body": "Puede que el enlace esté anticuado o que la dirección tenga una errata. No has hecho nada mal \u2014 por aquí se vuelve.",
+    "nf.home": "Volver al inicio",
+    "nf.blog": "Leer el blog",
+    "nf.go": "Ir \u2192",
+    "nf.c1": "Una foto y toda tu nutrición",
+    "nf.c2": "Todo lo que hace la app",
+    "nf.c3": "54 guías prácticas para comer mejor",
 
     /* ── Screenshot placeholders ── */
     "slot.pending": "Captura próximamente",

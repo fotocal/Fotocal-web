@@ -12,6 +12,43 @@
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/about/">
   <meta name="theme-color" content="#FDF9F0">
 
+  <!-- Organization markup. Bound by the same content rule as the page
+       body below: name, site, logo, the four real social accounts and
+       what the product is. No founding date, address, headcount or
+       founder — none of those have been supplied, and structured data
+       is exactly the wrong place to guess. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fotocal",
+  "url": "https://getfotocal.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://getfotocal.com/assets/img/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "description": "Fotocal is an AI nutrition tracking app for Android. Photograph a meal and it returns calories, macros, micronutrients and a health score, with an AI coach that answers questions about your own diary.",
+  "sameAs": [
+    "https://www.facebook.com/share/1HbMUZSBJ6/",
+    "https://www.instagram.com/getfotocal",
+    "https://youtube.com/@getfotocal",
+    "https://www.tiktok.com/@getfotocal.com"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getfotocal.com/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://getfotocal.com/about/" }
+  ]
+}
+  </script>
+
   <!-- CONTENT RULE FOR THIS PAGE — please keep to it.
        Everything here is either mission, belief or a verifiable fact
        about the app. There are deliberately NO founding dates, team
@@ -104,12 +141,12 @@
       <div class="container">
         <div class="flow-row reveal" style="padding-top:0;border:0">
           <div class="flow-visual">
-            <div class="phone phone-tilt">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot" data-src="../assets/img/screens/diary.png" data-label="Meal diary — a day, as it happened"></div>
-              </div>
-            </div>
+            <figure class="shot-card shot-tilt-l shot-wide">
+              <img src="../assets/img/pages/about-diary.webp" width="1100" height="733"
+                   loading="lazy" decoding="async"
+                   alt="Breakfast, lunch and dinner laid out side by side across one day"
+                   data-i18n-alt="about.diaryAlt">
+            </figure>
           </div>
           <div class="flow-copy">
             <span class="kicker" data-i18n="about.story.kicker">Why Fotocal exists</span>
@@ -156,12 +193,12 @@
       <div class="container">
         <div class="flow-row flip reveal" style="padding-top:0;border:0">
           <div class="flow-visual">
-            <div class="phone">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-slot" data-src="../assets/img/screens/progress.png" data-label="Progress — your transformation over time"></div>
-              </div>
-            </div>
+            <figure class="shot-card shot-tilt-r shot-wide">
+              <img src="../assets/img/pages/about-progress.webp" width="1100" height="733"
+                   loading="lazy" decoding="async"
+                   alt="A rising progress line above a journal, a water glass and fresh fruit"
+                   data-i18n-alt="about.progressAlt">
+            </figure>
           </div>
           <div class="flow-copy">
             <span class="kicker" data-i18n="about.empower.kicker">Your data, your understanding</span>

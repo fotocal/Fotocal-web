@@ -251,3 +251,24 @@
 /* related posts */
 .art-related { padding: 3.5rem 0 1rem; }
 .art-related .bl-grid { margin-top: 1.6rem; }
+
+/* ═══════════════════════════════════════════════
+   TOUCH ERGONOMICS
+   Measured at 390px with a coarse pointer. The category chips came in
+   at 42px and the breadcrumb links at 22px — the latter sit inside a
+   single flex row, so they get vertical padding rather than a
+   min-height, which would otherwise stretch the whole row.
+   ═══════════════════════════════════════════════ */
+@media (pointer: coarse) {
+  .bl-chip { min-height: 44px; }                        /* was 42 */
+  .art-crumbs { align-items: center; }
+  .art-crumbs a {
+    display: inline-flex; align-items: center;
+    min-height: 44px; padding-inline: .15rem;           /* was 22 tall */
+  }
+}
+
+/* Press feedback for the category filter, which is a button and had
+   only a hover state — invisible on touch. */
+.bl-chip:active { transform: scale(.96); background: var(--cream-2); }
+.art-crumbs a:active { color: var(--pink); }

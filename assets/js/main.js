@@ -243,8 +243,20 @@
     var countEl = document.getElementById("blCount");
     var emptyEl = document.getElementById("blEmpty");
 
+    /* The featured article lives outside #blGrid so it can render large,
+       but it is a post like any other: it carries data-cat, it counts
+       toward the chip totals, and it hides when the filter excludes it.
+       Leaving it out was why "All" said 53 against 54 articles, and why
+       filtering by Mindset still showed a calorie-counting piece. */
+    var featured = document.getElementById("blFeature");
+
     var applyFilter = function (want) {
       var shown = 0;
+      if (featured) {
+        var fMatch = want === "all" || featured.getAttribute("data-cat") === want;
+        featured.hidden = !fMatch;
+        if (fMatch) shown++;
+      }
       cards.forEach(function (c) {
         var match = want === "all" || c.getAttribute("data-cat") === want;
         c.hidden = !match;

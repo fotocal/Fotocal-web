@@ -79,11 +79,47 @@ ul, ol { list-style: none; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 ::selection { background: rgba(233,30,99,.18); color: var(--ink); }
 
-/* Visible focus for keyboard users only */
+/* ═══════════════════════════════════════════════
+   INTERACTION LAYER
+   Three rules that decide whether the site feels built or assembled.
+   ═══════════════════════════════════════════════ */
+
+/* 1. Kill the grey/blue box Android and iOS paint over anything
+      tappable. It is the single loudest "this is a web page" tell on
+      mobile, and it is drawn on the element's *bounding box*, so on the
+      rounded logo tile it appeared as a hard rectangle with the logo
+      floating inside it.
+
+      Removing it is only safe because everything below replaces the
+      feedback it was providing. A tap that produces no response reads
+      as a dropped tap, and people tap again. */
+html { -webkit-tap-highlight-color: transparent; }
+
+/* 2. Skip the browser's legacy 300ms wait for a possible double-tap.
+      Applied to interactive elements rather than to the whole document,
+      so pinch-zoom on images and text still works normally. */
+a, button, summary, [role="button"], input, textarea, label { touch-action: manipulation; }
+
+/* 3. Give the press itself back. `:active` fires on pointer-down, so it
+      is the honest replacement for the highlight: the element visibly
+      takes the press, then releases. Kept small — 1–3% — because the
+      point is confirmation, not animation. */
+a:active, button:active, summary:active { -webkit-tap-highlight-color: transparent; }
+
+/* Visible focus for keyboard users only. Deliberately untouched by the
+   rules above: removing the tap highlight must never cost the focus
+   ring, which is the only affordance a keyboard user has. */
 :focus-visible {
   outline: 2px solid var(--pink);
   outline-offset: 3px;
   border-radius: 6px;
+}
+/* Anything with its own rounded shape should have the ring follow it
+   rather than bracketing a rectangle around it. */
+.btn:focus-visible, .play-badge:focus-visible, .lang-current:focus-visible,
+.footer-social a:focus-visible, .nav-link:focus-visible, .nav-caret-btn:focus-visible,
+.m-caret-btn:focus-visible, .nav-burger:focus-visible, .nav-logo:focus-visible {
+  outline-offset: 2px;
 }
 
 .sr-only {
@@ -259,6 +295,38 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 .nav-panel a:hover, .nav-panel a:focus-visible { background: var(--cream-2); color: var(--pink); }
 
+/* ─── Split nav item: label navigates, caret discloses ───
+   Used by Features, which is both a real page and the front of five.
+   The caret is its own button so it carries its own aria-expanded and
+   is not announced as part of the link.
+
+   The two halves share one pill: the tint lives on the <li>, not on
+   either control, so hovering the label or the caret lights the same
+   shape. Tinting them separately made the caret look like a second,
+   unrelated chip parked next to the word. */
+.nav-split {
+  display: flex; align-items: center;
+  border-radius: 999px;
+  transition: background .2s ease;
+}
+.nav-split:hover,
+.nav-item.open.nav-split { background: rgba(233,30,99,.06); }
+.nav-split > .nav-link { padding-right: .3rem; }
+.nav-split > .nav-link:hover,
+.nav-split > .nav-link:active { background: transparent; }
+.nav-caret-btn {
+  display: inline-grid; place-items: center;
+  width: 26px; height: 26px; margin-right: .3rem;
+  border-radius: 50%;
+  color: var(--muted);
+  transition: color .2s ease;
+}
+.nav-split:hover .nav-caret-btn { color: var(--ink); }
+.nav-caret-btn:hover,
+.nav-item.open > .nav-caret-btn { color: var(--pink); }
+.nav-caret-btn:active { background: transparent; }
+.nav-item.open > .nav-caret-btn .nav-caret { transform: rotate(180deg); }
+
 .nav-actions { display: flex; align-items: center; gap: .5rem; flex: none; }
 
 /* Language toggle */
@@ -311,6 +379,20 @@ body.nav-locked { overflow: hidden; }
 .m-link[aria-current="page"] { color: var(--pink); }
 .m-link .nav-caret { width: 13px; height: 13px; color: var(--muted); }
 .m-item.open .m-link .nav-caret { transform: rotate(180deg); }
+
+/* Mobile split row — same idea as .nav-split. The caret gets a full
+   44px square of its own so tapping "Features" to navigate and tapping
+   the caret to expand are not the same gesture with a 3px margin. */
+.m-split-row { display: flex; align-items: center; gap: .25rem; }
+.m-split-row > .m-link { flex: 1 1 auto; }
+.m-caret-btn {
+  flex: none; display: inline-grid; place-items: center;
+  width: 44px; height: 44px; margin-right: -.25rem;
+  border-radius: 10px; color: var(--muted);
+  transition: color .2s ease, background .2s ease;
+}
+.m-caret-btn .nav-caret { width: 14px; height: 14px; }
+.m-item.open .m-caret-btn .nav-caret { transform: rotate(180deg); }
 
 /* Accordion sub-panel */
 .m-panel {
@@ -389,6 +471,53 @@ body.nav-locked { overflow: hidden; }
 .phone-duo { position: relative; width: min(260px, 74vw); }
 .phone-duo .phone-front { position: relative; z-index: 2; transform: rotate(2.5deg); }
 .phone-duo .phone-back  { display: none; }
+
+/* ═══════════════════════════════════════════════
+   SHOT CARD — a screenshot or photo shown as a clean
+   rounded card.
+
+   Deliberately NOT a phone mockup. The app's own screens
+   are already cream, rounded and full-bleed, so a dark
+   bezel around them added chrome without adding meaning,
+   and it fought the warm palette everywhere else. A card
+   with a hairline ring and a real shadow reads as a
+   product surface instead of a prop.
+
+   The ring matters more than it looks: these screenshots
+   are cream on a cream page, so without it the image has
+   no edge at all.
+   ═══════════════════════════════════════════════ */
+.shot-card {
+  display: block;   /* used on <figure> and on <span> — pin it either way */
+  position: relative; margin: 0;
+  border-radius: var(--r-xl); overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-lift), 0 0 0 1px var(--border-soft);
+  transition: transform .55s cubic-bezier(.2,.8,.3,1), box-shadow .55s ease;
+}
+.shot-card > img { display: block; width: 100%; height: auto; }
+
+/* Subtle tilt. Alternate the direction down a page so a column of
+   cards reads as hand-placed rather than as one block repeated. */
+.shot-tilt-l { transform: rotate(-1.5deg); }
+.shot-tilt-r { transform: rotate(1.5deg); }
+
+/* Settle to square on hover. `.shot-lift` lets a parent (a step, a
+   figure wrapper) own the hover so the whole cell is the target. */
+.shot-card:hover,
+.shot-lift:hover .shot-card {
+  transform: rotate(0) translateY(-6px);
+  box-shadow: 0 38px 80px -30px rgba(27,35,64,.38), 0 0 0 1px var(--border);
+}
+
+/* Cover-cropped variant, for when a fixed aspect matters more than
+   showing the whole frame (the meal photo in "Three steps"). */
+.shot-cover { aspect-ratio: 4 / 5; }
+.shot-cover > img { height: 100%; object-fit: cover; }
+
+/* Landscape artwork sitting in a half-width column. Capped so a 1400px
+   source is not stretched past the resolution it actually has. */
+.shot-wide { width: 100%; max-width: 520px; margin-inline: auto; }
 
 /* Screenshot placeholder.
    .screen-slot is the ONLY thing in the markup. assets/js/layout.js tries to
@@ -641,13 +770,35 @@ body.nav-locked { overflow: hidden; }
 }
 
 /* ═══════════════════════════════════════════════
-   "COMING SOON" STUB PAGES
+   CENTRED MESSAGE PAGE
+   Written for the "coming soon" stubs, which have all since become real
+   pages. /404.html is the only consumer now — the shell is exactly what
+   a not-found page wants, so it is reused rather than duplicated.
    ═══════════════════════════════════════════════ */
 .soon {
   min-height: calc(100vh - var(--nav-h) - 120px);
   display: grid; place-items: center; text-align: center; padding: 4rem 0;
 }
 .soon-inner { max-width: 46ch; }
+
+/* ─── 404 numeral ───
+   Set in the display face and washed with the brand gradient, so the
+   error reads as part of the site rather than as a browser artefact. */
+.nf-num {
+  font-family: var(--font-display);
+  font-size: clamp(5.5rem, 20vw, 11rem);
+  font-weight: 600; line-height: .88; letter-spacing: -.045em;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  margin-bottom: .6rem;
+  user-select: none;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .nf-num { -webkit-text-fill-color: currentColor; color: var(--pink); }
+}
+/* The card row is wider than the 46ch message column it sits under. */
+.nf-links { width: min(1000px, 100%); margin: 2.4rem auto 0; }
 .soon-mark {
   width: 62px; height: 62px; margin: 0 auto 1.5rem; border-radius: 18px;
   background: var(--grad-wash); border: 1px solid var(--border-pink);
@@ -833,3 +984,103 @@ html { scroll-padding-top: calc(var(--nav-h) + 24px); }
 .compare-note { text-align: center; font-size: .8rem; color: var(--muted); max-width: 64ch; margin: .75rem auto 0; }
 .compare-cta { text-align: center; margin-top: 1.75rem; }
 @media (min-width: 900px) { .compare { font-size: .98rem; } .compare th, .compare td { padding: .95rem 1.15rem; } }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PRESS FEEDBACK  +  TOUCH ERGONOMICS
+
+   The tap highlight is gone (see the interaction layer near the top),
+   so every tappable thing here states what a press looks like. The
+   transitions are already declared on each component; :active only
+   changes the end state, which is why the press feels instant on the
+   way down and eased on the way back.
+
+   Sizing follows the 44px minimum for touch pointers only. A 38px
+   target is perfectly comfortable with a mouse, and inflating
+   everything for every input device just makes desktop look clumsy.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Buttons and badges ── */
+.btn-cta:active {
+  transform: translateY(0) scale(.975);
+  box-shadow: 0 8px 18px -8px rgba(233,30,99,.42);
+}
+.btn-outline:active { transform: translateY(0) scale(.975); background: var(--cream-2); }
+.btn-ghost:active { transform: translateX(1px); opacity: .75; }
+.play-badge:active { transform: translateY(0) scale(.975); box-shadow: var(--shadow-card); }
+
+/* ── Nav ── */
+.nav-logo:active { opacity: .72; }
+.nav-link:active { background: rgba(233,30,99,.11); }
+.nav-caret-btn:active, .m-caret-btn:active { background: rgba(233,30,99,.11); color: var(--pink); }
+.nav-panel a:active, .m-panel a:active { background: var(--cream-3); color: var(--pink); }
+.m-link:active { color: var(--pink); }
+.nav-burger:active { background: var(--cream-2); }
+.lang-current:active { background: rgba(233,30,99,.11); }
+.lang-item:active { background: var(--cream-3); }
+
+/* ── Cards ──
+   Cards lift on hover; on press they settle back toward the page
+   instead of lifting further, which is what a physical press does. */
+.card:active, .fc-rcard:active, .sp-card:active, .sp-step:active,
+.plan:active, .fx-goal:active, .log-card:active {
+  transform: translateY(-1px) scale(.995);
+  box-shadow: var(--shadow-sm);
+}
+.footer-social a:active { transform: translateY(0) scale(.94); background: var(--cream-2); }
+.footer-col a:active { color: var(--pink); }
+.faq-item summary:active { background: var(--cream-2); }
+.shot-card:active { transition-duration: .18s; }
+
+/* ── Touch ergonomics ──
+   Measured, not guessed: every one of these was under 44px in a real
+   touch-pointer render at 390px. The numbers they were at are in
+   brackets. */
+@media (pointer: coarse) {
+  /* Dropdown and footer link rows: the text is small, the row is not. */
+  .nav-panel a, .m-panel a { min-height: 44px; display: flex; align-items: center; }
+  .lang-item { min-height: 44px; }
+  .btn-ghost { min-height: 44px; padding-inline: .6rem; }
+
+  .nav-logo   { min-height: 44px; }                    /* was 34 */
+  .lang-current { min-height: 44px; }                  /* was 36 */
+  .nav-burger { width: 44px; height: 44px; }           /* was 40 */
+  .btn        { min-height: 44px; }                    /* was 42 */
+  .btn-sm     { min-height: 44px; }                    /* was 33–35 */
+  .play-badge { min-height: 44px; }
+  .fx-jump a  { min-height: 44px; }                    /* was 42 */
+  /* Footer columns were the worst offenders — 35px rows stacked with
+     8px gaps, so neighbouring links were nearly touching. */
+  .footer-col a {
+    display: flex; align-items: center;
+    min-height: 44px; margin-bottom: .1rem;            /* was 35 + .55rem */
+  }
+  /* A summary row is the whole tappable area of an FAQ item. */
+  .faq-item summary { min-height: 52px; }
+  /* Hover lifts are noise on touch — they fire on tap and stick until
+     you tap elsewhere, which reads as a stuck card. Press states above
+     do the job instead. */
+  .card:hover, .fc-rcard:hover, .sp-card:hover, .sp-step:hover,
+  .plan:hover, .fx-goal:hover, .shot-card:hover, .shot-lift:hover .shot-card {
+    transform: none;
+  }
+}
+
+/* ── Drawer scroll containment ──
+   Without this, flicking past the end of the open menu scrolls the page
+   behind it, and closing the drawer drops you somewhere you never went. */
+.nav-mobile { overscroll-behavior: contain; }
+
+/* ── Typography niceties ──
+   Headings are short and set large, so a lone trailing word is very
+   visible; balance evens the line lengths. Body copy uses `pretty`,
+   which only fixes the last line and does not reflow whole paragraphs. */
+h1, h2, h3, .section-title, .fp-hero-copy h1, .final-inner h2 { text-wrap: balance; }
+p, .lead, .section-sub { text-wrap: pretty; }
+
+/* ── Media defaults ──
+   Every <img> on the site carries width/height, so the box is reserved
+   before the bytes arrive and nothing below it jumps. These two lines
+   make that hold true even when a stylesheet constrains one axis. */
+img { height: auto; }
+img[width][height] { max-width: 100%; }

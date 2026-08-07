@@ -1,0 +1,715 @@
+{
+ "weight-loss": [
+  {
+   "key": "sp.weight-loss.t01",
+   "tag": "span",
+   "html": false,
+   "en": "Weight loss",
+   "text": "Weight loss"
+  },
+  {
+   "key": "sp.weight-loss.t02",
+   "tag": "h1",
+   "html": true,
+   "en": "Lose weight without turning eating into a <em class=\"accent\">second job</em>.",
+   "text": "Lose weight without turning eating into a second job."
+  },
+  {
+   "key": "sp.weight-loss.t03",
+   "tag": "p",
+   "html": false,
+   "en": "Weight loss comes down to one thing: a gentle, consistent calorie deficit you can actually keep up. Fotocal makes the tracking part almost effortless — you take a photo, it does the maths — so you can focus on the habit instead of the spreadsheet.",
+   "text": "Weight loss comes down to one thing: a gentle, consistent calorie deficit you can actually keep up. Fotocal makes the tracking part almost effortless — you take a photo, it does the maths — so you can focus on the habit instead of the spreadsheet."
+  },
+  {
+   "key": "sp.weight-loss.t04",
+   "tag": "span",
+   "html": false,
+   "en": "The method",
+   "text": "The method"
+  },
+  {
+   "key": "sp.weight-loss.t05",
+   "tag": "h2",
+   "html": true,
+   "en": "Four steps to steady, <em class=\"accent\">sustainable</em> loss.",
+   "text": "Four steps to steady, sustainable loss."
+  },
+  {
+   "key": "sp.weight-loss.t06",
+   "tag": "p",
+   "html": false,
+   "en": "No crash diets, no banned foods. Just a repeatable loop that fits around your real life.",
+   "text": "No crash diets, no banned foods. Just a repeatable loop that fits around your real life."
+  },
+  {
+   "key": "sp.weight-loss.t07",
+   "tag": "h3",
+   "html": false,
+   "en": "Set a realistic target",
+   "text": "Set a realistic target"
+  },
+  {
+   "key": "sp.weight-loss.t08",
+   "tag": "p",
+   "html": false,
+   "en": "Tell Fotocal your age, height, weight, activity and goal. It sets a daily calorie and macro target aimed at a safe ~0.5&ndash;1&nbsp;kg per week — fast enough to see progress, gentle enough to keep.",
+   "text": "Tell Fotocal your age, height, weight, activity and goal. It sets a daily calorie and macro target aimed at a safe ~0.5&ndash;1&nbsp;kg per week — fast enough to see progress, gentle enough to keep."
+  },
+  {
+   "key": "sp.weight-loss.t09",
+   "tag": "h3",
+   "html": false,
+   "en": "Log meals with a photo",
+   "text": "Log meals with a photo"
+  },
+  {
+   "key": "sp.weight-loss.t10",
+   "tag": "p",
+   "html": false,
+   "en": "Snap your plate and the AI estimates calories and macros in seconds. When logging is this quick, you actually keep doing it — and consistency is what drives weight loss.",
+   "text": "Snap your plate and the AI estimates calories and macros in seconds. When logging is this quick, you actually keep doing it — and consistency is what drives weight loss."
+  },
+  {
+   "key": "sp.weight-loss.t11",
+   "tag": "h3",
+   "html": false,
+   "en": "Stay in a gentle deficit",
+   "text": "Stay in a gentle deficit"
+  },
+  {
+   "key": "sp.weight-loss.t12",
+   "tag": "p",
+   "html": false,
+   "en": "Your calorie ring shows how much room is left in the day. Fotocal nudges you toward higher-protein, higher-quality choices so you feel full on fewer calories.",
+   "text": "Your calorie ring shows how much room is left in the day. Fotocal nudges you toward higher-protein, higher-quality choices so you feel full on fewer calories."
+  },
+  {
+   "key": "sp.weight-loss.t13",
+   "tag": "h3",
+   "html": false,
+   "en": "Follow the trend, not the scale",
+   "text": "Follow the trend, not the scale"
+  },
+  {
+   "key": "sp.weight-loss.t14",
+   "tag": "p",
+   "html": false,
+   "en": "Weight bounces daily with water and salt. Fotocal's weight chart smooths the noise so you can see the real direction — and adjust with your Weekly Report.",
+   "text": "Weight bounces daily with water and salt. Fotocal's weight chart smooths the noise so you can see the real direction — and adjust with your Weekly Report."
+  },
+  {
+   "key": "sp.weight-loss.t15",
+   "tag": "span",
+   "html": false,
+   "en": "Why the photo matters",
+   "text": "Why the photo matters"
+  },
+  {
+   "key": "sp.weight-loss.t16",
+   "tag": "h3",
+   "html": false,
+   "en": "Effortless logging is the whole game",
+   "text": "Effortless logging is the whole game"
+  },
+  {
+   "key": "sp.weight-loss.t17",
+   "tag": "p",
+   "html": false,
+   "en": "Most people quit calorie counting in the first week — not because it does not work, but because it is tedious. Fotocal removes the tedium. A photo replaces the database search, the weighing and the guessing, so the habit survives past day three.",
+   "text": "Most people quit calorie counting in the first week — not because it does not work, but because it is tedious. Fotocal removes the tedium. A photo replaces the database search, the weighing and the guessing, so the habit survives past day three."
+  },
+  {
+   "key": "sp.weight-loss.t18",
+   "tag": "li",
+   "html": false,
+   "en": "AI photo scanning for home-cooked and restaurant meals",
+   "text": "AI photo scanning for home-cooked and restaurant meals"
+  },
+  {
+   "key": "sp.weight-loss.t19",
+   "tag": "li",
+   "html": false,
+   "en": "Barcode scanner for packaged food",
+   "text": "Barcode scanner for packaged food"
+  },
+  {
+   "key": "sp.weight-loss.t20",
+   "tag": "li",
+   "html": false,
+   "en": "Quality score points you at more filling, lower-calorie swaps",
+   "text": "Quality score points you at more filling, lower-calorie swaps"
+  },
+  {
+   "key": "sp.weight-loss.t21",
+   "tag": "li",
+   "html": false,
+   "en": "Automatic step tracking with Health Connect feeds your daily budget",
+   "text": "Automatic step tracking with Health Connect feeds your daily budget"
+  },
+  {
+   "key": "sp.weight-loss.t22",
+   "tag": "span",
+   "html": false,
+   "en": "Staying consistent",
+   "text": "Staying consistent"
+  },
+  {
+   "key": "sp.weight-loss.t23",
+   "tag": "h3",
+   "html": false,
+   "en": "A coach in your pocket for the hard days",
+   "text": "A coach in your pocket for the hard days"
+  },
+  {
+   "key": "sp.weight-loss.t24",
+   "tag": "p",
+   "html": false,
+   "en": "Plateaus and social meals are where diets fall apart. Coach Kal knows your diary and goals, so it can tell you what to order at a restaurant, why the scale has stalled, or how to spend the calories you have left — without guilt or extreme rules.",
+   "text": "Plateaus and social meals are where diets fall apart. Coach Kal knows your diary and goals, so it can tell you what to order at a restaurant, why the scale has stalled, or how to spend the calories you have left — without guilt or extreme rules."
+  },
+  {
+   "key": "sp.weight-loss.t25",
+   "tag": "li",
+   "html": false,
+   "en": "Coach Kal: practical, judgement-free advice 24/7",
+   "text": "Coach Kal: practical, judgement-free advice 24/7"
+  },
+  {
+   "key": "sp.weight-loss.t26",
+   "tag": "li",
+   "html": false,
+   "en": "Streaks turn daily logging into a habit",
+   "text": "Streaks turn daily logging into a habit"
+  },
+  {
+   "key": "sp.weight-loss.t27",
+   "tag": "li",
+   "html": false,
+   "en": "Weekly Report shows what worked and what to change",
+   "text": "Weekly Report shows what worked and what to change"
+  },
+  {
+   "key": "sp.weight-loss.t28",
+   "tag": "li",
+   "html": false,
+   "en": "Log by photo, voice or barcode — whichever is fastest",
+   "text": "Log by photo, voice or barcode — whichever is fastest"
+  },
+  {
+   "key": "sp.weight-loss.t29",
+   "tag": "span",
+   "html": false,
+   "en": "Guides",
+   "text": "Guides"
+  },
+  {
+   "key": "sp.weight-loss.t30",
+   "tag": "span",
+   "html": false,
+   "en": "The best foods for weight loss",
+   "text": "The best foods for weight loss"
+  },
+  {
+   "key": "sp.weight-loss.t31",
+   "tag": "span",
+   "html": false,
+   "en": "How fast should you lose weight?",
+   "text": "How fast should you lose weight?"
+  },
+  {
+   "key": "sp.weight-loss.t32",
+   "tag": "span",
+   "html": false,
+   "en": "The calorie deficit, explained",
+   "text": "The calorie deficit, explained"
+  },
+  {
+   "key": "sp.weight-loss.t33",
+   "tag": "h2",
+   "html": false,
+   "en": "Start losing weight the sustainable way.",
+   "text": "Start losing weight the sustainable way."
+  },
+  {
+   "key": "sp.weight-loss.t34",
+   "tag": "p",
+   "html": false,
+   "en": "Download Fotocal, set your goal, and let a photo do the hard part.",
+   "text": "Download Fotocal, set your goal, and let a photo do the hard part."
+  }
+ ],
+ "nutrition-diet": [
+  {
+   "key": "sp.nutrition-diet.t01",
+   "tag": "span",
+   "html": false,
+   "en": "Nutrition &amp; diet",
+   "text": "Nutrition &amp; diet"
+  },
+  {
+   "key": "sp.nutrition-diet.t02",
+   "tag": "h1",
+   "html": true,
+   "en": "Understand what you eat — <em class=\"accent\">not just how much</em>.",
+   "text": "Understand what you eat — not just how much."
+  },
+  {
+   "key": "sp.nutrition-diet.t03",
+   "tag": "p",
+   "html": false,
+   "en": "Calories are only half the story. Fotocal shows you the protein, carbs and fat behind every meal, scores its quality, and suggests healthier swaps — so you eat better, not just less. It fits whatever way you like to eat.",
+   "text": "Calories are only half the story. Fotocal shows you the protein, carbs and fat behind every meal, scores its quality, and suggests healthier swaps — so you eat better, not just less. It fits whatever way you like to eat."
+  },
+  {
+   "key": "sp.nutrition-diet.t04",
+   "tag": "span",
+   "html": false,
+   "en": "What every meal tells you",
+   "text": "What every meal tells you"
+  },
+  {
+   "key": "sp.nutrition-diet.t05",
+   "tag": "h2",
+   "html": true,
+   "en": "A full nutrition picture, <em class=\"accent\">in one photo</em>.",
+   "text": "A full nutrition picture, in one photo."
+  },
+  {
+   "key": "sp.nutrition-diet.t06",
+   "tag": "h4",
+   "html": false,
+   "en": "Calories &amp; macros",
+   "text": "Calories &amp; macros"
+  },
+  {
+   "key": "sp.nutrition-diet.t07",
+   "tag": "p",
+   "html": false,
+   "en": "Every meal is broken down into calories, protein, carbs and fat, with running daily totals against your targets.",
+   "text": "Every meal is broken down into calories, protein, carbs and fat, with running daily totals against your targets."
+  },
+  {
+   "key": "sp.nutrition-diet.t08",
+   "tag": "h4",
+   "html": false,
+   "en": "Quality score (1&ndash;10)",
+   "text": "Quality score (1&ndash;10)"
+  },
+  {
+   "key": "sp.nutrition-diet.t09",
+   "tag": "p",
+   "html": false,
+   "en": "A simple score rates how nourishing each meal is — so you learn what \"good\" looks like without a nutrition degree.",
+   "text": "A simple score rates how nourishing each meal is — so you learn what \"good\" looks like without a nutrition degree."
+  },
+  {
+   "key": "sp.nutrition-diet.t10",
+   "tag": "h4",
+   "html": false,
+   "en": "Healthier swaps",
+   "text": "Healthier swaps"
+  },
+  {
+   "key": "sp.nutrition-diet.t11",
+   "tag": "p",
+   "html": false,
+   "en": "Fotocal suggests small, realistic changes — a leaner protein, more fibre, less added sugar — to lift a meal's quality.",
+   "text": "Fotocal suggests small, realistic changes — a leaner protein, more fibre, less added sugar — to lift a meal's quality."
+  },
+  {
+   "key": "sp.nutrition-diet.t12",
+   "tag": "h4",
+   "html": false,
+   "en": "Hydration",
+   "text": "Hydration"
+  },
+  {
+   "key": "sp.nutrition-diet.t13",
+   "tag": "p",
+   "html": false,
+   "en": "Track water alongside food, because good nutrition is not only about what is on the plate.",
+   "text": "Track water alongside food, because good nutrition is not only about what is on the plate."
+  },
+  {
+   "key": "sp.nutrition-diet.t14",
+   "tag": "span",
+   "html": false,
+   "en": "Log anything, fast",
+   "text": "Log anything, fast"
+  },
+  {
+   "key": "sp.nutrition-diet.t15",
+   "tag": "h3",
+   "html": false,
+   "en": "Three ways to capture a meal",
+   "text": "Three ways to capture a meal"
+  },
+  {
+   "key": "sp.nutrition-diet.t16",
+   "tag": "p",
+   "html": false,
+   "en": "However you eat, Fotocal has a quick way to log it — no endless database scrolling.",
+   "text": "However you eat, Fotocal has a quick way to log it — no endless database scrolling."
+  },
+  {
+   "key": "sp.nutrition-diet.t17",
+   "tag": "li",
+   "html": true,
+   "en": "<strong>Photo scan</strong> — point the camera at any dish, home or restaurant",
+   "text": "Photo scan — point the camera at any dish, home or restaurant"
+  },
+  {
+   "key": "sp.nutrition-diet.t18",
+   "tag": "li",
+   "html": true,
+   "en": "<strong>Barcode scan</strong> — instant nutrition for packaged products",
+   "text": "Barcode scan — instant nutrition for packaged products"
+  },
+  {
+   "key": "sp.nutrition-diet.t19",
+   "tag": "li",
+   "html": true,
+   "en": "<strong>Menu scan</strong> — photograph a restaurant menu and get the best-fitting option",
+   "text": "Menu scan — photograph a restaurant menu and get the best-fitting option"
+  },
+  {
+   "key": "sp.nutrition-diet.t20",
+   "tag": "span",
+   "html": false,
+   "en": "Any way of eating",
+   "text": "Any way of eating"
+  },
+  {
+   "key": "sp.nutrition-diet.t21",
+   "tag": "h3",
+   "html": false,
+   "en": "Built around your diet, not against it",
+   "text": "Built around your diet, not against it"
+  },
+  {
+   "key": "sp.nutrition-diet.t22",
+   "tag": "p",
+   "html": false,
+   "en": "Fotocal tracks the numbers so your chosen approach becomes easy to follow — it never forces one diet on you.",
+   "text": "Fotocal tracks the numbers so your chosen approach becomes easy to follow — it never forces one diet on you."
+  },
+  {
+   "key": "sp.nutrition-diet.t23",
+   "tag": "li",
+   "html": false,
+   "en": "Higher-protein and muscle-focused goals",
+   "text": "Higher-protein and muscle-focused goals"
+  },
+  {
+   "key": "sp.nutrition-diet.t24",
+   "tag": "li",
+   "html": false,
+   "en": "Lower-carb and keto-style eating",
+   "text": "Lower-carb and keto-style eating"
+  },
+  {
+   "key": "sp.nutrition-diet.t25",
+   "tag": "li",
+   "html": false,
+   "en": "Vegetarian and plant-forward plates",
+   "text": "Vegetarian and plant-forward plates"
+  },
+  {
+   "key": "sp.nutrition-diet.t26",
+   "tag": "li",
+   "html": false,
+   "en": "Balanced, no-rules eating with better awareness",
+   "text": "Balanced, no-rules eating with better awareness"
+  },
+  {
+   "key": "sp.nutrition-diet.t27",
+   "tag": "span",
+   "html": false,
+   "en": "Guidance that fits you",
+   "text": "Guidance that fits you"
+  },
+  {
+   "key": "sp.nutrition-diet.t28",
+   "tag": "h2",
+   "html": true,
+   "en": "Ask Coach Kal <em class=\"accent\">anything</em> about food.",
+   "text": "Ask Coach Kal anything about food."
+  },
+  {
+   "key": "sp.nutrition-diet.t29",
+   "tag": "p",
+   "html": false,
+   "en": "\"What should I order at an Italian tonight?\" \"How do I get more protein without more calories?\" Coach Kal sees your diary and goals and answers with specific, realistic advice — plus personalised recommendations and a Weekly Report that shows how your nutrition is really trending.",
+   "text": "\"What should I order at an Italian tonight?\" \"How do I get more protein without more calories?\" Coach Kal sees your diary and goals and answers with specific, realistic advice — plus personalised recommendations and a Weekly Report that shows how your nutrition is really trending."
+  },
+  {
+   "key": "sp.nutrition-diet.t30",
+   "tag": "span",
+   "html": false,
+   "en": "Guides",
+   "text": "Guides"
+  },
+  {
+   "key": "sp.nutrition-diet.t31",
+   "tag": "span",
+   "html": false,
+   "en": "Macronutrients 101",
+   "text": "Macronutrients 101"
+  },
+  {
+   "key": "sp.nutrition-diet.t32",
+   "tag": "span",
+   "html": false,
+   "en": "What a balanced plate looks like",
+   "text": "What a balanced plate looks like"
+  },
+  {
+   "key": "sp.nutrition-diet.t33",
+   "tag": "span",
+   "html": false,
+   "en": "Fibre: the underrated nutrient",
+   "text": "Fibre: the underrated nutrient"
+  },
+  {
+   "key": "sp.nutrition-diet.t34",
+   "tag": "h2",
+   "html": false,
+   "en": "Eat better, one photo at a time.",
+   "text": "Eat better, one photo at a time."
+  },
+  {
+   "key": "sp.nutrition-diet.t35",
+   "tag": "p",
+   "html": false,
+   "en": "Download Fotocal and see the full nutrition story behind every meal.",
+   "text": "Download Fotocal and see the full nutrition story behind every meal."
+  }
+ ],
+ "lifestyle-mindset": [
+  {
+   "key": "sp.lifestyle-mindset.t01",
+   "tag": "span",
+   "html": false,
+   "en": "Lifestyle &amp; mindset",
+   "text": "Lifestyle &amp; mindset"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t02",
+   "tag": "h1",
+   "html": true,
+   "en": "Healthy habits that <em class=\"accent\">actually stick</em>.",
+   "text": "Healthy habits that actually stick."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t03",
+   "tag": "p",
+   "html": false,
+   "en": "The hardest part of eating well is not knowing what to do — it is keeping it up when life gets busy. Fotocal is built around the psychology of habit: small wins, gentle nudges, and a coach that never makes you feel guilty.",
+   "text": "The hardest part of eating well is not knowing what to do — it is keeping it up when life gets busy. Fotocal is built around the psychology of habit: small wins, gentle nudges, and a coach that never makes you feel guilty."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t04",
+   "tag": "span",
+   "html": false,
+   "en": "How habits form",
+   "text": "How habits form"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t05",
+   "tag": "h2",
+   "html": true,
+   "en": "Small wins, <em class=\"accent\">repeated</em>.",
+   "text": "Small wins, repeated."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t06",
+   "tag": "p",
+   "html": false,
+   "en": "Fotocal is designed so the healthy choice is also the easy one — and every day you show up, it gets easier.",
+   "text": "Fotocal is designed so the healthy choice is also the easy one — and every day you show up, it gets easier."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t07",
+   "tag": "h3",
+   "html": false,
+   "en": "Make it effortless",
+   "text": "Make it effortless"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t08",
+   "tag": "p",
+   "html": false,
+   "en": "A photo is all it takes to log a meal. When the effort is tiny, the habit survives the busy days that usually break it.",
+   "text": "A photo is all it takes to log a meal. When the effort is tiny, the habit survives the busy days that usually break it."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t09",
+   "tag": "h3",
+   "html": false,
+   "en": "Build a streak",
+   "text": "Build a streak"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t10",
+   "tag": "p",
+   "html": false,
+   "en": "Your daily streak turns consistency into a small game worth protecting. Momentum, not motivation, is what carries you.",
+   "text": "Your daily streak turns consistency into a small game worth protecting. Momentum, not motivation, is what carries you."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t11",
+   "tag": "h3",
+   "html": false,
+   "en": "Reflect, don't punish",
+   "text": "Reflect, don't punish"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t12",
+   "tag": "p",
+   "html": false,
+   "en": "A quick mood note next to your meals reveals how food and feelings connect — awareness, never guilt.",
+   "text": "A quick mood note next to your meals reveals how food and feelings connect — awareness, never guilt."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t13",
+   "tag": "h3",
+   "html": false,
+   "en": "Adjust weekly",
+   "text": "Adjust weekly"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t14",
+   "tag": "p",
+   "html": false,
+   "en": "Your Weekly Report celebrates what went well and points at one small thing to change — a sustainable pace of improvement.",
+   "text": "Your Weekly Report celebrates what went well and points at one small thing to change — a sustainable pace of improvement."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t15",
+   "tag": "span",
+   "html": false,
+   "en": "The right mindset",
+   "text": "The right mindset"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t16",
+   "tag": "h3",
+   "html": false,
+   "en": "No guilt, no all-or-nothing",
+   "text": "No guilt, no all-or-nothing"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t17",
+   "tag": "p",
+   "html": false,
+   "en": "One indulgent meal does not undo your progress — quitting does. Coach Kal is built to keep you going after a slip instead of spiralling, with encouragement that treats you like an adult.",
+   "text": "One indulgent meal does not undo your progress — quitting does. Coach Kal is built to keep you going after a slip instead of spiralling, with encouragement that treats you like an adult."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t18",
+   "tag": "li",
+   "html": false,
+   "en": "Judgement-free coaching, available any time",
+   "text": "Judgement-free coaching, available any time"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t19",
+   "tag": "li",
+   "html": false,
+   "en": "Mood &amp; habit journal to spot your real patterns",
+   "text": "Mood &amp; habit journal to spot your real patterns"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t20",
+   "tag": "li",
+   "html": false,
+   "en": "Focus on the trend, not one bad day",
+   "text": "Focus on the trend, not one bad day"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t21",
+   "tag": "span",
+   "html": false,
+   "en": "Fits real life",
+   "text": "Fits real life"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t22",
+   "tag": "h3",
+   "html": false,
+   "en": "Gentle structure that stays out of the way",
+   "text": "Gentle structure that stays out of the way"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t23",
+   "tag": "p",
+   "html": false,
+   "en": "Fotocal supports your routine rather than ruling it — reminders arrive when they help, and logging takes seconds however you do it.",
+   "text": "Fotocal supports your routine rather than ruling it — reminders arrive when they help, and logging takes seconds however you do it."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t24",
+   "tag": "li",
+   "html": false,
+   "en": "Smart reminders at the moments you tend to forget",
+   "text": "Smart reminders at the moments you tend to forget"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t25",
+   "tag": "li",
+   "html": false,
+   "en": "Log by photo, barcode, menu or voice — in seconds",
+   "text": "Log by photo, barcode, menu or voice — in seconds"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t26",
+   "tag": "li",
+   "html": false,
+   "en": "Personalised recommendations that adapt to your week",
+   "text": "Personalised recommendations that adapt to your week"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t27",
+   "tag": "span",
+   "html": false,
+   "en": "Guides",
+   "text": "Guides"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t28",
+   "tag": "span",
+   "html": false,
+   "en": "How to stay consistent with healthy habits",
+   "text": "How to stay consistent with healthy habits"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t29",
+   "tag": "span",
+   "html": false,
+   "en": "Mindful eating: a beginner’s guide",
+   "text": "Mindful eating: a beginner’s guide"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t30",
+   "tag": "span",
+   "html": false,
+   "en": "Understanding emotional eating",
+   "text": "Understanding emotional eating"
+  },
+  {
+   "key": "sp.lifestyle-mindset.t31",
+   "tag": "h2",
+   "html": false,
+   "en": "Build habits you can keep for good.",
+   "text": "Build habits you can keep for good."
+  },
+  {
+   "key": "sp.lifestyle-mindset.t32",
+   "tag": "p",
+   "html": false,
+   "en": "Download Fotocal and turn eating well into something that finally sticks.",
+   "text": "Download Fotocal and turn eating well into something that finally sticks."
+  }
+ ]
+}

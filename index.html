@@ -251,7 +251,7 @@
             <!-- Step 1 is the real meal, not a screen — a plain photo, sized to the
                  same footprint as the two devices so the row still lines up. -->
             <div class="step-media">
-              <figure class="step-photo">
+              <figure class="shot-card shot-cover shot-tilt-l">
                 <img src="assets/img/steps/step1-meal.webp" width="880" height="1100"
                      loading="lazy" decoding="async"
                      alt="Avocado toast with cherry tomatoes and a fried egg on a grey plate"
@@ -265,15 +265,12 @@
             <h3 data-i18n="how.s2t">The AI reads it</h3>
             <p data-i18n="how.s2b">In seconds it identifies every ingredient, estimates the portion, and works out calories, macros, micronutrients and a health score.</p>
             <div class="step-media">
-              <div class="phone">
-                <div class="phone-notch"></div>
-                <div class="phone-screen">
-                  <img src="assets/img/steps/step2-scan.webp" width="540" height="1152"
-                       loading="lazy" decoding="async"
-                       alt="Scan result screen — protein, carbs and fat rings, fibre, sugar and sodium, and the day's totals"
-                       data-i18n-alt="how.s2alt">
-                </div>
-              </div>
+              <figure class="shot-card shot-tilt-r">
+                <img src="assets/img/steps/step2-scan.webp" width="540" height="1152"
+                     loading="lazy" decoding="async"
+                     alt="Scan result screen — protein, carbs and fat rings, fibre, sugar and sodium, and the day's totals"
+                     data-i18n-alt="how.s2alt">
+              </figure>
             </div>
           </div>
 
@@ -282,15 +279,12 @@
             <h3 data-i18n="how.s3t">It's logged</h3>
             <p data-i18n="how.s3b">The meal drops straight into your diary and your whole day updates itself — calories left, macros, water, streak. Done.</p>
             <div class="step-media">
-              <div class="phone">
-                <div class="phone-notch"></div>
-                <div class="phone-screen">
-                  <img src="assets/img/steps/step3-home.webp" width="540" height="1152"
-                       loading="lazy" decoding="async"
-                       alt="Home screen — calories left, macro rings and the day's meals"
-                       data-i18n-alt="how.s3alt">
-                </div>
-              </div>
+              <figure class="shot-card shot-tilt-l">
+                <img src="assets/img/steps/step3-home.webp" width="540" height="1152"
+                     loading="lazy" decoding="async"
+                     alt="Home screen — calories left, macro rings and the day's meals"
+                     data-i18n-alt="how.s3alt">
+              </figure>
             </div>
           </div>
         </div>
@@ -718,7 +712,7 @@ body.fc-appbar-on{padding-bottom:78px}
   </style>
   <div class="fc-appbar" id="fcAppbar" hidden>
     <div class="fc-appbar-inner">
-      <img class="fc-appbar-logo" src="assets/img/logo.png" width="40" height="40" alt="Fotocal app icon" decoding="async">
+      <img fetchpriority="high" class="fc-appbar-logo" src="assets/img/logo.png" width="40" height="40" alt="Fotocal app icon" decoding="async">
       <div class="fc-appbar-txt"><strong>Fotocal</strong><span data-i18n="cta.stickyNote">Free · 5-day trial · Android</span></div>
       <a class="fc-appbar-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.get">Get the app</a>
       <button class="fc-appbar-x" id="fcAppbarX" type="button" aria-label="Dismiss">&times;</button>

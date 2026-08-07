@@ -171,3 +171,102 @@
 @media (min-width: 1050px) {
   .steps:has(> :nth-child(4)) { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DEDICATED FEATURE PAGES
+   /features/{voice-logging,recipe,scan-food,scan-barcode}/
+
+   These lead with one wide piece of artwork rather than the split
+   hero the goal pages use — the art is 3:2, and a landscape image
+   squeezed into a half-width column is smaller than it deserves to
+   be. So: centred copy, then the image full-width beneath it.
+   ═══════════════════════════════════════════════════════════════ */
+.fp-hero { position: relative; padding: 3rem 0 1rem; overflow: hidden; }
+.fp-hero::before {
+  content: ""; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+  width: 760px; height: 500px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(255,122,61,.16), transparent 66%);
+  filter: blur(44px);
+}
+.fp-hero .container { position: relative; }
+.fp-hero-copy { text-align: center; max-width: 46rem; margin-inline: auto; }
+.fp-hero-copy h1 {
+  font-family: var(--font-display); font-weight: 550;
+  font-size: clamp(2.05rem, 5.8vw, 3.35rem); line-height: 1.08; letter-spacing: -.024em;
+  margin-bottom: .95rem;
+}
+.fp-hero-copy .lead {
+  color: var(--muted); font-size: 1.06rem;
+  max-width: 60ch; margin: 0 auto 1.6rem;
+}
+.fp-hero-actions {
+  display: flex; flex-wrap: wrap; gap: .75rem;
+  align-items: center; justify-content: center;
+}
+@media (min-width: 900px) { .fp-hero { padding: 4rem 0 1rem; } }
+
+/* ─── Wide showcase image ───
+   The glow is a separate element rather than a ::before on .fp-shot:
+   .shot-card sets overflow:hidden for its rounded corners, and a
+   pseudo-element that has to bleed *outside* the card cannot live
+   inside the thing that clips it. */
+.fp-shot { position: relative; width: min(940px, 100%); margin: 2.6rem auto 0; }
+.fp-shot-glow {
+  position: absolute; z-index: 0; pointer-events: none;
+  left: 6%; right: 6%; top: 16%; bottom: -7%;
+  background: radial-gradient(closest-side, rgba(233,30,99,.26), transparent 74%);
+  filter: blur(38px);
+}
+.fp-shot .shot-card { position: relative; z-index: 1; }
+
+/* ─── "How the advice works" panel ─── */
+.fp-rec {
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl); padding: 2rem 1.6rem 1.9rem;
+  box-shadow: var(--shadow-card);
+}
+.fp-rec h2 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.45rem, 3.8vw, 2rem); line-height: 1.2; letter-spacing: -.015em;
+  margin-bottom: .7rem;
+}
+.fp-rec > p { color: var(--muted); margin-bottom: 1.3rem; }
+.fp-rec .check-list li { margin-bottom: .7rem; }
+@media (min-width: 700px) { .fp-rec { padding: 2.4rem 2.2rem 2.2rem; } }
+
+/* ═══════════════════════════════════════════════
+   RELATED READING CARDS
+   Shared with the three goal pages, which have used .fc-rcard since
+   they were built but had no rules for it anywhere — the markup was
+   rendering as three runs of inline text.
+   ═══════════════════════════════════════════════ */
+.fc-related { display: grid; gap: 1rem; margin-top: 2.2rem; }
+@media (min-width: 700px)  { .fc-related { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .fc-related { grid-template-columns: repeat(3, 1fr); } }
+.fc-rcard {
+  display: flex; flex-direction: column; gap: .4rem;
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg); padding: 1.4rem 1.35rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s cubic-bezier(.2,.8,.3,1), box-shadow .3s ease, border-color .3s ease;
+}
+.fc-rcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-color: var(--border-pink); }
+.fc-rkicker {
+  font-size: .68rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--pink);
+}
+.fc-rtitle {
+  font-family: var(--font-display); font-size: 1.12rem; font-weight: 600;
+  line-height: 1.25; letter-spacing: -.01em; color: var(--ink);
+  text-wrap: balance;
+}
+.fc-rarrow {
+  margin-top: auto; padding-top: .6rem;
+  font-size: .86rem; font-weight: 700; color: var(--pink);
+  transition: transform .3s ease;
+}
+.fc-rcard:hover .fc-rarrow { transform: translateX(4px); }
+
+/* Four-up variant — the Features overview lists all four core pages,
+   and 3-up left a single card stranded on its own row. */
+@media (min-width: 1000px) { .fc-related-4 { grid-template-columns: repeat(4, 1fr); } }

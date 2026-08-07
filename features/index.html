@@ -36,6 +36,8 @@
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" href="../assets/css/home.css">
   <link rel="stylesheet" href="../assets/css/features.css">
+  <!-- .fc-related / .fc-rcard live here (shared with the detail pages) -->
+  <link rel="stylesheet" href="../assets/css/sections.css">
 
   <script type="application/ld+json">
 {
@@ -85,6 +87,44 @@
           <a href="#ontrack"><b>03</b><span data-i18n="fx.jump3">Stay on track</span></a>
           <a href="#goals"><b>★</b><span data-i18n="fx.jump4">Your goal</span></a>
         </nav>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ THE FOUR CORE FEATURES ═══════════════════
+         Each of these has its own page now. Linking them from the
+         overview matters twice over: it is the obvious place a reader
+         looks for depth, and without it the four pages would be
+         reachable only from the nav — nav links are injected by JS, so
+         a crawler following the static HTML would never find them. -->
+    <section class="section section-alt" id="core">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="fx.core.kicker">The four ways in</span>
+          <h2 class="section-title reveal" data-i18n-html="fx.core.title">Four ways to log, <em class="accent">each with its own page</em>.</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="fx.core.sub">Photo, barcode, voice or recipe. Whichever is fastest right now is the right one — and each has a page explaining exactly what you get.</p>
+        </div>
+        <div class="fc-related fc-related-4">
+          <a class="fc-rcard reveal" href="scan-food/">
+            <span class="fc-rkicker" data-i18n="nav.features">Features</span>
+            <span class="fc-rtitle" data-i18n="nav.scanFood">Scan food</span>
+            <span class="fc-rarrow" data-i18n="fx.core.more">Learn more →</span>
+          </a>
+          <a class="fc-rcard reveal" href="scan-barcode/" style="--rd:.06s">
+            <span class="fc-rkicker" data-i18n="nav.features">Features</span>
+            <span class="fc-rtitle" data-i18n="nav.scanBarcode">Scan barcode</span>
+            <span class="fc-rarrow" data-i18n="fx.core.more">Learn more →</span>
+          </a>
+          <a class="fc-rcard reveal" href="voice-logging/" style="--rd:.12s">
+            <span class="fc-rkicker" data-i18n="nav.features">Features</span>
+            <span class="fc-rtitle" data-i18n="nav.voiceLogging">Voice logging</span>
+            <span class="fc-rarrow" data-i18n="fx.core.more">Learn more →</span>
+          </a>
+          <a class="fc-rcard reveal" href="recipe/" style="--rd:.18s">
+            <span class="fc-rkicker" data-i18n="nav.features">Features</span>
+            <span class="fc-rtitle" data-i18n="nav.recipe">Recipes</span>
+            <span class="fc-rarrow" data-i18n="fx.core.more">Learn more →</span>
+          </a>
+        </div>
       </div>
     </section>
 

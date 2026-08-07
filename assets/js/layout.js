@@ -104,15 +104,19 @@
   function navHTML() {
     var desktop = "", mobile = "";
 
-    NAV.forEach(function (item, i) {
-      var active = item.id === PAGE;
-      var cur = active ? ' aria-current="page"' : "";
+    NAV.forEach(function (item) {
+      /* data-page marks the SECTION, not the page. On /features/scan-food/
+         it is still "features", so it must NOT become aria-current="page" —
+         that would claim the visitor is on the overview when they are not.
+         The section gets a class here; the exact page is resolved from the
+         real URL in markCurrent() after injection. */
+      var sec  = item.id === PAGE ? " has-section" : "";
 
       if (!item.children) {
-        desktop += '<li class="nav-item"><a class="nav-link" href="' + item.href + '"' + cur +
-                   ' data-i18n="' + item.key + '"></a></li>';
-        mobile  += '<li class="m-item"><a class="m-link" href="' + item.href + '"' + cur +
-                   ' data-i18n="' + item.key + '"></a></li>';
+        desktop += '<li class="nav-item' + sec + '"><a class="nav-link" href="' + item.href +
+                   '" data-i18n="' + item.key + '"></a></li>';
+        mobile  += '<li class="m-item' + sec + '"><a class="m-link" href="' + item.href +
+                   '" data-i18n="' + item.key + '"></a></li>';
         return;
       }
 
@@ -123,23 +127,23 @@
         return '<li><a href="' + c.href + '" data-i18n="' + c.key + '"></a></li>';
       }).join("");
 
+      var caretBtn = function (cls, id) {
+        return '<button class="' + cls + '" type="button" aria-expanded="false" ' +
+               'aria-haspopup="true" aria-controls="' + id + '" ' +
+               'data-i18n-aria="nav.moreIn">' + CARET + '</button>';
+      };
+
       /* Split: label navigates, caret discloses. */
       if (item.href) {
-        var caretBtn = function (cls, id) {
-          return '<button class="' + cls + '" type="button" aria-expanded="false" ' +
-                 'aria-haspopup="true" aria-controls="' + id + '" ' +
-                 'data-i18n-aria="nav.moreIn">' + CARET + '</button>';
-        };
-
-        desktop += '<li class="nav-item nav-split" data-dropdown>' +
-          '<a class="nav-link" href="' + item.href + '"' + cur + ' data-i18n="' + item.key + '"></a>' +
+        desktop += '<li class="nav-item nav-split' + sec + '" data-dropdown>' +
+          '<a class="nav-link" href="' + item.href + '" data-i18n="' + item.key + '"></a>' +
           caretBtn("nav-caret-btn", pid) +
           '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
           '</li>';
 
-        mobile += '<li class="m-item m-split" data-dropdown>' +
+        mobile += '<li class="m-item m-split' + sec + '" data-dropdown>' +
           '<div class="m-split-row">' +
-            '<a class="m-link" href="' + item.href + '"' + cur + ' data-i18n="' + item.key + '"></a>' +
+            '<a class="m-link" href="' + item.href + '" data-i18n="' + item.key + '"></a>' +
             caretBtn("m-caret-btn", mid) +
           '</div>' +
           '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
@@ -147,15 +151,15 @@
         return;
       }
 
-      desktop += '<li class="nav-item" data-dropdown>' +
+      desktop += '<li class="nav-item' + sec + '" data-dropdown>' +
         '<button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true" ' +
-          'aria-controls="' + pid + '"' + (active ? ' aria-current="page"' : "") + '>' +
+          'aria-controls="' + pid + '">' +
           '<span data-i18n="' + item.key + '"></span>' + CARET +
         '</button>' +
         '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
         '</li>';
 
-      mobile += '<li class="m-item" data-dropdown>' +
+      mobile += '<li class="m-item' + sec + '" data-dropdown>' +
         '<button class="m-link" type="button" aria-expanded="false" aria-controls="' + mid + '">' +
           '<span data-i18n="' + item.key + '"></span>' + CARET +
         '</button>' +
@@ -269,10 +273,80 @@
     });
   })();
 
-  /* ═══════════ Dropdowns — desktop (click) + mobile (accordion) ═══════════
-     Click, not hover: matches the pattern used across this category, and is
-     the only thing that works on touch. Hover-intent is added on top for
-     pointer devices as a convenience, not as the primary mechanism. */
+  /* ═══════════ "You are here" ═══════════
+     Resolved from the real URL rather than from data-page, because
+     data-page only names the section. Without this the open Features
+     panel was five identical white rows with no way to tell which one you
+     were already reading.
+
+       exact URL match  -> aria-current="page"  (loud: accent + marker)
+       section match    -> .has-section         (quiet: just weight)  */
+  function normPath(p) {
+    try { p = decodeURI(p); } catch (e) {}
+    p = p.replace(/index\.html?$/i, "");
+    /* Add the trailing slash to directory URLs only. "/404.html" is a file
+       and must not become "/404.html/". */
+    if (!/\.[a-z0-9]+$/i.test(p) && !/\/$/.test(p)) p += "/";
+    return p;
+  }
+
+  function markCurrent() {
+    var here = normPath(location.pathname);
+    var nav = document.getElementById("site-nav");
+    if (!nav) return;
+
+    nav.querySelectorAll("a[href]").forEach(function (a) {
+      if (a.classList.contains("nav-logo")) return;   /* the logo is not a nav item */
+      var url;
+      try { url = new URL(a.getAttribute("href"), location.href); } catch (e) { return; }
+      if (url.origin !== location.origin) return;     /* Play Store, socials */
+      if (normPath(url.pathname) !== here) return;
+
+      a.setAttribute("aria-current", "page");
+
+      /* Light up the parent item too, so a hit inside a closed panel is
+         still visible from the collapsed bar. */
+      var item = a.closest(".nav-item, .m-item");
+      if (item) item.classList.add("has-section");
+
+      /* And open the mobile accordion it lives in — arriving at the drawer
+         already showing where you are beats making you hunt for it. */
+      var mPanel = a.closest(".m-panel");
+      if (mPanel) {
+        var mItem = mPanel.closest(".m-item");
+        if (mItem) {
+          mItem.classList.add("open");
+          var mBtn = mItem.querySelector("button");
+          if (mBtn) mBtn.setAttribute("aria-expanded", "true");
+        }
+      }
+    });
+  }
+  markCurrent();
+
+  /* ═══════════ Dropdowns ═══════════
+     DESKTOP: opens on hover, with intent delays (see HOVER_IN/HOVER_OUT).
+     TOUCH:   hover never fires, so the caret button is the only way in.
+     KEYBOARD: unaffected by either — ArrowDown/Up/Escape below.
+
+     An earlier version of this file was click-only and carried a warning
+     against adding hover, because a naive mouseenter fights the click
+     handler: hover opens the panel, then the click that follows toggles it
+     straight back shut. Two things make hover safe here:
+
+       1. mouseenter OPENS (force = true); it never toggles. Only the
+          button toggles, so the two cannot cancel each other out.
+       2. It is gated on (hover: hover) and (pointer: fine), so a touch
+          device — where a tap synthesises a mouseenter immediately before
+          the click — never runs it at all.  */
+
+  /* Tuned by hand: 90ms is short enough that a deliberate hover feels
+     instant, long enough that a mouse crossing the bar does not trip it.
+     260ms out is generous on purpose — closing early is far more annoying
+     than closing late. */
+  var HOVER_IN = 90;
+  var HOVER_OUT = 260;
+  var hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
 
   function closeAll(except) {
     document.querySelectorAll("[data-dropdown].open").forEach(function (d) {
@@ -341,19 +415,50 @@
       }
     });
 
-    /* Close when focus leaves the whole item (keyboard tab-out). */
+    /* Close when focus leaves the whole item (keyboard tab-out) — unless
+       the pointer is still resting on it, in which case the menu is open
+       on purpose and yanking it away would be the bug. */
     item.addEventListener("focusout", function () {
       setTimeout(function () {
-        if (!item.contains(document.activeElement)) toggle(item, false);
+        if (item.contains(document.activeElement)) return;
+        if (item.matches(":hover")) return;
+        toggle(item, false);
       }, 0);
     });
 
-    /* NOTE: deliberately click-only — no hover-to-open.
-       A hover handler here fights the click handler (hover opens the panel,
-       then the click that follows immediately toggles it shut, so the menu
-       looks broken on desktop). Click-only is also what every comparable
-       app-marketing site in this category does, and it is the only thing
-       that behaves correctly on touch. Do not add mouseenter/mouseleave. */
+    /* ── Hover to open (fine pointers only) ──
+       HOVER_IN is intent: without it, dragging the mouse across the bar on
+       the way to something else pops every menu open in turn.
+       HOVER_OUT is grace: the panel sits 8px below the label, so a pointer
+       travelling into it is briefly over neither. The delay covers that
+       crossing, and the re-check on expiry means an early mouseleave never
+       closes a menu the pointer has already arrived in. */
+    if (hoverCapable.matches && item.closest(".nav-links")) {
+      var inT = 0, outT = 0;
+      var clear = function () { clearTimeout(inT); clearTimeout(outT); };
+
+      item.addEventListener("mouseenter", function () {
+        if (!hoverCapable.matches) return;
+        clear();
+        inT = setTimeout(function () { toggle(item, true); }, HOVER_IN);
+      });
+
+      item.addEventListener("mouseleave", function () {
+        if (!hoverCapable.matches) return;
+        clear();
+        outT = setTimeout(function () {
+          /* Keep it open if the pointer came back, or if the keyboard is
+             in there — closing under an focused link would strand focus. */
+          if (item.matches(":hover")) return;
+          if (item.contains(document.activeElement)) return;
+          toggle(item, false);
+        }, HOVER_OUT);
+      });
+
+      /* A click on a panel link navigates; kill any pending open so the
+         menu does not flash back up during the page transition. */
+      item.addEventListener("click", clear);
+    }
   });
 
   document.addEventListener("click", function () { closeAll(); });
@@ -447,6 +552,13 @@
         el.setAttribute("fetchpriority", "high");
       } else {
         el.loading = "lazy";
+        /* main.js fades lazy images in by adding .is-loaded, but it does
+           its sweep once at boot — and this element is created later, from
+           inside a probe callback. Without marking it here it would sit at
+           opacity 0 forever, loaded but invisible. */
+        el.addEventListener("load", function () { el.classList.add("is-loaded"); }, { once: true });
+        el.addEventListener("error", function () { el.classList.add("is-loaded"); }, { once: true });
+        if (el.complete) el.classList.add("is-loaded");
       }
       slot.replaceWith(el);
     };

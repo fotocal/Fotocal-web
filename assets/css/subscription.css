@@ -155,3 +155,103 @@
 /* when the banner is still a placeholder it must not be absolutely positioned */
 .sb-banner-img.is-slot { position: relative; }
 .sb-banner-img.is-slot::after { display: none; }
+
+/* ═══════════════════════════════════════════════
+   PRICE ANCHOR  (hero)
+   The one question everyone arrives with, answered before the fold
+   instead of a full screen below it.
+   ═══════════════════════════════════════════════ */
+.sb-anchor {
+  margin: -.4rem 0 1.4rem;
+  font-size: .95rem; color: var(--ink-soft);
+  max-width: 46ch;
+  padding-left: .9rem;
+  border-left: 3px solid transparent;
+  border-image: var(--grad) 1;
+}
+.sb-anchor b { font-weight: 700; color: var(--ink); white-space: nowrap; }
+
+/* ═══════════════════════════════════════════════
+   REASSURANCE STRIP  (under the plans)
+   Sits where the decision is actually made. These three objections were
+   all answered on the page already — but 2000px further down, which is
+   no use to someone with a thumb over the button.
+   ═══════════════════════════════════════════════ */
+.sb-assure {
+  display: grid; gap: 1rem; margin-top: 2rem;
+  list-style: none;
+}
+@media (min-width: 800px) { .sb-assure { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
+.sb-assure li {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  grid-template-areas: "ico title" ".  body";
+  gap: .15rem .7rem;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  padding: 1.05rem 1.15rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.sb-assure li:hover { border-color: var(--border-pink); box-shadow: var(--shadow-card); }
+.sb-assure svg { grid-area: ico; width: 20px; height: 20px; color: var(--pink); margin-top: .12rem; }
+.sb-assure b { grid-area: title; font-size: .95rem; font-weight: 700; color: var(--ink); align-self: center; }
+.sb-assure span { grid-area: body; font-size: .86rem; color: var(--muted); line-height: 1.55; }
+
+/* ═══════════════════════════════════════════════
+   "ALSO SWITCHED ON" LABEL
+   Turns three big cards followed by three small ones into a stated
+   hierarchy rather than an apparent drop in effort.
+   ═══════════════════════════════════════════════ */
+.sb-mini-label {
+  margin: 2.1rem 0 .1rem;
+  font-size: .72rem; font-weight: 800; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--muted);
+  display: flex; align-items: center; gap: .85rem;
+}
+.sb-mini-label::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}
+
+/* ─── Mini-card artwork ───
+   These three were icon-only while the three above them carried images,
+   which made them read as lesser features rather than quieter ones. The
+   slot is 5:4 because that is the ratio the art was made at — a 1:1 slot
+   like the big cards use would crop 20% off each side and cut the phone
+   out of two of the three.
+
+   The icon stays, as a badge over the corner: it is the visual language
+   the rest of the page uses, and dropping it here would break the set. */
+.sb-mini-card { position: relative; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.sb-mini-media { aspect-ratio: 5 / 4; overflow: hidden; background: var(--cream-2); }
+.sb-mini-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .55s cubic-bezier(.2,.8,.3,1);
+}
+.sb-mini-card:hover .sb-mini-media img { transform: scale(1.045); }
+/* The badge straddles the image/body seam. It rides in the body in normal
+   flow with a negative top margin, NOT absolutely positioned against the
+   card: the card clips (overflow:hidden, for the image's rounded corners),
+   so anything anchored to its top edge gets sliced in half. */
+.sb-mini-card .sb-mini-ico {
+  position: relative; z-index: 2;
+  margin: -1.45rem 0 .8rem;
+  border: 3px solid var(--white);
+  width: 46px; height: 46px; border-radius: 15px;
+}
+.sb-mini-body { padding: 0 1.25rem 1.35rem; }
+.sb-mini-card h3 { margin-bottom: .3rem; }
+
+/* ─── Hero artwork ───
+   The art is 2:3. Left to fill its grid column it came out 815px tall
+   against 565px of copy at 1440px (614px in Spanish), which read as
+   lopsided rather than tall. Capping the frame at 420px puts it at
+   630px — just past the copy, which looks deliberate.
+
+   The cap only binds from ~1024px up; below that the column is already
+   narrower than 420px, and on a phone it stops a 2:3 frame from eating
+   a whole screen at tablet widths. Nothing is cropped either way —
+   .illus sizes the image by its natural ratio. */
+.sb-hero-art { max-width: 420px; margin-inline: auto; }

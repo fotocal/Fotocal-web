@@ -76,12 +76,17 @@ ICONS = {
 PAGES = [
 {
  "slug": "voice-logging",
+ "bandImg": "voice-logging-band.webp", "bandW": 900, "bandH": 1125,
  "img": "voice-logging.webp",
  "nav": "nav.voiceLogging",
  "related": ["track-calories-without-weighing", "common-calorie-counting-mistakes", "how-to-count-calories-accurately"],
  "cards": ["pencil", "list", "scale", "flame", "rings", "clock"],
  "en": {
   "navLabel": "Voice logging",
+  "bandAlt": "A woman mid-cook in a sunlit kitchen, talking to the phone in her hand while vegetables wait on the board",
+  "bandPill": "In practice",
+  "bandTitle": "Hands full, meal logged",
+  "bandBody": "Halfway through cooking is exactly when you cannot type. Say what went into the pan and it is recorded — no rinsing your hands first, no picking the phone up twice.",
   "metaTitle": "Voice food logging — say what you ate, in any language | Fotocal",
   "metaDesc": "Speak your meal and Fotocal detects the language, transcribes it, identifies every food and quantity, estimates calories and macros, and logs it to any meal. Hands-free, in seconds.",
   "kicker": "Voice logging",
@@ -132,6 +137,10 @@ PAGES = [
  },
  "es": {
   "navLabel": "Registro por voz",
+  "bandAlt": "Una mujer cocinando en una cocina soleada, hablándole al móvil que sostiene mientras las verduras esperan en la tabla",
+  "bandPill": "En la práctica",
+  "bandTitle": "Con las manos ocupadas y la comida registrada",
+  "bandBody": "A mitad de cocinar es justo cuando no puedes escribir. Di lo que ha ido a la sartén y queda registrado: sin lavarte las manos antes y sin coger el móvil dos veces.",
   "metaTitle": "Registro por voz — di lo que has comido, en cualquier idioma | Fotocal",
   "metaDesc": "Habla y Fotocal detecta el idioma, lo transcribe, identifica cada alimento y su cantidad, estima calorías y macros y lo registra en la comida que elijas. Sin manos, en segundos.",
   "kicker": "Registro por voz",
@@ -183,12 +192,17 @@ PAGES = [
 },
 {
  "slug": "recipe",
+ "bandImg": "recipe-band.webp", "bandW": 1100, "bandH": 880,
  "img": "recipe.webp",
  "nav": "nav.recipe",
  "related": ["batch-cooking-save-time-eat-better", "meal-prep-for-beginners", "portion-control-simple-tricks"],
  "cards": ["pot", "slice", "rings", "pill", "list", "bookmark"],
  "en": {
   "navLabel": "Recipes",
+  "bandAlt": "A saved recipe card showing a photo and a macro breakdown, standing beside the finished salmon dish",
+  "bandPill": "In practice",
+  "bandTitle": "Cook it once, log it in a tap after that",
+  "bandBody": "The first time costs you an ingredient list. After that your own recipe sits in the library with its per-serving numbers already worked out, and logging Tuesday's dinner is as fast as logging a banana.",
   "metaTitle": "Recipe nutrition — turn any home recipe into full nutrition | Fotocal",
   "metaDesc": "Add or photograph a recipe and Fotocal works out the total and per-serving calories, macros and micronutrients, then saves it so logging it again takes one tap.",
   "kicker": "Recipes",
@@ -239,6 +253,10 @@ PAGES = [
  },
  "es": {
   "navLabel": "Recetas",
+  "bandAlt": "Una ficha de receta guardada con foto y desglose de macros, junto al plato de salmón terminado",
+  "bandPill": "En la práctica",
+  "bandTitle": "Cocínala una vez y regístrala con un toque a partir de ahí",
+  "bandBody": "La primera vez te cuesta una lista de ingredientes. Después tu receta vive en la biblioteca con los números por ración ya calculados, y registrar la cena del martes es tan rápido como registrar un plátano.",
   "metaTitle": "Nutrición de recetas — convierte cualquier receta casera en nutrición completa | Fotocal",
   "metaDesc": "Añade o fotografía una receta y Fotocal calcula las calorías, macros y micronutrientes totales y por ración, y la guarda para que registrarla otra vez sea un toque.",
   "kicker": "Recetas",
@@ -290,12 +308,17 @@ PAGES = [
 },
 {
  "slug": "scan-food",
+ "bandImg": "scan-food-band.webp", "bandW": 900, "bandH": 1125,
  "img": "scan-food.webp",
  "nav": "nav.scanFood",
  "related": ["how-to-count-calories-accurately", "what-a-balanced-plate-looks-like", "why-micronutrients-matter"],
  "cards": ["camera", "scale", "flame", "pill", "gauge", "layers", "wave", "alert", "chat"],
  "en": {
   "navLabel": "Scan food",
+  "bandAlt": "A hand photographing a restaurant plate, with a health score and a healthier swap appearing beside it",
+  "bandPill": "In practice",
+  "bandTitle": "The restaurant plate you cannot look up",
+  "bandBody": "No barcode, no label, and no real idea what the kitchen put in it. One photo returns the calories, the score and one specific swap for next time — before the plate has gone cold.",
   "metaTitle": "Photo food scanning — one picture, the whole nutrition read | Fotocal",
   "metaDesc": "Photograph any meal and Fotocal identifies the dish and ingredients, estimates the portion and returns calories, macros, micronutrients, a health score, NOVA level, glycemic load, allergens and a healthier swap.",
   "kicker": "Photo scan",
@@ -349,6 +372,10 @@ PAGES = [
  },
  "es": {
   "navLabel": "Escanear comida",
+  "bandAlt": "Una mano fotografiando un plato de restaurante, con una puntuación de salud y una alternativa más sana apareciendo al lado",
+  "bandPill": "En la práctica",
+  "bandTitle": "El plato de restaurante que no puedes buscar",
+  "bandBody": "Sin código de barras, sin etiqueta y sin saber muy bien qué le ha puesto la cocina. Una foto devuelve las calorías, la puntuación y un cambio concreto para la próxima vez, antes de que se enfríe el plato.",
   "metaTitle": "Escaneo de comida por foto — una imagen, la lectura nutricional completa | Fotocal",
   "metaDesc": "Fotografía cualquier comida y Fotocal identifica el plato y los ingredientes, estima la ración y devuelve calorías, macros, micronutrientes, puntuación de salud, nivel NOVA, carga glucémica, alérgenos y una alternativa más sana.",
   "kicker": "Escaneo por foto",
@@ -403,12 +430,17 @@ PAGES = [
 },
 {
  "slug": "scan-barcode",
+ "bandImg": "scan-barcode-band.webp", "bandW": 900, "bandH": 1125,
  "img": "scan-barcode.webp",
  "nav": "nav.scanBarcode",
  "related": ["how-to-read-nutrition-labels", "how-to-build-a-healthy-grocery-list", "added-sugar-vs-natural-sugar"],
  "cards": ["barcode", "flame", "rings", "list", "alert", "infinity"],
  "en": {
   "navLabel": "Scan barcode",
+  "bandAlt": "A hand holding a phone up to the barcode on a packet of granola, a similar packet on the shelf beside it",
+  "bandPill": "In practice",
+  "bandTitle": "Two packets, one aisle, four seconds",
+  "bandBody": "The front of the pack is marketing. The back is small print you were never going to read standing up in a supermarket. Scan both codes, compare what they actually contain, put one back.",
   "metaTitle": "Barcode scanning — instant nutrition for packaged food | Fotocal",
   "metaDesc": "Scan any packaged product's barcode for instant calories, macros, ingredients and allergens from a large product database. Free, unlimited, and it never uses your AI scan quota.",
   "kicker": "Barcode scan",
@@ -459,6 +491,10 @@ PAGES = [
  },
  "es": {
   "navLabel": "Escanear código",
+  "bandAlt": "Una mano acercando el móvil al código de barras de un paquete de granola, con otro paquete parecido al lado en la estantería",
+  "bandPill": "En la práctica",
+  "bandTitle": "Dos paquetes, un pasillo, cuatro segundos",
+  "bandBody": "La parte de delante del paquete es marketing. La de atrás es letra pequeña que no ibas a leer de pie en un supermercado. Escanea los dos códigos, compara lo que llevan de verdad y devuelve uno a la estantería.",
   "metaTitle": "Escaneo de código de barras — nutrición instantánea de productos envasados | Fotocal",
   "metaDesc": "Escanea el código de barras de cualquier producto envasado y obtén al instante calorías, macros, ingredientes y alérgenos de una gran base de datos. Gratis, ilimitado y sin gastar tu cuota de IA.",
   "kicker": "Escaneo de código",
@@ -542,7 +578,8 @@ def i18n_entries(page):
         d, o = page[lang], out[lang]
         for k in ("kicker", "h1", "lead", "shotAlt", "stepsKicker", "stepsTitle", "stepsSub",
                   "getKicker", "getTitle", "getSub", "recKicker", "recTitle", "recBody",
-                  "faqTitle", "ctaTitle", "ctaBody", "relatedTitle", "relatedSub", "navLabel"):
+                  "faqTitle", "ctaTitle", "ctaBody", "relatedTitle", "relatedSub", "navLabel",
+                  "bandAlt", "bandPill", "bandTitle", "bandBody"):
             o[p + k] = d[k]
         for i, (h, b) in enumerate(d["steps"], 1):
             o[p + "s%dt" % i] = h
@@ -622,6 +659,11 @@ def build_html(page):
         relatedTitle=esc_text(en["relatedTitle"]), relatedSub=esc_text(en["relatedSub"]),
         steps=steps, cards=cards, reclist=reclist, faq=faq, related=related,
         faq_ld=faq_ld, play=PLAY, playsvg=PLAY_SVG,
+        bandImg=page["bandImg"], bandW=page["bandW"], bandH=page["bandH"],
+        # Landscape band art gets a wider column; portrait keeps the default.
+        bandWide=" sp-band-wide" if page["bandW"] > page["bandH"] else "",
+        bandAlt=esc(en["bandAlt"]), bandPill=esc_text(en["bandPill"]),
+        bandTitle=esc_text(en["bandTitle"]), bandBody=esc_text(en["bandBody"]),
     )
 
 
@@ -734,6 +776,28 @@ TEMPLATE = '''<!DOCTYPE html>
         </div>
         <div class="sp-cards">
 {cards}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ IMAGE BAND ═══════════════════
+         Sits between the list of outputs and the explanation of how the
+         advice is generated — where the page stops enumerating and starts
+         arguing, and can use a breath. -->
+    <section class="section">
+      <div class="container">
+        <div class="sp-band flip reveal">
+          <div class="sp-band-media">
+            <div class="illus{bandWide}">
+              <img src="../../assets/img/features/{bandImg}" width="{bandW}" height="{bandH}" loading="lazy" decoding="async"
+                   alt="{bandAlt}" data-i18n-alt="{p}bandAlt">
+            </div>
+          </div>
+          <div class="sp-band-copy">
+            <span class="pill" data-i18n="{p}bandPill">{bandPill}</span>
+            <h2 data-i18n="{p}bandTitle">{bandTitle}</h2>
+            <p data-i18n="{p}bandBody">{bandBody}</p>
+          </div>
         </div>
       </div>
     </section>

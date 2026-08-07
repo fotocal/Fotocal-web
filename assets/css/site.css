@@ -196,6 +196,17 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
    the whole card wider than its container on a 320px phone. */
 .btn-block { display: flex; width: 100%; white-space: normal; text-wrap: balance; }
 
+/* Safety net for translated labels on the narrowest phones.
+   nowrap keeps buttons reading as tidy pills, and at every width where
+   there is room that is the right call — but a label only has to grow a
+   little to break out of a 320px viewport, and Spanish runs ~20% longer
+   than English. "Get Fotocal on Google Play" fits at 320px;
+   "Descarga Fotocal en Google Play" was 24px past the edge.
+   Below 400px, legibility beats the pill silhouette. */
+@media (max-width: 400px) {
+  .btn { white-space: normal; text-wrap: balance; }
+}
+
 /* ─── Google Play badge ─── */
 .play-badge {
   display: inline-flex; align-items: center; gap: .75rem;
@@ -259,7 +270,25 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
   transition: color .2s ease, background .2s ease;
 }
 .nav-link:hover { color: var(--ink); background: rgba(233,30,99,.06); }
-.nav-link[aria-current="page"] { color: var(--pink); font-weight: 600; }
+
+/* ─── "You are here" ───
+   Two strengths, because they answer two different questions.
+
+   .has-section  = you are somewhere under this item (a blog article, a
+                   feature sub-page). Quiet: ink instead of soft ink.
+   aria-current  = this link IS the page you are on. Loud: accent colour
+                   and a short rule beneath the word.
+
+   Set from the real URL by layout.js, not from data-page — see the note
+   there about why the section and the page are not the same claim. */
+.nav-item.has-section > .nav-link { color: var(--ink); font-weight: 600; }
+.nav-link[aria-current="page"] { color: var(--pink); font-weight: 650; }
+.nav-link[aria-current="page"]::after {
+  content: ""; position: absolute; left: .8rem; right: .8rem; bottom: .18rem;
+  height: 2px; border-radius: 2px; background: var(--grad);
+}
+.nav-item { position: relative; }   /* anchor for the rule above */
+.nav-split > .nav-link[aria-current="page"]::after { right: .3rem; }
 .nav-caret {
   width: 10px; height: 10px; flex: none;
   transition: transform .25s ease;
@@ -288,12 +317,35 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
   opacity: 1; visibility: visible; transform: translateY(0);
   transition: opacity .2s ease, transform .2s ease, visibility 0s;
 }
+/* Hover bridge. The panel opens 8px below the label, and a pointer
+   travelling down through that gap is over neither element — which reads
+   to the browser as "left the menu". This pad makes the two hover regions
+   contiguous so the crossing is seamless, and it costs nothing visually
+   because the panel is only in the tree while it is open. */
+.nav-panel::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px;
+}
 .nav-panel a {
+  position: relative;
   display: block; padding: .6rem .75rem; border-radius: 10px;
   font-size: .92rem; font-weight: 500; color: var(--ink-soft);
   transition: background .18s ease, color .18s ease;
 }
 .nav-panel a:hover, .nav-panel a:focus-visible { background: var(--cream-2); color: var(--pink); }
+
+/* The current page, inside the panel. This is the whole reason the panel
+   needed work: five identical white rows told you nothing about which one
+   you were already reading. */
+.nav-panel a[aria-current="page"] {
+  color: var(--pink); font-weight: 700;
+  background: var(--grad-wash);
+  padding-right: 1.9rem;
+}
+.nav-panel a[aria-current="page"]::after {
+  content: ""; position: absolute; right: .75rem; top: 50%;
+  width: 7px; height: 7px; margin-top: -3.5px;
+  border-radius: 50%; background: var(--grad);
+}
 
 /* ─── Split nav item: label navigates, caret discloses ───
    Used by Features, which is both a real page and the front of five.
@@ -372,11 +424,23 @@ body.nav-locked { overflow: hidden; }
 
 .m-item { border-bottom: 1px solid var(--border-soft); }
 .m-link {
+  position: relative;
   display: flex; align-items: center; justify-content: space-between;
   width: 100%; padding: 1rem .25rem;
   font-size: 1.05rem; font-weight: 600; color: var(--ink); text-align: left;
 }
+.m-item.has-section > .m-link,
+.m-item.has-section > .m-split-row > .m-link { color: var(--ink); }
 .m-link[aria-current="page"] { color: var(--pink); }
+/* Absolutely positioned, not a flex child: .m-link is a space-between row,
+   so a ::before in the flow would be pushed to the far left and leave the
+   label stranded in the middle. */
+.m-link[aria-current="page"]::before {
+  content: ""; position: absolute; left: -.6rem; top: 50%;
+  transform: translateY(-50%);
+  width: 4px; height: 1.15em;
+  border-radius: 3px; background: var(--grad);
+}
 .m-link .nav-caret { width: 13px; height: 13px; color: var(--muted); }
 .m-item.open .m-link .nav-caret { transform: rotate(180deg); }
 
@@ -409,6 +473,15 @@ body.nav-locked { overflow: hidden; }
 }
 .m-panel a:last-child { margin-bottom: .75rem; }
 .m-panel a:hover, .m-panel a:focus-visible { color: var(--pink); border-left-color: var(--pink); }
+/* Same "you are here" treatment as the desktop panel. layout.js also
+   auto-opens the accordion holding the current page, so the drawer shows
+   your position without you having to go looking for it. */
+.m-panel a[aria-current="page"] {
+  color: var(--pink); font-weight: 700;
+  border-left-color: var(--pink); border-left-width: 3px;
+  background: var(--grad-wash);
+  border-radius: 0 10px 10px 0;
+}
 
 .nav-mobile .play-badge { margin-top: 1.75rem; width: 100%; justify-content: center; }
 
@@ -1084,3 +1157,45 @@ p, .lead, .section-sub { text-wrap: pretty; }
    make that hold true even when a stylesheet constrains one axis. */
 img { height: auto; }
 img[width][height] { max-width: 100%; }
+
+/* ═══════════════════════════════════════════════════════════════
+   READING PROGRESS
+   A 2px gradient rule that fills as you move down a long page. Only
+   mounted on pages with enough content to justify it (see main.js) —
+   on a short page a progress bar that is already half full on arrival
+   just looks broken.
+   ═══════════════════════════════════════════════════════════════ */
+.read-bar {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px;
+  z-index: 200; pointer-events: none;
+  background: transparent;
+}
+.read-bar span {
+  display: block; height: 100%; width: 0;
+  background: var(--grad);
+  transform-origin: left center;
+  box-shadow: 0 0 12px -2px rgba(233,30,99,.55);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .read-bar span { transition: width .12s linear; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IMAGE LOAD-IN
+   Lazy images pop into place the instant their bytes land, which on a
+   slow connection reads as the page twitching. A short fade turns that
+   into something deliberate.
+
+   Gated on :not(.no-js) — layout.js removes that class on boot — so if
+   scripting never runs the images are simply visible rather than stuck
+   at opacity 0 forever. main.js also marks any image that errors, so a
+   404 shows its alt text instead of a blank box.
+   ═══════════════════════════════════════════════════════════════ */
+html:not(.no-js) img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity .55s ease;
+}
+html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  html:not(.no-js) img[loading="lazy"] { opacity: 1; transition: none; }
+}

@@ -61,6 +61,10 @@
             <span class="kicker" data-i18n="sub.kicker">Subscription</span>
             <h1 data-i18n-html="sub.title">Everything Fotocal can do, <em class="accent">unlocked</em>.</h1>
             <p class="lead" data-i18n="sub.lead">Fotocal is free to use and stays free. Premium is for when you want the daily scan limit gone and the deeper analysis switched on.</p>
+            <!-- Price anchor. The page used to make you scroll past a full
+                 screen before it told you what any of this costs, which is
+                 the one question everyone arrives with. -->
+            <p class="sb-anchor reveal" data-i18n-html="sub.anchor">Premium is <b>€34.99 a year</b> — about <b>€2.92 a month</b> — or <b>€6.99</b> monthly. The free plan has no time limit and no card.</p>
             <div class="sb-hero-actions">
               <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play">
                 <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
@@ -71,10 +75,16 @@
             <div class="hero-perks">
               <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.f1">5-day free trial</span></span>
               <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.f2">Cancel anytime in Google Play</span></span>
+              <!-- The most unusual thing about this pricing, and it was only
+                   mentioned two screens down. Most trackers paywall the AI. -->
+              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.coachFree">Coach Kal free on every plan</span></span>
             </div>
           </div>
           <div class="reveal" style="--rd:.1s">
-            <div class="illus"><img src="../assets/img/subscription/hero.webp" width="1000" height="1250" loading="lazy" decoding="async" alt="A woman smiling as she points at her phone showing the day's logged meals" data-i18n-alt="sub.img1"></div>
+            <!-- 2:3 artwork. .illus scales by natural ratio, so nothing is cropped —
+                 the frame just gets taller, and .sb-hero-art caps it so it does not
+                 tower over the copy column on a wide screen. -->
+            <div class="illus sb-hero-art"><img src="../assets/img/subscription/hero.webp" width="1000" height="1500" fetchpriority="high" decoding="async" alt="A woman at a sunlit table checking a macro ring on her phone beside a fresh grain bowl" data-i18n-alt="sub.img1"></div>
           </div>
         </div>
       </div>
@@ -99,7 +109,11 @@
             <a class="btn btn-outline btn-block" style="margin-top:auto" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="sub.p.cta">Get it on Google Play</a>
           </article>
           <article class="fc-card fc-card-best reveal" style="--rd:.1s">
-            <span class="fc-badge" data-i18n="sub.p.y.flag">MOST POPULAR</span>
+            <!-- Deliberately NOT "most popular": that is a claim about how many
+                 people choose it, and there is no figure behind it. This is the
+                 same badge the homepage uses, and it states a price fact the
+                 two cards on this page prove by themselves. -->
+            <span class="fc-badge" data-i18n="price.y.badge">Best value</span>
             <span class="fc-plan-name" data-i18n="price.y.name">Yearly</span>
             <div class="fc-plan-price" data-i18n="price.y.amt">€34.99</div>
             <span class="fc-plan-per" data-i18n="price.y.per">/year</span>
@@ -109,6 +123,26 @@
             <a class="btn btn-cta btn-block" style="margin-top:1.1rem" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="sub.p.ctaY">Start the 5-day free trial</a>
           </article>
         </div>
+
+        <!-- The three things people actually hesitate over, answered where
+             the decision is made rather than 2000px further down the page. -->
+        <ul class="sb-assure reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <b data-i18n="sub.as1t">No lock-in</b>
+            <span data-i18n="sub.as1b">Cancel in two taps in Google Play. You keep Premium until the period you paid for runs out.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3.5v5c0 5-3.4 8.9-8 10.5-4.6-1.6-8-5.5-8-10.5v-5z"/><path d="M9 12l2 2 4-4"/></svg>
+            <b data-i18n="sub.as2t">Your diary stays yours</b>
+            <span data-i18n="sub.as2b">Cancelling drops you to the free plan. Nothing you logged is deleted, hidden or held to ransom.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+            <b data-i18n="sub.as3t">No card for the free plan</b>
+            <span data-i18n="sub.as3b">You can log every meal, every day, forever without ever entering payment details.</span>
+          </li>
+        </ul>
 
         <p class="fc-price-fine reveal" style="margin-top:1.4rem"><span data-i18n="sub.vat">All prices are in euros and include Spanish VAT at 21%. What you see here is what you pay — there is nothing added at checkout.</span></p>
       </div>
@@ -156,7 +190,7 @@
         <div class="sb-unlocks">
           <article class="sb-unlock reveal">
             <div class="sb-unlock-media">
-              <div class=""><img src="../assets/img/subscription/scans.webp" width="900" height="900" loading="lazy" decoding="async" alt="Someone photographing a colourful salad bowl with their phone" data-i18n-alt="sub.img2"></div>
+              <div class="sb-unlock-frame"><img src="../assets/img/subscription/scans.webp" width="900" height="900" loading="lazy" decoding="async" alt="Someone photographing a colourful salad bowl with their phone" data-i18n-alt="sub.img2"></div>
             </div>
             <div class="sb-unlock-body">
               <h3 data-i18n="sub.u1.t">Unlimited AI food scans</h3>
@@ -170,7 +204,7 @@
 
           <article class="sb-unlock reveal" style="--rd:.08s">
             <div class="sb-unlock-media">
-              <div class=""><img src="../assets/img/subscription/coach.webp" width="900" height="900" loading="lazy" decoding="async" alt="A phone projecting chat bubbles with food, water and activity icons" data-i18n-alt="sub.img3"></div>
+              <div class="sb-unlock-frame"><img src="../assets/img/subscription/coach.webp" width="900" height="900" loading="lazy" decoding="async" alt="A phone projecting chat bubbles with food, water and activity icons" data-i18n-alt="sub.img3"></div>
             </div>
             <div class="sb-unlock-body">
               <h3 data-i18n="sub.kal.h">Coach Kal, free for everyone</h3>
@@ -184,7 +218,7 @@
 
           <article class="sb-unlock reveal" style="--rd:.16s">
             <div class="sb-unlock-media">
-              <div class=""><img src="../assets/img/subscription/insights.webp" width="900" height="900" loading="lazy" decoding="async" alt="Hands holding a phone showing calorie rings and weekly charts" data-i18n-alt="sub.img4"></div>
+              <div class="sb-unlock-frame"><img src="../assets/img/subscription/insights.webp" width="900" height="900" loading="lazy" decoding="async" alt="Hands holding a phone showing calorie rings and weekly charts" data-i18n-alt="sub.img4"></div>
             </div>
             <div class="sb-unlock-body">
               <h3 data-i18n="sub.u3.t">Weekly reports</h3>
@@ -197,21 +231,35 @@
           </article>
         </div>
 
+        <!-- These three are real Premium features too, but they are the
+             quieter kind — a row of small cards under a label reads as
+             deliberate hierarchy, where three big cards followed by three
+             small ones just read as three afterthoughts. -->
+        <p class="sb-mini-label reveal" data-i18n="sub.mini.label">Also switched on</p>
         <div class="sb-mini">
           <article class="sb-mini-card reveal">
-            <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-            <h3 data-i18n="sub.u2.t">Advanced nutrition insights</h3>
-            <p data-i18n="sub.u2.li1">Patterns across your macros, not just daily totals</p>
+            <div class="sb-mini-media"><img src="../assets/img/subscription/adv-insights.webp" width="900" height="720" loading="lazy" decoding="async" alt="Weekly trend lines above habit tiles, on a tablet beside a cup of tea" data-i18n-alt="sub.imgAdv"></div>
+            <div class="sb-mini-body">
+              <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+              <h3 data-i18n="sub.u2.t">Advanced nutrition insights</h3>
+              <p data-i18n="sub.u2.li1">Patterns across your macros, not just daily totals</p>
+            </div>
           </article>
           <article class="sb-mini-card reveal" style="--rd:.08s">
-            <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
-            <h3 data-i18n="sub.u4.t">Personalised plans &amp; recommendations</h3>
-            <p data-i18n="sub.u4.li3">Adapts as your goals and your week change</p>
+            <div class="sb-mini-media"><img src="../assets/img/subscription/plans.webp" width="900" height="720" loading="lazy" decoding="async" alt="A phone showing a short list of suggestions, standing beside a salmon and quinoa plate" data-i18n-alt="sub.imgPlans"></div>
+            <div class="sb-mini-body">
+              <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+              <h3 data-i18n="sub.u4.t">Personalised plans &amp; recommendations</h3>
+              <p data-i18n="sub.u4.li3">Adapts as your goals and your week change</p>
+            </div>
           </article>
           <article class="sb-mini-card reveal" style="--rd:.16s">
-            <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-7.5-4M3 12a9 9 0 0 1 9-9 9 9 0 0 1 7.5 4"/><path d="M21 3v5h-5M3 21v-5h5"/></svg></div>
-            <h3 data-i18n="sub.u5.t">Sync across devices</h3>
-            <p data-i18n="sub.u5.li2">Your history follows your account, not your handset</p>
+            <div class="sb-mini-media"><img src="../assets/img/subscription/sync.webp" width="900" height="720" loading="lazy" decoding="async" alt="The same food diary open on a phone and a tablet, with a sync symbol between them" data-i18n-alt="sub.imgSync"></div>
+            <div class="sb-mini-body">
+              <div class="sb-mini-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-7.5-4M3 12a9 9 0 0 1 9-9 9 9 0 0 1 7.5 4"/><path d="M21 3v5h-5M3 21v-5h5"/></svg></div>
+              <h3 data-i18n="sub.u5.t">Sync across devices</h3>
+              <p data-i18n="sub.u5.li2">Your history follows your account, not your handset</p>
+            </div>
           </article>
         </div>
       </div>

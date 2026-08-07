@@ -203,6 +203,9 @@ window.FOTOCAL_I18N = {
     "price.f1": "5-day free trial",
     "price.f2": "Cancel anytime in Google Play",
     "price.f3": "Prices may vary by country",
+    /* Third hero perk on /subscription/. NOT price.f4 — f1..f3 are the
+       homepage pricing-teaser footnotes and are reused there. */
+    "price.coachFree": "Coach Kal free on every plan",
 
     /* ── Comparison ── */
     "cmp.kicker": "How Fotocal compares",
@@ -453,12 +456,13 @@ window.FOTOCAL_I18N = {
     "price.y.name": "Anual",
     "price.y.amt": "34,99 €",
     "price.y.per": "/año",
-    "price.y.badge": "Mejor valor",
+    "price.y.badge": "Mejor precio",
     "price.y.equiv": "≈ 2,92 €/mes — ahorra un 58 %",
     "price.y.trial": "Incluye la prueba gratis de 5 días",
     "price.f1": "Prueba gratis de 5 días",
     "price.f2": "Cancela cuando quieras en Google Play",
     "price.f3": "Los precios pueden variar según el país",
+    "price.coachFree": "Coach Kal gratis en todos los planes",
 
     /* ── Comparison ── */
     "cmp.kicker": "Fotocal frente al resto",

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page not found — Fotocal</title>
-  <meta name="description" content="That page does not exist. Head back to the Fotocal home page, browse the features, or read the blog.">
+  <title>Página no encontrada — Fotocal</title>
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="description" content="Esa página no existe. Vuelve al inicio, echa un vistazo a las funciones o lee el blog.">
   <meta name="robots" content="noindex, follow">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
-  <meta property="og:title" content="Page not found — Fotocal">
-  <meta property="og:description" content="That page does not exist. Head back to the home page, browse the features, or read the blog.">
+  <meta property="og:title" content="Página no encontrada — Fotocal">
+  <meta property="og:description" content="Esa página no existe. Vuelve al inicio, echa un vistazo a las funciones o lee el blog.">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#FDF9F0">
@@ -31,6 +33,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css">
   <link rel="stylesheet" href="/assets/css/sections.css">
+
+  <script>
+    /* GitHub Pages has exactly one 404 document and serves it for a miss at
+       any path — including under /en/, where the visitor is reading English.
+       Hand off once so they get the English copy. The lang guard is what
+       stops /en/404.html from redirecting to itself forever. */
+    (function () {
+      if (document.documentElement.lang !== "en" &&
+          location.pathname.indexOf("/en/") === 0) {
+        location.replace("/en/404.html");
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -41,30 +56,30 @@
       <div class="container">
         <div class="soon-inner mx-auto">
           <p class="nf-num" aria-hidden="true">404</p>
-          <h1 data-i18n="nf.title">This page went missing.</h1>
-          <p data-i18n="nf.body">The link may be out of date, or the address may have a typo in it. Nothing is broken on your side — here is the way back.</p>
+          <h1>Esta página se ha perdido.</h1>
+          <p>Puede que el enlace esté anticuado o que la dirección tenga una errata. No has hecho nada mal — por aquí se vuelve.</p>
           <div class="soon-actions">
-            <a class="btn btn-cta" href="/" data-i18n="nf.home">Back to home</a>
-            <a class="btn btn-outline" href="/blog/" data-i18n="nf.blog">Read the blog</a>
+            <a class="btn btn-cta" href="/">Volver al inicio</a>
+            <a class="btn btn-outline" href="/blog/">Leer el blog</a>
           </div>
         </div>
 
         <div class="nf-links">
           <div class="fc-related">
             <a class="fc-rcard" href="/">
-              <span class="fc-rkicker" data-i18n="nav.home">Home</span>
-              <span class="fc-rtitle" data-i18n="nf.c1">One photo, all your nutrition</span>
-              <span class="fc-rarrow" data-i18n="nf.go">Go →</span>
+              <span class="fc-rkicker">Inicio</span>
+              <span class="fc-rtitle">Una foto y toda tu nutrición</span>
+              <span class="fc-rarrow">Ir →</span>
             </a>
             <a class="fc-rcard" href="/features/">
-              <span class="fc-rkicker" data-i18n="nav.features">Features</span>
-              <span class="fc-rtitle" data-i18n="nf.c2">Everything the app does</span>
-              <span class="fc-rarrow" data-i18n="nf.go">Go →</span>
+              <span class="fc-rkicker">Funciones</span>
+              <span class="fc-rtitle">Todo lo que hace la app</span>
+              <span class="fc-rarrow">Ir →</span>
             </a>
             <a class="fc-rcard" href="/blog/">
-              <span class="fc-rkicker" data-i18n="nav.blog">Blog</span>
-              <span class="fc-rtitle" data-i18n="nf.c3">54 practical guides on eating better</span>
-              <span class="fc-rarrow" data-i18n="nf.go">Go →</span>
+              <span class="fc-rkicker">Blog</span>
+              <span class="fc-rtitle">54 guías prácticas para comer mejor</span>
+              <span class="fc-rarrow">Ir →</span>
             </a>
           </div>
         </div>

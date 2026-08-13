@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice food logging — say what you ate, in any language | Fotocal</title>
-  <meta name="description" content="Say what you ate in any language. Fotocal detects it, identifies every food and quantity, estimates calories and macros, and logs it. Hands-free.">
+  <title>Registro de comidas por voz, en cualquier idioma</title>
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="description" content="Di lo que has comido en cualquier idioma. Fotocal lo detecta, identifica cada alimento y su cantidad, estima calorías y macros y lo registra.">
   <link rel="canonical" href="https://getfotocal.com/features/voice-logging/">
-  <link rel="alternate" hreflang="en" href="https://getfotocal.com/features/voice-logging/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/features/voice-logging/">
+  <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/voice-logging/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/voice-logging/">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Voice food logging — say what you ate, in any language | Fotocal">
-  <meta property="og:description" content="Speak your meal and Fotocal detects the language, transcribes it, identifies every food and quantity, estimates calories and macros, and logs it to any meal. Hands-free, in seconds.">
+  <meta property="og:title" content="Registro de comidas por voz, en cualquier idioma">
+  <meta property="og:description" content="Di lo que has comido en cualquier idioma. Fotocal lo detecta, identifica cada alimento y su cantidad, estima calorías y macros y lo registra.">
   <meta property="og:url" content="https://getfotocal.com/features/voice-logging/">
   <meta property="og:image" content="https://getfotocal.com/assets/img/features/voice-logging.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -31,32 +32,45 @@
   <link rel="stylesheet" href="../../assets/css/sections.css">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which languages does it understand?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It detects the language automatically instead of asking you to choose one, so you can speak whichever language the food actually has a name in. That matters more than it sounds — plenty of dishes have no good translation, and describing them in their own language gives a better result than describing them in English." }
+      "name": "¿Qué idiomas entiende?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Detecta el idioma automáticamente en vez de pedirte que elijas uno, así que puedes hablar en el idioma en el que el alimento realmente tiene nombre. Importa más de lo que parece: muchos platos no tienen una buena traducción, y describirlos en su idioma da mejor resultado que describirlos en inglés."
+      }
     },
     {
       "@type": "Question",
-      "name": "Do I have to phrase it a particular way?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Full sentences, half sentences and lists all work. You do not need to say units, though saying them helps: “200 grams of rice” will always beat “some rice”." }
+      "name": "¿Tengo que decirlo de alguna forma concreta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Funcionan las frases completas, las frases a medias y las listas. No hace falta decir las unidades, aunque ayuda: «200 gramos de arroz» siempre será mejor que «un poco de arroz»."
+      }
     },
     {
       "@type": "Question",
-      "name": "What if it mishears something?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Nothing is saved until you tap save. Until then every detected item can be edited, re-weighed or removed, and you can add anything it missed by hand." }
+      "name": "¿Y si entiende mal algo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No se guarda nada hasta que tocas guardar. Hasta entonces puedes editar, repesar o eliminar cualquier alimento detectado, y añadir a mano lo que se haya dejado."
+      }
     },
     {
       "@type": "Question",
-      "name": "Does it need an internet connection?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both the transcription and the nutrition estimate happen on our side, so voice logging needs a connection to work." }
+      "name": "¿Necesita conexión a internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Tanto la transcripción como la estimación nutricional se hacen en nuestro lado, así que el registro por voz necesita conexión."
+      }
     }
-    ]
-  }
+  ],
+  "inLanguage": "es"
+}
   </script>
 </head>
 <body>
@@ -69,15 +83,15 @@
     <section class="fp-hero">
       <div class="container">
         <div class="fp-hero-copy">
-          <span class="kicker reveal" data-i18n="fp.voice-logging.kicker">Voice logging</span>
-          <h1 class="reveal" data-i18n-html="fp.voice-logging.h1">Just say what you ate — <em class="accent">in any language</em>.</h1>
-          <p class="lead reveal" data-i18n="fp.voice-logging.lead">Tap the microphone and talk normally. Fotocal works out which language you spoke, writes it down, picks out every food and the amount of it, estimates the calories and macros, and files the whole thing under the meal you choose. No typing, no searching, no scrolling a database.</p>
+          <span class="kicker reveal">Registro por voz</span>
+          <h1 class="reveal">Solo di lo que has comido — <em class="accent">en cualquier idioma</em>.</h1>
+          <p class="lead reveal">Toca el micrófono y habla con normalidad. Fotocal averigua en qué idioma has hablado, lo transcribe, identifica cada alimento y su cantidad, estima las calorías y los macros y lo guarda en la comida que elijas. Sin escribir, sin buscar, sin recorrer una base de datos.</p>
           <div class="fp-hero-actions reveal">
             <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
               <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-              <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+              <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
             </a>
-            <a class="btn btn-outline" href="../" data-i18n="sp.allFeatures">All features</a>
+            <a class="btn btn-outline" href="../">Todas las funciones</a>
           </div>
         </div>
 
@@ -86,7 +100,7 @@
           <span class="shot-card">
             <img src="../../assets/img/features/voice-logging.webp" width="1400" height="933"
                  fetchpriority="high" decoding="async"
-                 alt="A microphone with sound waves carrying food across to a phone showing a logged meal" data-i18n-alt="fp.voice-logging.shotAlt">
+                 alt="Un micrófono cuyas ondas llevan alimentos hasta un móvil que muestra la comida registrada" >
           </span>
         </figure>
       </div>
@@ -96,30 +110,30 @@
     <section class="section section-alt">
       <div class="container">
         <div class="text-center">
-          <span class="kicker reveal" data-i18n="fp.voice-logging.stepsKicker">How it works</span>
-          <h2 class="section-title reveal" data-i18n-html="fp.voice-logging.stepsTitle">Four seconds of talking, <em class="accent">nothing else</em>.</h2>
-          <p class="section-sub mx-auto reveal" data-i18n="fp.voice-logging.stepsSub">The whole point is that you do not have to change how you describe food. Say it the way you would say it to a person.</p>
+          <span class="kicker reveal">Cómo funciona</span>
+          <h2 class="section-title reveal">Cuatro segundos hablando y <em class="accent">nada más</em>.</h2>
+          <p class="section-sub mx-auto reveal">La idea es justo esa: que no tengas que cambiar tu forma de describir la comida. Dílo como se lo dirías a una persona.</p>
         </div>
         <div class="sp-steps">
           <div class="sp-step reveal">
             <div class="sp-step-n">1</div>
-            <h3 data-i18n="fp.voice-logging.s1t">Tap the microphone</h3>
-            <p data-i18n="fp.voice-logging.s1b">It sits on the logging screen alongside photo and barcode. Nothing to set up, no wake word, no separate account to connect.</p>
+            <h3>Toca el micrófono</h3>
+            <p>Está en la pantalla de registro, junto a la foto y el código de barras. Nada que configurar, ninguna palabra de activación, ninguna cuenta aparte que conectar.</p>
           </div>
           <div class="sp-step reveal" style="--rd:.1s">
             <div class="sp-step-n">2</div>
-            <h3 data-i18n="fp.voice-logging.s2t">Talk like a person</h3>
-            <p data-i18n="fp.voice-logging.s2b">“Two scrambled eggs, a slice of rye toast and a flat white.” No app grammar, no unit conversions, no picking items off a list. Ordinary sentences are the input format.</p>
+            <h3>Habla como hablas</h3>
+            <p>«Dos huevos revueltos, una tostada de centeno y un café con leche.» Sin fórmulas, sin conversiones de unidades, sin elegir de una lista. Las frases normales son el formato de entrada.</p>
           </div>
           <div class="sp-step reveal" style="--rd:.2s">
             <div class="sp-step-n">3</div>
-            <h3 data-i18n="fp.voice-logging.s3t">It works out the language</h3>
-            <p data-i18n="fp.voice-logging.s3b">You never set one first. Speak Spanish today and English tomorrow, or switch mid-sentence because a dish only has a name in one of them — Fotocal detects what it heard and transcribes in that language.</p>
+            <h3>Detecta el idioma solo</h3>
+            <p>No eliges ninguno antes. Habla hoy en español y mañana en inglés, o cambia a media frase porque un plato solo tiene nombre en uno de los dos: Fotocal reconoce lo que ha oído y lo transcribe en ese idioma.</p>
           </div>
           <div class="sp-step reveal" style="--rd:.3s">
             <div class="sp-step-n">4</div>
-            <h3 data-i18n="fp.voice-logging.s4t">Check it, then send it to a meal</h3>
-            <p data-i18n="fp.voice-logging.s4b">You get the transcript and every item it found with its quantity. Fix anything that looks wrong, choose Breakfast, Lunch, Dinner or Snack, and save.</p>
+            <h3>Revísalo y mándalo a una comida</h3>
+            <p>Verás la transcripción y cada alimento detectado con su cantidad. Corrige lo que no cuadre, elige Desayuno, Comida, Cena o Snack y guárdalo.</p>
           </div>
         </div>
       </div>
@@ -129,40 +143,40 @@
     <section class="section">
       <div class="container">
         <div class="text-center">
-          <span class="kicker reveal" data-i18n="fp.voice-logging.getKicker">What you get</span>
-          <h2 class="section-title reveal" data-i18n="fp.voice-logging.getTitle">A full entry, not a rough note.</h2>
-          <p class="section-sub mx-auto reveal" data-i18n="fp.voice-logging.getSub">Voice logging produces exactly what a photo scan produces — an itemised, editable meal with real numbers behind it.</p>
+          <span class="kicker reveal">Qué obtienes</span>
+          <h2 class="section-title reveal">Un registro completo, no una nota rápida.</h2>
+          <p class="section-sub mx-auto reveal">El registro por voz produce exactamente lo mismo que un escaneo por foto: una comida detallada, editable y con números reales detrás.</p>
         </div>
         <div class="sp-cards">
           <div class="sp-card reveal">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
-            <h3 data-i18n="fp.voice-logging.c1t">The transcript</h3>
-            <p data-i18n="fp.voice-logging.c1b">Exactly what it heard, in the language you spoke, so it is always obvious why it logged what it logged.</p>
+            <h3>La transcripción</h3>
+            <p>Exactamente lo que ha oído, en el idioma en que hablaste, para que siempre sepas por qué ha registrado lo que ha registrado.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.1s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-            <h3 data-i18n="fp.voice-logging.c2t">Every food, separated</h3>
-            <p data-i18n="fp.voice-logging.c2b">One line per item rather than one lump. “Chicken salad with dressing” comes back as chicken, salad and dressing, each with its own numbers.</p>
+            <h3>Cada alimento, por separado</h3>
+            <p>Una línea por alimento en lugar de un bloque. «Ensalada de pollo con aliño» vuelve como pollo, ensalada y aliño, cada uno con sus números.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.2s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M8 7l-4 7a4 4 0 0 0 8 0z"/><path d="M16 7l-4 7a4 4 0 0 0 8 0z" transform="translate(4)"/></svg></div>
-            <h3 data-i18n="fp.voice-logging.c3t">Real quantities</h3>
-            <p data-i18n="fp.voice-logging.c3b">“A handful of almonds”, “two slices”, “a large coffee” — spoken amounts are read as amounts and converted into grams or millilitres.</p>
+            <h3>Cantidades de verdad</h3>
+            <p>«Un puñado de almendras», «dos rebanadas», «un café grande»: las cantidades habladas se leen como cantidades y se convierten a gramos o mililitros.</p>
           </div>
           <div class="sp-card reveal">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
-            <h3 data-i18n="fp.voice-logging.c4t">Calories per item and in total</h3>
-            <p data-i18n="fp.voice-logging.c4b">Each food carries its own figure, so you can see which part of the meal actually cost you rather than only the final number.</p>
+            <h3>Calorías por alimento y totales</h3>
+            <p>Cada alimento lleva su propia cifra, así que ves qué parte de la comida te ha costado de verdad, no solo el número final.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.1s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></div>
-            <h3 data-i18n="fp.voice-logging.c5t">The full macro split</h3>
-            <p data-i18n="fp.voice-logging.c5b">Protein, carbs and fat for the entry, added into the day's rings the moment you save it.</p>
+            <h3>El reparto completo de macros</h3>
+            <p>Proteínas, carbohidratos y grasas del registro, sumados a los anillos del día en cuanto lo guardas.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.2s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg></div>
-            <h3 data-i18n="fp.voice-logging.c6t">Any meal, any time</h3>
-            <p data-i18n="fp.voice-logging.c6b">Breakfast, Lunch, Dinner or Snack — including logging last night's dinner over this morning's coffee.</p>
+            <h3>Cualquier comida, a cualquier hora</h3>
+            <p>Desayuno, Comida, Cena o Snack, incluido registrar la cena de anoche con el café de esta mañana.</p>
           </div>
         </div>
       </div>
@@ -178,13 +192,13 @@
           <div class="sp-band-media">
             <div class="illus">
               <img src="../../assets/img/features/voice-logging-band.webp" width="900" height="1125" loading="lazy" decoding="async"
-                   alt="A woman mid-cook in a sunlit kitchen, talking to the phone in her hand while vegetables wait on the board" data-i18n-alt="fp.voice-logging.bandAlt">
+                   alt="Una mujer cocinando en una cocina soleada, hablándole al móvil que sostiene mientras las verduras esperan en la tabla" >
             </div>
           </div>
           <div class="sp-band-copy">
-            <span class="pill" data-i18n="fp.voice-logging.bandPill">In practice</span>
-            <h2 data-i18n="fp.voice-logging.bandTitle">Hands full, meal logged</h2>
-            <p data-i18n="fp.voice-logging.bandBody">Halfway through cooking is exactly when you cannot type. Say what went into the pan and it is recorded — no rinsing your hands first, no picking the phone up twice.</p>
+            <span class="pill">En la práctica</span>
+            <h2>Con las manos ocupadas y la comida registrada</h2>
+            <p>A mitad de cocinar es justo cuando no puedes escribir. Di lo que ha ido a la sartén y queda registrado: sin lavarte las manos antes y sin coger el móvil dos veces.</p>
           </div>
         </div>
       </div>
@@ -194,14 +208,14 @@
     <section class="section section-alt">
       <div class="container-narrow">
         <div class="fp-rec reveal">
-          <span class="pill" data-i18n="fp.voice-logging.recKicker">After you save</span>
-          <h2 data-i18n="fp.voice-logging.recTitle">It becomes part of the day, immediately.</h2>
-          <p data-i18n="fp.voice-logging.recBody">A spoken entry is not a second-class one. The moment you save it, it is the same object as a photographed meal, and everything downstream treats it that way.</p>
+          <span class="pill">Después de guardar</span>
+          <h2>Pasa a formar parte del día al instante.</h2>
+          <p>Un registro por voz no es de segunda. En cuanto lo guardas es el mismo objeto que una comida fotografiada, y todo lo que viene después lo trata igual.</p>
           <ul class="check-list">
-            <li data-i18n="fp.voice-logging.r1">Your calories-left figure recalculates on the spot, along with the protein, carb and fat rings.</li>
-            <li data-i18n="fp.voice-logging.r2">Coach Kal can see it. Ask “what should I have for dinner?” and the answer accounts for what you just said you ate.</li>
-            <li data-i18n="fp.voice-logging.r3">It feeds the Recommendations tab, which suggests changes based on where your day is actually short rather than on a generic template.</li>
-            <li data-i18n="fp.voice-logging.r4">It counts toward your Weekly Report, so a week logged by voice is as complete as a week logged by camera.</li>
+            <li>Tus calorías restantes se recalculan al momento, junto con los anillos de proteínas, carbohidratos y grasas.</li>
+            <li>Coach Kal lo ve. Pregúntale «¿qué ceno hoy?» y la respuesta tendrá en cuenta lo que acabas de decir que has comido.</li>
+            <li>Alimenta la pestaña de Recomendaciones, que propone cambios según dónde se queda corto tu día de verdad, no según una plantilla genérica.</li>
+            <li>Cuenta para tu Informe Semanal, así que una semana registrada por voz está tan completa como una registrada con la cámara.</li>
           </ul>
         </div>
       </div>
@@ -211,24 +225,24 @@
     <section class="section">
       <div class="container-narrow">
         <div class="text-center">
-          <h2 class="section-title reveal" data-i18n="fp.voice-logging.faqTitle">Questions about voice logging</h2>
+          <h2 class="section-title reveal">Preguntas sobre el registro por voz</h2>
         </div>
         <div class="faq-list">
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.voice-logging.q1">Which languages does it understand?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.voice-logging.a1">It detects the language automatically instead of asking you to choose one, so you can speak whichever language the food actually has a name in. That matters more than it sounds — plenty of dishes have no good translation, and describing them in their own language gives a better result than describing them in English.</p>
+            <summary><span>¿Qué idiomas entiende?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Detecta el idioma automáticamente en vez de pedirte que elijas uno, así que puedes hablar en el idioma en el que el alimento realmente tiene nombre. Importa más de lo que parece: muchos platos no tienen una buena traducción, y describirlos en su idioma da mejor resultado que describirlos en inglés.</p>
           </details>
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.voice-logging.q2">Do I have to phrase it a particular way?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.voice-logging.a2">No. Full sentences, half sentences and lists all work. You do not need to say units, though saying them helps: “200 grams of rice” will always beat “some rice”.</p>
+            <summary><span>¿Tengo que decirlo de alguna forma concreta?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>No. Funcionan las frases completas, las frases a medias y las listas. No hace falta decir las unidades, aunque ayuda: «200 gramos de arroz» siempre será mejor que «un poco de arroz».</p>
           </details>
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.voice-logging.q3">What if it mishears something?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.voice-logging.a3">Nothing is saved until you tap save. Until then every detected item can be edited, re-weighed or removed, and you can add anything it missed by hand.</p>
+            <summary><span>¿Y si entiende mal algo?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>No se guarda nada hasta que tocas guardar. Hasta entonces puedes editar, repesar o eliminar cualquier alimento detectado, y añadir a mano lo que se haya dejado.</p>
           </details>
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.voice-logging.q4">Does it need an internet connection?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.voice-logging.a4">Yes. Both the transcription and the nutrition estimate happen on our side, so voice logging needs a connection to work.</p>
+            <summary><span>¿Necesita conexión a internet?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Sí. Tanto la transcripción como la estimación nutricional se hacen en nuestro lado, así que el registro por voz necesita conexión.</p>
           </details>
         </div>
       </div>
@@ -238,25 +252,25 @@
     <section class="section section-alt">
       <div class="container">
         <div class="text-center">
-          <span class="kicker reveal" data-i18n="feat.guides">Guides</span>
-          <h2 class="section-title reveal" data-i18n="fp.voice-logging.relatedTitle">Keep reading</h2>
-          <p class="section-sub mx-auto reveal" data-i18n="fp.voice-logging.relatedSub">Short, practical reads that go deeper on tracking without the busywork.</p>
+          <span class="kicker reveal">Guías</span>
+          <h2 class="section-title reveal">Sigue leyendo</h2>
+          <p class="section-sub mx-auto reveal">Lecturas breves y prácticas sobre cómo registrar sin que se convierta en trabajo.</p>
         </div>
         <div class="fc-related">
           <a class="fc-rcard reveal" href="../../blog/track-calories-without-weighing/">
-            <span class="fc-rkicker" data-i18n="feat.article">Article</span>
-            <span class="fc-rtitle" data-i18n="fp.voice-logging.rel1">Track calories without weighing everything</span>
-            <span class="fc-rarrow" data-i18n="feat.read">Read →</span>
+            <span class="fc-rkicker">Artículo</span>
+            <span class="fc-rtitle">Cuenta calorías sin pesarlo todo</span>
+            <span class="fc-rarrow">Leer →</span>
           </a>
           <a class="fc-rcard reveal" href="../../blog/common-calorie-counting-mistakes/">
-            <span class="fc-rkicker" data-i18n="feat.article">Article</span>
-            <span class="fc-rtitle" data-i18n="fp.voice-logging.rel2">Common calorie-counting mistakes</span>
-            <span class="fc-rarrow" data-i18n="feat.read">Read →</span>
+            <span class="fc-rkicker">Artículo</span>
+            <span class="fc-rtitle">Errores habituales al contar calorías</span>
+            <span class="fc-rarrow">Leer →</span>
           </a>
           <a class="fc-rcard reveal" href="../../blog/how-to-count-calories-accurately/">
-            <span class="fc-rkicker" data-i18n="feat.article">Article</span>
-            <span class="fc-rtitle" data-i18n="fp.voice-logging.rel3">How to count calories accurately</span>
-            <span class="fc-rarrow" data-i18n="feat.read">Read →</span>
+            <span class="fc-rkicker">Artículo</span>
+            <span class="fc-rtitle">Cómo contar calorías con precisión</span>
+            <span class="fc-rarrow">Leer →</span>
           </a>
         </div>
       </div>
@@ -266,11 +280,11 @@
     <section class="final-cta">
       <div class="container">
         <div class="final-inner reveal">
-          <h2 data-i18n="fp.voice-logging.ctaTitle">Log your next meal without typing a word.</h2>
-          <p data-i18n="fp.voice-logging.ctaBody">Fotocal is free to start, with a 5-day free trial on the paid plans.</p>
+          <h2>Registra tu próxima comida sin escribir una palabra.</h2>
+          <p>Fotocal es gratis para empezar, con una prueba gratis de 5 días en los planes de pago.</p>
           <a class="play-badge play-badge-light" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" style="margin-inline:auto;display:inline-flex" aria-label="Get Fotocal on Google Play">
             <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-            <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+            <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
           </a>
         </div>
       </div>
@@ -281,7 +295,6 @@
   <div id="site-footer"></div>
 
   <script src="../../assets/js/i18n.js"></script>
-  <script src="../../assets/js/i18n-pages.js"></script>
   <script src="../../assets/js/layout.js" data-page="features"></script>
   <script src="../../assets/js/main.js"></script>
 </body>

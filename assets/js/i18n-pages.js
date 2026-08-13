@@ -83,10 +83,7 @@
       "cf.messagePh": "What happened, what you expected, and anything that would help us understand.",
       "cf.messageErr": "Please write a little more so we can help.",
       "cf.send": "Send message",
-      "cf.sending": "Sending…",
       "cf.privacy": "We use what you send only to answer you. Nothing else.",
-      "cf.ok": "Thanks! We'll reply within 24 hours — please check your email.",
-      "cf.fail": "Sorry — that did not send. Please try again in a moment.",
 
       /* ── Subscription: artwork alt text ── */
       "sub.img1": "A woman at a sunlit table checking a macro ring on her phone beside a fresh grain bowl",
@@ -1048,10 +1045,7 @@
       "cf.messagePh": "Qué ha pasado, qué esperabas y cualquier cosa que nos ayude a entenderlo.",
       "cf.messageErr": "Escribe un poco más para que podamos ayudarte.",
       "cf.send": "Enviar mensaje",
-      "cf.sending": "Enviando…",
       "cf.privacy": "Usamos lo que nos envías solo para responderte. Nada más.",
-      "cf.ok": "¡Gracias! Te responderemos en 24 horas — revisa tu correo.",
-      "cf.fail": "Lo sentimos, no se ha podido enviar. Inténtalo de nuevo en un momento.",
 
       /* ── Suscripción: texto alternativo de las imágenes ── */
       "sub.img1": "Una mujer en una mesa soleada revisando un anillo de macros en el móvil junto a un bol de cereales y verduras frescas",

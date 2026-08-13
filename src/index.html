@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    /* ── Remembered language, root only ──
+       Spanish is the default and lives at /, so a first-time visitor gets
+       Spanish with no redirect and no flash. Someone who has since chosen
+       English gets English back when they type the bare domain.
+
+       ONLY the root does this. A link shared to a Spanish page must open in
+       Spanish whatever this particular browser once picked — otherwise the
+       URL stops meaning what it says. Crawlers have no localStorage, so
+       Googlebot always sees the Spanish default here.
+
+       Inline and first in <head> on purpose: anything later would paint
+       Spanish before jumping. */
+    (function () {
+      if (document.documentElement.lang !== "es") return;
+      if (!/^\/(index\.html)?$/.test(location.pathname)) return;
+      try {
+        if (localStorage.getItem("fotocal-lang") === "en") {
+          location.replace("/en/" + location.search + location.hash);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <title>Fotocal — One photo. All your nutrition, instantly.</title>
+  <meta name="description" content="Photograph any meal and Fotocal returns calories, macros, micronutrients and a health score in seconds. AI food scanner for Android. 5-day free trial.">
+  <meta name="keywords" content="calorie counter, AI food scanner, photo calorie tracker, macros, nutrition app, contador de calorías, Fotocal">
+  <link rel="canonical" href="https://getfotocal.com/">
+  <link rel="alternate" hreflang="en" href="https://getfotocal.com/">
+  <link rel="alternate" hreflang="es" href="https://getfotocal.com/">
+  <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/">
+  <meta name="theme-color" content="#FDF9F0">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Fotocal — One photo. All your nutrition, instantly.">
+  <meta property="og:description" content="Photograph your meal and AI gives you calories, macros, micronutrients and a health score — plus barcode &amp; menu scanning, voice logging and Coach Kal. 5-day free trial on Google Play.">
+  <meta property="og:url" content="https://getfotocal.com/">
+  <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fotocal — One photo. All your nutrition, instantly.">
+  <meta name="twitter:description" content="Photograph your meal and AI gives you calories, macros and a health score. 5-day free trial on Google Play.">
+  <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="preload" as="image" href="assets/img/illustrations/hero.webp" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Fotocal",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "HealthApplication",
+    "description": "{{i18n:ld.app.desc}}",
+    "offers": [
+      { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "name": "Premium Monthly" },
+      { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR", "name": "Premium Yearly" }
+    ],
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app"
+  }
+  </script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"{{i18n:faq.q1}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a1}}"}},{"@type":"Question","name":"{{i18n:faq.q2}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a2}}"}},{"@type":"Question","name":"{{i18n:faq.q3}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a3}}"}},{"@type":"Question","name":"{{i18n:faq.q4}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a4}}"}},{"@type":"Question","name":"{{i18n:faq.q5}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a5}}"}},{"@type":"Question","name":"{{i18n:faq.q6}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a6}}"}},{"@type":"Question","name":"{{i18n:faq.q7}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a7}}"}},{"@type":"Question","name":"{{i18n:faq.q8}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a8}}"}}]}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{i18n:nav.home}}",
+      "item": "https://getfotocal.com/"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section class="hero-x">
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-copy reveal">
+            <span class="kicker" data-i18n="hero.eyebrow">AI nutrition tracking · Android</span>
+            <h1 class="hero-title" data-i18n-html="hero.title">One photo. All your nutrition, <em class="accent">instantly</em>.</h1>
+            <p class="hero-sub" data-i18n="hero.sub">Point your camera at any meal and Fotocal gives you calories, macros, micronutrients and a health score in seconds. Then Coach Kal — your AI nutrition coach — helps you make the next meal a little better. No weighing, no database digging.</p>
+
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+               target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play">
+              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
+                <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
+                <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
+                <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
+                <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
+              </svg>
+              <span class="play-badge-text">
+                <small data-i18n="cta.badgeTop">GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+
+            <div class="hero-perks">
+              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.perk1">5-day free trial</span></span>
+              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.perk2">English &amp; Español</span></span>
+              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.perk3">Cancel anytime</span></span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" style="--rd:.12s">
+            <div class="hero-stage-x" id="heroStage">
+              <div class="illus" data-par="6">
+                <img src="assets/img/illustrations/hero.webp" width="1200" height="960"
+                     alt="Illustration: a woman photographs her lunch bowl and Fotocal shows the calories on her phone"
+                     data-i18n-alt="hero.alt" fetchpriority="high" decoding="async">
+              </div>
+              <div class="f-chip f-chip-1" data-par="-14" aria-hidden="true">
+                <span class="f-chip-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+                <span><strong data-i18n="hero.c1t">550 kcal</strong><small data-i18n="hero.c1s">from one photo</small></span>
+              </div>
+              <div class="f-chip f-chip-2" data-par="-10" aria-hidden="true">
+                <span class="f-chip-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+                <span><strong data-i18n="hero.c2t">Health score 86</strong><small data-i18n="hero.c2s">smart swaps included</small></span>
+              </div>
+              <div class="f-chip f-chip-3" data-par="-18" aria-hidden="true">
+                <span class="f-chip-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.6-2.8 1.2-3.8"/><path d="M12 22a6 6 0 0 0 6-6c0-2-1-3.5-2-5"/><path d="M12 22a6 6 0 0 1-6-6c0-1 .3-2 .8-3"/></svg></span>
+                <span><strong data-i18n="hero.c3t">12-day streak</strong><small data-i18n="hero.c3s">keep it alive</small></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ TRUST MARQUEE ═══════════════════ -->
+    <section class="marquee-sec" aria-label="Fotocal highlights">
+      <div class="marquee">
+        <div class="marquee-track">
+          <!-- set A -->
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5 5.6.8-4 4 .9 5.6-4.9-2.7-4.9 2.7.9-5.6-4-4L9.6 7z"/></svg><span data-i18n="mq.1">Advanced AI vision</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="mq.2">AI photo food scan</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M7 8v8M11 8v8M15 8v8"/></svg><span data-i18n="mq.3">Barcode scan + health score</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg><span data-i18n="mq.4">Voice food logging</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span data-i18n="mq.5">Restaurant menu scan</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.9A8.5 8.5 0 0 1 12.5 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg><span data-i18n="mq.6">Coach Kal, AI coach</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="mq.7">5-day free trial</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><span data-i18n="mq.8">English &amp; Español</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="mq.9">Privacy-first · GDPR</span></span>
+          <span class="mq-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span data-i18n="mq.10">Health Connect compatible</span></span>
+          <!-- set B (duplicate for the seamless loop) -->
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5 5.6.8-4 4 .9 5.6-4.9-2.7-4.9 2.7.9-5.6-4-4L9.6 7z"/></svg><span data-i18n="mq.1">Advanced AI vision</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="mq.2">AI photo food scan</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M7 8v8M11 8v8M15 8v8"/></svg><span data-i18n="mq.3">Barcode scan + health score</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg><span data-i18n="mq.4">Voice food logging</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span data-i18n="mq.5">Restaurant menu scan</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.9A8.5 8.5 0 0 1 12.5 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg><span data-i18n="mq.6">Coach Kal, AI coach</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="mq.7">5-day free trial</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><span data-i18n="mq.8">English &amp; Español</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="mq.9">Privacy-first · GDPR</span></span>
+          <span class="mq-chip mq-dup" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span data-i18n="mq.10">Health Connect compatible</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="how.kicker">How it works</span>
+          <h2 class="section-title reveal" data-i18n-html="how.title">Three steps. <em class="accent">Zero friction</em>.</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="how.sub">Logging a meal takes about as long as taking a photo — because that is all it is. These are real screens from the app.</p>
+        </div>
+
+        <div class="steps hiw">
+          <div class="step reveal">
+            <div class="step-badge">1</div>
+            <h3 data-i18n="how.s1t">Snap a photo</h3>
+            <p data-i18n="how.s1b">Open Fotocal and photograph your plate. Home-cooked, restaurant, or last night's leftovers — it all works.</p>
+            <!-- Step 1 is the real meal, not a screen — a plain photo, sized to the
+                 same footprint as the two devices so the row still lines up. -->
+            <div class="step-media">
+              <figure class="shot-card shot-cover shot-tilt-l">
+                <img src="assets/img/steps/step1-meal.webp" width="880" height="1100"
+                     loading="lazy" decoding="async"
+                     alt="Avocado toast with cherry tomatoes and a fried egg on a grey plate"
+                     data-i18n-alt="how.s1alt">
+              </figure>
+            </div>
+          </div>
+
+          <div class="step reveal" style="--rd:.12s">
+            <div class="step-badge">2</div>
+            <h3 data-i18n="how.s2t">The AI reads it</h3>
+            <p data-i18n="how.s2b">In seconds it identifies every ingredient, estimates the portion, and works out calories, macros, micronutrients and a health score.</p>
+            <div class="step-media">
+              <figure class="shot-card shot-tilt-r">
+                <img src="assets/img/steps/step2-scan.webp" width="540" height="1152"
+                     loading="lazy" decoding="async"
+                     alt="Scan result screen — protein, carbs and fat rings, fibre, sugar and sodium, and the day's totals"
+                     data-i18n-alt="how.s2alt">
+              </figure>
+            </div>
+          </div>
+
+          <div class="step reveal" style="--rd:.24s">
+            <div class="step-badge">3</div>
+            <h3 data-i18n="how.s3t">It's logged</h3>
+            <p data-i18n="how.s3b">The meal drops straight into your diary and your whole day updates itself — calories left, macros, water, streak. Done.</p>
+            <div class="step-media">
+              <figure class="shot-card shot-tilt-l">
+                <img src="assets/img/steps/step3-home.webp" width="540" height="1152"
+                     loading="lazy" decoding="async"
+                     alt="Home screen — calories left, macro rings and the day's meals"
+                     data-i18n-alt="how.s3alt">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ LOG IT YOUR WAY ═══════════════════ -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="log.kicker">Four ways to log</span>
+          <h2 class="section-title reveal" data-i18n-html="log.title">Log it <em class="accent">your way</em>.</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="log.sub">Photo, barcode, menu or voice — Fotocal meets you where you are. Whichever is fastest right now, that's the right one.</p>
+        </div>
+
+        <div class="log-grid">
+          <article class="log-card reveal">
+            <div class="log-media">
+              <img src="assets/img/illustrations/scan-photo.webp" width="900" height="720" loading="lazy" decoding="async"
+                   alt="Illustration: hands photographing a salmon bowl, the phone shows 420 kcal and macro bars"
+                   data-i18n-alt="log.p.alt">
+            </div>
+            <div class="log-body">
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="log.p.tag">Photo</span></span>
+              <h3 data-i18n="log.p.t">Snap your plate</h3>
+              <p data-i18n="log.p.b">One photo and the AI returns calories, macros and a health score. Adjust the portion or ingredients before saving — you're always in control.</p>
+            </div>
+          </article>
+
+          <article class="log-card reveal" style="--rd:.08s">
+            <div class="log-media">
+              <img src="assets/img/illustrations/scan-barcode.webp" width="900" height="1200" loading="lazy" decoding="async"
+                   alt="Illustration: hands scanning a product barcode with a phone, a health score dial on screen"
+                   data-i18n-alt="log.b.alt">
+            </div>
+            <div class="log-body">
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M7 8v8M11 8v8M15 8v8"/></svg><span data-i18n="log.b.tag">Barcode</span></span>
+              <h3 data-i18n="log.b.t">Scan the label</h3>
+              <p data-i18n="log.b.b">Point at any product's barcode for full nutrition plus a clear health score — know whether it's worth buying before it's in your basket.</p>
+            </div>
+          </article>
+
+          <article class="log-card reveal" style="--rd:.16s">
+            <div class="log-media">
+              <img src="assets/img/illustrations/scan-voice.webp" width="900" height="720" loading="lazy" decoding="async"
+                   alt="Illustration: a woman speaks into her phone and food icons appear in a speech bubble"
+                   data-i18n-alt="log.v.alt">
+            </div>
+            <div class="log-body">
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg><span data-i18n="log.v.tag">Voice</span></span>
+              <h3 data-i18n="log.v.t">Just say it</h3>
+              <p data-i18n="log.v.b">"Two eggs and toast with avocado" — say it out loud and it's logged. Perfect for busy mornings, messy hands and walking out the door.</p>
+            </div>
+          </article>
+
+          <article class="log-card reveal" style="--rd:.24s">
+            <div class="log-media log-media-menu" aria-hidden="true">
+              <div class="menu-ticket">
+                <div class="menu-ticket-head" data-i18n="log.m.ticket">Menu</div>
+                <div class="menu-line"><span></span><b>410 kcal</b></div>
+                <div class="menu-line"><span></span><b>620 kcal</b></div>
+                <div class="menu-line"><span></span><b>350 kcal</b></div>
+              </div>
+            </div>
+            <div class="log-body">
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span data-i18n="log.m.tag">Menu</span></span>
+              <h3 data-i18n="log.m.t">Scan the menu</h3>
+              <p data-i18n="log.m.b">At a restaurant? Point the camera at the menu and see estimated calories for each dish — order with your eyes open.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ COACH KAL ═══════════════════ -->
+    <section class="section section-alt" id="coach">
+      <div class="container">
+        <div class="flow-row reveal" style="border:0">
+          <div class="flow-visual">
+            <div class="illus" style="max-width:430px">
+              <img src="assets/img/illustrations/coach-kal.webp" width="1000" height="1333" loading="lazy" decoding="async"
+                   alt="Illustration: a woman relaxes with a mug while chatting with Coach Kal, a friendly robot, on her phone"
+                   data-i18n-alt="coach.alt">
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="coach.pill">Meet Coach Kal</span>
+            <h3 data-i18n="coach.t">An AI coach who actually knows your day</h3>
+            <p data-i18n="coach.b">Coach Kal sees your meals, your water, your weight and your goals — so the advice is about your real day, not a generic plan. Ask what to cook with what's in the fridge, what to order at a restaurant, or why the scale hasn't moved this week.</p>
+            <div class="bubble-list">
+              <div class="bubble reveal">
+                <span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
+                <span><b data-i18n="coach.b1t">Grounded in your data</b><p data-i18n="coach.b1s">Tips based on what you actually logged today — not a canned plan.</p></span>
+              </div>
+              <div class="bubble reveal" style="--rd:.08s">
+                <span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+                <span><b data-i18n="coach.b2t">Any hour, any question</b><p data-i18n="coach.b2s">3pm cravings or 11pm "what should I eat?" — Kal is awake.</p></span>
+              </div>
+              <div class="bubble reveal" style="--rd:.16s">
+                <span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+                <span><b data-i18n="coach.b3t">Kind, not preachy</b><p data-i18n="coach.b3s">Practical, judgement-free answers. No guilt, no extreme diets.</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ MORE THAN CALORIES ═══════════════════ -->
+    <section class="section" id="nutrition">
+      <div class="container">
+        <div class="flow-row flip reveal" style="border:0">
+          <div class="flow-visual">
+            <div class="illus" style="max-width:470px">
+              <img src="assets/img/illustrations/nutrition.webp" width="1100" height="1100" loading="lazy" decoding="async"
+                   alt="Illustration: a colorful bowl surrounded by protein, carb and fat chips and vitamin badges"
+                   data-i18n-alt="nutri.alt">
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="nutri.pill">Beyond calories</span>
+            <h3 data-i18n="nutri.t">The full picture of every meal</h3>
+            <p data-i18n="nutri.b">Calories are the headline, not the story. Every scan breaks down your protein, carbs and fat, tracks the vitamins and minerals underneath, and grades the meal with a health score — plus a concrete suggestion to make it better.</p>
+
+            <div class="macro-panel reveal">
+              <div class="macro-row">
+                <small data-i18n="nutri.mp">Protein</small>
+                <span class="macro-bar"><span class="macro-fill macro-fill-p" style="--w:66%"></span></span>
+                <output>32 g</output>
+              </div>
+              <div class="macro-row">
+                <small data-i18n="nutri.mc">Carbs</small>
+                <span class="macro-bar"><span class="macro-fill macro-fill-c" style="--w:52%;--md:.15s"></span></span>
+                <output>45 g</output>
+              </div>
+              <div class="macro-row">
+                <small data-i18n="nutri.mf">Fat</small>
+                <span class="macro-bar"><span class="macro-fill macro-fill-f" style="--w:40%;--md:.3s"></span></span>
+                <output>18 g</output>
+              </div>
+            </div>
+
+            <div class="micro-chips" aria-label="Micronutrients tracked">
+              <span class="micro-chip mc-p" data-i18n="nutri.x1">Vitamin C</span>
+              <span class="micro-chip mc-y" data-i18n="nutri.x2">Vitamin D</span>
+              <span class="micro-chip mc-g" data-i18n="nutri.x3">B12</span>
+              <span class="micro-chip mc-p" data-i18n="nutri.x4">Iron</span>
+              <span class="micro-chip mc-g" data-i18n="nutri.x5">Calcium</span>
+              <span class="micro-chip mc-y" data-i18n="nutri.x6">Magnesium</span>
+              <span class="micro-chip" data-i18n="nutri.x7">+ many more</span>
+            </div>
+
+            <div class="score-badge" aria-hidden="true">
+              <span class="score-ring" style="--sc:86"><b>86</b></span>
+              <span data-i18n="nutri.score">Health score per meal — with smarter swaps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ HABITS ═══════════════════ -->
+    <section class="section section-alt" id="habits">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="habit.kicker">Daily habits</span>
+          <h2 class="section-title reveal" data-i18n-html="habit.title">The small things that <em class="accent">keep you going</em>.</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="habit.sub">Big changes are small habits, repeated. Fotocal makes the repeating the easy part.</p>
+        </div>
+
+        <div class="habit-grid">
+          <article class="habit-card reveal">
+            <div class="habit-ico habit-ico-water"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7S6 10 6 14.5a6 6 0 0 0 12 0C18 10 12 2.7 12 2.7z"/></svg></div>
+            <h3 data-i18n="habit.c1t">Water tracking</h3>
+            <p data-i18n="habit.c1b">Log every glass with one tap and watch your hydration goal fill up through the day.</p>
+          </article>
+          <article class="habit-card reveal" style="--rd:.06s">
+            <div class="habit-ico habit-ico-streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2s4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.6-2.8 1.2-3.8"/><path d="M12 22a6 6 0 0 0 6-6c0-2-1-3.5-2-5"/><path d="M12 22a6 6 0 0 1-6-6c0-1 .3-2 .8-3"/></svg></div>
+            <h3 data-i18n="habit.c2t">Streaks</h3>
+            <p data-i18n="habit.c2b">A daily streak turns logging into a habit you'll actually want to protect.</p>
+          </article>
+          <article class="habit-card reveal" style="--rd:.12s">
+            <div class="habit-ico habit-ico-bell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+            <h3 data-i18n="habit.c3t">Smart reminders</h3>
+            <p data-i18n="habit.c3b">A gentle nudge at the moment you'd normally forget — never spammy, always on time.</p>
+          </article>
+          <article class="habit-card reveal" style="--rd:.18s">
+            <div class="habit-ico habit-ico-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+            <h3 data-i18n="habit.c4t">Daily note: mood &amp; habits</h3>
+            <p data-i18n="habit.c4b">One minute a day — how you felt, how you slept, what went well. Patterns show up fast.</p>
+          </article>
+          <article class="habit-card reveal" style="--rd:.24s">
+            <div class="habit-ico habit-ico-report"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 16v-5M13 16V8M18 16v-8"/></svg></div>
+            <h3 data-i18n="habit.c5t">Weekly reports</h3>
+            <p data-i18n="habit.c5b">Once a week: how your calories and macros really landed, what held up, and one or two things to try next.</p>
+          </article>
+          <article class="habit-card reveal" style="--rd:.3s">
+            <div class="habit-ico habit-ico-steps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0"/><path d="M9 20l2.5-5.5L9 11l1.5-4.5L15 8l2 3h3"/><path d="M6 20l2-4"/></svg></div>
+            <h3 data-i18n="habit.c6t">Steps via Health Connect</h3>
+            <p data-i18n="habit.c6b">Your steps sync automatically and count toward your real daily energy balance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PROGRESS ═══════════════════ -->
+    <section class="section" id="progress">
+      <div class="container">
+        <div class="flow-row reveal" style="border:0">
+          <div class="flow-visual">
+            <div class="hero-stage">
+              <div class="phone phone-lean-l">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="screen-slot"
+                       data-src="assets/img/screens/progress.jpg"
+                       data-w="540" data-h="1152"
+                       data-label-key="prog.slot"
+                       data-label="Weight screen — current weight, trend and BMI"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-copy">
+            <span class="pill" data-i18n="prog.pill">The long game</span>
+            <h3 data-i18n="prog.t">Progress you can actually see</h3>
+            <p data-i18n="prog.b">Log your weight in seconds and Fotocal turns it into a trend line that ignores the daily noise. Your TDEE — the calories your body actually burns — updates as you go, so your targets stay honest while your body changes.</p>
+            <ul class="check-list">
+              <li data-i18n="prog.li1">Weight trends over weeks, not single mornings</li>
+              <li data-i18n="prog.li2">TDEE and calorie targets that adapt to you</li>
+              <li data-i18n="prog.li3">Clean charts you can read at a glance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ BILINGUAL BAND ═══════════════════ -->
+    <section class="lang-band" id="languages">
+      <div class="container-narrow">
+        <div class="lang-pills reveal" aria-hidden="true">
+          <span class="lang-pill"><svg class="lang-flag-svg" viewBox="0 0 60 30"><rect width="60" height="30" fill="#012169"/><path d="M0 0 60 30M60 0 0 30" stroke="#fff" stroke-width="6"/><path d="M0 0 60 30M60 0 0 30" stroke="#C8102E" stroke-width="3.5"/><rect x="25" width="10" height="30" fill="#fff"/><rect y="10" width="60" height="10" fill="#fff"/><rect x="27" width="6" height="30" fill="#C8102E"/><rect y="12" width="60" height="6" fill="#C8102E"/></svg>English</span>
+          <span class="lang-pill"><svg class="lang-flag-svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/></svg>Español</span>
+        </div>
+        <h2 class="section-title reveal" data-i18n-html="band.title">Built Spanish-first. <em class="accent">Fluent in both</em>.</h2>
+        <p class="section-sub reveal" data-i18n="band.sub">Fotocal was designed in Spanish from day one — every screen, every Coach Kal answer and every weekly report reads naturally in Spanish and in English. Switch anytime; your data follows you.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PRICING ═══════════════════ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="price.kicker">Premium</span>
+          <h2 class="section-title reveal" data-i18n-html="price.title">Start with a <em class="accent">5-day free trial</em>.</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="price.sub">One subscription unlocks everything: unlimited AI scans, Coach Kal without limits, weekly reports, micronutrients and every premium feature. Two plans, zero games.</p>
+        </div>
+        <div class="fc-price-grid">
+          <article class="fc-card reveal">
+            <span class="fc-plan-name" data-i18n="price.m.name">Monthly</span>
+            <div class="fc-plan-price" data-i18n="price.m.amt">€6.99</div>
+            <span class="fc-plan-per" data-i18n="price.m.per">/month</span>
+            <p class="fc-plan-note" data-i18n="price.m.note">Full flexibility — try it month by month, cancel anytime.</p>
+          </article>
+          <article class="fc-card fc-card-best reveal" style="--rd:.1s">
+            <span class="fc-badge" data-i18n="price.y.badge">Best value</span>
+            <span class="fc-plan-name" data-i18n="price.y.name">Yearly</span>
+            <div class="fc-plan-price" data-i18n="price.y.amt">€34.99</div>
+            <span class="fc-plan-per" data-i18n="price.y.per">/year</span>
+            <p class="fc-plan-equiv" data-i18n="price.y.equiv">≈ €2.92/month — save 58%</p>
+            <span class="fc-trial-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="price.y.trial">Includes the 5-day free trial</span></span>
+          </article>
+        </div>
+        <div class="fc-price-badge">
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play">
+            <svg class="play-badge-icon" width="22" height="24" viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 234 79 12c-9-8-21-11-32-6l253 253z"/><path fill="#FBBC04" d="M404 312l-79-45-88 88 88 88 79-45c26-15 26-71 0-86z"/><path fill="#4285F4" d="M47 6C40 10 36 18 36 29v454c0 11 4 19 11 23l253-253z"/><path fill="#34A853" d="M47 506c7 4 17 3 32-5l246-222-88-88z"/></svg>
+            <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <div class="fc-price-fine reveal">
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.f1">5-day free trial</span></span>
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.f2">Cancel anytime in Google Play</span></span>
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="price.f3">Prices may vary by country</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ COMPARISON ═══════════════════ -->
+    <section class="section section-alt" id="compare">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="cmp.kicker">How Fotocal compares</span>
+          <h2 class="section-title reveal" data-i18n-html="cmp.title">Everything in one app — <em class="accent">no paywall games</em>.</h2>
+          <p class="section-sub mx-auto reveal" data-i18n="cmp.sub">How Fotocal stacks up against the best-known calorie and nutrition trackers, based on each app's publicly documented features.</p>
+        </div>
+
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th class="col-feat" data-i18n="cmp.hFeat">Feature</th>
+                <th class="compare-us">Fotocal</th>
+                <th>Cal AI</th>
+                <th>MyFitnessPal</th>
+                <th>Yazio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th data-i18n="cmp.r1">AI photo food scanning</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="yes">✓</span></td><td data-label="MyFitnessPal"><span class="part">Premium+</span></td><td data-label="Yazio"><span class="yes">✓</span></td></tr>
+              <tr><th data-i18n="cmp.r2">Barcode scanner + health score</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="yes">✓</span></td><td data-label="MyFitnessPal"><span class="part" data-i18n="cmp.premium">Premium</span></td><td data-label="Yazio"><span class="yes">✓</span></td></tr>
+              <tr><th data-i18n="cmp.r3">Restaurant menu scanning</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="no">✗</span></td><td data-label="MyFitnessPal"><span class="no">✗</span></td><td data-label="Yazio"><span class="no">✗</span></td></tr>
+              <tr><th data-i18n="cmp.r4">Voice food logging</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="yes">✓</span></td><td data-label="MyFitnessPal"><span class="part" data-i18n="cmp.premium">Premium</span></td><td data-label="Yazio"><span class="no">✗</span></td></tr>
+              <tr><th data-i18n="cmp.r5">AI nutrition chat coach</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="no">✗</span></td><td data-label="MyFitnessPal"><span class="no">✗</span></td><td data-label="Yazio"><span class="no">✗</span></td></tr>
+              <tr><th data-i18n="cmp.r6">Meal health score + healthier swaps</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="no">✗</span></td><td data-label="MyFitnessPal"><span class="no">✗</span></td><td data-label="Yazio"><span class="no">✗</span></td></tr>
+              <tr><th data-i18n="cmp.r7">Micronutrients (vitamins &amp; minerals)</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="no">✗</span></td><td data-label="MyFitnessPal"><span class="part" data-i18n="cmp.premium">Premium</span></td><td data-label="Yazio"><span class="part" data-i18n="cmp.premium">Premium</span></td></tr>
+              <tr><th data-i18n="cmp.r8">Mood &amp; habit journal</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="no">✗</span></td><td data-label="MyFitnessPal"><span class="no">✗</span></td><td data-label="Yazio"><span class="no">✗</span></td></tr>
+              <tr><th data-i18n="cmp.r9">Weekly progress report</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="no">✗</span></td><td data-label="MyFitnessPal"><span class="part" data-i18n="cmp.premium">Premium</span></td><td data-label="Yazio"><span class="yes">✓</span></td></tr>
+              <tr><th data-i18n="cmp.r10">Automatic step sync (Health Connect)</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="yes">✓</span></td><td data-label="MyFitnessPal"><span class="yes">✓</span></td><td data-label="Yazio"><span class="yes">✓</span></td></tr>
+              <tr><th data-i18n="cmp.r11">English &amp; Spanish</th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="part" data-i18n="cmp.enFirst">English-first</span></td><td data-label="MyFitnessPal"><span class="yes">✓</span></td><td data-label="Yazio"><span class="yes">✓</span></td></tr>
+              <tr class="compare-price"><th data-i18n="cmp.r12">Typical yearly price</th><td data-label="Fotocal" class="c-us"><span class="price">€34.99</span></td><td data-label="Cal AI"><span class="price">≈$44</span></td><td data-label="MyFitnessPal"><span class="price">$79.99</span></td><td data-label="Yazio"><span class="price">$47.90</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-note reveal" data-i18n="cmp.note">Competitor features and prices are based on publicly available information (2026) and can change. Fotocal is Android-only for now.</p>
+        <div class="compare-cta reveal">
+          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cmp.cta">Get Fotocal on Google Play</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FAQ ═══════════════════ -->
+    <section class="section" id="faq">
+      <div class="container-narrow">
+        <div class="text-center">
+          <span class="kicker reveal" data-i18n="faq.kicker">FAQ</span>
+          <h2 class="section-title reveal" data-i18n-html="faq.title">Questions, <em class="accent">answered</em></h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q1">How accurate is the photo scanning?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a1">Fotocal uses current AI vision models to identify food and estimate portions, and it is good enough that the numbers are genuinely useful day to day. It is an estimate, not a laboratory measurement — mixed dishes, stews and anything layered or hidden under sauce are the hardest cases. You can always correct the portion or the ingredients before you save, and a corrected estimate is still far faster than searching a database.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q2">Do I have to weigh my food?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a2">No. Estimating the portion from the photo is the whole point. If you want to be precise on a particular meal you can enter the weight by hand, but nothing requires it.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q3">What else can I scan besides my plate?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a3">Plenty. Scan a product's barcode to get its full nutrition and a clear health score before you buy it, point the camera at a restaurant menu to see estimated calories per dish, or simply say what you ate out loud and Fotocal logs it. Photo, barcode, menu or voice — whichever is fastest right then.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q4">Is Fotocal free?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a4">Downloading Fotocal is free, and Premium starts with a 5-day free trial so you can test everything: unlimited AI scans, Coach Kal without limits, weekly reports and every premium feature. Cancel before the trial ends and you pay nothing. After that, Premium is €6.99 a month or €34.99 a year.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q5">How do I cancel?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a5">Subscriptions are handled by Google Play, so you cancel there: Play Store → your profile → Payments and subscriptions → Subscriptions. Cancel before the 5-day trial ends and you are not charged.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q6">What happens to my data?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a6">Your data is yours. We never sell it, and you can delete your account and everything in it at any time.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q7">Which languages does the app support?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a7">English and Spanish, in the app and on this site. Fotocal is built Spanish-first, so the Spanish experience is a first-class citizen rather than an afterthought translation.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span data-i18n="faq.q8">Does Fotocal track my steps?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p data-i18n="faq.a8">Yes. Fotocal connects to Health Connect on Android, so your steps sync automatically and feed into your daily energy picture alongside your TDEE.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
+    <section class="cta-banner-sec">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-banner-img">
+            <img src="assets/img/illustrations/cta-banner.webp" width="1536" height="1024" loading="lazy" decoding="async"
+                 alt="Illustration: friends sharing a warm dinner around a table, a phone with Fotocal resting beside the plates"
+                 data-i18n-alt="cta.alt">
+          </div>
+          <div class="cta-banner-inner">
+            <h2 data-i18n-html="cta.title">Your next meal can <em class="accent">count itself</em>.</h2>
+            <p data-i18n="cta.sub">Download Fotocal and see how easy eating better gets when the hard part is a photo. The first 5 days of Premium are on us.</p>
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
+               target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play">
+              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
+                <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
+                <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
+                <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
+                <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
+              </svg>
+              <span class="play-badge-text">
+                <small data-i18n="cta.badgeTop">GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+            <span class="cta-banner-note" data-i18n="cta.note">Free download · 5-day Premium trial · Android</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+
+  <!-- The sticky mobile app CTA lives in assets/js/layout.js + site.css now,
+       so every page gets it and not just this one. -->
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/layout.js" data-page="home"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

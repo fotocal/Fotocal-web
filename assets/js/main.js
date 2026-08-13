@@ -1,13 +1,14 @@
 /* ══════════════════════════════════════════════════════════════
    FOTOCAL — page interactions
    Load order matters: i18n.js -> layout.js -> main.js
-   (layout.js injects the nav/footer; this file then translates them.)
+   (i18n.js holds the nav/footer strings, layout.js injects the chrome
+   already translated, and this file wires up the interactions.)
+
+   Page copy is NOT translated here. It is baked into the HTML by
+   tools/build_site.py — see that file for the two-tree architecture.
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
-
-  var DICT = window.FOTOCAL_I18N || {};
-  var DEFAULT_LANG = "en";   /* English is the default. */
 
   /* Inline flag artwork — SVG, not emoji, so flags render identically on
      every OS (Windows in particular does not draw flag emoji). */
@@ -28,94 +29,36 @@
   };
   var LANG_CODES = { en: "EN", es: "ES" };
 
-  /* ═══════════ Language ═══════════ */
-  var saved = null;
-  try { saved = localStorage.getItem("fotocal-lang"); } catch (e) {}
-  var lang = (saved === "en" || saved === "es") ? saved : DEFAULT_LANG;
+  /* ═══════════ Language ═══════════
+     The site is now two rendered trees — Spanish at the root, English under
+     /en/ — so the language of a page is decided by its URL, not by a
+     setting. Nothing is translated at runtime any more: the text is already
+     in the HTML, which is the whole point (Google can only index what it is
+     served).
 
-  function applyLang(next) {
-    if (!DICT[next]) next = DEFAULT_LANG;
-    lang = next;
+     What is left here is the switcher. It navigates to the same page in the
+     other tree and remembers the choice, so a returning visitor who picked
+     English lands on English. The preference never overrides the URL — a
+     shared link always opens in the language it names. */
+  var PAGE_LANG = (document.documentElement.lang === "en") ? "en" : "es";
 
-    var dict = DICT[next];
-    var fallback = DICT[DEFAULT_LANG] || {};
-
-    document.documentElement.lang = next;
-
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n");
-      var v = dict[k];
-      if (v == null) v = fallback[k];        /* never leave a string blank */
-      if (v != null) el.textContent = v;
-    });
-
-    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n-html");
-      var v = dict[k];
-      if (v == null) v = fallback[k];
-      if (v != null) el.innerHTML = v;
-    });
-
-    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n-aria");
-      var v = dict[k] != null ? dict[k] : fallback[k];
-      if (v != null) el.setAttribute("aria-label", v);
-    });
-
-    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n-alt");
-      var v = dict[k] != null ? dict[k] : fallback[k];
-      if (v != null) el.setAttribute("alt", v);
-    });
-
-    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n-ph");
-      var v = dict[k] != null ? dict[k] : fallback[k];
-      if (v != null) el.setAttribute("placeholder", v);
-    });
-
-    /* ── Long-form content blocks ──
-       Article prose is far too long to live in the dictionary, so a blog
-       post ships both languages in its own markup, each wrapped in
-       [data-lang]. Only the matching one is shown. `hidden` (not
-       display:none) is used so the hidden copy stays out of the
-       accessibility tree and out of find-in-page. */
-    var blocks = document.querySelectorAll("[data-lang-block]");
-    if (blocks.length) {
-      var wanted = next;
-      /* If a page has no block for the chosen language, fall back to the
-         default so the reader is never left with an empty article. */
-      var has = false;
-      blocks.forEach(function (el) { if (el.getAttribute("data-lang-block") === wanted) has = true; });
-      if (!has) wanted = DEFAULT_LANG;
-      blocks.forEach(function (el) {
-        el.hidden = el.getAttribute("data-lang-block") !== wanted;
-      });
-    }
-
-    /* Reflect the choice in the language dropdown (trigger + option ticks). */
-    var trig = document.getElementById("langCurrent");
-    if (trig) {
-      var tf = trig.querySelector("[data-lang-flag]");
-      var tc = trig.querySelector("[data-lang-code]");
-      if (tf) tf.innerHTML = FOTOCAL_FLAGS[next] || "";
-      if (tc) tc.textContent = LANG_CODES[next] || next.toUpperCase();
-    }
-    document.querySelectorAll(".lang-item").forEach(function (el) {
-      el.setAttribute("aria-selected", el.getAttribute("data-lang") === next ? "true" : "false");
-    });
-
-    try { localStorage.setItem("fotocal-lang", next); } catch (e) {}
+  /* The same page in the other tree. /en/foo/ <-> /foo/ */
+  function counterpart(lang) {
+    var p = location.pathname;
+    var bare = p.indexOf("/en/") === 0 ? p.slice(3) : (p === "/en" ? "/" : p);
+    return (lang === "en" ? "/en" + bare : bare) + location.search + location.hash;
   }
 
-  /* Always run: the injected nav/footer ship with empty text nodes that
-     only the dictionary fills, so this is what makes the page readable. */
-  applyLang(lang);
+  function remember(lang) {
+    try { localStorage.setItem("fotocal-lang", lang); } catch (e) {}
+  }
+  /* Landing on a tree is itself a choice — keep the preference in step so
+     the root-level redirect below never fights the URL the visitor used. */
+  remember(PAGE_LANG);
 
-  /* ═══════════ Language dropdown ═══════════
-     Replaces the old EN/ES flip-toggle. One click on the trigger opens a
-     proper menu; picking a language sets it explicitly and persists it, so
-     there is no accidental flipping. */
+  /* ═══════════ Language switcher ═══════════
+     Built as real links, so it works without the click handlers, shows a
+     proper URL on hover, and is followable by a crawler. */
   var langHost = document.getElementById("langToggle");
   if (langHost) {
     var sel = document.createElement("div");
@@ -124,19 +67,21 @@
     sel.innerHTML =
       '<button class="lang-current" id="langCurrent" type="button" aria-haspopup="listbox" ' +
         'aria-expanded="false" aria-label="Change language / Cambiar idioma">' +
-        '<span class="lang-flag" data-lang-flag></span>' +
-        '<span class="lang-code" data-lang-code>EN</span>' +
+        '<span class="lang-flag">' + (FOTOCAL_FLAGS[PAGE_LANG] || "") + '</span>' +
+        '<span class="lang-code">' + (LANG_CODES[PAGE_LANG] || PAGE_LANG.toUpperCase()) + '</span>' +
         '<svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
           'stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
           '<path d="M6 9l6 6 6-6"/></svg>' +
       '</button>' +
       '<ul class="lang-menu" id="langMenu" role="listbox">' +
-        '<li class="lang-item" role="option" data-lang="en" tabindex="0">' +
-          '<span class="lang-flag">' + FOTOCAL_FLAGS.en + '</span>' +
-          '<span class="lang-name">English</span></li>' +
-        '<li class="lang-item" role="option" data-lang="es" tabindex="0">' +
+        '<li role="none"><a class="lang-item" role="option" href="' + counterpart("es") + '" ' +
+            'hreflang="es" lang="es" data-lang="es" aria-selected="' + (PAGE_LANG === "es") + '">' +
           '<span class="lang-flag">' + FOTOCAL_FLAGS.es + '</span>' +
-          '<span class="lang-name">Español</span></li>' +
+          '<span class="lang-name">Español</span></a></li>' +
+        '<li role="none"><a class="lang-item" role="option" href="' + counterpart("en") + '" ' +
+            'hreflang="en" lang="en" data-lang="en" aria-selected="' + (PAGE_LANG === "en") + '">' +
+          '<span class="lang-flag">' + FOTOCAL_FLAGS.en + '</span>' +
+          '<span class="lang-name">English</span></a></li>' +
       '</ul>';
     langHost.replaceWith(sel);
 
@@ -157,20 +102,16 @@
       if (sel.classList.contains("open")) closeMenu(); else openMenu();
     });
 
-    menu.querySelectorAll(".lang-item").forEach(function (li) {
-      var pick = function () { applyLang(li.getAttribute("data-lang")); closeMenu(); current.focus(); };
-      li.addEventListener("click", function (e) { e.stopPropagation(); pick(); });
-      li.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); }
-        else if (e.key === "Escape") { closeMenu(); current.focus(); }
+    menu.querySelectorAll(".lang-item").forEach(function (a) {
+      /* Store the choice before the navigation, not after — after never runs. */
+      a.addEventListener("click", function () { remember(a.getAttribute("data-lang")); });
+      a.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") { closeMenu(); current.focus(); }
       });
     });
 
     document.addEventListener("click", closeMenu);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-
-    /* Paint the trigger now that the dropdown exists. */
-    applyLang(lang);
   }
 
   /* ═══════════ Scroll reveal ═══════════ */

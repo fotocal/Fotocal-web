@@ -1,4 +1,10 @@
-/* Fotocal — landing page interactions */
+/* Fotocal — landing page interactions
+
+   ORPHANED. Nothing loads this file, or js/i18n.js beside it. Both are
+   the pre-2026 landing page's own copies, superseded by assets/js/main.js
+   and assets/js/i18n.js. Kept only so the old history stays readable —
+   do not wire them back up: the runtime language switching below is
+   exactly what the two-tree build replaced. */
 (function () {
   "use strict";
 

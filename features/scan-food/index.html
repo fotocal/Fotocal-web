@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo food scanning — one picture, the whole nutrition read | Fotocal</title>
-  <meta name="description" content="Photograph a meal and get the dish, ingredients, portion, calories, macros, micronutrients, a health score, glycemic load, allergens and a swap.">
+  <title>Escanear comida con IA — una foto y toda la nutrición</title>
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="description" content="Fotografía un plato y obtén el plato, los ingredientes, la ración, calorías, macros, micronutrientes, puntuación de salud, carga glucémica y alérgenos.">
   <link rel="canonical" href="https://getfotocal.com/features/scan-food/">
-  <link rel="alternate" hreflang="en" href="https://getfotocal.com/features/scan-food/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/features/scan-food/">
+  <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/scan-food/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/scan-food/">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Photo food scanning — one picture, the whole nutrition read | Fotocal">
-  <meta property="og:description" content="Photograph any meal and Fotocal identifies the dish and ingredients, estimates the portion and returns calories, macros, micronutrients, a health score, NOVA level, glycemic load, allergens and a healthier swap.">
+  <meta property="og:title" content="Escanear comida con IA — una foto y toda la nutrición">
+  <meta property="og:description" content="Fotografía un plato y obtén el plato, los ingredientes, la ración, calorías, macros, micronutrientes, puntuación de salud, carga glucémica y alérgenos.">
   <meta property="og:url" content="https://getfotocal.com/features/scan-food/">
   <meta property="og:image" content="https://getfotocal.com/assets/img/features/scan-food.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -31,32 +32,45 @@
   <link rel="stylesheet" href="../../assets/css/sections.css">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
       "@type": "Question",
-      "name": "How accurate is a photo estimate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It is an estimate, and we would rather say so than pretend otherwise. For everyday tracking it is close enough to be useful, and the portion slider closes most of the remaining gap. If a meal really matters, weigh the main component and adjust." }
+      "name": "¿Cuánta precisión tiene una estimación por foto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y el control de ración cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo."
+      }
     },
     {
       "@type": "Question",
-      "name": "What if it gets an ingredient wrong?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Fix it. Every detected item is editable before you save — change it, re-weigh it, delete it, or add something it missed. Corrections take a couple of seconds and the totals update as you go." }
+      "name": "¿Y si se equivoca con un ingrediente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, repésalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha."
+      }
     },
     {
       "@type": "Question",
-      "name": "Does it work on restaurant and mixed dishes?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, and that is where it earns its keep. A curry, a stir-fry or a plate of tapas has no barcode and no label, which is exactly the situation database-search apps handle worst." }
+      "name": "¿Funciona con platos de restaurante y platos mezclados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, y ahí es donde más se nota. Un curry, un salteado o unas tapas no tienen código de barras ni etiqueta, que es justo la situación que peor resuelven las apps de buscar en una base de datos."
+      }
     },
     {
       "@type": "Question",
-      "name": "Is anything logged automatically?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. A scan produces a draft. Nothing enters your diary, your rings or your totals until you tap save." }
+      "name": "¿Se registra algo automáticamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Un escaneo produce un borrador. No entra nada en tu diario, en tus anillos ni en tus totales hasta que tocas guardar."
+      }
     }
-    ]
-  }
+  ],
+  "inLanguage": "es"
+}
   </script>
 </head>
 <body>
@@ -69,15 +83,15 @@
     <section class="fp-hero">
       <div class="container">
         <div class="fp-hero-copy">
-          <span class="kicker reveal" data-i18n="fp.scan-food.kicker">Photo scan</span>
-          <h1 class="reveal" data-i18n-html="fp.scan-food.h1">Point the camera. <em class="accent">Get the whole plate</em>.</h1>
-          <p class="lead reveal" data-i18n="fp.scan-food.lead">One photograph is the entire input. Fotocal identifies the dish and the ingredients in it, estimates how much is on the plate, and hands back a complete read: calories, macros, around eight micronutrients, a health score, how processed the food is, its glycemic load, any allergens it can see, a short summary from your coach and one realistic swap. Nothing is saved until you say so.</p>
+          <span class="kicker reveal">Escaneo por foto</span>
+          <h1 class="reveal">Apunta con la cámara. <em class="accent">Llévate el plato entero</em>.</h1>
+          <p class="lead reveal">Una fotografía es toda la entrada. Fotocal identifica el plato y los ingredientes que lo componen, estima cuánto hay servido y devuelve una lectura completa: calorías, macros, unos ocho micronutrientes, una puntuación de salud, el nivel de procesamiento del alimento, su carga glucémica, los alérgenos que detecta, un resumen breve de tu coach y una alternativa realista. No se guarda nada hasta que tú lo digas.</p>
           <div class="fp-hero-actions reveal">
             <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
               <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-              <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+              <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
             </a>
-            <a class="btn btn-outline" href="../" data-i18n="sp.allFeatures">All features</a>
+            <a class="btn btn-outline" href="../">Todas las funciones</a>
           </div>
         </div>
 
@@ -86,7 +100,7 @@
           <span class="shot-card">
             <img src="../../assets/img/features/scan-food.webp" width="1400" height="933"
                  fetchpriority="high" decoding="async"
-                 alt="A phone photographing a balanced bowl, with nutrition badges rising out of the plate" data-i18n-alt="fp.scan-food.shotAlt">
+                 alt="Un móvil fotografiando un bol equilibrado, con insignias nutricionales saliendo del plato" >
           </span>
         </figure>
       </div>
@@ -96,30 +110,30 @@
     <section class="section section-alt">
       <div class="container">
         <div class="text-center">
-          <span class="kicker reveal" data-i18n="fp.scan-food.stepsKicker">How it works</span>
-          <h2 class="section-title reveal" data-i18n-html="fp.scan-food.stepsTitle">A photo in, <em class="accent">a full picture out</em>.</h2>
-          <p class="section-sub mx-auto reveal" data-i18n="fp.scan-food.stepsSub">Home-cooked, restaurant, takeaway or last night's leftovers — the input is always the same, and so is the effort.</p>
+          <span class="kicker reveal">Cómo funciona</span>
+          <h2 class="section-title reveal">Entra una foto, <em class="accent">sale el cuadro completo</em>.</h2>
+          <p class="section-sub mx-auto reveal">Casero, de restaurante, para llevar o las sobras de anoche: la entrada siempre es la misma y el esfuerzo también.</p>
         </div>
         <div class="sp-steps">
           <div class="sp-step reveal">
             <div class="sp-step-n">1</div>
-            <h3 data-i18n="fp.scan-food.s1t">Photograph the plate</h3>
-            <p data-i18n="fp.scan-food.s1b">Whatever is in front of you, however it was made. No good lighting required, no arranging the food, no reference coin next to the bowl.</p>
+            <h3>Fotografía el plato</h3>
+            <p>Lo que tengas delante, esté hecho como esté. Sin buena luz, sin colocar la comida, sin poner una moneda al lado como referencia.</p>
           </div>
           <div class="sp-step reveal" style="--rd:.1s">
             <div class="sp-step-n">2</div>
-            <h3 data-i18n="fp.scan-food.s2t">The AI reads it</h3>
-            <p data-i18n="fp.scan-food.s2b">It identifies the dish, separates out the ingredients it can see, and estimates the portion from what is on the plate.</p>
+            <h3>La IA lo lee</h3>
+            <p>Identifica el plato, separa los ingredientes que ve y estima la ración a partir de lo que hay servido.</p>
           </div>
           <div class="sp-step reveal" style="--rd:.2s">
             <div class="sp-step-n">3</div>
-            <h3 data-i18n="fp.scan-food.s3t">Move the portion to match</h3>
-            <p data-i18n="fp.scan-food.s3b">The estimate is a starting point, not a verdict. Drag it to what you actually ate — or split the dish between the people sharing it and log only your share.</p>
+            <h3>Ajusta la ración</h3>
+            <p>La estimación es un punto de partida, no una sentencia. Muévela hasta lo que realmente has comido, o reparte el plato entre las personas que lo comparten y registra solo tu parte.</p>
           </div>
           <div class="sp-step reveal" style="--rd:.3s">
             <div class="sp-step-n">4</div>
-            <h3 data-i18n="fp.scan-food.s4t">Correct anything, then save</h3>
-            <p data-i18n="fp.scan-food.s4b">Every detected ingredient can be edited, swapped or removed, and you can add what the camera could not see. It is a draft until you save it.</p>
+            <h3>Corrige lo que haga falta y guarda</h3>
+            <p>Puedes editar, cambiar o quitar cualquier ingrediente detectado, y añadir lo que la cámara no podía ver. Es un borrador hasta que lo guardas.</p>
           </div>
         </div>
       </div>
@@ -129,55 +143,55 @@
     <section class="section">
       <div class="container">
         <div class="text-center">
-          <span class="kicker reveal" data-i18n="fp.scan-food.getKicker">What you get</span>
-          <h2 class="section-title reveal" data-i18n="fp.scan-food.getTitle">Nine things, from one photograph.</h2>
-          <p class="section-sub mx-auto reveal" data-i18n="fp.scan-food.getSub">Most trackers stop at a calorie count. The useful part is usually everything after it.</p>
+          <span class="kicker reveal">Qué obtienes</span>
+          <h2 class="section-title reveal">Nueve cosas, de una sola foto.</h2>
+          <p class="section-sub mx-auto reveal">Casi todas las apps se quedan en el recuento de calorías. Lo útil suele ser todo lo que viene después.</p>
         </div>
         <div class="sp-cards">
           <div class="sp-card reveal">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c1t">The dish and its ingredients</h3>
-            <p data-i18n="fp.scan-food.c1b">Named individually rather than as one blob, so you can see what it thinks it is looking at.</p>
+            <h3>El plato y sus ingredientes</h3>
+            <p>Nombrados uno a uno y no como un bloque, para que veas qué cree que está mirando.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.1s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M8 7l-4 7a4 4 0 0 0 8 0z"/><path d="M16 7l-4 7a4 4 0 0 0 8 0z" transform="translate(4)"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c2t">A portion estimate you can move</h3>
-            <p data-i18n="fp.scan-food.c2b">Read from the plate rather than assumed from an average serving — and adjustable in one gesture if it is off.</p>
+            <h3>Una ración estimada que puedes mover</h3>
+            <p>Leída del plato en vez de supuesta a partir de una ración media, y ajustable con un gesto si no cuadra.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.2s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c3t">Calories and macros</h3>
-            <p data-i18n="fp.scan-food.c3b">The headline figure plus the protein, carb and fat split behind it.</p>
+            <h3>Calorías y macros</h3>
+            <p>La cifra principal más el reparto de proteínas, carbohidratos y grasas que hay detrás.</p>
           </div>
           <div class="sp-card reveal">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M12 3v4"/><path d="M6 12a6 6 0 0 1 12 0v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><path d="M6 14h12"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c4t">Around eight micronutrients</h3>
-            <p data-i18n="fp.scan-food.c4b">Fibre, sugar, sodium, saturated fat and the rest of the picture most calorie trackers leave out entirely.</p>
+            <h3>Unos ocho micronutrientes</h3>
+            <p>Fibra, azúcar, sodio, grasas saturadas y el resto del cuadro que la mayoría de contadores de calorías ignora por completo.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.1s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 1 9-9"/><path d="M12 12l5-3"/><path d="M12 12v.01"/><path d="M21 12h-3"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c5t">A health score</h3>
-            <p data-i18n="fp.scan-food.c5b">One number for how the meal stacks up overall, so you can compare two dishes without reading two tables.</p>
+            <h3>Una puntuación de salud</h3>
+            <p>Un solo número de cómo queda la comida en conjunto, para comparar dos platos sin leer dos tablas.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.2s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c6t">NOVA processing level</h3>
-            <p data-i18n="fp.scan-food.c6b">How processed the food is — a genuinely different question from how many calories it holds, and one that matters over months.</p>
+            <h3>Nivel de procesamiento NOVA</h3>
+            <p>Cuán procesado está el alimento: una pregunta muy distinta de cuántas calorías tiene, y que pesa a lo largo de los meses.</p>
           </div>
           <div class="sp-card reveal">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2.5-4 5-4 7.5 0s5 4 7.5 0 5-4 5 0"/><path d="M2 17c2.5-4 5-4 7.5 0s5 4 7.5 0 5-4 5 0" opacity=".55"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c7t">Glycemic load</h3>
-            <p data-i18n="fp.scan-food.c7b">How much this particular portion is likely to move your blood sugar, based on the amount actually in front of you.</p>
+            <h3>Carga glucémica</h3>
+            <p>Cuánto es probable que esta ración concreta te mueva el azúcar en sangre, según la cantidad que tienes delante.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.1s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c8t">Allergens</h3>
-            <p data-i18n="fp.scan-food.c8b">Flagged from the ingredients it detects, so a shared or unfamiliar dish is not a guess.</p>
+            <h3>Alérgenos</h3>
+            <p>Señalados a partir de los ingredientes que detecta, para que un plato compartido o desconocido no sea una apuesta.</p>
           </div>
           <div class="sp-card reveal" style="--rd:.2s">
             <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c9t">A coach summary and one swap</h3>
-            <p data-i18n="fp.scan-food.c9b">A plain-language read on the meal, plus a single specific change that would improve it — not a lecture, one suggestion.</p>
+            <h3>Un resumen del coach y un cambio</h3>
+            <p>Una lectura en lenguaje llano de la comida y un único cambio concreto que la mejoraría. No es un sermón: es una sugerencia.</p>
           </div>
         </div>
       </div>
@@ -193,13 +207,13 @@
           <div class="sp-band-media">
             <div class="illus">
               <img src="../../assets/img/features/scan-food-band.webp" width="900" height="1125" loading="lazy" decoding="async"
-                   alt="A hand photographing a restaurant plate, with a health score and a healthier swap appearing beside it" data-i18n-alt="fp.scan-food.bandAlt">
+                   alt="Una mano fotografiando un plato de restaurante, con una puntuación de salud y una alternativa más sana apareciendo al lado" >
             </div>
           </div>
           <div class="sp-band-copy">
-            <span class="pill" data-i18n="fp.scan-food.bandPill">In practice</span>
-            <h2 data-i18n="fp.scan-food.bandTitle">The restaurant plate you cannot look up</h2>
-            <p data-i18n="fp.scan-food.bandBody">No barcode, no label, and no real idea what the kitchen put in it. One photo returns the calories, the score and one specific swap for next time — before the plate has gone cold.</p>
+            <span class="pill">En la práctica</span>
+            <h2>El plato de restaurante que no puedes buscar</h2>
+            <p>Sin código de barras, sin etiqueta y sin saber muy bien qué le ha puesto la cocina. Una foto devuelve las calorías, la puntuación y un cambio concreto para la próxima vez, antes de que se enfríe el plato.</p>
           </div>
         </div>
       </div>
@@ -209,14 +223,14 @@
     <section class="section section-alt">
       <div class="container-narrow">
         <div class="fp-rec reveal">
-          <span class="pill" data-i18n="fp.scan-food.recKicker">How the advice works</span>
-          <h2 data-i18n="fp.scan-food.recTitle">The suggestion knows what else you ate today.</h2>
-          <p data-i18n="fp.scan-food.recBody">A swap is only worth anything if it fits the rest of your day. Fotocal's recommendations are generated against your actual goals and your actual diary, not against a general idea of healthy eating.</p>
+          <span class="pill">Cómo funcionan los consejos</span>
+          <h2>La sugerencia sabe qué más has comido hoy.</h2>
+          <p>Un cambio solo sirve si encaja con el resto de tu día. Las recomendaciones de Fotocal se generan con tus objetivos reales y tu diario real, no con una idea general de comer sano.</p>
           <ul class="check-list">
-            <li data-i18n="fp.scan-food.r1">Your targets come first: the same meal gets different advice if you are cutting, maintaining or building.</li>
-            <li data-i18n="fp.scan-food.r2">It reads the rest of the day. If you are already short on protein at 8pm, the swap will be about protein.</li>
-            <li data-i18n="fp.scan-food.r3">It suggests one change, not a rewrite. Something you could realistically do next time, phrased as a choice rather than a rule.</li>
-            <li data-i18n="fp.scan-food.r4">Everything you scan feeds the Recommendations tab and your Weekly Report, so the advice gets more specific the longer you log.</li>
+            <li>Tus objetivos van primero: la misma comida recibe un consejo distinto si estás en déficit, en mantenimiento o ganando masa.</li>
+            <li>Lee el resto del día. Si a las ocho de la tarde vas corto de proteína, el cambio irá de proteína.</li>
+            <li>Propone un cambio, no una reescritura. Algo que podrías hacer de verdad la próxima vez, planteado como una opción y no como una norma.</li>
+            <li>Todo lo que escaneas alimenta la pestaña de Recomendaciones y tu Informe Semanal, así que el consejo se vuelve más concreto cuanto más registras.</li>
           </ul>
         </div>
       </div>
@@ -226,24 +240,24 @@
     <section class="section">
       <div class="container-narrow">
         <div class="text-center">
-          <h2 class="section-title reveal" data-i18n="fp.scan-food.faqTitle">Questions about photo scanning</h2>
+          <h2 class="section-title reveal">Preguntas sobre el escaneo por foto</h2>
         </div>
         <div class="faq-list">
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.scan-food.q1">How accurate is a photo estimate?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.scan-food.a1">It is an estimate, and we would rather say so than pretend otherwise. For everyday tracking it is close enough to be useful, and the portion slider closes most of the remaining gap. If a meal really matters, weigh the main component and adjust.</p>
+            <summary><span>¿Cuánta precisión tiene una estimación por foto?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y el control de ración cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo.</p>
           </details>
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.scan-food.q2">What if it gets an ingredient wrong?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.scan-food.a2">Fix it. Every detected item is editable before you save — change it, re-weigh it, delete it, or add something it missed. Corrections take a couple of seconds and the totals update as you go.</p>
+            <summary><span>¿Y si se equivoca con un ingrediente?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, repésalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha.</p>
           </details>
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.scan-food.q3">Does it work on restaurant and mixed dishes?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.scan-food.a3">Yes, and that is where it earns its keep. A curry, a stir-fry or a plate of tapas has no barcode and no label, which is exactly the situation database-search apps handle worst.</p>
+            <summary><span>¿Funciona con platos de restaurante y platos mezclados?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Sí, y ahí es donde más se nota. Un curry, un salteado o unas tapas no tienen código de barras ni etiqueta, que es justo la situación que peor resuelven las apps de buscar en una base de datos.</p>
           </details>
           <details class="faq-item reveal">
-            <summary><span data-i18n="fp.scan-food.q4">Is anything logged automatically?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.scan-food.a4">No. A scan produces a draft. Nothing enters your diary, your rings or your totals until you tap save.</p>
+            <summary><span>¿Se registra algo automáticamente?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>No. Un escaneo produce un borrador. No entra nada en tu diario, en tus anillos ni en tus totales hasta que tocas guardar.</p>
           </details>
         </div>
       </div>
@@ -253,25 +267,25 @@
     <section class="section section-alt">
       <div class="container">
         <div class="text-center">
-          <span class="kicker reveal" data-i18n="feat.guides">Guides</span>
-          <h2 class="section-title reveal" data-i18n="fp.scan-food.relatedTitle">Keep reading</h2>
-          <p class="section-sub mx-auto reveal" data-i18n="fp.scan-food.relatedSub">The thinking behind the numbers on the screen.</p>
+          <span class="kicker reveal">Guías</span>
+          <h2 class="section-title reveal">Sigue leyendo</h2>
+          <p class="section-sub mx-auto reveal">Lo que hay detrás de los números de la pantalla.</p>
         </div>
         <div class="fc-related">
           <a class="fc-rcard reveal" href="../../blog/how-to-count-calories-accurately/">
-            <span class="fc-rkicker" data-i18n="feat.article">Article</span>
-            <span class="fc-rtitle" data-i18n="fp.scan-food.rel1">How to count calories accurately</span>
-            <span class="fc-rarrow" data-i18n="feat.read">Read →</span>
+            <span class="fc-rkicker">Artículo</span>
+            <span class="fc-rtitle">Cómo contar calorías con precisión</span>
+            <span class="fc-rarrow">Leer →</span>
           </a>
           <a class="fc-rcard reveal" href="../../blog/what-a-balanced-plate-looks-like/">
-            <span class="fc-rkicker" data-i18n="feat.article">Article</span>
-            <span class="fc-rtitle" data-i18n="fp.scan-food.rel2">What a balanced plate looks like</span>
-            <span class="fc-rarrow" data-i18n="feat.read">Read →</span>
+            <span class="fc-rkicker">Artículo</span>
+            <span class="fc-rtitle">Qué aspecto tiene un plato equilibrado</span>
+            <span class="fc-rarrow">Leer →</span>
           </a>
           <a class="fc-rcard reveal" href="../../blog/why-micronutrients-matter/">
-            <span class="fc-rkicker" data-i18n="feat.article">Article</span>
-            <span class="fc-rtitle" data-i18n="fp.scan-food.rel3">Why micronutrients matter</span>
-            <span class="fc-rarrow" data-i18n="feat.read">Read →</span>
+            <span class="fc-rkicker">Artículo</span>
+            <span class="fc-rtitle">Por qué importan los micronutrientes</span>
+            <span class="fc-rarrow">Leer →</span>
           </a>
         </div>
       </div>
@@ -281,11 +295,11 @@
     <section class="final-cta">
       <div class="container">
         <div class="final-inner reveal">
-          <h2 data-i18n="fp.scan-food.ctaTitle">Photograph your next meal and see the whole thing.</h2>
-          <p data-i18n="fp.scan-food.ctaBody">Fotocal is free to start, with a 5-day free trial on the paid plans.</p>
+          <h2>Fotografía tu próxima comida y velo todo.</h2>
+          <p>Fotocal es gratis para empezar, con una prueba gratis de 5 días en los planes de pago.</p>
           <a class="play-badge play-badge-light" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" style="margin-inline:auto;display:inline-flex" aria-label="Get Fotocal on Google Play">
             <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-            <span class="play-badge-text"><small data-i18n="cta.badgeTop">GET IT ON</small><strong>Google Play</strong></span>
+            <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
           </a>
         </div>
       </div>
@@ -296,7 +310,6 @@
   <div id="site-footer"></div>
 
   <script src="../../assets/js/i18n.js"></script>
-  <script src="../../assets/js/i18n-pages.js"></script>
   <script src="../../assets/js/layout.js" data-page="features"></script>
   <script src="../../assets/js/main.js"></script>
 </body>

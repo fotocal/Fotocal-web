@@ -27,6 +27,20 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
+      # src/ holds the bilingual templates; the two rendered trees (Spanish
+      # at /, English at /en/) are generated from them. Rendering here as
+      # well as locally means the published site can never lag the source,
+      # and a builder error fails the deploy instead of shipping half a site.
+      - name: Render both language trees
+        run: python3 tools/build_site.py
+
+      # Build inputs must not be published. Left in place, src/ would serve
+      # 71 untranslated duplicates of every page at /src/… — the exact
+      # duplicate-content problem the two-tree split exists to avoid.
+      - name: Drop build-only files from the artifact
+        run: rm -rf src tools .github
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

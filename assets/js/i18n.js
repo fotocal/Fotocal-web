@@ -1,7 +1,14 @@
 /* ═══════════════════════════════════════════════════════════════
    FOTOCAL — translations
-   DEFAULT LANGUAGE IS ENGLISH. Spanish is opt-in via the EN/ES toggle
-   and is remembered in localStorage ("fotocal-lang").
+   SPANISH IS THE DEFAULT — the market is Spain. It is served at the site
+   root; English mirrors it under /en/.
+
+   Nothing here is applied at runtime any more. tools/build_site.py reads
+   these dictionaries and bakes the text into the HTML, one language per
+   URL, so a crawler is served the language it will index. The only
+   exceptions — the strings the nav, footer and contact form write
+   themselves — live in this file rather than i18n-pages.js, which is why
+   this one is still shipped to the browser and that one is not.
 
    RULES FOR ADDING STRINGS
    1. Every key MUST exist in BOTH `en` and `es`. A missing Spanish key
@@ -257,6 +264,25 @@ window.FOTOCAL_I18N = {
     "cta.get": "Get the app",
     "cta.stickyNote": "Free · 5-day trial · Android",
     "cta.dismiss": "Dismiss this bar",
+
+    /* ── Contact form: the three strings the form itself writes ──
+       Runtime, so they belong in the shared file. No time promise:
+       a small team should not commit to a number it might miss. */
+    "cf.sending": "Sending…",
+    "cf.ok": "Thanks! We'll reply as soon as we can — please check your email.",
+    "cf.fail": "Sorry — that did not send. Please try again in a moment.",
+    /* ── Structured data ──
+       Strings that live only in JSON-LD. They are here, in the same
+       dictionary as the visible copy, so the Spanish tree describes itself
+       in Spanish rather than shipping an English machine-readable claim
+       about a Spanish page. */
+    "ld.app.desc": "AI nutrition app: photograph your meal and get calories, macros, micronutrients and a health score instantly. Includes barcode and menu scanning, voice logging and an AI nutrition coach.",
+    "ld.org.desc": "Fotocal is an AI nutrition tracking app for Android. Photograph a meal and it returns calories, macros, micronutrients and a health score, with an AI coach that answers questions about your own diary.",
+    "ld.blog.name": "Fotocal Blog",
+    "ld.blog.desc": "Practical guides on nutrition, calorie counting, weight loss and healthy habits.",
+    "ld.contact.name": "Contact Fotocal",
+    "ld.product.desc": "Premium unlocks unlimited AI food scans, advanced nutrition insights, weekly reports, personalised plans and sync.",
+    "ld.features.name": "Fotocal features",
 
     /* ── Footer ── */
     "footer.tag": "AI nutrition tracking. One photo and you know what you are eating.",
@@ -515,6 +541,23 @@ window.FOTOCAL_I18N = {
     "cta.get": "Descarga la app",
     "cta.stickyNote": "Gratis · 5 días de prueba · Android",
     "cta.dismiss": "Cerrar esta barra",
+
+    /* ── Formulario de contacto: los tres textos que escribe el propio
+       formulario. Son de ejecución, así que van en el archivo común. */
+    "cf.sending": "Enviando…",
+    "cf.ok": "¡Gracias! Te responderemos lo antes posible — revisa tu correo.",
+    "cf.fail": "Lo sentimos, no se ha podido enviar. Inténtalo de nuevo en un momento.",
+    /* ── Datos estructurados ──
+       Textos que solo existen en el JSON-LD. Están aquí, en el mismo
+       diccionario que el contenido visible, para que el árbol en español se
+       describa en español. */
+    "ld.app.desc": "App de nutrición con IA: fotografía tu comida y obtén calorías, macros, micronutrientes y una puntuación de salud al instante. Incluye escaneo de códigos de barras y de cartas, registro por voz y un coach nutricional con IA.",
+    "ld.org.desc": "Fotocal es una app de nutrición con IA para Android. Fotografía una comida y te devuelve calorías, macros, micronutrientes y una puntuación de salud, con un coach de IA que responde preguntas sobre tu propio diario.",
+    "ld.blog.name": "Blog de Fotocal",
+    "ld.blog.desc": "Guías prácticas sobre nutrición, conteo de calorías, pérdida de peso y hábitos saludables.",
+    "ld.contact.name": "Contacto de Fotocal",
+    "ld.product.desc": "Premium desbloquea escaneos con IA ilimitados, análisis nutricional avanzado, informes semanales, planes personalizados y sincronización.",
+    "ld.features.name": "Funciones de Fotocal",
 
     /* ── Footer ── */
     "footer.tag": "Nutrición con IA. Una foto y sabes qué estás comiendo.",

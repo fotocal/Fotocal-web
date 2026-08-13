@@ -258,6 +258,13 @@ window.FOTOCAL_I18N = {
     "cta.stickyNote": "Free · 5-day trial · Android",
     "cta.dismiss": "Dismiss this bar",
 
+    /* ── Contact form: the three strings the form itself writes ──
+       Runtime, so they belong in the shared file. No time promise:
+       a small team should not commit to a number it might miss. */
+    "cf.sending": "Sending…",
+    "cf.ok": "Thanks! We'll reply as soon as we can — please check your email.",
+    "cf.fail": "Sorry — that did not send. Please try again in a moment.",
+
     /* ── Footer ── */
     "footer.tag": "AI nutrition tracking. One photo and you know what you are eating.",
     "footer.product": "Product",
@@ -515,6 +522,12 @@ window.FOTOCAL_I18N = {
     "cta.get": "Descarga la app",
     "cta.stickyNote": "Gratis · 5 días de prueba · Android",
     "cta.dismiss": "Cerrar esta barra",
+
+    /* ── Formulario de contacto: los tres textos que escribe el propio
+       formulario. Son de ejecución, así que van en el archivo común. */
+    "cf.sending": "Enviando…",
+    "cf.ok": "¡Gracias! Te responderemos lo antes posible — revisa tu correo.",
+    "cf.fail": "Lo sentimos, no se ha podido enviar. Inténtalo de nuevo en un momento.",
 
     /* ── Footer ── */
     "footer.tag": "Nutrición con IA. Una foto y sabes qué estás comiendo.",

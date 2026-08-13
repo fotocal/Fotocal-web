@@ -1,423 +1,1264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://getfotocal.com/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://getfotocal.com/about/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/about/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/privacy-policy/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/terms/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://getfotocal.com/en/about/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/about/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/account-deletion/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/account-deletion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/account-deletion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/account-deletion/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/blog/</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-count-calories-accurately/</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/tdee-how-many-calories-you-need/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/calorie-deficit-for-fat-loss/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/common-calorie-counting-mistakes/</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/do-calories-matter-or-food-quality/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/track-calories-without-weighing/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-read-nutrition-labels/</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/macronutrients-101/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-much-protein-per-day/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/carbs-are-not-the-enemy/</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/fiber-the-underrated-nutrient/</loc>
-    <lastmod>2026-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/why-micronutrients-matter/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://getfotocal.com/en/account-deletion/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/account-deletion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/account-deletion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/account-deletion/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/blog/added-sugar-vs-natural-sugar/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/added-sugar-vs-natural-sugar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/added-sugar-vs-natural-sugar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/added-sugar-vs-natural-sugar/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/blog/how-to-lose-weight-sustainably/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://getfotocal.com/en/blog/added-sugar-vs-natural-sugar/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/weight-loss-plateaus/</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-fast-should-you-lose-weight/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/the-truth-about-starvation-mode/</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/maintaining-weight-loss/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/emotional-eating/</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-sleep-affects-your-weight/</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/what-a-balanced-plate-looks-like/</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/high-protein-breakfast-ideas/</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/healthy-snacks-that-satisfy/</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/meal-prep-for-beginners/</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/portion-control-simple-tricks/</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/hydration-and-weight/</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/batch-cooking-save-time-eat-better/</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/mindful-eating-beginners-guide/</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-stop-overeating-at-night/</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-many-calories-does-exercise-burn/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/building-muscle-while-losing-fat/</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/neat-the-hidden-calorie-burn/</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/does-protein-timing-matter/</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/low-carb-vs-low-fat/</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/added-sugar-vs-natural-sugar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/added-sugar-vs-natural-sugar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/added-sugar-vs-natural-sugar/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/blog/are-cheat-meals-helpful-or-harmful/</loc>
-    <lastmod>2026-02-24</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/are-cheat-meals-helpful-or-harmful/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/are-cheat-meals-helpful-or-harmful/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/are-cheat-meals-helpful-or-harmful/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/blog/why-crash-diets-fail/</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://getfotocal.com/en/blog/are-cheat-meals-helpful-or-harmful/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/are-cheat-meals-helpful-or-harmful/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/are-cheat-meals-helpful-or-harmful/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/are-cheat-meals-helpful-or-harmful/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/</loc>
-    <lastmod>2026-02-18</lastmod>
+    <loc>https://getfotocal.com/blog/batch-cooking-save-time-eat-better/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/batch-cooking-save-time-eat-better/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/batch-cooking-save-time-eat-better/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/batch-cooking-save-time-eat-better/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/</loc>
-    <lastmod>2026-02-15</lastmod>
+    <loc>https://getfotocal.com/en/blog/batch-cooking-save-time-eat-better/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/batch-cooking-save-time-eat-better/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/batch-cooking-save-time-eat-better/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/batch-cooking-save-time-eat-better/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/blog/best-foods-for-weight-loss/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/best-foods-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/best-foods-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/best-foods-for-weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/best-foods-for-weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/best-foods-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/best-foods-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/best-foods-for-weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/building-muscle-while-losing-fat/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/building-muscle-while-losing-fat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/building-muscle-while-losing-fat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/building-muscle-while-losing-fat/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/building-muscle-while-losing-fat/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/building-muscle-while-losing-fat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/building-muscle-while-losing-fat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/building-muscle-while-losing-fat/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/calorie-deficit-for-fat-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorie-deficit-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/calorie-deficit-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorie-deficit-for-fat-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/calorie-deficit-for-fat-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorie-deficit-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/calorie-deficit-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorie-deficit-for-fat-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/carbs-are-not-the-enemy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/carbs-are-not-the-enemy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/carbs-are-not-the-enemy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/carbs-are-not-the-enemy/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/carbs-are-not-the-enemy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/carbs-are-not-the-enemy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/carbs-are-not-the-enemy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/carbs-are-not-the-enemy/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/cardio-vs-strength-training-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/cardio-vs-strength-training-for-fat-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/cardio-vs-strength-training-for-fat-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/cardio-vs-strength-training-for-fat-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/common-calorie-counting-mistakes/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/common-calorie-counting-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/common-calorie-counting-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/common-calorie-counting-mistakes/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/common-calorie-counting-mistakes/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/common-calorie-counting-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/common-calorie-counting-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/common-calorie-counting-mistakes/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/dietary-fat-how-much-and-which-kinds/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/dietary-fat-how-much-and-which-kinds/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/dietary-fat-how-much-and-which-kinds/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/do-calories-matter-or-food-quality/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/do-calories-matter-or-food-quality/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/do-calories-matter-or-food-quality/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/do-calories-matter-or-food-quality/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/do-calories-matter-or-food-quality/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/do-calories-matter-or-food-quality/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/do-calories-matter-or-food-quality/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/do-calories-matter-or-food-quality/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/do-you-need-to-exercise-to-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/do-you-need-to-exercise-to-lose-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/do-you-need-to-exercise-to-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/do-you-need-to-exercise-to-lose-weight/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/blog/does-meal-timing-matter-for-weight-loss/</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/does-meal-timing-matter-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/does-meal-timing-matter-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/does-meal-timing-matter-for-weight-loss/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/features/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <loc>https://getfotocal.com/en/blog/does-meal-timing-matter-for-weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/does-meal-timing-matter-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/does-meal-timing-matter-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/does-meal-timing-matter-for-weight-loss/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/about/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <loc>https://getfotocal.com/blog/does-protein-timing-matter/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/does-protein-timing-matter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/does-protein-timing-matter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/does-protein-timing-matter/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/does-protein-timing-matter/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/does-protein-timing-matter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/does-protein-timing-matter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/does-protein-timing-matter/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/eating-out-without-wrecking-your-diet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/eating-out-without-wrecking-your-diet/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/eating-out-without-wrecking-your-diet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/eating-out-without-wrecking-your-diet/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/emotional-eating/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/emotional-eating/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/emotional-eating/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/emotional-eating/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/emotional-eating/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/emotional-eating/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/emotional-eating/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/emotional-eating/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/fiber-the-underrated-nutrient/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/fiber-the-underrated-nutrient/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/fiber-the-underrated-nutrient/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/fiber-the-underrated-nutrient/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/fiber-the-underrated-nutrient/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/fiber-the-underrated-nutrient/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/fiber-the-underrated-nutrient/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/fiber-the-underrated-nutrient/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/healthy-snacks-that-satisfy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/healthy-snacks-that-satisfy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/healthy-snacks-that-satisfy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/healthy-snacks-that-satisfy/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/healthy-snacks-that-satisfy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/healthy-snacks-that-satisfy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/healthy-snacks-that-satisfy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/healthy-snacks-that-satisfy/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/high-protein-breakfast-ideas/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/high-protein-breakfast-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/high-protein-breakfast-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/high-protein-breakfast-ideas/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/high-protein-breakfast-ideas/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/high-protein-breakfast-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/high-protein-breakfast-ideas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/high-protein-breakfast-ideas/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/high-protein-diet-benefits-and-how-to-start/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/high-protein-diet-benefits-and-how-to-start/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/high-protein-diet-benefits-and-how-to-start/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/high-protein-diet-benefits-and-how-to-start/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-fast-should-you-lose-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-fast-should-you-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-fast-should-you-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-fast-should-you-lose-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-fast-should-you-lose-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-fast-should-you-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-fast-should-you-lose-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-fast-should-you-lose-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-many-calories-does-exercise-burn/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-many-calories-does-exercise-burn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-many-calories-does-exercise-burn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-many-calories-does-exercise-burn/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-many-calories-does-exercise-burn/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-many-calories-does-exercise-burn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-many-calories-does-exercise-burn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-many-calories-does-exercise-burn/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-much-protein-per-day/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-much-protein-per-day/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-much-protein-per-day/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-much-protein-per-day/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-much-protein-per-day/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-much-protein-per-day/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-much-protein-per-day/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-much-protein-per-day/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-sleep-affects-your-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-sleep-affects-your-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-sleep-affects-your-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-sleep-affects-your-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-sleep-affects-your-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-sleep-affects-your-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-sleep-affects-your-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-sleep-affects-your-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-build-a-healthy-grocery-list/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-build-a-healthy-grocery-list/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-build-a-healthy-grocery-list/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-build-a-healthy-grocery-list/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-count-calories-accurately/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-count-calories-accurately/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-count-calories-accurately/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-count-calories-accurately/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-count-calories-accurately/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-count-calories-accurately/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-count-calories-accurately/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-count-calories-accurately/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-eat-healthy-on-a-budget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-eat-healthy-on-a-budget/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-eat-healthy-on-a-budget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-eat-healthy-on-a-budget/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-handle-cravings-without-guilt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-handle-cravings-without-guilt/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-handle-cravings-without-guilt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-handle-cravings-without-guilt/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-lose-weight-sustainably/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-lose-weight-sustainably/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-lose-weight-sustainably/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-lose-weight-sustainably/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-lose-weight-sustainably/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-lose-weight-sustainably/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-lose-weight-sustainably/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-lose-weight-sustainably/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-read-nutrition-labels/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-read-nutrition-labels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-read-nutrition-labels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-read-nutrition-labels/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-read-nutrition-labels/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-read-nutrition-labels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-read-nutrition-labels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-read-nutrition-labels/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-set-your-macros-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-set-your-macros-for-weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-set-your-macros-for-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-set-your-macros-for-weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-stay-consistent-with-healthy-habits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-stay-consistent-with-healthy-habits/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-stay-consistent-with-healthy-habits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-stay-consistent-with-healthy-habits/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/how-to-stop-overeating-at-night/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-stop-overeating-at-night/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-stop-overeating-at-night/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-stop-overeating-at-night/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/how-to-stop-overeating-at-night/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/how-to-stop-overeating-at-night/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/how-to-stop-overeating-at-night/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/how-to-stop-overeating-at-night/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/hydration-and-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/hydration-and-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/hydration-and-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/hydration-and-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/hydration-and-weight/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/hydration-and-weight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/hydration-and-weight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/hydration-and-weight/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/intermittent-fasting-what-the-evidence-says/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/intermittent-fasting-what-the-evidence-says/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/intermittent-fasting-what-the-evidence-says/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/intermittent-fasting-what-the-evidence-says/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/intuitive-eating-vs-calorie-counting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/intuitive-eating-vs-calorie-counting/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/intuitive-eating-vs-calorie-counting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/intuitive-eating-vs-calorie-counting/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/low-carb-vs-low-fat/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/low-carb-vs-low-fat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/low-carb-vs-low-fat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/low-carb-vs-low-fat/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/low-carb-vs-low-fat/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/low-carb-vs-low-fat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/low-carb-vs-low-fat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/low-carb-vs-low-fat/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/macronutrients-101/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/macronutrients-101/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/macronutrients-101/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/macronutrients-101/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/macronutrients-101/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/macronutrients-101/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/macronutrients-101/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/macronutrients-101/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/maintaining-weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/maintaining-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/maintaining-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/maintaining-weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/maintaining-weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/maintaining-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/maintaining-weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/maintaining-weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/meal-prep-for-beginners/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/meal-prep-for-beginners/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/meal-prep-for-beginners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/meal-prep-for-beginners/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/meal-prep-for-beginners/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/meal-prep-for-beginners/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/meal-prep-for-beginners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/meal-prep-for-beginners/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/mindful-eating-beginners-guide/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/mindful-eating-beginners-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/mindful-eating-beginners-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/mindful-eating-beginners-guide/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/mindful-eating-beginners-guide/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/mindful-eating-beginners-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/mindful-eating-beginners-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/mindful-eating-beginners-guide/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/neat-the-hidden-calorie-burn/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/neat-the-hidden-calorie-burn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/neat-the-hidden-calorie-burn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/neat-the-hidden-calorie-burn/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/neat-the-hidden-calorie-burn/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/neat-the-hidden-calorie-burn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/neat-the-hidden-calorie-burn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/neat-the-hidden-calorie-burn/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/plan-a-week-of-meals-in-30-minutes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/plan-a-week-of-meals-in-30-minutes/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/plan-a-week-of-meals-in-30-minutes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/plan-a-week-of-meals-in-30-minutes/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/portion-control-simple-tricks/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/portion-control-simple-tricks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/portion-control-simple-tricks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/portion-control-simple-tricks/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/portion-control-simple-tricks/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/portion-control-simple-tricks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/portion-control-simple-tricks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/portion-control-simple-tricks/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/tdee-how-many-calories-you-need/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/tdee-how-many-calories-you-need/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/tdee-how-many-calories-you-need/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/tdee-how-many-calories-you-need/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/tdee-how-many-calories-you-need/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/tdee-how-many-calories-you-need/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/tdee-how-many-calories-you-need/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/tdee-how-many-calories-you-need/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/the-truth-about-detox-diets-and-cleanses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/the-truth-about-detox-diets-and-cleanses/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/the-truth-about-detox-diets-and-cleanses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/the-truth-about-detox-diets-and-cleanses/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/the-truth-about-starvation-mode/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/the-truth-about-starvation-mode/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/the-truth-about-starvation-mode/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/the-truth-about-starvation-mode/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/the-truth-about-starvation-mode/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/the-truth-about-starvation-mode/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/the-truth-about-starvation-mode/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/the-truth-about-starvation-mode/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/track-calories-without-weighing/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/track-calories-without-weighing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/track-calories-without-weighing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/track-calories-without-weighing/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/track-calories-without-weighing/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/track-calories-without-weighing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/track-calories-without-weighing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/track-calories-without-weighing/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/understanding-your-basal-metabolic-rate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/understanding-your-basal-metabolic-rate/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/understanding-your-basal-metabolic-rate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/understanding-your-basal-metabolic-rate/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/weight-loss-plateaus/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/weight-loss-plateaus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/weight-loss-plateaus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/weight-loss-plateaus/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/weight-loss-plateaus/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/weight-loss-plateaus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/weight-loss-plateaus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/weight-loss-plateaus/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/what-a-balanced-plate-looks-like/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/what-a-balanced-plate-looks-like/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/what-a-balanced-plate-looks-like/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/what-a-balanced-plate-looks-like/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/what-a-balanced-plate-looks-like/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/what-a-balanced-plate-looks-like/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/what-a-balanced-plate-looks-like/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/what-a-balanced-plate-looks-like/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/why-crash-diets-fail/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/why-crash-diets-fail/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/why-crash-diets-fail/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-crash-diets-fail/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/why-crash-diets-fail/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/why-crash-diets-fail/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/why-crash-diets-fail/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-crash-diets-fail/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/why-micronutrients-matter/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/why-micronutrients-matter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/why-micronutrients-matter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-micronutrients-matter/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/why-micronutrients-matter/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/why-micronutrients-matter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/why-micronutrients-matter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-micronutrients-matter/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/why-the-scale-is-not-the-whole-story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/why-the-scale-is-not-the-whole-story/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/why-the-scale-is-not-the-whole-story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/contact/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/contact/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/subscription/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <loc>https://getfotocal.com/en/contact/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/contact/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/features/weight-loss/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://getfotocal.com/features/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/features/nutrition-diet/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://getfotocal.com/en/features/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/features/lifestyle-mindset/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/lifestyle-mindset/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/lifestyle-mindset/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/lifestyle-mindset/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/features/scan-food/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <loc>https://getfotocal.com/en/features/lifestyle-mindset/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/lifestyle-mindset/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/lifestyle-mindset/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/lifestyle-mindset/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/features/scan-barcode/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <loc>https://getfotocal.com/features/nutrition-diet/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/nutrition-diet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/nutrition-diet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/nutrition-diet/"/>
   </url>
   <url>
-    <loc>https://getfotocal.com/features/voice-logging/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <loc>https://getfotocal.com/en/features/nutrition-diet/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/nutrition-diet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/nutrition-diet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/nutrition-diet/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/features/recipe/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/recipe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/recipe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/recipe/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/features/recipe/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/recipe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/recipe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/recipe/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/scan-barcode/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/scan-barcode/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/scan-barcode/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/scan-barcode/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/features/scan-barcode/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/scan-barcode/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/scan-barcode/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/scan-barcode/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/scan-food/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/scan-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/scan-food/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/scan-food/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/features/scan-food/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/scan-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/scan-food/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/scan-food/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/voice-logging/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/voice-logging/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/voice-logging/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/voice-logging/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/features/voice-logging/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/voice-logging/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/voice-logging/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/voice-logging/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/features/weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/features/weight-loss/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/features/weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/features/weight-loss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/features/weight-loss/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/privacy-policy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/privacy-policy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/subscription/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/subscription/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/subscription/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/subscription/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/subscription/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/subscription/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/subscription/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/subscription/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/terms/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/terms/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/terms/"/>
   </url>
 </urlset>

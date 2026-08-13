@@ -20,16 +20,15 @@
   var ok  = document.getElementById("cfOk");
   var bad = document.getElementById("cfBad");
 
-  /* Copy from the shared dictionary so the form speaks the chosen
-     language. main.js owns the switch; this only reads it. */
+  /* Copy from the shared dictionary. The language is the page's own —
+     the site is two rendered trees (Spanish at /, English at /en/), so
+     <html lang> is the answer and a saved preference is not: it would let
+     an English banner appear on a Spanish page. */
+  var LANG = (document.documentElement.lang === "en") ? "en" : "es";
+
   function t(key, fallback) {
     var D = window.FOTOCAL_I18N || {};
-    var lang = "en";
-    try {
-      var saved = localStorage.getItem("fotocal-lang");
-      if (saved === "es" || saved === "en") lang = saved;
-    } catch (e) {}
-    var v = (D[lang] && D[lang][key]);
+    var v = (D[LANG] && D[LANG][key]);
     if (v == null) v = (D.en && D.en[key]);
     return v != null ? v : fallback;
   }
@@ -60,7 +59,7 @@
        rather than an error — telling a bot it failed just invites a
        retry, and a human will never see this branch. */
     if (form.botcheck && form.botcheck.value) {
-      show(ok, t("cf.ok", "Thanks! We'll reply within 24 hours — please check your email."));
+      show(ok, t("cf.ok", "Thanks! We'll reply as soon as we can — please check your email."));
       form.reset();
       form.classList.remove("was-validated");
       return;
@@ -81,7 +80,7 @@
       .then(function (r) { return r.json().then(function (j) { return { r: r, j: j }; }); })
       .then(function (res) {
         if (res.r.ok && res.j.success) {
-          show(ok, t("cf.ok", "Thanks! We'll reply within 24 hours — please check your email."));
+          show(ok, t("cf.ok", "Thanks! We'll reply as soon as we can — please check your email."));
           form.reset();
           form.classList.remove("was-validated");
           ok.scrollIntoView({ block: "nearest", behavior: "smooth" });

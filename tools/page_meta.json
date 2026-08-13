@@ -1,0 +1,198 @@
+{
+  "_comment": [
+    "Per-page <title> and <meta description> for each language tree.",
+    "Read by tools/build_site.py. Blog articles are NOT listed here — their",
+    "titles and summaries already exist inside each article as data-lang-block",
+    "pairs, so the builder derives them and nothing has to be kept in step by",
+    "hand.",
+    "Limits held to: title <= 62 chars, description <= 158 — beyond that Google",
+    "truncates the snippet."
+  ],
+
+  "index.html": {
+    "es": {
+      "title": "Fotocal — Contador de calorías con IA. Una foto y ya.",
+      "desc": "Fotografía cualquier comida y Fotocal te da calorías, macros, micronutrientes y una puntuación de salud en segundos. App para Android."
+    },
+    "en": {
+      "title": "Fotocal — One photo. All your nutrition, instantly.",
+      "desc": "Photograph any meal and Fotocal returns calories, macros, micronutrients and a health score in seconds. AI food scanner for Android. 5-day free trial."
+    }
+  },
+
+  "features/index.html": {
+    "es": {
+      "title": "Funciones de Fotocal — todo lo que hace la app",
+      "desc": "Todas las funciones: escanear comida con IA, código de barras con puntuación, registro por voz, recetas, escaneo de cartas, Coach Kal e informes."
+    },
+    "en": {
+      "title": "Fotocal Features — everything the app does, on one page",
+      "desc": "Every Fotocal feature: AI photo scan, barcode with health score, voice logging, recipes, menu scanner, Coach Kal, weekly reports. English and Spanish."
+    }
+  },
+
+  "features/scan-food/index.html": {
+    "es": {
+      "title": "Escanear comida con IA — una foto y toda la nutrición",
+      "desc": "Fotografía un plato y obtén el plato, los ingredientes, la ración, calorías, macros, micronutrientes, puntuación de salud, carga glucémica y alérgenos."
+    },
+    "en": {
+      "title": "Photo food scanning — one picture, the whole nutrition read",
+      "desc": "Photograph a meal and get the dish, ingredients, portion, calories, macros, micronutrients, a health score, glycemic load, allergens and a swap."
+    }
+  },
+
+  "features/scan-barcode/index.html": {
+    "es": {
+      "title": "Escáner de código de barras — nutrición al instante",
+      "desc": "Escanea el código de barras de cualquier producto envasado y obtén al instante calorías, macros, ingredientes y alérgenos. Gratis e ilimitado."
+    },
+    "en": {
+      "title": "Barcode scanning — instant nutrition for packaged food",
+      "desc": "Scan a packaged product's barcode for instant calories, macros, ingredients and allergens. Free, unlimited, and it never uses your AI scan quota."
+    }
+  },
+
+  "features/voice-logging/index.html": {
+    "es": {
+      "title": "Registro de comidas por voz, en cualquier idioma",
+      "desc": "Di lo que has comido en cualquier idioma. Fotocal lo detecta, identifica cada alimento y su cantidad, estima calorías y macros y lo registra."
+    },
+    "en": {
+      "title": "Voice food logging — say what you ate, in any language",
+      "desc": "Say what you ate in any language. Fotocal detects it, identifies every food and quantity, estimates calories and macros, and logs it. Hands-free."
+    }
+  },
+
+  "features/recipe/index.html": {
+    "es": {
+      "title": "Nutrición de recetas caseras — calorías por ración",
+      "desc": "Añade o fotografía una receta y Fotocal calcula calorías, macros y micronutrientes totales y por ración, y la guarda para registrarla en un toque."
+    },
+    "en": {
+      "title": "Recipe nutrition — turn any home recipe into full nutrition",
+      "desc": "Add or photograph a recipe and Fotocal works out total and per-serving calories, macros and micronutrients, then saves it for one-tap logging."
+    }
+  },
+
+  "features/weight-loss/index.html": {
+    "es": {
+      "title": "Perder peso con Fotocal — cuenta calorías con una foto",
+      "desc": "Cómo te ayuda Fotocal a perder peso: registro sin esfuerzo por foto, un déficit suave, tendencias de peso y un coach con IA que te da constancia."
+    },
+    "en": {
+      "title": "Weight Loss with Fotocal — track calories by photo",
+      "desc": "How Fotocal helps you lose weight: effortless photo calorie tracking, a gentle deficit, weight trends and an AI coach that keeps you consistent."
+    }
+  },
+
+  "features/nutrition-diet/index.html": {
+    "es": {
+      "title": "Nutrición y dieta con Fotocal — macros y alternativas",
+      "desc": "Ve la nutrición completa de cada comida: calorías, macros, una puntuación de calidad y alternativas más sanas, para cualquier forma de comer."
+    },
+    "en": {
+      "title": "Nutrition & Diet with Fotocal — macros and quality scores",
+      "desc": "See the full nutrition behind every meal with Fotocal: calories, macros, a quality score and healthier swaps — for any way of eating."
+    }
+  },
+
+  "features/lifestyle-mindset/index.html": {
+    "es": {
+      "title": "Hábitos y mentalidad — que comer bien se te quede",
+      "desc": "Construido sobre la psicología del hábito: registro sin esfuerzo, rachas, diario de ánimo y coaching con IA sin culpa para que comer bien dure."
+    },
+    "en": {
+      "title": "Lifestyle & Mindset with Fotocal — habits that stick",
+      "desc": "Built around the psychology of habit: effortless logging, streaks, a mood journal and guilt-free AI coaching that makes eating well actually stick."
+    }
+  },
+
+  "subscription/index.html": {
+    "es": {
+      "title": "Suscripción y precios — Fotocal Premium",
+      "desc": "Precios de Fotocal: gratis para siempre con 3 escaneos con IA al día y Coach Kal ilimitado. Premium 6,99 €/mes o 34,99 €/año, prueba de 5 días."
+    },
+    "en": {
+      "title": "Subscription & pricing — Fotocal Premium",
+      "desc": "Fotocal pricing: free forever with 3 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, with a 5-day trial on the yearly plan."
+    }
+  },
+
+  "blog/index.html": {
+    "es": {
+      "title": "Blog de Fotocal — nutrición, calorías y hábitos",
+      "desc": "54 guías prácticas y sin postureo sobre nutrición, conteo de calorías, pérdida de peso, macros y los hábitos que sostienen todo lo demás."
+    },
+    "en": {
+      "title": "Fotocal Blog — nutrition, calories and habits",
+      "desc": "54 practical, no-nonsense guides on nutrition, calorie counting, weight loss, macros and the everyday habits behind eating better."
+    }
+  },
+
+  "about/index.html": {
+    "es": {
+      "title": "Sobre nosotros — Fotocal",
+      "desc": "Por qué existe Fotocal: que ver lo que comes de verdad, cada día, no cueste esfuerzo — y no se reconstruya semanas después de memoria."
+    },
+    "en": {
+      "title": "About Us — Fotocal",
+      "desc": "Why Fotocal exists: making it effortless to see what you actually eat, every day — not remembered weeks later in someone else's office."
+    }
+  },
+
+  "contact/index.html": {
+    "es": {
+      "title": "Contacto — Fotocal",
+      "desc": "Contacta con Fotocal: soporte, dudas sobre privacidad y datos, y consultas comerciales. Escribe un mensaje y llega directo al equipo."
+    },
+    "en": {
+      "title": "Contact Us — Fotocal",
+      "desc": "Contact Fotocal: support, privacy and data questions, and business enquiries. Send a message and it goes straight to the team."
+    }
+  },
+
+  "privacy-policy/index.html": {
+    "es": {
+      "title": "Política de Privacidad — Fotocal",
+      "desc": "Política de privacidad de Fotocal: cómo tratamos tus datos de salud, fotos, pasos de Health Connect, procesamiento con IA y tus derechos RGPD."
+    },
+    "en": {
+      "title": "Privacy Policy — Fotocal",
+      "desc": "Fotocal's privacy policy: how we handle your health data, photos, Health Connect steps, AI processing and your rights under GDPR."
+    }
+  },
+
+  "terms/index.html": {
+    "es": {
+      "title": "Términos de Servicio — Fotocal",
+      "desc": "Términos de servicio de Fotocal: suscripciones, renovación automática, cancelación, prueba gratuita y condiciones de uso."
+    },
+    "en": {
+      "title": "Terms of Service — Fotocal",
+      "desc": "Fotocal's terms of service: subscriptions, auto-renewal, cancellation, the free trial and the conditions for using the app."
+    }
+  },
+
+  "account-deletion/index.html": {
+    "es": {
+      "title": "Eliminación de cuenta — Fotocal",
+      "desc": "Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes → Eliminar cuenta) o por solicitud de email."
+    },
+    "en": {
+      "title": "Account deletion — Fotocal",
+      "desc": "How to delete your Fotocal account and all your data: from the app (Profile → Settings → Delete account) or by email request."
+    }
+  },
+
+  "404.html": {
+    "es": {
+      "title": "Página no encontrada — Fotocal",
+      "desc": "Esa página no existe. Vuelve al inicio, echa un vistazo a las funciones o lee el blog."
+    },
+    "en": {
+      "title": "Page not found — Fotocal",
+      "desc": "That page does not exist. Head back to the Fotocal home page, browse the features, or read the blog."
+    }
+  }
+}

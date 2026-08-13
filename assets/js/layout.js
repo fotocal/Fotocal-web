@@ -49,34 +49,36 @@
   var YT_URL     = "https://youtube.com/@getfotocal";
   var TIKTOK_URL = "https://www.tiktok.com/@getfotocal.com";
 
-  var u = function (p) { return BASE + p; };
+  /* ── Language comes from the document, never from storage ──
+     The site is two rendered trees: Spanish at the root, English under
+     /en/. The page already knows which one it is — it says so in
+     <html lang>. Reading a saved preference here instead would let a
+     visitor who once picked English see an English nav bolted onto a
+     Spanish page, and would contradict the URL Google indexed. */
+  var LANG = (document.documentElement.lang === "en") ? "en" : "es";
 
-  /* ── Render nav/footer labels immediately ──
-     Every data-i18n element used to be emitted EMPTY and filled in later
-     by main.js. That meant the bar laid out twice: once with no text, once
-     with it. The second pass grew .nav-actions from 90px to 101px and, on
-     pages whose hero is vertically centred, dragged the whole hero up with
-     it — an intermittent 0.12 CLS, most of the budget gone before anything
-     was readable.
-
-     i18n.js is loaded before this file, so the strings are already here.
-     Reading the saved language too means a Spanish visitor never sees a
-     flash of English. main.js still re-applies everything afterwards;
-     this only removes the empty first pass. */
-  var LANG = (function () {
-    try {
-      var v = localStorage.getItem("fotocal-lang");
-      if (v === "en" || v === "es") return v;
-    } catch (e) {}
-    return "en";
-  })();
+  /* Two resolvers, and the difference matters:
+       u()     page links  -> must stay inside this language's tree
+       asset() files       -> shared by both trees, never prefixed
+     Getting these the wrong way round is the one mistake that silently
+     half-works: /en/assets/... 404s, and /features/ from an English page
+     drops the reader back into Spanish. */
+  var LPREFIX = (LANG === "en") ? "en/" : "";
+  var u = function (p) { return BASE + LPREFIX + p; };
+  var asset = function (p) { return BASE + p; };
 
   function esc(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  /* Plain text for a key. Falls back to English, then to empty — an empty
-     label is still better than printing the key name at a visitor. */
+  /* Plain text for a key, HTML-escaped and ready to concatenate.
+     Falls back to English, then to empty — an empty label is still better
+     than printing the key name at a visitor.
+
+     Nothing re-translates this later: main.js used to sweep data-i18n
+     elements after injection, which meant the bar laid out twice (once
+     empty, once with text) for ~0.12 of CLS. Now the text is right the
+     first time and no data-i18n attributes are emitted at all. */
   function t(key) {
     var D = window.FOTOCAL_I18N;
     if (!D) return "";
@@ -130,7 +132,7 @@
      only shown if that file 404s. Swapping the logo = dropping in one file. */
   function logoHTML(href) {
     return '<a class="nav-logo" href="' + href + '" aria-label="Fotocal — home">' +
-      '<img class="logo-mark is-tile" src="' + u("assets/img/logo.png") + '" alt="" width="32" height="32">' +
+      '<img class="logo-mark is-tile" src="' + asset("assets/img/logo.png") + '" alt="" width="32" height="32">' +
       '<span>Fotocal</span></a>';
   }
 
@@ -148,9 +150,9 @@
 
       if (!item.children) {
         desktop += '<li class="nav-item' + sec + '"><a class="nav-link" href="' + item.href +
-                   '" data-i18n="' + item.key + '">' + t(item.key) + '</a></li>';
+                   '">' + t(item.key) + '</a></li>';
         mobile  += '<li class="m-item' + sec + '"><a class="m-link" href="' + item.href +
-                   '" data-i18n="' + item.key + '">' + t(item.key) + '</a></li>';
+                   '">' + t(item.key) + '</a></li>';
         return;
       }
 
@@ -158,26 +160,26 @@
       var mid = "m-panel-" + item.id;
 
       var links = item.children.map(function (c) {
-        return '<li><a href="' + c.href + '" data-i18n="' + c.key + '">' + t(c.key) + '</a></li>';
+        return '<li><a href="' + c.href + '">' + t(c.key) + '</a></li>';
       }).join("");
 
       var caretBtn = function (cls, id) {
         return '<button class="' + cls + '" type="button" aria-expanded="false" ' +
                'aria-haspopup="true" aria-controls="' + id + '" ' +
-               'data-i18n-aria="nav.moreIn">' + CARET + '</button>';
+               'aria-label="' + t("nav.moreIn") + '">' + CARET + '</button>';
       };
 
       /* Split: label navigates, caret discloses. */
       if (item.href) {
         desktop += '<li class="nav-item nav-split' + sec + '" data-dropdown>' +
-          '<a class="nav-link" href="' + item.href + '" data-i18n="' + item.key + '">' + t(item.key) + '</a>' +
+          '<a class="nav-link" href="' + item.href + '">' + t(item.key) + '</a>' +
           caretBtn("nav-caret-btn", pid) +
           '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
           '</li>';
 
         mobile += '<li class="m-item m-split' + sec + '" data-dropdown>' +
           '<div class="m-split-row">' +
-            '<a class="m-link" href="' + item.href + '" data-i18n="' + item.key + '">' + t(item.key) + '</a>' +
+            '<a class="m-link" href="' + item.href + '">' + t(item.key) + '</a>' +
             caretBtn("m-caret-btn", mid) +
           '</div>' +
           '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
@@ -188,21 +190,21 @@
       desktop += '<li class="nav-item' + sec + '" data-dropdown>' +
         '<button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true" ' +
           'aria-controls="' + pid + '">' +
-          '<span data-i18n="' + item.key + '">' + t(item.key) + '</span>' + CARET +
+          '<span>' + t(item.key) + '</span>' + CARET +
         '</button>' +
         '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
         '</li>';
 
       mobile += '<li class="m-item' + sec + '" data-dropdown>' +
         '<button class="m-link" type="button" aria-expanded="false" aria-controls="' + mid + '">' +
-          '<span data-i18n="' + item.key + '">' + t(item.key) + '</span>' + CARET +
+          '<span>' + t(item.key) + '</span>' + CARET +
         '</button>' +
         '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
         '</li>';
     });
 
     return '' +
-      '<a class="skip-link" href="#main" data-i18n="nav.skip">' + t("nav.skip") + '</a>' +
+      '<a class="skip-link" href="#main">' + t("nav.skip") + '</a>' +
       '<div class="nav-wrap" id="navWrap">' +
         '<nav class="container nav" aria-label="Main">' +
           logoHTML(u("")) +
@@ -214,8 +216,8 @@
               '<span class="lang-sep">/</span>' +
               '<span class="lang-opt" data-lang="es">ES</span>' +
             '</button>' +
-            '<a class="btn btn-cta btn-sm btn-nav" href="' + PLAY_URL + '" target="_blank" rel="noopener" ' +
-              'data-i18n="nav.cta">' + t("nav.cta") + '</a>' +
+            '<a class="btn btn-cta btn-sm btn-nav" href="' + PLAY_URL + '" target="_blank" rel="noopener">' +
+              t("nav.cta") + '</a>' +
             '<button class="nav-burger" id="navBurger" type="button" aria-expanded="false" ' +
               'aria-controls="navMobile" aria-label="Menu">' +
               '<span></span><span></span><span></span>' +
@@ -227,7 +229,7 @@
         '<ul>' + mobile + '</ul>' +
         '<a class="play-badge" href="' + PLAY_URL + '" target="_blank" rel="noopener">' +
           PLAY_SVG +
-          '<span class="play-badge-text"><small data-i18n="cta.badgeTop">' + t("cta.badgeTop") + '</small><strong>Google Play</strong></span>' +
+          '<span class="play-badge-text"><small>' + t("cta.badgeTop") + '</small><strong>Google Play</strong></span>' +
         '</a>' +
       '</div>';
   }
@@ -240,7 +242,7 @@
         '<div class="container footer-grid">' +
           '<div class="footer-brand">' +
             logoHTML(u("")) +
-            '<p data-i18n="footer.tag">' + t("footer.tag") + '</p>' +
+            '<p>' + t("footer.tag") + '</p>' +
             /* Solid brand glyphs so each platform is recognisable at 18px.
                rel="noopener noreferrer" on every one: noopener severs the
                window.opener link, noreferrer withholds the referrer. */
@@ -260,32 +262,32 @@
             '</div>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5 data-i18n="footer.product">' + t("footer.product") + '</h5>' +
-            '<a href="' + u("") + '" data-i18n="nav.home">' + t("nav.home") + '</a>' +
-            '<a href="' + u("subscription/") + '" data-i18n="nav.subscription">' + t("nav.subscription") + '</a>' +
-            '<a href="' + u("blog/") + '" data-i18n="nav.blog">' + t("nav.blog") + '</a>' +
+            '<h5>' + t("footer.product") + '</h5>' +
+            '<a href="' + u("") + '">' + t("nav.home") + '</a>' +
+            '<a href="' + u("subscription/") + '">' + t("nav.subscription") + '</a>' +
+            '<a href="' + u("blog/") + '">' + t("nav.blog") + '</a>' +
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5 data-i18n="nav.features">' + t("nav.features") + '</h5>' +
-            '<a href="' + u("features/") + '" data-i18n="nav.allFeatures">' + t("nav.allFeatures") + '</a>' +
-            '<a href="' + u("features/scan-food/") + '" data-i18n="nav.scanFood">' + t("nav.scanFood") + '</a>' +
-            '<a href="' + u("features/scan-barcode/") + '" data-i18n="nav.scanBarcode">' + t("nav.scanBarcode") + '</a>' +
-            '<a href="' + u("features/voice-logging/") + '" data-i18n="nav.voiceLogging">' + t("nav.voiceLogging") + '</a>' +
-            '<a href="' + u("features/recipe/") + '" data-i18n="nav.recipe">' + t("nav.recipe") + '</a>' +
+            '<h5>' + t("nav.features") + '</h5>' +
+            '<a href="' + u("features/") + '">' + t("nav.allFeatures") + '</a>' +
+            '<a href="' + u("features/scan-food/") + '">' + t("nav.scanFood") + '</a>' +
+            '<a href="' + u("features/scan-barcode/") + '">' + t("nav.scanBarcode") + '</a>' +
+            '<a href="' + u("features/voice-logging/") + '">' + t("nav.voiceLogging") + '</a>' +
+            '<a href="' + u("features/recipe/") + '">' + t("nav.recipe") + '</a>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5 data-i18n="footer.company">' + t("footer.company") + '</h5>' +
-            '<a href="' + u("about/") + '" data-i18n="nav.aboutUs">' + t("nav.aboutUs") + '</a>' +
-            '<a href="' + u("contact/") + '" data-i18n="nav.contactUs">' + t("nav.contactUs") + '</a>' +
-            '<a href="' + u("privacy-policy/") + '" data-i18n="footer.privacy">' + t("footer.privacy") + '</a>' +
-            '<a href="' + u("terms/") + '" data-i18n="footer.terms">' + t("footer.terms") + '</a>' +
-            '<a href="' + u("account-deletion/") + '" data-i18n="footer.deletion">' + t("footer.deletion") + '</a>' +
+            '<h5>' + t("footer.company") + '</h5>' +
+            '<a href="' + u("about/") + '">' + t("nav.aboutUs") + '</a>' +
+            '<a href="' + u("contact/") + '">' + t("nav.contactUs") + '</a>' +
+            '<a href="' + u("privacy-policy/") + '">' + t("footer.privacy") + '</a>' +
+            '<a href="' + u("terms/") + '">' + t("footer.terms") + '</a>' +
+            '<a href="' + u("account-deletion/") + '">' + t("footer.deletion") + '</a>' +
           '</div>' +
         '</div>' +
         '<div class="container footer-bottom">' +
-          '<p>&copy; ' + year + ' Fotocal &middot; <span data-i18n="footer.rights">' + t("footer.rights") + '</span></p>' +
-          '<p data-i18n="footer.made">' + t("footer.made") + '</p>' +
+          '<p>&copy; ' + year + ' Fotocal &middot; <span>' + t("footer.rights") + '</span></p>' +
+          '<p>' + t("footer.made") + '</p>' +
         '</div>' +
       '</footer>';
   }
@@ -299,16 +301,16 @@
     return '' +
       '<div class="fc-appbar" id="fcAppbar" hidden>' +
         '<div class="fc-appbar-inner">' +
-          '<img class="fc-appbar-logo" src="' + u("assets/img/logo.png") + '" width="40" height="40" ' +
+          '<img class="fc-appbar-logo" src="' + asset("assets/img/logo.png") + '" width="40" height="40" ' +
             'alt="" aria-hidden="true" decoding="async">' +
           '<div class="fc-appbar-txt">' +
             '<strong>Fotocal</strong>' +
-            '<span data-i18n="cta.stickyNote">' + t("cta.stickyNote") + '</span>' +
+            '<span>' + t("cta.stickyNote") + '</span>' +
           '</div>' +
-          '<a class="fc-appbar-cta" href="' + PLAY_URL + '" target="_blank" rel="noopener noreferrer" ' +
-            'data-i18n="cta.get">' + t("cta.get") + '</a>' +
+          '<a class="fc-appbar-cta" href="' + PLAY_URL + '" target="_blank" rel="noopener noreferrer">' +
+            t("cta.get") + '</a>' +
           '<button class="fc-appbar-x" id="fcAppbarX" type="button" ' +
-            'data-i18n-aria="cta.dismiss" aria-label="Dismiss">&times;</button>' +
+            'aria-label="' + t("cta.dismiss") + '">&times;</button>' +
         '</div>' +
       '</div>';
   }
@@ -612,12 +614,7 @@
   function slotLabel(slot) {
     var D = window.FOTOCAL_I18N || {};
     var key = slot.getAttribute("data-label-key");
-    var lang = "en";
-    try {
-      var saved = localStorage.getItem("fotocal-lang");
-      if (saved === "es" || saved === "en") lang = saved;
-    } catch (e) {}
-    var v = (D[lang] && D[lang][key]) || (D.en && D.en[key]);
+    var v = (D[LANG] && D[LANG][key]) || (D.en && D.en[key]);
     return v || slot.getAttribute("data-label") || "";
   }
 
@@ -629,8 +626,8 @@
     /* Paint the placeholder immediately. */
     slot.innerHTML =
       '<div class="slot-icon">' + CAMERA + '</div>' +
-      '<div class="slot-label"' + (key ? ' data-i18n="' + key + '"' : '') + '>' + label + '</div>' +
-      '<div class="slot-note" data-i18n="slot.pending"></div>' +
+      '<div class="slot-label">' + label + '</div>' +
+      '<div class="slot-note">' + t("slot.pending") + '</div>' +
       '<div class="slot-path">' + (src || "").replace(BASE, "") + '</div>';
 
     if (!src) return;

@@ -3,6 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    /* ── Remembered language, root only ──
+       Spanish is the default and lives at /, so a first-time visitor gets
+       Spanish with no redirect and no flash. Someone who has since chosen
+       English gets English back when they type the bare domain.
+
+       ONLY the root does this. A link shared to a Spanish page must open in
+       Spanish whatever this particular browser once picked — otherwise the
+       URL stops meaning what it says. Crawlers have no localStorage, so
+       Googlebot always sees the Spanish default here.
+
+       Inline and first in <head> on purpose: anything later would paint
+       Spanish before jumping. */
+    (function () {
+      if (document.documentElement.lang !== "es") return;
+      if (!/^\/(index\.html)?$/.test(location.pathname)) return;
+      try {
+        if (localStorage.getItem("fotocal-lang") === "en") {
+          location.replace("/en/" + location.search + location.hash);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <title>Fotocal — Contador de calorías con IA. Una foto y ya.</title>
   <meta name="description" content="Fotografía cualquier comida y Fotocal te da calorías, macros, micronutrientes y una puntuación de salud en segundos. App para Android.">
   <meta name="keywords" content="calorie counter, AI food scanner, photo calorie tracker, macros, nutrition app, contador de calorías, Fotocal">

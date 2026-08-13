@@ -1,9 +1,15 @@
 /* ═══════════════════════════════════════════════════════════════
    FOTOCAL — legal pages behaviour
-   • language dropdown (EN / ES) shared with the main site via the
-     "fotocal-lang" localStorage key
-   • builds a sticky table-of-contents from the visible language block
-     with smooth-scroll anchors and scroll-spy highlighting
+   • builds a sticky table-of-contents with smooth-scroll anchors and
+     scroll-spy highlighting
+   • language switcher: two links to the same page in the other tree
+
+   These pages used to hold both languages at once and swap them at
+   runtime from a localStorage key. They are now rendered one language
+   per URL like the rest of the site (Spanish at /privacy-policy/,
+   English at /en/privacy-policy/), so there is nothing left to swap —
+   and the runtime swap was actively harmful here, because it also
+   rewrote <html lang> and told crawlers the Spanish page was English.
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
@@ -24,9 +30,14 @@
   var CODES = { en: "EN", es: "ES" };
   var TOC_LABEL = { en: "On this page", es: "En esta página" };
 
-  var saved = null;
-  try { saved = localStorage.getItem("fotocal-lang"); } catch (e) {}
-  var lang = (saved === "en" || saved === "es") ? saved : "en";
+  var lang = (document.documentElement.lang === "en") ? "en" : "es";
+
+  /* The same page in the other tree. /en/terms/ <-> /terms/ */
+  function counterpart(to) {
+    var p = location.pathname;
+    var bare = p.indexOf("/en/") === 0 ? p.slice(3) : (p === "/en" ? "/" : p);
+    return (to === "en" ? "/en" + bare : bare) + location.hash;
+  }
 
   /* ── Restructure into TOC + content layout (no HTML change needed) ── */
   var card = document.querySelector(".legal-card") || document.querySelector(".legal-content");
@@ -55,9 +66,9 @@
     nav.innerHTML = "";
     if (spyObserver) { spyObserver.disconnect(); spyObserver = null; }
 
-    var block = card.querySelector('[data-lang-block].visible');
-    if (!block) return;
-    var heads = block.querySelectorAll("h2");
+    /* One language per page now, so the headings in the card ARE the
+       headings — there is no hidden second copy to filter out. */
+    var heads = card.querySelectorAll("h2");
     var links = [];
     heads.forEach(function (h, i) {
       var id = "sec-" + (i + 1);
@@ -86,28 +97,15 @@
     }
   }
 
-  function showLang(next) {
-    lang = (next === "es") ? "es" : "en";
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-lang-block]").forEach(function (b) {
-      b.classList.toggle("visible", b.getAttribute("data-lang-block") === lang);
-    });
-    /* dropdown state */
-    var trig = document.getElementById("langCurrent");
-    if (trig) {
-      var tf = trig.querySelector("[data-lang-flag]");
-      var tc = trig.querySelector("[data-lang-code]");
-      if (tf) tf.innerHTML = FLAGS[lang] || "";
-      if (tc) tc.textContent = CODES[lang];
-    }
-    document.querySelectorAll(".lang-item").forEach(function (el) {
-      el.setAttribute("aria-selected", el.getAttribute("data-lang") === lang ? "true" : "false");
-    });
-    try { localStorage.setItem("fotocal-lang", lang); } catch (e) {}
-    buildTOC();
-  }
+  /* Landing on a tree is itself a choice, so keep the shared preference in
+     step — it is what the rest of the site reads to decide where to send a
+     returning visitor. It never overrides the URL. */
+  try { localStorage.setItem("fotocal-lang", lang); } catch (e) {}
+  buildTOC();
 
-  /* ── Build the language dropdown (replaces the old EN/ES toggle) ── */
+  /* ── Language switcher ──
+     Real links, matching the main site's: they show a URL on hover, work
+     with the handlers dead, and a crawler can follow them. */
   var host = document.getElementById("langToggle");
   if (host) {
     var sel = document.createElement("div");
@@ -116,17 +114,19 @@
     sel.innerHTML =
       '<button class="lang-current" id="langCurrent" type="button" aria-haspopup="listbox" ' +
         'aria-expanded="false" aria-label="Change language / Cambiar idioma">' +
-        '<span class="lang-flag" data-lang-flag></span>' +
-        '<span class="lang-code" data-lang-code>EN</span>' +
+        '<span class="lang-flag">' + (FLAGS[lang] || "") + '</span>' +
+        '<span class="lang-code">' + CODES[lang] + '</span>' +
         '<svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
           'stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
           '<path d="M6 9l6 6 6-6"/></svg>' +
       '</button>' +
       '<ul class="lang-menu" id="langMenu" role="listbox">' +
-        '<li class="lang-item" role="option" data-lang="en" tabindex="0">' +
-          '<span class="lang-flag">' + FLAGS.en + '</span><span class="lang-name">English</span></li>' +
-        '<li class="lang-item" role="option" data-lang="es" tabindex="0">' +
-          '<span class="lang-flag">' + FLAGS.es + '</span><span class="lang-name">Español</span></li>' +
+        '<li role="none"><a class="lang-item" role="option" href="' + counterpart("es") + '" ' +
+            'hreflang="es" lang="es" data-lang="es" aria-selected="' + (lang === "es") + '">' +
+          '<span class="lang-flag">' + FLAGS.es + '</span><span class="lang-name">Español</span></a></li>' +
+        '<li role="none"><a class="lang-item" role="option" href="' + counterpart("en") + '" ' +
+            'hreflang="en" lang="en" data-lang="en" aria-selected="' + (lang === "en") + '">' +
+          '<span class="lang-flag">' + FLAGS.en + '</span><span class="lang-name">English</span></a></li>' +
       '</ul>';
     host.replaceWith(sel);
 
@@ -138,17 +138,17 @@
       e.stopPropagation();
       if (sel.classList.contains("open")) close(); else open();
     });
-    menu.querySelectorAll(".lang-item").forEach(function (li) {
-      var pick = function () { showLang(li.getAttribute("data-lang")); close(); current.focus(); };
-      li.addEventListener("click", function (e) { e.stopPropagation(); pick(); });
-      li.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); }
-        else if (e.key === "Escape") { close(); current.focus(); }
+    menu.querySelectorAll(".lang-item").forEach(function (a) {
+      /* Store the choice before the navigation, not after — after never runs. */
+      a.addEventListener("click", function () {
+        try { localStorage.setItem("fotocal-lang", a.getAttribute("data-lang")); } catch (e) {}
+      });
+      a.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") { close(); current.focus(); }
       });
     });
     document.addEventListener("click", close);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
   }
 
-  showLang(lang);
 })();

@@ -396,6 +396,12 @@
 
     nav.querySelectorAll("a[href]").forEach(function (a) {
       if (a.classList.contains("nav-logo")) return;   /* the logo is not a nav item */
+      /* Nor is the skip link, nor an in-page jump. "#main" resolves to the
+         current pathname, so without this the skip link claimed to be the
+         page you are on — announced to a screen reader as such, which is
+         the one audience that link exists for. */
+      var raw = a.getAttribute("href") || "";
+      if (raw.charAt(0) === "#") return;
       var url;
       try { url = new URL(a.getAttribute("href"), location.href); } catch (e) { return; }
       if (url.origin !== location.origin) return;     /* Play Store, socials */

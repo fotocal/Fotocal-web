@@ -1,7 +1,14 @@
 /* ═══════════════════════════════════════════════════════════════
    FOTOCAL — translations
-   DEFAULT LANGUAGE IS ENGLISH. Spanish is opt-in via the EN/ES toggle
-   and is remembered in localStorage ("fotocal-lang").
+   SPANISH IS THE DEFAULT — the market is Spain. It is served at the site
+   root; English mirrors it under /en/.
+
+   Nothing here is applied at runtime any more. tools/build_site.py reads
+   these dictionaries and bakes the text into the HTML, one language per
+   URL, so a crawler is served the language it will index. The only
+   exceptions — the strings the nav, footer and contact form write
+   themselves — live in this file rather than i18n-pages.js, which is why
+   this one is still shipped to the browser and that one is not.
 
    RULES FOR ADDING STRINGS
    1. Every key MUST exist in BOTH `en` and `es`. A missing Spanish key

@@ -44,7 +44,7 @@
     "name": "Fotocal",
     "operatingSystem": "ANDROID",
     "applicationCategory": "HealthApplication",
-    "description": "AI nutrition app: photograph your meal and get calories, macros, micronutrients and a health score instantly. Includes barcode and menu scanning, voice logging and an AI nutrition coach.",
+    "description": "{{i18n:ld.app.desc}}",
     "offers": [
       { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "name": "Premium Monthly" },
       { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR", "name": "Premium Yearly" }
@@ -54,78 +54,7 @@
   }
   </script>
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How accurate is the photo scanning?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fotocal uses current AI vision models to identify food and estimate portions, and it is good enough that the numbers are genuinely useful day to day. It is an estimate, not a laboratory measurement — mixed dishes, stews and anything layered or hidden under sauce are the hardest cases. You can always correct the portion or the ingredients before you save, and a corrected estimate is still far faster than searching a database."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I have to weigh my food?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Estimating the portion from the photo is the whole point. If you want to be precise on a particular meal you can enter the weight by hand, but nothing requires it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What else can I scan besides my plate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Plenty. Scan a product's barcode to get its full nutrition and a clear health score before you buy it, point the camera at a restaurant menu to see estimated calories per dish, or simply say what you ate out loud and Fotocal logs it. Photo, barcode, menu or voice — whichever is fastest right then."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Fotocal free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Downloading Fotocal is free, and Premium starts with a 5-day free trial so you can test everything: unlimited AI scans, Coach Kal without limits, weekly reports and every premium feature. Cancel before the trial ends and you pay nothing. After that, Premium is €6.99 a month or €34.99 a year."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I cancel?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Subscriptions are handled by Google Play, so you cancel there: Play Store → your profile → Payments and subscriptions → Subscriptions. Cancel before the 5-day trial ends and you are not charged."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens to my data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your data is yours. We never sell it, and you can delete your account and everything in it at any time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which languages does the app support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "English and Spanish, in the app and on this site. Fotocal is built Spanish-first, so the Spanish experience is a first-class citizen rather than an afterthought translation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Fotocal track my steps?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Fotocal connects to Health Connect on Android, so your steps sync automatically and feed into your daily energy picture alongside your TDEE."
-      }
-    }
-  ]
-}
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"{{i18n:faq.q1}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a1}}"}},{"@type":"Question","name":"{{i18n:faq.q2}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a2}}"}},{"@type":"Question","name":"{{i18n:faq.q3}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a3}}"}},{"@type":"Question","name":"{{i18n:faq.q4}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a4}}"}},{"@type":"Question","name":"{{i18n:faq.q5}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a5}}"}},{"@type":"Question","name":"{{i18n:faq.q6}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a6}}"}},{"@type":"Question","name":"{{i18n:faq.q7}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a7}}"}},{"@type":"Question","name":"{{i18n:faq.q8}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:faq.a8}}"}}]}</script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -134,7 +63,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
+      "name": "{{i18n:nav.home}}",
       "item": "https://getfotocal.com/"
     }
   ]

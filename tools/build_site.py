@@ -51,6 +51,7 @@ LANGS = ("es", "en")
 DEFAULT = "es"                    # Spanish is the default tree, served at /
 PREFIX = {"es": "", "en": "en/"}  # path prefix per tree
 SITE = "https://getfotocal.com/"
+TITLE_MAX = 62                    # beyond this Google truncates the snippet
 
 # Directories the builder owns and rewrites on every run. Anything else at
 # the repo root (assets, css, js, CNAME, robots.txt …) is left alone.
@@ -300,6 +301,78 @@ def render_head(src, lang, rel_path, meta):
     return src
 
 
+# ── structured data ─────────────────────────────────────────────────
+LD_BLOCK = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
+TOKEN = re.compile(r"\{\{i18n:([A-Za-z0-9._-]+)\}\}")
+SITE_URL = re.compile(re.escape(SITE) + r"(?!en/)(?!assets/)([^\"']*)")
+
+
+def plain(s):
+    """Dictionary values may carry markup (an <em> in a heading). Schema.org
+    wants the words, not the emphasis."""
+    return htmllib.unescape(re.sub(r"<[^>]+>", "", s)).strip()
+
+
+def render_jsonld(src, lang, rel_path, dic, missing, article=None):
+    """Localise the structured data along with the page.
+
+    Schema.org markup is a machine-readable claim about what the visitor is
+    looking at. Leaving it in English on a Spanish page is not a cosmetic
+    slip: the FAQ blocks are eligible for rich results, and Google checks
+    them against the visible copy. Four things happen here.
+
+      {{i18n:key}}   ->  the dictionary value for this language
+      getfotocal.com URLs naming a page  ->  this tree's copy of that page
+      inLanguage     ->  the tree's language, added if it was missing
+      BlogPosting headline/description   ->  the article's own, per language
+
+    The JSON is parsed and re-emitted rather than patched with regexes,
+    because a half-escaped string here is invalid structured data — an error
+    that shows up in Search Console weeks later, not in the browser.
+    """
+    def token(s):
+        def rep(m):
+            v = dic.get(m.group(1))
+            if v is None:
+                missing.add(m.group(1))
+                return m.group(0)
+            return plain(v)
+        return TOKEN.sub(rep, s)
+
+    def retarget(s):
+        if lang == DEFAULT:
+            return s
+        return SITE_URL.sub(lambda m: SITE + PREFIX[lang] + m.group(1), s)
+
+    def walk(node):
+        if isinstance(node, str):
+            return retarget(token(node))
+        if isinstance(node, list):
+            return [walk(x) for x in node]
+        if isinstance(node, dict):
+            return {k: walk(v) for k, v in node.items()}
+        return node
+
+    def one(m):
+        try:
+            data = json.loads(m.group(2))
+        except ValueError:
+            return m.group(0)                    # not ours to fix; leave it
+        data = walk(data)
+        if isinstance(data, dict):
+            if data.get("@type") == "BlogPosting" and article:
+                title, desc = article
+                if title:
+                    data["headline"] = title
+                if desc:
+                    data["description"] = desc
+            data.setdefault("inLanguage", lang)
+        body = json.dumps(data, ensure_ascii=False, indent=2)
+        return m.group(1) + "\n" + body + "\n  " + m.group(3)
+
+    return LD_BLOCK.sub(one, src)
+
+
 def blog_meta(src, lang):
     """Blog articles keep their title and summary inside the document as
     data-lang-block pairs, so derive the head from those rather than
@@ -409,14 +482,24 @@ def main():
             s = render_text_nodes(s, dic[lang], missing)
             s = render_attr_nodes(s, dic[lang], missing)
 
+            article = None
             if rel in meta_all:
                 m = meta_all[rel][lang]
             else:
                 t, d = blog_meta(raw, lang)
+                article = (t, d)
                 if not t or not d:
                     raise SystemExit("no %s title/summary derivable for %s" % (lang, rel))
-                m = {"title": "%s — Fotocal" % t, "desc": d[:158]}
+                # The brand suffix is nice-to-have; the headline is not. Add it
+                # only when it fits, rather than spending the last ten
+                # characters of the snippet on a word already in the domain.
+                # Spanish headlines run ~15% longer than the English, so a
+                # fixed suffix truncated a third of the articles.
+                suffix = " — Fotocal"
+                m = {"title": t + suffix if len(t) + len(suffix) <= TITLE_MAX else t,
+                     "desc": d[:158]}
             s = render_head(s, lang, rel, m)
+            s = render_jsonld(s, lang, rel, dic[lang], missing, article)
             s = rewrite_links(s, lang, rel)
 
             out = os.path.join(ROOT, PREFIX[lang], rel)

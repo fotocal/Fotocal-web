@@ -279,10 +279,23 @@ def render_head(src, lang, rel_path, meta):
             src = pat.sub(lambda _: tpl.format(title=t, desc=d), src, count=1)
 
     src = re.sub(r'<html([^>]*?)\slang="[a-z]{2}"', lambda m: "<html%s lang=\"%s\"" % (m.group(1), lang), src, count=1)
-    src = re.sub(r'<meta property="og:locale" content="[^"]*">',
-                 '<meta property="og:locale" content="%s">' % ("es_ES" if lang == "es" else "en_US"), src)
-    src = re.sub(r'<meta property="og:locale:alternate" content="[^"]*">',
-                 '<meta property="og:locale:alternate" content="%s">' % ("en_US" if lang == "es" else "es_ES"), src)
+
+    # og:locale tells a social preview which language it is looking at, and
+    # pairs with hreflang for anything reading Open Graph rather than link
+    # tags. Only a dozen pages carried it by hand, so add it where it is
+    # missing rather than asking 142 files to remember.
+    loc = "es_ES" if lang == "es" else "en_US"
+    alt = "en_US" if lang == "es" else "es_ES"
+    if 'property="og:locale"' in src:
+        src = re.sub(r'<meta property="og:locale" content="[^"]*">',
+                     '<meta property="og:locale" content="%s">' % loc, src)
+        src = re.sub(r'<meta property="og:locale:alternate" content="[^"]*">',
+                     '<meta property="og:locale:alternate" content="%s">' % alt, src)
+    else:
+        src = re.sub(r"(</title>)",
+                     '\\1\n  <meta property="og:locale" content="%s">'
+                     '\n  <meta property="og:locale:alternate" content="%s">' % (loc, alt),
+                     src, count=1)
 
     # canonical + reciprocal hreflang. x-default points at Spanish: it is the
     # default tree, and it is what a visitor with no matching locale should get.

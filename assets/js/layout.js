@@ -51,6 +51,40 @@
 
   var u = function (p) { return BASE + p; };
 
+  /* ── Render nav/footer labels immediately ──
+     Every data-i18n element used to be emitted EMPTY and filled in later
+     by main.js. That meant the bar laid out twice: once with no text, once
+     with it. The second pass grew .nav-actions from 90px to 101px and, on
+     pages whose hero is vertically centred, dragged the whole hero up with
+     it — an intermittent 0.12 CLS, most of the budget gone before anything
+     was readable.
+
+     i18n.js is loaded before this file, so the strings are already here.
+     Reading the saved language too means a Spanish visitor never sees a
+     flash of English. main.js still re-applies everything afterwards;
+     this only removes the empty first pass. */
+  var LANG = (function () {
+    try {
+      var v = localStorage.getItem("fotocal-lang");
+      if (v === "en" || v === "es") return v;
+    } catch (e) {}
+    return "en";
+  })();
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  /* Plain text for a key. Falls back to English, then to empty — an empty
+     label is still better than printing the key name at a visitor. */
+  function t(key) {
+    var D = window.FOTOCAL_I18N;
+    if (!D) return "";
+    var v = (D[LANG] && D[LANG][key]);
+    if (v == null) v = (D.en && D.en[key]);
+    return v == null ? "" : esc(v);
+  }
+
   /* ── Nav model — single source of truth ──
      Three shapes are supported:
        href only                 -> plain link
@@ -114,9 +148,9 @@
 
       if (!item.children) {
         desktop += '<li class="nav-item' + sec + '"><a class="nav-link" href="' + item.href +
-                   '" data-i18n="' + item.key + '"></a></li>';
+                   '" data-i18n="' + item.key + '">' + t(item.key) + '</a></li>';
         mobile  += '<li class="m-item' + sec + '"><a class="m-link" href="' + item.href +
-                   '" data-i18n="' + item.key + '"></a></li>';
+                   '" data-i18n="' + item.key + '">' + t(item.key) + '</a></li>';
         return;
       }
 
@@ -124,7 +158,7 @@
       var mid = "m-panel-" + item.id;
 
       var links = item.children.map(function (c) {
-        return '<li><a href="' + c.href + '" data-i18n="' + c.key + '"></a></li>';
+        return '<li><a href="' + c.href + '" data-i18n="' + c.key + '">' + t(c.key) + '</a></li>';
       }).join("");
 
       var caretBtn = function (cls, id) {
@@ -136,14 +170,14 @@
       /* Split: label navigates, caret discloses. */
       if (item.href) {
         desktop += '<li class="nav-item nav-split' + sec + '" data-dropdown>' +
-          '<a class="nav-link" href="' + item.href + '" data-i18n="' + item.key + '"></a>' +
+          '<a class="nav-link" href="' + item.href + '" data-i18n="' + item.key + '">' + t(item.key) + '</a>' +
           caretBtn("nav-caret-btn", pid) +
           '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
           '</li>';
 
         mobile += '<li class="m-item m-split' + sec + '" data-dropdown>' +
           '<div class="m-split-row">' +
-            '<a class="m-link" href="' + item.href + '" data-i18n="' + item.key + '"></a>' +
+            '<a class="m-link" href="' + item.href + '" data-i18n="' + item.key + '">' + t(item.key) + '</a>' +
             caretBtn("m-caret-btn", mid) +
           '</div>' +
           '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
@@ -154,21 +188,21 @@
       desktop += '<li class="nav-item' + sec + '" data-dropdown>' +
         '<button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true" ' +
           'aria-controls="' + pid + '">' +
-          '<span data-i18n="' + item.key + '"></span>' + CARET +
+          '<span data-i18n="' + item.key + '">' + t(item.key) + '</span>' + CARET +
         '</button>' +
         '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
         '</li>';
 
       mobile += '<li class="m-item' + sec + '" data-dropdown>' +
         '<button class="m-link" type="button" aria-expanded="false" aria-controls="' + mid + '">' +
-          '<span data-i18n="' + item.key + '"></span>' + CARET +
+          '<span data-i18n="' + item.key + '">' + t(item.key) + '</span>' + CARET +
         '</button>' +
         '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
         '</li>';
     });
 
     return '' +
-      '<a class="skip-link" href="#main" data-i18n="nav.skip"></a>' +
+      '<a class="skip-link" href="#main" data-i18n="nav.skip">' + t("nav.skip") + '</a>' +
       '<div class="nav-wrap" id="navWrap">' +
         '<nav class="container nav" aria-label="Main">' +
           logoHTML(u("")) +
@@ -181,7 +215,7 @@
               '<span class="lang-opt" data-lang="es">ES</span>' +
             '</button>' +
             '<a class="btn btn-cta btn-sm btn-nav" href="' + PLAY_URL + '" target="_blank" rel="noopener" ' +
-              'data-i18n="nav.cta"></a>' +
+              'data-i18n="nav.cta">' + t("nav.cta") + '</a>' +
             '<button class="nav-burger" id="navBurger" type="button" aria-expanded="false" ' +
               'aria-controls="navMobile" aria-label="Menu">' +
               '<span></span><span></span><span></span>' +
@@ -193,7 +227,7 @@
         '<ul>' + mobile + '</ul>' +
         '<a class="play-badge" href="' + PLAY_URL + '" target="_blank" rel="noopener">' +
           PLAY_SVG +
-          '<span class="play-badge-text"><small data-i18n="cta.badgeTop"></small><strong>Google Play</strong></span>' +
+          '<span class="play-badge-text"><small data-i18n="cta.badgeTop">' + t("cta.badgeTop") + '</small><strong>Google Play</strong></span>' +
         '</a>' +
       '</div>';
   }
@@ -206,7 +240,7 @@
         '<div class="container footer-grid">' +
           '<div class="footer-brand">' +
             logoHTML(u("")) +
-            '<p data-i18n="footer.tag"></p>' +
+            '<p data-i18n="footer.tag">' + t("footer.tag") + '</p>' +
             /* Solid brand glyphs so each platform is recognisable at 18px.
                rel="noopener noreferrer" on every one: noopener severs the
                window.opener link, noreferrer withholds the referrer. */
@@ -226,34 +260,57 @@
             '</div>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5 data-i18n="footer.product"></h5>' +
-            '<a href="' + u("") + '" data-i18n="nav.home"></a>' +
-            '<a href="' + u("subscription/") + '" data-i18n="nav.subscription"></a>' +
-            '<a href="' + u("blog/") + '" data-i18n="nav.blog"></a>' +
+            '<h5 data-i18n="footer.product">' + t("footer.product") + '</h5>' +
+            '<a href="' + u("") + '" data-i18n="nav.home">' + t("nav.home") + '</a>' +
+            '<a href="' + u("subscription/") + '" data-i18n="nav.subscription">' + t("nav.subscription") + '</a>' +
+            '<a href="' + u("blog/") + '" data-i18n="nav.blog">' + t("nav.blog") + '</a>' +
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5 data-i18n="nav.features"></h5>' +
-            '<a href="' + u("features/") + '" data-i18n="nav.allFeatures"></a>' +
-            '<a href="' + u("features/scan-food/") + '" data-i18n="nav.scanFood"></a>' +
-            '<a href="' + u("features/scan-barcode/") + '" data-i18n="nav.scanBarcode"></a>' +
-            '<a href="' + u("features/voice-logging/") + '" data-i18n="nav.voiceLogging"></a>' +
-            '<a href="' + u("features/recipe/") + '" data-i18n="nav.recipe"></a>' +
+            '<h5 data-i18n="nav.features">' + t("nav.features") + '</h5>' +
+            '<a href="' + u("features/") + '" data-i18n="nav.allFeatures">' + t("nav.allFeatures") + '</a>' +
+            '<a href="' + u("features/scan-food/") + '" data-i18n="nav.scanFood">' + t("nav.scanFood") + '</a>' +
+            '<a href="' + u("features/scan-barcode/") + '" data-i18n="nav.scanBarcode">' + t("nav.scanBarcode") + '</a>' +
+            '<a href="' + u("features/voice-logging/") + '" data-i18n="nav.voiceLogging">' + t("nav.voiceLogging") + '</a>' +
+            '<a href="' + u("features/recipe/") + '" data-i18n="nav.recipe">' + t("nav.recipe") + '</a>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5 data-i18n="footer.company"></h5>' +
-            '<a href="' + u("about/") + '" data-i18n="nav.aboutUs"></a>' +
-            '<a href="' + u("contact/") + '" data-i18n="nav.contactUs"></a>' +
-            '<a href="' + u("privacy-policy/") + '" data-i18n="footer.privacy"></a>' +
-            '<a href="' + u("terms/") + '" data-i18n="footer.terms"></a>' +
-            '<a href="' + u("account-deletion/") + '" data-i18n="footer.deletion"></a>' +
+            '<h5 data-i18n="footer.company">' + t("footer.company") + '</h5>' +
+            '<a href="' + u("about/") + '" data-i18n="nav.aboutUs">' + t("nav.aboutUs") + '</a>' +
+            '<a href="' + u("contact/") + '" data-i18n="nav.contactUs">' + t("nav.contactUs") + '</a>' +
+            '<a href="' + u("privacy-policy/") + '" data-i18n="footer.privacy">' + t("footer.privacy") + '</a>' +
+            '<a href="' + u("terms/") + '" data-i18n="footer.terms">' + t("footer.terms") + '</a>' +
+            '<a href="' + u("account-deletion/") + '" data-i18n="footer.deletion">' + t("footer.deletion") + '</a>' +
           '</div>' +
         '</div>' +
         '<div class="container footer-bottom">' +
-          '<p>&copy; ' + year + ' Fotocal &middot; <span data-i18n="footer.rights"></span></p>' +
-          '<p data-i18n="footer.made"></p>' +
+          '<p>&copy; ' + year + ' Fotocal &middot; <span data-i18n="footer.rights">' + t("footer.rights") + '</span></p>' +
+          '<p data-i18n="footer.made">' + t("footer.made") + '</p>' +
         '</div>' +
       '</footer>';
+  }
+
+  /* ── Sticky mobile app bar ──
+     Keeps the Play Store one tap away at any scroll depth on a phone.
+     Built here rather than per-page: it began as an inline block in
+     index.html, so it existed on the homepage and nowhere else — open
+     any feature page or article and the CTA was gone. */
+  function appbarHTML() {
+    return '' +
+      '<div class="fc-appbar" id="fcAppbar" hidden>' +
+        '<div class="fc-appbar-inner">' +
+          '<img class="fc-appbar-logo" src="' + u("assets/img/logo.png") + '" width="40" height="40" ' +
+            'alt="" aria-hidden="true" decoding="async">' +
+          '<div class="fc-appbar-txt">' +
+            '<strong>Fotocal</strong>' +
+            '<span data-i18n="cta.stickyNote">' + t("cta.stickyNote") + '</span>' +
+          '</div>' +
+          '<a class="fc-appbar-cta" href="' + PLAY_URL + '" target="_blank" rel="noopener noreferrer" ' +
+            'data-i18n="cta.get">' + t("cta.get") + '</a>' +
+          '<button class="fc-appbar-x" id="fcAppbarX" type="button" ' +
+            'data-i18n-aria="cta.dismiss" aria-label="Dismiss">&times;</button>' +
+        '</div>' +
+      '</div>';
   }
 
   /* ── Inject ── */
@@ -261,6 +318,46 @@
   var footMount = document.getElementById("site-footer");
   if (navMount) navMount.innerHTML = navHTML();
   if (footMount) footMount.innerHTML = footerHTML();
+
+  /* The bar is appended rather than mounted in a placeholder, so pages do
+     not need a new empty div each. It is position:fixed, so where it sits
+     in the DOM does not affect layout. */
+  if (!document.getElementById("fcAppbar")) {
+    document.body.insertAdjacentHTML("beforeend", appbarHTML());
+  }
+
+  (function () {
+    var bar = document.getElementById("fcAppbar");
+    var x = document.getElementById("fcAppbarX");
+    if (!bar || !x) return;
+    /* Dismissal lasts the session, not forever — someone who closes it on
+       the homepage should not lose the CTA for good, but nor should it
+       reappear on every page of the same visit. */
+    try { if (sessionStorage.getItem("fc-appbar-x")) return; } catch (e) {}
+
+    var reveal = function () {
+      if (window.scrollY <= 520) return;
+      bar.hidden = false;
+      /* Two frames: unhiding and adding .show in the same frame gives the
+         browser no start state to animate from, so it would snap. */
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          bar.classList.add("show");
+          document.body.classList.add("fc-appbar-on");
+        });
+      });
+      window.removeEventListener("scroll", reveal);
+    };
+    window.addEventListener("scroll", reveal, { passive: true });
+    reveal();   /* in case the page is restored mid-scroll */
+
+    x.addEventListener("click", function () {
+      bar.classList.remove("show");
+      document.body.classList.remove("fc-appbar-on");
+      try { sessionStorage.setItem("fc-appbar-x", "1"); } catch (e) {}
+      setTimeout(function () { bar.hidden = true; }, 320);
+    });
+  })();
 
   /* ── Logo: prefer the real PNG, fall back to inline SVG ── */
   (function () {

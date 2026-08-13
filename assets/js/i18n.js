@@ -256,6 +256,7 @@ window.FOTOCAL_I18N = {
     "cta.alt": "Illustration: friends sharing a warm dinner around a table, a phone with Fotocal resting beside the plates",
     "cta.get": "Get the app",
     "cta.stickyNote": "Free · 5-day trial · Android",
+    "cta.dismiss": "Dismiss this bar",
 
     /* ── Footer ── */
     "footer.tag": "AI nutrition tracking. One photo and you know what you are eating.",
@@ -513,6 +514,7 @@ window.FOTOCAL_I18N = {
     "cta.alt": "Ilustración: amigos compartiendo una cena cálida alrededor de una mesa, con un móvil con Fotocal junto a los platos",
     "cta.get": "Descarga la app",
     "cta.stickyNote": "Gratis · 5 días de prueba · Android",
+    "cta.dismiss": "Cerrar esta barra",
 
     /* ── Footer ── */
     "footer.tag": "Nutrición con IA. Una foto y sabes qué estás comiendo.",

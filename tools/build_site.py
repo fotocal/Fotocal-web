@@ -311,6 +311,14 @@ def render_head(src, lang, rel_path, meta):
                  alts + "\n  ", src, count=1)
     src = re.sub(r'<meta property="og:url" content="[^"]*">',
                  '<meta property="og:url" content="%s">' % self_url, src, count=1)
+
+    # The shared share card has the tagline burned into it, so there is one
+    # per language. Only the shared card is swapped — the eight pages that
+    # point og:image at their own artwork keep it, and that artwork carries
+    # no words to be in the wrong language.
+    if lang != DEFAULT:
+        src = src.replace(SITE + "assets/og-image.png",
+                          SITE + "assets/og-image-%s.png" % lang)
     return src
 
 

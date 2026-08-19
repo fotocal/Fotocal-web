@@ -20,6 +20,17 @@
     }
   },
 
+  "ai/index.html": {
+    "es": {
+      "title": "Coach Kal — el asistente de IA de Fotocal",
+      "desc": "Qué es Coach Kal, qué datos tuyos usa y cuáles no, dónde puede equivocarse y por qué no sustituye el consejo médico de un profesional."
+    },
+    "en": {
+      "title": "Coach Kal — the AI assistant inside Fotocal",
+      "desc": "What Coach Kal is, which of your data it uses and which it cannot, where it can be wrong, and why it is not a substitute for medical advice."
+    }
+  },
+
   "features/index.html": {
     "es": {
       "title": "Funciones de Fotocal — todo lo que hace la app",

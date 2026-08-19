@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coach Kal — the AI assistant inside Fotocal</title>
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="description" content="What Coach Kal is, which of your data it uses and which it cannot, where it can be wrong, and why it is not a substitute for medical advice.">
+  <link rel="canonical" href="https://getfotocal.com/en/ai/">
+  <link rel="alternate" hreflang="es" href="https://getfotocal.com/ai/">
+  <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/ai/">
+  <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Coach Kal — the AI assistant inside Fotocal">
+  <meta property="og:description" content="What Coach Kal is, which of your data it uses and which it cannot, where it can be wrong, and why it is not a substitute for medical advice.">
+  <meta property="og:url" content="https://getfotocal.com/en/ai/">
+  <meta property="og:image" content="https://getfotocal.com/assets/img/illustrations/coach-kal.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coach Kal — the AI assistant inside Fotocal">
+  <meta name="twitter:description" content="What Coach Kal is, which of your data it uses and which it cannot, where it can be wrong, and why it is not a substitute for medical advice.">
+  <meta name="twitter:image" content="https://getfotocal.com/assets/img/illustrations/coach-kal.webp">
+
+  <meta name="theme-color" content="#FDF9F0">
+
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/sections.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Coach Kal cost anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is unlimited on the free plan and always has been — not a trial, not a teaser, and there is no message cap. Premium changes how many AI photo scans you get a day and adds the weekly reports; it does not change Coach Kal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it change or delete things in my diary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Kal answers questions and makes suggestions. Logging a meal, editing a portion and deleting an entry are all things only you do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I have barely logged anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You will still get an answer, but a general one — it can only reason about what is there. A few days of logging is usually the point where the answers start being about you rather than about nutrition in the abstract."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I talk to it in Spanish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Coach Kal works in Spanish and English, and answers in whichever language you write in. Fotocal was built Spanish-first, so this is not a translation layer bolted on afterwards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I have a health condition. Can I follow its advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat it as general information and check anything that matters with a professional who knows your history. Coach Kal is not a clinician, has no access to your medical records, and is not designed to manage a condition or a medication. If the two ever disagree, follow your doctor or dietitian."
+      }
+    }
+  ],
+  "inLanguage": "en"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getfotocal.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://getfotocal.com/en/features/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Coach Kal",
+      "item": "https://getfotocal.com/en/ai/"
+    }
+  ],
+  "inLanguage": "en"
+}
+  </script>
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section class="fp-hero">
+      <div class="container">
+        <div class="fp-hero-copy">
+          <span class="kicker reveal">Coach Kal</span>
+          <h1 class="reveal">The coach that has <em class="accent">already read your diary</em>.</h1>
+          <p class="lead reveal">Coach Kal is the AI assistant built into Fotocal. It answers in plain language using what you have actually logged — your meals, your macros, your water, your weight and the goal you set — so the advice is about your week rather than a general idea of healthy eating. This page explains what it can see, what it cannot, and where it should not be trusted.</p>
+          <div class="fp-hero-actions reveal">
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
+              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
+              <span class="play-badge-text"><small>GET IT ON</small><strong>Google Play</strong></span>
+            </a>
+            <a class="btn btn-outline" href="/en/features/">All features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ WHAT IT IS ═══════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="sp-band flip reveal">
+          <div class="sp-band-media">
+            <div class="illus">
+              <img src="/assets/img/illustrations/coach-kal.webp" width="1000" height="1333" loading="lazy" decoding="async"
+                   alt="Illustration: a woman relaxes with a mug while chatting with Coach Kal, a friendly robot, on her phone"
+                   >
+            </div>
+          </div>
+          <div class="sp-band-copy">
+            <span class="pill">What it is</span>
+            <h2>An assistant that already <em class="accent">knows your numbers</em>.</h2>
+            <p>Not a search engine with a friendly voice. Kal answers from your own diary, and that is what makes the answers worth anything.</p>
+          </div>
+        </div>
+
+        <div class="sp-duo">
+          <div class="sp-card reveal">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h7M8 11h7"/></svg></div>
+            <h3>It reads your own data</h3>
+            <p>Every answer is built from the meals, nutrition, water, weight and goal already in your Fotocal account. Ask about your week and it looks at your week.</p>
+          </div>
+          <div class="sp-card reveal" style="--rd:.1s">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg></div>
+            <h3>It replies in your language</h3>
+            <p>Spanish and English, in the app and on this site. Ask in whichever one you think in and the answer comes back in the same one.</p>
+          </div>
+          <div class="sp-card reveal" style="--rd:.2s">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>
+            <h3>It is free, with no message limit</h3>
+            <p>Coach Kal is not a Premium feature and never has been. Ask as much as you like on the free plan — there is no cap and no trial.</p>
+          </div>
+          <div class="sp-card reveal" style="--rd:.3s">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+            <h3>It suggests, it does not act</h3>
+            <p>Nothing Kal says changes anything in your diary. It explains and recommends; what gets logged, edited or deleted stays entirely your decision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ WHAT IT CAN AND CANNOT SEE ═══════════════════
+         Two panels rather than one list: "what it cannot see" is the half
+         people actually came to check, and burying it under the first half
+         would make it look like a footnote. -->
+    <section class="section section-alt" id="data">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal">Data</span>
+          <h2 class="section-title reveal">What it can see, and what it cannot.</h2>
+          <p class="section-sub mx-auto reveal">The short version: your Fotocal data, and nothing else on your phone.</p>
+        </div>
+        <div class="sp-duo">
+          <div class="sp-card reveal">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 12S5 5.5 12 5.5 22.5 12 22.5 12 19 18.5 12 18.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>What Coach Kal can see</h3>
+            <ul class="check-list">
+              <li>The meals you have logged — the dishes, the ingredients and the portions.</li>
+              <li>The nutrition behind them: calories, macros and micronutrients.</li>
+              <li>Your water intake and your weight entries, as you record them.</li>
+              <li>Your goal and the targets that go with it — losing, maintaining or gaining.</li>
+              <li>The allergies, diet and health conditions you have chosen to share in your profile.</li>
+            </ul>
+          </div>
+          <div class="sp-card reveal" style="--rd:.1s">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.9 4.2A10 10 0 0 1 12 4c7 0 10.5 6.5 10.5 6.5a17 17 0 0 1-3.2 4.1M6.6 6.6A17 17 0 0 0 1.5 10.5S5 17 12 17a10 10 0 0 0 4.3-.9"/><path d="M3 3l18 18"/></svg></div>
+            <h3>What it cannot see</h3>
+            <ul class="check-list">
+              <li>Anything else on your device — not your photo library, not your files, not your other apps.</li>
+              <li>Your contacts, your messages, your calendar or your location.</li>
+              <li>Anything you have not logged or told it. If a meal never made it into your diary, Kal does not know you ate it.</li>
+              <li>Any other person's account. The conversation is about your data only.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container-narrow" style="padding:0">
+          <div class="callout callout-info reveal" style="margin-top:2rem">
+            <span class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <div>
+              <p>Allergies, diet and health conditions are optional. Leave them blank and Kal simply works without them, and you can add or remove them at any time from your profile. What is stored, why, and how to delete it is set out in full in the privacy policy.</p>
+              <p><a href="/en/privacy-policy/">Read the privacy policy</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ LIMITS ═══════════════════
+         The reason this page exists. The app's AI disclaimer links straight
+         here, so this section gets its own anchor and is written to be read
+         by someone who arrived mid-doubt rather than mid-browse. -->
+    <section class="section" id="limits">
+      <div class="container-narrow">
+        <div class="fp-rec reveal">
+          <span class="pill">Limits</span>
+          <h2>Where Coach Kal can be wrong.</h2>
+          <p>This is the section the in-app note points at, so it is worth being blunt about it. Coach Kal is an AI language model. It produces estimates and fluent, plausible-sounding answers — and plausible is not the same thing as correct.</p>
+          <ul class="check-list">
+            <li>The nutrition figures are estimates. A portion read from a photo, a database value and Kal's own arithmetic each carry some error, and it adds up.</li>
+            <li>It can be confidently wrong. A wrong answer does not sound any different from a right one, so treat anything surprising as a reason to check rather than a fact.</li>
+            <li>It only knows what has been logged. Gaps in your diary become gaps in its reasoning, and it cannot tell a day you ate little from a day you forgot to record.</li>
+            <li>It gives general nutrition guidance. It is not a plan built around your body, your bloodwork or your medication.</li>
+          </ul>
+
+          <div class="callout" style="margin-bottom:0">
+            <span class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+            <div>
+              <h4>Coach Kal is not medical advice</h4>
+              <p>Fotocal is not a medical device and Coach Kal is not a clinician. Nothing it says should be used to diagnose, treat or manage a health condition, and nothing it says should be used to decide anything about medication.</p>
+              <p>If you are pregnant, living with diabetes or another condition, taking medication, recovering from an eating disorder, or making a significant change to how you eat, speak to a doctor or a registered dietitian first. Their advice comes ahead of Kal's — it is not designed to replace them and should not be used as if it could.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ ALLERGIES AND DIET ═══════════════════ -->
+    <section class="section section-alt" id="allergies">
+      <div class="container-narrow">
+        <div class="fp-rec reveal">
+          <span class="pill">Allergies and diet</span>
+          <h2>What you avoid is a hard limit, not a preference.</h2>
+          <p>The allergies and dietary choices in your profile act as constraints on every suggestion Coach Kal makes. They are not hints it weighs up against how good an idea something otherwise seems.</p>
+          <ul class="check-list">
+            <li>If you have entered an allergy, Kal will not recommend a food it identifies as containing it.</li>
+            <li>A diet you have set — vegetarian, vegan, halal, gluten-free or anything else — shapes every recommendation, rather than being acknowledged once and then forgotten.</li>
+            <li>Health conditions you have shared are taken into account in the general guidance it gives you.</li>
+          </ul>
+
+          <div class="callout" style="margin-bottom:0">
+            <span class="callout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+            <div>
+              <h4>Read the label anyway</h4>
+              <p>Kal works from what it can identify, and identification can be wrong. A mislabelled ingredient, an unfamiliar dish or a hidden trace will get past it. If an allergy of yours is serious, the packet and the person who cooked the food are the authority — not an app. Never rely on Coach Kal alone to decide whether something is safe for you to eat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ GETTING THE BEST OUT OF IT ═══════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="kicker reveal">Getting the best out of it</span>
+          <h2 class="section-title reveal">Specific questions get specific answers.</h2>
+          <p class="section-sub mx-auto reveal">Kal is most useful when the question is about your actual day rather than nutrition in general. These all work well:</p>
+        </div>
+
+        <div class="bubble-list reveal" style="max-width:44rem;margin-inline:auto">
+          <div class="bubble"><span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span><span><p>“What should I have for dinner with the calories I have left?”</p></span></div>
+          <div class="bubble" style="--rd:.06s"><span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span><span><p>“I'm eating Italian tonight — what should I order?”</p></span></div>
+          <div class="bubble" style="--rd:.12s"><span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span><span><p>“Why has my weight not moved this week?”</p></span></div>
+          <div class="bubble" style="--rd:.18s"><span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span><span><p>“How do I get more protein without adding much fat?”</p></span></div>
+          <div class="bubble" style="--rd:.24s"><span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span><span><p>“What can I cook with chicken, rice and what's in the fridge?”</p></span></div>
+          <div class="bubble" style="--rd:.3s"><span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span><span><p>“Was yesterday actually a good day, or does it just feel like it?”</p></span></div>
+        </div>
+
+        <div class="sp-cards">
+          <div class="sp-card reveal">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Log first, then ask</h3>
+            <p>Kal answers from your diary, so the more of today that is in it, the more the answer is about today. A question asked before you have logged anything gets a general answer, because that is all there is to work with.</p>
+          </div>
+          <div class="sp-card reveal" style="--rd:.1s">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-4l-4 4z"/></svg></div>
+            <h3>Ask follow-ups</h3>
+            <p>It keeps the thread of the conversation. “Why?”, “something quicker” or “I don't have that in the house” will refine the last answer instead of starting again from nothing.</p>
+          </div>
+          <div class="sp-card reveal" style="--rd:.2s">
+            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div>
+            <h3>Say what you actually want</h3>
+            <p>“Cheap”, “ready in ten minutes”, “nothing to cook”, “I'm eating out” — constraints make the suggestion usable. Without them you get the safe, obvious answer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FAQ ═══════════════════ -->
+    <section class="section section-alt">
+      <div class="container-narrow">
+        <div class="text-center">
+          <h2 class="section-title reveal">Questions about Coach Kal</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary><span>Does Coach Kal cost anything?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>No. It is unlimited on the free plan and always has been — not a trial, not a teaser, and there is no message cap. Premium changes how many AI photo scans you get a day and adds the weekly reports; it does not change Coach Kal.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>Can it change or delete things in my diary?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>No. Kal answers questions and makes suggestions. Logging a meal, editing a portion and deleting an entry are all things only you do.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>What if I have barely logged anything?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>You will still get an answer, but a general one — it can only reason about what is there. A few days of logging is usually the point where the answers start being about you rather than about nutrition in the abstract.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>Can I talk to it in Spanish?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Yes. Coach Kal works in Spanish and English, and answers in whichever language you write in. Fotocal was built Spanish-first, so this is not a translation layer bolted on afterwards.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>I have a health condition. Can I follow its advice?</span><i class="faq-plus" aria-hidden="true"></i></summary>
+            <p>Treat it as general information and check anything that matters with a professional who knows your history. Coach Kal is not a clinician, has no access to your medical records, and is not designed to manage a condition or a medication. If the two ever disagree, follow your doctor or dietitian.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-inner reveal">
+          <h2>Ask Coach Kal about your own day.</h2>
+          <p>Free and unlimited on every plan, including the free one.</p>
+          <a class="play-badge play-badge-light" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" style="margin-inline:auto;display:inline-flex" aria-label="Get Fotocal on Google Play">
+            <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
+            <span class="play-badge-text"><small>GET IT ON</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/layout.js" data-page="features"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

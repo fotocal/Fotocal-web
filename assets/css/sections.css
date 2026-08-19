@@ -71,6 +71,16 @@
   .sp-band.flip .sp-band-copy  { order: 1; }
 }
 
+/* ─── Two columns, always ───
+   .sp-cards runs to three columns on wide screens, which is right for the
+   six- and nine-card grids elsewhere but leaves an orphan in the third
+   column for a pair or a set of four. This keeps those balanced: 1x2 and
+   2x2 respectively. ─── */
+.sp-duo { display: grid; gap: 1.2rem; margin-top: 2.2rem; }
+@media (min-width: 820px) { .sp-duo { grid-template-columns: 1fr 1fr; } }
+.sp-duo .check-list { margin-top: .9rem; }
+.sp-duo .check-list li { font-size: .88rem; }
+
 /* ─── Supporting cards ─── */
 .sp-cards { display: grid; gap: 1.2rem; margin-top: 2.2rem; }
 @media (min-width: 640px) { .sp-cards { grid-template-columns: repeat(2, 1fr); } }

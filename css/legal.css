@@ -96,8 +96,10 @@ a:hover { text-decoration: underline; }
   letter-spacing: -.01em; color: var(--ink);
 }
 .nav-logo:hover { text-decoration: none; }
-.logo-mark { width: 32px; height: 32px; border-radius: 8px; flex: none;
-  box-shadow: 0 2px 8px -2px rgba(27,35,64,.25), 0 0 0 1px var(--border-soft); background: var(--white); }
+/* Free-standing mark, nothing behind it — see the note on .logo-mark in
+   assets/css/site.css. These pages carry their own header markup and their
+   own stylesheet, so the white tile had to be removed in both places. */
+.logo-mark { width: 32px; height: 32px; flex: none; }
 
 /* ─── Language dropdown ─── */
 .lang-select { position: relative; }

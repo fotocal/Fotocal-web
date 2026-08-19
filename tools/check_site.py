@@ -65,11 +65,27 @@ def exists(root_path):
 
 EXTERNAL = re.compile(r"^(?:[a-z][a-z0-9+.-]*:|//|#|$)", re.I)
 LINK = re.compile(r'\b(?:href|src)="([^"]*)"')
+SRCSET = re.compile(r'\bsrcset="([^"]*)"')
+
+
+def urls_in(html):
+    """Every internal URL a page depends on, srcset candidates included.
+
+    srcset was missed here once, and it is the worst kind of miss: the
+    browser prefers a srcset candidate over src, so a dead one breaks the
+    image while every other check still passes."""
+    found = set(LINK.findall(html))
+    for group in SRCSET.findall(html):
+        for cand in group.split(","):
+            cand = cand.strip()
+            if cand:
+                found.add(cand.split(None, 1)[0])
+    return found
 
 
 def check_links(rel, html):
     here = os.path.dirname(rel)
-    for url in set(LINK.findall(html)):
+    for url in urls_in(html):
         if EXTERNAL.match(url):
             continue
         cut = min([i for i in (url.find("?"), url.find("#")) if i != -1] or [len(url)])

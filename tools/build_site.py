@@ -243,10 +243,10 @@ def rewrite_links(src, lang, rel_path):
             return ""                            # "../" from a one-deep page = the root
         return p[2:] if p.startswith("./") else p
 
-    def rep(m):
-        attr, url = m.group(1), m.group(2)
+    def retarget(url):
+        """One URL as written -> the URL this tree should use."""
         if EXTERNAL.match(url):
-            return m.group(0)
+            return url
         # keep any ?query#fragment attached to the end
         cut = min([i for i in (url.find("?"), url.find("#")) if i != -1] or [len(url)])
         path, tail = url[:cut], url[cut:]
@@ -254,10 +254,28 @@ def rewrite_links(src, lang, rel_path):
         if path.endswith("/") and root and not root.endswith("/"):
             root += "/"                          # normpath eats the trailing slash
         if root.startswith(SHARED_ROOTS) or root in SHARED_ROOTS:
-            return '%s="/%s%s"' % (attr, root, tail)
-        return '%s="/%s%s%s"' % (attr, PREFIX[lang], root, tail)
+            return "/%s%s" % (root, tail)
+        return "/%s%s%s" % (PREFIX[lang], root, tail)
 
-    return re.sub(r'\b(href|src)="([^"]*)"', rep, src)
+    src = re.sub(r'\b(href|src)="([^"]*)"',
+                 lambda m: '%s="%s"' % (m.group(1), retarget(m.group(2))), src)
+
+    # srcset needs its own pass: it is a comma-separated list of
+    # "url descriptor" pairs, not a single URL. It also matters more than it
+    # looks — the browser picks from srcset in preference to src, so one
+    # unrewritten candidate breaks the image in the /en/ tree while src
+    # still points at something perfectly valid.
+    def rep_srcset(m):
+        out = []
+        for cand in m.group(1).split(","):
+            cand = cand.strip()
+            if not cand:
+                continue
+            bits = cand.split(None, 1)           # url, then any descriptor
+            out.append(" ".join([retarget(bits[0])] + bits[1:]))
+        return 'srcset="%s"' % ", ".join(out)
+
+    return re.sub(r'\bsrcset="([^"]*)"', rep_srcset, src)
 
 
 HEAD_PATTERNS = [

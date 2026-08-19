@@ -349,9 +349,21 @@
        reappear on every page of the same visit. */
     try { if (sessionStorage.getItem("fc-appbar-x")) return; } catch (e) {}
 
+    /* Reserve exactly the bar's own height at the foot of the page.
+       The CSS used to carry a hard-coded 78px, which any change to the
+       bar's contents could silently invalidate — and did: at 320px the
+       Spanish note wrapped to four lines and the bar grew to 152px, so it
+       sat over the last 74px of every page. Measuring removes the guess.
+       offsetHeight is read while the bar is laid out but still translated
+       off-screen, so this costs one layout and never a visible jump. */
+    var setHeight = function () {
+      document.body.style.setProperty("--fc-appbar-h", bar.offsetHeight + "px");
+    };
+
     var reveal = function () {
       if (window.scrollY <= 520) return;
       bar.hidden = false;
+      setHeight();
       /* Two frames: unhiding and adding .show in the same frame gives the
          browser no start state to animate from, so it would snap. */
       requestAnimationFrame(function () {
@@ -364,6 +376,12 @@
     };
     window.addEventListener("scroll", reveal, { passive: true });
     reveal();   /* in case the page is restored mid-scroll */
+
+    /* A rotation or a resize can change the bar's height — re-measure, but
+       only while it is actually on screen. */
+    window.addEventListener("resize", function () {
+      if (!bar.hidden) setHeight();
+    }, { passive: true });
 
     x.addEventListener("click", function () {
       bar.classList.remove("show");

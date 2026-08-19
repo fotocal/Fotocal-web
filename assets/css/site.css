@@ -1246,11 +1246,27 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
    icon, and a drop shadow under a transparent silhouette reads as a
    smudge rather than a lift. */
 .fc-appbar-logo { flex: 0 0 auto; }
-.fc-appbar-txt { display: flex; flex-direction: column; line-height: 1.18; flex: 1 1 auto; min-width: 0; }
+/* Sized to its content, not to the leftover space. The slack belongs to the
+   button — see .fc-appbar-cta. It may still shrink (and ellipsise) if a
+   translation is longer than the room available; it just never claims width
+   the button could be using. */
+.fc-appbar-txt { display: flex; flex-direction: column; line-height: 1.18; flex: 0 1 auto; min-width: 0; }
 .fc-appbar-txt strong { font-size: 15px; color: var(--ink); font-weight: 700; }
-.fc-appbar-txt span { font-size: 12px; color: var(--muted); }
+/* One line, always. If a translation ever outgrows the column the ellipsis
+   is the failure mode we want — the bar keeps its height and the button
+   keeps its place, instead of the note wrapping and pushing the bar to
+   twice the size. */
+.fc-appbar-txt span {
+  font-size: 12px; color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* The button takes every pixel the other three do not need, so it is the
+   largest thing in the bar at any width rather than whatever is left after
+   the supporting copy has helped itself. max-width stops it becoming a
+   full-bleed slab on a tablet. */
 .fc-appbar-cta {
-  flex: 0 0 auto; background: var(--grad); color: #fff;
+  flex: 1 1 auto; max-width: 300px; text-align: center;
+  background: var(--grad); color: #fff;
   font-weight: 700; font-size: 15px; padding: 12px 20px;
   border-radius: 999px; white-space: nowrap;
   box-shadow: 0 10px 22px -9px rgba(233, 30, 99, .55);
@@ -1265,8 +1281,32 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
 }
 .fc-appbar-x:active { background: var(--cream-2); }
 
-/* Reserve the bar's height so it never covers the end of the page. */
-body.fc-appbar-on { padding-bottom: 78px; }
+/* ─── Phone widths ───
+   At 320px the bar has 296px of usable width, and the four elements wanted
+   more than 500px of it. The text column lost, collapsing to 0px, and the
+   Spanish note wrapped onto four lines — a 152px tall bar whose supporting
+   copy dwarfed the button it was supporting.
+
+   The decorative logo is what goes. It is aria-hidden and the wordmark
+   beside it already names the brand, so dropping it costs nothing and
+   returns 50px to the only element that was starved. Tighter padding, a
+   tighter gap and a slightly tighter button give back another 30px. */
+@media (max-width: 430px) {
+  .fc-appbar { padding: 10px 8px calc(10px + env(safe-area-inset-bottom, 0px)); }
+  .fc-appbar-inner { gap: 10px; }
+  .fc-appbar-logo { display: none; }
+  .fc-appbar-cta { padding: 12px 16px; }   /* height, and the tap target, unchanged */
+  /* Pull the dismiss button into the bar's right padding. It keeps its full
+     44x44 hit area — only the space it reserves in the row shrinks, and the
+     column it gives that space to is the one that was starved. */
+  .fc-appbar-x { margin-right: -6px; }
+}
+
+/* Reserve the bar's height so it never covers the end of the page.
+   The value comes from the bar itself — layout.js measures it and sets
+   --fc-appbar-h — because this used to be a hard-coded guess that any
+   change to the bar's contents could silently invalidate. */
+body.fc-appbar-on { padding-bottom: var(--fc-appbar-h, 78px); }
 
 @media (min-width: 900px) {
   .fc-appbar { display: none !important; }

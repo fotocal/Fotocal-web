@@ -263,7 +263,7 @@ window.FOTOCAL_I18N = {
     "cta.note": "Free download · 5-day Premium trial · Android",
     "cta.alt": "Illustration: friends sharing a warm dinner around a table, a phone with Fotocal resting beside the plates",
     "cta.get": "Get the app",
-    "cta.stickyNote": "Free · 5-day trial · Android",
+    "cta.stickyNote": "Free · 5-day trial",
     "cta.dismiss": "Dismiss this bar",
 
     /* ── Contact form: the three strings the form itself writes ──
@@ -540,8 +540,8 @@ window.FOTOCAL_I18N = {
     "cta.sub": "Descarga Fotocal y comprueba lo fácil que es comer mejor cuando la parte difícil es una foto. Los primeros 5 días de Premium van por nuestra cuenta.",
     "cta.note": "Descarga gratis · 5 días de Premium de prueba · Android",
     "cta.alt": "Ilustración: amigos compartiendo una cena cálida alrededor de una mesa, con un móvil con Fotocal junto a los platos",
-    "cta.get": "Descarga la app",
-    "cta.stickyNote": "Gratis · 5 días de prueba · Android",
+    "cta.get": "Descargar",
+    "cta.stickyNote": "Gratis · 5 días de prueba",
     "cta.dismiss": "Cerrar esta barra",
 
     /* ── Formulario de contacto: los tres textos que escribe el propio

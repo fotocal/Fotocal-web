@@ -55,7 +55,7 @@ TITLE_MAX = 62                    # beyond this Google truncates the snippet
 
 # Directories the builder owns and rewrites on every run. Anything else at
 # the repo root (assets, css, js, CNAME, robots.txt …) is left alone.
-OWNED = ["about", "account-deletion", "blog", "contact", "features",
+OWNED = ["about", "account-deletion", "ai", "blog", "contact", "features",
          "privacy-policy", "subscription", "terms", "en"]
 OWNED_FILES = ["index.html", "404.html"]
 
@@ -410,6 +410,7 @@ WEIGHTS = [
     ("contact/",        "monthly", "0.6"),
     ("subscription/",   "monthly", "0.8"),
     ("features/",       "monthly", "0.9"),
+    ("ai/",             "monthly", "0.9"),   # a feature page, just not under features/
     ("blog/",           "monthly", "0.7"),
     ("",                "monthly", "0.7"),
 ]

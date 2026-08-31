@@ -33,6 +33,7 @@ OUT_IMG = os.path.join(ROOT, "assets", "img")
 OUT = os.path.join(ROOT, "assets")
 
 INK = (27, 35, 64)          # --ink, the site's dark
+CREAM = (253, 249, 240)     # --cream, the site's ground
 LOGO_SIZES = (32, 64, 96)   # nav is 32 CSS px, sticky bar 40 -> 1x/2x/3x
 
 
@@ -105,37 +106,67 @@ def main():
         ico, sizes=[(16, 16), (32, 32), (48, 48)])
     print("  %-38s 16+32+48" % os.path.relpath(ico, ROOT))
 
-    # ── home-screen icons: ink, SQUARE ──
-    #    iOS applies its own corner mask to apple-touch-icon and Android
-    #    launchers mask the PWA icons, so pre-rounding them would show a
-    #    rounded tile inside a rounded mask. Padding is generous enough that
-    #    a circular mask does not clip the mark.
-    save(render(master, 180, INK, 0.12), os.path.join(OUT, "apple-touch-icon.png"))
-    save(render(master, 192, INK, 0.14), os.path.join(OUT, "icon-192.png"))
-    save(render(master, 512, INK, 0.14), os.path.join(OUT, "icon-512.png"))
+    # ── home-screen icons: cream, SQUARE ──
+    #    Cream, not ink: on a real phone the ink tile read as a black square,
+    #    and the app's own launcher icon is the mark on a light tile — the
+    #    website's home-screen icon should look like the app it opens.
+    #    Square because iOS masks apple-touch-icon itself and Android masks
+    #    the manifest icons; pre-rounding would put a tile inside a mask.
+    save(render(master, 180, CREAM, 0.12), os.path.join(OUT, "apple-touch-icon.png"))
+    save(render(master, 192, CREAM, 0.12), os.path.join(OUT, "icon-192.png"))
+    save(render(master, 512, CREAM, 0.12), os.path.join(OUT, "icon-512.png"))
 
-    # ── favicon.svg ──
-    # Kept as an SVG wrapping a PNG, exactly as before: every one of the 72
-    # pages already links this path, and an SVG favicon may not fetch an
-    # external image, so the bitmap has to be inlined. The artwork is a
-    # gradient illustration, not something that vectorises faithfully.
+    # The maskable variant promises Android the mark survives ANY mask the
+    # launcher applies. The spec's guaranteed-visible region is the centred
+    # circle of 80% diameter, so prove it rather than eyeball it.
+    #
+    # The assertion runs against the FILE AS WRITTEN, reopened from disk —
+    # not the in-memory image it was saved from. A guard that inspects the
+    # buffer approves whatever the encoder then does to it; this project
+    # has already shipped one guard that contained the exact defect it
+    # guarded, so this one checks the artefact, never the intention.
+    MASK_PAD = 0.17
+    mask_path = os.path.join(OUT, "icon-512-maskable.png")
+    save(render(master, 512, CREAM, MASK_PAD), mask_path)
+    mk = Image.open(mask_path).convert("RGB")
+    if mk.size != (512, 512):
+        os.remove(mask_path)
+        raise SystemExit("maskable icon on disk is %r, not 512x512" % (mk.size,))
+    px, r2 = mk.load(), (0.4 * 512) ** 2
+    bad = 0
+    for y in range(512):
+        for x in range(512):
+            if (x - 255.5) ** 2 + (y - 255.5) ** 2 > r2:
+                p_ = px[x, y]
+                if abs(p_[0]-CREAM[0]) > 8 or abs(p_[1]-CREAM[1]) > 8 or abs(p_[2]-CREAM[2]) > 8:
+                    bad += 1
+    if bad:
+        os.remove(mask_path)   # never leave an artefact its own check rejected
+        raise SystemExit("maskable icon: %d mark pixels outside the safe circle — raise MASK_PAD" % bad)
+    print("  %-38s safe-circle verified on disk" % os.path.relpath(mask_path, ROOT))
+
+    # ── favicon.svg — the one icon that can adapt to the browser theme ──
+    # The mark is embedded as a data-URI PNG (an SVG favicon may not fetch
+    # external images, and a gradient illustration does not vectorise), but
+    # the TILE behind it is real SVG — so it can respond to the theme:
+    #   light tab bar  ->  ink tile, so the icon holds a crisp silhouette
+    #   dark tab bar   ->  no tile, the mark's own colours pop on the dark
+    # Tile-on-dark was the failure: ink on a dark bar melts into it.
     import base64, io
     buf = io.BytesIO()
-    render(master, 96, INK, 0.09, 18).save(buf, format="PNG", optimize=True)
+    render(master, 96, None, 0.09).save(buf, format="PNG", optimize=True)
     b64 = base64.b64encode(buf.getvalue()).decode()
     svg = (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">\n'
         '  <title>Fotocal</title>\n'
-        '  <!-- The Fotocal mark. Embedded as a data URI on purpose: an SVG\n'
-        '       favicon may not fetch external images, and every page already\n'
-        '       points at this one file, so the logo updates everywhere\n'
-        '       without touching any page markup.\n'
-        '       Regenerate with tools/make_icons.py — do not hand-edit. -->\n'
+        '  <!-- Regenerate with tools/make_icons.py - do not hand-edit. -->\n'
+        '  <style>@media (prefers-color-scheme: dark) { #tile { display: none } }</style>\n'
+        '  <rect id="tile" width="96" height="96" rx="18" fill="#1B2340"/>\n'
         '  <image width="96" height="96" href="data:image/png;base64,%s"/>\n'
         '</svg>\n' % b64)
     p = os.path.join(OUT, "favicon.svg")
     open(p, "w", encoding="utf-8").write(svg)
-    print("  %-38s %.1f KB" % ("assets/favicon.svg", len(svg) / 1024))
+    print("  %-38s %.1f KB (adaptive)" % ("assets/favicon.svg", len(svg) / 1024))
 
 
 if __name__ == "__main__":

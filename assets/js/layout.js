@@ -306,6 +306,26 @@
      Built here rather than per-page: it began as an inline block in
      index.html, so it existed on the homepage and nowhere else — open
      any feature page or article and the CTA was gone. */
+  /* The note split at its separator, so phone widths can stack it.
+     On a 360px phone with Android text scaling at 1.3x, the row cannot
+     hold the icon, the wordmark, the whole Spanish note and an unsquashed
+     button — ~386px of minimums against 344 available. The wordmark is
+     what gives (the icon carries the brand, and the visitor is already on
+     getfotocal.com): below 430px the CSS hides it and stacks the note's
+     two halves in its place, so "5 dias de prueba" survives every font
+     scale intact. Clipping it was the one unacceptable outcome — it is
+     the most persuasive fact on the bar, and it clipped precisely for
+     the people who enlarged their text because they need it enlarged. */
+  function noteHTML() {
+    var note = t("cta.stickyNote");
+    var i = note.indexOf(" \u00b7 ");
+    if (i < 0) return '<span class="fc-appbar-note">' + note + '</span>';
+    return '<span class="fc-appbar-note">' +
+      '<span class="fc-note-a">' + note.slice(0, i) + '</span>' +
+      '<span class="fc-note-sep"> \u00b7 </span>' +
+      '<span class="fc-note-b">' + note.slice(i + 3) + '</span></span>';
+  }
+
   function appbarHTML() {
     return '' +
       '<div class="fc-appbar" id="fcAppbar" hidden>' +
@@ -317,7 +337,7 @@
             'width="40" height="40" alt="" aria-hidden="true" decoding="async">' +
           '<div class="fc-appbar-txt">' +
             '<strong>Fotocal</strong>' +
-            '<span>' + t("cta.stickyNote") + '</span>' +
+            noteHTML() +
           '</div>' +
           '<a class="fc-appbar-cta" href="' + PLAY_URL + '" target="_blank" rel="noopener noreferrer">' +
             t("cta.get") + '</a>' +
@@ -360,22 +380,60 @@
       document.body.style.setProperty("--fc-appbar-h", bar.offsetHeight + "px");
     };
 
-    var reveal = function () {
-      if (window.scrollY <= 520) return;
-      bar.hidden = false;
-      setHeight();
-      /* Two frames: unhiding and adding .show in the same frame gives the
-         browser no start state to animate from, so it would snap. */
-      requestAnimationFrame(function () {
+    /* ── Reveal once, then get out of the way ──
+       The bar first appears after 520px of scroll, as before. From then on
+       it follows reading direction: scrolling DOWN tucks it away
+       (translateY, 200ms ease-out — see the CSS), scrolling UP brings it
+       back, and near the top of the page it is always present. A permanent
+       bar reads as visually heavy; one that returns exactly when the
+       reader signals "I'm done going deeper" does the same selling with
+       half the weight.
+
+       The 10px streak threshold is jitter armour: a finger resting on the
+       glass and iOS rubber-banding both produce small alternating deltas,
+       and without the streak the bar would flicker. A direction change
+       resets the streak, so only 10px of *sustained* movement flips it.
+       The page's bottom padding stays reserved while the bar is tucked —
+       releasing it would reflow the page on every flick of the thumb. */
+    var THRESH = 10;
+    var revealed = false, dismissed = false;
+    var lastY = Math.max(0, window.scrollY), streak = 0;
+
+    var onScroll = function () {
+      if (dismissed) return;
+      var y = Math.max(0, window.scrollY);   /* rubber-band clamps to 0 */
+
+      if (!revealed) {
+        lastY = y;
+        if (y <= 520) return;
+        revealed = true;
+        bar.hidden = false;
+        setHeight();
+        /* Two frames: unhiding and adding .show in the same frame gives
+           the browser no start state to animate from, so it would snap. */
         requestAnimationFrame(function () {
-          bar.classList.add("show");
-          document.body.classList.add("fc-appbar-on");
+          requestAnimationFrame(function () {
+            bar.classList.add("show");
+            document.body.classList.add("fc-appbar-on");
+          });
         });
-      });
-      window.removeEventListener("scroll", reveal);
+        return;
+      }
+
+      var d = y - lastY;
+      lastY = y;
+      if (d === 0) return;
+      if ((d > 0) !== (streak > 0)) streak = 0;
+      streak += d;
+
+      if (streak > THRESH && y > 520) {
+        bar.classList.remove("show");
+      } else if (streak < -THRESH || y <= 520) {
+        bar.classList.add("show");
+      }
     };
-    window.addEventListener("scroll", reveal, { passive: true });
-    reveal();   /* in case the page is restored mid-scroll */
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();   /* in case the page is restored mid-scroll */
 
     /* A rotation or a resize can change the bar's height — re-measure, but
        only while it is actually on screen. */
@@ -384,10 +442,11 @@
     }, { passive: true });
 
     x.addEventListener("click", function () {
+      dismissed = true;
       bar.classList.remove("show");
       document.body.classList.remove("fc-appbar-on");
       try { sessionStorage.setItem("fc-appbar-x", "1"); } catch (e) {}
-      setTimeout(function () { bar.hidden = true; }, 320);
+      setTimeout(function () { bar.hidden = true; }, 220);
     });
   })();
 

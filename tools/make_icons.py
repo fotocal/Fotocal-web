@@ -118,10 +118,20 @@ def main():
 
     # The maskable variant promises Android the mark survives ANY mask the
     # launcher applies. The spec's guaranteed-visible region is the centred
-    # circle of 80% diameter, so prove it rather than eyeball it: render,
-    # then assert not one mark pixel falls outside that circle.
+    # circle of 80% diameter, so prove it rather than eyeball it.
+    #
+    # The assertion runs against the FILE AS WRITTEN, reopened from disk —
+    # not the in-memory image it was saved from. A guard that inspects the
+    # buffer approves whatever the encoder then does to it; this project
+    # has already shipped one guard that contained the exact defect it
+    # guarded, so this one checks the artefact, never the intention.
     MASK_PAD = 0.17
-    mk = render(master, 512, CREAM, MASK_PAD)
+    mask_path = os.path.join(OUT, "icon-512-maskable.png")
+    save(render(master, 512, CREAM, MASK_PAD), mask_path)
+    mk = Image.open(mask_path).convert("RGB")
+    if mk.size != (512, 512):
+        os.remove(mask_path)
+        raise SystemExit("maskable icon on disk is %r, not 512x512" % (mk.size,))
     px, r2 = mk.load(), (0.4 * 512) ** 2
     bad = 0
     for y in range(512):
@@ -131,8 +141,9 @@ def main():
                 if abs(p_[0]-CREAM[0]) > 8 or abs(p_[1]-CREAM[1]) > 8 or abs(p_[2]-CREAM[2]) > 8:
                     bad += 1
     if bad:
+        os.remove(mask_path)   # never leave an artefact its own check rejected
         raise SystemExit("maskable icon: %d mark pixels outside the safe circle — raise MASK_PAD" % bad)
-    save(mk, os.path.join(OUT, "icon-512-maskable.png"))
+    print("  %-38s safe-circle verified on disk" % os.path.relpath(mask_path, ROOT))
 
     # ── favicon.svg — the one icon that can adapt to the browser theme ──
     # The mark is embedded as a data-URI PNG (an SVG favicon may not fetch

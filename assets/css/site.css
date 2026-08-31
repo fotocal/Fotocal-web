@@ -1231,9 +1231,12 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
    ═══════════════════════════════════════════════════════════════ */
 .fc-appbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-  /* transform only — no top/height animation, so this never lays out */
+  /* transform only — no top/height animation, so this never lays out.
+     200ms ease-out serves both moves: the first reveal and the
+     hide-on-scroll-down / return-on-scroll-up the bar now does. The
+     reduced-motion block below turns it instant; the behaviour stays. */
   transform: translateY(130%);
-  transition: transform .32s cubic-bezier(.4, 0, .2, 1);
+  transition: transform .2s ease-out;
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
   background: rgba(253, 249, 240, .94);
   -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
@@ -1315,6 +1318,17 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
      44x44 hit area — only the space it reserves in the row shrinks, and the
      column it gives that space to is the one that was starved. */
   .fc-appbar-x { margin-right: -6px; }
+
+  /* The wordmark leaves and the note takes both lines: "Gratis" over
+     "5 días de prueba". The icon carries the brand. This is what lets the
+     full offer survive Android font scaling on a 360px phone — the note
+     column's width halves, and an accessibility setting stops costing
+     information. Each half keeps the nowrap/ellipsis inherited from
+     .fc-appbar-txt span as a last-resort guard for future translations. */
+  .fc-appbar-txt strong { display: none; }
+  .fc-note-sep { display: none; }
+  .fc-note-a, .fc-note-b { display: block; }
+  .fc-note-a { font-weight: 700; color: var(--ink); }
 }
 
 /* Reserve the bar's height so it never covers the end of the page.

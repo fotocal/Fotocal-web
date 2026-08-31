@@ -210,7 +210,8 @@ def render_lang_blocks(src, lang):
 
 # Files both trees share. There is exactly one copy of each, at the site
 # root, so a link to one must never pick up a language prefix.
-SHARED_ROOTS = ("assets/", "css/", "js/", "CNAME", "robots.txt", "sitemap.xml")
+SHARED_ROOTS = ("assets/", "css/", "js/", "CNAME", "robots.txt", "sitemap.xml",
+                "site.webmanifest")
 
 # Left alone entirely: other origins, page fragments, and non-http schemes.
 EXTERNAL = re.compile(r"^(?:[a-z][a-z0-9+.-]*:|//|#|$)", re.I)

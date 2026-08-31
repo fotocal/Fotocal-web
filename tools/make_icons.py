@@ -9,16 +9,20 @@ below is generated from it, so re-running after a logo change is the whole
 update — there is no hand-cropped file to keep in step.
 
 TWO TREATMENTS, ON PURPOSE
-  in-page (nav, footer, sticky bar)  transparent, full bleed
-      The mark sits directly on cream. Anything behind it — a tile, a
-      radius, a shadow — reads as a white box on a warm background, which
-      is what the previous app-icon-style asset forced.
+  tab icons (favicon.svg, 16/32/48, .ico)  transparent, full bleed
+      The mark is fully saturated colour with no white and no black in
+      it, so the same transparent asset reads correctly on a white tab
+      bar and on a black one, unchanged. A tile behind it is what made
+      the tab icon a dark square. (Judged at real 16px on light and dark
+      surfaces before shipping: the ring holds on both; the yellow-green
+      arc is the thinnest segment on white but the ring stays closed.)
 
-  icons (favicon, apple-touch, PWA)  solid ink #1B2340
-      A tab is 16px of silhouette. Transparent, the thin multicoloured
-      ring loses definition against a light tab bar, and iOS composites a
-      transparent touch icon onto black anyway. Ink keeps one recognisable
-      shape in light and dark browser themes both.
+  home-screen icons (apple-touch, 192/512, maskable)  opaque cream
+      These two MUST stay opaque: iOS composites a transparent
+      apple-touch-icon onto black — which would reproduce the exact
+      black-square failure — and the maskable icon has to fill its own
+      safe area or the launcher shows holes. Cream #FDF9F0, like the
+      app's own launcher icon.
 
 Sizes are rendered at their real pixel size rather than scaled in the
 browser: a 96px source squeezed into 16px by the tab bar is mush.
@@ -96,14 +100,13 @@ def main():
     # does not match the file is the kind of thing Search Console flags.
     save(render(master, 512), os.path.join(OUT_IMG, "logo.png"))
 
-    # ── browser tab: ink tile, lightly rounded, tighter padding the smaller
-    #    it gets because at 16px there is no room to spend on margin ──
-    for s, pad, r in ((16, 0.06, 3), (32, 0.09, 6), (48, 0.09, 9)):
-        save(render(master, s, INK, pad, r), os.path.join(OUT, "favicon-%d.png" % s))
+    # ── browser tab: the bare mark, transparent, full bleed — at 16px
+    #    every pixel spent on margin is a pixel the ring cannot use ──
+    for s in (16, 32, 48):
+        save(render(master, s), os.path.join(OUT, "favicon-%d.png" % s))
 
     ico = os.path.join(OUT, "favicon.ico")
-    render(master, 48, INK, 0.09, 9).save(
-        ico, sizes=[(16, 16), (32, 32), (48, 48)])
+    render(master, 48).save(ico, sizes=[(16, 16), (32, 32), (48, 48)])
     print("  %-38s 16+32+48" % os.path.relpath(ico, ROOT))
 
     # ── home-screen icons: cream, SQUARE ──
@@ -145,28 +148,26 @@ def main():
         raise SystemExit("maskable icon: %d mark pixels outside the safe circle — raise MASK_PAD" % bad)
     print("  %-38s safe-circle verified on disk" % os.path.relpath(mask_path, ROOT))
 
-    # ── favicon.svg — the one icon that can adapt to the browser theme ──
+    # ── favicon.svg — no tile, no theme query, on purpose ──
     # The mark is embedded as a data-URI PNG (an SVG favicon may not fetch
-    # external images, and a gradient illustration does not vectorise), but
-    # the TILE behind it is real SVG — so it can respond to the theme:
-    #   light tab bar  ->  ink tile, so the icon holds a crisp silhouette
-    #   dark tab bar   ->  no tile, the mark's own colours pop on the dark
-    # Tile-on-dark was the failure: ink on a dark bar melts into it.
+    # external images, and a gradient illustration does not vectorise).
+    # There used to be an adaptive ink tile here, hidden on dark themes;
+    # it is gone because the mark needs no adapting: fully saturated
+    # colour with no white and no black in it reads the same on a light
+    # tab bar and a dark one. One transparent asset is the whole answer.
     import base64, io
     buf = io.BytesIO()
-    render(master, 96, None, 0.09).save(buf, format="PNG", optimize=True)
+    render(master, 96).save(buf, format="PNG", optimize=True)
     b64 = base64.b64encode(buf.getvalue()).decode()
     svg = (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">\n'
         '  <title>Fotocal</title>\n'
         '  <!-- Regenerate with tools/make_icons.py - do not hand-edit. -->\n'
-        '  <style>@media (prefers-color-scheme: dark) { #tile { display: none } }</style>\n'
-        '  <rect id="tile" width="96" height="96" rx="18" fill="#1B2340"/>\n'
         '  <image width="96" height="96" href="data:image/png;base64,%s"/>\n'
         '</svg>\n' % b64)
     p = os.path.join(OUT, "favicon.svg")
     open(p, "w", encoding="utf-8").write(svg)
-    print("  %-38s %.1f KB (adaptive)" % ("assets/favicon.svg", len(svg) / 1024))
+    print("  %-38s %.1f KB (transparent)" % ("assets/favicon.svg", len(svg) / 1024))
 
 
 if __name__ == "__main__":

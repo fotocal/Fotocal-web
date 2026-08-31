@@ -119,7 +119,7 @@
       "ai.fa5": "Treat it as general information and check anything that matters with a professional who knows your history. Coach Kal is not a clinician, has no access to your medical records, and is not designed to manage a condition or a medication. If the two ever disagree, follow your doctor or dietitian.",
       "ai.ctaTitle": "Ask Coach Kal about your own day.",
       "ai.ctaBody": "Free and unlimited on every plan, including the free one.",
-      "ai.imgAlt": "Illustration: a woman relaxes with a mug while chatting with Coach Kal, a friendly robot, on her phone",
+      "ai.imgAlt": "Real app screenshot: the Coach Kal chat. The user asks whether a 180-kcal fruit and yogurt bowl fits their goal, and Kal confirms it fits the 2,075 kcal they have left, warns that the yogurt may contain lactose because of their allergy, and suggests three healthier tweaks",
 
 
       /* ─────────────────────────────────────────────
@@ -277,7 +277,7 @@
       "fx.f6.b3s": "Point the camera and get advice on the spot, before you eat.",
       "fx.f6.more": "How Coach Kal works",
       "fx.f6.moreB": "What it can see, what it cannot, and where it can be wrong",
-      "fx.f6.alt": "Illustration: a woman relaxes with a mug while chatting with Coach Kal, a friendly robot, on her phone",
+      "fx.f6.alt": "Real app screenshot: the Coach Kal chat. The user asks whether a 180-kcal fruit and yogurt bowl fits their goal, and Kal confirms it fits the 2,075 kcal they have left, warns that the yogurt may contain lactose because of their allergy, and suggests three healthier tweaks",
 
       "fx.f7.t": "Full nutrition — every nutrient, not just calories",
       "fx.f7.b": "Complete macros plus micronutrients — vitamins, minerals, fiber, sugar, sodium, NOVA processing level, and glucose & satiety scores.",
@@ -1164,7 +1164,7 @@
       "ai.fa5": "Trátalos como información general y consulta lo que importe con un profesional que conozca tu historial. Coach Kal no es personal clínico, no tiene acceso a tu historia clínica y no está pensado para manejar una condición ni una medicación. Si alguna vez no coinciden, haz caso a tu médico o a tu dietista.",
       "ai.ctaTitle": "Pregúntale a Coach Kal por tu propio día.",
       "ai.ctaBody": "Gratis y sin límite en todos los planes, incluido el gratuito.",
-      "ai.imgAlt": "Ilustración: una mujer se relaja con una taza mientras chatea con Coach Kal, un robot simpático, en su móvil",
+      "ai.imgAlt": "Captura real de la app: el chat de Coach Kal. El usuario pregunta si un bol de frutas y yogur de 180 kcal encaja en su objetivo, y Kal confirma que cabe en las 2075 kcal que le quedan, avisa de que el yogur puede llevar lactosa por su alergia y propone tres mejoras más saludables",
 
 
       /* ─────────────────────────────────────────────
@@ -1321,7 +1321,7 @@
       "fx.f6.b3s": "Apunta con la cámara y recibe consejo al momento, antes de comer.",
       "fx.f6.more": "Cómo funciona Coach Kal",
       "fx.f6.moreB": "Qué puede ver, qué no, y dónde puede equivocarse",
-      "fx.f6.alt": "Ilustración: una mujer se relaja con una taza mientras chatea con Coach Kal, un robot simpático, en su móvil",
+      "fx.f6.alt": "Captura real de la app: el chat de Coach Kal. El usuario pregunta si un bol de frutas y yogur de 180 kcal encaja en su objetivo, y Kal confirma que cabe en las 2075 kcal que le quedan, avisa de que el yogur puede llevar lactosa por su alergia y propone tres mejoras más saludables",
 
       "fx.f7.t": "Nutrición completa — cada nutriente, no solo las calorías",
       "fx.f7.b": "Macros completos y micronutrientes: vitaminas, minerales, fibra, azúcar, sodio, nivel de procesamiento NOVA y puntuaciones de glucosa y saciedad.",

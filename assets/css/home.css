@@ -74,8 +74,10 @@
 }
 .hero-perk svg { width: 15px; height: 15px; color: var(--pink); flex: none; }
 
-/* Illustration stage with floating UI chips */
-.hero-stage-x { position: relative; max-width: 560px; margin-inline: auto; }
+/* Screenshot stage with floating UI chips. The visual is a portrait
+   phone now, so the stage is narrower than the old landscape scene —
+   at 560px the device towered over the copy column. */
+.hero-stage-x { position: relative; max-width: 430px; margin-inline: auto; }
 .hero-stage-x .illus { transform: rotate(.6deg); }
 .f-chip {
   position: absolute; z-index: 3;
@@ -95,20 +97,23 @@
   display: grid; place-items: center; color: #fff;
 }
 .f-chip-ico svg { width: 18px; height: 18px; }
-.f-chip-1 { top: 7%; left: -14px; animation-delay: 0s; }
-.f-chip-2 { bottom: 20%; right: -12px; animation-delay: 1.4s; }
-.f-chip-3 { bottom: -16px; left: 10%; animation-delay: 2.6s; }
-.f-chip-1 .f-chip-ico { background: var(--grad); }
+/* Positioned to straddle the card edges without sitting on the numbers
+   they annotate: the kcal chip hangs off the bottom-left corner, the
+   protein chip rides the right edge over the carousel's cut card. */
+.f-chip-1 { bottom: -14px; left: 6%; animation-delay: 0s; }
+.f-chip-2 { bottom: 24%; right: -12px; animation-delay: 1.4s; }
+.f-chip-1 .f-chip-ico { background: linear-gradient(135deg, #F59E0B, #F97316); }
 .f-chip-2 .f-chip-ico { background: linear-gradient(135deg, #17B26A, #0E9355); }
-.f-chip-3 .f-chip-ico { background: linear-gradient(135deg, #F59E0B, #F97316); }
 @keyframes chip-float {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-9px); }
 }
+/* On phones the card is ~330px wide and a chip is 140-210px: whatever
+   corner it takes, it sits on top of the screenshot's own numbers. The
+   capture already shows everything the chips say, so below 600px the
+   chips go and the phone speaks for itself. */
 @media (max-width: 599px) {
-  .f-chip strong { font-size: .84rem; }
-  .f-chip { padding: .5rem .7rem; border-radius: 13px; }
-  .f-chip-1 { left: -6px; } .f-chip-2 { right: -6px; }
+  .f-chip { display: none; }
 }
 
 /* ═══════════════════════════════════════════════

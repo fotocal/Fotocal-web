@@ -26,7 +26,7 @@ are Spanish now.
 WHAT IT DOES PER PAGE
   · data-i18n        -> element text
   · data-i18n-html   -> element inner HTML
-  · data-i18n-alt / -ph / -aria -> the matching attribute
+  · data-i18n-alt / -ph / -aria / -src -> the matching attribute
   · data-lang-block  -> keep this language's block, drop the other
   · <html lang>, <title>, <meta description>, og/twitter title+description
   · canonical -> itself;  hreflang es + en + x-default -> the pair
@@ -150,11 +150,15 @@ def render_text_nodes(src, dic, missing):
     return "".join(out)
 
 
-ATTR_MAP = {"alt": "alt", "ph": "placeholder", "aria": "aria-label"}
+ATTR_MAP = {"alt": "alt", "ph": "placeholder", "aria": "aria-label", "src": "src"}
 
 
 def render_attr_nodes(src, dic, missing):
-    """data-i18n-alt / -ph / -aria set the corresponding real attribute."""
+    """data-i18n-alt / -ph / -aria / -src set the corresponding real
+    attribute. -src is how a screenshot differs per language: the dict
+    holds this page's source-relative path to each language's capture,
+    and rewrite_links() then retargets it for the tree like any other
+    src, so the /en/ page really ships the English screen."""
     def one(kind, target):
         nonlocal src
         pat = re.compile(r'<([a-zA-Z0-9]+)([^>]*?)\bdata-i18n-%s="([^"]+)"([^>]*?)>' % kind, re.S)
@@ -165,12 +169,16 @@ def render_attr_nodes(src, dic, missing):
                 missing.add(key)
                 return m.group(0)
             attrs = a + b
+            # <link rel="preload"> addresses its resource with href, not
+            # src — data-i18n-src must retarget THAT, or the page preloads
+            # one language's image and renders the other, downloading both.
+            tgt = "href" if kind == "src" and tag.lower() == "link" else target
             # replace an existing target attribute, or add one
-            if re.search(r'\b%s="' % re.escape(target), attrs):
-                attrs = re.sub(r'\b%s="[^"]*"' % re.escape(target),
-                               '%s="%s"' % (target, esc_attr(val)), attrs, count=1)
+            if re.search(r'\b%s="' % re.escape(tgt), attrs):
+                attrs = re.sub(r'\b%s="[^"]*"' % re.escape(tgt),
+                               '%s="%s"' % (tgt, esc_attr(val)), attrs, count=1)
             else:
-                attrs = attrs.rstrip() + ' %s="%s"' % (target, esc_attr(val))
+                attrs = attrs.rstrip() + ' %s="%s"' % (tgt, esc_attr(val))
             return "<%s%s>" % (tag, strip_i18n_attrs(attrs))
         src = pat.sub(rep, src)
     for k, t in ATTR_MAP.items():

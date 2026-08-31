@@ -1263,9 +1263,15 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
 /* The button takes every pixel the other three do not need, so it is the
    largest thing in the bar at any width rather than whatever is left after
    the supporting copy has helped itself. max-width stops it becoming a
-   full-bleed slab on a tablet. */
+   full-bleed slab on a tablet.
+
+   flex-shrink 0 is the priority order made explicit: when Android font
+   scaling makes everything wider than the row, the pill must never be the
+   thing that squashes — the note column is the designed give (min-width:0
+   with an ellipsis), because a clipped word costs less than a broken
+   button. */
 .fc-appbar-cta {
-  flex: 1 1 auto; max-width: 300px; text-align: center;
+  flex: 1 0 auto; max-width: 300px; text-align: center;
   background: var(--grad); color: #fff;
   font-weight: 700; font-size: 15px; padding: 12px 20px;
   border-radius: 999px; white-space: nowrap;
@@ -1294,7 +1300,11 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
 @media (max-width: 430px) {
   .fc-appbar { padding: 10px 8px calc(10px + env(safe-area-inset-bottom, 0px)); }
   .fc-appbar-inner { gap: 8px; }
-  .fc-appbar-logo { display: none; }
+  /* The app icon stays, at the small end of the brief's 36-40px range —
+     it is the anchor the text lines hang from. It was hidden here for a
+     while to buy the Spanish note room; the brief overrules that, and the
+     room comes out of the pill's and the gaps' minimums instead. */
+  .fc-appbar-logo { width: 36px; height: 36px; }
   /* 12px, not 16: this padding is the button's MINIMUM, and the button is
      flex-grow, so at normal font scale it renders at slack width and the
      smaller minimum changes nothing visible. Where it does bind is Android

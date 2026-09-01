@@ -112,7 +112,7 @@ TAG_WITH_KEY = re.compile(
 
 
 def strip_i18n_attrs(attrs):
-    attrs = re.sub(r'\s+data-i18n(?:-html|-alt|-ph|-aria)?="[^"]*"', "", attrs)
+    attrs = re.sub(r'\s+data-i18n(?:-html|-alt|-ph|-aria|-src)?="[^"]*"', "", attrs)
     return attrs
 
 

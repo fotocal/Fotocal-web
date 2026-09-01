@@ -117,6 +117,35 @@
 }
 
 /* ═══════════════════════════════════════════════
+   PROOF — three true facts under the hero.
+   Restraint on purpose: no brand gradient anywhere in it. The icons
+   sit in cream tiles with the pink as a line colour only, so the band
+   reads as evidence, not as another ad.
+   ═══════════════════════════════════════════════ */
+.proof-sec { padding: .5rem 0 1.9rem; }
+.proof-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.proof-item {
+  display: flex; gap: .85rem; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg); padding: 1.05rem 1.15rem;
+  box-shadow: 0 6px 18px -14px rgba(27,35,64,.35);
+}
+.proof-ico {
+  width: 38px; height: 38px; border-radius: 12px; flex: none;
+  display: grid; place-items: center;
+  background: var(--cream-2); border: 1px solid var(--border-soft);
+  color: var(--pink);
+}
+.proof-ico svg { width: 20px; height: 20px; }
+.proof-txt { min-width: 0; }
+.proof-txt b { display: block; font-size: .98rem; letter-spacing: -.01em; margin-bottom: .18rem; }
+.proof-txt p { font-size: .86rem; color: var(--muted); line-height: 1.45; }
+@media (max-width: 899px) {
+  .proof-row { grid-template-columns: 1fr; gap: .65rem; }
+  .proof-item { padding: .85rem 1rem; align-items: center; }
+}
+
+/* ═══════════════════════════════════════════════
    TRUST MARQUEE
    ═══════════════════════════════════════════════ */
 .marquee-sec { padding: .4rem 0 .9rem; }

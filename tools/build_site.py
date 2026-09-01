@@ -111,9 +111,16 @@ TAG_WITH_KEY = re.compile(
     re.S)
 
 
-def strip_i18n_attrs(attrs):
-    attrs = re.sub(r'\s+data-i18n(?:-html|-alt|-ph|-aria|-src)?="[^"]*"', "", attrs)
-    return attrs
+def strip_text_markers(attrs):
+    """Strip ONLY the text markers (data-i18n / data-i18n-html) that
+    render_text_nodes itself resolves. It used to strip every i18n
+    attribute on the tag, which meant a pass could silently swallow a
+    marker that belonged to a LATER pass — that is exactly how /en/
+    shipped the Spanish hero: the alt pass stripped data-i18n-src before
+    the src pass ran. The rule now: each pass strips what it resolved,
+    nothing else, so an unresolved marker survives into the output where
+    check_site.py can see it."""
+    return re.sub(r'\s+data-i18n(?:-html)?="[^"]*"', "", attrs)
 
 
 def render_text_nodes(src, dic, missing):
@@ -144,7 +151,7 @@ def render_text_nodes(src, dic, missing):
         end_body = src.rindex("</", start_body, pos)
         body = esc_text(val) if kind is None else val
         out.append(src[i:m.start()])
-        out.append("<%s%s>%s" % (tag, strip_i18n_attrs(attrs), body))
+        out.append("<%s%s>%s" % (tag, strip_text_markers(attrs), body))
         i = end_body
     out.append(src[i:])
     return "".join(out)
@@ -152,38 +159,47 @@ def render_text_nodes(src, dic, missing):
 
 ATTR_MAP = {"alt": "alt", "ph": "placeholder", "aria": "aria-label", "src": "src"}
 
+TAG_WITH_ATTR_MARKER = re.compile(
+    r'<([a-zA-Z0-9]+)([^>]*?\bdata-i18n-(?:alt|ph|aria|src)="[^>]*?)>', re.S)
+ATTR_MARKER = re.compile(r'\bdata-i18n-(alt|ph|aria|src)="([^"]+)"')
+
 
 def render_attr_nodes(src, dic, missing):
     """data-i18n-alt / -ph / -aria / -src set the corresponding real
     attribute. -src is how a screenshot differs per language: the dict
     holds this page's source-relative path to each language's capture,
     and rewrite_links() then retargets it for the tree like any other
-    src, so the /en/ page really ships the English screen."""
-    def one(kind, target):
-        nonlocal src
-        pat = re.compile(r'<([a-zA-Z0-9]+)([^>]*?)\bdata-i18n-%s="([^"]+)"([^>]*?)>' % kind, re.S)
-        def rep(m):
-            tag, a, key, b = m.groups()
+    src, so the /en/ page really ships the English screen.
+
+    ONE pass resolves EVERY marker a tag carries, and strips exactly the
+    markers it resolved. This used to be one pass per marker kind, and
+    that shipped a broken /en/ twice — first the preload was wrong and
+    the img right, then the img wrong and the preload right — because
+    whichever pass touched the tag last decided which attributes were
+    still there to resolve. A missing key leaves its marker in the
+    output on purpose: check_site.py fails on surviving markers."""
+    def rep(m):
+        tag, attrs = m.group(1), m.group(2)
+        for kind, key in ATTR_MARKER.findall(attrs):
             val = dic.get(key)
             if val is None:
                 missing.add(key)
-                return m.group(0)
-            attrs = a + b
+                continue
             # <link rel="preload"> addresses its resource with href, not
             # src — data-i18n-src must retarget THAT, or the page preloads
             # one language's image and renders the other, downloading both.
-            tgt = "href" if kind == "src" and tag.lower() == "link" else target
-            # replace an existing target attribute, or add one
-            if re.search(r'\b%s="' % re.escape(tgt), attrs):
-                attrs = re.sub(r'\b%s="[^"]*"' % re.escape(tgt),
-                               '%s="%s"' % (tgt, esc_attr(val)), attrs, count=1)
+            tgt = "href" if kind == "src" and tag.lower() == "link" else ATTR_MAP[kind]
+            # (?<!-) so the real target never matches the tail of a
+            # data-i18n-* marker that is still sitting in the tag
+            tpat = re.compile(r'(?<!-)\b%s="[^"]*"' % re.escape(tgt))
+            if tpat.search(attrs):
+                attrs = tpat.sub('%s="%s"' % (tgt, esc_attr(val)), attrs, count=1)
             else:
                 attrs = attrs.rstrip() + ' %s="%s"' % (tgt, esc_attr(val))
-            return "<%s%s>" % (tag, strip_i18n_attrs(attrs))
-        src = pat.sub(rep, src)
-    for k, t in ATTR_MAP.items():
-        one(k, t)
-    return src
+            attrs = re.sub(r'\s+data-i18n-%s="%s"' % (kind, re.escape(key)),
+                           "", attrs, count=1)
+        return "<%s%s>" % (tag, attrs)
+    return TAG_WITH_ATTR_MARKER.sub(rep, src)
 
 
 BLOCK_OPEN = re.compile(r'<(?P<tag>[a-zA-Z0-9]+)(?P<attrs>[^>]*?\bdata-lang-block="(?P<lang>[a-z]{2})"[^>]*?)>', re.S)

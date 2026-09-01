@@ -427,7 +427,7 @@ window.FOTOCAL_I18N = {
     "coach.t": "Un coach con IA que de verdad conoce tu día",
     "coach.b": "Coach Kal ve tus comidas, tu agua, tu peso y tus objetivos, así que sus consejos van sobre tu día real y no sobre un plan genérico. Pregúntale qué cocinar con lo que hay en la nevera, qué pedir en un restaurante o por qué la báscula no se mueve esta semana.",
     "coach.alt": "Captura real de la app: el chat de Coach Kal. El usuario pregunta si un bol de frutas y yogur de 180 kcal encaja en su objetivo, y Kal confirma que cabe en las 2075 kcal que le quedan, avisa de que el yogur puede llevar lactosa por su alergia y propone tres mejoras más saludables",
-    "coach.img": "assets/img/screens/coach-kal-chat.webp",
+    "coach.img": "assets/img/screens/coach-kal-chat-es.webp",
     "coach.b1t": "Basado en tus datos",
     "coach.b1s": "Consejos según lo que has registrado hoy de verdad, no un plan enlatado.",
     "coach.b2t": "A cualquier hora",

@@ -1167,7 +1167,7 @@
       "ai.ctaTitle": "Pregúntale a Coach Kal por tu propio día.",
       "ai.ctaBody": "Gratis y sin límite en todos los planes, incluido el gratuito.",
       "ai.imgAlt": "Captura real de la app: el chat de Coach Kal. El usuario pregunta si un bol de frutas y yogur de 180 kcal encaja en su objetivo, y Kal confirma que cabe en las 2075 kcal que le quedan, avisa de que el yogur puede llevar lactosa por su alergia y propone tres mejoras más saludables",
-      "ai.img": "../assets/img/screens/coach-kal-chat.webp",
+      "ai.img": "../assets/img/screens/coach-kal-chat-es.webp",
 
 
       /* ─────────────────────────────────────────────
@@ -1325,7 +1325,7 @@
       "fx.f6.more": "Cómo funciona Coach Kal",
       "fx.f6.moreB": "Qué puede ver, qué no, y dónde puede equivocarse",
       "fx.f6.alt": "Captura real de la app: el chat de Coach Kal. El usuario pregunta si un bol de frutas y yogur de 180 kcal encaja en su objetivo, y Kal confirma que cabe en las 2075 kcal que le quedan, avisa de que el yogur puede llevar lactosa por su alergia y propone tres mejoras más saludables",
-      "fx.f6.img": "../assets/img/screens/coach-kal-chat.webp",
+      "fx.f6.img": "../assets/img/screens/coach-kal-chat-es.webp",
 
       "fx.f7.t": "Nutrición completa — cada nutriente, no solo las calorías",
       "fx.f7.b": "Macros completos y micronutrientes: vitaminas, minerales, fibra, azúcar, sodio, nivel de procesamiento NOVA y puntuaciones de glucosa y saciedad.",

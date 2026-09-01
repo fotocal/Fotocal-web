@@ -17,6 +17,23 @@ quietly telling Google the two trees are unrelated.
   6  title and description are present, non-empty and within Google's limits
   7  the two trees have exactly the same set of pages
   8  the sitemap lists every page in both trees and nothing that 404s
+  9  language-variant assets land in the right tree — see below
+
+ON CHECK 9. A language-variant asset is any file whose basename ends in
+-es or -en before the extension (home-hero-es.webp); that suffix is the
+naming convention and it is what makes this check possible, so every new
+per-language capture MUST carry it. Two assertions, both born from a
+shipped defect this project produced twice on two different attributes:
+  a  no rendered page may reference the OTHER language's variant, on any
+     of the four asset surfaces — src, srcset candidates, href (covers
+     preloads), and og:image/twitter:image content. The build attribute
+     being resolved is not enough: it was resolved to the wrong value
+     while this file reported green, because the old check had no
+     opinion about values.
+  b  every variant asset on disk must be referenced by at least one page
+     of its own tree — an orphaned file is the same bug seen from the
+     other side (coach-kal-chat-en.webp went unreferenced while /en/
+     silently showed the Spanish chat).
 """
 
 import json
@@ -66,24 +83,35 @@ def exists(root_path):
 EXTERNAL = re.compile(r"^(?:[a-z][a-z0-9+.-]*:|//|#|$)", re.I)
 LINK = re.compile(r'\b(?:href|src)="([^"]*)"')
 SRCSET = re.compile(r'\bsrcset="([^"]*)"')
+META_IMG = re.compile(r'<meta\s+(?:property="og:image"|name="twitter:image")\s+content="([^"]*)"')
+LANG_VARIANT = re.compile(r"-(es|en)\.[A-Za-z0-9]+$")
 
 
 def urls_in(html):
-    """Every internal URL a page depends on, srcset candidates included.
+    """Every internal URL a page depends on: href/src, srcset candidates,
+    and og:image / twitter:image content.
 
     srcset was missed here once, and it is the worst kind of miss: the
     browser prefers a srcset candidate over src, so a dead one breaks the
-    image while every other check still passes."""
+    image while every other check still passes. The meta images are here
+    for the same reason — every attribute surface that has NOT been
+    covered is the one the next failure arrives on."""
     found = set(LINK.findall(html))
     for group in SRCSET.findall(html):
         for cand in group.split(","):
             cand = cand.strip()
             if cand:
                 found.add(cand.split(None, 1)[0])
+    for url in META_IMG.findall(html):
+        # absolute site URLs in og:image resolve like root-relative paths
+        if url.startswith(SITE):
+            found.add("/" + url[len(SITE):])
+        else:
+            found.add(url)
     return found
 
 
-def check_links(rel, html):
+def check_links(rel, html, lang, variant_refs):
     here = os.path.dirname(rel)
     for url in urls_in(html):
         if EXTERNAL.match(url):
@@ -102,6 +130,12 @@ def check_links(rel, html):
                 target += "/"
         if not exists(target):
             fail(rel, "dead link %s -> /%s" % (url, target))
+        m = LANG_VARIANT.search(os.path.basename(target))
+        if m:
+            if m.group(1) != lang:
+                fail(rel, "references the %s-language asset %s from the %s tree"
+                          % (m.group(1), url, lang))
+            variant_refs[m.group(1)].add(target)
 
 
 def one(tag, html, group=1):
@@ -121,13 +155,15 @@ def main():
     for missing in sorted(en - es):
         fail(missing, "no Spanish counterpart")
 
+    variant_refs = {"es": set(), "en": set()}
+
     for rel in rels:
         html = open(os.path.join(ROOT, rel), encoding="utf-8").read()
         lang = "en" if rel.startswith("en/") else "es"
         bare = rel[3:] if lang == "en" else rel
         self_url = SITE + ("en/" if lang == "en" else "") + public(bare)
 
-        check_links(rel, html)
+        check_links(rel, html, lang, variant_refs)
 
         got = one(r'<html[^>]*\blang="([a-z-]+)"', html)
         if got != lang:
@@ -182,6 +218,17 @@ def main():
             fail(rel, "no meta description")
         elif len(desc) > 160:
             warn(rel, "description %d chars, will truncate" % len(desc))
+
+    # ── language-variant assets: none may be orphaned ──
+    for base, dirs, files in os.walk(os.path.join(ROOT, "assets")):
+        for f in files:
+            m = LANG_VARIANT.search(f)
+            if not m:
+                continue
+            p = os.path.relpath(os.path.join(base, f), ROOT).replace(os.sep, "/")
+            if p not in variant_refs[m.group(1)]:
+                fail(p, "%s-language asset exists on disk but no page of its "
+                        "tree references it" % m.group(1))
 
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}

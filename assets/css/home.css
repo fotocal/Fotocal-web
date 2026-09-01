@@ -58,21 +58,21 @@
 .hero-copy .kicker { display: inline-flex; align-items: center; gap: .45rem; }
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.3rem, 7vw, 3.8rem);
+  font-size: clamp(2.85rem, 9.5vw, 3.8rem);
   font-weight: 550; line-height: 1.08; letter-spacing: -.025em;
   margin-bottom: 1.05rem;
 }
 .hero-sub { color: var(--muted); font-size: 1.06rem; max-width: 54ch; margin-bottom: 1.7rem; }
 
-.hero-perks { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.45rem; }
-.hero-perk {
-  display: inline-flex; align-items: center; gap: .45rem;
-  font-size: .84rem; font-weight: 650; color: var(--ink-soft);
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 999px; padding: .5rem .9rem;
-  box-shadow: 0 4px 14px -10px rgba(27,35,64,.35);
+/* On phones the hero is cut to one idea: big headline, one sentence,
+   one CTA, then the phone rising into the first viewport. The paddings
+   here are what buys the product its slice of the first screen. */
+@media (max-width: 899px) {
+  .hero-x { padding: 1.5rem 0 2.3rem; }
+  .hero-grid { gap: 1.6rem; }
+  .hero-title { margin-bottom: .85rem; }
+  .hero-sub { margin-bottom: 1.25rem; }
 }
-.hero-perk svg { width: 15px; height: 15px; color: var(--pink); flex: none; }
 
 /* Screenshot stage with floating UI chips. The visual is a portrait
    phone now, so the stage is narrower than the old landscape scene —
@@ -117,38 +117,36 @@
 }
 
 /* ═══════════════════════════════════════════════
-   PROOF — three true facts under the hero.
-   Restraint on purpose: no brand gradient anywhere in it. The icons
-   sit in cream tiles with the pink as a line colour only, so the band
-   reads as evidence, not as another ad.
+   PROOF — three true facts on the page's first ink band.
+   Full-bleed dark is where the serious claim lives — the slot
+   competitors spend on star counts; ours carries the trial, the price
+   and the RGPD deletion, borderless on the ink. No brand gradient.
+   Icon strokes are orange, not pink: on ink, orange holds 6.0:1 and
+   pink only 3.5:1. Body copy at 74% cream = 8.6:1.
    ═══════════════════════════════════════════════ */
-.proof-sec { padding: .5rem 0 1.9rem; }
-.proof-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.proof-item {
-  display: flex; gap: .85rem; align-items: flex-start;
-  background: var(--white); border: 1px solid var(--border-soft);
-  border-radius: var(--r-lg); padding: 1.05rem 1.15rem;
-  box-shadow: 0 6px 18px -14px rgba(27,35,64,.35);
-}
+.proof-sec { background: var(--ink); padding: 2rem 0 2.2rem; }
+.proof-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+.proof-item { display: flex; gap: .95rem; align-items: flex-start; }
 .proof-ico {
-  width: 38px; height: 38px; border-radius: 12px; flex: none;
+  width: 40px; height: 40px; border-radius: 12px; flex: none;
   display: grid; place-items: center;
-  background: var(--cream-2); border: 1px solid var(--border-soft);
-  color: var(--pink);
+  background: rgba(253,249,240,.07); border: 1px solid rgba(253,249,240,.16);
+  color: var(--orange);
 }
 .proof-ico svg { width: 20px; height: 20px; }
 .proof-txt { min-width: 0; }
-.proof-txt b { display: block; font-size: .98rem; letter-spacing: -.01em; margin-bottom: .18rem; }
-.proof-txt p { font-size: .86rem; color: var(--muted); line-height: 1.45; }
+.proof-txt b { display: block; font-size: 1rem; letter-spacing: -.01em; margin-bottom: .2rem; color: var(--cream); }
+.proof-txt p { font-size: .87rem; color: rgba(253,249,240,.74); line-height: 1.5; }
 @media (max-width: 899px) {
-  .proof-row { grid-template-columns: 1fr; gap: .65rem; }
-  .proof-item { padding: .85rem 1rem; align-items: center; }
+  .proof-sec { padding: 1.55rem 0 1.7rem; }
+  .proof-row { grid-template-columns: 1fr; gap: 1.05rem; }
+  .proof-item { align-items: center; }
 }
 
 /* ═══════════════════════════════════════════════
    TRUST MARQUEE
    ═══════════════════════════════════════════════ */
-.marquee-sec { padding: .4rem 0 .9rem; }
+.marquee-sec { padding: 1rem 0 .9rem; }
 .marquee {
   position: relative; overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);

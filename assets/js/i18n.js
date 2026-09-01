@@ -72,7 +72,7 @@ window.FOTOCAL_I18N = {
     /* ── Hero ── */
     "hero.eyebrow": "AI nutrition tracking · Android",
     "hero.title": "One photo. All your nutrition, <em class=\"accent\">instantly</em>.",
-    "hero.sub": "Point your camera at any meal and Fotocal gives you calories, macros, micronutrients and a health score in seconds. Then Coach Kal — your AI nutrition coach — helps you make the next meal a little better. No weighing, no database digging.",
+    "hero.sub": "Snap your meal and get calories, macros and a health score in seconds. Nothing to weigh.",
     "proof.aria": "Why trust Fotocal",
     "proof.t1": "5-day free trial",
     "proof.b1": "No commitment — cancel anytime and pay nothing.",
@@ -356,7 +356,7 @@ window.FOTOCAL_I18N = {
     /* ── Hero ── */
     "hero.eyebrow": "Nutrición con IA · Android",
     "hero.title": "Una foto. Toda tu nutrición, <em class=\"accent\">al instante</em>.",
-    "hero.sub": "Apunta con la cámara a cualquier comida y Fotocal te da las calorías, los macros, los micronutrientes y una puntuación de salud en segundos. Y Coach Kal, tu entrenador nutricional con IA, te ayuda a que la siguiente comida sea un poco mejor. Sin pesar nada, sin bucear en bases de datos.",
+    "hero.sub": "Haz una foto a tu comida y tendrás calorías, macros y puntuación de salud en segundos. Sin pesar nada.",
     "proof.aria": "Por qué confiar en Fotocal",
     "proof.t1": "5 días de prueba gratis",
     "proof.b1": "Sin compromiso: cancela cuando quieras y no pagas nada.",

@@ -18,6 +18,7 @@ quietly telling Google the two trees are unrelated.
   7  the two trees have exactly the same set of pages
   8  the sitemap lists every page in both trees and nothing that 404s
   9  language-variant assets land in the right tree — see below
+ 10  no colour literal outside the token blocks — see below
 
 ON CHECK 9. A language-variant asset is any file whose basename ends in
 -es or -en before the extension (home-hero-es.webp); that suffix is the
@@ -34,6 +35,19 @@ shipped defect this project produced twice on two different attributes:
      of its own tree — an orphaned file is the same bug seen from the
      other side (coach-kal-chat-en.webp went unreferenced while /en/
      silently showed the Spanish chat).
+
+ON CHECK 10. The palette is a two-scheme token set (light + dark) declared
+in the :root blocks of assets/css/site.css, and every colour on the site
+has to come from it — that is the only way a scheme can be switched, or a
+tone re-decided, in one place. So: no hex, rgb()/rgba()/hsl() or named
+colour may appear in any assets/css/*.css rule outside a :root block, nor
+in any inline style="…" attribute in src/ (the legal pages are excluded —
+they carry their own stylesheet by design and are out of scope). SVG
+fill/stroke attributes are not checked: those are third-party marks
+(flags, the Google Play badge) whose colours are not ours to tokenise.
+A line may opt out with a comment containing "literal-ok:" followed by a
+reason; the only legitimate reason so far is a mask-image, where #000 is
+alpha, not a colour.
 """
 
 import json
@@ -138,6 +152,64 @@ def check_links(rel, html, lang, variant_refs):
             variant_refs[m.group(1)].add(target)
 
 
+COLOUR = re.compile(
+    r"#[0-9A-Fa-f]{3,8}\b|\b(?:rgba?|hsla?)\((?!\s*var\()|"
+    r"(?<![\w-])(?:white|black|red|green|blue|orange|pink|gold|gray|grey|"
+    r"yellow|purple|navy|silver|teal|lime|cyan|magenta|coral|salmon|ivory|"
+    r"beige|tan|wheat|linen)(?![\w-])", re.I)
+LEGAL = ("privacy-policy/", "terms/", "account-deletion/")
+
+
+def check_colour_literals():
+    """Check 10 — every colour comes from the :root token blocks."""
+    css_dir = os.path.join(ROOT, "assets", "css")
+    for f in sorted(os.listdir(css_dir)):
+        if not f.endswith(".css"):
+            continue
+        rel = "assets/css/" + f
+        raw = open(os.path.join(css_dir, f), encoding="utf-8").read()
+        # blank comments but keep the newlines, so line numbers survive;
+        # remember which lines opted out before their comment vanishes
+        ok_lines = {i for i, line in enumerate(raw.split("\n"), 1) if "literal-ok:" in line}
+        text = re.sub(r"/\*.*?\*/", lambda m: re.sub(r"[^\n]", " ", m.group(0)), raw, flags=re.S)
+        depth, in_root, selector = 0, False, ""
+        for i, line in enumerate(text.split("\n"), 1):
+            for ch in line:
+                if ch == "{":
+                    if depth == 0:
+                        in_root = selector.strip().startswith(":root")
+                    depth += 1
+                    selector = ""
+                elif ch == "}":
+                    depth -= 1
+                    if depth == 0:
+                        in_root = False
+                elif depth == 0:
+                    selector += ch
+            if depth == 0 and not selector.strip():
+                pass
+            if in_root or i in ok_lines:
+                continue
+            m = COLOUR.search(line)
+            if m:
+                fail(rel, "line %d: colour literal %r outside the token blocks" % (i, m.group(0)))
+
+    src_dir = os.path.join(ROOT, "src")
+    for base, dirs, files in os.walk(src_dir):
+        for f in files:
+            if not f.endswith(".html"):
+                continue
+            rel = os.path.relpath(os.path.join(base, f), ROOT).replace(os.sep, "/")
+            if any(rel.startswith("src/" + l) for l in LEGAL):
+                continue
+            html = open(os.path.join(base, f), encoding="utf-8").read()
+            for m in re.finditer(r'style="([^"]*)"', html):
+                c = COLOUR.search(m.group(1))
+                if c:
+                    fail(rel, "line %d: colour literal %r in an inline style"
+                              % (html.count("\n", 0, m.start()) + 1, c.group(0)))
+
+
 def one(tag, html, group=1):
     m = re.search(tag, html, re.S | re.I)
     return m.group(group).strip() if m else None
@@ -232,6 +304,8 @@ def main():
             if p not in variant_refs[m.group(1)]:
                 fail(p, "%s-language asset exists on disk but no page of its "
                         "tree references it" % m.group(1))
+
+    check_colour_literals()
 
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}

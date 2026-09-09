@@ -37,7 +37,7 @@ OUT_IMG = os.path.join(ROOT, "assets", "img")
 OUT = os.path.join(ROOT, "assets")
 
 INK = (27, 35, 64)          # --ink, the site's dark
-CREAM = (253, 249, 240)     # --cream, the site's ground
+CREAM = (255, 255, 255)     # --bg, the site's ground (white since the palette re-token)
 LOGO_SIZES = (32, 64, 96)   # nav is 32 CSS px, sticky bar 40 -> 1x/2x/3x
 
 

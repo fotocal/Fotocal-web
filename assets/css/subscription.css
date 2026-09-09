@@ -20,23 +20,23 @@
   padding: 1.6rem 1.3rem; text-align: center;
   border-radius: var(--r-xl);
   background:
-    repeating-linear-gradient(135deg, rgba(233,30,99,.045) 0 12px, transparent 12px 24px),
-    linear-gradient(160deg, #FBE9D2, #F5DCBE);
-  border: 2px dashed rgba(233,30,99,.42);
-  color: var(--ink-soft);
+    repeating-linear-gradient(135deg, rgba(var(--pink-rgb),.045) 0 12px, transparent 12px 24px),
+    linear-gradient(160deg, var(--bg-2), var(--bg-3));
+  border: 2px dashed rgba(var(--pink-rgb),.42);
+  color: var(--text-soft);
 }
 .img-slot-n {
   display: inline-grid; place-items: center;
   width: 40px; height: 40px; border-radius: 12px;
-  background: var(--grad); color: #fff;
+  background: var(--grad); color: var(--on-brand);
   font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
   box-shadow: var(--shadow-cta);
 }
-.img-slot b { font-size: .95rem; color: var(--ink); }
+.img-slot b { font-size: .95rem; color: var(--text); }
 .img-slot code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: .78rem; font-weight: 700; color: var(--pink);
-  background: var(--white); border: 1px solid var(--border-pink);
+  font-size: .78rem; font-weight: 700; color: var(--brand-text);
+  background: var(--surface); border: 1px solid var(--border-pink);
   border-radius: 999px; padding: .22rem .6rem;
 }
 .img-slot small { font-size: .8rem; color: var(--muted); max-width: 34ch; line-height: 1.45; }
@@ -54,7 +54,7 @@
 .sb-hero::before {
   content: ""; position: absolute; top: -190px; right: -120px;
   width: 460px; height: 420px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,122,61,.24), transparent 66%); filter: blur(48px);
+  background: radial-gradient(circle, var(--glow-coral), transparent 66%); filter: blur(48px);
 }
 .sb-hero .container { position: relative; }
 .sb-hero-grid { display: grid; gap: 2.4rem; align-items: center; }
@@ -74,7 +74,7 @@
 }
 @media (min-width: 760px) { .sb-trial { grid-template-columns: repeat(3, 1fr); } }
 .sb-step {
-  position: relative; background: var(--white); border: 1px solid var(--border-soft);
+  position: relative; background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.3rem 1.35rem;
   box-shadow: var(--shadow-sm);
   transition: transform .3s cubic-bezier(.2,.8,.3,1), border-color .3s ease;
@@ -82,9 +82,9 @@
 .sb-step:hover { transform: translateY(-4px); border-color: var(--border-pink); }
 .sb-step-day {
   font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--pink); margin-bottom: .45rem; display: block;
+  color: var(--brand-text); margin-bottom: .45rem; display: block;
 }
-.sb-step b { display: block; font-size: 1rem; margin-bottom: .3rem; color: var(--ink); }
+.sb-step b { display: block; font-size: 1rem; margin-bottom: .3rem; color: var(--text); }
 .sb-step p { font-size: .88rem; color: var(--muted); margin: 0; }
 
 /* ─── Premium unlock cards (media on top) ─── */
@@ -92,12 +92,12 @@
 @media (min-width: 860px) { .sb-unlocks { grid-template-columns: repeat(3, 1fr); } }
 .sb-unlock {
   display: flex; flex-direction: column; overflow: hidden;
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-xl); box-shadow: var(--shadow-sm);
   transition: transform .32s cubic-bezier(.2,.8,.3,1), box-shadow .32s ease, border-color .32s ease;
 }
 .sb-unlock:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); border-color: var(--border); }
-.sb-unlock-media { aspect-ratio: 1 / 1; overflow: hidden; flex: none; background: var(--cream-2); }
+.sb-unlock-media { aspect-ratio: 1 / 1; overflow: hidden; flex: none; background: var(--bg-2); }
 .sb-unlock-media > * { width: 100%; height: 100%; }
 .sb-unlock-media img { object-fit: cover; display: block; transition: transform .55s cubic-bezier(.2,.8,.3,1); }
 .sb-unlock:hover .sb-unlock-media img { transform: scale(1.045); }
@@ -111,7 +111,7 @@
 @media (min-width: 700px) { .sb-mini { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1000px) { .sb-mini { grid-template-columns: repeat(4, 1fr); } }
 .sb-mini-card {
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.3rem 1.3rem;
   box-shadow: var(--shadow-sm);
   transition: transform .3s cubic-bezier(.2,.8,.3,1), border-color .3s ease;
@@ -119,8 +119,8 @@
 .sb-mini-card:hover { transform: translateY(-4px); border-color: var(--border-pink); }
 .sb-mini-ico {
   width: 42px; height: 42px; border-radius: 13px; margin-bottom: .85rem;
-  display: grid; place-items: center; color: #fff;
-  background: var(--grad); box-shadow: 0 8px 18px -8px rgba(233,30,99,.45);
+  display: grid; place-items: center; color: var(--on-brand);
+  background: var(--grad); box-shadow: 0 8px 18px -8px rgba(var(--pink-rgb),.45);
 }
 .sb-mini-ico svg { width: 20px; height: 20px; }
 .sb-mini-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; }
@@ -131,25 +131,25 @@
 .sb-banner {
   position: relative; overflow: hidden; border-radius: var(--r-xl);
   box-shadow: var(--shadow-lift), 0 0 0 1px var(--border-soft);
-  background: #FBF0DF;
+  background: var(--bg-2);
 }
 .sb-banner-img { position: absolute; inset: 0; }
 .sb-banner-img img { width: 100%; height: 100%; object-fit: cover; object-position: 78% 50%; }
 .sb-banner-img::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(252,243,229,.96) 0%, rgba(252,243,229,.88) 34%, rgba(252,243,229,0) 62%);
+  background: linear-gradient(90deg, rgba(var(--bg-2-rgb),.96) 0%, rgba(var(--bg-2-rgb),.88) 34%, rgba(var(--bg-2-rgb),0) 62%);
 }
 .sb-banner-inner { position: relative; z-index: 1; padding: 3.2rem 1.6rem; max-width: 34rem; }
 .sb-banner-inner h2 {
   font-family: var(--font-display); font-size: clamp(1.75rem, 4.6vw, 2.6rem);
-  font-weight: 550; line-height: 1.14; letter-spacing: -.02em; color: var(--ink); margin-bottom: .8rem;
+  font-weight: 550; line-height: 1.14; letter-spacing: -.02em; color: var(--text); margin-bottom: .8rem;
 }
-.sb-banner-inner p { color: var(--ink-soft); max-width: 42ch; margin-bottom: 1.7rem; }
+.sb-banner-inner p { color: var(--text-soft); max-width: 42ch; margin-bottom: 1.7rem; }
 .sb-banner-note { display: block; margin-top: .9rem; font-size: .82rem; color: var(--muted); }
 @media (min-width: 900px) { .sb-banner-inner { padding: 4.6rem 0 4.6rem 3.4rem; } }
 @media (max-width: 620px) {
   .sb-banner-img { position: relative; aspect-ratio: 16 / 9; }
-  .sb-banner-img::after { background: linear-gradient(180deg, rgba(252,243,229,0) 55%, rgba(252,243,229,.95) 96%); }
+  .sb-banner-img::after { background: linear-gradient(180deg, rgba(var(--bg-2-rgb),0) 55%, rgba(var(--bg-2-rgb),.95) 96%); }
   .sb-banner-inner { padding: .4rem 1.4rem 2.2rem; max-width: none; text-align: center; }
   .sb-banner-inner p, .sb-banner-inner .play-badge { margin-inline: auto; }
 }
@@ -164,13 +164,13 @@
    ═══════════════════════════════════════════════ */
 .sb-anchor {
   margin: -.4rem 0 1.4rem;
-  font-size: .95rem; color: var(--ink-soft);
+  font-size: .95rem; color: var(--text-soft);
   max-width: 46ch;
   padding-left: .9rem;
   border-left: 3px solid transparent;
   border-image: var(--grad) 1;
 }
-.sb-anchor b { font-weight: 700; color: var(--ink); white-space: nowrap; }
+.sb-anchor b { font-weight: 700; color: var(--text); white-space: nowrap; }
 
 /* ═══════════════════════════════════════════════
    REASSURANCE STRIP  (under the plans)
@@ -188,7 +188,7 @@
   grid-template-columns: 26px 1fr;
   grid-template-areas: "ico title" ".  body";
   gap: .15rem .7rem;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--r-lg);
   padding: 1.05rem 1.15rem 1.1rem;
@@ -197,7 +197,7 @@
 }
 .sb-assure li:hover { border-color: var(--border-pink); box-shadow: var(--shadow-card); }
 .sb-assure svg { grid-area: ico; width: 20px; height: 20px; color: var(--pink); margin-top: .12rem; }
-.sb-assure b { grid-area: title; font-size: .95rem; font-weight: 700; color: var(--ink); align-self: center; }
+.sb-assure b { grid-area: title; font-size: .95rem; font-weight: 700; color: var(--text); align-self: center; }
 .sb-assure span { grid-area: body; font-size: .86rem; color: var(--muted); line-height: 1.55; }
 
 /* ═══════════════════════════════════════════════
@@ -226,7 +226,7 @@
    The icon stays, as a badge over the corner: it is the visual language
    the rest of the page uses, and dropping it here would break the set. */
 .sb-mini-card { position: relative; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-.sb-mini-media { aspect-ratio: 5 / 4; overflow: hidden; background: var(--cream-2); }
+.sb-mini-media { aspect-ratio: 5 / 4; overflow: hidden; background: var(--bg-2); }
 .sb-mini-media img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform .55s cubic-bezier(.2,.8,.3,1);
@@ -239,7 +239,7 @@
 .sb-mini-card .sb-mini-ico {
   position: relative; z-index: 2;
   margin: -1.45rem 0 .8rem;
-  border: 3px solid var(--white);
+  border: 3px solid var(--surface);
   width: 46px; height: 46px; border-radius: 15px;
 }
 .sb-mini-body { padding: 0 1.25rem 1.35rem; }

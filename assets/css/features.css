@@ -11,7 +11,7 @@
 .fx-hero::before {
   content: ""; position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
   width: 720px; height: 480px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,122,61,.16), transparent 65%);
+  background: radial-gradient(circle, var(--glow-coral), transparent 65%);
   filter: blur(40px);
 }
 .fx-hero .container-narrow { position: relative; }
@@ -21,15 +21,15 @@
 .fx-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; margin-top: 1.6rem; }
 .fx-jump a {
   display: inline-flex; align-items: center; gap: .45rem;
-  font-size: .85rem; font-weight: 650; color: var(--ink-soft);
-  background: var(--white); border: 1px solid var(--border);
+  font-size: .85rem; font-weight: 650; color: var(--text-soft);
+  background: var(--surface); border: 1px solid var(--border);
   border-radius: 999px; padding: .55rem 1rem;
-  box-shadow: 0 4px 14px -10px rgba(27,35,64,.35);
+  box-shadow: 0 4px 14px -10px rgba(var(--shadow-rgb),.35);
   transition: transform .25s ease, border-color .25s ease, color .25s ease;
 }
-.fx-jump a:hover { transform: translateY(-2px); border-color: var(--border-pink); color: var(--pink); }
+.fx-jump a:hover { transform: translateY(-2px); border-color: var(--border-pink); color: var(--brand-text); }
 .fx-jump a b {
-  font-size: .68rem; font-weight: 800; color: var(--pink);
+  font-size: .68rem; font-weight: 800; color: var(--brand-text);
   background: var(--grad-wash); border-radius: 999px; padding: .15rem .5rem;
 }
 
@@ -40,13 +40,13 @@
   font-family: var(--font-display);
   font-size: clamp(4.6rem, 13vw, 7.5rem);
   font-weight: 600; line-height: 1; letter-spacing: -.03em;
-  background: linear-gradient(180deg, rgba(233,30,99,.16), rgba(255,122,61,.02));
+  background: linear-gradient(180deg, rgba(var(--pink-rgb),.16), rgba(var(--coral-rgb),.02));
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
   user-select: none;
 }
 @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
-  .fx-chap-num { color: rgba(233,30,99,.12); }
+  .fx-chap-num { color: rgba(var(--pink-rgb),.12); }
 }
 .fx-chap .section-title { margin-top: -1.35em; position: relative; }
 .fx-chap .section-sub { margin-inline: auto; }
@@ -57,7 +57,7 @@
 .fx-num {
   display: inline-grid; place-items: center;
   width: 34px; height: 34px; border-radius: 10px; margin-bottom: .9rem;
-  background: var(--grad); color: #fff;
+  background: var(--grad); color: var(--on-brand);
   font-family: var(--font-display); font-weight: 700; font-size: .95rem;
   box-shadow: var(--shadow-cta);
 }
@@ -71,7 +71,7 @@
   right: -16px; bottom: -26px;
   width: 46%;
   border-radius: 20px; overflow: hidden;
-  border: 5px solid var(--cream);
+  border: 5px solid var(--bg);
   box-shadow: var(--shadow-lift);
   transform: rotate(3deg);
   transition: transform .5s cubic-bezier(.2,.8,.3,1);
@@ -93,11 +93,11 @@
   display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
   place-content: center; height: 100%; padding: 1.4rem;
   background:
-    radial-gradient(120% 90% at 80% 0%, rgba(233,30,99,.09), transparent 55%),
-    linear-gradient(160deg, #FBE9D2, #F5DCBE);
+    radial-gradient(120% 90% at 80% 0%, rgba(var(--pink-rgb),.09), transparent 55%),
+    linear-gradient(160deg, var(--bg-2), var(--bg-3));
 }
 .fx-stat {
-  background: var(--white); border-radius: 16px; padding: .85rem .9rem;
+  background: var(--surface); border-radius: 16px; padding: .85rem .9rem;
   box-shadow: var(--shadow-card);
   display: flex; flex-direction: column; gap: .3rem;
   transition: transform .4s cubic-bezier(.2,.8,.3,1);
@@ -106,12 +106,14 @@
 .log-card:hover .fx-stat:nth-child(even) { transform: translateY(4px); }
 .fx-stat-ico {
   width: 28px; height: 28px; border-radius: 9px;
-  display: grid; place-items: center; color: #fff;
+  display: grid; place-items: center; color: var(--on-brand);
 }
 .fx-stat-ico svg { width: 15px; height: 15px; }
-.fx-stat b { font-size: 1rem; line-height: 1.1; color: var(--ink); }
+.fx-stat-ico { background: var(--tile-bg); color: var(--tile-fg); }
+.fx-bar span { background: var(--grad); }
+.fx-stat b { font-size: 1rem; line-height: 1.1; color: var(--text); }
 .fx-stat small { font-size: .68rem; font-weight: 650; color: var(--muted); letter-spacing: .03em; }
-.fx-bar { height: 6px; border-radius: 4px; background: var(--cream-3); overflow: hidden; }
+.fx-bar { height: 6px; border-radius: 4px; background: var(--bg-3); overflow: hidden; }
 .fx-bar span { display: block; height: 100%; border-radius: 4px; }
 
 /* ─── Goal sections (folded topic pages) ─── */
@@ -119,7 +121,7 @@
 @media (min-width: 900px) { .fx-goal-grid { grid-template-columns: repeat(3, 1fr); } }
 .fx-goal {
   display: flex; flex-direction: column;
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-xl); padding: 1.7rem 1.5rem;
   box-shadow: var(--shadow-sm);
   transition: transform .32s cubic-bezier(.2,.8,.3,1), box-shadow .32s ease, border-color .32s ease;
@@ -127,13 +129,13 @@
 .fx-goal:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--border); }
 .fx-goal-ico {
   width: 46px; height: 46px; border-radius: 14px; margin-bottom: 1rem;
-  display: grid; place-items: center; color: #fff;
-  box-shadow: 0 8px 18px -8px rgba(27,35,64,.35);
+  display: grid; place-items: center; color: var(--on-brand);
+  box-shadow: 0 8px 18px -8px rgba(var(--shadow-rgb),.35);
 }
 .fx-goal-ico svg { width: 22px; height: 22px; }
 .fx-goal-ico-wl { background: var(--grad); }
-.fx-goal-ico-nd { background: linear-gradient(135deg, #17B26A, #0E9355); }
-.fx-goal-ico-lm { background: linear-gradient(135deg, #F59E0B, #F97316); }
+.fx-goal-ico-nd { background: var(--tile-bg); color: var(--tile-fg); }
+.fx-goal-ico-lm { background: var(--tile-bg); color: var(--tile-fg); }
 .fx-goal h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: -.01em; margin-bottom: .55rem; }
 .fx-goal > p { font-size: .93rem; color: var(--muted); margin-bottom: 1rem; }
 .fx-goal .check-list { margin-bottom: 1.3rem; }

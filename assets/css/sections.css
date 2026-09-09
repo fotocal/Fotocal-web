@@ -16,7 +16,7 @@
 .sp-hero::before {
   content: ""; position: absolute; top: -200px; right: -140px;
   width: 460px; height: 420px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,122,61,.22), transparent 66%);
+  background: radial-gradient(circle, var(--glow-coral), transparent 66%);
   filter: blur(46px);
 }
 .sp-hero .container { position: relative; }
@@ -40,7 +40,7 @@
 @media (min-width: 1050px) { .sp-steps { grid-template-columns: repeat(4, 1fr); } }
 .sp-step {
   position: relative;
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.5rem 1.35rem 1.4rem;
   box-shadow: var(--shadow-sm);
   transition: transform .32s cubic-bezier(.2,.8,.3,1), box-shadow .32s ease, border-color .32s ease;
@@ -49,7 +49,7 @@
 .sp-step-n {
   display: inline-grid; place-items: center;
   width: 36px; height: 36px; border-radius: 11px; margin-bottom: .85rem;
-  background: var(--grad); color: #fff;
+  background: var(--grad); color: var(--on-brand);
   font-family: var(--font-display); font-weight: 700; font-size: 1rem;
   box-shadow: var(--shadow-cta);
 }
@@ -86,7 +86,7 @@
 @media (min-width: 640px) { .sp-cards { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 980px) { .sp-cards { grid-template-columns: repeat(3, 1fr); } }
 .sp-card {
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.5rem 1.4rem;
   box-shadow: var(--shadow-sm);
   transition: transform .3s cubic-bezier(.2,.8,.3,1), border-color .3s ease, box-shadow .3s ease;
@@ -94,8 +94,8 @@
 .sp-card:hover { transform: translateY(-4px); border-color: var(--border-pink); box-shadow: var(--shadow-card); }
 .sp-card-ico {
   width: 42px; height: 42px; border-radius: 13px; margin-bottom: .9rem;
-  display: grid; place-items: center; color: #fff; background: var(--grad);
-  box-shadow: 0 8px 18px -8px rgba(233,30,99,.45);
+  display: grid; place-items: center; color: var(--on-brand); background: var(--grad);
+  box-shadow: 0 8px 18px -8px rgba(var(--pink-rgb),.45);
 }
 .sp-card-ico svg { width: 20px; height: 20px; }
 .sp-card h3 { font-size: 1.03rem; font-weight: 700; margin-bottom: .3rem; }
@@ -109,20 +109,20 @@
 .cf-media .illus { max-width: 420px; margin-inline: auto; }
 
 .cf-form {
-  background: var(--white); border: 1px solid var(--border);
+  background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--r-xl); padding: 1.7rem 1.5rem 1.6rem;
   box-shadow: var(--shadow-card);
 }
 .cf-field { margin-bottom: 1.05rem; }
 .cf-field label {
-  display: block; font-size: .86rem; font-weight: 700; color: var(--ink);
+  display: block; font-size: .86rem; font-weight: 700; color: var(--text);
   margin-bottom: .4rem;
 }
 .cf-field label .opt { font-weight: 500; color: var(--muted); }
 .cf-field input,
 .cf-field textarea {
-  width: 100%; font: inherit; font-size: .96rem; color: var(--ink);
-  background: var(--cream); border: 1px solid var(--border);
+  width: 100%; font: inherit; font-size: .96rem; color: var(--text);
+  background: var(--bg); border: 1px solid var(--border);
   border-radius: var(--r-md); padding: .8rem .95rem;
   transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
 }
@@ -131,15 +131,15 @@
 .cf-field textarea::placeholder { color: var(--muted); opacity: .75; }
 .cf-field input:focus,
 .cf-field textarea:focus {
-  outline: none; background: var(--white);
-  border-color: var(--pink); box-shadow: 0 0 0 3px rgba(233,30,99,.12);
+  outline: none; background: var(--surface);
+  border-color: var(--brand-text); box-shadow: 0 0 0 3px rgba(var(--pink-rgb),.12);
 }
 /* invalid only after a submit attempt, so the form is not red on arrival */
 .cf-form.was-validated .cf-field input:invalid,
-.cf-form.was-validated .cf-field textarea:invalid { border-color: #D92D20; }
+.cf-form.was-validated .cf-field textarea:invalid { border-color: var(--err); }
 .cf-err {
   display: none; margin-top: .35rem;
-  font-size: .8rem; font-weight: 600; color: #D92D20;
+  font-size: .8rem; font-weight: 600; color: var(--err);
 }
 .cf-form.was-validated .cf-field input:invalid ~ .cf-err,
 .cf-form.was-validated .cf-field textarea:invalid ~ .cf-err { display: block; }
@@ -160,8 +160,8 @@
 /* result banners */
 .cf-result { display: none; border-radius: var(--r-md); padding: .95rem 1.1rem; margin-top: 1rem; font-size: .92rem; }
 .cf-result.show { display: block; }
-.cf-result-ok  { background: #E9F8F0; border: 1px solid rgba(23,178,106,.35); color: #116B41; font-weight: 600; }
-.cf-result-bad { background: #FDECEC; border: 1px solid rgba(217,45,32,.3);  color: #9A2018; font-weight: 600; }
+.cf-result-ok  { background: var(--ok-bg); border: 1px solid rgba(var(--protein-rgb),.35); color: var(--ok-text); font-weight: 600; }
+.cf-result-bad { background: var(--err-bg); border: 1px solid rgba(var(--err-rgb),.3);  color: var(--err-text); font-weight: 600; }
 
 /* ═══════════════════════════════════════════════
    LEGAL PAGE HEADER SYMBOL
@@ -170,7 +170,7 @@
   width: 58px; height: 58px; border-radius: 17px;
   display: grid; place-items: center; margin-bottom: 1.1rem;
   background: var(--grad-wash); border: 1px solid var(--border-pink);
-  color: var(--pink);
+  color: var(--brand-text);
 }
 .legal-sym svg { width: 28px; height: 28px; }
 
@@ -195,7 +195,7 @@
 .fp-hero::before {
   content: ""; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
   width: 760px; height: 500px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,122,61,.16), transparent 66%);
+  background: radial-gradient(circle, var(--glow-coral), transparent 66%);
   filter: blur(44px);
 }
 .fp-hero .container { position: relative; }
@@ -224,14 +224,14 @@
 .fp-shot-glow {
   position: absolute; z-index: 0; pointer-events: none;
   left: 6%; right: 6%; top: 16%; bottom: -7%;
-  background: radial-gradient(closest-side, rgba(233,30,99,.26), transparent 74%);
+  background: radial-gradient(closest-side, var(--glow-pink), transparent 74%);
   filter: blur(38px);
 }
 .fp-shot .shot-card { position: relative; z-index: 1; }
 
 /* ─── "How the advice works" panel ─── */
 .fp-rec {
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-xl); padding: 2rem 1.6rem 1.9rem;
   box-shadow: var(--shadow-card);
 }
@@ -255,7 +255,7 @@
 @media (min-width: 1000px) { .fc-related { grid-template-columns: repeat(3, 1fr); } }
 .fc-rcard {
   display: flex; flex-direction: column; gap: .4rem;
-  background: var(--white); border: 1px solid var(--border-soft);
+  background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.4rem 1.35rem 1.25rem;
   box-shadow: var(--shadow-sm);
   transition: transform .3s cubic-bezier(.2,.8,.3,1), box-shadow .3s ease, border-color .3s ease;
@@ -263,16 +263,16 @@
 .fc-rcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-color: var(--border-pink); }
 .fc-rkicker {
   font-size: .68rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase;
-  color: var(--pink);
+  color: var(--brand-text);
 }
 .fc-rtitle {
   font-family: var(--font-display); font-size: 1.12rem; font-weight: 600;
-  line-height: 1.25; letter-spacing: -.01em; color: var(--ink);
+  line-height: 1.25; letter-spacing: -.01em; color: var(--text);
   text-wrap: balance;
 }
 .fc-rarrow {
   margin-top: auto; padding-top: .6rem;
-  font-size: .86rem; font-weight: 700; color: var(--pink);
+  font-size: .86rem; font-weight: 700; color: var(--brand-text);
   transition: transform .3s ease;
 }
 .fc-rcard:hover .fc-rarrow { transform: translateX(4px); }

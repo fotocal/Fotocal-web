@@ -38,11 +38,17 @@
 /* ═══════════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════════ */
-.hero-x { position: relative; padding: 2.6rem 0 3.4rem; overflow: hidden; }
+/* One continuous cream -> peach gradient, edge to edge. No panel, no
+   border, no second surface: the phone sits straight on this, and the
+   section's overflow clip is what cuts it at the ink band below. */
+.hero-x {
+  position: relative; padding: 2.6rem 0 3.4rem; overflow: hidden;
+  background: linear-gradient(165deg, var(--cream) 0%, #FBEEDF 55%, var(--sand) 100%);
+}
 /* ambient blobs */
 .hero-x::before, .hero-x::after {
   content: ""; position: absolute; border-radius: 50%; pointer-events: none; z-index: 0;
-  filter: blur(52px); opacity: .55;
+  filter: blur(52px); opacity: .4;
 }
 .hero-x::before {
   width: 420px; height: 420px; top: -160px; right: -120px;
@@ -78,7 +84,18 @@
    phone now, so the stage is narrower than the old landscape scene —
    at 560px the device towered over the copy column. */
 .hero-stage-x { position: relative; max-width: 430px; margin-inline: auto; }
-.hero-stage-x .illus { transform: rotate(.6deg); }
+/* The device stands directly on the gradient: no card, no radius, no
+   ring. Its shadow is baked into the WebP by tools/frame_screen.py. The
+   negative bottom margin pushes the phone past the section's edge so
+   the band below cuts it — the phone is not enclosed, it runs off. */
+.hero-device { position: relative; margin-bottom: calc(-3.4rem - 56px); }
+/* Bottom-anchored, not centred: however tall the copy column grows (font
+   scale, longer Spanish), the phone always runs off the section's edge. */
+.hero-visual { align-self: end; }
+.hero-device img { width: 100%; height: auto; display: block; }
+@media (max-width: 899px) {
+  .hero-device { margin-bottom: calc(-2.3rem - 56px); }
+}
 .f-chip {
   position: absolute; z-index: 3;
   display: flex; align-items: center; gap: .55rem;
@@ -100,7 +117,7 @@
 /* Positioned to straddle the card edges without sitting on the numbers
    they annotate: the kcal chip hangs off the bottom-left corner, the
    protein chip rides the right edge over the carousel's cut card. */
-.f-chip-1 { bottom: -14px; left: 6%; animation-delay: 0s; }
+.f-chip-1 { bottom: 9%; left: -4%; animation-delay: 0s; }   /* the run-off bottom is clipped, so the chip sits above it */
 .f-chip-2 { bottom: 19%; right: -12px; animation-delay: 1.4s; }   /* on the carousel-dots row, below the macro values */
 .f-chip-1 .f-chip-ico { background: linear-gradient(135deg, #F59E0B, #F97316); }
 .f-chip-2 .f-chip-ico { background: linear-gradient(135deg, #17B26A, #0E9355); }

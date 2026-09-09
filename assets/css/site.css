@@ -299,8 +299,37 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
   transition: transform .25s cubic-bezier(.2,.8,.3,1.2), box-shadow .25s ease,
               background .25s ease, border-color .25s ease, color .25s ease;
 }
-.btn-cta { background: var(--grad-btn); color: var(--on-brand); box-shadow: var(--shadow-cta); }
+/* ─── The button system ───
+   Primary: OUR button — the brand gradient, large, pill, soft pink shadow.
+   Secondary: the Google Play badge, smaller, beside it. Never the badge alone
+   as the only call to action: that is somebody else's button.
+   Glass (.btn-glass / .play-badge-glass): frosted white, for wherever there
+   is something behind it — a photograph, the ink band. On plain white glass
+   is invisible, so there the solid gradient stays. */
+.btn-cta {
+  background: var(--grad-btn); color: var(--on-brand); border-color: transparent;
+  padding: .95rem 1.7rem; font-size: 1rem; font-weight: 650; min-height: 50px;
+  box-shadow: var(--shadow-cta);
+}
 .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 38px -10px rgba(var(--pink-rgb),.5); }
+.btn-lg { padding: 1.1rem 2.1rem; font-size: 1.08rem; min-height: 58px; }
+@media (max-width: 599px) {
+  .btn-lg { padding: 1rem 1.6rem; }   /* "Descárgala gratis" + the badge fit one row at 412 */
+}
+.btn-glass {
+  background: rgba(var(--white-rgb),.14); color: var(--on-ink);
+  border: 1px solid rgba(var(--white-rgb),.38);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(var(--white-rgb),.35), 0 10px 26px -14px rgba(var(--shadow-rgb),.5);
+}
+.btn-glass:hover { transform: translateY(-2px); background: rgba(var(--white-rgb),.22); border-color: rgba(var(--white-rgb),.55); }
+/* primary + secondary side by side; stacks to full width on the narrowest phones */
+.cta-group { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1rem; }
+.cta-group .play-badge { margin: 0 !important; }
+@media (max-width: 400px) {
+  .cta-group { flex-direction: column; align-items: stretch; }
+  .cta-group > * { justify-content: center; }
+}
 .btn-outline {
   background: var(--surface); color: var(--text);
   border: 1px solid var(--border); box-shadow: var(--shadow-sm);
@@ -339,6 +368,19 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
 .play-badge-text small { font-size: .6rem; letter-spacing: .12em; opacity: .82; }
 .play-badge-text strong { font-size: 1.08rem; font-weight: 600; }
 .play-badge-light { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+/* the secondary size, beside a primary button */
+.play-badge-sm { padding: .5rem 1.05rem .5rem .85rem; gap: .6rem; border-radius: 12px; box-shadow: var(--shadow-sm); }
+.play-badge-sm .play-badge-icon { width: 20px; height: 22px; }
+.play-badge-sm .play-badge-text small { font-size: .54rem; }
+.play-badge-sm .play-badge-text strong { font-size: .95rem; }
+/* frosted, for the ink band and photographs */
+.play-badge-glass {
+  background: rgba(var(--white-rgb),.12); color: var(--on-ink);
+  border: 1px solid rgba(var(--white-rgb),.34);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(var(--white-rgb),.3), var(--shadow-sm);
+}
+.play-badge-glass:hover { background: rgba(var(--white-rgb),.2); box-shadow: inset 0 1px 0 rgba(var(--white-rgb),.3), var(--shadow-card); }
 
 /* ═══════════════════════════════════════════════
    NAVBAR  (markup injected by assets/js/layout.js)
@@ -939,6 +981,7 @@ body.nav-locked { overflow: hidden; }
   font-weight: 550; line-height: 1.16; max-width: 20ch; margin: 0 auto .8rem;
 }
 .final-inner p { color: rgba(var(--on-ink-rgb),.72); max-width: 46ch; margin: 0 auto 1.8rem; }
+.final-inner .cta-group { justify-content: center; }
 
 /* ═══════════════════════════════════════════════
    FOOTER  (markup injected by assets/js/layout.js)

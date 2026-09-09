@@ -15,6 +15,30 @@ new pair (ES + EN, same state) arrives. REMIND THE USER when relevant.
   for a fresh P1 pair and swap home-hero-es/en.webp. Current captures
   dated 2026-09-09.
 
+## Hero — the P1 home pair again, at full resolution
+  The phone now renders at up to 560 CSS px (1120 device px on a 2x
+  screen) and the framed file is 840px wide, so the screen is upscaled
+  ~1.3x on desktop. The raw sitting-1 captures were lost with the
+  scratchpad; the founder still has them. Re-send the same ES + EN pair
+  and re-run tools/frame_screen.py with width=1200 cut=<same row>.
+
+## Device frames everywhere (owner's rule)
+  Every app screen on the site sits in the device frame — the baked one
+  from tools/frame_screen.py or the CSS .cam-frame, never a bare cropped
+  rectangle. Sections still on bare or stale imagery, and the pair each
+  needs (ES + EN, same state):
+    · Three Steps step 2 — the scan RESULT screen (calories, macros,
+      health score) — sitting 2
+    · Log it your way (section 4) — photo-scan result, barcode result,
+      menu scan, voice logging — sittings 2, 4, 5, 6
+    · Coach Kal band — the chat, new design, correct maths — sitting 3
+    · More than calories (section 5) — food detail with micronutrients
+      and the health score — sitting 4
+    · Habits (section 6) — water, steps, reminders — sitting 8
+    · Progress — weight chart and the weekly share card — sitting 7
+    · Subscription page — paywall and Settings → Subscription — sitting 9
+    · Feature pages — each feature's key screen, same sittings
+
 ## Three Steps — the camera-with-plate frame (SITTING 2, blocks nothing but is the point of the section)
   The section is composed around the app's camera pointed at a plate.
   Until sitting 2 lands, the CSS phone frame (.cam-frame, src/index.html

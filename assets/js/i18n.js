@@ -81,11 +81,9 @@ window.FOTOCAL_I18N = {
     "proof.b3": "Delete your account and everything in it from the app, anytime.",
     "hero.alt": "Real app screenshot: the Fotocal home screen on a logged day — 655 kcal eaten, 2,499 left and 539 burned, bars for carbs, protein and fat, and breakfast already logged at 115 kcal",
     "hero.img": "assets/img/screens/home-hero-en.webp",
-    "hero.c1t": "655 kcal",
-    "hero.c1s": "eaten today",
-    "hero.c2t": "35 g protein",
-    "hero.c2s": "logged so far",
     "cta.badgeTop": "GET IT ON",
+    "cta.free": "Get it free",
+    "hero.note": "Free to download · 5-day trial on the yearly plan · Android",
 
     /* ── Trust marquee ── */
     "mq.1": "Advanced AI vision",
@@ -368,11 +366,9 @@ window.FOTOCAL_I18N = {
     "proof.b3": "Elimina tu cuenta y todo lo que contiene desde la propia app, cuando quieras.",
     "hero.alt": "Captura real de la app: la pantalla de inicio de Fotocal en un día con registros — 655 kcal ingeridas, 2.499 restantes y 539 quemadas, barras de carbohidratos, proteína y grasas, y el desayuno ya registrado con 115 kcal",
     "hero.img": "assets/img/screens/home-hero-es.webp",
-    "hero.c1t": "655 kcal",
-    "hero.c1s": "ingeridas hoy",
-    "hero.c2t": "35 g de proteína",
-    "hero.c2s": "registrados hoy",
     "cta.badgeTop": "DISPONIBLE EN",
+    "cta.free": "Descárgala gratis",
+    "hero.note": "Descarga gratuita · 5 días de prueba en el plan anual · Android",
 
     /* ── Trust marquee ── */
     "mq.1": "Visión IA avanzada",

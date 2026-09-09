@@ -71,87 +71,52 @@
   margin-bottom: 1.05rem;
 }
 .hero-sub { color: var(--muted); font-size: 1.06rem; max-width: 54ch; margin-bottom: 1.7rem; }
+.hero-note { display: block; margin-top: .9rem; font-size: .84rem; color: var(--muted); }
 
 /* On phones the hero is cut to one idea: big headline, one sentence,
    one CTA, then the phone rising into the first viewport. The paddings
    here are what buys the product its slice of the first screen. */
 @media (max-width: 899px) {
-  .hero-x { padding: 1.5rem 0 2.3rem; }
-  .hero-grid { gap: 1.6rem; }
+  .hero-x { padding: .6rem 0 2.3rem; }
+  .hero-grid { gap: 1.2rem; }
   .hero-title { margin-bottom: .85rem; }
   .hero-sub { margin-bottom: 1.25rem; }
 }
 
-/* Screenshot stage with floating UI chips. The visual is a portrait
-   phone now, so the stage is narrower than the old landscape scene —
-   at 560px the device towered over the copy column. */
-.hero-stage-x { position: relative; max-width: 430px; margin-inline: auto; }
+/* The stage. The phone is the hero of the hero: on desktop it takes the
+   wider column at up to 560px and runs off the section's edge into the
+   ink band; on phones it comes FIRST, large, and dissolves into the
+   ground so the headline can sit beneath it (the reference the owner
+   sent). No chips, no floating labels — the screen says it all. */
+.hero-stage-x { position: relative; max-width: 560px; margin-inline: auto; }
 /* The device stands directly on the ground: no card, no radius, no
    ring. Its shadow is baked into the WebP by tools/frame_screen.py.
    The capture is cut at a quiet row of the screen (below the carousel
    dots, above the next label — tools/frame_screen.py cut=, here rows
-   >930 of the 840-wide file dropped) and the negative bottom margin
-   cancels the section padding plus 8px, so the image's own bottom edge
-   sits a hair under the ink band. That makes the visible cut the same
-   screen row at every width and font scale — the band never lands on
-   a card. */
-.hero-device { position: relative; margin-bottom: calc(-3.4rem - 8px); }
-/* Bottom-anchored, not centred: however tall the copy column grows (font
-   scale, longer Spanish), the phone always runs off the section's edge. */
-.hero-visual { align-self: end; }
+   >930 of the 840-wide file dropped) and, on desktop, the negative
+   bottom margin cancels the section padding plus 8px, so the image's
+   own bottom edge sits a hair under the ink band. That makes the
+   visible cut the same screen row at every width and font scale — the
+   band never lands on a card. */
+.hero-device { position: relative; }
 .hero-device img { width: 100%; height: auto; display: block; }
 @media (max-width: 899px) {
-  .hero-device { margin-bottom: calc(-2.3rem - 8px); }
+  .hero-visual { order: -1; }
+  .hero-stage-x { max-width: min(360px, 78vw); }
+  /* the slice of phone the first screen gets; the mask dissolves its
+     bottom into the ground. vh-based so a font-scale setting takes its
+     room from the phone, never from the headline or the button. */
+  .hero-device {
+    height: clamp(180px, 30vh, 340px); overflow: hidden;
+    /* the fade starts under the calorie numbers, never on them */
+    -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%); /* literal-ok: mask alpha */
+            mask-image: linear-gradient(180deg, #000 72%, transparent 100%); /* literal-ok: mask alpha */
+  }
 }
-.f-chip {
-  position: absolute; z-index: 3;
-  display: flex; align-items: center; gap: .55rem;
-  background: rgba(var(--surface-rgb),.92);
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  border: 1px solid var(--border); border-radius: 14px;
-  padding: 8px 12px 8px 9px; gap: 9px;
-  /* px, not rem, on purpose: the chips repeat numbers the capture already
-     shows, so they are decoration, and decoration is what a font-scale
-     setting may cost. Sized in rem they grew past the room beside the
-     phone at ×1.3 (protein chip clipped by 30px at 660 and 1300 ES). */
-  width: max-content;   /* absolutely positioned at the stage's edge, it would otherwise shrink to the sliver left inside the stage and wrap every word */
-  box-shadow: var(--shadow-card);
-  animation: chip-float 5.2s ease-in-out infinite;
-  will-change: transform;
+@media (min-width: 900px) {
+  .hero-visual { align-self: end; }
+  .hero-device { margin-bottom: calc(-4.6rem - 8px); }   /* tracks the section's bottom padding: the image bottom must land under the band */
 }
-.f-chip strong { font-size: 14px; line-height: 1.1; display: block; }
-.f-chip small { font-size: 10.5px; font-weight: 600; color: var(--muted); letter-spacing: .04em; display: block; }
-.f-chip-ico {
-  width: 30px; height: 30px; border-radius: 9px; flex: none;
-  display: grid; place-items: center; color: var(--on-brand);
-}
-.f-chip-ico svg { width: 18px; height: 18px; }
-/* The chips float beside the phone, not on it. The WebP carries 11.7%
-   of its width on each side as shadow margin + bezel, so a chip whose
-   inner edge stops at 14% of the stage overlaps the bezel and the app's
-   own edge padding (the card starts at 16%) and never a card — no chip
-   can cover a number, whatever the capture shows. Vertically they sit against the calorie card, well
-   above the cut line. */
-.f-chip-1 { top: 58%; right: calc(86% - 4px); animation-delay: 0s; }
-.f-chip-2 { top: 36%; left: calc(86% - 4px); animation-delay: 1.4s; }
-.f-chip-1 .f-chip-ico { background: var(--grad); }
-.f-chip-2 .f-chip-ico { background: var(--macro-protein); }
-@keyframes chip-float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-9px); }
-}
-/* On phones the card is ~330px wide and a chip is 140-210px: whatever
-   corner it takes, it sits on top of the screenshot's own numbers. The
-   capture already shows everything the chips say, so below 600px the
-   chips go and the phone speaks for itself. */
-@media (max-width: 679px), (min-width: 900px) and (max-width: 1299px) {
-  .f-chip { display: none; }
-}
-/* …and on the two-column layout under 1300px the visual column is too
-   narrow for a chip to float beside the phone without either crossing
-   into the copy column or leaving the viewport (measured: -29px into the
-   copy at 900, chip clipped by up to 70px at the right edge at 1024 ×1.3).
-   A chip half off the frame is worse than no chip. */
 
 /* ═══════════════════════════════════════════════
    INLINE CTA — the download button repeated after the feature cards,
@@ -159,6 +124,7 @@
    ═══════════════════════════════════════════════ */
 .cta-inline-sec { padding: 0 0 3.4rem; }
 .cta-inline { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.4rem; }
+.cta-inline .cta-group { justify-content: center; }
 .cta-inline-note { font-weight: 650; color: var(--text-soft); font-size: .95rem; }
 
 /* ═══════════════════════════════════════════════
@@ -650,7 +616,8 @@
 .how-step h3 { font-size: 1.08rem; font-weight: 700; margin: .45rem 0 .25rem; letter-spacing: -.01em; }
 .how-step p { font-size: .95rem; color: var(--muted); max-width: 44ch; }
 /* CTA after the steps */
-.how-cta { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.2rem; margin-top: 1.9rem; padding-left: 56px; }
+.how-cta { margin-top: 1.9rem; padding-left: 56px; }
+.how-cta .cta-group { margin-bottom: .7rem; }
 .how-cta-note { font-size: .9rem; font-weight: 650; color: var(--text-soft); }
 @media (min-width: 900px) {
   .how-sec { padding: 5rem 0; }
@@ -674,13 +641,14 @@
    RESPONSIVE — hero split
    ═══════════════════════════════════════════════ */
 @media (min-width: 900px) {
-  .hero-grid { grid-template-columns: 1.04fr .96fr; gap: 3.4rem; }
-  .hero-x { padding: 3.6rem 0 4.6rem; }
-  .hero-device { margin-bottom: calc(-4.6rem - 8px); }   /* tracks the padding above: the image bottom must land under the band */
+  .hero-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 3rem; }
+  .hero-x { padding: 3.2rem 0 4.6rem; }
+}
+@media (min-width: 1200px) {
+  .hero-grid { gap: 4rem; }
 }
 
-/* Reduced motion: stop the floaters, keep everything visible */
+/* Reduced motion: keep everything visible */
 @media (prefers-reduced-motion: reduce) {
-  .f-chip { animation: none; }
   .macro-fill { transition: none; width: var(--w, 60%); }
 }

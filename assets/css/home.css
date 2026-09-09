@@ -101,7 +101,7 @@
    they annotate: the kcal chip hangs off the bottom-left corner, the
    protein chip rides the right edge over the carousel's cut card. */
 .f-chip-1 { bottom: -14px; left: 6%; animation-delay: 0s; }
-.f-chip-2 { bottom: 24%; right: -12px; animation-delay: 1.4s; }
+.f-chip-2 { bottom: 19%; right: -12px; animation-delay: 1.4s; }   /* on the carousel-dots row, below the macro values */
 .f-chip-1 .f-chip-ico { background: linear-gradient(135deg, #F59E0B, #F97316); }
 .f-chip-2 .f-chip-ico { background: linear-gradient(135deg, #17B26A, #0E9355); }
 @keyframes chip-float {

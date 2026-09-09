@@ -111,11 +111,11 @@
   "subscription/index.html": {
     "es": {
       "title": "Suscripción y precios — Fotocal Premium",
-      "desc": "Precios de Fotocal: gratis para siempre con 3 escaneos con IA al día y Coach Kal ilimitado. Premium 6,99 €/mes o 34,99 €/año, prueba de 5 días."
+      "desc": "Precios de Fotocal: gratis para siempre con 2 escaneos con IA al día y Coach Kal ilimitado. Premium 6,99 €/mes o 34,99 €/año, prueba de 5 días."
     },
     "en": {
       "title": "Subscription & pricing — Fotocal Premium",
-      "desc": "Fotocal pricing: free forever with 3 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, with a 5-day trial on the yearly plan."
+      "desc": "Fotocal pricing: free forever with 2 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, with a 5-day trial on the yearly plan."
     }
   },
   "blog/index.html": {

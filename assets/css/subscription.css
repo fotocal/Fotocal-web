@@ -108,7 +108,8 @@
 
 /* smaller, icon-only unlocks */
 .sb-mini { display: grid; gap: 1.1rem; margin-top: 1.3rem; }
-@media (min-width: 700px) { .sb-mini { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 700px) { .sb-mini { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .sb-mini { grid-template-columns: repeat(4, 1fr); } }
 .sb-mini-card {
   background: var(--white); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.3rem 1.3rem;

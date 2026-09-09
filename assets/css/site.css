@@ -1345,3 +1345,14 @@ body.fc-appbar-on { padding-bottom: var(--fc-appbar-h, 78px); }
 @media (prefers-reduced-motion: reduce) {
   .fc-appbar { transition: none; }
 }
+
+/* ── Premium marker ──
+   Gold is reserved for one meaning on this site: a feature that needs
+   Premium. Never a background, never decoration. */
+.fc-premium {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .68rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase;
+  color: #7A5200; background: #FCF0CC; border: 1px solid #EBC66B;
+  border-radius: 999px; padding: .26rem .6rem; line-height: 1;
+  margin-left: .45rem; vertical-align: middle;
+}

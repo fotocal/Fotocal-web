@@ -117,6 +117,14 @@
 }
 
 /* ═══════════════════════════════════════════════
+   INLINE CTA — the download button repeated after the feature cards,
+   where the visitor has just seen what the app does.
+   ═══════════════════════════════════════════════ */
+.cta-inline-sec { padding: 0 0 3.4rem; }
+.cta-inline { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.4rem; }
+.cta-inline-note { font-weight: 650; color: var(--ink-soft); font-size: .95rem; }
+
+/* ═══════════════════════════════════════════════
    PROOF — three true facts on the page's first ink band.
    Full-bleed dark is where the serious claim lives — the slot
    competitors spend on star counts; ours carries the trial, the price

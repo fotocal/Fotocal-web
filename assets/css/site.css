@@ -403,7 +403,18 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
 .lang-opt.active { color: var(--pink); }
 .lang-sep { opacity: .35; }
 
+/* Header download button: hidden while the hero's own button is on
+   screen, shown once the visitor scrolls past it (body.fc-cta-on, set by
+   layout.js). The same rule on every width — on a phone it is the compact
+   pill that replaced the bottom bar. */
 .btn-nav { display: none; }
+body.fc-cta-on .btn-nav { display: inline-flex; }
+@media (max-width: 899px) {
+  .btn-nav { min-height: 44px; padding: 0 .95rem; font-size: .84rem; align-items: center; }   /* real tap target */
+}
+@media (max-width: 430px) {
+  body.fc-cta-on .nav-logo span { display: none; }   /* the pill takes the wordmark's room */
+}
 
 /* Burger */
 .nav-burger {
@@ -936,7 +947,6 @@ body.nav-locked { overflow: hidden; }
   .nav-links { display: flex; }
   .nav-burger { display: none; }
   .nav-mobile { display: none; }
-  .btn-nav { display: inline-flex; }
 
   .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
 

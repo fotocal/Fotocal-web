@@ -324,6 +324,13 @@
       '<span class="fc-note-b">' + note.slice(i + 3) + '</span></span>';
   }
 
+  /* ── Bottom download bar: OFF, code kept ──
+     Replaced (Sept 2026) by the header button below plus the repeated
+     buttons in the page. Everything the bar needs — markup, hide-on-
+     scroll, dismissal, the body padding — is still here and still
+     tested; flip this flag to bring it back if installs drop. */
+  var APPBAR_ENABLED = false;
+
   function appbarHTML() {
     return '' +
       '<div class="fc-appbar" id="fcAppbar" hidden>' +
@@ -354,7 +361,7 @@
   /* The bar is appended rather than mounted in a placeholder, so pages do
      not need a new empty div each. It is position:fixed, so where it sits
      in the DOM does not affect layout. */
-  if (!document.getElementById("fcAppbar")) {
+  if (APPBAR_ENABLED && !document.getElementById("fcAppbar")) {
     document.body.insertAdjacentHTML("beforeend", appbarHTML());
   }
 
@@ -446,6 +453,30 @@
       try { sessionStorage.setItem("fc-appbar-x", "1"); } catch (e) {}
       setTimeout(function () { bar.hidden = true; }, 220);
     });
+  })();
+
+  /* ── Header download button ──
+     The hero carries its own large button, so the one in the header
+     stays out of the way until the visitor has scrolled past the hero,
+     then shows and stays (body.fc-cta-on; the CSS does the rest, on
+     every width). Pages without a hero block get it after the first
+     screen. rAF-throttled: one class toggle per frame at most. */
+  (function () {
+    var hero = document.querySelector(".hero-x, .sp-hero, .sb-hero");
+    var on = false, queued = false;
+    function threshold() {
+      if (!hero) return 320;
+      return hero.getBoundingClientRect().bottom + window.pageYOffset - 72;
+    }
+    function apply() {
+      queued = false;
+      var want = window.pageYOffset > threshold();
+      if (want !== on) { on = want; document.body.classList.toggle("fc-cta-on", on); }
+    }
+    function schedule() { if (!queued) { queued = true; window.requestAnimationFrame(apply); } }
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    apply();
   })();
 
   /* ── Logo: prefer the real PNG, fall back to inline SVG ── */

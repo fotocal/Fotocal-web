@@ -107,7 +107,6 @@
         { key: "nav.scanFood",     href: u("features/scan-food/") },
         { key: "nav.scanBarcode",  href: u("features/scan-barcode/") },
         { key: "nav.voiceLogging", href: u("features/voice-logging/") },
-        { key: "nav.recipe",       href: u("features/recipe/") },
         { key: "nav.coach",        href: u("ai/") }
       ] },
     { id: "blog",         key: "nav.blog",         href: u("blog/") },
@@ -282,7 +281,6 @@
             '<a href="' + u("features/scan-food/") + '">' + t("nav.scanFood") + '</a>' +
             '<a href="' + u("features/scan-barcode/") + '">' + t("nav.scanBarcode") + '</a>' +
             '<a href="' + u("features/voice-logging/") + '">' + t("nav.voiceLogging") + '</a>' +
-            '<a href="' + u("features/recipe/") + '">' + t("nav.recipe") + '</a>' +
             '<a href="' + u("ai/") + '">' + t("nav.coach") + '</a>' +
           '</div>' +
           '<div class="footer-col">' +

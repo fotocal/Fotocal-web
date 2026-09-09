@@ -495,7 +495,10 @@ def write_sitemap(srcs, lastmod):
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
            '        xmlns:xhtml="%s">' % NS]
     for rel in srcs:
-        if rel == "404.html":
+        # noindex pages are not asking to be ranked (404, and redirect stubs
+        # for URLs whose feature left the app), so they are not listed
+        raw = open(os.path.join(SRC, rel), encoding="utf-8").read()
+        if rel == "404.html" or 'content="noindex' in raw:
             continue
         path = rel[:-len("index.html")] if rel.endswith("index.html") else rel
         freq, pri = sitemap_entry(path)

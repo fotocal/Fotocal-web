@@ -156,6 +156,7 @@ def main():
         fail(missing, "no Spanish counterpart")
 
     variant_refs = {"es": set(), "en": set()}
+    noindex = set()
 
     for rel in rels:
         html = open(os.path.join(ROOT, rel), encoding="utf-8").read()
@@ -193,6 +194,8 @@ def main():
         # A noindex page is not asking to be ranked, so it needs neither a
         # canonical nor hreflang — 404.html is the only one.
         indexable = "noindex" not in (one(r'<meta name="robots" content="([^"]*)"', html) or "")
+        if not indexable:
+            noindex.add(rel)
 
         if indexable:
             canon = one(r'<link rel="canonical" href="([^"]*)"', html)
@@ -238,7 +241,7 @@ def main():
         fail("sitemap.xml", "duplicate <loc> entries")
     listed = set(locs)
     expected = {SITE + ("en/" if r.startswith("en/") else "") + public(r[3:] if r.startswith("en/") else r)
-                for r in rels if not r.endswith("404.html")}
+                for r in rels if r not in noindex}
     for miss in sorted(expected - listed):
         fail("sitemap.xml", "missing " + miss)
     for extra in sorted(listed - expected):

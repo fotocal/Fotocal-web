@@ -233,6 +233,26 @@
      The .log-card::before layer paints a radial highlight at
      --mx/--my; this just keeps those props under the cursor. */
   if (finePointer) {
+    // Carousel prev/next (under 1100px the track scrolls; the buttons page
+    // it one card at a time and disable at the ends). Arrow keys already
+    // work because the track is focusable and scrolls natively.
+    var track = document.querySelector(".log-track");
+    if (track) {
+      var prev = document.querySelector("[data-log-prev]"), next = document.querySelector("[data-log-next]");
+      var step = function () { var c = track.querySelector(".log-card"); return c ? c.getBoundingClientRect().width + 16 : 300; };
+      var sync = function () {
+        if (!prev) return;
+        prev.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+      };
+      if (prev) {
+        prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
+        next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+        track.addEventListener("scroll", sync, { passive: true });
+        window.addEventListener("resize", sync);
+        sync();
+      }
+    }
     document.querySelectorAll(".log-card").forEach(function (card) {
       card.addEventListener("mousemove", function (e) {
         var r = card.getBoundingClientRect();

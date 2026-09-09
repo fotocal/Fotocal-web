@@ -708,7 +708,7 @@
       });
     });
     /* Close the drawer if the viewport grows into desktop layout. */
-    window.matchMedia("(min-width: 900px)").addEventListener("change", function (ev) {
+    window.matchMedia("(min-width: 56.25em)").addEventListener("change", function (ev) {
       if (ev.matches) {
         drawer.classList.remove("open");
         burger.setAttribute("aria-expanded", "false");

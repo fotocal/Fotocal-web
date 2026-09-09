@@ -309,8 +309,8 @@
                    loading="lazy" decoding="async"
                    alt="Avocado toast with cherry tomatoes and a fried egg on a grey plate">
             </div>
-            <div class="cam-frame">
-              <div class="cam-screen">
+            <div class="dev-frame cam-frame">
+              <div class="dev-screen">
                 <img src="/assets/img/steps/step1-meal.webp" width="880" height="1100"
                      loading="lazy" decoding="async"
                      alt="The same plate seen through the phone's camera">
@@ -369,59 +369,90 @@
           <p class="section-sub mx-auto reveal">Photo, barcode, menu or voice — Fotocal meets you where you are. Whichever is fastest right now, that's the right one.</p>
         </div>
 
-        <div class="log-grid">
-          <article class="log-card reveal">
-            <div class="log-media">
-              <img src="/assets/img/illustrations/scan-photo.webp" width="900" height="720" loading="lazy" decoding="async"
-                   alt="Illustration: hands photographing a salmon bowl, the phone shows 420 kcal and macro bars">
-            </div>
+        <div class="log-wrap">
+          <ul class="log-track" tabindex="0" aria-label="Four ways to log — swipe or use the arrow keys">
+          <li class="log-card is-wide reveal">
             <div class="log-body">
-              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span>Photo</span></span>
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Photo</span></span>
               <h3>Snap your plate</h3>
               <p>One photo and the AI returns calories, macros and a health score. Adjust the portion or ingredients before saving — you're always in control.</p>
             </div>
-          </article>
-
-          <article class="log-card reveal" style="--rd:.08s">
-            <div class="log-media">
-              <img src="/assets/img/illustrations/scan-barcode.webp" width="900" height="1200" loading="lazy" decoding="async"
-                   alt="Illustration: hands scanning a product barcode with a phone, a health score dial on screen">
+            <!-- device frame; the real capture (ES + EN pair) drops in as
+                 <img class="…" data-i18n-src> replacing .dev-pending -->
+            <div class="log-media" aria-hidden="true">
+              <div class="dev-frame">
+                <div class="dev-screen">
+                  <div class="dev-pending">
+                    <span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+                    <small>Real app screen coming with the next capture sitting</small>
+                  </div>
+                </div>
+              </div>
             </div>
+          </li>
+          <li class="log-card reveal" style="--rd:.08s">
             <div class="log-body">
-              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M7 8v8M11 8v8M15 8v8"/></svg><span>Barcode</span></span>
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M8 8v8M11 8v8M14 8v8M17 8v8"/></svg><span>Barcode</span></span>
               <h3>Scan the label</h3>
               <p>Point at any product's barcode for full nutrition plus a clear health score — know whether it's worth buying before it's in your basket.</p>
             </div>
-          </article>
-
-          <article class="log-card reveal" style="--rd:.16s">
-            <div class="log-media">
-              <img src="/assets/img/illustrations/scan-voice.webp" width="900" height="720" loading="lazy" decoding="async"
-                   alt="Illustration: a woman speaks into her phone and food icons appear in a speech bubble">
+            <!-- device frame; the real capture (ES + EN pair) drops in as
+                 <img class="…" data-i18n-src> replacing .dev-pending -->
+            <div class="log-media" aria-hidden="true">
+              <div class="dev-frame">
+                <div class="dev-screen">
+                  <div class="dev-pending">
+                    <span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M8 8v8M11 8v8M14 8v8M17 8v8"/></svg></span>
+                    <small>Real app screen coming with the next capture sitting</small>
+                  </div>
+                </div>
+              </div>
             </div>
+          </li>
+          <li class="log-card reveal" style="--rd:.16s">
             <div class="log-body">
-              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></svg><span>Voice</span></span>
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg><span>Voice</span></span>
               <h3>Just say it</h3>
               <p>"Two eggs and toast with avocado" — say it out loud and it's logged. Perfect for busy mornings, messy hands and walking out the door.</p>
             </div>
-          </article>
-
-          <article class="log-card reveal" style="--rd:.24s">
-            <div class="log-media log-media-menu" aria-hidden="true">
-              <div class="menu-ticket">
-                <div class="menu-ticket-head">Menu</div>
-                <div class="menu-line"><span></span><b>410 kcal</b></div>
-                <div class="menu-line"><span></span><b>620 kcal</b></div>
-                <div class="menu-line"><span></span><b>350 kcal</b></div>
+            <!-- device frame; the real capture (ES + EN pair) drops in as
+                 <img class="…" data-i18n-src> replacing .dev-pending -->
+            <div class="log-media" aria-hidden="true">
+              <div class="dev-frame">
+                <div class="dev-screen">
+                  <div class="dev-pending">
+                    <span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span>
+                    <small>Real app screen coming with the next capture sitting</small>
+                  </div>
+                </div>
               </div>
             </div>
+          </li>
+          <li class="log-card is-wide reveal" style="--rd:.24s">
             <div class="log-body">
-              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Menu</span></span>
+              <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><span>Menu</span></span>
               <span class="fc-premium">Premium</span>
               <h3>Scan the menu</h3>
               <p>At a restaurant? Point the camera at the menu and see estimated calories for each dish — order with your eyes open.</p>
             </div>
-          </article>
+            <!-- device frame; the real capture (ES + EN pair) drops in as
+                 <img class="…" data-i18n-src> replacing .dev-pending -->
+            <div class="log-media" aria-hidden="true">
+              <div class="dev-frame">
+                <div class="dev-screen">
+                  <div class="dev-pending">
+                    <span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span>
+                    <small>Real app screen coming with the next capture sitting</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          </ul>
+          <div class="log-nav">
+            <button type="button" class="log-btn" data-log-prev aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="log-btn" data-log-next aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
         </div>
       </div>
     </section>

@@ -138,6 +138,10 @@ window.FOTOCAL_I18N = {
     "log.m.t": "Scan the menu",
     "log.m.b": "At a restaurant? Point the camera at the menu and see estimated calories for each dish — order with your eyes open.",
     "log.m.ticket": "Menu",
+    "log.pending": "Real app screen coming with the next capture sitting",
+    "log.carousel": "Four ways to log — swipe or use the arrow keys",
+    "log.prev": "Previous",
+    "log.next": "Next",
 
     /* ── Coach Kal ── */
     "coach.pill": "Meet Coach Kal",
@@ -423,6 +427,10 @@ window.FOTOCAL_I18N = {
     "log.m.t": "Escanea la carta",
     "log.m.b": "¿En un restaurante? Apunta con la cámara a la carta y ve las calorías estimadas de cada plato — pide con los ojos abiertos.",
     "log.m.ticket": "Carta",
+    "log.pending": "Pantalla real de la app en la próxima sesión de capturas",
+    "log.carousel": "Cuatro formas de registrar: desliza o usa las flechas",
+    "log.prev": "Anterior",
+    "log.next": "Siguiente",
 
     /* ── Coach Kal ── */
     "coach.pill": "Conoce a Coach Kal",

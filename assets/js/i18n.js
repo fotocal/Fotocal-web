@@ -102,7 +102,10 @@ window.FOTOCAL_I18N = {
     /* ── How it works ── */
     "how.kicker": "How it works",
     "how.title": "Three steps. <em class=\"accent\">Zero friction</em>.",
-    "how.sub": "Logging a meal takes about as long as taking a photo — because that is all it is. These are real screens from the app.",
+    "how.sub": "Logging a meal takes about as long as taking a photo — because that is all it is.",
+    "how.frameAlt": "The same plate seen through the phone's camera",
+    "how.ctanote": "5-day free trial · Android",
+    "cta.badgeAria": "Get Fotocal on Google Play",
     "how.s1t": "Snap a photo",
     "how.s1b": "Open Fotocal and photograph your plate. Home-cooked, restaurant, or last night's leftovers — it all works.",
     "how.s1alt": "Avocado toast with cherry tomatoes and a fried egg on a grey plate",
@@ -386,7 +389,10 @@ window.FOTOCAL_I18N = {
     /* ── How it works ── */
     "how.kicker": "Cómo funciona",
     "how.title": "Tres pasos. <em class=\"accent\">Cero fricción</em>.",
-    "how.sub": "Registrar una comida cuesta lo mismo que hacer una foto, porque no es nada más que eso. Estas son pantallas reales de la app.",
+    "how.sub": "Registrar una comida cuesta lo mismo que hacer una foto, porque no es nada más que eso.",
+    "how.frameAlt": "El mismo plato visto a través de la cámara del móvil",
+    "how.ctanote": "5 días de prueba gratis · Android",
+    "cta.badgeAria": "Descarga Fotocal en Google Play",
     "how.s1t": "Haz la foto",
     "how.s1b": "Abre Fotocal y fotografía tu plato. Casero, de restaurante o las sobras de ayer: funciona igual.",
     "how.s1alt": "Tostada de aguacate con tomates cherry y un huevo frito en un plato gris",

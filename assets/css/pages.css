@@ -250,7 +250,7 @@
 /* Yes / no / limited markers */
 .mk { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; }
 .mk svg { width: 11px; height: 11px; stroke-width: 3.2; }
-.mk-yes { background: var(--grad); color: var(--on-brand); }
+.mk-yes { background: var(--grad-btn); color: var(--on-brand); }
 .mk-no  { background: var(--bg-3); color: var(--muted); }
 .cmp .lim { font-size: .78rem; color: var(--muted); font-weight: 500; }
 
@@ -520,7 +520,7 @@
   content: counter(n);
   position: absolute; left: 0; top: -.1em;
   width: 26px; height: 26px; border-radius: 50%;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   display: grid; place-items: center;
   font-family: var(--font-display); font-weight: 700; font-size: .8rem;
   box-shadow: var(--shadow-cta);

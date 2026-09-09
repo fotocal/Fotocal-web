@@ -49,7 +49,7 @@
 .sp-step-n {
   display: inline-grid; place-items: center;
   width: 36px; height: 36px; border-radius: 11px; margin-bottom: .85rem;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   font-family: var(--font-display); font-weight: 700; font-size: 1rem;
   box-shadow: var(--shadow-cta);
 }
@@ -94,7 +94,7 @@
 .sp-card:hover { transform: translateY(-4px); border-color: var(--border-pink); box-shadow: var(--shadow-card); }
 .sp-card-ico {
   width: 42px; height: 42px; border-radius: 13px; margin-bottom: .9rem;
-  display: grid; place-items: center; color: var(--on-brand); background: var(--grad);
+  display: grid; place-items: center; color: var(--on-brand); background: var(--grad-btn);
   box-shadow: 0 8px 18px -8px rgba(var(--pink-rgb),.45);
 }
 .sp-card-ico svg { width: 20px; height: 20px; }

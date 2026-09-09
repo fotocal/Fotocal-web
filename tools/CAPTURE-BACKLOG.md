@@ -15,6 +15,22 @@ new pair (ES + EN, same state) arrives. REMIND THE USER when relevant.
   for a fresh P1 pair and swap home-hero-es/en.webp. Current captures
   dated 2026-09-09.
 
+## Three Steps — the camera-with-plate frame (SITTING 2, blocks nothing but is the point of the section)
+  The section is composed around the app's camera pointed at a plate.
+  Until sitting 2 lands, the CSS phone frame (.cam-frame, src/index.html
+  "HOW IT WORKS") holds the plate photo itself — no app UI is drawn over
+  it, nothing is faked, and the section copy no longer claims "real
+  screens" until they are. When the pair arrives:
+    · ES + EN captures of the camera/analysing state on the SAME plate,
+      saved as assets/img/steps/camera-plate-es.webp / -en.webp (raw
+      capture, no baked frame — the CSS frame does that here), swapped
+      into <div class="cam-screen"><img …> with data-i18n-src.
+    · a plate photo of that same meal at ≥ 2000px on the long side for
+      the full-bleed panel (.how-plate): step1-meal.webp is 880px wide
+      and is being shown at up to ~1000 CSS px on desktop, so it is
+      visibly soft on a 2x screen. Then restore "These are real screens
+      from the app." to how.sub in both languages.
+
 ## Subscription page mini cards (menu scanner, unlimited voice)
   Placeholder illustrations (feat-menu.webp, feat-voice.webp) until the
   real captures from sittings 5 and 6 land — owner's call to keep them.

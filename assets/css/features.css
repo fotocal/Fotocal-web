@@ -57,7 +57,7 @@
 .fx-num {
   display: inline-grid; place-items: center;
   width: 34px; height: 34px; border-radius: 10px; margin-bottom: .9rem;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   font-family: var(--font-display); font-weight: 700; font-size: .95rem;
   box-shadow: var(--shadow-cta);
 }

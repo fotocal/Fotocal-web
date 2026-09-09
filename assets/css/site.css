@@ -61,6 +61,13 @@
   --grad:         linear-gradient(135deg, var(--coral) 0%, var(--pink) 100%);
   --grad-rev:     linear-gradient(135deg, var(--pink) 0%, var(--coral) 100%);
   --grad-wash:    linear-gradient(135deg, rgba(var(--coral-rgb),.10), rgba(var(--pink-rgb),.10));
+  /* Anything that carries white TEXT on the brand gradient uses this one:
+     coral only in the leading edge, deep pink under the glyphs (white on
+     #D91C5C is 4.9:1, on --pink 3.9:1, on --coral 2.3:1). --grad stays for
+     icon tiles, rules and dots, where no text is read off it. The ratio
+     under the glyphs is measured on the rendered button, pixel by pixel,
+     by the hero acceptance script — see the commit that introduced this. */
+  --grad-btn:     linear-gradient(135deg, var(--coral) 0%, var(--pink) 4%, var(--brand-text) 12%);
 
   /* ── Macros, exactly the app's ── */
   --macro-carbs:        #FDB13D;
@@ -292,7 +299,7 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
   transition: transform .25s cubic-bezier(.2,.8,.3,1.2), box-shadow .25s ease,
               background .25s ease, border-color .25s ease, color .25s ease;
 }
-.btn-cta { background: var(--grad); color: var(--on-brand); box-shadow: var(--shadow-cta); }
+.btn-cta { background: var(--grad-btn); color: var(--on-brand); box-shadow: var(--shadow-cta); }
 .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 38px -10px rgba(var(--pink-rgb),.5); }
 .btn-outline {
   background: var(--surface); color: var(--text);
@@ -834,7 +841,7 @@ body.nav-locked { overflow: hidden; }
 .step { text-align: center; }
 .step-badge {
   width: 42px; height: 42px; margin: 0 auto .9rem; border-radius: 50%;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   display: grid; place-items: center;
   font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
   box-shadow: var(--shadow-cta);
@@ -866,7 +873,7 @@ body.nav-locked { overflow: hidden; }
   position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
   white-space: nowrap;
   font-size: .64rem; font-weight: 800; letter-spacing: .09em;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   padding: .32rem .8rem; border-radius: 999px; box-shadow: var(--shadow-cta);
 }
 .plan-name {
@@ -1176,7 +1183,7 @@ html { scroll-padding-top: calc(var(--nav-h) + 24px); }
   background: var(--bg-2);
 }
 .compare thead th.compare-us {
-  color: var(--on-brand); background: var(--grad); border-top-left-radius: 4px; border-top-right-radius: 4px;
+  color: var(--on-brand); background: var(--grad-btn); border-top-left-radius: 4px; border-top-right-radius: 4px;
 }
 .compare tbody th { text-align: left; font-weight: 600; color: var(--text-soft); font-size: .9rem; }
 .compare .col-feat { text-align: left; min-width: 210px; }
@@ -1396,7 +1403,7 @@ html:not(.no-js) img[loading="lazy"].is-loaded { opacity: 1; }
    button. */
 .fc-appbar-cta {
   flex: 1 0 auto; max-width: 300px; text-align: center;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   font-weight: 700; font-size: 15px; padding: 12px 20px;
   border-radius: 999px; white-space: nowrap;
   box-shadow: 0 10px 22px -9px rgba(var(--pink-rgb),.55);

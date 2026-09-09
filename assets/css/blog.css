@@ -41,7 +41,7 @@
 .bl-feat-flag {
   display: inline-flex; align-items: center; gap: .4rem; align-self: flex-start;
   font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--on-brand); background: var(--grad); border-radius: 999px; padding: .34rem .8rem;
+  color: var(--on-brand); background: var(--grad-btn); border-radius: 999px; padding: .34rem .8rem;
   margin-bottom: .9rem; box-shadow: var(--shadow-cta);
 }
 .bl-feat-body h2 {
@@ -73,7 +73,7 @@
 }
 .bl-chip:hover { transform: translateY(-2px); border-color: var(--border-pink); color: var(--brand-text); }
 .bl-chip[aria-pressed="true"] {
-  background: var(--grad); color: var(--on-brand); border-color: transparent;
+  background: var(--grad-btn); color: var(--on-brand); border-color: transparent;
   box-shadow: var(--shadow-cta);
 }
 .bl-chip span.n {

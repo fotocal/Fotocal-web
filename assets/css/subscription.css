@@ -28,7 +28,7 @@
 .img-slot-n {
   display: inline-grid; place-items: center;
   width: 40px; height: 40px; border-radius: 12px;
-  background: var(--grad); color: var(--on-brand);
+  background: var(--grad-btn); color: var(--on-brand);
   font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
   box-shadow: var(--shadow-cta);
 }

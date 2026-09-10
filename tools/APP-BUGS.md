@@ -22,3 +22,22 @@ samples wrong, two English samples right — not proof of a pattern, but
 enough to investigate, and Spain is the primary market. Suspect the
 Spanish system/prompt template around the numeric context, not the model's
 maths per se, since English gets it right from the same data.
+
+
+## Seen in the sitting-2 captures (2026-09-10)
+1. Barcode result, ENGLISH UI: the adjustment line is in Spanish —
+   "Ajustado por: alto en calorías" under the 24/100 score (Red Bull
+   sugar free). Untranslated string.
+2. Menu scan, SPANISH UI: the recommendation banner and every dish note
+   are in English ("Menú Plato is the best option based on the remaining
+   macros.", "High in fat which exceeds the remaining macros.") while the
+   buttons are translated ("Registrar plato"). The AI-generated strings
+   are not following the app language.
+3. Food detail, SPANISH UI: the "High protein" chip is in English.
+4. Weekly report → Your goal: Start 80.0 kg · Now 110.0 kg · Goal 90.0 kg
+   renders "100% done" and "20.0 kg to go" at the same time. The progress
+   maths breaks when the current weight is past the start in the wrong
+   direction. (Capture kept out of the website for this reason.)
+5. Coach Kal's "calories remaining" (652 kcal) is goal − eaten, ignoring
+   the 539 kcal burned that the home screen counts (1.191 left). Not
+   wrong, but the two numbers disagree on the same day; worth one rule.

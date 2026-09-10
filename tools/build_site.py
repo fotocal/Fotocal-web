@@ -222,6 +222,9 @@ def render_lang_blocks(src, lang):
                 raise SystemExit("unclosed <%s data-lang-block>" % tag)
             depth += -1 if src[mm.start():mm.start() + 2] == "</" else 1
             pos = mm.end()
+        # step past the closing tag's ">" — a deleted block used to leave
+        # that character behind ("</a>>")
+        pos = src.index(">", pos) + 1
         end_tag_start = src.rindex("</", start_body, pos)
         if blang == lang:
             clean = re.sub(r'\s+data-lang-block="[a-z]{2}"', "", attrs)

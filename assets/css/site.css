@@ -95,6 +95,15 @@
   --glow-violet:  rgba(178,1,255,.12);
   --glow-blue:    rgba(0,85,255,.10);
 
+  /* ── The dark sections (home page): decided surfaces, not a theme ── */
+  --dark:         #101317;
+  --dark-2:       #1A1E25;
+  --dark-rgb:     16,19,23;
+  --on-dark:      #FFFFFF;
+  --on-dark-soft: rgba(255,255,255,.70);
+  --on-dark-rgb:  255,255,255;
+  --frame:        #1A1E25;   /* the CSS device frame's body, on light and dark alike */
+
   /* ── Solid icon tiles that are not the brand gradient ── */
   --tile-bg:      var(--ink);
   --tile-fg:      var(--coral);
@@ -312,6 +321,8 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
   box-shadow: var(--shadow-cta);
 }
 .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 38px -10px rgba(var(--pink-rgb),.5); }
+.btn-white { background: var(--white); color: var(--dark); border-color: transparent; padding: .95rem 1.7rem; font-size: 1rem; font-weight: 650; min-height: 50px; box-shadow: 0 14px 30px -12px rgba(var(--dark-rgb),.45); }
+.btn-white:hover { transform: translateY(-2px); }
 .btn-lg { padding: 1.1rem 2.1rem; font-size: 1.08rem; min-height: 58px; }
 @media (max-width: 599px) {
   .btn-lg { padding: 1rem 1.6rem; }   /* "Descárgala gratis" + the badge fit one row at 412 */
@@ -360,12 +371,20 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
    the two — never a bare cropped rectangle. A raw capture goes straight in
    as the <img> of .dev-screen; until it lands, .dev-pending says so. */
 .dev-frame {
+  --dev-r: 26px;
   position: relative; aspect-ratio: 9 / 18.6;
-  background: var(--ink); border-radius: 10.2% / 5%; padding: 2.4%;
-  box-shadow: var(--shadow-lift), 0 0 0 1px rgba(var(--ink-rgb),.35);
+  background: var(--frame); border-radius: var(--dev-r); padding: 2.4%;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), var(--shadow-lift);   /* literal-ok: the frame's bevel is the same on every ground */
 }
-.dev-screen { position: relative; height: 100%; overflow: hidden; border-radius: 8.4% / 4.1%; background: var(--bg-2); }
+.dev-frame-lg { --dev-r: 48px; }
+.dev-screen { position: relative; height: 100%; overflow: hidden; border-radius: calc(var(--dev-r) - 6px); background: var(--bg-2); }
 .dev-screen img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; display: block; }
+/* A cut frame is sized by its screen crop and has no bottom: whatever
+   holds it (tile, card, the hero's band) clips the last sliver, and the
+   crop already ends on a quiet row of the app. */
+.dev-frame.is-cut { aspect-ratio: auto; padding-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.dev-frame.is-cut .dev-screen { height: auto; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.dev-frame.is-cut .dev-screen img { height: auto; }
 .dev-frame::after {                          /* punch-hole */
   content: ""; position: absolute; top: 4.6%; left: 50%; width: 3.9%; aspect-ratio: 1;
   transform: translateX(-50%); border-radius: 50%; background: var(--ink-2); z-index: 2;

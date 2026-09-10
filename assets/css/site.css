@@ -1312,6 +1312,7 @@ html { scroll-padding-top: calc(var(--nav-h) + 24px); }
 .compare .yes { color: var(--ok); font-weight: 800; font-size: 1.05rem; }
 .compare .c-us .yes { color: var(--brand-text); }
 .compare .no { color: var(--muted); opacity: .45; font-weight: 700; }
+.compare .na { color: var(--muted); opacity: .45; font-weight: 700; }   /* not stated on the maker's site */
 .compare .part {
   display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .02em;
   color: var(--muted); background: var(--bg-3); border-radius: 999px; padding: .18rem .5rem;

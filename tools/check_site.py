@@ -51,6 +51,7 @@ alpha, not a colour.
 """
 
 import json
+import datetime
 import os
 import re
 import sys
@@ -210,6 +211,24 @@ def check_colour_literals():
                               % (html.count("\n", 0, m.start()) + 1, c.group(0)))
 
 
+def check_compare_table():
+    """Check 11 — the comparison table and its dated footnote are exactly
+    what tools/compare_data.json says (run tools/compare_table.py), and the
+    competitor facts were checked within the last 90 days."""
+    sys.path.insert(0, os.path.join(ROOT, "tools"))
+    import compare_table
+    data = compare_table.load()
+    page = open(compare_table.PAGE, encoding="utf-8").read()
+    i18n = open(compare_table.I18N, encoding="utf-8").read()
+    if compare_table.render_page(page, data) != page:
+        fail("src/index.html", "comparison table is out of date with tools/compare_data.json — run tools/compare_table.py")
+    if compare_table.render_i18n(i18n, data) != i18n:
+        fail("assets/js/i18n.js", "cmp.note is out of date with tools/compare_data.json — run tools/compare_table.py")
+    age = (datetime.date.today() - datetime.date.fromisoformat(data["checked_on"])).days
+    if age > compare_table.STALE_DAYS:
+        warn("tools/compare_data.json: competitor facts last checked %d days ago — recheck the makers' sites and update checked_on" % age)
+
+
 def one(tag, html, group=1):
     m = re.search(tag, html, re.S | re.I)
     return m.group(group).strip() if m else None
@@ -306,6 +325,7 @@ def main():
                         "tree references it" % m.group(1))
 
     check_colour_literals()
+    check_compare_table()
 
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}

@@ -1,0 +1,52 @@
+{
+  "_readme": [
+    "THE ONE PLACE competitor data lives. tools/compare_table.py renders it into",
+    "the <tbody> of the comparison table in src/index.html and into the dated",
+    "footnote (cmp.note) in assets/js/i18n.js; check_site.py fails if either is",
+    "stale, and warns when checked_on is more than 90 days old.",
+    "Cell values: \"yes\" = the maker states the feature on its own site;",
+    "\"premium\" / \"pro\" = stated as part of that paid plan; \"gfit\" = Google Fit",
+    "rather than Health Connect; a price string; null = NOT stated on the",
+    "maker's site on the check date (rendered as —, never as ✗ — absence is",
+    "not something we can confirm). A guess never goes in this file.",
+    "Row labels are the cmp.r* keys in i18n.js. Fotocal's own column is fact",
+    "the founder owns; the price there must match the subscription page."
+  ],
+  "checked_on": "2026-09-10",
+  "columns": ["Cal AI", "MyFitnessPal", "Yazio"],
+  "checked_at": {
+    "Cal AI": "https://www.calai.app/ · https://www.calai.app/faq (maker's site; no price published there)",
+    "MyFitnessPal": "https://support.myfitnesspal.com/hc/en-us/articles/360032625951 (Premium features) · https://support.myfitnesspal.com/hc/en-us/articles/30332897072269 (Voice Logging) · https://blog.myfitnesspal.com/myfitnesspal-membership-pricing-tiers/ (prices)",
+    "Yazio": "https://help.yazio.com/hc/en-us/articles/208847005 (advantages of Pro) · https://help.yazio.com/hc/en-us/articles/39137901903889 (AI tracking) · https://help.yazio.com/hc/en-us/articles/39641902368529 (evaluations) · https://help.yazio.com/hc/en-us/sections/360000111905 (Health Connect)"
+  },
+  "note": {
+    "en": "Competitor columns show what each maker states on its own website, checked on {date}: ✓ or a plan name means the maker states it, — means it is not stated there. Prices are the makers' published yearly prices in US dollars and can change. Fotocal is Android-only for now.",
+    "es": "Las columnas de la competencia recogen lo que cada fabricante declara en su propia web, comprobado el {date}: ✓ o el nombre de un plan significa que el fabricante lo declara; — significa que no consta. Los precios son los anuales publicados por cada fabricante, en dólares, y pueden cambiar. Por ahora Fotocal es solo para Android."
+  },
+  "rows": [
+    { "key": "cmp.r1",  "fotocal": "yes", "cells": { "Cal AI": "yes", "MyFitnessPal": "premium", "Yazio": "pro" },
+      "why": "Cal AI: photo scan is the product. MFP: Meal Scan is a Premium feature (English only). Yazio: AI food tracking is part of Pro." },
+    { "key": "cmp.r2",  "fotocal": "yes", "cells": { "Cal AI": "yes", "MyFitnessPal": "premium", "Yazio": "yes" },
+      "why": "Cal AI lists barcode scanning. MFP: barcode scanner Premium-only since Oct 2022. Yazio: barcode is in the free tier (Pro adds AI scanner, analyses, ratings, activity, recipes)." },
+    { "key": "cmp.r3",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": null, "Yazio": null },
+      "why": "Restaurant menu scanning: none of the three states it." },
+    { "key": "cmp.r4",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": "premium", "Yazio": null },
+      "why": "Cal AI offers typed 'describe', not voice, on its site. MFP: Voice Log is Premium, English only. Yazio: only Siri Shortcuts on iOS, nothing for Android." },
+    { "key": "cmp.r5",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": null, "Yazio": null },
+      "why": "AI chat coach: none of the three states it." },
+    { "key": "cmp.r6",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": null, "Yazio": null },
+      "why": "Health score with swaps: not stated. Yazio's 'smart food ratings' (Pro) is a different thing and is not counted." },
+    { "key": "cmp.r7",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": "premium", "Yazio": "pro" },
+      "why": "MFP: Nutrient Dashboard is Premium. Yazio: vitamins & minerals are Pro. Cal AI: not stated." },
+    { "key": "cmp.r8",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": null, "Yazio": null },
+      "why": "Mood & habit journal: none of the three states it." },
+    { "key": "cmp.r9",  "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": "premium", "Yazio": "pro" },
+      "why": "MFP: weekly progress views are for Premium members. Yazio: weekly/monthly evaluation is Pro-only (free has daily). Cal AI: not stated." },
+    { "key": "cmp.r10", "fotocal": "yes", "cells": { "Cal AI": "gfit", "MyFitnessPal": "yes", "Yazio": "pro" },
+      "why": "Cal AI: connects to Google Fit on Android (Health Connect not named). MFP: Health Connect documented. Yazio: Health Connect documented, automatic activity tracking is a Pro feature." },
+    { "key": "cmp.r11", "fotocal": "yes", "cells": { "Cal AI": null, "MyFitnessPal": "yes", "Yazio": "yes" },
+      "why": "MFP and Yazio both list Spanish among app languages. Cal AI: languages not stated." },
+    { "key": "cmp.r12", "fotocal": "€34.99", "cells": { "Cal AI": null, "MyFitnessPal": "$79.99", "Yazio": null },
+      "why": "MFP: Premium $79.99/yr (Premium+ $99.99/yr). Cal AI: no price on its site. Yazio: prices vary by country and no yearly figure is published on the pages reachable; the ≈$44 and $47.90 the table used to show are gone." }
+  ]
+}

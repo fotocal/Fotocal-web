@@ -101,7 +101,7 @@ window.FOTOCAL_I18N = {
     "hero.img": "assets/img/screens/hero-home-en.webp",
     "cta.badgeTop": "GET IT ON",
     "cta.play": "On Google Play · Android",
-    "bar.line": "Count calories with a photo",
+    "bar.line": "Calories from a photo",
     "cta.free": "Get it free",
     "hero.note": "Free to download · 5-day trial on the yearly plan · Android",
 
@@ -410,7 +410,7 @@ window.FOTOCAL_I18N = {
     "hero.img": "assets/img/screens/hero-home-es.webp",
     "cta.badgeTop": "DISPONIBLE EN",
     "cta.play": "En Google Play · Android",
-    "bar.line": "Cuenta calorías con una foto",
+    "bar.line": "Calorías con una foto",
     "cta.free": "Descárgala gratis",
     "hero.note": "Descarga gratuita · 5 días de prueba en el plan anual · Android",
 

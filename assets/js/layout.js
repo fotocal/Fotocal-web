@@ -88,20 +88,17 @@
   }
 
   /* ── Nav model — single source of truth ──
-     Three shapes are supported:
-       href only                 -> plain link
-       children only             -> button that opens a panel
-       href AND children (split) -> the label is a real link, and a
-                                    separate caret button opens the panel
+     Two shapes:
+       href only      -> plain link
+       children only  -> ONE button that opens a panel; the chevron is
+                         decoration inside it, never a target of its own
 
-     Features used to be the split kind: the word navigated to the
-     overview and only the caret opened the panel. On a phone a tap on
-     the word resolved as the link, so someone who tapped it to see the
-     list of features was thrown onto a page they did not ask for. The
-     rule now: tapping the parent reveals the list and never navigates;
-     the first entry, "All features", is how you reach the overview.
-     The split shape is still supported below for any item that needs
-     it, but nothing uses it today. */
+     Features used to be a third, "split" shape: the word was a link to
+     the overview and a separate caret button opened the panel. On a phone
+     the word is the big target, so a tap meant to open the list landed on
+     a page nobody asked for. That shape is gone: the parent opens the
+     list and never navigates, and "All features" — the first entry — is
+     the one way to the overview. */
   var NAV = [
     { id: "home",         key: "nav.home",         href: u("") },
     { id: "features",     key: "nav.features",     children: [
@@ -171,30 +168,6 @@
       var links = item.children.map(function (c) {
         return '<li><a href="' + c.href + '">' + t(c.key) + '</a></li>';
       }).join("");
-
-      var caretBtn = function (cls, id) {
-        return '<button class="' + cls + '" type="button" aria-expanded="false" ' +
-               'aria-haspopup="true" aria-controls="' + id + '" ' +
-               'aria-label="' + t("nav.moreIn") + '">' + CARET + '</button>';
-      };
-
-      /* Split: label navigates, caret discloses. */
-      if (item.href) {
-        desktop += '<li class="nav-item nav-split' + sec + '" data-dropdown>' +
-          '<a class="nav-link" href="' + item.href + '">' + t(item.key) + '</a>' +
-          caretBtn("nav-caret-btn", pid) +
-          '<ul class="nav-panel" id="' + pid + '">' + links + '</ul>' +
-          '</li>';
-
-        mobile += '<li class="m-item m-split' + sec + '" data-dropdown>' +
-          '<div class="m-split-row">' +
-            '<a class="m-link" href="' + item.href + '">' + t(item.key) + '</a>' +
-            caretBtn("m-caret-btn", mid) +
-          '</div>' +
-          '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +
-          '</li>';
-        return;
-      }
 
       desktop += '<li class="nav-item' + sec + '" data-dropdown>' +
         '<button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true" ' +
@@ -651,10 +624,7 @@
     return open;
   }
 
-  /* Only the links INSIDE the disclosed panel are arrow-key targets. On a
-     split item the label is itself an <a>, and a bare item.querySelectorAll("a")
-     would make it links[0] — ArrowDown would then "enter the menu" by landing
-     back on the thing you just pressed the caret next to. */
+  /* Only the links INSIDE the disclosed panel are arrow-key targets. */
   function panelLinks(item) {
     return [].slice.call(item.querySelectorAll(".nav-panel a, .m-panel a"));
   }

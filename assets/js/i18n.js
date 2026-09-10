@@ -40,7 +40,6 @@ window.FOTOCAL_I18N = {
     "nav.lifestyle": "Lifestyle & Mindset",
     /* The four dedicated feature pages, added to the Features menu. */
     "nav.allFeatures": "All features",
-    "nav.moreIn": "Show feature pages",
     "nav.scanFood": "Scan food",
     "nav.scanBarcode": "Scan barcode",
     "nav.voiceLogging": "Voice logging",
@@ -350,7 +349,6 @@ window.FOTOCAL_I18N = {
     "nav.nutrition": "Nutrición y dieta",
     "nav.lifestyle": "Hábitos y mentalidad",
     "nav.allFeatures": "Todas las funciones",
-    "nav.moreIn": "Mostrar páginas de funciones",
     "nav.scanFood": "Escanear comida",
     "nav.scanBarcode": "Escanear código",
     "nav.voiceLogging": "Registro por voz",

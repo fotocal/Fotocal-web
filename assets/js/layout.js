@@ -94,15 +94,17 @@
        href AND children (split) -> the label is a real link, and a
                                     separate caret button opens the panel
 
-     Features is the split kind on purpose. It has its own overview page
-     that people ask for by name, so clicking the word must go there —
-     but it now also fronts four dedicated pages, and burying those
-     behind a page visit would hide them. A label-that-navigates plus a
-     caret-that-discloses is the only arrangement that serves both, and
-     it keeps the caret a real button with its own aria-expanded. */
+     Features used to be the split kind: the word navigated to the
+     overview and only the caret opened the panel. On a phone a tap on
+     the word resolved as the link, so someone who tapped it to see the
+     list of features was thrown onto a page they did not ask for. The
+     rule now: tapping the parent reveals the list and never navigates;
+     the first entry, "All features", is how you reach the overview.
+     The split shape is still supported below for any item that needs
+     it, but nothing uses it today. */
   var NAV = [
     { id: "home",         key: "nav.home",         href: u("") },
-    { id: "features",     key: "nav.features",     href: u("features/"), children: [
+    { id: "features",     key: "nav.features",     children: [
         { key: "nav.allFeatures",  href: u("features/") },
         { key: "nav.scanFood",     href: u("features/scan-food/") },
         { key: "nav.scanBarcode",  href: u("features/scan-barcode/") },
@@ -203,7 +205,7 @@
         '</li>';
 
       mobile += '<li class="m-item' + sec + '" data-dropdown>' +
-        '<button class="m-link" type="button" aria-expanded="false" aria-controls="' + mid + '">' +
+        '<button class="m-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="' + mid + '">' +
           '<span>' + t(item.key) + '</span>' + CARET +
         '</button>' +
         '<div class="m-panel" id="' + mid + '"><div class="m-panel-inner"><ul>' + links + '</ul></div></div>' +

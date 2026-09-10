@@ -116,6 +116,16 @@
 
   /* ═══════════ Scroll reveal ═══════════ */
   var revealEls = document.querySelectorAll(".reveal");
+  /* Siblings arrive in sequence: each .reveal that has no delay of its
+     own gets one from its position among the .reveal children of the
+     same parent — 90ms apart, capped so a long row never waits on the
+     last card. Runs once per element: the observer unobserves on entry. */
+  revealEls.forEach(function (el) {
+    if (el.style.getPropertyValue("--rd")) return;
+    var i = 0, n = el;
+    while ((n = n.previousElementSibling)) { if (n.classList.contains("reveal")) i++; }
+    if (i) el.style.setProperty("--rd", Math.min(i * 90, 450) + "ms");
+  });
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

@@ -60,9 +60,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/home.css">
   <link rel="preload" as="image" href="assets/img/screens/home-hero-es.webp" data-i18n-src="hero.img" data-srcset="700,1080" imagesizes="(min-width: 900px) 520px, min(340px, 78vw)" fetchpriority="high">
@@ -178,7 +176,7 @@
     </section>
 
     <!-- ═══════ 4 · LOG IT YOUR WAY — dark ═══════ -->
-    <section class="section sec-dark" id="features">
+    <section class="section sec-light-2" id="features">
       <div class="container">
         <div class="text-center">
           <span class="kicker reveal" data-i18n="log.kicker">Four ways to log</span>
@@ -187,7 +185,7 @@
         </div>
         <div class="log-wrap">
           <ul class="log-track" tabindex="0" aria-label="Four ways to log — swipe or use the arrow keys" data-i18n-aria="log.carousel">
-          <li class="log-card dk-card is-wide reveal">
+          <li class="log-card lt-card is-wide reveal">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg><span data-i18n="log.p.tag">Photo</span></span>
               <h3 data-i18n="log.p.t">Snap your plate</h3>
@@ -197,7 +195,7 @@
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-photo-es.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="The scan screen: the camera framing a chicken bowl" data-i18n-alt="log.p.alt" data-i18n-src="log.p.img"></div></div>
             </div>
           </li>
-          <li class="log-card dk-card reveal" style="--rd:.08s">
+          <li class="log-card lt-card reveal" style="--rd:.08s">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M8 8v8M11 8v8M14 8v8M17 8v8"/></svg><span data-i18n="log.b.tag">Photo</span></span>
               <h3 data-i18n="log.b.t">Scan the label</h3>
@@ -207,7 +205,7 @@
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-barcode-es.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Barcode result" data-i18n-alt="log.b.alt" data-i18n-src="log.b.img"></div></div>
             </div>
           </li>
-          <li class="log-card dk-card reveal" style="--rd:.16s">
+          <li class="log-card lt-card reveal" style="--rd:.16s">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg><span data-i18n="log.v.tag">Photo</span></span>
               <h3 data-i18n="log.v.t">Just say it</h3>
@@ -217,7 +215,7 @@
               <div class="dev-frame is-cut" data-lang-block="en"><div class="dev-screen"><img src="assets/img/screens/log-voice-en.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Voice logging: three foods recognised from speech, with calories and macros for each" data-i18n-alt="log.v.alt" data-i18n-src="log.v.img"></div></div><div class="dev-frame" data-lang-block="es"><div class="dev-screen"><div class="dev-pending"><span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span><small data-i18n="log.pending">Real app screen coming with the next capture sitting</small></div></div></div>
             </div>
           </li>
-          <li class="log-card dk-card is-wide reveal" style="--rd:.24s">
+          <li class="log-card lt-card is-wide reveal" style="--rd:.24s">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><span data-i18n="log.m.tag">Photo</span></span>
               <span class="fc-premium" data-i18n="log.premium">Premium</span>
@@ -284,7 +282,7 @@
     </section>
 
     <!-- ═══════ 7 · HABITS — light ═══════ -->
-    <section class="section sec-light" id="habits">
+    <section class="section sec-light-2" id="habits">
       <div class="container">
         <div class="text-center">
           <span class="kicker reveal" data-i18n="habit.kicker">Daily habits</span>
@@ -330,17 +328,17 @@
     </section>
 
     <!-- ═══════ 8 · PROGRESS — dark ═══════ -->
-    <section class="section sec-dark" id="progress">
+    <section class="section sec-light" id="progress">
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/progress-diet-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Progress, diet tab: calories consumed against the target and an estimate of daily energy expenditure" data-i18n-alt="prog.alt" data-i18n-src="prog.img"></div></div></div>
+            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/progress-diet-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Progress, diet tab: calories consumed against the target and an estimate of daily energy expenditure" data-i18n-alt="prog.alt" data-i18n-src="prog.img"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="prog.pill">The long game</span>
             <h2 class="section-title reveal" data-i18n="prog.t">Progress you can actually see</h2>
             <p class="section-sub reveal" data-i18n="prog.b">Log your weight in seconds and Fotocal turns it into a trend line that ignores the daily noise. Your TDEE — the calories your body actually burns — updates as you go, so your targets stay honest while your body changes.</p>
-            <ul class="check-list check-list-dark reveal">
+            <ul class="check-list check-list-lt reveal">
               <li data-i18n="prog.li1">Weight trends over weeks, not single mornings</li>
               <li data-i18n="prog.li2">TDEE and calorie targets that adapt to you</li>
               <li data-i18n="prog.li3">Clean charts you can read at a glance</li>

@@ -60,9 +60,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/home.css">
   <link rel="preload" as="image" href="assets/img/screens/hero-home-700-es.webp" imagesrcset="assets/img/screens/hero-home-700-es.webp 700w, assets/img/screens/hero-home-1080-es.webp 1080w" imagesizes="(min-width: 900px) 520px, min(340px, 78vw)" fetchpriority="high">
@@ -262,7 +260,7 @@
     </section>
 
     <!-- ═══════ 4 · LOG IT YOUR WAY — dark ═══════ -->
-    <section class="section sec-dark" id="features">
+    <section class="section sec-light-2" id="features">
       <div class="container">
         <div class="text-center">
           <span class="kicker reveal">Cuatro formas de registrar</span>
@@ -271,7 +269,7 @@
         </div>
         <div class="log-wrap">
           <ul class="log-track" tabindex="0" aria-label="Cuatro formas de registrar: desliza o usa las flechas">
-          <li class="log-card dk-card is-wide reveal">
+          <li class="log-card lt-card is-wide reveal">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Foto</span></span>
               <h3>Fotografía tu plato</h3>
@@ -281,7 +279,7 @@
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-photo-440-es.webp" srcset="assets/img/screens/log-photo-440-es.webp 440w, assets/img/screens/log-photo-660-es.webp 660w" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="La pantalla de escaneo: la cámara encuadra un bol de pollo"></div></div>
             </div>
           </li>
-          <li class="log-card dk-card reveal" style="--rd:.08s">
+          <li class="log-card lt-card reveal" style="--rd:.08s">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M8 8v8M11 8v8M14 8v8M17 8v8"/></svg><span>Código de barras</span></span>
               <h3>Escanea la etiqueta</h3>
@@ -291,7 +289,7 @@
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-barcode-440-es.webp" srcset="assets/img/screens/log-barcode-440-es.webp 440w, assets/img/screens/log-barcode-660-es.webp 660w" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Resultado del código de barras: Red Bull Sugarfree, puntuación de salud 24 de 100, aditivos y energía marcados, azúcar y sal bajos"></div></div>
             </div>
           </li>
-          <li class="log-card dk-card reveal" style="--rd:.16s">
+          <li class="log-card lt-card reveal" style="--rd:.16s">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg><span>Voz</span></span>
               <h3>Solo dilo</h3>
@@ -301,7 +299,7 @@
               <div class="dev-frame"><div class="dev-screen"><div class="dev-pending"><span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span><small>Pantalla real de la app en la próxima sesión de capturas</small></div></div></div>
             </div>
           </li>
-          <li class="log-card dk-card is-wide reveal" style="--rd:.24s">
+          <li class="log-card lt-card is-wide reveal" style="--rd:.24s">
             <div class="log-body">
               <span class="log-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><span>Carta</span></span>
               <span class="fc-premium">Premium</span>
@@ -368,7 +366,7 @@
     </section>
 
     <!-- ═══════ 7 · HABITS — light ═══════ -->
-    <section class="section sec-light" id="habits">
+    <section class="section sec-light-2" id="habits">
       <div class="container">
         <div class="text-center">
           <span class="kicker reveal">Hábitos diarios</span>
@@ -414,17 +412,17 @@
     </section>
 
     <!-- ═══════ 8 · PROGRESS — dark ═══════ -->
-    <section class="section sec-dark" id="progress">
+    <section class="section sec-light" id="progress">
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/progress-diet-600-es.webp" srcset="assets/img/screens/progress-diet-600-es.webp 600w, assets/img/screens/progress-diet-900-es.webp 900w" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Progreso, pestaña Dieta: 950 kcal al día consumidas frente a un objetivo de 1.507 con el reparto de macros, y un gasto estimado de 2.551 kcal al día entre metabolismo, actividad y ejercicio"></div></div></div>
+            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/progress-diet-600-es.webp" srcset="assets/img/screens/progress-diet-600-es.webp 600w, assets/img/screens/progress-diet-900-es.webp 900w" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Progreso, pestaña Dieta: 950 kcal al día consumidas frente a un objetivo de 1.507 con el reparto de macros, y un gasto estimado de 2.551 kcal al día entre metabolismo, actividad y ejercicio"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal">El largo plazo</span>
             <h2 class="section-title reveal">Progreso que se ve de verdad</h2>
             <p class="section-sub reveal">Registra tu peso en segundos y Fotocal lo convierte en una línea de tendencia que ignora el ruido diario. Tu TDEE — las calorías que tu cuerpo quema de verdad — se actualiza sobre la marcha, para que tus objetivos sigan siendo honestos mientras tu cuerpo cambia.</p>
-            <ul class="check-list check-list-dark reveal">
+            <ul class="check-list check-list-lt reveal">
               <li>Tendencias de peso por semanas, no por mañanas sueltas</li>
               <li>TDEE y objetivos de calorías que se adaptan a ti</li>
               <li>Gráficas limpias que se leen de un vistazo</li>

@@ -358,13 +358,36 @@
   }
   if (TOPBAR_ENABLED && !topbarDismissed() && !document.getElementById("fcTopbar")) {
     document.body.insertAdjacentHTML("afterbegin", topbarHTML());
-    document.body.classList.add("fc-topbar-on");
-    document.querySelector(".fc-topbar-x").addEventListener("click", function () {
-      var bar = document.getElementById("fcTopbar");
-      if (bar) bar.parentNode.removeChild(bar);
+    var topbar = document.getElementById("fcTopbar");
+    topbar.querySelector(".fc-topbar-x").addEventListener("click", function () {
+      topbar.parentNode.removeChild(topbar); topbar = null;
       document.body.classList.remove("fc-topbar-on");
+      window.removeEventListener("scroll", topbarSchedule);
       try { window.localStorage.setItem(TOPBAR_KEY, "1"); } catch (e) { /* storage blocked: the bar simply returns next time */ }
     });
+    /* Not at the top of the page: the hero's own button is on screen
+       there. The bar slides in once the hero has scrolled past, and
+       stays. rAF-throttled: one class toggle per frame at most. */
+    var topbarHero = document.querySelector(".hero-x, .sp-hero, .sb-hero");
+    var topbarOn = false, topbarQueued = false;
+    function topbarThreshold() {
+      if (!topbarHero) return 320;
+      return topbarHero.getBoundingClientRect().bottom + window.pageYOffset - 72;
+    }
+    function topbarApply() {
+      topbarQueued = false;
+      if (!topbar) return;
+      var want = window.pageYOffset > topbarThreshold();
+      if (want !== topbarOn) {
+        topbarOn = want;
+        topbar.classList.toggle("is-on", want);
+        document.body.classList.toggle("fc-topbar-on", want);
+      }
+    }
+    function topbarSchedule() { if (!topbarQueued) { topbarQueued = true; window.requestAnimationFrame(topbarApply); } }
+    window.addEventListener("scroll", topbarSchedule, { passive: true });
+    window.addEventListener("resize", topbarSchedule);
+    topbarApply();
   }
 
   function appbarHTML() {

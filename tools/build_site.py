@@ -28,6 +28,7 @@ WHAT IT DOES PER PAGE
   · data-i18n-html   -> element inner HTML
   · data-i18n-alt / -ph / -aria / -src -> the matching attribute
   · data-lang-block  -> keep this language's block, drop the other
+  · <!--# … -->      -> a source-only comment (notes to whoever edits src/), dropped
   · <html lang>, <title>, <meta description>, og/twitter title+description
   · canonical -> itself;  hreflang es + en + x-default -> the pair
   · internal links rewritten so an English page links to English pages
@@ -218,6 +219,9 @@ def render_attr_nodes(src, dic, missing):
 
 
 BLOCK_OPEN = re.compile(r'<(?P<tag>[a-zA-Z0-9]+)(?P<attrs>[^>]*?\bdata-lang-block="(?P<lang>[a-z]{2})"[^>]*?)>', re.S)
+
+
+SOURCE_ONLY = re.compile(r'[ \t]*<!--#.*?-->[ \t]*\n?', re.S)
 
 
 def render_lang_blocks(src, lang):
@@ -564,7 +568,7 @@ def main():
     for rel in srcs:
         raw = open(os.path.join(SRC, rel), encoding="utf-8").read()
         for lang in LANGS:
-            s = raw
+            s = SOURCE_ONLY.sub("", raw)
             s = render_lang_blocks(s, lang)
             s = render_text_nodes(s, dic[lang], missing)
             s = render_attr_nodes(s, dic[lang], missing)

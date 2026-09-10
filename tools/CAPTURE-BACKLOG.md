@@ -5,10 +5,17 @@ Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
 ## Still missing after sitting 2 (home page)
-  · Barcode result — SPANISH (assets/img/screens/log-barcode-es.webp)
   · Voice logging — SPANISH (assets/img/screens/log-voice-es.webp)
-  Both cards show an empty frame with a note on the Spanish site until
-  then. English is real. Nothing else is needed for the home page.
+    What to send: the voice result screen ("Esto es lo que he entendido"
+    / the list of recognised foods with calories and macros — the same
+    screen as tools/captures/s2/voice-en.jpg), app in Spanish, light
+    theme, phone screenshot as it comes: 1080x2400, PNG or JPG, nothing
+    cropped or marked. Ideally say exactly «Dos huevos y tostada con
+    aguacate», the sentence the card quotes, so screen and copy match.
+    Until then the Spanish card shows its own utterance instead of a
+    phone — src/index.html marks the single place the capture drops in
+    and the exact crop command. The English card is real. The barcode
+    pair is complete. Nothing else is needed for the home page.
 
 ## Optional, same states as the English ones already taken
   · Home pair in the SAME header state: the English home shows the

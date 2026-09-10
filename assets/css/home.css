@@ -205,6 +205,22 @@
 .log-media .dev-frame:not(.is-cut) .dev-screen { aspect-ratio: 720 / 1038; height: auto; }   /* the bento crop's own shape, so it is the same height as its neighbours */
 .log-media .dev-frame:not(.is-cut) .dev-screen { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .log-card:hover .log-media .dev-frame { transform: translateY(-6px); }
+/* The voice card on the Spanish tree has no capture yet (src/index.html
+   says exactly what drops in). Until then the media side is the card's own
+   utterance set in the display face, the feature's mark above it, a level
+   meter in the brand gradient below: everything the card already has,
+   nothing borrowed from another screen. Same tokens as the tiles. */
+.log-media .voice-say { align-self: center; display: grid; justify-items: center; gap: .9rem; text-align: center; margin: 0 auto; padding: .4rem 1.4rem 1.6rem; max-width: 300px; }
+.voice-say-ico { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--tile-bg); color: var(--tile-fg); }
+.voice-say-ico svg { width: 22px; height: 22px; }
+.voice-say-q { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--text); margin: 0; text-wrap: balance; }
+.voice-say-wave { display: flex; align-items: center; gap: 4px; height: 28px; }
+.voice-say-wave i { display: block; width: 4px; border-radius: 2px; background: var(--grad); height: 8px; }
+.voice-say-wave i:nth-child(2), .voice-say-wave i:nth-child(10) { height: 14px; }
+.voice-say-wave i:nth-child(3), .voice-say-wave i:nth-child(9) { height: 22px; }
+.voice-say-wave i:nth-child(4), .voice-say-wave i:nth-child(8) { height: 12px; }
+.voice-say-wave i:nth-child(5), .voice-say-wave i:nth-child(7) { height: 26px; }
+.voice-say-wave i:nth-child(6) { height: 18px; }
 .log-nav { display: flex; justify-content: center; gap: .6rem; margin-top: .2rem; }
 .log-btn {
   width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
@@ -227,6 +243,7 @@
   .log-body { flex: 1 1 auto; padding: 1.6rem 0 1.6rem 1.7rem; align-self: center; }
   .log-media { flex: 0 0 256px; margin: 0; padding: 1.5rem 1.2rem 0 0; }
   .log-media .dev-frame { width: 220px; }
+  .log-media .voice-say { padding: 0 0 .4rem; }
   .log-nav { display: none; }
 }
 @media (prefers-reduced-motion: no-preference) { .log-track { scroll-behavior: smooth; } }

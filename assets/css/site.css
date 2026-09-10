@@ -430,6 +430,35 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
 .play-badge-glass:hover { background: rgba(var(--white-rgb),.2); box-shadow: inset 0 1px 0 rgba(var(--white-rgb),.3), var(--shadow-card); }
 
 /* ═══════════════════════════════════════════════
+   TOP INSTALL BAR  (markup injected by assets/js/layout.js; phones only)
+   In normal flow above the header, sticky at the top; the header's own
+   sticky offset moves down by the bar's height while it is open.
+   ═══════════════════════════════════════════════ */
+:root { --topbar-h: 52px; }
+.fc-topbar {
+  display: none; position: sticky; top: 0; z-index: 101;
+  height: var(--topbar-h); align-items: center; gap: .6rem; padding: 0 .55rem 0 .8rem;
+  background: var(--dark); color: var(--on-dark);
+  border-bottom: 1px solid rgba(var(--on-dark-rgb),.08);
+}
+.fc-topbar-ico { width: 32px; height: 32px; border-radius: 8px; flex: none; }
+.fc-topbar-txt { flex: 1 1 auto; min-width: 0; line-height: 1.15; font-size: .78rem; color: var(--on-dark-soft); }
+.fc-topbar-txt strong { display: block; font-size: .86rem; color: var(--on-dark); }
+.fc-topbar-txt span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fc-topbar-cta { flex: none; min-height: 36px; padding: .45rem .9rem; font-size: .82rem; box-shadow: none; }
+.fc-topbar-x {
+  flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  color: var(--on-dark-soft);
+}
+.fc-topbar-x svg { width: 18px; height: 18px; }
+.fc-topbar-x:hover { color: var(--on-dark); background: rgba(var(--on-dark-rgb),.08); }
+@media (max-width: 899px) {
+  .fc-topbar { display: flex; }
+  body.fc-topbar-on #site-nav { top: var(--topbar-h); }   /* #site-nav is the sticky holder, not .nav-wrap */
+  body.fc-topbar-on .nav-mobile { inset: calc(var(--nav-h) + var(--topbar-h)) 0 0; }
+}
+
+/* ═══════════════════════════════════════════════
    NAVBAR  (markup injected by assets/js/layout.js)
    ═══════════════════════════════════════════════ */
 .nav-wrap {

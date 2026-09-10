@@ -223,8 +223,6 @@
               '<span class="lang-sep">/</span>' +
               '<span class="lang-opt" data-lang="es">ES</span>' +
             '</button>' +
-            '<a class="btn btn-cta btn-sm btn-nav" href="' + PLAY_URL + '" target="_blank" rel="noopener">' +
-              t("nav.cta") + '</a>' +
             '<button class="nav-burger" id="navBurger" type="button" aria-expanded="false" ' +
               'aria-controls="navMobile" aria-label="Menu">' +
               '<span></span><span></span><span></span>' +
@@ -330,6 +328,44 @@
      scroll, dismissal, the body padding — is still here and still
      tested; flip this flag to bring it back if installs drop. */
   var APPBAR_ENABLED = false;
+
+  /* ═══════════ Top install bar (mobile) ═══════════
+     A slim bar pinned above the header on phones, the way an app-install
+     banner works: icon, one line, our button, an X. It replaces the
+     header download pill. Dismissal is remembered in localStorage so it
+     never comes back on any page; a browser that blocks storage just
+     shows it again. It sits in normal flow above the sticky header (the
+     header's sticky offset follows it via body.fc-topbar-on), so content
+     starts below it and closing it leaves no gap. Mobile only: on a
+     desktop there is no app to install on that device, and the hero's
+     own button is on screen. One flag turns it off. */
+  var TOPBAR_ENABLED = true;
+  var TOPBAR_KEY = "fc_topbar_dismissed";
+
+  function topbarDismissed() {
+    try { return window.localStorage.getItem(TOPBAR_KEY) === "1"; } catch (e) { return false; }
+  }
+  function topbarHTML() {
+    return '' +
+      '<div class="fc-topbar" id="fcTopbar" role="region" aria-label="' + t("cta.get") + '">' +
+        '<img class="fc-topbar-ico" src="' + asset("assets/img/logo-64.png") + '" width="32" height="32" alt="">' +
+        '<p class="fc-topbar-txt"><strong>Fotocal</strong><span>' + t("bar.line") + '</span></p>' +
+        '<a class="btn btn-cta btn-sm fc-topbar-cta" href="' + PLAY_URL + '" target="_blank" rel="noopener">' + t("cta.free") + '</a>' +
+        '<button class="fc-topbar-x" type="button" aria-label="' + t("cta.dismiss") + '">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>' +
+        '</button>' +
+      '</div>';
+  }
+  if (TOPBAR_ENABLED && !topbarDismissed() && !document.getElementById("fcTopbar")) {
+    document.body.insertAdjacentHTML("afterbegin", topbarHTML());
+    document.body.classList.add("fc-topbar-on");
+    document.querySelector(".fc-topbar-x").addEventListener("click", function () {
+      var bar = document.getElementById("fcTopbar");
+      if (bar) bar.parentNode.removeChild(bar);
+      document.body.classList.remove("fc-topbar-on");
+      try { window.localStorage.setItem(TOPBAR_KEY, "1"); } catch (e) { /* storage blocked: the bar simply returns next time */ }
+    });
+  }
 
   function appbarHTML() {
     return '' +
@@ -461,7 +497,8 @@
      then shows and stays (body.fc-cta-on; the CSS does the rest, on
      every width). Pages without a hero block get it after the first
      screen. rAF-throttled: one class toggle per frame at most. */
-  (function () {
+  var HEADER_CTA_ENABLED = false;   /* the header pill is gone; the top bar replaced it */
+  if (HEADER_CTA_ENABLED) (function () {
     var hero = document.querySelector(".hero-x, .sp-hero, .sb-hero");
     var on = false, queued = false;
     function threshold() {

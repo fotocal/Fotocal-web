@@ -65,7 +65,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/home.css">
-  <link rel="preload" as="image" href="assets/img/screens/home-hero-es.webp" data-i18n-src="hero.img" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/screens/home-hero-es.webp" data-i18n-src="hero.img" data-srcset="700,1080" imagesizes="(min-width: 900px) 520px, min(340px, 78vw)" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -115,27 +115,15 @@
             <span class="kicker" data-i18n="hero.eyebrow">AI nutrition tracking · Android</span>
             <h1 class="hero-title" data-i18n-html="hero.title">One photo. All your nutrition, <em class="accent">instantly</em>.</h1>
             <p class="hero-sub" data-i18n="hero.sub">Snap your meal and get calories, macros and a health score in seconds. Nothing to weigh.</p>
-            <div class="cta-group"><a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
-            <a class="play-badge play-badge-sm play-badge-glass" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play" data-i18n-aria="cta.badgeAria">
-              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
-                <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
-                <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
-                <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
-                <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
-              </svg>
-              <span class="play-badge-text">
-                <small data-i18n="cta.badgeTop">GET IT ON</small>
-                <strong>Google Play</strong>
-              </span>
-            </a></div>
-            <span class="hero-note" data-i18n="hero.note">Free to download · 5-day trial on the yearly plan · Android</span>
+            <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
+            <span class="hero-note" data-i18n="cta.play">On Google Play · Android</span>
           </div>
 
           <div class="hero-visual">
             <div class="hero-glow" aria-hidden="true"></div>
             <div class="hero-stage-x" id="heroStage">
               <div class="hero-device" data-par="6">
-                <div class="dev-frame is-cut dev-frame-lg"><div class="dev-screen"><img src="assets/img/screens/hero-home-es.webp" width="1080" height="1254" fetchpriority="high" decoding="async" alt="Real app screenshot: the Fotocal home screen on a logged day" data-i18n-alt="hero.alt" data-i18n-src="hero.img"></div></div>
+                <div class="dev-frame is-cut dev-frame-lg"><div class="dev-screen"><img src="assets/img/screens/hero-home-es.webp" data-srcset="700,1080" sizes="(min-width: 900px) 520px, min(340px, 78vw)" width="700" height="813" fetchpriority="high" decoding="async" alt="Real app screenshot: the Fotocal home screen on a logged day" data-i18n-alt="hero.alt" data-i18n-src="hero.img"></div></div>
               </div>
             </div>
           </div>
@@ -175,33 +163,17 @@
         <ol class="how-steps">
           <li class="how-tile reveal">
             <div class="how-copy"><h3 data-i18n="how.s1t">Snap a photo</h3><p data-i18n="how.s1b">Open Fotocal and photograph your plate. Home-cooked, restaurant, or last night's leftovers — it all works.</p></div>
-            <div class="tile-media"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/step-camera-es.webp" width="941" height="1752" loading="lazy" decoding="async" alt="The scan screen: the camera framing a chicken bowl" data-i18n-alt="how.camAlt" data-i18n-src="how.camImg"></div></div></div>
+            <div class="tile-media"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/step-camera-es.webp" data-srcset="460,690" sizes="230px" width="460" height="856" loading="lazy" decoding="async" alt="The scan screen: the camera framing a chicken bowl" data-i18n-alt="how.camAlt" data-i18n-src="how.camImg"></div></div></div>
           </li>
           <li class="how-tile reveal" style="--rd:.1s">
             <div class="how-copy"><h3 data-i18n="how.s2t">The AI reads it</h3><p data-i18n="how.s2b">In seconds it identifies every ingredient, estimates the portion, and works out calories, macros, micronutrients and a health score.</p></div>
-            <div class="tile-media"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/step-result-es.webp" width="960" height="1788" loading="lazy" decoding="async" alt="The result: Baked Chicken Bowl, health score 79, 475 kcal" data-i18n-alt="how.resAlt" data-i18n-src="how.resImg"></div></div></div>
+            <div class="tile-media"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/step-result-es.webp" data-srcset="460,690" sizes="230px" width="460" height="857" loading="lazy" decoding="async" alt="The result: Baked Chicken Bowl, health score 79, 475 kcal" data-i18n-alt="how.resAlt" data-i18n-src="how.resImg"></div></div></div>
           </li>
           <li class="how-tile reveal" style="--rd:.2s">
             <div class="how-copy"><h3 data-i18n="how.s3t">It's logged</h3><p data-i18n="how.s3b">The meal drops straight into your diary and your whole day updates itself — calories left, macros, water, streak. Done.</p></div>
-            <div class="tile-media"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/step-day-es.webp" width="960" height="1788" loading="lazy" decoding="async" alt="Your day, updated: calories, protein, carbs and fat with the meal counted in" data-i18n-alt="how.dayAlt" data-i18n-src="how.dayImg"></div></div></div>
+            <div class="tile-media"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/step-day-es.webp" data-srcset="460,690" sizes="230px" width="460" height="857" loading="lazy" decoding="async" alt="Your day, updated: calories, protein, carbs and fat with the meal counted in" data-i18n-alt="how.dayAlt" data-i18n-src="how.dayImg"></div></div></div>
           </li>
         </ol>
-        <div class="how-cta reveal">
-          <div class="cta-group"><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
-            <a class="play-badge play-badge-sm" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play" data-i18n-aria="cta.badgeAria">
-              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
-                <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
-                <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
-                <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
-                <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
-              </svg>
-              <span class="play-badge-text">
-                <small data-i18n="cta.badgeTop">GET IT ON</small>
-                <strong>Google Play</strong>
-              </span>
-            </a></div>
-          <span class="how-cta-note" data-i18n="how.ctanote">5-day free trial · Android</span>
-        </div>
       </div>
     </section>
 
@@ -222,7 +194,7 @@
               <p data-i18n="log.p.b">One photo and the AI returns calories, macros and a health score. Adjust the portion or ingredients before saving — you're always in control.</p>
             </div>
             <div class="log-media">
-              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-photo-es.webp" width="720" height="1038" loading="lazy" decoding="async" alt="The scan screen: the camera framing a chicken bowl" data-i18n-alt="log.p.alt" data-i18n-src="log.p.img"></div></div>
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-photo-es.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="The scan screen: the camera framing a chicken bowl" data-i18n-alt="log.p.alt" data-i18n-src="log.p.img"></div></div>
             </div>
           </li>
           <li class="log-card dk-card reveal" style="--rd:.08s">
@@ -232,7 +204,7 @@
               <p data-i18n="log.b.b">Point at any product's barcode for full nutrition plus a clear health score — know whether it's worth buying before it's in your basket.</p>
             </div>
             <div class="log-media">
-              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-barcode-es.webp" width="720" height="1039" loading="lazy" decoding="async" alt="Barcode result" data-i18n-alt="log.b.alt" data-i18n-src="log.b.img"></div></div>
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-barcode-es.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Barcode result" data-i18n-alt="log.b.alt" data-i18n-src="log.b.img"></div></div>
             </div>
           </li>
           <li class="log-card dk-card reveal" style="--rd:.16s">
@@ -242,7 +214,7 @@
               <p data-i18n="log.v.b">&quot;Two eggs and toast with avocado&quot; — say it out loud and it's logged. Perfect for busy mornings, messy hands and walking out the door.</p>
             </div>
             <div class="log-media">
-              <div class="dev-frame is-cut" data-lang-block="en"><div class="dev-screen"><img src="assets/img/screens/log-voice-en.webp" width="720" height="1039" loading="lazy" decoding="async" alt="Voice logging: three foods recognised from speech, with calories and macros for each" data-i18n-alt="log.v.alt" data-i18n-src="log.v.img"></div></div><div class="dev-frame" data-lang-block="es"><div class="dev-screen"><div class="dev-pending"><span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span><small data-i18n="log.pending">Real app screen coming with the next capture sitting</small></div></div></div>
+              <div class="dev-frame is-cut" data-lang-block="en"><div class="dev-screen"><img src="assets/img/screens/log-voice-en.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Voice logging: three foods recognised from speech, with calories and macros for each" data-i18n-alt="log.v.alt" data-i18n-src="log.v.img"></div></div><div class="dev-frame" data-lang-block="es"><div class="dev-screen"><div class="dev-pending"><span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span><small data-i18n="log.pending">Real app screen coming with the next capture sitting</small></div></div></div>
             </div>
           </li>
           <li class="log-card dk-card is-wide reveal" style="--rd:.24s">
@@ -253,7 +225,7 @@
               <p data-i18n="log.m.b">At a restaurant? Point the camera at the menu and see estimated calories for each dish — order with your eyes open.</p>
             </div>
             <div class="log-media">
-              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-menu-es.webp" width="720" height="1039" loading="lazy" decoding="async" alt="Menu scan: four set menus with calories and macros, the best fit for the day highlighted" data-i18n-alt="log.m.alt" data-i18n-src="log.m.img"></div></div>
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-menu-es.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Menu scan: four set menus with calories and macros, the best fit for the day highlighted" data-i18n-alt="log.m.alt" data-i18n-src="log.m.img"></div></div>
             </div>
           </li>
           </ul>
@@ -270,7 +242,7 @@
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-light tile-tall"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/nutri-detail-es.webp" width="960" height="1566" loading="lazy" decoding="async" alt="Food detail: Baked Chicken Bowl, 475 kcal, 40 g protein, 60 g carbs, 15 g fat, fibre, sugar, saturated fat and sodium" data-i18n-alt="nutri.frameAlt" data-i18n-src="nutri.img"></div></div></div>
+            <div class="tile tile-light tile-tall"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/nutri-detail-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Food detail: Baked Chicken Bowl, 475 kcal, 40 g protein, 60 g carbs, 15 g fat, fibre, sugar, saturated fat and sodium" data-i18n-alt="nutri.frameAlt" data-i18n-src="nutri.img"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="nutri.pill">Beyond calories</span>
@@ -295,7 +267,7 @@
       <div class="container">
         <div class="split">
           <div class="split-visual reveal">
-            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/coach-chat-es.webp" width="960" height="1567" loading="lazy" decoding="async" alt="The Coach Kal chat: the user asks about a scanned chicken bowl and Kal answers with the numbers from their day" data-i18n-alt="coach.alt" data-i18n-src="coach.img"></div></div></div>
+            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/coach-chat-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="The Coach Kal chat: the user asks about a scanned chicken bowl and Kal answers with the numbers from their day" data-i18n-alt="coach.alt" data-i18n-src="coach.img"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="coach.pill">Meet Coach Kal</span>
@@ -320,7 +292,7 @@
           <p class="section-sub mx-auto reveal" data-i18n="habit.sub">Big changes are small habits, repeated. Fotocal makes the repeating the easy part.</p>
         </div>
         <div class="habit-layout">
-          <div class="tile tile-light habit-tile reveal"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/habits-activity-es.webp" width="960" height="1567" loading="lazy" decoding="async" alt="The activity tracker on the home screen: 7,751 steps, 7 glasses of water, 2 meals" data-i18n-alt="habit.frameAlt" data-i18n-src="habit.img"></div></div></div>
+          <div class="tile tile-light habit-tile reveal"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/habits-activity-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="The activity tracker on the home screen: 7,751 steps, 7 glasses of water, 2 meals" data-i18n-alt="habit.frameAlt" data-i18n-src="habit.img"></div></div></div>
           <ul class="habit-grid">
             <li class="habit-card reveal">
               <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7S6 10 6 14.5a6 6 0 0 0 12 0C18 10 12 2.7 12 2.7z"/></svg></div>
@@ -362,7 +334,7 @@
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/progress-diet-es.webp" width="960" height="1567" loading="lazy" decoding="async" alt="Progress, diet tab: calories consumed against the target and an estimate of daily energy expenditure" data-i18n-alt="prog.alt" data-i18n-src="prog.img"></div></div></div>
+            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/progress-diet-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Progress, diet tab: calories consumed against the target and an estimate of daily energy expenditure" data-i18n-alt="prog.alt" data-i18n-src="prog.img"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="prog.pill">The long game</span>
@@ -414,9 +386,6 @@
           </table>
         </div>
         <p class="compare-note reveal" data-i18n="cmp.note">Competitor features and prices are based on publicly available information (2026) and can change. Fotocal is Android-only for now.</p>
-        <div class="compare-cta reveal">
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cmp.cta">Get Fotocal on Google Play</a>
-        </div>
       </div>
     </section>
 
@@ -470,20 +439,8 @@
         <div class="final-band-inner reveal">
           <h2 data-i18n-html="cta.title">Your next meal can <em class="accent-white">count itself</em>.</h2>
           <p data-i18n="cta.sub">Download Fotocal and see how easy eating better gets when the hard part is a photo. The first 5 days of Premium are on us.</p>
-          <div class="cta-group"><a class="btn btn-white btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
-            <a class="play-badge play-badge-sm play-badge-glass" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play" data-i18n-aria="cta.badgeAria">
-              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
-                <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
-                <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
-                <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
-                <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
-              </svg>
-              <span class="play-badge-text">
-                <small data-i18n="cta.badgeTop">GET IT ON</small>
-                <strong>Google Play</strong>
-              </span>
-            </a></div>
-          <span class="final-note" data-i18n="cta.note">Free download · 5-day Premium trial · Android</span>
+          <a class="btn btn-white btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
+          <span class="final-note" data-i18n="cta.play">On Google Play · Android</span>
         </div>
       </div>
     </section>

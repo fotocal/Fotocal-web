@@ -198,6 +198,21 @@ def render_attr_nodes(src, dic, missing):
                 attrs = attrs.rstrip() + ' %s="%s"' % (tgt, esc_attr(val))
             attrs = re.sub(r'\s+data-i18n-%s="%s"' % (kind, re.escape(key)),
                            "", attrs, count=1)
+        # data-srcset="440,660": the screen crops exist at several widths,
+        # named <name>-<w>-<lang>.webp so the language suffix stays last
+        # (check 9 keys on it). src becomes the smallest candidate; the
+        # browser picks by its own pixel density from srcset, so a 2x
+        # phone never downloads the 3x file.
+        ms = re.search(r'\s+data-srcset="([^"]*)"', attrs)
+        if ms:
+            widths = [int(w) for w in ms.group(1).split(",") if w.strip()]
+            # a <link rel="preload"> carries the same set as imagesrcset on href
+            srcattr, setattr_ = ("href", "imagesrcset") if tag.lower() == "link" else ("src", "srcset")
+            msrc = re.search(r'(?<!-)\b%s="([^"]*)"' % srcattr, attrs)
+            base = msrc.group(1)
+            cands = [(w, re.sub(r'-(es|en)\.webp$', r'-%d-\1.webp' % w, base)) for w in widths]
+            attrs = attrs.replace(msrc.group(0), '%s="%s"' % (srcattr, cands[0][1]), 1)
+            attrs = attrs.replace(ms.group(0), ' %s="%s"' % (setattr_, ", ".join("%s %dw" % (c, w) for w, c in cands)), 1)
         return "<%s%s>" % (tag, attrs)
     return TAG_WITH_ATTR_MARKER.sub(rep, src)
 
@@ -303,7 +318,8 @@ def rewrite_links(src, lang, rel_path):
             out.append(" ".join([retarget(bits[0])] + bits[1:]))
         return 'srcset="%s"' % ", ".join(out)
 
-    return re.sub(r'\bsrcset="([^"]*)"', rep_srcset, src)
+    # imagesrcset (on a preload link) is the same list under another name
+    return re.sub(r'\b(?:image)?srcset="([^"]*)"', lambda m: rep_srcset(m).replace('srcset="', m.group(0)[:m.group(0).index('=')] + '="', 1), src)
 
 
 HEAD_PATTERNS = [

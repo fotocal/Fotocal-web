@@ -100,6 +100,8 @@ window.FOTOCAL_I18N = {
     "hero.alt": "Real app screenshot: the Fotocal home screen on a 10-day streak — 855 kcal eaten, 1,191 left, 539 burned, and the day's carbs, protein and fat",
     "hero.img": "assets/img/screens/hero-home-en.webp",
     "cta.badgeTop": "GET IT ON",
+    "cta.play": "On Google Play · Android",
+    "bar.line": "Count calories with a photo",
     "cta.free": "Get it free",
     "hero.note": "Free to download · 5-day trial on the yearly plan · Android",
 
@@ -407,6 +409,8 @@ window.FOTOCAL_I18N = {
     "hero.alt": "Captura real de la app: la pantalla de inicio de Fotocal con una racha de 10 días — 855 kcal ingeridas, 1.191 restantes, 539 quemadas, y los carbohidratos, la proteína y las grasas del día",
     "hero.img": "assets/img/screens/hero-home-es.webp",
     "cta.badgeTop": "DISPONIBLE EN",
+    "cta.play": "En Google Play · Android",
+    "bar.line": "Cuenta calorías con una foto",
     "cta.free": "Descárgala gratis",
     "hero.note": "Descarga gratuita · 5 días de prueba en el plan anual · Android",
 

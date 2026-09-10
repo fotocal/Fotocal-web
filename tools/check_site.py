@@ -244,7 +244,7 @@ def main():
 
         for attr in ("data-i18n", "data-i18n-html", "data-i18n-alt",
                      "data-i18n-ph", "data-i18n-aria", "data-i18n-src",
-                     "data-lang-block"):
+                     "data-lang-block", "data-srcset"):
             if re.search(r'\b%s="' % attr, html):
                 fail(rel, "%s survived into the output" % attr)
         if "{{i18n:" in html:

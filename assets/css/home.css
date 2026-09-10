@@ -334,8 +334,21 @@
 .bubble p { font-size: .87rem; color: var(--muted); margin: 0; }
 
 /* ═══════════════════════════════════════════════
-   MORE THAN CALORIES — animated macro bars + micro chips
+   MORE THAN CALORIES — the food-detail screen in a frame, beside the
+   macro bars, micronutrient chips and the health score. The frame stands
+   whole on the white ground with one soft brand glow behind it, the way
+   the hero's phone does; the data side is the site's own infographic,
+   drawn from the macro tokens, and never pretends to be the app.
    ═══════════════════════════════════════════════ */
+.nutri-stage { position: relative; width: min(230px, 60%); margin-inline: auto; padding: 1.5rem 0; }
+.nutri-stage::before {
+  content: ""; position: absolute; inset: -12% -30%; border-radius: 50%; z-index: 0; pointer-events: none;
+  background: radial-gradient(closest-side, var(--glow-coral), transparent 72%);
+  filter: blur(28px); opacity: .7;
+}
+.nutri-frame { position: relative; z-index: 1; }
+@media (min-width: 900px) { .nutri-stage { width: min(300px, 78%); } }
+
 .macro-panel {
   background: var(--surface); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.15rem 1.25rem;

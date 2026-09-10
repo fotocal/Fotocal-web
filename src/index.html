@@ -439,10 +439,18 @@
       <div class="container">
         <div class="flow-row flip reveal" style="border:0">
           <div class="flow-visual">
-            <div class="illus" style="max-width:470px">
-              <img src="assets/img/illustrations/nutrition.webp" width="1100" height="1100" loading="lazy" decoding="async"
-                   alt="Illustration: a colorful bowl surrounded by protein, carb and fat chips and vitamin badges"
-                   data-i18n-alt="nutri.alt">
+            <!-- The food-detail screen (micronutrients + health score) goes
+                 in this frame as an ES + EN pair from a later sitting; until
+                 then the frame says so. -->
+            <div class="nutri-stage" aria-hidden="true">
+              <div class="dev-frame nutri-frame">
+                <div class="dev-screen">
+                  <div class="dev-pending">
+                    <span class="dev-pending-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></span>
+                    <small data-i18n="log.pending">Real app screen coming with the next capture sitting</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="flow-copy">

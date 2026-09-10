@@ -37,9 +37,16 @@ jobs:
 
       # Build inputs must not be published. Left in place, src/ would serve
       # 71 untranslated duplicates of every page at /src/… — the exact
-      # duplicate-content problem the two-tree split exists to avoid.
+      # duplicate-content problem the two-tree split exists to avoid —
+      # and tools/ holds raw phone captures, working notes and scripts.
+      # README.md and deploy-trigger.txt are repository housekeeping, not
+      # site pages. (This step only protects the deploy made by THIS
+      # workflow: while the repository's Pages source is still "Deploy from
+      # a branch", GitHub also publishes the raw branch on every push and
+      # the later of the two wins. Settings → Pages → Source → GitHub
+      # Actions ends that.)
       - name: Drop build-only files from the artifact
-        run: rm -rf src tools .github
+        run: rm -rf src tools .github README.md deploy-trigger.txt .gitignore
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

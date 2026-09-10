@@ -29,6 +29,8 @@ WHAT IT DOES PER PAGE
   · data-i18n-alt / -ph / -aria / -src -> the matching attribute
   · data-lang-block  -> keep this language's block, drop the other
   · <!--# … -->      -> a source-only comment (notes to whoever edits src/), dropped
+  · every .js and .css reference gets ?v=<content hash of the file>, so a
+    deploy is never hidden behind a browser's cached copy of the old script
   · <html lang>, <title>, <meta description>, og/twitter title+description
   · canonical -> itself;  hreflang es + en + x-default -> the pair
   · internal links rewritten so an English page links to English pages
@@ -261,6 +263,54 @@ SHARED_ROOTS = ("assets/", "css/", "js/", "CNAME", "robots.txt", "sitemap.xml",
 
 # Left alone entirely: other origins, page fragments, and non-http schemes.
 EXTERNAL = re.compile(r"^(?:[a-z][a-z0-9+.-]*:|//|#|$)", re.I)
+
+
+# ── cache stamps ──────────────────────────────────────────────────
+# GitHub Pages serves every file with a ten-minute cache lifetime and the
+# pages named their scripts and stylesheets with no version. So for ten
+# minutes after a deploy a phone that already had the site open kept
+# running the OLD layout.js against the NEW HTML, and a shipped fix looked
+# like nothing had changed. Every script and stylesheet reference now
+# carries ?v=<first 8 hex of the file's SHA-1>: a changed file is a new URL,
+# an unchanged one keeps its URL, and the stamp is the same on every
+# machine that builds the same bytes (the deploy renders too).
+_STAMPS = {}
+STAMPABLE = re.compile(r'\b(href|src)="([^"?#:]+\.(?:js|css))"')
+
+
+def stamp_for(asset_rel):
+    """asset_rel like 'assets/js/layout.js' (root-relative, no leading
+    slash); the stamp of the file on disk, or None if there is no such file
+    (the link checker reports that separately)."""
+    if asset_rel not in _STAMPS:
+        import hashlib
+        path = os.path.join(ROOT, asset_rel)
+        if not os.path.isfile(path):
+            _STAMPS[asset_rel] = None
+        else:
+            with open(path, "rb") as f:
+                _STAMPS[asset_rel] = hashlib.sha1(f.read()).hexdigest()[:8]
+    return _STAMPS[asset_rel]
+
+
+def stamp_assets(src, lang, rel_path):
+    """Stamp every .js/.css reference the rendered page makes, wherever the
+    file lives (assets/…, the legal pages' css/ and js/, …). Runs after
+    rewrite_links, so a root-relative URL is already what the tree serves
+    and a relative one resolves from the rendered page's own location."""
+    page_dir = os.path.dirname(os.path.join(PREFIX[lang], rel_path))
+
+    def rep(m):
+        url = m.group(2)
+        if url.startswith("/"):
+            asset_rel = url.lstrip("/")
+        else:
+            asset_rel = os.path.normpath(os.path.join(page_dir, url)).replace(os.sep, "/")
+        stamp = stamp_for(asset_rel)
+        if stamp is None:
+            return m.group(0)
+        return '%s="%s?v=%s"' % (m.group(1), url, stamp)
+    return STAMPABLE.sub(rep, src)
 
 
 def rewrite_links(src, lang, rel_path):
@@ -592,6 +642,7 @@ def main():
             s = render_head(s, lang, rel, m)
             s = render_jsonld(s, lang, rel, dic[lang], missing, article)
             s = rewrite_links(s, lang, rel)
+            s = stamp_assets(s, lang, rel)
 
             out = os.path.join(ROOT, PREFIX[lang], rel)
             os.makedirs(os.path.dirname(out) or ".", exist_ok=True)

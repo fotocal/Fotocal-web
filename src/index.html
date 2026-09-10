@@ -222,7 +222,8 @@
                         (identical to the English one — same trim, same ratio, same two widths)
                      3. in assets/js/i18n.js set the Spanish "log.v.img" to assets/img/screens/log-voice-es.webp
                      4. delete the data-lang-block="en" attribute on the frame above
-                     5. delete the <figure class="voice-say"> block below (and its CSS in home.css)
+                     5. delete the <figure class="voice-say"> block below, and the twin one in
+                        src/features/index.html (then the .voice-say CSS in home.css)
                    Nothing else changes. ═══════════════════════════════════════════════ -->
               <figure class="voice-say" data-lang-block="es" aria-hidden="true">
                 <span class="voice-say-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span>

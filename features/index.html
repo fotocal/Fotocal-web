@@ -39,8 +39,6 @@
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" href="../assets/css/home.css">
   <link rel="stylesheet" href="../assets/css/features.css">
-  <!-- .fc-related / .fc-rcard live here (shared with the detail pages) -->
-  <link rel="stylesheet" href="../assets/css/sections.css">
 
   <script type="application/ld+json">
 {
@@ -119,398 +117,278 @@
 }
   </script>
 </head>
-<body>
+<body class="page-fx">
 
   <div id="site-nav"></div>
 
   <main id="main">
 
-    <!-- ═══════════════════ PAGE HERO ═══════════════════ -->
-    <section class="fx-hero">
-      <div class="container-narrow">
-        <span class="kicker reveal">Dentro de la app</span>
-        <h1 class="section-title reveal">Nueve funciones. <em class="accent">Una app preciosa</em>.</h1>
-        <p class="section-sub reveal">Todo lo que hace Fotocal, en una sola página: desde la foto que registra tu comida hasta el informe que resume tu semana. En español y en inglés.</p>
-        <nav class="fx-jump reveal" aria-label="Jump to a chapter">
-          <a href="#capture"><b>01</b><span>Captura</span></a>
-          <a href="#understand"><b>02</b><span>Entiende</span></a>
-          <a href="#ontrack"><b>03</b><span>Mantén el rumbo</span></a>
-          <a href="#goals"><b>★</b><span>Tu objetivo</span></a>
-        </nav>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ THE FOUR CORE FEATURES ═══════════════════
-         Each of these has its own page now. Linking them from the
-         overview matters twice over: it is the obvious place a reader
-         looks for depth, and without it the four pages would be
-         reachable only from the nav — nav links are injected by JS, so
-         a crawler following the static HTML would never find them. -->
-    <section class="section section-alt" id="core">
+    <!-- ═══════ HERO — dark ═══════ -->
+    <section class="hero-x sec-dark fx-hero">
       <div class="container">
-        <div class="text-center">
-          <span class="kicker reveal">Las tres vías de entrada</span>
-          <h2 class="section-title reveal">Tres formas de registrar, <em class="accent">cada una con su página</em>.</h2>
-          <p class="section-sub mx-auto reveal">Foto, código de barras o voz. La más rápida en cada momento es la buena, y cada una tiene una página que explica exactamente qué obtienes.</p>
-        </div>
-        <div class="fc-related">
-          <a class="fc-rcard reveal" href="scan-food/">
-            <span class="fc-rkicker">Funciones</span>
-            <span class="fc-rtitle">Escanear comida</span>
-            <span class="fc-rarrow">Saber más →</span>
-          </a>
-          <a class="fc-rcard reveal" href="scan-barcode/" style="--rd:.06s">
-            <span class="fc-rkicker">Funciones</span>
-            <span class="fc-rtitle">Escanear código</span>
-            <span class="fc-rarrow">Saber más →</span>
-          </a>
-          <a class="fc-rcard reveal" href="voice-logging/" style="--rd:.12s">
-            <span class="fc-rkicker">Funciones</span>
-            <span class="fc-rtitle">Registro por voz</span>
-            <span class="fc-rarrow">Saber más →</span>
-          </a>
+        <div class="fx-hero-inner">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <span class="kicker reveal">Dentro de la app</span>
+          <h1 class="hero-title reveal">Nueve funciones. <em class="accent">Una sola app</em>.</h1>
+          <p class="hero-sub reveal">Todo lo que hace Fotocal, en una sola página: desde la foto que registra tu comida hasta el informe que resume tu semana. En español y en inglés.</p>
+          <div class="reveal">
+            <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
+            <span class="hero-note">En Google Play · Android</span>
+          </div>
+          <nav class="fx-jump reveal" aria-label="Ir a un capítulo">
+            <a href="#capture"><b>01</b><span>Captura</span></a>
+            <a href="#understand"><b>02</b><span>Entiende</span></a>
+            <a href="#ontrack"><b>03</b><span>Mantén el rumbo</span></a>
+            <a href="#goals"><b>★</b><span>Tu objetivo</span></a>
+          </nav>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ CHAPTER 1 — CAPTURE ═══════════════════ -->
-    <section class="section" id="capture" style="padding-top:3rem">
+    <!-- ═══════ CHAPTER 1 · CAPTURE — light ═══════
+         Four ways in. Three of them have a page of their own and link to
+         it here; the menu scanner does not, so it makes no such claim. -->
+    <section class="section sec-light" id="capture">
       <div class="container">
         <header class="fx-chap">
-          <span class="fx-chap-num" aria-hidden="true">01</span>
+          <span class="kicker reveal"><b>01</b> <span>Captura</span></span>
           <h2 class="section-title reveal">Captura cualquier cosa <em class="accent">en segundos</em>.</h2>
           <p class="section-sub reveal">Cuatro formas de registrar una comida: foto, código de barras, voz o carta. La más rápida en ese momento es siempre la correcta.</p>
         </header>
-
-        <!-- 1 · AI food scan -->
-        <div class="flow-row fx-row reveal">
-          <div class="flow-visual">
-            <div class="illus">
-              <img src="../assets/img/illustrations/feat-scan.webp" width="900" height="1125" loading="lazy" decoding="async"
-                   alt="Ilustración: un móvil fotografía un desayuno mientras aparecen burbujas de calorías sobre cada alimento">
+        <ol class="fx-tiles fx-tiles-4">
+          <li class="how-tile fx-tile reveal">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">1</span>
+              <h3>Escaneo de comida con IA — haz una foto y conoce tu comida al instante</h3>
+              <p>Apunta con la cámara a cualquier plato y obtén calorías, macros y una puntuación de salud en segundos — sin pesar, sin buscar.</p>
+              <ul class="check-list check-list-lt fx-perks">
+                <li>Platos enteros, no solo ingredientes</li>
+                <li>Edita lo que quieras antes de guardar</li>
+              </ul>
+              <a class="btn-ghost fx-link" href="scan-food/">Lee la página completa →</a>
             </div>
-          </div>
-          <div class="flow-copy">
-            <span class="fx-num" aria-hidden="true">1</span>
-            <h3>Escaneo de comida con IA — haz una foto y conoce tu comida al instante</h3>
-            <p>Apunta con la cámara a cualquier plato y obtén calorías, macros y una puntuación de salud en segundos — sin pesar, sin buscar.</p>
-            <div class="fx-chips">
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Platos enteros, no solo ingredientes</span></span>
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Edita lo que quieras antes de guardar</span></span>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/log-photo-440-es.webp" srcset="../assets/img/screens/log-photo-440-es.webp 440w, ../assets/img/screens/log-photo-660-es.webp 660w" sizes="220px" width="440" height="635" loading="lazy" decoding="async" alt="Pantalla real de la app: la cámara encuadra un bol de pollo, arroz y aguacate, listo para escanear"></div></div>
             </div>
-          </div>
-        </div>
-
-        <!-- 2 · Barcode scanner -->
-        <div class="flow-row flip fx-row reveal">
-          <div class="flow-visual">
-            <div class="illus">
-              <img src="../assets/img/illustrations/scan-barcode.webp" width="900" height="1200" loading="lazy" decoding="async"
-                   alt="Ilustración: unas manos escanean el código de barras de un producto con el móvil y aparece una puntuación de salud">
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:.08s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">2</span>
+              <h3>Escáner de código de barras — escanea cualquier producto y ve lo que lleva de verdad</h3>
+              <p>Puntuación de salud al instante, nutrición completa y alternativas más sanas para los productos envasados.</p>
+              <ul class="check-list check-list-lt fx-perks">
+                <li>Puntuación de salud de un vistazo</li>
+                <li>Alternativas más sanas sugeridas</li>
+              </ul>
+              <a class="btn-ghost fx-link" href="scan-barcode/">Lee la página completa →</a>
             </div>
-          </div>
-          <div class="flow-copy">
-            <span class="fx-num" aria-hidden="true">2</span>
-            <h3>Escáner de código de barras — escanea cualquier producto y ve lo que lleva de verdad</h3>
-            <p>Puntuación de salud al instante, nutrición completa y alternativas más sanas para los productos envasados.</p>
-            <div class="fx-chips">
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Puntuación de salud de un vistazo</span></span>
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Alternativas más sanas sugeridas</span></span>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/log-barcode-440-es.webp" srcset="../assets/img/screens/log-barcode-440-es.webp 440w, ../assets/img/screens/log-barcode-660-es.webp 660w" sizes="220px" width="440" height="635" loading="lazy" decoding="async" alt="Pantalla real de la app: un Red Bull Sugarfree escaneado con su puntuación de salud, 24 sobre 100, y los negativos listados"></div></div>
             </div>
-          </div>
-        </div>
-
-        <!-- 3 · Voice logging -->
-        <div class="flow-row fx-row reveal">
-          <div class="flow-visual">
-            <div class="illus">
-              <img src="../assets/img/illustrations/feat-voice.webp" width="900" height="1125" loading="lazy" decoding="async"
-                   alt="Ilustración: una mujer habla a su móvil y un micrófono brillante con iconos de comida flota sobre él">
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:.16s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">3</span>
+              <h3>Registro por voz — solo di lo que has comido</h3>
+              <p>Habla con naturalidad y queda registrado con calorías y macros, sin usar las manos.</p>
+              <ul class="check-list check-list-lt fx-perks">
+                <li>Lenguaje natural, ES e EN</li>
+                <li>Perfecto para mañanas con prisa</li>
+              </ul>
+              <a class="btn-ghost fx-link" href="voice-logging/">Lee la página completa →</a>
             </div>
-          </div>
-          <div class="flow-copy">
-            <span class="fx-num" aria-hidden="true">3</span>
-            <h3>Registro por voz — solo di lo que has comido</h3>
-            <p>Habla con naturalidad y queda registrado con calorías y macros, sin usar las manos.</p>
-            <div class="fx-chips">
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Lenguaje natural, ES e EN</span></span>
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Perfecto para mañanas con prisa</span></span>
+            <div class="tile-media">
+              
+              <figure class="voice-say" aria-hidden="true">
+                <span class="voice-say-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span>
+                <p class="voice-say-q">«Dos huevos y tostada con aguacate»</p>
+                <span class="voice-say-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              </figure>
             </div>
-          </div>
-        </div>
-
-        <!-- 4 · Restaurant menu scanner -->
-        <div class="flow-row fx-row reveal">
-          <div class="flow-visual">
-            <div class="illus">
-              <img src="../assets/img/illustrations/feat-menu.webp" width="900" height="1200" loading="lazy" decoding="async"
-                   alt="Ilustración: en un restaurante, un móvil escanea la carta y resalta el mejor plato con una insignia verde">
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:.24s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">4</span>
+              <h3>Escáner de cartas — ¿comes fuera? Elegimos tu mejor plato</h3><span class="fc-premium">Premium</span>
+              <p>Fotografía la carta y obtén el plato que mejor encaja con tus calorías restantes y tu objetivo.</p>
+              <ul class="check-list check-list-lt fx-perks">
+                <li>Calorías estimadas por plato</li>
+                <li>Tu mejor opción, resaltada</li>
+              </ul>
             </div>
-          </div>
-          <div class="flow-copy">
-            <span class="fx-num" aria-hidden="true">4</span>
-            <h3>Escáner de cartas — ¿comes fuera? Elegimos tu mejor plato</h3>
-            <span class="fc-premium">Premium</span>
-            <p>Fotografía la carta y obtén el plato que mejor encaja con tus calorías restantes y tu objetivo.</p>
-            <div class="fx-chips">
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Calorías estimadas por plato</span></span>
-              <span class="hero-perk"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tu mejor opción, resaltada</span></span>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/log-menu-440-es.webp" srcset="../assets/img/screens/log-menu-440-es.webp 440w, ../assets/img/screens/log-menu-660-es.webp 660w" sizes="220px" width="440" height="635" loading="lazy" decoding="async" alt="Pantalla real de la app: una carta del día escaneada con las calorías estimadas de cada plato y la mejor opción resaltada"></div></div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ═══════════════════ CHAPTER 2 — UNDERSTAND ═══════════════════ -->
-    <section class="section section-alt" id="understand">
+    <!-- ═══════ CHAPTER 2 · UNDERSTAND — dark (Coach Kal), then light (full nutrition) ═══════ -->
+    <section class="section sec-dark" id="understand">
       <div class="container">
         <header class="fx-chap">
-          <span class="fx-chap-num" aria-hidden="true">02</span>
+          <span class="kicker reveal"><b>02</b> <span>Entiende</span></span>
           <h2 class="section-title reveal">Entiende <em class="accent">lo que comes</em>.</h2>
           <p class="section-sub reveal">Registrar es solo la mitad de la historia. Fotocal convierte cada comida en conocimiento que de verdad puedes usar.</p>
         </header>
-
-        <!-- 5 · AI Coach -->
-        <div class="flow-row flip fx-row reveal">
-          <div class="flow-visual">
-            <div class="illus" style="max-width:380px">
-              <img src="../assets/img/screens/coach-kal-chat-es.webp" width="760" height="1307" loading="lazy" decoding="async"
-                   alt="Captura real de la app: el chat de Coach Kal. El usuario pregunta si un bol de frutas y yogur de 180 kcal encaja en su objetivo, y Kal confirma que cabe en las 2075 kcal que le quedan, avisa de que el yogur puede llevar lactosa por su alergia y propone tres mejoras más saludables">
-            </div>
+        <div class="split">
+          <div class="split-visual reveal">
+            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/coach-chat-600-es.webp" srcset="../assets/img/screens/coach-chat-600-es.webp 600w, ../assets/img/screens/coach-chat-900-es.webp 900w" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Pantalla real de la app: el chat de Coach Kal responde a una pregunta sobre un bol de pollo escaneado con los números del día del usuario"></div></div></div>
           </div>
-          <div class="flow-copy">
-            <span class="fx-num" aria-hidden="true">5</span>
-            <h3>Coach con IA — tu coach nutricional personal, 24/7</h3>
-            <p>Pregunta lo que quieras, planifica tus comidas o escanea para pedir consejo: orientación inteligente basada en tus datos reales.</p>
-            <div class="bubble-list">
-              <div class="bubble">
-                <span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.9A8.5 8.5 0 0 1 12.5 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg></span>
-                <span><b>Pregunta</b><p>Cualquier duda sobre comida, a cualquier hora — respondida desde tu diario real.</p></span>
-              </div>
-              <div class="bubble">
-                <span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
-                <span><b>Planifica</b><p>Ideas de comidas que encajan con tus calorías restantes y tus objetivos.</p></span>
-              </div>
-              <div class="bubble">
-                <span class="bubble-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-                <span><b>Escanea</b><p>Apunta con la cámara y recibe consejo al momento, antes de comer.</p></span>
-              </div>
-            </div>
+          <div class="split-copy">
+            <span class="fx-num reveal" aria-hidden="true">5</span>
+            <h3 class="fx-t reveal">Coach con IA — tu coach nutricional personal, 24/7</h3>
+            <p class="section-sub reveal">Pregunta lo que quieras, planifica tus comidas o escanea para pedir consejo: orientación inteligente basada en tus datos reales.</p>
+            <ul class="dk-list">
+              <li class="dk-card reveal"><span class="dk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.9A8.5 8.5 0 0 1 12.5 3a8.38 8.38 0 0 1 8.5 8.5z"/></svg></span><div><b>Pregunta</b><p>Cualquier duda sobre comida, a cualquier hora — respondida desde tu diario real.</p></div></li>
+              <li class="dk-card reveal" style="--rd:.08s"><span class="dk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span><div><b>Planifica</b><p>Ideas de comidas que encajan con tus calorías restantes y tus objetivos.</p></div></li>
+              <li class="dk-card reveal" style="--rd:.16s"><span class="dk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span><div><b>Escanea</b><p>Apunta con la cámara y recibe consejo al momento, antes de comer.</p></div></li>
+            </ul>
             <!-- A real link, not just a nav entry: the nav is injected by JS,
                  so this is how a crawler following the static HTML reaches
                  the Coach Kal page at all. -->
-            <div class="next-links" style="margin-top:1.4rem">
-              <a class="next-link" href="../ai/">
-                <span>
-                  <strong>Cómo funciona Coach Kal</strong>
-                  <span>Qué puede ver, qué no, y dónde puede equivocarse</span>
-                </span>
-                <span class="arw" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 · Full nutrition -->
-        <div class="flow-row fx-row reveal">
-          <div class="flow-visual">
-            <div class="fx-duo">
-              <div class="illus fx-duo-main">
-                <img src="../assets/img/illustrations/feat-nutrients.webp" width="1000" height="1250" loading="lazy" decoding="async"
-                     alt="Ilustración: un móvil muestra el análisis de una comida rica en nutrientes rodeado de insignias de vitaminas, hierro y calcio">
-              </div>
-              <div class="fx-duo-b" aria-hidden="true">
-                <img src="../assets/img/illustrations/feat-scores.webp" width="840" height="1050" loading="lazy" decoding="async" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="flow-copy">
-            <span class="fx-num" aria-hidden="true">6</span>
-            <h3>Nutrición completa — cada nutriente, no solo las calorías</h3>
-            <p>Macros completos y micronutrientes: vitaminas, minerales, fibra, azúcar, sodio, nivel de procesamiento NOVA y puntuaciones de glucosa y saciedad.</p>
-            <div class="micro-chips">
-              <span class="micro-chip mc-p">Vitaminas</span>
-              <span class="micro-chip mc-g">Minerales</span>
-              <span class="micro-chip mc-y">Fibra</span>
-              <span class="micro-chip mc-p">Azúcar</span>
-              <span class="micro-chip mc-y">Sodio</span>
-              <span class="micro-chip mc-g">Nivel NOVA</span>
-              <span class="micro-chip mc-g">Puntuación de glucosa</span>
-              <span class="micro-chip mc-p">Puntuación de saciedad</span>
-            </div>
-            <div class="score-badge" aria-hidden="true">
-              <span class="score-ring" style="--sc:86"><b>86</b></span>
-              <span>Puntuación de salud por comida, con mejoras sugeridas</span>
-            </div>
+            <a class="proof-link reveal" href="../ai/"><span>Cómo funciona Coach Kal</span> →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ CHAPTER 3 — STAY ON TRACK ═══════════════════ -->
-    <section class="section" id="ontrack">
+    <section class="section sec-light-2" id="nutrition">
+      <div class="container">
+        <div class="split split-flip">
+          <div class="split-visual reveal">
+            <div class="tile tile-light tile-tall"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/nutri-detail-600-es.webp" srcset="../assets/img/screens/nutri-detail-600-es.webp 600w, ../assets/img/screens/nutri-detail-900-es.webp 900w" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Pantalla real de la app: el detalle de un bol de pollo al horno, 475 kcal, con proteína, carbohidratos, grasa, fibra, azúcar, grasa saturada y sodio"></div></div></div>
+          </div>
+          <div class="split-copy">
+            <span class="fx-num reveal" aria-hidden="true">6</span>
+            <h3 class="fx-t reveal">Nutrición completa — cada nutriente, no solo las calorías</h3>
+            <p class="section-sub reveal">Macros completos y micronutrientes: vitaminas, minerales, fibra, azúcar, sodio, nivel de procesamiento NOVA y puntuaciones de glucosa y saciedad.</p>
+            <div class="micro-chips reveal">
+              <span class="micro-chip mc-p">Vitaminas</span><span class="micro-chip mc-g">Minerales</span><span class="micro-chip mc-y">Fibra</span><span class="micro-chip mc-p">Azúcar</span><span class="micro-chip mc-y">Sodio</span><span class="micro-chip mc-g">Nivel NOVA</span><span class="micro-chip mc-g">Puntuación de glucosa</span><span class="micro-chip mc-p">Puntuación de saciedad</span>
+            </div>
+            <div class="score-badge reveal" aria-hidden="true"><span class="score-ring" style="--sc:79"><b>79</b></span><span>Puntuación de salud por comida, con mejoras sugeridas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CHAPTER 3 · STAY ON TRACK — light ═══════ -->
+    <section class="section sec-light" id="ontrack">
       <div class="container">
         <header class="fx-chap">
-          <span class="fx-chap-num" aria-hidden="true">03</span>
+          <span class="kicker reveal"><b>03</b> <span>Mantén el rumbo</span></span>
           <h2 class="section-title reveal">Mantén <em class="accent">el rumbo</em>.</h2>
           <p class="section-sub reveal">El progreso vive en semanas, no en días. Estas son las funciones que hacen avanzar la historia.</p>
         </header>
-
-        <div class="fx-cards">
-          <!-- 7 · Progress & weight trends -->
-          <article class="log-card reveal">
-            <div class="log-media">
-              <img src="../assets/img/illustrations/feat-progress.webp" width="900" height="1200" loading="lazy" decoding="async"
-                   alt="Ilustración: una mujer sonriente muestra su móvil con la pantalla de progreso, gráfica de peso y anillo de objetivo">
-            </div>
-            <div class="log-body">
-              <span class="log-tag"><span class="fx-num" style="width:22px;height:22px;font-size:.72rem;margin:0" aria-hidden="true">8</span><span>Progreso</span></span>
+        <ol class="fx-tiles fx-tiles-3">
+          <li class="how-tile fx-tile reveal">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">7</span>
               <h3>Progreso y tendencia de peso — observa tu progreso cada semana</h3>
               <p>Gráficas claras de tendencia de peso, IMC y seguimiento de objetivos.</p>
             </div>
-          </article>
-
-          <!-- 8 · Daily tracking -->
-          <article class="log-card reveal" style="--rd:.08s">
-            <div class="log-media fx-stats" aria-hidden="true">
-              <div class="fx-stat">
-                <span class="fx-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 10 6 14.5a6 6 0 0 0 12 0C18 10 12 2.7 12 2.7z"/></svg></span>
-                <b>6 / 8</b><small>vasos</small>
-                <span class="fx-bar"><span style="width:75%"></span></span>
-              </div>
-              <div class="fx-stat">
-                <span class="fx-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0"/><path d="M9 20l2.5-5.5L9 11l1.5-4.5L15 8l2 3h3"/><path d="M6 20l2-4"/></svg></span>
-                <b>8,432</b><small>pasos</small>
-                <span class="fx-bar"><span style="width:84%"></span></span>
-              </div>
-              <div class="fx-stat">
-                <span class="fx-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                <b>4 / 5</b><small>hábitos hechos</small>
-                <span class="fx-bar"><span style="width:80%"></span></span>
-              </div>
-              <div class="fx-stat">
-                <span class="fx-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.6-2.8 1.2-3.8"/><path d="M12 22a6 6 0 0 0 6-6c0-2-1-3.5-2-5"/><path d="M12 22a6 6 0 0 1-6-6c0-1 .3-2 .8-3"/></svg></span>
-                <b>12</b><small>días de racha</small>
-                <span class="fx-bar"><span style="width:100%"></span></span>
-              </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/progress-diet-600-es.webp" srcset="../assets/img/screens/progress-diet-600-es.webp 600w, ../assets/img/screens/progress-diet-900-es.webp 900w" sizes="230px" width="600" height="979" loading="lazy" decoding="async" alt="Pantalla real de la app: progreso, pestaña dieta, calorías consumidas frente al objetivo y una estimación del gasto energético diario"></div></div>
             </div>
-            <div class="log-body">
-              <span class="log-tag"><span class="fx-num" style="width:22px;height:22px;font-size:.72rem;margin:0" aria-hidden="true">9</span><span>Diario</span></span>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:.1s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">8</span>
               <h3>Seguimiento diario — construye hábitos saludables cada día</h3>
               <p>Agua, pasos, hábitos y rachas en una sola pantalla de inicio, bien simple.</p>
             </div>
-          </article>
-
-          <!-- 9 · Weekly report -->
-          <article class="log-card reveal" style="--rd:.16s">
-            <div class="log-media">
-              <img src="../assets/img/illustrations/feat-weekly.webp" width="900" height="918" loading="lazy" decoding="async"
-                   alt="Ilustración: una mujer en el sofá con café revisa su resumen semanal — calorías, macros y objetivos">
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/habits-activity-600-es.webp" srcset="../assets/img/screens/habits-activity-600-es.webp 600w, ../assets/img/screens/habits-activity-900-es.webp 900w" sizes="230px" width="600" height="979" loading="lazy" decoding="async" alt="Pantalla real de la app: el registro de actividad en la pantalla de inicio, pasos, vasos de agua y comidas de hoy"></div></div>
             </div>
-            <div class="log-body">
-              <span class="log-tag"><span class="fx-num" style="width:22px;height:22px;font-size:.72rem;margin:0" aria-hidden="true">10</span><span>Semanal</span></span>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:.2s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">9</span>
               <h3>Informe semanal — tu semana, resumida con estilo</h3>
               <p>Un resumen semanal claro de todo lo que registraste.</p>
             </div>
-          </article>
-        </div>
+            <div class="tile-media">
+              <div class="fx-say" aria-hidden="true">
+                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 16v-5M13 16V8M18 16v-8"/></svg></span>
+                <ul class="check-list check-list-lt">
+                  <li>Calorías y macros, día a día</li>
+                  <li>Qué aguantó y qué se torció</li>
+                  <li>Una o dos cosas que probar la semana que viene</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ═══════════════════ MADE FOR YOUR GOAL ═══════════════════ -->
-    <section class="section section-alt" id="goals">
+    <!-- ═══════ MADE FOR YOUR GOAL — light-2 ═══════ -->
+    <section class="section sec-light-2" id="goals">
       <div class="container">
         <div class="text-center">
           <span class="kicker reveal">Hecha para tu objetivo</span>
           <h2 class="section-title reveal">Una app, <em class="accent">tus motivos</em>.</h2>
-          <p class="section-sub mx-auto reveal">Sea lo que sea lo que te trajo aquí — perder peso, comer mejor o conseguir por fin que los hábitos aguanten — las mismas diez funciones se adaptan a tu objetivo.</p>
+          <p class="section-sub mx-auto reveal">Sea lo que sea lo que te trajo aquí — perder peso, comer mejor o conseguir por fin que los hábitos aguanten — las mismas nueve funciones se adaptan a tu objetivo.</p>
         </div>
-
         <div class="fx-goal-grid">
-          <!-- Weight loss -->
-          <article class="fx-goal reveal" id="weight-loss">
-            <div class="fx-goal-ico fx-goal-ico-wl">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
-            </div>
+          <article class="lt-card fx-goal reveal" id="weight-loss">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
             <h3>Para perder peso</h3>
             <p>Sin dietas milagro y sin alimentos prohibidos: un bucle repetible que encaja en la vida real. Fotocal fija un objetivo realista de ~0,5–1 kg por semana, el escaneo por foto hace que registrar sea tan fácil que sobrevive a los días liados, tu anillo de calorías te mantiene en un déficit suave y la gráfica de tendencia suaviza el ruido diario de la báscula para que veas la dirección real.</p>
-            <ul class="check-list">
+            <ul class="check-list check-list-lt">
               <li>Objetivos realistas de calorías y macros según tu meta</li>
               <li>El anillo de calorías muestra el margen que te queda</li>
               <li>Tendencia, no pánico a la báscula</li>
               <li>Coach Kal para mesetas y comer fuera</li>
             </ul>
             <div class="fx-goal-cta">
-              <a class="btn btn-cta btn-sm" href="weight-loss/">Saber más</a>
-              <a class="btn btn-outline btn-sm" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Empieza gratis</a>
-              <a class="btn btn-ghost" href="../blog/">Guías →</a>
+              <a class="btn-ghost fx-link" href="weight-loss/">Saber más →</a>
+              <a class="btn-ghost fx-link" href="../blog/">Guías →</a>
             </div>
           </article>
-
-          <!-- Nutrition & diet -->
-          <article class="fx-goal reveal" id="nutrition-diet" style="--rd:.08s">
-            <div class="fx-goal-ico fx-goal-ico-nd">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7z"/><path d="M12 22V9"/></svg>
-            </div>
+          <article class="lt-card fx-goal reveal" id="nutrition-diet" style="--rd:.08s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7z"/><path d="M12 22V9"/></svg></div>
             <h3>Para nutrición y dieta</h3>
             <p>Entiende lo que comes, no solo cuánto. Cada comida se convierte en una imagen nutricional completa — macros, micronutrientes, puntuación de salud y mejoras sugeridas — y Fotocal nunca te impone una dieta: lleva los números para que tu enfoque elegido sea fácil de seguir.</p>
-            <ul class="check-list">
+            <ul class="check-list check-list-lt">
               <li>Funciona con dietas altas en proteína, bajas en carbohidratos, vegetarianas o equilibradas</li>
               <li>La puntuación de salud te enseña qué es "bueno"</li>
               <li>Cambios pequeños y realistas, sin sermones</li>
               <li>Pregúntale a Coach Kal lo que quieras sobre comida</li>
             </ul>
             <div class="fx-goal-cta">
-              <a class="btn btn-cta btn-sm" href="nutrition-diet/">Saber más</a>
-              <a class="btn btn-outline btn-sm" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Empieza gratis</a>
-              <a class="btn btn-ghost" href="../blog/">Guías →</a>
+              <a class="btn-ghost fx-link" href="nutrition-diet/">Saber más →</a>
+              <a class="btn-ghost fx-link" href="../blog/">Guías →</a>
             </div>
           </article>
-
-          <!-- Lifestyle & mindset -->
-          <article class="fx-goal reveal" id="lifestyle-mindset" style="--rd:.16s">
-            <div class="fx-goal-ico fx-goal-ico-lm">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-            </div>
+          <article class="lt-card fx-goal reveal" id="lifestyle-mindset" style="--rd:.16s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
             <h3>Para hábitos y mentalidad</h3>
             <p>Pequeñas victorias repetidas: ese es todo el método. Una foto hace que registrar no cueste nada, las rachas convierten la constancia en un juego que quieres proteger, una nota rápida de ánimo revela cómo se conectan comida y emociones, y el informe semanal celebra lo que salió bien en vez de castigar lo que no. Una comida caprichosa no deshace tu progreso; abandonar, sí.</p>
-            <ul class="check-list">
+            <ul class="check-list check-list-lt">
               <li>Las rachas crean impulso, no presión</li>
               <li>El diario de ánimo y hábitos detecta tus patrones</li>
               <li>Recordatorios inteligentes cuando sueles olvidarte</li>
               <li>Coaching sin juicios después de un tropiezo</li>
             </ul>
             <div class="fx-goal-cta">
-              <a class="btn btn-cta btn-sm" href="lifestyle-mindset/">Saber más</a>
-              <a class="btn btn-outline btn-sm" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Empieza gratis</a>
-              <a class="btn btn-ghost" href="../blog/">Guías →</a>
+              <a class="btn-ghost fx-link" href="lifestyle-mindset/">Saber más →</a>
+              <a class="btn-ghost fx-link" href="../blog/">Guías →</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
-    <section class="final-cta">
+    <!-- ═══════ FINAL CTA — the brand gradient, edge to edge ═══════ -->
+    <section class="final-band">
       <div class="container">
-        <div class="final-inner reveal">
-          <h2>Prueba las diez, <em class="accent-light">gratis 5 días</em>.</h2>
-          <p>Descarga Fotocal en Google Play y ve cada función en acción: la prueba gratis de 5 días desbloquea todo Premium.</p>
-          <div class="cta-group"><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
-<a class="play-badge play-badge-sm play-badge-glass" href="https://play.google.com/store/apps/details?id=com.fotokal.app"
-             target="_blank" rel="noopener" aria-label="Get Fotocal on Google Play"
-            >
-            <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true">
-              <path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>
-              <path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>
-              <path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>
-              <path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/>
-            </svg>
-            <span class="play-badge-text">
-              <small>DISPONIBLE EN</small>
-              <strong>Google Play</strong>
-            </span>
-          </a></div>
+        <div class="final-band-inner reveal">
+          <h2>Prueba las nueve, <em class="accent-white">gratis 5 días</em>.</h2>
+          <p>Descarga Fotocal en Google Play y ve cada función en acción. Los primeros 5 días de Premium corren de nuestra cuenta.</p>
+          <a class="btn btn-white btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
+          <span class="final-note">En Google Play · Android</span>
         </div>
       </div>
     </section>

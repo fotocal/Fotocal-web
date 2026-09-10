@@ -1,148 +1,99 @@
 /* ═══════════════════════════════════════════════════════════════
-   FOTOCAL — /features/ page styles
-   Loaded AFTER site.css and home.css and reuses their components:
-   .illus, .log-card/.log-media/.log-body (spotlight cards),
-   .hero-perk chips, .bubble-list, .micro-chip, .score-badge.
-   Only what is unique to this page lives here.
+   FOTOCAL — /features/ hub styles
+   Loaded AFTER site.css and home.css and built from the home page's
+   own parts: .hero-x/.sec-dark, .how-tile/.tile-media, .tile/.split,
+   .dk-list/.dk-card, .micro-chips/.score-badge, .habit-ico, .lt-card,
+   .check-list-lt, .proof-link, .final-band, .reveal. Only what is
+   unique to this page lives here; every colour is a token.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ─── Page hero ─── */
-.fx-hero { position: relative; padding: 3.2rem 0 1rem; overflow: hidden; text-align: center; }
-.fx-hero::before {
-  content: ""; position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
-  width: 720px; height: 480px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, var(--glow-coral), transparent 65%);
-  filter: blur(40px);
-}
-.fx-hero .container-narrow { position: relative; }
-.fx-hero .section-sub { margin-inline: auto; }
+/* ─── Hero: the home hero's ground and type, copy only, centred ─── */
+.fx-hero { padding-bottom: 3.4rem; }
+.fx-hero-inner { position: relative; text-align: center; max-width: 46rem; margin-inline: auto; padding-top: 2.2rem; }
+.fx-hero-inner > * { position: relative; z-index: 1; }
+.fx-hero-inner .hero-glow { z-index: 0; inset: -40% -20%; opacity: .32; }
+.fx-hero-inner .hero-sub { margin-inline: auto; }
+.fx-hero-inner .hero-title { font-size: clamp(2.6rem, 8.5vw, 3.6rem); }
+@media (min-width: 900px) { .fx-hero { padding: 3.6rem 0 4.2rem; } }
 
-/* jump pills */
-.fx-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; margin-top: 1.6rem; }
+/* jump pills — the dark section's own chip treatment (.dk-ico / .proof-ico) */
+.fx-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; margin-top: 1.9rem; }
 .fx-jump a {
-  display: inline-flex; align-items: center; gap: .45rem;
-  font-size: .85rem; font-weight: 650; color: var(--text-soft);
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 999px; padding: .55rem 1rem;
-  box-shadow: 0 4px 14px -10px rgba(var(--shadow-rgb),.35);
-  transition: transform .25s ease, border-color .25s ease, color .25s ease;
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .85rem; font-weight: 650; color: var(--on-dark);
+  background: rgba(var(--on-dark-rgb),.06); border: 1px solid rgba(var(--on-dark-rgb),.10);
+  border-radius: 999px; padding: .55rem 1rem .55rem .7rem;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
 }
-.fx-jump a:hover { transform: translateY(-2px); border-color: var(--border-pink); color: var(--brand-text); }
-.fx-jump a b {
-  font-size: .68rem; font-weight: 800; color: var(--brand-text);
-  background: var(--grad-wash); border-radius: 999px; padding: .15rem .5rem;
-}
+.fx-jump a:hover { transform: translateY(-2px); border-color: rgba(var(--on-dark-rgb),.22); background: rgba(var(--on-dark-rgb),.09); }
+.fx-jump a b { font-size: .7rem; font-weight: 800; color: var(--coral); letter-spacing: .04em; }
 
-/* ─── Chapter headers: ghost number + title ─── */
-.fx-chap { position: relative; text-align: center; padding-top: 1.2rem; margin-bottom: .8rem; }
-.fx-chap-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(4.6rem, 13vw, 7.5rem);
-  font-weight: 600; line-height: 1; letter-spacing: -.03em;
-  background: linear-gradient(180deg, rgba(var(--pink-rgb),.16), rgba(var(--coral-rgb),.02));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
-  user-select: none;
-}
-@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
-  .fx-chap-num { color: rgba(var(--pink-rgb),.12); }
-}
-.fx-chap .section-title { margin-top: -1.35em; position: relative; }
+/* ─── Chapter headers ─── */
+.fx-chap { text-align: center; max-width: 44rem; margin: 0 auto 2.4rem; }
+.fx-chap .kicker b { font-weight: 800; letter-spacing: .08em; margin-right: .35rem; }
 .fx-chap .section-sub { margin-inline: auto; }
 
-/* ─── Feature rows (chapter 1 & 2) ─── */
-.fx-row { border: 0 !important; }
-.fx-row .illus { max-width: 430px; width: 100%; }
+/* ─── Numbered tiles (chapters 1 and 3): the home's step tiles with the
+       feature's number in the same gradient square ─── */
+.fx-tiles { list-style: none; display: grid; gap: 1rem; }
+.fx-copy { padding: 1.5rem 1.4rem 0; position: relative; }
+.fx-copy h3 { font-size: 1.1rem; font-weight: 700; margin: .5rem 0 .3rem; letter-spacing: -.01em; }
+.fx-copy .fc-premium { margin-left: .5rem; vertical-align: 2px; }
+.fx-copy p { font-size: .93rem; color: var(--muted); max-width: 44ch; }
 .fx-num {
   display: inline-grid; place-items: center;
-  width: 34px; height: 34px; border-radius: 10px; margin-bottom: .9rem;
+  width: 40px; height: 40px; border-radius: 12px; margin-bottom: .6rem;
   background: var(--grad-btn); color: var(--on-brand);
-  font-family: var(--font-display); font-weight: 700; font-size: .95rem;
-  box-shadow: var(--shadow-cta);
+  font-family: var(--font-display); font-weight: 600; font-size: 1.15rem;
+  box-shadow: 0 8px 18px -8px rgba(var(--pink-rgb),.45);
 }
-.fx-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.15rem; }
+.fx-perks { margin-top: .9rem; }
+.fx-perks li { font-size: .9rem; margin-bottom: .35rem; }
+.fx-link { display: inline-block; margin-top: .6rem; font-size: .9rem; font-weight: 700; }
+.fx-tile .tile-media { margin-top: 1.4rem; }
+/* chapter 1 holds the 440/660 bento crops: the frame stays at or under
+   220 CSS px so it never asks for more pixels than the capture has */
+.fx-tiles-4 .tile-media .dev-frame { width: min(220px, 70%); }
+@media (min-width: 700px) { .fx-tiles-4 { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
+/* from 1000px the four capture tiles take the home bento's wide shape:
+   copy on the left, the phone on the right rising out of the bottom edge */
+@media (min-width: 1000px) {
+  .fx-tiles-4 .fx-tile { flex-direction: row; align-items: stretch; }
+  .fx-tiles-4 .fx-copy { flex: 1 1 auto; padding: 1.6rem 0 1.6rem 1.7rem; align-self: center; }
+  .fx-tiles-4 .tile-media { flex: 0 0 256px; margin: 0; padding: 1.5rem 1.2rem 0 0; }
+  .fx-tiles-4 .tile-media .dev-frame { width: 220px; }
+  .fx-tiles-4 .tile-media .voice-say { padding: 0 0 .4rem; }
+}
+@media (min-width: 900px) { .fx-tiles-3 { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
 
-/* ─── Full-nutrition duo: big image + overlapped score card ─── */
-.fx-duo { position: relative; max-width: 460px; width: 100%; margin-inline: auto; }
-.fx-duo .fx-duo-main { max-width: none; }
-.fx-duo-b {
-  position: absolute; z-index: 3;
-  right: -16px; bottom: -26px;
-  width: 46%;
-  border-radius: 20px; overflow: hidden;
-  border: 5px solid var(--bg);
-  box-shadow: var(--shadow-lift);
-  transform: rotate(3deg);
-  transition: transform .5s cubic-bezier(.2,.8,.3,1);
-}
-.fx-duo:hover .fx-duo-b { transform: rotate(1deg) translateY(-5px); }
-.fx-duo-b img { display: block; width: 100%; height: auto; }
-/* On narrow phones the negative offset pushed this card past the viewport
-   edge (2–4px of horizontal overflow); tuck it back inside instead. */
-@media (max-width: 620px) { .fx-duo-b { right: 0; bottom: -18px; width: 42%; } }
-@media (min-width: 900px) { .fx-duo-b { right: -34px; } }
+/* the weekly-report tile has no capture yet (see the note in the page):
+   its media side is the feature's mark and what the report tells you */
+.tile-media .fx-say { align-self: center; display: grid; justify-items: start; gap: .9rem; margin: 0 auto; padding: .2rem 1.4rem 1.6rem; max-width: 320px; }
+.tile-media .fx-say .check-list { margin: 0; }
+.tile-media .fx-say .check-list li { margin-bottom: .45rem; font-size: .92rem; }
+.tile-media .fx-say .habit-ico { margin-bottom: 0; }
 
-/* ─── Chapter 3 cards: media tops handled by .log-card/.log-media ─── */
-.fx-cards { display: grid; gap: 1.2rem; margin-top: 2.4rem; }
-.fx-cards .log-media { aspect-ratio: 1 / 1; }
-@media (min-width: 900px) { .fx-cards { grid-template-columns: repeat(3, 1fr); } }
+/* ─── Feature titles inside the splits (chapter 2) ─── */
+.fx-t {
+  font-family: var(--font-display); font-weight: 550; letter-spacing: -.02em; line-height: 1.12;
+  font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: .7rem;
+}
+.split-copy .fx-num { margin-bottom: 1rem; }
+.split-copy .proof-link { margin-top: 1.3rem; }
 
-/* daily-tracking tile composition (no artwork — data tiles) */
-.fx-stats {
-  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
-  place-content: center; height: 100%; padding: 1.4rem;
-  background:
-    radial-gradient(120% 90% at 80% 0%, rgba(var(--pink-rgb),.09), transparent 55%),
-    linear-gradient(160deg, var(--bg-2), var(--bg-3));
-}
-.fx-stat {
-  background: var(--surface); border-radius: 16px; padding: .85rem .9rem;
-  box-shadow: var(--shadow-card);
-  display: flex; flex-direction: column; gap: .3rem;
-  transition: transform .4s cubic-bezier(.2,.8,.3,1);
-}
-.log-card:hover .fx-stat:nth-child(odd)  { transform: translateY(-4px); }
-.log-card:hover .fx-stat:nth-child(even) { transform: translateY(4px); }
-.fx-stat-ico {
-  width: 28px; height: 28px; border-radius: 9px;
-  display: grid; place-items: center; color: var(--on-brand);
-}
-.fx-stat-ico svg { width: 15px; height: 15px; }
-.fx-stat-ico { background: var(--tile-bg); color: var(--tile-fg); }
-.fx-bar span { background: var(--grad); }
-.fx-stat b { font-size: 1rem; line-height: 1.1; color: var(--text); }
-.fx-stat small { font-size: .68rem; font-weight: 650; color: var(--muted); letter-spacing: .03em; }
-.fx-bar { height: 6px; border-radius: 4px; background: var(--bg-3); overflow: hidden; }
-.fx-bar span { display: block; height: 100%; border-radius: 4px; }
-
-/* ─── Goal sections (folded topic pages) ─── */
+/* ─── Goal cards: the light card, the habit mark, the light check-list ─── */
 .fx-goal-grid { display: grid; gap: 1.2rem; margin-top: 2.4rem; }
 @media (min-width: 900px) { .fx-goal-grid { grid-template-columns: repeat(3, 1fr); } }
 .fx-goal {
-  display: flex; flex-direction: column;
-  background: var(--surface); border: 1px solid var(--border-soft);
-  border-radius: var(--r-xl); padding: 1.7rem 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform .32s cubic-bezier(.2,.8,.3,1), box-shadow .32s ease, border-color .32s ease;
+  display: flex; flex-direction: column; padding: 1.7rem 1.5rem;
+  transition: transform .32s cubic-bezier(.2,.8,.3,1), border-color .32s ease;
 }
-.fx-goal:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--border); }
-.fx-goal-ico {
-  width: 46px; height: 46px; border-radius: 14px; margin-bottom: 1rem;
-  display: grid; place-items: center; color: var(--on-brand);
-  box-shadow: 0 8px 18px -8px rgba(var(--shadow-rgb),.35);
-}
-.fx-goal-ico svg { width: 22px; height: 22px; }
-.fx-goal-ico-wl { background: var(--grad); }
-.fx-goal-ico-nd { background: var(--tile-bg); color: var(--tile-fg); }
-.fx-goal-ico-lm { background: var(--tile-bg); color: var(--tile-fg); }
+.fx-goal:hover { transform: translateY(-4px); border-color: var(--border); }
 .fx-goal h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: -.01em; margin-bottom: .55rem; }
 .fx-goal > p { font-size: .93rem; color: var(--muted); margin-bottom: 1rem; }
 .fx-goal .check-list { margin-bottom: 1.3rem; }
 .fx-goal .check-list li { font-size: .9rem; margin-bottom: .45rem; }
-/* Two buttons sit here now. `.btn` is nowrap, so without wrapping the pair
-   set the card's min-content width and blew the grid out by up to 262px. */
-.fx-goal-cta { margin-top: auto; display: flex; align-items: center; gap: .6rem 1rem; flex-wrap: wrap; }
-.fx-goal-cta .btn-ghost { font-weight: 700; font-size: .9rem; }
+.fx-goal-cta { margin-top: auto; display: flex; align-items: center; gap: .4rem 1.4rem; flex-wrap: wrap; }
+.fx-goal-cta .fx-link { margin-top: 0; }
 
 /* Anchor offset is inherited from site.css scroll-margin rules. */

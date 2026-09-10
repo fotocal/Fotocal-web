@@ -14,10 +14,11 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Page-scoped tokens: the decided palette, without touching the
-       other pages that share site.css. A :root selector (so check 10
+       other pages that share site.css. The features hub (body.page-fx)
+       is built in the same language and takes the same tokens. A :root selector (so check 10
        reads it as a token block) scoped to the home page's body class;
        browsers without :has() keep the shared tokens, which are close. ─── */
-:root:has(body.page-home) {
+:root:has(body.page-home), :root:has(body.page-fx) {
   --text: #101317; --text-soft: #2A313C; --muted: #5A6270; --text-rgb: 16,19,23;
   --bg: #FAFAFB; --bg-rgb: 250,250,251;        /* off-white: the bright sections stop glaring */
   --bg-2: #F1F2F5; --bg-3: #E6E8ED; --band: #F1F2F5; --bg-2-rgb: 241,242,245;
@@ -210,7 +211,7 @@
    utterance set in the display face, the feature's mark above it, a level
    meter in the brand gradient below: everything the card already has,
    nothing borrowed from another screen. Same tokens as the tiles. */
-.log-media .voice-say { align-self: center; display: grid; justify-items: center; gap: .9rem; text-align: center; margin: 0 auto; padding: .4rem 1.4rem 1.6rem; max-width: 300px; }
+.log-media .voice-say, .tile-media .voice-say { align-self: center; display: grid; justify-items: center; gap: .9rem; text-align: center; margin: 0 auto; padding: .4rem 1.4rem 1.6rem; max-width: 300px; }
 .voice-say-ico { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--tile-bg); color: var(--tile-fg); }
 .voice-say-ico svg { width: 22px; height: 22px; }
 .voice-say-q { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--text); margin: 0; text-wrap: balance; }

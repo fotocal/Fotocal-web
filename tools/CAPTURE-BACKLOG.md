@@ -4,7 +4,7 @@ Raw captures live in tools/captures/<sitting>/ (committed, always).
 Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
-## Still missing after sitting 2 (home page)
+## Still missing after sitting 2 (home page and features hub)
   · Voice logging — SPANISH (assets/img/screens/log-voice-es.webp)
     What to send: the voice result screen ("Esto es lo que he entendido"
     / the list of recognised foods with calories and macros — the same
@@ -12,10 +12,20 @@ with the crop row recorded in the commit.
     theme, phone screenshot as it comes: 1080x2400, PNG or JPG, nothing
     cropped or marked. Ideally say exactly «Dos huevos y tostada con
     aguacate», the sentence the card quotes, so screen and copy match.
-    Until then the Spanish card shows its own utterance instead of a
-    phone — src/index.html marks the single place the capture drops in
-    and the exact crop command. The English card is real. The barcode
-    pair is complete. Nothing else is needed for the home page.
+    Until then the Spanish card (home page, and the same tile on
+    /features/) shows its own utterance instead of a phone —
+    src/index.html and src/features/index.html each mark the single
+    place the capture drops in. The English card is real.
+  · Weekly report — SPANISH AND ENGLISH pair
+    (assets/img/screens/weekly-report-{600,900}-{es,en}.webp)
+    What to send: the weekly report's summary view (the week's calories
+    and macros day by day), app in Spanish and again in English, light
+    theme, 1080x2400, untouched. The two English weekly captures from
+    sitting 2 are not used: one shows the progress-maths bug noted in
+    tools/APP-BUGS.md and neither has a Spanish twin. Until then the
+    weekly tile on /features/ shows the feature's mark and what the
+    report tells you — src/features/index.html marks where it drops in.
+  Nothing else is needed for the home page or the features hub.
 
 ## Optional, same states as the English ones already taken
   · Home pair in the SAME header state: the English home shows the

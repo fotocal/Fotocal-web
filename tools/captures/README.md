@@ -38,3 +38,9 @@ Bull pair sent with it is pixel-identical to s2/barcode-{es,en}.jpg and
 is not duplicated here. Files named DO-NOT-PUBLISH are kept as evidence
 for tools/APP-BUGS.md (item 0) and must never reach the site: the swaps
 list in both languages and the English kéfir result.
+
+Sitting 5 (2026-09-12) — tools/captures/s5/, the voice retake: the result
+sheet and the listening state, both languages. CAUTION when cropping the
+two listening captures: the dimmed list behind the sheet contains
+"Cafea +3", the app mishearing a word. Crops must start at the sheet's
+top edge so that row is never legible.

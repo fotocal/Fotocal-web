@@ -4,28 +4,42 @@ Raw captures live in tools/captures/<sitting>/ (committed, always).
 Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
-## Still missing after sitting 2 (home page and features hub)
-  · Voice logging — SPANISH (assets/img/screens/log-voice-es.webp)
-    What to send: the voice result screen ("Esto es lo que he entendido"
-    / the list of recognised foods with calories and macros — the same
-    screen as tools/captures/s2/voice-en.jpg), app in Spanish, light
-    theme, phone screenshot as it comes: 1080x2400, PNG or JPG, nothing
-    cropped or marked. Ideally say exactly «Dos huevos y tostada con
-    aguacate», the sentence the card quotes, so screen and copy match.
-    Until then the Spanish card (home page, and the same tile on
-    /features/) shows its own utterance instead of a phone —
-    src/index.html and src/features/index.html each mark the single
-    place the capture drops in. The English card is real.
-  · Weekly report — SPANISH AND ENGLISH pair
-    (assets/img/screens/weekly-report-{600,900}-{es,en}.webp)
-    What to send: the weekly report's summary view (the week's calories
-    and macros day by day), app in Spanish and again in English, light
-    theme, 1080x2400, untouched. The two English weekly captures from
-    sitting 2 are not used: one shows the progress-maths bug noted in
-    tools/APP-BUGS.md and neither has a Spanish twin. Until then the
-    weekly tile on /features/ shows the feature's mark and what the
-    report tells you — src/features/index.html marks where it drops in.
-  Nothing else is needed for the home page or the features hub.
+## Sitting 3 — one list, everything still missing (2026-09-11)
+All: light theme, the phone's own screenshot, 1080x2400, untouched, one
+file per scroll position (no stitched long captures). Same state in both
+languages where a pair is asked for.
+
+  1. Voice result — SPANISH only (log-voice-es.webp). The screen after
+     speaking: the list of recognised foods with calories and macros
+     (the same screen as tools/captures/s2/voice-en.jpg). Say exactly
+     «Dos huevos y tostada con aguacate» — the sentence the card quotes.
+     Used by: home page bento card, /features/ capture tile.
+  2. Weekly report summary — SPANISH and ENGLISH. The report's summary
+     view: the week's calories and macros day by day. (The sitting-2
+     English weekly captures are unused: one shows the progress-maths
+     bug in tools/APP-BUGS.md, neither has a Spanish twin.)
+     Used by: /features/ weekly tile.
+  3. Result screen, LOWER HALF — SPANISH and ENGLISH. The same Baked
+     Chicken Bowl result, scrolled past the fibre/sugar/sat-fat/sodium
+     row: whatever the app shows there — micronutrients, NOVA level,
+     glycemic load, allergens, the coach summary and the swap. One
+     screenshot per scroll position until the end of the screen. If any
+     of these lives on a separate screen, capture that screen instead
+     and say which one. Used by: /features/scan-food/ "what you get".
+  4. Portion adjustment — SPANISH and ENGLISH. The control the app shows
+     for changing the amount after a scan (the ≈ 450 g), mid-adjustment
+     if it is a slider. If a "split between people" option exists, one
+     capture with it visible; if it does not, say so — the page text
+     claims it and will be corrected.
+  5. Ingredient editing — SPANISH and ENGLISH. The screen after tapping
+     a detected ingredient row (e.g. Pollo 150 g): where it can be
+     changed, re-weighed or removed.
+  6. A second, mixed dish — SPANISH and ENGLISH, result screen top only.
+     A restaurant-style plate with no obvious portions (paella, curry,
+     tapas), scanned from the same photo via the gallery button in each
+     language. Used by: /features/scan-food/ "in practice".
+  Optional, only if it exists as a distinct screen: the "analysing"
+  moment between the camera and the result, Spanish and English.
 
 ## Optional, same states as the English ones already taken
   · Home pair in the SAME header state: the English home shows the

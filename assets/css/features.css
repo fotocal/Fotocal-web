@@ -97,3 +97,24 @@
 .fx-goal-cta .fx-link { margin-top: 0; }
 
 /* Anchor offset is inherited from site.css scroll-margin rules. */
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FEATURE PAGE · /features/scan-food/ — built from the same parts.
+   ═══════════════════════════════════════════════════════════════ */
+@media (min-width: 900px) {
+  .sf-hero .hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+  .sf-hero .hero-stage-x { max-width: 400px; }   /* 400 × 2 = 800 device px ≤ the 1073px crop */
+  .sf-hero .hero-device { margin-bottom: 0; }     /* no proof band to run into on this page */
+}
+/* three-up card grids: the nine things you get, the three guides */
+.sf-grid-3 { margin-top: 2.4rem; }
+@media (min-width: 1000px) { .sf-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+/* the plate itself in a dark tile: the photo is the tile */
+.tile.sf-photo { padding: 0; display: block; }
+.sf-photo img { display: block; width: 100%; height: auto; }
+/* a guide card is a link: kicker, title, the arrow pinned to the bottom */
+.sf-read { display: flex; flex-direction: column; }
+.sf-read h3 { font-size: 1.05rem; margin: .2rem 0 .7rem; }
+.sf-read .fx-link { margin-top: auto; }
+.sf-faq .faq-list { margin-top: 1.6rem; }

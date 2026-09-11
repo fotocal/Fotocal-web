@@ -18,6 +18,9 @@ Turn a raw app capture into the screen image a CSS device frame holds.
            The cut is the last quiet row at or above H and the image is
            padded to H with the app's own ground, so frames sized alike
            show alike and the holder's edge always lands on plain ground.
+  pad=bottom  in ratio mode, take the padding colour from the rows just
+           above the cut instead of the top rows — for a screen whose top
+           is a photo (the result screen) and whose ground is below it
   width=W  output width (default 640)
 
 The frame itself is CSS (.dev-frame in assets/css/site.css): one frame
@@ -63,7 +66,8 @@ def main():
         H = round(im.width * float(opts["ratio"]))
         cut = top + H
         used = quiet_row(im, min(cut, im.height - 1), direction=-1)
-        bg = im.crop((0, top, im.width, top + 4)).resize((1, 1), Image.LANCZOS).getpixel((0, 0))
+        src_rows = (used - 4, used) if opts.get("pad") == "bottom" else (top, top + 4)
+        bg = im.crop((0, src_rows[0], im.width, src_rows[1])).resize((1, 1), Image.LANCZOS).getpixel((0, 0))
         crop = im.crop((0, top, im.width, used))
         padded = Image.new("RGB", (im.width, H), bg)
         padded.paste(crop, (0, 0))

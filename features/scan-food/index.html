@@ -15,7 +15,7 @@
   <meta property="og:title" content="Escanear comida con IA — una foto y toda la nutrición">
   <meta property="og:description" content="Fotografía un plato y obtén el plato, los ingredientes, la ración, calorías, macros, micronutrientes, puntuación de salud, carga glucémica y alérgenos.">
   <meta property="og:url" content="https://getfotocal.com/features/scan-food/">
-  <meta property="og:image" content="https://getfotocal.com/assets/img/features/scan-food.webp">
+  <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
@@ -31,8 +31,8 @@
   <link rel="stylesheet" href="../../assets/css/fonts.css?v=ffc748dc">
   <link rel="stylesheet" href="../../assets/css/site.css?v=0cf99122">
   <link rel="stylesheet" href="../../assets/css/home.css?v=071dd000">
-  <link rel="stylesheet" href="../../assets/css/pages.css?v=0ed0fa48">
-  <link rel="stylesheet" href="../../assets/css/sections.css?v=f8d2e418">
+  <link rel="stylesheet" href="../../assets/css/features.css?v=4e8a08b6">
+  <link rel="preload" as="image" href="../../assets/img/screens/sf-hero-700-es.webp" imagesrcset="../../assets/img/screens/sf-hero-700-es.webp 700w, ../../assets/img/screens/sf-hero-1075-es.webp 1075w" imagesizes="(min-width: 900px) 400px, min(340px, 78vw)">
 
   <script type="application/ld+json">
 {
@@ -76,172 +76,188 @@
 }
   </script>
 </head>
-<body>
+<body class="page-fx">
 
   <div id="site-nav"></div>
 
   <main id="main">
 
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="fp-hero">
+    <!-- ═══════ HERO — dark: copy left, the result screen right ═══════ -->
+    <section class="hero-x sec-dark sf-hero">
       <div class="container">
-        <div class="fp-hero-copy">
-          <span class="kicker reveal">Escaneo por foto</span>
-          <h1 class="reveal">Apunta con la cámara. <em class="accent">Llévate el plato entero</em>.</h1>
-          <p class="lead reveal">Una fotografía es toda la entrada. Fotocal identifica el plato y los ingredientes que lo componen, estima cuánto hay servido y devuelve una lectura completa: calorías, macros, unos ocho micronutrientes, una puntuación de salud, el nivel de procesamiento del alimento, su carga glucémica, los alérgenos que detecta, un resumen breve de tu coach y una alternativa realista. No se guarda nada hasta que tú lo digas.</p>
-          <div class="fp-hero-actions reveal">
-            <div class="cta-group"><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
-<a class="play-badge play-badge-sm" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
-              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-              <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
-            </a></div>
-            <a class="btn btn-outline" href="../">Todas las funciones</a>
-          </div>
-        </div>
-
-        <figure class="fp-shot reveal">
-          <span class="fp-shot-glow" aria-hidden="true"></span>
-          <span class="shot-card">
-            <img src="../../assets/img/features/scan-food.webp" width="1400" height="933"
-                 fetchpriority="high" decoding="async"
-                 alt="Un móvil fotografiando un bol equilibrado, con insignias nutricionales saliendo del plato">
-          </span>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="text-center">
-          <span class="kicker reveal">Cómo funciona</span>
-          <h2 class="section-title reveal">Entra una foto, <em class="accent">sale el cuadro completo</em>.</h2>
-          <p class="section-sub mx-auto reveal">Casero, de restaurante, para llevar o las sobras de anoche: la entrada siempre es la misma y el esfuerzo también.</p>
-        </div>
-        <div class="sp-steps">
-          <div class="sp-step reveal">
-            <div class="sp-step-n">1</div>
-            <h3>Fotografía el plato</h3>
-            <p>Lo que tengas delante, esté hecho como esté. Sin buena luz, sin colocar la comida, sin poner una moneda al lado como referencia.</p>
-          </div>
-          <div class="sp-step reveal" style="--rd:.1s">
-            <div class="sp-step-n">2</div>
-            <h3>La IA lo lee</h3>
-            <p>Identifica el plato, separa los ingredientes que ve y estima la ración a partir de lo que hay servido.</p>
-          </div>
-          <div class="sp-step reveal" style="--rd:.2s">
-            <div class="sp-step-n">3</div>
-            <h3>Ajusta la ración</h3>
-            <p>La estimación es un punto de partida, no una sentencia. Muévela hasta lo que realmente has comido, o reparte el plato entre las personas que lo comparten y registra solo tu parte.</p>
-          </div>
-          <div class="sp-step reveal" style="--rd:.3s">
-            <div class="sp-step-n">4</div>
-            <h3>Corrige lo que haga falta y guarda</h3>
-            <p>Puedes editar, cambiar o quitar cualquier ingrediente detectado, y añadir lo que la cámara no podía ver. Es un borrador hasta que lo guardas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ WHAT YOU GET ═══════════════════ -->
-    <section class="section">
-      <div class="container">
-        <div class="text-center">
-          <span class="kicker reveal">Qué obtienes</span>
-          <h2 class="section-title reveal">Nueve cosas, de una sola foto.</h2>
-          <p class="section-sub mx-auto reveal">Casi todas las apps se quedan en el recuento de calorías. Lo útil suele ser todo lo que viene después.</p>
-        </div>
-        <div class="sp-cards">
-          <div class="sp-card reveal">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-            <h3>El plato y sus ingredientes</h3>
-            <p>Nombrados uno a uno y no como un bloque, para que veas qué cree que está mirando.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.1s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M8 7l-4 7a4 4 0 0 0 8 0z"/><path d="M16 7l-4 7a4 4 0 0 0 8 0z" transform="translate(4)"/></svg></div>
-            <h3>Una ración estimada que puedes mover</h3>
-            <p>Leída del plato en vez de supuesta a partir de una ración media, y ajustable con un gesto si no cuadra.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.2s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
-            <h3>Calorías y macros</h3>
-            <p>La cifra principal más el reparto de proteínas, carbohidratos y grasas que hay detrás.</p>
-          </div>
-          <div class="sp-card reveal">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M12 3v4"/><path d="M6 12a6 6 0 0 1 12 0v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><path d="M6 14h12"/></svg></div>
-            <h3>Unos ocho micronutrientes</h3>
-            <p>Fibra, azúcar, sodio, grasas saturadas y el resto del cuadro que la mayoría de contadores de calorías ignora por completo.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.1s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 1 9-9"/><path d="M12 12l5-3"/><path d="M12 12v.01"/><path d="M21 12h-3"/></svg></div>
-            <h3>Una puntuación de salud</h3>
-            <p>Un solo número de cómo queda la comida en conjunto, para comparar dos platos sin leer dos tablas.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.2s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
-            <h3>Nivel de procesamiento NOVA</h3>
-            <p>Cuán procesado está el alimento: una pregunta muy distinta de cuántas calorías tiene, y que pesa a lo largo de los meses.</p>
-          </div>
-          <div class="sp-card reveal">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2.5-4 5-4 7.5 0s5 4 7.5 0 5-4 5 0"/><path d="M2 17c2.5-4 5-4 7.5 0s5 4 7.5 0 5-4 5 0" opacity=".55"/></svg></div>
-            <h3>Carga glucémica</h3>
-            <p>Cuánto es probable que esta ración concreta te mueva el azúcar en sangre, según la cantidad que tienes delante.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.1s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
-            <h3>Alérgenos</h3>
-            <p>Señalados a partir de los ingredientes que detecta, para que un plato compartido o desconocido no sea una apuesta.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.2s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>
-            <h3>Un resumen del coach y un cambio</h3>
-            <p>Una lectura en lenguaje llano de la comida y un único cambio concreto que la mejoraría. No es un sermón: es una sugerencia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ IMAGE BAND ═══════════════════
-         Sits between the list of outputs and the explanation of how the
-         advice is generated — where the page stops enumerating and starts
-         arguing, and can use a breath. -->
-    <section class="section">
-      <div class="container">
-        <div class="sp-band flip reveal">
-          <div class="sp-band-media">
-            <div class="illus">
-              <img src="../../assets/img/features/scan-food-band.webp" width="900" height="1125" loading="lazy" decoding="async"
-                   alt="Una mano fotografiando un plato de restaurante, con una puntuación de salud y una alternativa más sana apareciendo al lado">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="kicker reveal">Escaneo por foto</span>
+            <h1 class="hero-title reveal">Apunta con la cámara. <em class="accent">Llévate el plato entero</em>.</h1>
+            <p class="hero-sub reveal">Una fotografía es toda la entrada. Fotocal identifica el plato y los ingredientes que lo componen, estima cuánto hay servido y devuelve una lectura completa: calorías, macros, unos ocho micronutrientes, una puntuación de salud, el nivel de procesamiento del alimento, su carga glucémica, los alérgenos que detecta, un resumen breve de tu coach y una alternativa realista. No se guarda nada hasta que tú lo digas.</p>
+            <div class="reveal">
+              <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
+              <span class="hero-note">En Google Play · Android</span>
             </div>
           </div>
-          <div class="sp-band-copy">
-            <span class="pill">En la práctica</span>
-            <h2>El plato de restaurante que no puedes buscar</h2>
-            <p>Sin código de barras, sin etiqueta y sin saber muy bien qué le ha puesto la cocina. Una foto devuelve las calorías, la puntuación y un cambio concreto para la próxima vez, antes de que se enfríe el plato.</p>
+          <div class="hero-visual">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="hero-stage-x">
+              <div class="hero-device">
+                <div class="dev-frame is-cut dev-frame-lg"><div class="dev-screen"><img src="../../assets/img/screens/sf-hero-700-es.webp" srcset="../../assets/img/screens/sf-hero-700-es.webp 700w, ../../assets/img/screens/sf-hero-1075-es.webp 1075w" sizes="(min-width: 900px) 400px, min(340px, 78vw)" width="700" height="1260" fetchpriority="high" decoding="async" alt="Pantalla real de la app: el Baked Chicken Bowl escaneado, puntuación de salud 79 y Buena elección sobre la foto, 475 kcal, unos 450 g"></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ HOW THE ADVICE WORKS ═══════════════════ -->
-    <section class="section section-alt">
-      <div class="container-narrow">
-        <div class="fp-rec reveal">
-          <span class="pill">Cómo funcionan los consejos</span>
-          <h2>La sugerencia sabe qué más has comido hoy.</h2>
-          <p>Un cambio solo sirve si encaja con el resto de tu día. Las recomendaciones de Fotocal se generan con tus objetivos reales y tu diario real, no con una idea general de comer sano.</p>
-          <ul class="check-list">
-            <li>Tus objetivos van primero: la misma comida recibe un consejo distinto si estás en déficit, en mantenimiento o ganando masa.</li>
-            <li>Lee el resto del día. Si a las ocho de la tarde vas corto de proteína, el cambio irá de proteína.</li>
-            <li>Propone un cambio, no una reescritura. Algo que podrías hacer de verdad la próxima vez, planteado como una opción y no como una norma.</li>
-            <li>Todo lo que escaneas alimenta la pestaña de Recomendaciones y tu Informe Semanal, así que el consejo se vuelve más concreto cuanto más registras.</li>
-          </ul>
+    <!-- ═══════ HOW IT WORKS — light: four real screens of one scan ═══════ -->
+    <section class="section sec-light" id="how">
+      <div class="container">
+        <header class="fx-chap">
+          <span class="kicker reveal">Cómo funciona</span>
+          <h2 class="section-title reveal">Entra una foto, <em class="accent">sale el cuadro completo</em>.</h2>
+          <p class="section-sub reveal">Casero, de restaurante, para llevar o las sobras de anoche: la entrada siempre es la misma y el esfuerzo también.</p>
+        </header>
+        <ol class="fx-tiles fx-tiles-4">
+          <li class="how-tile fx-tile reveal">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">1</span>
+              <h3>Fotografía el plato</h3>
+              <p>Lo que tengas delante, esté hecho como esté. Sin buena luz, sin colocar la comida, sin poner una moneda al lado como referencia.</p>
+            </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-camera-440-es.webp" srcset="../../assets/img/screens/sf-camera-440-es.webp 440w, ../../assets/img/screens/sf-camera-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: la cámara de escaneo encuadra un bol de pollo, arroz, aguacate y maíz"></div></div>
+            </div>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:0.08s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">2</span>
+              <h3>La IA lo lee</h3>
+              <p>Identifica el plato, separa los ingredientes que ve y estima la ración a partir de lo que hay servido.</p>
+            </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-read-440-es.webp" srcset="../../assets/img/screens/sf-read-440-es.webp 440w, ../../assets/img/screens/sf-read-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: el resultado, Baked Chicken Bowl, puntuación de salud 79, el nombre listo para editar"></div></div>
+            </div>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:0.16s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">3</span>
+              <h3>Ajusta la ración</h3>
+              <p>La estimación es un punto de partida, no una sentencia. Muévela hasta lo que realmente has comido, o reparte el plato entre las personas que lo comparten y registra solo tu parte.</p>
+            </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-edit-440-es.webp" srcset="../../assets/img/screens/sf-edit-440-es.webp 440w, ../../assets/img/screens/sf-edit-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: los ingredientes detectados con sus gramos y calorías, pollo 150 g, arroz 150 g, aguacate 50 g, maíz 50 g, cebolla 30 g"></div></div>
+            </div>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:0.24s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">4</span>
+              <h3>Corrige lo que haga falta y guarda</h3>
+              <p>Puedes editar, cambiar o quitar cualquier ingrediente detectado, y añadir lo que la cámara no podía ver. Es un borrador hasta que lo guardas.</p>
+            </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-day-440-es.webp" srcset="../../assets/img/screens/sf-day-440-es.webp 440w, ../../assets/img/screens/sf-day-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: tu día tras guardar, esta comida es el 39% de tu día, con calorías, proteína, carbohidratos y grasa frente a los objetivos"></div></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════ WHAT YOU GET — light-2 ═══════ -->
+    <section class="section sec-light-2" id="get">
+      <div class="container">
+        <header class="fx-chap">
+          <span class="kicker reveal">Qué obtienes</span>
+          <h2 class="section-title reveal">Nueve cosas, de una sola foto.</h2>
+          <p class="section-sub reveal">Casi todas las apps se quedan en el recuento de calorías. Lo útil suele ser todo lo que viene después.</p>
+        </header>
+        <ul class="habit-grid sf-grid-3">
+          <li class="habit-card reveal">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+            <h3>El plato y sus ingredientes</h3>
+            <p>Nombrados uno a uno y no como un bloque, para que veas qué cree que está mirando.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.06s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M8 7l-4 7a4 4 0 0 0 8 0z"/><path d="M16 7l-4 7a4 4 0 0 0 8 0z" transform="translate(4)"/></svg></div>
+            <h3>Una ración estimada que puedes mover</h3>
+            <p>Leída del plato en vez de supuesta a partir de una ración media, y ajustable con un gesto si no cuadra.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.12s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
+            <h3>Calorías y macros</h3>
+            <p>La cifra principal más el reparto de proteínas, carbohidratos y grasas que hay detrás.</p>
+          </li>
+          <li class="habit-card reveal">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M12 3v4"/><path d="M6 12a6 6 0 0 1 12 0v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/><path d="M6 14h12"/></svg></div>
+            <h3>Unos ocho micronutrientes</h3>
+            <p>Fibra, azúcar, sodio, grasas saturadas y el resto del cuadro que la mayoría de contadores de calorías ignora por completo.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.06s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 1 9-9"/><path d="M12 12l5-3"/><path d="M12 12v.01"/><path d="M21 12h-3"/></svg></div>
+            <h3>Una puntuación de salud</h3>
+            <p>Un solo número de cómo queda la comida en conjunto, para comparar dos platos sin leer dos tablas.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.12s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+            <h3>Nivel de procesamiento NOVA</h3>
+            <p>Cuán procesado está el alimento: una pregunta muy distinta de cuántas calorías tiene, y que pesa a lo largo de los meses.</p>
+          </li>
+          <li class="habit-card reveal">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2.5-4 5-4 7.5 0s5 4 7.5 0 5-4 5 0"/><path d="M2 17c2.5-4 5-4 7.5 0s5 4 7.5 0 5-4 5 0" opacity=".55"/></svg></div>
+            <h3>Carga glucémica</h3>
+            <p>Cuánto es probable que esta ración concreta te mueva el azúcar en sangre, según la cantidad que tienes delante.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.06s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+            <h3>Alérgenos</h3>
+            <p>Señalados a partir de los ingredientes que detecta, para que un plato compartido o desconocido no sea una apuesta.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.12s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>
+            <h3>Un resumen del coach y un cambio</h3>
+            <p>Una lectura en lenguaje llano de la comida y un único cambio concreto que la mejoraría. No es un sermón: es una sugerencia.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ IN PRACTICE — dark: the plate itself, as photographed ═══════ -->
+    <section class="section sec-dark" id="practice">
+      <div class="container">
+        <div class="split">
+          <div class="split-visual reveal">
+            <div class="tile tile-dark sf-photo"><img src="../../assets/img/screens/scan-plate-600.webp" srcset="../../assets/img/screens/scan-plate-600.webp 600w, ../../assets/img/screens/scan-plate-900.webp 900w" sizes="(min-width: 900px) 440px, 90vw" width="600" height="600" loading="lazy" decoding="async" alt="El bol del que salieron todas las pantallas de esta página: pollo al horno sobre arroz con aguacate, maíz, cebolla morada y yogur"></div>
+          </div>
+          <div class="split-copy">
+            <span class="kicker reveal">En la práctica</span>
+            <h2 class="section-title reveal">El plato de restaurante que no puedes buscar</h2>
+            <p class="section-sub reveal">Sin código de barras, sin etiqueta y sin saber muy bien qué le ha puesto la cocina. Una foto devuelve las calorías, la puntuación y un cambio concreto para la próxima vez, antes de que se enfríe el plato.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ FAQ ═══════════════════ -->
-    <section class="section">
+    <!-- ═══════ HOW THE ADVICE WORKS — light: the coach knows the day ═══════ -->
+    <section class="section sec-light" id="advice">
+      <div class="container">
+        <div class="split split-flip">
+          <div class="split-visual reveal">
+            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/coach-chat-600-es.webp" srcset="../../assets/img/screens/coach-chat-600-es.webp 600w, ../../assets/img/screens/coach-chat-900-es.webp 900w" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Pantalla real de la app: el chat de Coach Kal responde a una pregunta sobre el bol de pollo escaneado con los números del día del usuario"></div></div></div>
+          </div>
+          <div class="split-copy">
+            <span class="kicker reveal">Cómo funcionan los consejos</span>
+            <h2 class="section-title reveal">La sugerencia sabe qué más has comido hoy.</h2>
+            <p class="section-sub reveal">Un cambio solo sirve si encaja con el resto de tu día. Las recomendaciones de Fotocal se generan con tus objetivos reales y tu diario real, no con una idea general de comer sano.</p>
+            <ul class="check-list check-list-lt reveal">
+              <li>Tus objetivos van primero: la misma comida recibe un consejo distinto si estás en déficit, en mantenimiento o ganando masa.</li>
+              <li>Lee el resto del día. Si a las ocho de la tarde vas corto de proteína, el cambio irá de proteína.</li>
+              <li>Propone un cambio, no una reescritura. Algo que podrías hacer de verdad la próxima vez, planteado como una opción y no como una norma.</li>
+              <li>Todo lo que escaneas alimenta la pestaña de Recomendaciones y tu Informe Semanal, así que el consejo se vuelve más concreto cuanto más registras.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FAQ — light-2 ═══════ -->
+    <section class="section sec-light-2 sf-faq" id="faq">
       <div class="container-narrow">
         <div class="text-center">
           <h2 class="section-title reveal">Preguntas sobre el escaneo por foto</h2>
@@ -267,45 +283,42 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ RELATED READING ═══════════════════ -->
-    <section class="section section-alt">
+    <!-- ═══════ RELATED READING — light ═══════ -->
+    <section class="section sec-light" id="read">
       <div class="container">
-        <div class="text-center">
+        <header class="fx-chap">
           <span class="kicker reveal">Guías</span>
           <h2 class="section-title reveal">Sigue leyendo</h2>
-          <p class="section-sub mx-auto reveal">Lo que hay detrás de los números de la pantalla.</p>
-        </div>
-        <div class="fc-related">
-          <a class="fc-rcard reveal" href="../../blog/how-to-count-calories-accurately/">
-            <span class="fc-rkicker">Artículo</span>
-            <span class="fc-rtitle">Cómo contar calorías con precisión</span>
-            <span class="fc-rarrow">Leer →</span>
+          <p class="section-sub reveal">Lo que hay detrás de los números de la pantalla.</p>
+        </header>
+        <div class="habit-grid sf-grid-3">
+          <a class="habit-card sf-read reveal" href="../../blog/how-to-count-calories-accurately/">
+            <span class="log-tag">Artículo</span>
+            <h3>Cómo contar calorías con precisión</h3>
+            <span class="fx-link">Leer →</span>
           </a>
-          <a class="fc-rcard reveal" href="../../blog/what-a-balanced-plate-looks-like/">
-            <span class="fc-rkicker">Artículo</span>
-            <span class="fc-rtitle">Qué aspecto tiene un plato equilibrado</span>
-            <span class="fc-rarrow">Leer →</span>
+          <a class="habit-card sf-read reveal" href="../../blog/what-a-balanced-plate-looks-like/" style="--rd:0.06s">
+            <span class="log-tag">Artículo</span>
+            <h3>Qué aspecto tiene un plato equilibrado</h3>
+            <span class="fx-link">Leer →</span>
           </a>
-          <a class="fc-rcard reveal" href="../../blog/why-micronutrients-matter/">
-            <span class="fc-rkicker">Artículo</span>
-            <span class="fc-rtitle">Por qué importan los micronutrientes</span>
-            <span class="fc-rarrow">Leer →</span>
+          <a class="habit-card sf-read reveal" href="../../blog/why-micronutrients-matter/" style="--rd:0.12s">
+            <span class="log-tag">Artículo</span>
+            <h3>Por qué importan los micronutrientes</h3>
+            <span class="fx-link">Leer →</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
-    <section class="final-cta">
+    <!-- ═══════ FINAL CTA — the brand gradient ═══════ -->
+    <section class="final-band">
       <div class="container">
-        <div class="final-inner reveal">
+        <div class="final-band-inner reveal">
           <h2>Fotografía tu próxima comida y velo todo.</h2>
           <p>Fotocal es gratis para empezar, con una prueba gratis de 5 días en los planes de pago.</p>
-          <div class="cta-group"><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
-<a class="play-badge play-badge-sm play-badge-glass" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
-            <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-            <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
-          </a></div>
+          <a class="btn btn-white btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
+          <span class="final-note">En Google Play · Android</span>
         </div>
       </div>
     </section>

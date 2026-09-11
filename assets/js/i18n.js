@@ -130,7 +130,7 @@ window.FOTOCAL_I18N = {
     "how.s3alt": "Home screen — calories left, macro rings and the day's meals",
     "how.s1slot": "Camera pointed at a plate, analysing",
     "how.s2t": "The AI reads it",
-    "how.s2b": "In seconds it identifies every ingredient, estimates the portion, and works out calories, macros, micronutrients and a health score.",
+    "how.s2b": "In seconds it identifies every ingredient, estimates the portion, and works out calories, macros and a health score.",
     "how.s2slot": "Scan result — calories and macros detected",
     "how.s3t": "It's logged",
     "how.s3b": "The meal drops straight into your diary and your whole day updates itself — calories left, macros, water, streak. Done.",
@@ -224,7 +224,7 @@ window.FOTOCAL_I18N = {
     /* ── Pricing ── */
     "price.kicker": "Premium",
     "price.title": "Start with a <em class=\"accent\">5-day free trial</em>.",
-    "price.sub": "One subscription unlocks everything: unlimited AI scans, Coach Kal without limits, weekly reports, micronutrients and every premium feature. Two plans, zero games.",
+    "price.sub": "One subscription: unlimited AI photo scans, unlimited voice logging, the restaurant menu scanner and the full nutrition detail behind every meal. Coach Kal stays free on every plan. Two plans, zero games.",
     "price.m.name": "Monthly",
     "price.m.amt": "€6.99",
     "price.m.per": "/month",
@@ -245,7 +245,7 @@ window.FOTOCAL_I18N = {
     /* ── Comparison ── */
     "cmp.kicker": "How Fotocal compares",
     "cmp.title": "Everything in one app — <em class=\"accent\">no paywall games</em>.",
-    "cmp.sub": "How Fotocal stacks up against the best-known calorie and nutrition trackers, based on each app's publicly documented features.",
+    "cmp.sub": "How Fotocal stacks up against the best-known calorie and nutrition trackers. Their columns are what each maker documents publicly. Ours is our own free and Premium line, held to the same standard.",
     "cmp.hFeat": "Feature",
     "cmp.r1": "AI photo food scanning",
     "cmp.r2": "Barcode scanner",
@@ -262,8 +262,13 @@ window.FOTOCAL_I18N = {
     "cmp.premium": "Premium",
     "cmp.pro": "Pro",
     "cmp.gfit": "Google Fit",
+    "cmp.free2day": "Free, 2 a day",
+    "cmp.free1day": "Free, 1 a day",
+    "cmp.free2": "2 free, rest Premium",
+    "cmp.partfree": "Free, parts Premium",
+    "cmp.noteLink": "See free versus Premium in full",
     "cmp.na": "Not stated on the maker's site",
-    "cmp.note": "Competitor columns show what each maker states on its own website, checked on 10 September 2026: ✓ or a plan name means the maker states it, — means it is not stated there. Prices are the makers' published yearly prices in US dollars and can change. Fotocal is Android-only for now.",
+    "cmp.note": "Competitor columns show what each maker states on its own website, checked on 10 September 2026: ✓ or a plan name means the maker states it, — means it is not stated there. Prices are the makers' published yearly prices in US dollars and can change. Fotocal is Android-only for now. The Fotocal column is our own free and Premium line, read off the app rather than written by us: ✓ means the free plan with no cap, Premium means it needs a subscription, and anything else names the limit the free plan has.",
     "cmp.cta": "Get Fotocal on Google Play",
 
     /* ── FAQ ── */
@@ -439,7 +444,7 @@ window.FOTOCAL_I18N = {
     "how.s3alt": "Pantalla de inicio — calorías restantes, anillos de macros y las comidas del día",
     "how.s1slot": "Cámara apuntando a un plato, analizando",
     "how.s2t": "La IA lo lee",
-    "how.s2b": "En segundos identifica cada ingrediente, estima la ración y calcula calorías, macros, micronutrientes y una puntuación de salud.",
+    "how.s2b": "En segundos identifica cada ingrediente, estima la ración y calcula calorías, macros y una puntuación de salud.",
     "how.s2slot": "Resultado del escaneo — calorías y macros detectados",
     "how.s3t": "Queda registrado",
     "how.s3b": "La comida entra directa en tu diario y todo tu día se actualiza solo: calorías restantes, macros, agua, racha. Listo.",
@@ -533,7 +538,7 @@ window.FOTOCAL_I18N = {
     /* ── Pricing ── */
     "price.kicker": "Premium",
     "price.title": "Empieza con una <em class=\"accent\">prueba gratis de 5 días</em>.",
-    "price.sub": "Una suscripción lo desbloquea todo: escaneos con IA ilimitados, Coach Kal sin límites, informes semanales, micronutrientes y todas las funciones premium. Dos planes, cero trampas.",
+    "price.sub": "Una suscripción: escaneos con IA ilimitados, registro por voz ilimitado, el escáner de cartas y el detalle nutricional completo de cada comida. Coach Kal sigue siendo gratis en todos los planes. Dos planes, cero trampas.",
     "price.m.name": "Mensual",
     "price.m.amt": "6,99 €",
     "price.m.per": "/mes",
@@ -552,7 +557,7 @@ window.FOTOCAL_I18N = {
     /* ── Comparison ── */
     "cmp.kicker": "Fotocal frente al resto",
     "cmp.title": "Todo en una sola app — <em class=\"accent\">sin trampas de pago</em>.",
-    "cmp.sub": "Así queda Fotocal frente a los contadores de calorías más conocidos, según las funciones que cada app documenta públicamente.",
+    "cmp.sub": "Así queda Fotocal frente a los contadores de calorías más conocidos. Sus columnas son lo que cada fabricante documenta públicamente. La nuestra es nuestra propia línea entre gratis y Premium, con el mismo rasero.",
     "cmp.hFeat": "Función",
     "cmp.r1": "Escaneo de comida por foto con IA",
     "cmp.r2": "Escáner de código de barras",
@@ -569,8 +574,13 @@ window.FOTOCAL_I18N = {
     "cmp.premium": "Premium",
     "cmp.pro": "Pro",
     "cmp.gfit": "Google Fit",
+    "cmp.free2day": "Gratis, 2 al día",
+    "cmp.free1day": "Gratis, 1 al día",
+    "cmp.free2": "2 gratis, resto Premium",
+    "cmp.partfree": "Gratis, partes Premium",
+    "cmp.noteLink": "Mira gratis frente a Premium en detalle",
     "cmp.na": "No consta en la web del fabricante",
-    "cmp.note": "Las columnas de la competencia recogen lo que cada fabricante declara en su propia web, comprobado el 10 de septiembre de 2026: ✓ o el nombre de un plan significa que el fabricante lo declara; — significa que no consta. Los precios son los anuales publicados por cada fabricante, en dólares, y pueden cambiar. Por ahora Fotocal es solo para Android.",
+    "cmp.note": "Las columnas de la competencia recogen lo que cada fabricante declara en su propia web, comprobado el 10 de septiembre de 2026: ✓ o el nombre de un plan significa que el fabricante lo declara; — significa que no consta. Los precios son los anuales publicados por cada fabricante, en dólares, y pueden cambiar. Por ahora Fotocal es solo para Android. La columna de Fotocal es nuestra propia línea entre gratis y Premium, leída de la app y no escrita por nosotros: ✓ significa plan gratuito sin tope, Premium significa que necesita suscripción, y cualquier otra cosa nombra el límite que tiene el plan gratuito.",
     "cmp.cta": "Descarga Fotocal en Google Play",
 
     /* ── FAQ ── */

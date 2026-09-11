@@ -1279,9 +1279,13 @@ html { scroll-padding-top: calc(var(--nav-h) + 24px); }
   display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .02em;
   color: var(--muted); background: var(--bg-3); border-radius: 999px; padding: .18rem .5rem;
 }
+/* Our own column says where our paywall sits, in the same pill shape we use
+   for a competitor's paid tier — but tinted as ours, not as theirs. */
+.compare .c-us .part { color: var(--brand-text); background: rgba(var(--pink-rgb),.10); }
 .compare .price { font-weight: 700; color: var(--text); }
 .compare .c-us .price { color: var(--brand-text); }
 .compare-note { text-align: center; font-size: .8rem; color: var(--muted); max-width: 64ch; margin: .75rem auto 0; }
+.compare-note a { color: var(--brand-text); font-weight: 700; text-decoration: underline; text-underline-offset: .18em; }
 .compare-cta { text-align: center; margin-top: 1.75rem; }
 @media (min-width: 900px) { .compare { font-size: .98rem; } .compare th, .compare td { padding: .95rem 1.15rem; } }
 

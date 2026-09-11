@@ -26,7 +26,19 @@ I18N = os.path.join(ROOT, "assets", "js", "i18n.js")
 OPEN, CLOSE = "<!--# compare:generated -->", "<!--# /compare:generated -->"
 STALE_DAYS = 90
 
-TIER = {"premium": "cmp.premium", "pro": "cmp.pro", "gfit": "cmp.gfit"}
+# value -> (i18n key, English default). The first three describe a competitor's
+# paid plan; the last four describe OUR OWN free/Premium line, read off the app's
+# gating code (see "fotocal_checked" in compare_data.json). We label our column
+# the same way we label theirs, and name the cap rather than printing a bare tick.
+TIER = {
+    "premium":  ("cmp.premium",  "Premium"),
+    "pro":      ("cmp.pro",      "Pro"),
+    "gfit":     ("cmp.gfit",     "Google Fit"),
+    "free2day": ("cmp.free2day", "Free, 2 a day"),
+    "free1day": ("cmp.free1day", "Free, 1 a day"),
+    "free2":    ("cmp.free2",    "2 free, rest Premium"),
+    "partfree": ("cmp.partfree", "Free, parts Premium"),
+}
 MONTHS_ES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
              "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
@@ -51,7 +63,8 @@ def cell(label, value, us=False):
     elif value == "yes":
         inner = '<span class="yes">✓</span>'
     elif value in TIER:
-        inner = '<span class="part" data-i18n="%s">%s</span>' % (TIER[value], {"premium": "Premium", "pro": "Pro", "gfit": "Google Fit"}[value])
+        key, default = TIER[value]
+        inner = '<span class="part" data-i18n="%s">%s</span>' % (key, default)
     else:
         inner = '<span class="price">%s</span>' % value
     return "<td%s>%s</td>" % (attrs, inner)

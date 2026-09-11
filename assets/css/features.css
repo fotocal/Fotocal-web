@@ -101,13 +101,47 @@
   .sf-hero .hero-device { margin-bottom: 0; }     /* no proof band to run into on this page */
 }
 /* three-up card grids: the nine things you get, the three guides */
-.sf-grid-3 { margin-top: 2.4rem; }
-@media (min-width: 1000px) { .sf-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+.sf-grid-3, .bc-grid-3 { margin-top: 2.4rem; }
+@media (min-width: 1000px) { .sf-grid-3, .bc-grid-3 { grid-template-columns: repeat(3, 1fr); } }
 /* the plate itself in a dark tile: the photo is the tile */
-.tile.sf-photo { padding: 0; display: block; }
-.sf-photo img { display: block; width: 100%; height: auto; }
+.tile.sf-photo, .tile.bc-photo { padding: 0; display: block; }
+.sf-photo img, .bc-photo img { display: block; width: 100%; height: auto; }
 /* a guide card is a link: kicker, title, the arrow pinned to the bottom */
 .sf-read { display: flex; flex-direction: column; }
 .sf-read h3 { font-size: 1.05rem; margin: .2rem 0 .7rem; }
 .sf-read .fx-link { margin-top: auto; }
 .sf-faq .faq-list { margin-top: 1.6rem; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FEATURE PAGE · /features/scan-barcode/
+   Same parts again. What is new here is the composed slot: three
+   places have no capture yet (the amount bar, the meal picker, and
+   an English scored result), so each is made from the page's own
+   words — a mark, one line in the display face, and where it helps,
+   the 0–100 scale as a gradient rule. Never a mock-up of a screen.
+   ═══════════════════════════════════════════════════════════════ */
+@media (min-width: 900px) {
+  .bc-hero .hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+  .bc-hero .hero-device { margin-bottom: 0; }   /* no proof band to run into */
+}
+/* the scanner capture is 941px wide, so the frame is capped where three
+   device pixels per CSS pixel still come out of the crop: 300 × 3 = 900 */
+.bc-hero .hero-stage-x { max-width: min(300px, 74vw); }
+@media (min-width: 900px) { .bc-hero .hero-stage-x { max-width: 400px; } }
+
+.bc-say { align-self: center; display: grid; justify-items: center; gap: .9rem; text-align: center; margin: 0 auto; padding: .4rem 1.2rem 1.6rem; max-width: 300px; }
+.bc-say-q { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1.25; color: var(--text); margin: 0; text-wrap: balance; }
+.bc-say .habit-ico { margin-bottom: 0; }
+.bc-say-dark .bc-say-q { color: var(--on-dark); }
+.bc-say-dark { padding-bottom: 2.4rem; max-width: 320px; }
+/* the scale the score sits on: the ends named, the run in the brand gradient */
+.bc-scale { display: flex; align-items: center; gap: .6rem; width: 100%; }
+.bc-scale b { font-size: .75rem; font-weight: 800; color: var(--muted); }
+.bc-say-dark .bc-scale b { color: var(--on-dark-soft); }
+.bc-scale i { flex: 1; height: 6px; border-radius: 4px; background: var(--grad); }
+/* the alternatives card, in the light card the page already uses */
+.bc-swap { padding: 1.6rem 1.5rem; }
+.bc-swap h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; letter-spacing: -.01em; margin-bottom: .5rem; }
+.bc-swap p { font-size: .93rem; color: var(--muted); }
+@media (min-width: 900px) { .bc-swap { align-self: center; } }

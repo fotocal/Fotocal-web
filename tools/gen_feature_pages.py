@@ -73,6 +73,10 @@ ICONS = {
 # Every field exists in both "en" and "es". A missing key raises at
 # build time rather than shipping a half-translated page.
 
+# NOTE (2026-09): /features/scan-food/ and /features/scan-barcode/ have been
+# rebuilt by hand in the home page's language, on real app captures. Their
+# entries below are kept for the copy they carry, but running this script
+# would overwrite those two pages with the old template — don't.
 PAGES = [
 {
  "slug": "voice-logging",

@@ -4,9 +4,10 @@ Raw captures live in tools/captures/<sitting>/ (committed, always).
 Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
-## After sitting 3 (2026-09-11) — retakes still to come
-All: light theme, the phone's own screenshot, 1080x2400, untouched, one
-file per scroll position. Same state in both languages.
+## Still to come (updated 2026-09-12)
+All: light theme, the phone's own screenshot, untouched, one file per
+scroll position. Same state in both languages unless it says otherwise.
+
   1. Voice result — SPANISH and ENGLISH, three foods the app recognises
      cleanly. The sitting-3 pair is not published: "Afel" (a
      misrecognised apple) on both screens. He says exactly «Dos huevos y
@@ -21,12 +22,27 @@ file per scroll position. Same state in both languages.
   3. Ingredient sheet — ENGLISH, to pair with
      tools/captures/s3/ingredient-edit-es.jpg. No slot yet; a pair would
      let the "fix the amounts" step show the sheet itself.
-  5. Barcode scanner screen — ENGLISH, to pair with
-     tools/captures/s4/barcode-scanner-es.png (the Activia kéfir bottle,
-     barcode inside the frame). Slot: /features/scan-barcode/ step 1.
   4. A second, mixed restaurant-style dish — SPANISH and ENGLISH, result
      top only, scanned from the same photo via the gallery button.
      Slot: /features/scan-food/ "in practice" (src marks it).
+  5. A scored barcode result in ENGLISH whose rows are filled — a product
+     the database actually knows, so no row reads "No data". To pair with
+     tools/captures/s4/barcode-kefir-es.jpg.
+     Slot: /features/scan-barcode/ "the score" (src marks it). Until it
+     arrives the English tile is composed from the page's own words. The
+     English Activia kéfir result must NOT be used for this: see
+     tools/APP-BUGS.md item 0.
+  6. The amount bar and the meal picker on a barcode result — SPANISH and
+     ENGLISH. The amount control lives in a fixed bar at the very bottom
+     of the result, so it needs the result scrolled to its end (or the
+     sheet, if tapping it opens one).
+     Slots: /features/scan-barcode/ steps 3 and 4 (src marks both).
+  7. BLOCKED, do not capture yet: the alternatives list under a result.
+     The list the app builds today is wrong (tools/APP-BUGS.md item 0),
+     so nothing goes in that slot until the score is fixed.
+
+Received and in use from sitting 4: the barcode scanner in both
+languages, the Spanish Kéfir natural result, the bottle photograph.
 Received and in use from sitting 3: weekly report top (both languages,
 different weeks — accepted), result lower half positions 4 and 5 (both
 languages), Spanish positions 1–3 and the Spanish ingredient sheet

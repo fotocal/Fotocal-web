@@ -15,7 +15,7 @@
   <meta property="og:title" content="Escáner de código de barras — nutrición al instante">
   <meta property="og:description" content="Escanea el código de barras de cualquier producto envasado y obtén al instante calorías, macros, ingredientes y alérgenos. Gratis e ilimitado.">
   <meta property="og:url" content="https://getfotocal.com/features/scan-barcode/">
-  <meta property="og:image" content="https://getfotocal.com/assets/img/features/scan-barcode.webp">
+  <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
@@ -31,8 +31,8 @@
   <link rel="stylesheet" href="../../assets/css/fonts.css?v=ffc748dc">
   <link rel="stylesheet" href="../../assets/css/site.css?v=0cf99122">
   <link rel="stylesheet" href="../../assets/css/home.css?v=071dd000">
-  <link rel="stylesheet" href="../../assets/css/pages.css?v=0ed0fa48">
-  <link rel="stylesheet" href="../../assets/css/sections.css?v=f8d2e418">
+  <link rel="stylesheet" href="../../assets/css/features.css?v=5af5d1b6">
+  <link rel="preload" as="image" href="../../assets/img/screens/bc-scan-700-es.webp" imagesrcset="../../assets/img/screens/bc-scan-700-es.webp 700w, ../../assets/img/screens/bc-scan-940-es.webp 940w" imagesizes="(min-width: 900px) 400px, min(300px, 74vw)">
 
   <script type="application/ld+json">
 {
@@ -76,157 +76,212 @@
 }
   </script>
 </head>
-<body>
+<body class="page-fx">
 
   <div id="site-nav"></div>
 
   <main id="main">
 
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="fp-hero">
+    <!-- ═══════ HERO — dark: the scanner itself, in both languages ═══════
+         The hero leads with the scanner, not with a result. A result is one
+         product's verdict; the scanner is what the feature is. It also keeps
+         the page from opening on a red score. -->
+    <section class="hero-x sec-dark bc-hero">
       <div class="container">
-        <div class="fp-hero-copy">
-          <span class="kicker reveal">Escaneo de código</span>
-          <h1 class="reveal">Los productos envasados, <em class="accent">ya resueltos</em>.</h1>
-          <p class="lead reveal">Apunta con la cámara al código de barras de cualquier paquete y la nutrición vuelve al instante: calorías, macros, la lista de ingredientes y los alérgenos, leídos de una gran base de datos de productos en lugar de estimados. Es gratis, es ilimitado y nunca toca tu cuota de escaneos con IA.</p>
-          <div class="fp-hero-actions reveal">
-            <div class="cta-group"><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
-<a class="play-badge play-badge-sm" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
-              <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-              <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
-            </a></div>
-            <a class="btn btn-outline" href="../">Todas las funciones</a>
-          </div>
-        </div>
-
-        <figure class="fp-shot reveal">
-          <span class="fp-shot-glow" aria-hidden="true"></span>
-          <span class="shot-card">
-            <img src="../../assets/img/features/scan-barcode.webp" width="1400" height="933"
-                 fetchpriority="high" decoding="async"
-                 alt="Un móvil escaneando el código de barras de un paquete, con la nutrición del producto apareciendo al lado">
-          </span>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="text-center">
-          <span class="kicker reveal">Cómo funciona</span>
-          <h2 class="section-title reveal">Cuatro segundos, <em class="accent">casi todos sujetando el paquete</em>.</h2>
-          <p class="section-sub mx-auto reveal">Todo lo que lleva código de barras es el caso fácil. Aquí no se estima nada: los números salen de la ficha del producto.</p>
-        </div>
-        <div class="sp-steps">
-          <div class="sp-step reveal">
-            <div class="sp-step-n">1</div>
-            <h3>Apunta al código</h3>
-            <p>En cualquier parte del paquete y en cualquier ángulo en que puedas sujetarlo. Lo lee en cuanto el código entra en cuadro.</p>
-          </div>
-          <div class="sp-step reveal" style="--rd:.1s">
-            <div class="sp-step-n">2</div>
-            <h3>Aparece el producto</h3>
-            <p>Nombre, marca y la ficha nutricional completa, sacada de la base de datos y no deducida de una foto.</p>
-          </div>
-          <div class="sp-step reveal" style="--rd:.2s">
-            <div class="sp-step-n">3</div>
-            <h3>Indica la cantidad</h3>
-            <p>Por 100 g, por la ración impresa en la etiqueta o por lo que realmente vas a tomar. Medio paquete es medio paquete.</p>
-          </div>
-          <div class="sp-step reveal" style="--rd:.3s">
-            <div class="sp-step-n">4</div>
-            <h3>Regístralo en una comida</h3>
-            <p>Directo a Desayuno, Comida, Cena o Snack, donde se suma a todo lo demás del día.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ WHAT YOU GET ═══════════════════ -->
-    <section class="section">
-      <div class="container">
-        <div class="text-center">
-          <span class="kicker reveal">Qué obtienes</span>
-          <h2 class="section-title reveal">Los números de la etiqueta, sin leer la etiqueta.</h2>
-          <p class="section-sub mx-auto reveal">Todo lo que hay en la parte de atrás del paquete, en un formato que sí puedes comparar y registrar.</p>
-        </div>
-        <div class="sp-cards">
-          <div class="sp-card reveal">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6v12M6.5 6v12M10 6v9M13.5 6v12M17 6v9M20.5 6v12"/></svg></div>
-            <h3>Identificación instantánea</h3>
-            <p>El producto reconocido por su código: sin buscar, sin entradas parecidas pero no iguales y sin elegir entre ocho versiones del mismo yogur.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.1s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
-            <h3>Calorías</h3>
-            <p>La cifra principal, para la cantidad que tú indiques y no solo por 100 g.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.2s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></div>
-            <h3>Desglose completo de macros</h3>
-            <p>Proteínas, carbohidratos y grasas, directos a los anillos del día.</p>
-          </div>
-          <div class="sp-card reveal">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-            <h3>La lista de ingredientes</h3>
-            <p>Lo que lleva de verdad y en el orden en que lo lleva, que a menudo dice más que el recuento de calorías.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.1s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
-            <h3>Alérgenos</h3>
-            <p>Señalados desde la ficha del producto, para que no tengas que leer letra pequeña en mitad de un pasillo.</p>
-          </div>
-          <div class="sp-card reveal" style="--rd:.2s">
-            <div class="sp-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 15.5a3.5 3.5 0 1 1 0-7c3 0 3.9 3.5 6.9 3.5a3.5 3.5 0 1 0 0-7c-3 0-3.9 3.5-6.9 3.5"/></svg></div>
-            <h3>Gratis e ilimitado</h3>
-            <p>El escaneo de códigos no se mide ni consume un escaneo con IA. Escanea la compra entera si quieres: no cuesta nada.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ IMAGE BAND ═══════════════════
-         Sits between the list of outputs and the explanation of how the
-         advice is generated — where the page stops enumerating and starts
-         arguing, and can use a breath. -->
-    <section class="section">
-      <div class="container">
-        <div class="sp-band flip reveal">
-          <div class="sp-band-media">
-            <div class="illus">
-              <img src="../../assets/img/features/scan-barcode-band.webp" width="900" height="1125" loading="lazy" decoding="async"
-                   alt="Una mano acercando el móvil al código de barras de un paquete de granola, con otro paquete parecido al lado en la estantería">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="kicker reveal">Escaneo de código</span>
+            <h1 class="hero-title reveal">Los productos envasados, <em class="accent">ya resueltos</em>.</h1>
+            <p class="hero-sub reveal">Apunta con la cámara al código de barras de cualquier paquete y la nutrición vuelve al instante: calorías, macros, la lista de ingredientes y los alérgenos, leídos de una gran base de datos de productos en lugar de estimados. Es gratis, es ilimitado y nunca toca tu cuota de escaneos con IA.</p>
+            <div class="reveal">
+              <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
+              <span class="hero-note">En Google Play · Android</span>
             </div>
           </div>
-          <div class="sp-band-copy">
-            <span class="pill">En la práctica</span>
-            <h2>Dos paquetes, un pasillo, cuatro segundos</h2>
-            <p>La parte de delante del paquete es marketing. La de atrás es letra pequeña que no ibas a leer de pie en un supermercado. Escanea los dos códigos, compara lo que llevan de verdad y devuelve uno a la estantería.</p>
+          <div class="hero-visual">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="hero-stage-x">
+              <div class="hero-device">
+                <div class="dev-frame is-cut dev-frame-lg"><div class="dev-screen"><img src="../../assets/img/screens/bc-scan-700-es.webp" srcset="../../assets/img/screens/bc-scan-700-es.webp 700w, ../../assets/img/screens/bc-scan-940-es.webp 940w" sizes="(min-width: 900px) 400px, min(300px, 74vw)" width="700" height="1317" fetchpriority="high" decoding="async" alt="Pantalla real de la app: el escáner de código de barras, con la línea de escaneo sobre el código de una botella de kéfir"></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ HOW THE ADVICE WORKS ═══════════════════ -->
-    <section class="section section-alt">
-      <div class="container-narrow">
-        <div class="fp-rec reveal">
-          <span class="pill">Dónde vale de verdad</span>
-          <h2>Dos productos, una decisión, cuatro segundos.</h2>
-          <p>El uso real del escaneo de códigos no es registrar: es decidir. Estar en un pasillo con un paquete en cada mano es el momento en que una etiqueta nutricional vale algo, y también el momento en que nadie la lee.</p>
-          <ul class="check-list">
-            <li>Escanea los dos y compara los números reales en vez del marketing de la parte de delante.</li>
-            <li>Como es gratis e ilimitado, no hay ningún motivo para no escanear algo que solo te estás planteando.</li>
-            <li>Todo lo que sí registres alimenta los mismos totales, anillos e Informe Semanal que una comida fotografiada.</li>
-            <li>Coach Kal ve los productos envasados que registras, así que «¿por qué llevo tanto sodio esta semana?» tiene una respuesta real y no una suposición.</li>
-          </ul>
+    <!-- ═══════ HOW IT WORKS — light ═══════ -->
+    <section class="section sec-light" id="how">
+      <div class="container">
+        <header class="fx-chap">
+          <span class="kicker reveal">Cómo funciona</span>
+          <h2 class="section-title reveal">Cuatro segundos, <em class="accent">casi todos sujetando el paquete</em>.</h2>
+          <p class="section-sub reveal">Todo lo que lleva código de barras es el caso fácil. Aquí no se estima nada: los números salen de la ficha del producto.</p>
+        </header>
+        <ol class="fx-tiles fx-tiles-4">
+          <li class="how-tile fx-tile reveal">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">1</span>
+              <h3>Apunta al código</h3>
+              <p>En cualquier parte del paquete y en cualquier ángulo en que puedas sujetarlo. Lo lee en cuanto el código entra en cuadro.</p>
+            </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/bc-scan-440-es.webp" srcset="../../assets/img/screens/bc-scan-440-es.webp 440w, ../../assets/img/screens/bc-scan-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: el escáner encuadrando el código de barras de la botella"></div></div>
+            </div>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:0.08s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">2</span>
+              <h3>Aparece el producto</h3>
+              <p>Nombre, marca y la ficha nutricional completa, sacada de la base de datos y no deducida de una foto.</p>
+            </div>
+            <div class="tile-media">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/bc-read-440-es.webp" srcset="../../assets/img/screens/bc-read-440-es.webp 440w, ../../assets/img/screens/bc-read-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: el Red Bull Sugarfree escaneado, su puntuación de 24 sobre 100 y los negativos que la explican: aditivos, energía, azúcar y sal"></div></div>
+            </div>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:0.16s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">3</span>
+              <h3>Indica la cantidad</h3>
+              <p>Por 100 g, por la ración impresa en la etiqueta o por lo que realmente vas a tomar. Medio paquete es medio paquete.</p>
+            </div>
+            <div class="tile-media">
+              <figure class="bc-say" aria-hidden="true">
+                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"/><path d="M7 8v8M12 6v12M17 8v8"/></svg></span>
+                <p class="bc-say-q">100 g · una ración · lo que vas a tomar</p>
+              </figure>
+            </div>
+          </li>
+          <li class="how-tile fx-tile reveal" style="--rd:0.24s">
+            <div class="fx-copy">
+              <span class="fx-num" aria-hidden="true">4</span>
+              <h3>Regístralo en una comida</h3>
+              <p>Directo a Desayuno, Comida, Cena o Snack, donde se suma a todo lo demás del día.</p>
+            </div>
+            <div class="tile-media">
+              <figure class="bc-say" aria-hidden="true">
+                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v9a3 3 0 0 0 6 0V3"/><path d="M7 12v9"/><path d="M17 3c-1.5 2-2 4-2 6a2 2 0 0 0 4 0c0-2-.5-4-2-6z"/><path d="M17 9v12"/></svg></span>
+                <p class="bc-say-q">Desayuno · Comida · Cena · Snack</p>
+              </figure>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════ WHAT YOU GET — light-2 ═══════ -->
+    <section class="section sec-light-2" id="get">
+      <div class="container">
+        <header class="fx-chap">
+          <span class="kicker reveal">Qué obtienes</span>
+          <h2 class="section-title reveal">Los números de la etiqueta, sin leer la etiqueta.</h2>
+          <p class="section-sub reveal">Todo lo que hay en la parte de atrás del paquete, en un formato que sí puedes comparar y registrar.</p>
+        </header>
+        <ul class="habit-grid bc-grid-3">
+          <li class="habit-card reveal">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6v12M6.5 6v12M10 6v9M13.5 6v12M17 6v9M20.5 6v12"/></svg></div>
+            <h3>Identificación instantánea</h3>
+            <p>El producto reconocido por su código: sin buscar, sin entradas parecidas pero no iguales y sin elegir entre ocho versiones del mismo yogur.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.06s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
+            <h3>Calorías</h3>
+            <p>La cifra principal, para la cantidad que tú indiques y no solo por 100 g.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.12s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></div>
+            <h3>Desglose completo de macros</h3>
+            <p>Proteínas, carbohidratos y grasas, directos a los anillos del día.</p>
+          </li>
+          <li class="habit-card reveal">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <h3>La lista de ingredientes</h3>
+            <p>Lo que lleva de verdad y en el orden en que lo lleva, que a menudo dice más que el recuento de calorías.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.06s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+            <h3>Alérgenos</h3>
+            <p>Señalados desde la ficha del producto, para que no tengas que leer letra pequeña en mitad de un pasillo.</p>
+          </li>
+          <li class="habit-card reveal" style="--rd:0.12s">
+            <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 15.5a3.5 3.5 0 1 1 0-7c3 0 3.9 3.5 6.9 3.5a3.5 3.5 0 1 0 0-7c-3 0-3.9 3.5-6.9 3.5"/></svg></div>
+            <h3>Gratis e ilimitado</h3>
+            <p>El escaneo de códigos no se mide ni consume un escaneo con IA. Escanea la compra entera si quieres: no cuesta nada.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ THE SCORE — dark ═══════
+         The Spanish tree shows a real scored result. The English good-score
+         capture has not been taken, so the English tile is composed from the
+         page's own words and the scale itself — never another product's
+         screen, and never an invented number. -->
+    <section class="section sec-dark" id="score">
+      <div class="container">
+        <div class="split">
+          <div class="split-visual reveal">
+            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/bc-kefir-600-es.webp" srcset="../../assets/img/screens/bc-kefir-600-es.webp 600w, ../../assets/img/screens/bc-kefir-900-es.webp 900w" sizes="300px" width="600" height="1029" loading="lazy" decoding="async" alt="Pantalla real de la app: un kéfir escaneado, 74 sobre 100, con el aviso de que contiene algo que pediste evitar, y sus negativos: sin aditivos, bajo en calorías, poco azúcar, poca sal"></div></div>              </div>
+          </div>
+          <div class="split-copy">
+            <span class="kicker reveal">La puntuación</span>
+            <h2 class="section-title reveal">Un número, y los motivos que lo explican.</h2>
+            <p class="section-sub reveal">Cada producto escaneado vuelve con una puntuación sobre 100 y, debajo, lo que la produce: los negativos por un lado, los positivos por otro, y cada fila se abre para ver el detalle. Sube tanto como baja: no es un veredicto sobre ti, es la parte de atrás del paquete leída en voz alta.</p>
+            <ul class="check-list check-list-dark reveal">
+              <li>Aditivos, energía, azúcar y sal, cada uno con su número detrás</li>
+              <li>Lo que le dijiste a Fotocal que evitas aparece avisado en el propio resultado</li>
+              <li>Cada cifra se muestra por 100 g, así dos productos se comparan de verdad</li>
+              <li>Nada llega a tu diario hasta que indicas la cantidad y tocas añadir</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ FAQ ═══════════════════ -->
-    <section class="section">
+    <!-- ═══════ IN PRACTICE — light: the product itself ═══════ -->
+    <section class="section sec-light" id="practice">
+      <div class="container">
+        <div class="split split-flip">
+          <div class="split-visual reveal">
+            <div class="tile tile-light bc-photo"><img src="../../assets/img/screens/bc-bottle-600.webp" srcset="../../assets/img/screens/bc-bottle-600.webp 600w, ../../assets/img/screens/bc-bottle-900.webp 900w" sizes="(min-width: 900px) 440px, 90vw" width="600" height="800" loading="lazy" decoding="async" alt="La botella a la que apunta el escáner de esta página: un kéfir del supermercado, con el código de barras hacia la cámara"></div>
+          </div>
+          <div class="split-copy">
+            <span class="kicker reveal">En la práctica</span>
+            <h2 class="section-title reveal">Dos paquetes, un pasillo, cuatro segundos</h2>
+            <p class="section-sub reveal">La parte de delante del paquete es marketing. La de atrás es letra pequeña que no ibas a leer de pie en un supermercado. Escanea los dos códigos, compara lo que llevan de verdad y devuelve uno a la estantería.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ WHERE IT EARNS ITS KEEP — light-2 ═══════ -->
+    <section class="section sec-light-2" id="compare">
+      <div class="container">
+        <div class="split">
+          <div class="split-copy">
+            <span class="kicker reveal">Dónde vale de verdad</span>
+            <h2 class="section-title reveal">Dos productos, una decisión, cuatro segundos.</h2>
+            <p class="section-sub reveal">El uso real del escaneo de códigos no es registrar: es decidir. Estar en un pasillo con un paquete en cada mano es el momento en que una etiqueta nutricional vale algo, y también el momento en que nadie la lee.</p>
+            <ul class="check-list check-list-lt reveal">
+              <li>Escanea los dos y compara los números reales en vez del marketing de la parte de delante.</li>
+              <li>Como es gratis e ilimitado, no hay ningún motivo para no escanear algo que solo te estás planteando.</li>
+              <li>Todo lo que sí registres alimenta los mismos totales, anillos e Informe Semanal que una comida fotografiada.</li>
+              <li>Coach Kal ve los productos envasados que registras, así que «¿por qué llevo tanto sodio esta semana?» tiene una respuesta real y no una suposición.</li>
+            </ul>
+          </div>
+          <div class="split-visual reveal">
+            <div class="lt-card bc-swap">
+              <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></span>
+              <h3>Otros productos de la misma categoría</h3>
+              <p>Debajo de cada resultado, la app lista otros productos del mismo tipo, cada uno con su propia puntuación, para que el siguiente que quieras mirar esté a un toque y no a otro viaje a la estantería.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FAQ — light ═══════ -->
+    <section class="section sec-light sf-faq" id="faq">
       <div class="container-narrow">
         <div class="text-center">
           <h2 class="section-title reveal">Preguntas sobre el escaneo de códigos</h2>
@@ -252,45 +307,42 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ RELATED READING ═══════════════════ -->
-    <section class="section section-alt">
+    <!-- ═══════ RELATED READING — light-2 ═══════ -->
+    <section class="section sec-light-2" id="read">
       <div class="container">
-        <div class="text-center">
+        <header class="fx-chap">
           <span class="kicker reveal">Guías</span>
           <h2 class="section-title reveal">Sigue leyendo</h2>
-          <p class="section-sub mx-auto reveal">Cómo sacarle más a lo que viene impreso en el paquete.</p>
-        </div>
-        <div class="fc-related">
-          <a class="fc-rcard reveal" href="../../blog/how-to-read-nutrition-labels/">
-            <span class="fc-rkicker">Artículo</span>
-            <span class="fc-rtitle">Cómo leer las etiquetas nutricionales</span>
-            <span class="fc-rarrow">Leer →</span>
+          <p class="section-sub reveal">Cómo sacarle más a lo que viene impreso en el paquete.</p>
+        </header>
+        <div class="habit-grid bc-grid-3">
+          <a class="habit-card sf-read reveal" href="../../blog/how-to-read-nutrition-labels/">
+            <span class="log-tag">Artículo</span>
+            <h3>Cómo leer las etiquetas nutricionales</h3>
+            <span class="fx-link">Leer →</span>
           </a>
-          <a class="fc-rcard reveal" href="../../blog/how-to-build-a-healthy-grocery-list/">
-            <span class="fc-rkicker">Artículo</span>
-            <span class="fc-rtitle">Cómo hacer una lista de la compra sana</span>
-            <span class="fc-rarrow">Leer →</span>
+          <a class="habit-card sf-read reveal" href="../../blog/how-to-build-a-healthy-grocery-list/" style="--rd:0.06s">
+            <span class="log-tag">Artículo</span>
+            <h3>Cómo hacer una lista de la compra sana</h3>
+            <span class="fx-link">Leer →</span>
           </a>
-          <a class="fc-rcard reveal" href="../../blog/added-sugar-vs-natural-sugar/">
-            <span class="fc-rkicker">Artículo</span>
-            <span class="fc-rtitle">Azúcar añadido vs azúcar natural</span>
-            <span class="fc-rarrow">Leer →</span>
+          <a class="habit-card sf-read reveal" href="../../blog/added-sugar-vs-natural-sugar/" style="--rd:0.12s">
+            <span class="log-tag">Artículo</span>
+            <h3>Azúcar añadido vs azúcar natural</h3>
+            <span class="fx-link">Leer →</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
-    <section class="final-cta">
+    <!-- ═══════ FINAL CTA — the brand gradient ═══════ -->
+    <section class="final-band">
       <div class="container">
-        <div class="final-inner reveal">
+        <div class="final-band-inner reveal">
           <h2>Escanea el paquete. Ahórrate la letra pequeña.</h2>
           <p>Fotocal es gratis para empezar, con una prueba gratis de 5 días en los planes de pago.</p>
-          <div class="cta-group"><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
-<a class="play-badge play-badge-sm play-badge-glass" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener noreferrer" aria-label="Get Fotocal on Google Play">
-            <svg viewBox="0 0 32 34" class="play-badge-icon" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>
-            <span class="play-badge-text"><small>DISPONIBLE EN</small><strong>Google Play</strong></span>
-          </a></div>
+          <a class="btn btn-white btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Descárgala gratis</a>
+          <span class="final-note">En Google Play · Android</span>
         </div>
       </div>
     </section>

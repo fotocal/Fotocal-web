@@ -248,7 +248,13 @@ def render_lang_blocks(src, lang):
         pos = src.index(">", pos) + 1
         end_tag_start = src.rindex("</", start_body, pos)
         if blang == lang:
-            clean = re.sub(r'\s+data-lang-block="[a-z]{2}"', "", attrs)
+            # \s* not \s+, and a guard: this runs inside `while True`, so a
+            # marker the strip failed to remove is an infinite loop, not a
+            # rendering bug you notice. (It was: one missing space in an
+            # attribute list hung the build.)
+            clean = re.sub(r'\s*data-lang-block="[a-z]{2}"', "", attrs)
+            if "data-lang-block" in clean:
+                raise SystemExit("could not strip data-lang-block from <%s%s>" % (tag, attrs))
             clean = re.sub(r"\s+hidden\b", "", clean)
             src = (src[:m.start()] + "<%s%s>" % (tag, clean) +
                    src[start_body:end_tag_start] + src[end_tag_start:pos] + src[pos:])

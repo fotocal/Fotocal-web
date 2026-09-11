@@ -4,7 +4,7 @@ Raw captures live in tools/captures/<sitting>/ (committed, always).
 Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
-## Still to come (updated 2026-09-12)
+## Still to come (updated 2026-09-11)
 All: light theme, the phone's own screenshot, untouched, one file per
 scroll position. Same state in both languages unless it says otherwise.
 
@@ -76,6 +76,6 @@ languages), Spanish positions 1–3 and the Spanish ingredient sheet
   assets/img/screens/ and can be reused there.
 
 ## /ai/ social-share image
-  og:image on /ai/ still points at the retired coach-kal illustration —
-  kept on the server only for this. A purpose-built 1200x630 OG card
-  should replace it.
+  og:image on /ai/ now points at the shared site card (assets/og-image.png)
+  and the retired coach-kal illustration is deleted. A purpose-built
+  1200x630 card for this page would still be better than the shared one.

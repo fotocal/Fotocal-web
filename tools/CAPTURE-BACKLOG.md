@@ -21,6 +21,9 @@ file per scroll position. Same state in both languages.
   3. Ingredient sheet — ENGLISH, to pair with
      tools/captures/s3/ingredient-edit-es.jpg. No slot yet; a pair would
      let the "fix the amounts" step show the sheet itself.
+  5. Barcode scanner screen — ENGLISH, to pair with
+     tools/captures/s4/barcode-scanner-es.png (the Activia kéfir bottle,
+     barcode inside the frame). Slot: /features/scan-barcode/ step 1.
   4. A second, mixed restaurant-style dish — SPANISH and ENGLISH, result
      top only, scanned from the same photo via the gallery button.
      Slot: /features/scan-food/ "in practice" (src marks it).

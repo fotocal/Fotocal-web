@@ -32,3 +32,9 @@ Sitting 3 (2026-09-11) — tools/captures/s3/. The founder cannot label
 files, so the names here are our reading of each capture (screen,
 language, scroll position), confirmed with the intermediary before any
 of them is cropped. Both batches committed as received.
+
+Sitting 4 (2026-09-12) — tools/captures/s4/, the barcode set. The Red
+Bull pair sent with it is pixel-identical to s2/barcode-{es,en}.jpg and
+is not duplicated here. Files named DO-NOT-PUBLISH are kept as evidence
+for tools/APP-BUGS.md (item 0) and must never reach the site: the swaps
+list in both languages and the English kéfir result.

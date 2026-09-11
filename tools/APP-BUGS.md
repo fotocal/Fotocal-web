@@ -3,7 +3,37 @@
 Logged here so they survive the website sessions. These are APP defects,
 not website work. Do not fix from this repo; do not chase during Part 3.
 
-## 0 · ENGLISH STRINGS INSIDE THE SPANISH UI — highest priority
+## 0 · THE HEALTH SCORE FALLS BACK TO "74 · GOOD" — highest priority
+Observed 2026-09-12 in the barcode captures (tools/captures/s4/, the
+files marked DO-NOT-PUBLISH). Every product whose data is missing scores
+exactly 74/100 "Good" / "Bueno":
+  · "Try these instead" for Red Bull Sugarfree (24/100 Bad) lists, as
+    healthier swaps, all at 74/100 Good: Mountain dew, Pepsi Max zero a
+    la lima, Cherryade Can (Barr), Cocacola original taste, Coca-Cola
+    Zero Zero, Coca Zéro, Pepsi-cola (diet) 330ml max … nine in all,
+    identical in the Spanish list ("Cámbialo por · 9", 74/100 Bueno).
+  · The English "kéfir" (Activia) result: Sugar "No data", Salt
+    "No data" — and still 74/100 Good.
+A real score would not put Coca-Cola original taste and a kéfir on the
+same number. The Spanish "Kéfir natural" (Hacendado) result, whose rows
+ARE filled (36 kcal, 0.0 g sugar, 0.00 g salt, 0 additives), also lands
+on 74/100 — which suggests the mechanism: a missing value is scored as
+if it were zero, so any product with gaps gets the best-case negatives
+and the same 74 as a product that genuinely has none. The list of swaps
+is then built from that number, which is how a full-sugar cola becomes
+a recommended swap for a sugar-free drink. Until fixed: no product with
+missing rows should carry a score, and no product should be offered as
+a swap on a score it did not earn.
+Separate oddity in the same capture: the English Activia kéfir is
+flagged "Not suitable for you: contains Gluten / coeliac, Dairy /
+lactose". Kéfir contains no gluten; the allergen mapping is wrong.
+Also still present: the English Red Bull result keeps the Spanish line
+"Ajustado por: alto en calorías" (sitting-2 item 1).
+Website consequence: the barcode page's "swaps" section is built with
+no capture and describes what the feature does, not how good the
+suggestions are.
+
+## 0b · ENGLISH STRINGS INSIDE THE SPANISH UI — second
 Observed 2026-09-11, app language Spanish, Baked Chicken Bowl result and
 its ingredient sheet. Spain is the primary market; a Spanish user reads
 these on the screen the whole product is built around:

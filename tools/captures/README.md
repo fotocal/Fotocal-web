@@ -27,3 +27,8 @@ exact command recorded in the commit message, e.g.
             assets/img/screens/home-hero-es.webp cut=1648 width=1200
 
 Nothing in this directory is linked from the site.
+
+Sitting 3 (2026-09-11) — tools/captures/s3/. The founder cannot label
+files, so the names here are our reading of each capture (screen,
+language, scroll position), confirmed with the intermediary before any
+of them is cropped. Batch 1 of 2 committed as received.

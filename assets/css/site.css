@@ -967,7 +967,10 @@ body.nav-locked { overflow: hidden; }
   box-shadow: var(--shadow-sm);
   transition: border-color .25s ease;
 }
-.faq-item[open] { border-color: var(--border-pink); }
+/* .is-open, not [open]: [open] stays true for the whole of the closing
+   animation (main.js), so the border and the icon would snap back only at
+   the very end. .no-js keeps both correct when the script never runs. */
+.no-js .faq-item[open], .faq-item.is-open { border-color: var(--border-pink); }
 .faq-item summary {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   padding: 1.05rem 1.25rem; cursor: pointer; list-style: none;
@@ -977,11 +980,18 @@ body.nav-locked { overflow: hidden; }
 .faq-plus { position: relative; width: 14px; height: 14px; flex: none; }
 .faq-plus::before, .faq-plus::after {
   content: ""; position: absolute; background: var(--pink); border-radius: 2px;
-  transition: transform .3s ease;
+  transition: transform .26s cubic-bezier(.2,.8,.3,1);   /* the height animation's clock */
 }
 .faq-plus::before { top: 6px; left: 0; width: 14px; height: 2px; }
 .faq-plus::after { top: 0; left: 6px; width: 2px; height: 14px; }
-.faq-item[open] .faq-plus::after { transform: rotate(90deg); }
+.no-js .faq-item[open] .faq-plus::after,
+.faq-item.is-open .faq-plus::after { transform: rotate(90deg); }
+/* the panel is animated by script; reduced motion keeps the browser's own
+   instant open/close, so the icon and the border must not ease either. */
+@media (prefers-reduced-motion: reduce) {
+  .faq-item { transition: none; }
+  .faq-plus::before, .faq-plus::after { transition: none; }
+}
 .faq-item > p { padding: 0 1.25rem 1.15rem; color: var(--muted); font-size: .93rem; }
 .faq-item a { color: var(--brand-text); font-weight: 600; text-decoration: underline; }
 

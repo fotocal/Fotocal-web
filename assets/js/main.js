@@ -140,16 +140,115 @@
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ═══════════ FAQ — one open at a time ═══════════ */
-  var faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach(function (item) {
-    item.addEventListener("toggle", function () {
-      if (!item.open) return;
-      faqItems.forEach(function (other) {
-        if (other !== item) other.open = false;
-      });
+  /* ═══════════ FAQ — one open at a time, and it slides ═══════════
+     The FAQ is native <details>/<summary> and stays that way: it is what
+     makes the answers readable to a crawler, operable from the keyboard
+     and announced by a screen reader. A browser opens and closes it in a
+     single frame, though — there was nothing easing, so there was nothing
+     CSS could smooth. The height is animated AROUND the element instead:
+
+       opening — set open=true first (a closed <details> has no height to
+                 measure), then animate the element's own height from its
+                 closed height up to the full one;
+       closing — cancel the default, which would snap it shut, animate
+                 back down, and only then set open=false.
+
+     Both directions share a duration and a curve, and the + turns into the
+     × on the same clock — from .is-open, not [open], because [open] stays
+     true for the whole of the closing animation.
+
+     One at a time is kept from the old version, but the panel being
+     displaced now slides shut instead of vanishing mid-gesture, so the two
+     read as one movement rather than a fight.
+
+     Interruption is the normal case on a phone: a second tap mid-flight
+     re-targets from the CURRENT height instead of restarting, and the old
+     animation's handlers are detached before it is cancelled, so a panel
+     can never be left half-open or stuck. Because it is the <details> box
+     itself that grows, everything below moves with it and the page never
+     jumps.
+
+     prefers-reduced-motion: nothing is intercepted at all, so the browser's
+     instant open/close is exactly what it was before. */
+  var FAQ_MS = 260, FAQ_EASE = "cubic-bezier(.2,.8,.3,1)";
+  var faqStill = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var faqCtrls = [];
+
+  function faqCloseOthers(except, animate) {
+    faqCtrls.forEach(function (c) {
+      if (c.el === except || !c.el.open) return;
+      if (animate) { c.close(); }
+      else { c.el.open = false; c.el.classList.remove("is-open"); }
     });
-  });
+  }
+
+  function faqAccordion(el) {
+    var summary = el.querySelector("summary");
+    if (!summary) return;
+    var anim = null, closing = false, expanding = false;
+    var ctrl = { el: el, close: function () { if (!closing) shrink(); } };
+    faqCtrls.push(ctrl);
+
+    /* keeps the icon and the border honest when the browser does the
+       toggling itself: reduced motion, no Web Animations, find-in-page. */
+    el.addEventListener("toggle", function () {
+      if (!anim) el.classList.toggle("is-open", el.open);
+      if (el.open && !anim) faqCloseOthers(el, false);
+    });
+
+    summary.addEventListener("click", function (e) {
+      if (faqStill.matches || !el.animate) return;
+      e.preventDefault();
+      if (closing || !el.open) { openIt(); }
+      else if (expanding || el.open) { shrink(); }
+    });
+
+    function contentHeight() {
+      var h = 0, n = summary.nextElementSibling;
+      while (n) { h += n.offsetHeight; n = n.nextElementSibling; }
+      return h;
+    }
+    /* The closed height is the summary PLUS the <details>'s own border and
+       padding. Animating to the summary alone undershoots by exactly the
+       border, and the panel snaps those last two pixels — small, but it is
+       the kind of snap this whole change exists to remove. */
+    function closedHeight() {
+      var cs = getComputedStyle(el);
+      return summary.offsetHeight
+           + parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth)
+           + parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    }
+    function run(from, to, willBeOpen) {
+      el.style.overflow = "hidden";
+      if (anim) { anim.onfinish = null; anim.cancel(); }   /* detach first: a
+          stale handler would clear the flags of the animation replacing it */
+      anim = el.animate({ height: [from + "px", to + "px"] },
+                        { duration: FAQ_MS, easing: FAQ_EASE });
+      anim.onfinish = function () {
+        el.open = willBeOpen;
+        el.classList.toggle("is-open", willBeOpen);
+        anim = null; closing = false; expanding = false;
+        el.style.height = "";
+        el.style.overflow = "";
+      };
+    }
+    function openIt() {
+      faqCloseOthers(el, true);
+      el.style.height = el.offsetHeight + "px";
+      el.open = true;
+      el.classList.add("is-open");
+      requestAnimationFrame(function () {
+        expanding = true; closing = false;
+        run(el.offsetHeight, closedHeight() + contentHeight(), true);
+      });
+    }
+    function shrink() {
+      closing = true; expanding = false;
+      el.classList.remove("is-open");
+      run(el.offsetHeight, closedHeight(), false);
+    }
+  }
+  document.querySelectorAll(".faq-item").forEach(faqAccordion);
 
   /* ═══════════ Hero parallax (home page only) ═══════════
      Gentle mouse-move parallax on the hero illustration and its
@@ -315,4 +414,5 @@
     window.addEventListener("resize", draw, { passive: true });
     draw();
   }
+
 })();

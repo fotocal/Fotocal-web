@@ -240,26 +240,7 @@
               <p data-i18n="fx.f9.b">A clear weekly recap of everything you logged.</p>
             </div>
             <div class="tile-media">
-              <!--# ═══ WEEKLY REPORT · THE CAPTURE DROPS IN HERE ═══════════════════════════
-                   No usable pair yet (the English weekly captures from sitting 2 show a
-                   progress-maths bug, see tools/APP-BUGS.md; there is no Spanish one).
-                   When weekly-es.<ext> and weekly-en.<ext> arrive (1080x2400, light theme,
-                   the weekly summary view): commit them under tools/captures/s3/, then
-                     for l in es en; do for w in 600 900; do python3 tools/screen_crop.py \
-                       tools/captures/s3/weekly-$l.<ext> assets/img/screens/weekly-report-$w-$l.webp \
-                       trim=72 ratio=1.55 width=$w; done; done
-                   add "fx.f9.img"/"fx.f9.alt" to both languages in assets/js/i18n-pages.js,
-                   replace the <div class="fx-say"> below with the same frame markup as the
-                   two tiles above (src ../assets/img/screens/weekly-report-es.webp,
-                   data-srcset="600,900" sizes="230px" width="600" height="979"), and drop
-                   the fx.f9.l1–l3 keys and the .fx-say CSS. ═══════════════════════════ -->
-              <div class="fx-say" aria-hidden="true">
-                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 16v-5M13 16V8M18 16v-8"/></svg></span>
-                <ul class="check-list check-list-lt">
-                  <li data-i18n="fx.f9.l1">Calories and macros, day by day</li>
-                  <li data-i18n="fx.f9.l2">What held up and what slipped</li>
-                  <li data-i18n="fx.f9.l3">One or two things to try next week</li>
-                </ul>
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/weekly-report-es.webp" data-srcset="600,900" sizes="230px" width="600" height="979" loading="lazy" decoding="async" alt="Real app screen: the weekly report, calorie intake averaged per day against the goal, with the week's bars split into carbs, protein and fat" data-i18n-alt="fx.f9.alt" data-i18n-src="fx.f9.img"></div></div>
               </div>
             </div>
           </li>

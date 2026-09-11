@@ -98,8 +98,8 @@
           <li class="how-tile fx-tile reveal" style="--rd:0.16s">
             <div class="fx-copy">
               <span class="fx-num" aria-hidden="true">3</span>
-              <h3 data-i18n="fp.scan-food.s3t">Move the portion to match</h3>
-              <p data-i18n="fp.scan-food.s3b">The estimate is a starting point, not a verdict. Drag it to what you actually ate — or split the dish between the people sharing it and log only your share.</p>
+              <h3 data-i18n="fp.scan-food.s3t">Fix the amounts</h3>
+              <p data-i18n="fp.scan-food.s3b">The estimate is a starting point, not a verdict. Every detected ingredient carries its own grams and unit — tap it and change the amount with minus and plus, and the totals update as you go.</p>
             </div>
             <div class="tile-media">
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-edit-es.webp" data-srcset="440,660" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Real app screen: the detected ingredients with their grams and calories, chicken 150 g, rice 150 g, avocado 50 g, corn 50 g, onion 30 g" data-i18n-alt="fp.scan-food.s3Alt" data-i18n-src="fp.scan-food.s3Img"></div></div>
@@ -127,7 +127,20 @@
           <h2 class="section-title reveal" data-i18n="fp.scan-food.getTitle">Nine things, from one photograph.</h2>
           <p class="section-sub reveal" data-i18n="fp.scan-food.getSub">Most trackers stop at a calorie count. The useful part is usually everything after it.</p>
         </header>
-        <ul class="habit-grid sf-grid-3">
+        <!--# ═══ WHAT YOU GET · THE FULL-REPORT CAPTURE DROPS IN HERE ═══════════════
+             The tile shows the result's nutrition breakdown (sitting-3 lower-half
+             position 4, both languages). The "Informe completo" top — quality
+             score, sugar impact, satiety, NOVA, nutrient radar — exists in Spanish
+             only (tools/captures/s3/food-detail-lower-es-1.jpg). When the English
+             twin arrives as tools/captures/s3/food-detail-lower-en-1.jpg:
+               for l in es en; do for w in 600 900; do python3 tools/screen_crop.py \
+                 tools/captures/s3/food-detail-lower-$l-1.jpg assets/img/screens/sf-report-$w-$l.webp \
+                 trim=72 ratio=1.75 width=$w; done; done
+             then point fp.scan-food.getImg at sf-report-<lang>.webp in both languages
+             and rewrite getAlt. ═══════════════════════════════════════════════ -->
+        <div class="habit-layout">
+          <div class="tile tile-light habit-tile reveal"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-analysis-es.webp" data-srcset="600,900" sizes="300px" width="600" height="1099" loading="lazy" decoding="async" alt="Real app screen: the result's nutrition breakdown, 475 kcal with protein, carbs and fat on their own scales, the health impact line and the smart recommendations" data-i18n-alt="fp.scan-food.getAlt" data-i18n-src="fp.scan-food.getImg"></div></div></div>
+        <ul class="habit-grid">
           <li class="habit-card reveal">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
             <h3 data-i18n="fp.scan-food.c1t">The dish and its ingredients</h3>
@@ -135,8 +148,8 @@
           </li>
           <li class="habit-card reveal" style="--rd:0.06s">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M8 7l-4 7a4 4 0 0 0 8 0z"/><path d="M16 7l-4 7a4 4 0 0 0 8 0z" transform="translate(4)"/></svg></div>
-            <h3 data-i18n="fp.scan-food.c2t">A portion estimate you can move</h3>
-            <p data-i18n="fp.scan-food.c2b">Read from the plate rather than assumed from an average serving — and adjustable in one gesture if it is off.</p>
+            <h3 data-i18n="fp.scan-food.c2t">Amounts per ingredient</h3>
+            <p data-i18n="fp.scan-food.c2b">Read from the plate rather than assumed from an average serving — and each one can be changed, in grams or in units, with minus and plus.</p>
           </li>
           <li class="habit-card reveal" style="--rd:0.12s">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
@@ -174,10 +187,16 @@
             <p data-i18n="fp.scan-food.c9b">A plain-language read on the meal, plus a single specific change that would improve it — not a lecture, one suggestion.</p>
           </li>
         </ul>
+        </div>
       </div>
     </section>
 
     <!-- ═══════ IN PRACTICE — dark: the plate itself, as photographed ═══════ -->
+    <!--# The second, mixed restaurant-style dish (result top, Spanish and
+         English) has not arrived. When it does, commit the raws under
+         tools/captures/s3/, cut them like sf-read (trim=0 ratio=1.382 strip=0
+         pad=bottom, widths 440 and 660) and put the frame in this tile in
+         place of the plate photograph, keys fp.scan-food.bandImg/bandAlt. -->
     <section class="section sec-dark" id="practice">
       <div class="container">
         <div class="split">
@@ -198,7 +217,7 @@
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/coach-chat-es.webp" data-srcset="600,900" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Real app screen: the Coach Kal chat answering a question about the scanned chicken bowl with the numbers from the user's day" data-i18n-alt="fp.scan-food.recAlt" data-i18n-src="fp.scan-food.recImg"></div></div></div>
+            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-advice-es.webp" data-srcset="600,900" sizes="300px" width="600" height="1099" loading="lazy" decoding="async" alt="Real app screen: the end of the result, the AI confidence, the final recommendation for the Baked Chicken Bowl, one healthy habit suggestion and the link to ask Coach Kal" data-i18n-alt="fp.scan-food.recAlt" data-i18n-src="fp.scan-food.recImg"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="fp.scan-food.recKicker">How the advice works</span>
@@ -224,11 +243,11 @@
         <div class="faq-list">
           <details class="faq-item reveal">
             <summary><span data-i18n="fp.scan-food.q1">How accurate is a photo estimate?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.scan-food.a1">It is an estimate, and we would rather say so than pretend otherwise. For everyday tracking it is close enough to be useful, and the portion slider closes most of the remaining gap. If a meal really matters, weigh the main component and adjust.</p>
+            <p data-i18n="fp.scan-food.a1">It is an estimate, and we would rather say so than pretend otherwise. For everyday tracking it is close enough to be useful, and correcting the grams of the main ingredient closes most of the remaining gap. If a meal really matters, weigh the main component and adjust.</p>
           </details>
           <details class="faq-item reveal">
             <summary><span data-i18n="fp.scan-food.q2">What if it gets an ingredient wrong?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="fp.scan-food.a2">Fix it. Every detected item is editable before you save — change it, re-weigh it, delete it, or add something it missed. Corrections take a couple of seconds and the totals update as you go.</p>
+            <p data-i18n="fp.scan-food.a2">Fix it. Every detected item is editable before you save — change it, adjust its grams, replace it, delete it, or add something it missed. Corrections take a couple of seconds and the totals update as you go.</p>
           </details>
           <details class="faq-item reveal">
             <summary><span data-i18n="fp.scan-food.q3">Does it work on restaurant and mixed dishes?</span><i class="faq-plus" aria-hidden="true"></i></summary>

@@ -215,7 +215,7 @@ PAGES = [
   "steps": [
     ("Photograph the plate", "Whatever is in front of you, however it was made. No good lighting required, no arranging the food, no reference coin next to the bowl."),
     ("The AI reads it", "It identifies the dish, separates out the ingredients it can see, and estimates the portion from what is on the plate."),
-    ("Move the portion to match", "The estimate is a starting point, not a verdict. Drag it to what you actually ate — or split the dish between the people sharing it and log only your share."),
+    ("Fix the amounts", "The estimate is a starting point, not a verdict. Every detected ingredient carries its own grams and unit — tap it and change the amount with minus and plus, and the totals update as you go."),
     ("Correct anything, then save", "Every detected ingredient can be edited, swapped or removed, and you can add what the camera could not see. It is a draft until you save it."),
   ],
   "getKicker": "What you get",
@@ -223,7 +223,7 @@ PAGES = [
   "getSub": "Most trackers stop at a calorie count. The useful part is usually everything after it.",
   "cards": [
     ("The dish and its ingredients", "Named individually rather than as one blob, so you can see what it thinks it is looking at."),
-    ("A portion estimate you can move", "Read from the plate rather than assumed from an average serving — and adjustable in one gesture if it is off."),
+    ("Amounts per ingredient", "Read from the plate rather than assumed from an average serving — and each one can be changed, in grams or in units, with minus and plus."),
     ("Calories and macros", "The headline figure plus the protein, carb and fat split behind it."),
     ("Around eight micronutrients", "Fibre, sugar, sodium, saturated fat and the rest of the picture most calorie trackers leave out entirely."),
     ("A health score", "One number for how the meal stacks up overall, so you can compare two dishes without reading two tables."),
@@ -243,8 +243,8 @@ PAGES = [
   ],
   "faqTitle": "Questions about photo scanning",
   "faq": [
-    ("How accurate is a photo estimate?", "It is an estimate, and we would rather say so than pretend otherwise. For everyday tracking it is close enough to be useful, and the portion slider closes most of the remaining gap. If a meal really matters, weigh the main component and adjust."),
-    ("What if it gets an ingredient wrong?", "Fix it. Every detected item is editable before you save — change it, re-weigh it, delete it, or add something it missed. Corrections take a couple of seconds and the totals update as you go."),
+    ("How accurate is a photo estimate?", "It is an estimate, and we would rather say so than pretend otherwise. For everyday tracking it is close enough to be useful, and correcting the grams of the main ingredient closes most of the remaining gap. If a meal really matters, weigh the main component and adjust."),
+    ("What if it gets an ingredient wrong?", "Fix it. Every detected item is editable before you save — change it, adjust its grams, replace it, delete it, or add something it missed. Corrections take a couple of seconds and the totals update as you go."),
     ("Does it work on restaurant and mixed dishes?", "Yes, and that is where it earns its keep. A curry, a stir-fry or a plate of tapas has no barcode and no label, which is exactly the situation database-search apps handle worst."),
     ("Is anything logged automatically?", "No. A scan produces a draft. Nothing enters your diary, your rings or your totals until you tap save."),
   ],
@@ -272,7 +272,7 @@ PAGES = [
   "steps": [
     ("Fotografía el plato", "Lo que tengas delante, esté hecho como esté. Sin buena luz, sin colocar la comida, sin poner una moneda al lado como referencia."),
     ("La IA lo lee", "Identifica el plato, separa los ingredientes que ve y estima la ración a partir de lo que hay servido."),
-    ("Ajusta la ración", "La estimación es un punto de partida, no una sentencia. Muévela hasta lo que realmente has comido, o reparte el plato entre las personas que lo comparten y registra solo tu parte."),
+    ("Ajusta las cantidades", "La estimación es un punto de partida, no una sentencia. Cada ingrediente detectado lleva sus propios gramos y su unidad: tócalo y cambia la cantidad con más y menos, y los totales se actualizan sobre la marcha."),
     ("Corrige lo que haga falta y guarda", "Puedes editar, cambiar o quitar cualquier ingrediente detectado, y añadir lo que la cámara no podía ver. Es un borrador hasta que lo guardas."),
   ],
   "getKicker": "Qué obtienes",
@@ -280,7 +280,7 @@ PAGES = [
   "getSub": "Casi todas las apps se quedan en el recuento de calorías. Lo útil suele ser todo lo que viene después.",
   "cards": [
     ("El plato y sus ingredientes", "Nombrados uno a uno y no como un bloque, para que veas qué cree que está mirando."),
-    ("Una ración estimada que puedes mover", "Leída del plato en vez de supuesta a partir de una ración media, y ajustable con un gesto si no cuadra."),
+    ("Cantidades por ingrediente", "Leídas del plato en vez de supuestas a partir de una ración media, y cada una se puede cambiar, en gramos o en unidades, con más y menos."),
     ("Calorías y macros", "La cifra principal más el reparto de proteínas, carbohidratos y grasas que hay detrás."),
     ("Unos ocho micronutrientes", "Fibra, azúcar, sodio, grasas saturadas y el resto del cuadro que la mayoría de contadores de calorías ignora por completo."),
     ("Una puntuación de salud", "Un solo número de cómo queda la comida en conjunto, para comparar dos platos sin leer dos tablas."),
@@ -300,8 +300,8 @@ PAGES = [
   ],
   "faqTitle": "Preguntas sobre el escaneo por foto",
   "faq": [
-    ("¿Cuánta precisión tiene una estimación por foto?", "Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y el control de ración cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo."),
-    ("¿Y si se equivoca con un ingrediente?", "Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, repésalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha."),
+    ("¿Cuánta precisión tiene una estimación por foto?", "Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y corregir los gramos del ingrediente principal cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo."),
+    ("¿Y si se equivoca con un ingrediente?", "Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, ajusta sus gramos, reemplázalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha."),
     ("¿Funciona con platos de restaurante y platos mezclados?", "Sí, y ahí es donde más se nota. Un curry, un salteado o unas tapas no tienen código de barras ni etiqueta, que es justo la situación que peor resuelven las apps de buscar en una base de datos."),
     ("¿Se registra algo automáticamente?", "No. Un escaneo produce un borrador. No entra nada en tu diario, en tus anillos ni en tus totales hasta que tocas guardar."),
   ],

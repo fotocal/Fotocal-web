@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="../../assets/css/fonts.css?v=ffc748dc">
   <link rel="stylesheet" href="../../assets/css/site.css?v=0cf99122">
   <link rel="stylesheet" href="../../assets/css/home.css?v=071dd000">
-  <link rel="stylesheet" href="../../assets/css/features.css?v=4e8a08b6">
+  <link rel="stylesheet" href="../../assets/css/features.css?v=87b5c7a2">
   <link rel="preload" as="image" href="../../assets/img/screens/sf-hero-700-es.webp" imagesrcset="../../assets/img/screens/sf-hero-700-es.webp 700w, ../../assets/img/screens/sf-hero-1075-es.webp 1075w" imagesizes="(min-width: 900px) 400px, min(340px, 78vw)">
 
   <script type="application/ld+json">
@@ -44,7 +44,7 @@
       "name": "¿Cuánta precisión tiene una estimación por foto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y el control de ración cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo."
+        "text": "Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y corregir los gramos del ingrediente principal cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo."
       }
     },
     {
@@ -52,7 +52,7 @@
       "name": "¿Y si se equivoca con un ingrediente?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, repésalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha."
+        "text": "Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, ajusta sus gramos, reemplázalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha."
       }
     },
     {
@@ -139,8 +139,8 @@
           <li class="how-tile fx-tile reveal" style="--rd:0.16s">
             <div class="fx-copy">
               <span class="fx-num" aria-hidden="true">3</span>
-              <h3>Ajusta la ración</h3>
-              <p>La estimación es un punto de partida, no una sentencia. Muévela hasta lo que realmente has comido, o reparte el plato entre las personas que lo comparten y registra solo tu parte.</p>
+              <h3>Ajusta las cantidades</h3>
+              <p>La estimación es un punto de partida, no una sentencia. Cada ingrediente detectado lleva sus propios gramos y su unidad: tócalo y cambia la cantidad con más y menos, y los totales se actualizan sobre la marcha.</p>
             </div>
             <div class="tile-media">
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-edit-440-es.webp" srcset="../../assets/img/screens/sf-edit-440-es.webp 440w, ../../assets/img/screens/sf-edit-660-es.webp 660w" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Pantalla real de la app: los ingredientes detectados con sus gramos y calorías, pollo 150 g, arroz 150 g, aguacate 50 g, maíz 50 g, cebolla 30 g"></div></div>
@@ -168,7 +168,9 @@
           <h2 class="section-title reveal">Nueve cosas, de una sola foto.</h2>
           <p class="section-sub reveal">Casi todas las apps se quedan en el recuento de calorías. Lo útil suele ser todo lo que viene después.</p>
         </header>
-        <ul class="habit-grid sf-grid-3">
+        <div class="habit-layout">
+          <div class="tile tile-light habit-tile reveal"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-analysis-600-es.webp" srcset="../../assets/img/screens/sf-analysis-600-es.webp 600w, ../../assets/img/screens/sf-analysis-900-es.webp 900w" sizes="300px" width="600" height="1099" loading="lazy" decoding="async" alt="Pantalla real de la app: el análisis nutricional del resultado, 475 kcal con proteína, carbohidratos y grasa en sus propias escalas, la línea de impacto en la salud y las recomendaciones inteligentes"></div></div></div>
+        <ul class="habit-grid">
           <li class="habit-card reveal">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
             <h3>El plato y sus ingredientes</h3>
@@ -176,8 +178,8 @@
           </li>
           <li class="habit-card reveal" style="--rd:0.06s">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M8 7l-4 7a4 4 0 0 0 8 0z"/><path d="M16 7l-4 7a4 4 0 0 0 8 0z" transform="translate(4)"/></svg></div>
-            <h3>Una ración estimada que puedes mover</h3>
-            <p>Leída del plato en vez de supuesta a partir de una ración media, y ajustable con un gesto si no cuadra.</p>
+            <h3>Cantidades por ingrediente</h3>
+            <p>Leídas del plato en vez de supuestas a partir de una ración media, y cada una se puede cambiar, en gramos o en unidades, con más y menos.</p>
           </li>
           <li class="habit-card reveal" style="--rd:0.12s">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-2 2-3 3-3 5 0-2-1-3-2-4-1 3-5 5-5 8a7 7 0 0 0 7 7z"/></svg></div>
@@ -215,6 +217,7 @@
             <p>Una lectura en lenguaje llano de la comida y un único cambio concreto que la mejoraría. No es un sermón: es una sugerencia.</p>
           </li>
         </ul>
+        </div>
       </div>
     </section>
 
@@ -239,7 +242,7 @@
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/coach-chat-600-es.webp" srcset="../../assets/img/screens/coach-chat-600-es.webp 600w, ../../assets/img/screens/coach-chat-900-es.webp 900w" sizes="300px" width="600" height="979" loading="lazy" decoding="async" alt="Pantalla real de la app: el chat de Coach Kal responde a una pregunta sobre el bol de pollo escaneado con los números del día del usuario"></div></div></div>
+            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-advice-600-es.webp" srcset="../../assets/img/screens/sf-advice-600-es.webp 600w, ../../assets/img/screens/sf-advice-900-es.webp 900w" sizes="300px" width="600" height="1099" loading="lazy" decoding="async" alt="Pantalla real de la app: el final del resultado, la confianza de la IA, la recomendación final para el Baked Chicken Bowl, una sugerencia saludable y el enlace para preguntar a Coach Kal"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal">Cómo funcionan los consejos</span>
@@ -265,11 +268,11 @@
         <div class="faq-list">
           <details class="faq-item reveal">
             <summary><span>¿Cuánta precisión tiene una estimación por foto?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p>Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y el control de ración cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo.</p>
+            <p>Es una estimación, y preferimos decirlo a fingir lo contrario. Para el seguimiento del día a día es lo bastante buena como para ser útil, y corregir los gramos del ingrediente principal cierra casi toda la diferencia que queda. Si una comida importa de verdad, pesa el ingrediente principal y ajústalo.</p>
           </details>
           <details class="faq-item reveal">
             <summary><span>¿Y si se equivoca con un ingrediente?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p>Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, repésalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha.</p>
+            <p>Lo corriges. Todo lo detectado es editable antes de guardar: cámbialo, ajusta sus gramos, reemplázalo, bórralo o añade lo que se haya dejado. Corregir lleva un par de segundos y los totales se actualizan sobre la marcha.</p>
           </details>
           <details class="faq-item reveal">
             <summary><span>¿Funciona con platos de restaurante y platos mezclados?</span><i class="faq-plus" aria-hidden="true"></i></summary>

@@ -3,6 +3,24 @@
 Logged here so they survive the website sessions. These are APP defects,
 not website work. Do not fix from this repo; do not chase during Part 3.
 
+## 0 · ENGLISH STRINGS INSIDE THE SPANISH UI — highest priority
+Observed 2026-09-11, app language Spanish, Baked Chicken Bowl result and
+its ingredient sheet. Spain is the primary market; a Spanish user reads
+these on the screen the whole product is built around:
+  · Result, "Calidad nutricional" chips:  "+ High in protein and fiber."
+                                          "· Moderate sodium content."
+  · Result, row summary:                  "Rico en Vitamin C"
+  · Result, "Radar de nutrientes" rows:   "Vitamin C", "Potassium",
+                                          "Vitamin A", "Magnesium"
+  · Result, "Micronutrientes" rows:       "Potassium", "Vitamin C",
+                                          "Iron", "Calcium"
+  · Result top (sitting 2), chip:         "High protein"
+  · Ingredient sheet, "Reemplazar por…":  "Turkey", "Tofu"
+  · Barcode result, ENGLISH UI, the reverse: "Ajustado por: alto en calorías"
+The nutrient names look like untranslated keys from the nutrition data
+layer; the chips and replacements look like AI output that is not told
+the app language (same family as items 1 and 2 below).
+
 ## 1 · Scan → Coach Kal handoff generates its question in English
 Observed 2026-08-31, app language Spanish. Tapping through from a scan
 composes the question bubble in English even though the whole app UI and
@@ -43,7 +61,7 @@ maths per se, since English gets it right from the same data.
    wrong, but the two numbers disagree on the same day; worth one rule.
 
 ## Seen in the sitting-3 captures (2026-09-11)
-5. Result screen, SPANISH UI, "Informe completo": the quality chips are
+5. (Detailed at the top, item 0.) Result screen, SPANISH UI, "Informe completo": the quality chips are
    in English ("+ High in protein and fiber.", "· Moderate sodium
    content."), and every nutrient name in "Radar de nutrientes" and
    "Micronutrientes" is English (Vitamin C, Potassium, Magnesium, Iron,

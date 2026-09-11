@@ -66,13 +66,6 @@
 }
 @media (min-width: 900px) { .fx-tiles-3 { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
 
-/* the weekly-report tile has no capture yet (see the note in the page):
-   its media side is the feature's mark and what the report tells you */
-.tile-media .fx-say { align-self: center; display: grid; justify-items: start; gap: .9rem; margin: 0 auto; padding: .2rem 1.4rem 1.6rem; max-width: 320px; }
-.tile-media .fx-say .check-list { margin: 0; }
-.tile-media .fx-say .check-list li { margin-bottom: .45rem; font-size: .92rem; }
-.tile-media .fx-say .habit-ico { margin-bottom: 0; }
-
 /* ─── Feature titles inside the splits (chapter 2) ─── */
 .fx-t {
   font-family: var(--font-display); font-weight: 550; letter-spacing: -.02em; line-height: 1.12;

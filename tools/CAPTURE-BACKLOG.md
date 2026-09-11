@@ -4,42 +4,30 @@ Raw captures live in tools/captures/<sitting>/ (committed, always).
 Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
-## Sitting 3 — one list, everything still missing (2026-09-11)
+## After sitting 3 (2026-09-11) — retakes still to come
 All: light theme, the phone's own screenshot, 1080x2400, untouched, one
-file per scroll position (no stitched long captures). Same state in both
-languages where a pair is asked for.
-
-  1. Voice result — SPANISH only (log-voice-es.webp). The screen after
-     speaking: the list of recognised foods with calories and macros
-     (the same screen as tools/captures/s2/voice-en.jpg). Say exactly
-     «Dos huevos y tostada con aguacate» — the sentence the card quotes.
-     Used by: home page bento card, /features/ capture tile.
-  2. Weekly report summary — SPANISH and ENGLISH. The report's summary
-     view: the week's calories and macros day by day. (The sitting-2
-     English weekly captures are unused: one shows the progress-maths
-     bug in tools/APP-BUGS.md, neither has a Spanish twin.)
-     Used by: /features/ weekly tile.
-  3. Result screen, LOWER HALF — SPANISH and ENGLISH. The same Baked
-     Chicken Bowl result, scrolled past the fibre/sugar/sat-fat/sodium
-     row: whatever the app shows there — micronutrients, NOVA level,
-     glycemic load, allergens, the coach summary and the swap. One
-     screenshot per scroll position until the end of the screen. If any
-     of these lives on a separate screen, capture that screen instead
-     and say which one. Used by: /features/scan-food/ "what you get".
-  4. Portion adjustment — SPANISH and ENGLISH. The control the app shows
-     for changing the amount after a scan (the ≈ 450 g), mid-adjustment
-     if it is a slider. If a "split between people" option exists, one
-     capture with it visible; if it does not, say so — the page text
-     claims it and will be corrected.
-  5. Ingredient editing — SPANISH and ENGLISH. The screen after tapping
-     a detected ingredient row (e.g. Pollo 150 g): where it can be
-     changed, re-weighed or removed.
-  6. A second, mixed dish — SPANISH and ENGLISH, result screen top only.
-     A restaurant-style plate with no obvious portions (paella, curry,
-     tapas), scanned from the same photo via the gallery button in each
-     language. Used by: /features/scan-food/ "in practice".
-  Optional, only if it exists as a distinct screen: the "analysing"
-  moment between the camera and the result, Spanish and English.
+file per scroll position. Same state in both languages.
+  1. Voice result — SPANISH and ENGLISH, three foods the app recognises
+     cleanly. The sitting-3 pair is not published: "Afel" (a
+     misrecognised apple) on both screens. He says exactly «Dos huevos y
+     tostada con aguacate» / "Two eggs and toast with avocado" — the
+     sentence the card quotes — so screen and copy match.
+     Slots: home page voice card (Spanish), /features/ voice tile (Spanish).
+  2. Result screen lower half — ENGLISH, the first three scroll positions
+     ("Informe completo": quality score, sugar impact, satiety, NOVA,
+     nutrient radar, micronutrients), to pair with Spanish
+     tools/captures/s3/food-detail-lower-es-1..3.jpg.
+     Slot: /features/scan-food/ "what you get" tile (src marks it).
+  3. Ingredient sheet — ENGLISH, to pair with
+     tools/captures/s3/ingredient-edit-es.jpg. No slot yet; a pair would
+     let the "fix the amounts" step show the sheet itself.
+  4. A second, mixed restaurant-style dish — SPANISH and ENGLISH, result
+     top only, scanned from the same photo via the gallery button.
+     Slot: /features/scan-food/ "in practice" (src marks it).
+Received and in use from sitting 3: weekly report top (both languages,
+different weeks — accepted), result lower half positions 4 and 5 (both
+languages), Spanish positions 1–3 and the Spanish ingredient sheet
+(committed, waiting for their English twins).
 
 ## Optional, same states as the English ones already taken
   · Home pair in the SAME header state: the English home shows the

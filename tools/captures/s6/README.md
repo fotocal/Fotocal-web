@@ -60,3 +60,13 @@ them; the owner does not label files.
                              ⚠ This is NOT the pace screen that was asked
                              for. Nothing here shows the 0.25 / 0.5 / 0.75
                              choice, so that slot stays composed.
+
+  coach-allergy-{es,en}.jpg  "Can I eat bread?" / "¿Puedo comer pan?" and
+                             Coach Kal naming the gluten allergy directly
+                             in the answer. This is the reply the allergy
+                             slot on /ai/ was waiting for.
+                             ⚠ The ENGLISH one is English top to bottom
+                             until the composer, which reads "Pregunta lo
+                             que quieras" with the Spanish disclaimer under
+                             it. Crop above the composer. The Spanish one
+                             is clean throughout.

@@ -36,6 +36,32 @@ Consequence for the site: this capture cannot be published, so
 /features/weight-loss/ composes that slot from its own content and the
 goal card is on the capture list in both languages.
 
+## 0d-0 · THE LANGUAGE IS RESOLVED INCONSISTENTLY ACROSS THE APP
+Read this before the individual instances below. Four separate places now
+show one tree's strings inside the other, and they are not neighbours in
+the code:
+
+  1. the barcode result's adjustment line (item 0d)
+  2. the "High protein" chip on the meal detail (item 0d-ii, and it IS
+     localised at app/food-detail.tsx:649 — so the condition, not the
+     string, is what fails)
+  3. the nutrient names in the micronutrient panel, English inside the
+     Spanish UI (tools/captures/s3/food-detail-lower-es-3.jpg)
+  4. the chat composer and its disclaimer — "Pregunta lo que quieras" and
+     "Contenido generado por IA" under an English question and an English
+     answer (tools/captures/s6/coach-allergy-en.jpg, 2026-09-11)
+
+The direction goes both ways, which is the tell: 1-3 are English leaking
+into Spanish, 4 is Spanish leaking into English. A missing translation can
+only fail one way. Something about HOW the active language is read differs
+between screens and between components on the same screen — a stale store
+read, a locale captured once at mount, or more than one source of truth
+for "what language is this".
+
+Fixing these four strings one at a time will not end it; the next screen
+will have a fifth. Worth finding the one thing they have in common before
+touching any of them individually.
+
 ## 0d-ii · A CONCRETE INSTANCE OF THE ENGLISH-IN-SPANISH BUG, WITH ITS LINE
 Observed 2026-09-11, tools/captures/s2/food-detail-es.jpg. The meal detail
 shows "Toca para editar" (Spanish) and, two lines below it, the chip

@@ -45,6 +45,18 @@ scroll position. Same state in both languages unless it says otherwise.
          have (s2/weekly-goal-en.jpg) reads 100% done with 20 kg to go
          and must not be published — tools/APP-BUGS.md item 0a.
 
+  1h. Nutrition, two things, SPANISH and ENGLISH pairs:
+       · the micronutrient panel AS A FREE USER SEES IT — two readable and
+         the rest dimmed under the unlock pill. Every capture we have is
+         from a Premium account and shows the whole list open, which is
+         the opposite of what the site now says. Needs a signed-out or
+         free account. Slot: /features/nutrition-diet/ tile 4 (src marks
+         it).
+       · Mi salud, the health profile, where the diet, allergies and
+         conditions are set. SAME SCREEN /ai/ is waiting on — one capture
+         fills both slots. Slot: /features/nutrition-diet/ diets section
+         and /ai/ data (both marked in src).
+
   2. Result screen lower half — ENGLISH, the first three scroll positions
      ("Informe completo": quality score, sugar impact, satiety, NOVA,
      nutrient radar, micronutrients), to pair with Spanish

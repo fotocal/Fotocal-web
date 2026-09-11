@@ -36,6 +36,21 @@ Consequence for the site: this capture cannot be published, so
 /features/weight-loss/ composes that slot from its own content and the
 goal card is on the capture list in both languages.
 
+## 0d-ii · A CONCRETE INSTANCE OF THE ENGLISH-IN-SPANISH BUG, WITH ITS LINE
+Observed 2026-09-11, tools/captures/s2/food-detail-es.jpg. The meal detail
+shows "Toca para editar" (Spanish) and, two lines below it, the chip
+"High protein" (English) on the same screen.
+The chip is localised in the source:
+    app/food-detail.tsx:649
+    if (unified.base.protein >= 20) chips.push(isSpanish ? 'Alto en proteína' : 'High protein');
+So `isSpanish` is resolving false for that chip while the surrounding
+strings resolve Spanish correctly. Whatever supplies `isSpanish` there is
+worth checking against what the rest of the screen reads — this is a
+single, findable line rather than a general translation gap, which makes
+it the cheapest instance of item 0d to fix.
+Consequence for the site: no Spanish crop may include that chip. The
+nutrition page's hero was moved to the progress screen for this reason.
+
 ## 0b · THE SAME SENTENCE GIVES DIFFERENT NUMBERS IN THE TWO LANGUAGES
 Observed 2026-09-12, tools/captures/s5/, "dos huevos y tostada con
 aguacate" / "2 eggs and toast with avocado", spoken minutes apart:

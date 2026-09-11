@@ -261,3 +261,15 @@
 .wl-pace .bc-say-q, .wl-trend .bc-say-q { font-size: .98rem; color: var(--text-soft); }
 .wl-trend .bc-scale { max-width: 12rem; }
 @media (min-width: 900px) { .wl-hero .hero-stage-x { max-width: 400px; } }
+
+/* ── /features/nutrition-diet/ ──────────────────────────────────────────────
+   Two composed slots: the free view of the micronutrient panel (every capture
+   so far comes from a Premium account and shows the whole list unlocked, which
+   is the opposite of what the tile says) and the health-profile screen. */
+.nd-micros { align-self: center; max-width: 15rem; padding: 1.4rem 1rem 1.6rem; }
+.nd-chips { justify-content: center; margin-top: 0; }
+.nd-micros .bc-say-q { font-size: .98rem; color: var(--text-soft); }
+.nd-tile-say { min-height: 16rem; align-items: center; padding: 2.2rem 1.5rem; }
+.nd-diets { max-width: 23rem; gap: 1rem; }
+.nd-diets .bc-say-q { font-size: 1rem; }
+@media (min-width: 900px) { .nd-hero .hero-stage-x { max-width: 400px; } }

@@ -13,7 +13,27 @@ scroll position. Same state in both languages unless it says otherwise.
      misrecognised apple) on both screens. He says exactly «Dos huevos y
      tostada con aguacate» / "Two eggs and toast with avocado" — the
      sentence the card quotes — so screen and copy match.
-     Slots: home page voice card (Spanish), /features/ voice tile (Spanish).
+     Slots: home page voice card (Spanish), /features/ voice tile
+     (Spanish), /features/voice-logging/ step 4 (Spanish; the English
+     one there is the clean sitting-2 capture and can stay).
+  1b. Voice tab screen — SPANISH and ENGLISH, the sheet NOT open: the
+     Scan / Barcode / Voice tabs, the microphone button and "Recently by
+     voice". Every voice capture so far has the result sheet over it,
+     dimming the screen behind. Slot: /features/voice-logging/ step 1.
+  1c. The listening state — SPANISH and ENGLISH, IF the app shows one
+     (a waveform, "listening…", anything between tapping the mic and the
+     result). If there is no such screen, say so and the slot stays as
+     it is.
+  1d. Two things the page CLAIMS and no capture backs. Whichever answer
+     comes back, the copy follows it:
+       · the transcript. /features/voice-logging/ says twice that you
+         see what it heard, written out. The result sheet shows only
+         "Esto entendí" and the food cards. If a transcript is shown
+         anywhere, capture it; if it is not shown, the claim comes out.
+       · editing an item. The FAQ says a detected food can be edited and
+         re-weighed. The cards carry a heart and a bin and no chevron.
+         If tapping a card opens an editor, capture it (both languages);
+         if nothing happens, the claim comes out.
   2. Result screen lower half — ENGLISH, the first three scroll positions
      ("Informe completo": quality score, sugar impact, satiety, NOVA,
      nutrient radar, micronutrients), to pair with Spanish

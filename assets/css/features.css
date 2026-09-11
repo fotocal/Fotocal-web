@@ -130,9 +130,9 @@
 .bc-hero .hero-stage-x { max-width: min(300px, 74vw); }
 @media (min-width: 900px) { .bc-hero .hero-stage-x { max-width: 400px; } }
 
-.bc-say { align-self: center; display: grid; justify-items: center; gap: .9rem; text-align: center; margin: 0 auto; padding: .4rem 1.2rem 1.6rem; max-width: 300px; }
-.bc-say-q { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1.25; color: var(--text); margin: 0; text-wrap: balance; }
-.bc-say .habit-ico { margin-bottom: 0; }
+.bc-say, .vl-say { align-self: center; display: grid; justify-items: center; gap: .9rem; text-align: center; margin: 0 auto; padding: .4rem 1.2rem 1.6rem; max-width: 300px; }
+.bc-say-q, .vl-utter-q { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1.25; color: var(--text); margin: 0; text-wrap: balance; }
+.bc-say .habit-ico, .vl-utter .habit-ico { margin-bottom: 0; }
 .bc-say-dark .bc-say-q { color: var(--on-dark); }
 .bc-say-dark { padding-bottom: 2.4rem; max-width: 320px; }
 /* the scale the score sits on: the ends named, the run in the brand gradient */
@@ -145,3 +145,35 @@
 .bc-swap h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; letter-spacing: -.01em; margin-bottom: .5rem; }
 .bc-swap p { font-size: .93rem; color: var(--muted); }
 @media (min-width: 900px) { .bc-swap { align-self: center; } }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FEATURE PAGE · /features/voice-logging/
+   Voice is the one feature with nothing to photograph: the input is a
+   sentence, and a screenshot of a microphone button says nothing. So
+   the spoken sentence carries the page — set in the display face with
+   the mark and the level meter the home page's voice card already uses
+   (.voice-say-wave, home.css) — and the single real screen appears once,
+   where it earns its place: checking the result before saving.
+   ═══════════════════════════════════════════════════════════════ */
+.vl-utter { display: grid; justify-items: center; gap: 1.1rem; text-align: center; margin: 0 auto; max-width: 22ch; position: relative; z-index: 1; }
+.vl-utter-q {
+  font-family: var(--font-display); font-weight: 550; letter-spacing: -.01em;
+  font-size: clamp(1.5rem, 4.6vw, 2.15rem); line-height: 1.2; margin: 0;
+  color: var(--on-dark); text-wrap: balance;
+}
+.vl-utter .voice-say-wave { height: 34px; }
+.vl-utter .voice-say-wave i { width: 5px; }
+.vl-utter-mid .vl-utter-q { font-size: clamp(1.3rem, 3.6vw, 1.7rem); }
+@media (min-width: 900px) {
+  .vl-hero .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .vl-hero .hero-device, .vl-hero .hero-visual { align-self: center; }
+}
+@media (max-width: 899px) { .vl-hero .hero-visual { order: 0; margin-top: 2rem; } }
+/* the language pair: the same sentence, twice, in the two languages it
+   would be spoken in — so the tile shows what "it works it out" means */
+.vl-say-pair { gap: .55rem; }
+.vl-say-pair .bc-say-q { font-size: 1rem; line-height: 1.3; }
+.vl-say-pair .bc-say-q + .bc-say-q { color: var(--muted); }
+.vl-after { max-width: 46rem; margin: 2rem auto 0; }
+.vl-after li { font-size: .97rem; margin-bottom: .7rem; }

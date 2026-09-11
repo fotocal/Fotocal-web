@@ -62,7 +62,6 @@
   .fx-tiles-4 .fx-copy { flex: 1 1 auto; padding: 1.6rem 0 1.6rem 1.7rem; align-self: center; }
   .fx-tiles-4 .tile-media { flex: 0 0 256px; margin: 0; padding: 1.5rem 1.2rem 0 0; }
   .fx-tiles-4 .tile-media .dev-frame { width: 220px; }
-  .fx-tiles-4 .tile-media .voice-say { padding: 0 0 .4rem; }
 }
 @media (min-width: 900px) { .fx-tiles-3 { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
 

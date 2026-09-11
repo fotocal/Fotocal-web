@@ -212,24 +212,7 @@
               <p data-i18n="log.v.b">&quot;Two eggs and toast with avocado&quot; — say it out loud and it's logged. Perfect for busy mornings, messy hands and walking out the door.</p>
             </div>
             <div class="log-media">
-              <div class="dev-frame is-cut" data-lang-block="en"><div class="dev-screen"><img src="assets/img/screens/log-voice-en.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Voice logging: three foods recognised from speech, with calories and macros for each" data-i18n-alt="log.v.alt" data-i18n-src="log.v.img"></div></div>
-              <!--# ═══ VOICE · THE SPANISH CAPTURE DROPS IN HERE ═══════════════════════════
-                   The Spanish tree has no voice capture yet, so it shows the card's own
-                   utterance instead of a phone (figure below). When the capture arrives:
-                     1. commit the raw file as tools/captures/s3/voice-es.<ext> (1080x2400, untouched)
-                     2. for w in 440 660; do python3 tools/screen_crop.py tools/captures/s3/voice-es.<ext> \
-                          assets/img/screens/log-voice-$w-es.webp trim=72 ratio=1.36 width=$w; done
-                        (identical to the English one — same trim, same ratio, same two widths)
-                     3. in assets/js/i18n.js set the Spanish "log.v.img" to assets/img/screens/log-voice-es.webp
-                     4. delete the data-lang-block="en" attribute on the frame above
-                     5. delete the <figure class="voice-say"> block below, and the twin one in
-                        src/features/index.html (then the .voice-say CSS in home.css)
-                   Nothing else changes. ═══════════════════════════════════════════════ -->
-              <figure class="voice-say" data-lang-block="es" aria-hidden="true">
-                <span class="voice-say-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3M8 21h8"/></svg></span>
-                <p class="voice-say-q">«Dos huevos y tostada con aguacate»</p>
-                <span class="voice-say-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              </figure>
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="assets/img/screens/log-voice-es.webp" data-srcset="440,660" sizes="(min-width: 1100px) 220px, 200px" width="440" height="635" loading="lazy" decoding="async" alt="Voice logging: three foods recognised from speech, with calories and macros for each" data-i18n-alt="log.v.alt" data-i18n-src="log.v.img"></div></div>
             </div>
           </li>
           <li class="log-card lt-card is-wide reveal" style="--rd:.24s">

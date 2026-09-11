@@ -3,7 +3,36 @@
 Logged here so they survive the website sessions. These are APP defects,
 not website work. Do not fix from this repo; do not chase during Part 3.
 
-## 0 · THE HEALTH SCORE FALLS BACK TO "74 · GOOD" — highest priority
+## 0 · THE SPANISH VOICE RESULT HAS NO TRANSCRIPT — highest priority
+Observed 2026-09-12, tools/captures/s5/. Same sentence, both languages:
+  · ENGLISH sheet: a card at the top reading  "2 eggs and toast with
+    avocado."  with a  ↺ Retry  button under it, then the foods.
+  · SPANISH sheet: "Esto entendí" and straight into the foods. No
+    sentence, no Retry.
+Two consequences, and the second is the serious one. A Spanish user
+cannot see what was heard, so a wrong entry gives no clue why; and Retry
+lives inside that card, so the recovery path when it mishears does not
+exist in Spanish at all. Spain is the primary market. Until it ships,
+the website claims the transcript nowhere — the copy was corrected on
+2026-09-12 rather than shipping a promise the Spanish app does not keep.
+
+## 0b · THE SAME SENTENCE GIVES DIFFERENT NUMBERS IN THE TWO LANGUAGES
+Observed 2026-09-12, tools/captures/s5/, "dos huevos y tostada con
+aguacate" / "2 eggs and toast with avocado", spoken minutes apart:
+                    Spanish        English
+  Eggs ×2            140 kcal       140 kcal      same
+  Toast              80 kcal        80 kcal      same
+  Avocado           160 kcal       240 kcal      +50%
+  Total             380 kcal       460 kcal
+Logged as a question rather than a defect: an estimate may legitimately
+vary between runs, and "avocado" without an amount is genuinely open.
+But two of three items match to the calorie while the third differs by
+half, which looks less like estimation noise than like the two language
+paths resolving the same food to different database entries. Worth a
+look at which record each path picks. No total from either screen is
+quoted anywhere on the website.
+
+## 0c · THE HEALTH SCORE FALLS BACK TO "74 · GOOD"
 Observed 2026-09-12 in the barcode captures (tools/captures/s4/, the
 files marked DO-NOT-PUBLISH). Every product whose data is missing scores
 exactly 74/100 "Good" / "Bueno":
@@ -33,7 +62,7 @@ Website consequence: the barcode page's "swaps" section is built with
 no capture and describes what the feature does, not how good the
 suggestions are.
 
-## 0b · ENGLISH STRINGS INSIDE THE SPANISH UI — second
+## 0d · ENGLISH STRINGS INSIDE THE SPANISH UI
 Observed 2026-09-11, app language Spanish, Baked Chicken Bowl result and
 its ingredient sheet. Spain is the primary market; a Spanish user reads
 these on the screen the whole product is built around:

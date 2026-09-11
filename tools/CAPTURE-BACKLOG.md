@@ -4,92 +4,51 @@ Raw captures live in tools/captures/<sitting>/ (committed, always).
 Framing is CSS (.dev-frame); tools/screen_crop.py makes the screen image,
 with the crop row recorded in the commit.
 
-## Still to come (updated 2026-09-11)
-All: light theme, the phone's own screenshot, untouched, one file per
-scroll position. Same state in both languages unless it says otherwise.
+## Still to come (updated 2026-09-11, after sitting 6)
 
-  1. DONE (sitting 5). The voice result pair and the listening state
-     arrived in both languages and are on the site: the home card, the
-     hub tile and /features/voice-logging/ steps 2 and 4.
-  1b. Voice tab screen — SPANISH and ENGLISH, with NO sheet open: the
-     Scan / Barcode / Voice tabs, the microphone button and the recent
-     list. Every capture so far has a sheet over it, dimming that screen,
-     and a greyed-out UI reads as disabled. Slot: /features/voice-logging/
-     step 1 (src marks it). Careful: the recent list must not show the
-     misheard "Cafea +3" row — log something over it first, or scroll.
-  1e. Coach Kal, three things, all SPANISH and ENGLISH pairs:
-       · a reply that names one of your own allergies. An older Spanish
-         one exists but only as a baked-in frame at 640px whose raw was
-         never committed, so it cannot be re-cut. Slot: /ai/ allergies
-         (src marks it).
-       · the profile screen where allergies, diet and health conditions
-         are set. Nothing on the site shows it, and it also settles
-         whether "health conditions" is a real field — the page says so
-         twice. Slot: /ai/ data (src marks it).
-       · the chat opened cold, before any message, so we can show what
-         it offers when you have not asked anything yet.
-  1f. Tap "Saber más" / "Learn more" under a Coach Kal answer and
-     screenshot where it lands. The page used to say that line points at
-     its limits section; the sentence was removed until this is known.
-  1g. Weight loss, three things, all SPANISH and ENGLISH pairs:
-       · the goal screen where the weekly pace is chosen. The app offers
-         0.25 / 0.5 / 0.75 kg per week plus a typed custom figure, and
-         nothing on the site shows it. Slot: /features/weight-loss/
-         step 1 (src marks it).
-       · the Cuerpo tab of Mi progreso — the weight chart and the trend
-         card under it. Slot: /features/weight-loss/ step 4 (src marks
-         it). The trend card names its own 30-day window, which is the
-         honest thing to show next to that copy.
-       · the "Tu objetivo" / "Your goal" card in the weekly report, on
-         an account whose numbers make sense. The English capture we
-         have (s2/weekly-goal-en.jpg) reads 100% done with 20 kg to go
-         and must not be published — tools/APP-BUGS.md item 0a.
+Six sittings have happened. Everything the site states as fact is now
+backed by a real screen or by the app's own code. What is left below is
+cosmetic or blocked, and NONE of it is being chased — each slot is
+composed from its own content and reads as finished, not as a hole.
 
-  1h. Nutrition, two things, SPANISH and ENGLISH pairs:
-       · the micronutrient panel AS A FREE USER SEES IT — two readable and
-         the rest dimmed under the unlock pill. Every capture we have is
-         from a Premium account and shows the whole list open, which is
-         the opposite of what the site now says. Needs a signed-out or
-         free account. Slot: /features/nutrition-diet/ tile 4 (src marks
-         it).
-       · Mi salud, the health profile, where the diet, allergies and
-         conditions are set. SAME SCREEN /ai/ is waiting on — one capture
-         fills both slots. Slot: /features/nutrition-diet/ diets section
-         and /ai/ data (both marked in src).
+  A. BLOCKED by an app bug, do not capture until it is fixed:
+     · the alternatives list under a barcode result (APP-BUGS 0).
+     · the weekly report's goal card (APP-BUGS 0a) — the Cuerpo tab's
+       goal card is on the site instead and says the same thing.
 
-  2. Result screen lower half — ENGLISH, the first three scroll positions
-     ("Informe completo": quality score, sugar impact, satiety, NOVA,
-     nutrient radar, micronutrients), to pair with Spanish
-     tools/captures/s3/food-detail-lower-es-1..3.jpg.
-     Slot: /features/scan-food/ "what you get" tile (src marks it).
-  3. Ingredient sheet — ENGLISH, to pair with
-     tools/captures/s3/ingredient-edit-es.jpg. No slot yet; a pair would
-     let the "fix the amounts" step show the sheet itself.
-  4. A second, mixed restaurant-style dish — SPANISH and ENGLISH, result
-     top only, scanned from the same photo via the gallery button.
-     Slot: /features/scan-food/ "in practice" (src marks it).
-  5. A scored barcode result in ENGLISH whose rows are filled — a product
-     the database actually knows, so no row reads "No data". To pair with
-     tools/captures/s4/barcode-kefir-es.jpg.
-     Slot: /features/scan-barcode/ "the score" (src marks it). Until it
-     arrives the English tile is composed from the page's own words. The
-     English Activia kéfir result must NOT be used for this: see
-     tools/APP-BUGS.md item 0.
-  6. The amount bar and the meal picker on a barcode result — SPANISH and
-     ENGLISH. The amount control lives in a fixed bar at the very bottom
-     of the result, so it needs the result scrolled to its end (or the
-     sheet, if tapping it opens one).
-     Slots: /features/scan-barcode/ steps 3 and 4 (src marks both).
-  7. BLOCKED, do not capture yet: the alternatives list under a result.
-     The list the app builds today is wrong (tools/APP-BUGS.md item 0),
-     so nothing goes in that slot until the score is fixed.
+  B. Would improve a slot that already works without it:
+     · the micronutrient panel AS A FREE USER SEES IT — two readable,
+       the rest under the unlock. Needs a free or signed-out account, so
+       it cannot come from the owner's phone as it is.
+       Slot: /features/nutrition-diet/ tile 4, composed today.
+     · the pace screen (0.25 / 0.5 / 0.75 and the typed figure).
+       /features/weight-loss/ step 1 now shows the goal card and carries
+       the pace figures in the sentence, so this is no longer needed.
+     · the Cuerpo tab's weight chart with a real trend across 30 days.
+       The capture we have shows two points and a BMI category label, so
+       /features/weight-loss/ step 4 stays composed.
+     · where "Saber más" / "Learn more" leads, tapped from under an
+       answer or from the cold chat header. Nothing on the site claims
+       anything about it, so nothing is wrong without it.
 
-Received and in use from sitting 4: the barcode scanner in both
-languages, the Spanish Kéfir natural result, the bottle photograph.
-Received and in use from sitting 3: weekly report top (both languages,
-different weeks — accepted), result lower half positions 4 and 5 (both
-languages), Spanish positions 1–3 and the Spanish ingredient sheet
-(committed, waiting for their English twins).
+  C. English twins of Spanish captures already in hand. Each one would
+     let a tile stop being composed; none of them changes a claim:
+     · the scan result's lower half, positions 1-3
+     · the ingredient sheet
+     · a scored barcode result whose rows are filled
+     · the barcode amount bar and the meal picker
+     · a second mixed restaurant dish, both languages
+
+## Received and in use
+  Sitting 6 (2026-09-11): the voice tab at full contrast, Mi salud, Coach
+  Kal opened cold, a Coach Kal dinner reply, the Cuerpo tab, and the
+  allergy reply. Six pairs. What could not be published from them is
+  recorded in tools/captures/s6/README.md.
+  Sitting 5: the voice result pair and the listening state.
+  Sitting 4: the barcode scanner, the Spanish Kéfir result, the bottle.
+  Sitting 3: the weekly report tops, the result lower half 4-5.
+  Sitting 2: the home screens, the meal detail, the coach chat, the menu,
+  the progress tab, the activity record.
 
 ## Optional, same states as the English ones already taken
   · Home pair in the SAME header state: the English home shows the

@@ -80,14 +80,14 @@
           <p class="section-sub reveal" data-i18n="sp.weight-loss.t06">No crash diets, no banned foods. A loop that fits around a normal life, because one you abandon in week two is worth nothing.</p>
         </header>
         <ol class="fx-tiles fx-tiles-4">
-          <!--# ═══ THE PACE SCREEN DROPS IN HERE ═══════════════════════════════════
-               Step 1 describes choosing the weekly pace and no capture shows that
-               screen. When it arrives (both languages, same state):
-                 for l in es en; do for w in 440 660; do python3 tools/screen_crop.py \
-                   tools/captures/s6/goal-pace-$l.jpg assets/img/screens/wl-pace-$w-$l.webp \
-                   trim=72 ratio=1.38 width=$w strip=1; done; done
-               then replace the figure below with the same .dev-frame markup the
-               other three tiles use, keys sp.weight-loss.s1Img / .s1Alt. ═══════ -->
+          <!--# The pace screen never arrived and is not being chased. What did
+               arrive is the goal card (tools/captures/s6/progress-body-{es,en}.jpg),
+               so this step is about setting the goal and the copy carries the pace
+               figures instead of a screen. Only the MIDDLE card of that capture is
+               publishable: the cards above and below it both read "+34 kg vs 7 days
+               ago", and the lower one also carries a BMI category label, which is
+               the one thing this page says the app does not do. A phone-shaped crop
+               reaches both, hence the landscape detail. ═══════════════════════ -->
           <li class="how-tile fx-tile reveal">
             <div class="fx-copy">
               <span class="fx-num" aria-hidden="true">1</span>
@@ -95,10 +95,9 @@
               <p data-i18n="sp.weight-loss.t08">Tell Fotocal your age, height, weight, activity and goal, then choose the pace you want to go at. It works the daily calorie and macro target back from that, and it will not set a target below its own floor however fast you ask to go.</p>
             </div>
             <div class="tile-media">
-              <figure class="bc-say wl-pace" aria-hidden="true">
-                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-                <div class="micro-chips wl-chips"><span class="micro-chip mc-g" data-i18n="sp.weight-loss.paceC1">0.25 kg / week</span><span class="micro-chip mc-y" data-i18n="sp.weight-loss.paceC2">0.5 kg / week</span><span class="micro-chip mc-p" data-i18n="sp.weight-loss.paceC3">0.75 kg / week</span><span class="micro-chip mc-g" data-i18n="sp.weight-loss.paceC4">Or your own figure</span></div>
-                <p class="bc-say-q" data-i18n="sp.weight-loss.paceFig">Your choice, not ours</p>
+              <figure class="real-crop">
+                <img src="../../assets/img/screens/wl-goal-es.webp" data-srcset="700,1050" sizes="(min-width: 900px) 220px, min(300px, 70vw)" width="700" height="463" loading="lazy" decoding="async" alt="Real app screen: the goal card, showing the goal, the starting weight, the target weight and how much of it has been covered so far" data-i18n-alt="wl.goalAlt" data-i18n-src="wl.goalImg">
+                <figcaption data-i18n="wl.goalFig">The goal card, as the app shows it</figcaption>
               </figure>
             </div>
           </li>
@@ -122,14 +121,17 @@
               <div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/sf-day-es.webp" data-srcset="440,660" sizes="220px" width="440" height="608" loading="lazy" decoding="async" alt="Real app screen: your day after saving a meal, with calories, protein, carbs and fat against the targets" data-i18n-alt="sp.weight-loss.s3Alt" data-i18n-src="sp.weight-loss.s3Img"></div></div>
             </div>
           </li>
-          <!--# ═══ THE WEIGHT TREND SCREEN DROPS IN HERE ═══════════════════════════
-               Step 4 describes the thirty-day trend and no capture shows the
-               Cuerpo tab of Mi progreso. When it arrives (both languages):
+          <!--# The Cuerpo tab arrived (tools/captures/s6/progress-body-{es,en}.jpg)
+               and its Weight card is NOT publishable: it carries a BMI category
+               label, which is the one thing this page says the app does not do,
+               and the chart under it shows two points and a 34 kg weekly delta.
+               So this step stays composed. What would replace it is the same card
+               on an account with a real run of weigh-ins and the BMI chip out of
+               the crop:
                  for l in es en; do for w in 440 660; do python3 tools/screen_crop.py \
-                   tools/captures/s6/progress-body-$l.jpg assets/img/screens/wl-trend-$w-$l.webp \
+                   tools/captures/sN/progress-weight-$l.jpg assets/img/screens/wl-trend-$w-$l.webp \
                    trim=72 ratio=1.38 width=$w strip=1; done; done
-               keys sp.weight-loss.s4Img / .s4Alt. The trend card names its own
-               window on screen, which is the honest thing to show here. ═══════ -->
+               keys sp.weight-loss.s4Img / .s4Alt. Not being chased. ═══════════ -->
           <li class="how-tile fx-tile reveal" style="--rd:0.24s">
             <div class="fx-copy">
               <span class="fx-num" aria-hidden="true">4</span>

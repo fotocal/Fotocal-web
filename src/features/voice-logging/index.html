@@ -85,20 +85,17 @@
               <p data-i18n="fp.voice-logging.s1b">It sits on the logging screen alongside photo and barcode. Nothing to set up, no wake word, no separate account to connect.</p>
             </div>
             <div class="tile-media">
-              <!--# ═══ STEP 1 · THE CLEAN TAB SCREEN DROPS IN HERE ═════════════════════
-                   Every voice capture so far has the result sheet or the listening
-                   sheet over the screen, which dims the Scan / Barcode / Voice tabs
-                   behind it — a greyed-out UI reads as disabled, so it is not used.
-                   When the tab screen arrives with no sheet open (both languages):
-                     for l in es en; do for w in 440 660; do python3 tools/screen_crop.py \
-                       tools/captures/s6/voice-tabs-$l.jpg assets/img/screens/vl-tabs-$w-$l.webp \
-                       trim=72 ratio=1.3 width=$w; done; done
-                   add fp.voice-logging.s1Img/s1Alt and swap the figure below for the
-                   same frame markup as step 2. ══════════════════════════════════ -->
-              <figure class="bc-say vl-say" aria-hidden="true">
-                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="17" cy="12" r="2.4"/></svg></span>
-                <p class="bc-say-q" data-i18n="fp.voice-logging.s1fig">Scan · Barcode · Voice</p>
-                
+              <!--# The tab screen arrived (tools/captures/s6/voice-tab-{es,en}.jpg) and
+                   is at full contrast, but the recent list still carries the misheard
+                   "Cafea +3" row at position 6, and from row 2 down it mixes languages.
+                   A phone-shaped crop reaches both, so this is the clean top of the
+                   screen as a landscape detail instead: header, the three tabs, the
+                   section heading and row 1, which is language-correct in both trees.
+                   The floating mic button sits BELOW the misheard row, so no crop can
+                   include it — the copy no longer claims it is visible here. ═════ -->
+              <figure class="real-crop">
+                <img src="../../assets/img/screens/vl-tabs-es.webp" data-srcset="700,1050" sizes="(min-width: 900px) 220px, min(300px, 70vw)" width="700" height="450" loading="lazy" decoding="async" alt="Real app screen: the logging screen's three tabs, Scan, Barcode and Voice, with Voice selected, above the recent voice logs" data-i18n-alt="fp.voice-logging.s1Alt" data-i18n-src="fp.voice-logging.s1Img">
+                <figcaption data-i18n="fp.voice-logging.s1fig">Scan · Barcode · Voice</figcaption>
               </figure>
             </div>
           </li>

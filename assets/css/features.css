@@ -245,18 +245,14 @@
   line-height: 1.35; color: var(--text-soft);
 }
 .ai-grid-3 { margin-top: 1.6rem; }
-.ai-tile-say { min-height: 16rem; align-items: center; padding: 2.2rem 1.5rem; }
-.ai-constraints { max-width: 22rem; gap: 1rem; }
-.ai-chips { justify-content: center; margin-top: 0; }
-.ai-constraints .bc-say-q { font-size: 1.05rem; color: var(--text-soft); }
 @media (min-width: 900px) { .ai-hero .hero-stage-x { max-width: 400px; } }
 
+.wl-trend { align-self: center; max-width: 15rem; padding: 1.4rem 1rem 1.6rem; }
 /* ── /features/weight-loss/ ─────────────────────────────────────────────────
    Two of the four step tiles have no capture yet (the pace screen and the
    Cuerpo tab of Mi progreso). Both slots are composed from the step's own
    content in the idiom the other pages use — a mark, the real values as
    chips or a named scale, and one line — never a mock-up of a screen. */
-.wl-pace, .wl-trend { align-self: center; max-width: 15rem; padding: 1.4rem 1rem 1.6rem; }
 .wl-chips { justify-content: center; margin-top: 0; }
 .wl-pace .bc-say-q, .wl-trend .bc-say-q { font-size: .98rem; color: var(--text-soft); }
 .wl-trend .bc-scale { max-width: 12rem; }
@@ -270,6 +266,39 @@
 .nd-chips { justify-content: center; margin-top: 0; }
 .nd-micros .bc-say-q { font-size: .98rem; color: var(--text-soft); }
 .nd-tile-say { min-height: 16rem; align-items: center; padding: 2.2rem 1.5rem; }
-.nd-diets { max-width: 23rem; gap: 1rem; }
-.nd-diets .bc-say-q { font-size: 1rem; }
 @media (min-width: 900px) { .nd-hero .hero-stage-x { max-width: 400px; } }
+
+/* ── A REAL CROP THAT IS NOT A WHOLE SCREEN ────────────────────────────────
+   Two regions can only be published as a landscape detail, because a
+   phone-shaped crop of either reaches content that must not ship: the voice
+   list's misheard row and its cross-language item names, and the BMI
+   category label on the progress screen. A device frame would lie about
+   what they are, so they get their own object — clipped from the app, with
+   the app's own corner radius, and deliberately not phone-shaped. */
+.real-crop { display: block; width: 100%; max-width: 22rem; margin: 0 auto; }
+.real-crop img {
+  display: block; width: 100%; height: auto; border-radius: 14px;
+  border: 1px solid var(--border-soft); box-shadow: var(--shadow-card);
+}
+.sec-dark .real-crop img {
+  border-color: rgba(var(--on-dark-rgb),.14);
+  box-shadow: var(--shadow-lift);
+}
+.real-crop figcaption { margin-top: .7rem; font-size: .82rem; color: var(--muted); text-align: center; }
+.sec-dark .real-crop figcaption { color: var(--on-dark-soft); }
+.tile-media .real-crop { max-width: 100%; }
+/* the profile screen sits beside the two data lists, and stacks above them
+   on a phone — the lists are the argument, the screen is the evidence */
+.ai-profile-row { display: grid; gap: 1.4rem; margin-top: 2.2rem; }
+/* capped so the frame can never be asked for more pixels than the capture
+   has: the 900px source must cover every viewport, zoom and dpr the grid
+   tests, and at 280px x3 it does. */
+.ai-profile { margin: 0; display: grid; justify-items: center; gap: .8rem; max-width: 280px; margin-inline: auto; }
+.ai-profile .dev-frame { max-width: 280px; }
+.ai-profile figcaption { font-size: .85rem; color: var(--muted); text-align: center; max-width: 26ch; }
+.ai-profile-row .ai-lists { margin-top: 0; }
+@media (min-width: 900px) {
+  .ai-profile-row { grid-template-columns: minmax(0, 280px) minmax(0, 1fr); align-items: start; gap: 2.4rem; }
+  .ai-profile { position: sticky; top: 6rem; }
+}
+.ai-cold-split { margin-top: 2.2rem; }

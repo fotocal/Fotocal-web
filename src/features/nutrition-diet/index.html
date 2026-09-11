@@ -115,7 +115,8 @@
                it shows the whole list with no lock — the opposite of what tile 4
                says. What is needed is the panel as a FREE user sees it: two
                micronutrients readable and the rest dimmed under the unlock pill.
-               When it arrives (both languages, same meal):
+               Not being chased: it needs a free or signed-out account, which the
+               owner's phone is not. When one exists (both languages, same meal):
                  for l in es en; do for w in 440 660; do python3 tools/screen_crop.py \
                    tools/captures/s6/micros-free-$l.jpg assets/img/screens/nd-micros-$w-$l.webp \
                    trim=72 ratio=1.38 width=$w; done; done
@@ -165,21 +166,8 @@
     <section class="section sec-dark" id="diets">
       <div class="container">
         <div class="split split-flip">
-          <!--# ═══ THE HEALTH PROFILE SCREEN DROPS IN HERE ═══════════════════════
-               The chips below are the app's real diet list, but no capture shows
-               the screen where they are chosen (Mi salud). It is the same screen
-               /ai/ is waiting on. When it arrives (both languages):
-                 for l in es en; do for w in 600 900; do python3 tools/screen_crop.py \
-                   tools/captures/s6/salud-$l.jpg assets/img/screens/nd-diets-$w-$l.webp \
-                   trim=72 ratio=1.63 width=$w; done; done
-               keys sp.nutrition-diet.dietImg / .dietAlt. ══════════════════════ -->
           <div class="split-visual reveal">
-            <div class="tile tile-dark nd-tile-say">
-              <figure class="bc-say bc-say-dark nd-diets" aria-hidden="true">
-                <div class="micro-chips nd-chips"><span class="micro-chip mc-g" data-i18n="sp.nutrition-diet.d1">Mediterranean</span><span class="micro-chip mc-y" data-i18n="sp.nutrition-diet.d2">Vegetarian</span><span class="micro-chip mc-p" data-i18n="sp.nutrition-diet.d3">Vegan</span><span class="micro-chip mc-y" data-i18n="sp.nutrition-diet.d4">Pescatarian</span><span class="micro-chip mc-g" data-i18n="sp.nutrition-diet.d5">Low carb</span><span class="micro-chip mc-p" data-i18n="sp.nutrition-diet.d6">Keto</span><span class="micro-chip mc-y" data-i18n="sp.nutrition-diet.d7">Gluten free</span><span class="micro-chip mc-g" data-i18n="sp.nutrition-diet.d8">Halal</span><span class="micro-chip mc-p" data-i18n="sp.nutrition-diet.d9">Kosher</span><span class="micro-chip mc-y" data-i18n="sp.nutrition-diet.d10">Low FODMAP</span><span class="micro-chip mc-g" data-i18n="sp.nutrition-diet.d11">No diet at all</span></div>
-                <p class="bc-say-q" data-i18n="sp.nutrition-diet.dFig">The list the app actually offers</p>
-              </figure>
-            </div>
+            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/profile-es.webp" data-srcset="600,900" sizes="300px" width="600" height="1343" loading="lazy" decoding="async" alt="Real app screen: the health profile, with thirteen allergies above eight ways of eating, gluten, lactose and halal selected" data-i18n-alt="sp.nutrition-diet.dietAlt" data-i18n-src="sp.nutrition-diet.dietImg"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="sp.nutrition-diet.t20">However you eat</span>

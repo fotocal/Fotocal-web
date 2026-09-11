@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../assets/css/fonts.css?v=ffc748dc">
   <link rel="stylesheet" href="../assets/css/site.css?v=77d15311">
   <link rel="stylesheet" href="../assets/css/home.css?v=038d30a6">
-  <link rel="stylesheet" href="../assets/css/features.css?v=cb359c2d">
+  <link rel="stylesheet" href="../assets/css/features.css?v=aa49ec01">
   <link rel="preload" as="image" href="../assets/img/screens/ai-chat-700-es.webp" imagesrcset="../assets/img/screens/ai-chat-700-es.webp 700w, ../assets/img/screens/ai-chat-1080-es.webp 1080w" imagesizes="(min-width: 900px) 400px, min(340px, 78vw)">
 
   <script type="application/ld+json">
@@ -187,7 +187,12 @@
           <h2 class="section-title reveal">Qué puede ver y qué no.</h2>
           <p class="section-sub reveal">La versión corta: tus datos de Fotocal, y nada más de tu móvil.</p>
         </header>
-        <div class="ai-lists">
+        <div class="ai-profile-row">
+          <figure class="ai-profile reveal">
+            <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/profile-600-es.webp" srcset="../assets/img/screens/profile-600-es.webp 600w, ../assets/img/screens/profile-900-es.webp 900w" sizes="(min-width: 900px) 260px, min(280px, 72vw)" width="600" height="1343" loading="lazy" decoding="async" alt="Pantalla real de la app: el perfil de salud, con la lista de alergias encima de la de formas de comer, con gluten, lactosa y halal marcados"></div></div>
+            <figcaption>El perfil que lee Kal. Cada chip es opcional.</figcaption>
+          </figure>
+          <div class="ai-lists">
           <div class="lt-card ai-list reveal">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
             <h3>Lo que Coach Kal puede ver</h3>
@@ -196,7 +201,7 @@
               <li>La nutrición que hay detrás: calorías, macros y micronutrientes.</li>
               <li>El agua que bebes y tus registros de peso, tal y como los anotas.</li>
               <li>Tu objetivo y las metas que lo acompañan: perder, mantener o ganar.</li>
-              <li>Las alergias, la dieta y las condiciones de salud que hayas decidido compartir en tu perfil.</li>
+              <li>Las alergias y la forma de comer que hayas decidido compartir en tu perfil.</li>
             </ul>
           </div>
           <div class="lt-card ai-list ai-list-no reveal" style="--rd:.08s">
@@ -209,11 +214,12 @@
               <li>La cuenta de ninguna otra persona. La conversación va solo sobre tus datos.</li>
             </ul>
           </div>
+          </div>
         </div>
         <div class="ai-callout ai-callout-quiet reveal">
           <span class="ai-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
           <div>
-            <p>Las alergias, la dieta y las condiciones de salud son opcionales. Si los dejas en blanco, Kal funciona igual sin ellos, y puedes añadirlos o quitarlos cuando quieras desde tu perfil. Qué se guarda, por qué y cómo borrarlo está explicado al detalle en la política de privacidad.</p>
+            <p>Tus alergias y tu forma de comer son opcionales. Déjalas en blanco y Kal funciona igual sin ellas, y puedes añadirlas o quitarlas cuando quieras desde tu perfil. Qué se guarda, por qué y cómo borrarlo está explicado entero en la política de privacidad.</p>
             <p><a href="../privacy-policy/">Leer la política de privacidad</a></p>
           </div>
         </div>
@@ -255,12 +261,8 @@
       <div class="container">
         <div class="split split-flip">
           <div class="split-visual reveal">
-            <div class="tile tile-light ai-tile-say">
-              <figure class="bc-say ai-constraints" aria-hidden="true">
-                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
-                <div class="micro-chips ai-chips"><span class="micro-chip mc-p">Lactosa</span><span class="micro-chip mc-y">Gluten</span><span class="micro-chip mc-g">Frutos secos</span><span class="micro-chip mc-g">Vegetariana</span><span class="micro-chip mc-p">Vegana</span><span class="micro-chip mc-y">Halal</span></div>
-                <p class="bc-say-q">Un límite, no una preferencia</p>
-              </figure>
+            <div class="tile tile-light">
+              <div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/ai-allergy-600-es.webp" srcset="../assets/img/screens/ai-allergy-600-es.webp 600w, ../assets/img/screens/ai-allergy-900-es.webp 900w" sizes="300px" width="600" height="1149" loading="lazy" decoding="async" alt="Pantalla real de la app: preguntado si puede comer pan, Coach Kal responde que no, porque contiene gluten, al que el usuario es alérgico"></div></div>
             </div>
           </div>
           <div class="split-copy">
@@ -270,7 +272,6 @@
             <ul class="check-list check-list-lt reveal">
               <li>Si has introducido una alergia, Kal tiene instrucciones de no recomendarte un alimento que identifique como que la contiene.</li>
               <li>La dieta que hayas configurado —vegetariana, vegana, halal, sin gluten o cualquier otra— condiciona todas las recomendaciones, en lugar de mencionarse una vez y olvidarse.</li>
-              <li>Las condiciones de salud que hayas compartido se tienen en cuenta en la orientación general que te da.</li>
             </ul>
             <div class="ai-callout reveal">
               <span class="ai-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
@@ -290,16 +291,21 @@
         <header class="fx-chap">
           <span class="kicker reveal">Cómo sacarle partido</span>
           <h2 class="section-title reveal">Las preguntas concretas reciben respuestas concretas.</h2>
-          <p class="section-sub reveal">Kal es más útil cuando la pregunta va sobre tu día real y no sobre nutrición en general. Todas estas funcionan bien:</p>
+          <p class="section-sub reveal">Kal es más útil cuando la pregunta va de tu día real y no de nutrición en general.</p>
         </header>
-        <ul class="ai-exs">
-            <li class="ai-ex reveal">«¿Qué ceno con las calorías que me quedan?»</li>
-            <li class="ai-ex reveal" style="--rd:0.05s">«Esta noche voy a un italiano, ¿qué pido?»</li>
-            <li class="ai-ex reveal" style="--rd:0.10s">«¿Por qué no se ha movido mi peso esta semana?»</li>
-            <li class="ai-ex reveal">«¿Cómo tomo más proteína sin añadir mucha grasa?»</li>
-            <li class="ai-ex reveal" style="--rd:0.05s">«¿Qué cocino con pollo, arroz y lo que hay en la nevera?»</li>
-            <li class="ai-ex reveal" style="--rd:0.10s">«¿Ayer fue un buen día de verdad o solo lo parece?»</li>
-        </ul>
+        <div class="split ai-cold-split">
+          <div class="split-visual reveal">
+            <div class="tile tile-light"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../assets/img/screens/ai-cold-600-es.webp" srcset="../assets/img/screens/ai-cold-600-es.webp 600w, ../assets/img/screens/ai-cold-900-es.webp 900w" sizes="300px" width="600" height="982" loading="lazy" decoding="async" alt="Pantalla real de la app: Coach Kal abierto antes de escribir nada, ofreciendo cuatro preguntas de inicio construidas con las calorías y la proteína que le quedan al usuario en el día"></div></div></div>
+          </div>
+          <div class="split-copy">
+            <p class="section-sub reveal">Ábrelo antes de escribir nada y te ofrece cuatro para empezar, cada una construida con las calorías y la proteína que te quedan de verdad en el día, no con una lista de frases hechas.</p>
+            <ul class="check-list check-list-lt reveal">
+              <li>Pregunta por hoy, no por nutrición en general: la respuesta es tan concreta como la pregunta.</li>
+              <li>Las repreguntas funcionan. Mantiene el hilo, así que «¿y si me salto el arroz?» no necesita preparación.</li>
+              <li>Puedes preguntar en español o en inglés, y la respuesta vuelve en el mismo idioma.</li>
+            </ul>
+          </div>
+        </div>
         <ul class="habit-grid ai-grid-3">
           <li class="habit-card reveal">
             <div class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4.1-.9L3 20.5l1.6-4.5A8.4 8.4 0 0 1 3.7 11 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>

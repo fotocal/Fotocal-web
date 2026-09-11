@@ -41,3 +41,20 @@ maths per se, since English gets it right from the same data.
 5. Coach Kal's "calories remaining" (652 kcal) is goal − eaten, ignoring
    the 539 kcal burned that the home screen counts (1.191 left). Not
    wrong, but the two numbers disagree on the same day; worth one rule.
+
+## Seen in the sitting-3 captures (2026-09-11)
+5. Result screen, SPANISH UI, "Informe completo": the quality chips are
+   in English ("+ High in protein and fiber.", "· Moderate sodium
+   content."), and every nutrient name in "Radar de nutrientes" and
+   "Micronutrientes" is English (Vitamin C, Potassium, Magnesium, Iron,
+   Calcium; "Rico en Vitamin C"). Same family as bug 2 and 3.
+6. Ingredient sheet, SPANISH UI: the "Reemplazar por…" suggestions are
+   English ("Turkey", "Tofu").
+7. Voice result, both languages: "apple" came back as "Afel" — the same
+   misrecognition in the Spanish and the English run of the same three
+   items (Cola, Afel, Malta). Shows in the capture that will go on the
+   site; a retake with clearer foods would avoid publishing it.
+8. Weekly report "Nutrición" table, SPANISH: row labels break mid-word
+   ("Proteín a", "Carboh idratos") and a "PARTE EST" badge (partly
+   estimated?) takes the label's width. The English table wraps
+   "Carboh ydrates" the same way.

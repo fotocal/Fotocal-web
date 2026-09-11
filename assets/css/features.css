@@ -198,6 +198,13 @@
    of a tick, and no brand colour on it */
 /* .check-list.ai-* — two classes, because .check-list-dark li::before wins
    on specificity otherwise and puts a tick beside "it can be wrong" */
+/* site.css draws the tick as a gradient-filled MASK, not as text, so a marker
+   override has to clear the mask and the background or the tick survives
+   underneath whatever character we set. */
+.check-list.ai-cross li::before, .check-list.ai-dash li::before {
+  width: auto; height: auto; border-radius: 0; top: 0;
+  background: none; -webkit-mask: none; mask: none;
+}
 .check-list.ai-cross li::before { content: "\00d7"; color: var(--muted); font-weight: 800; }
 .check-list.ai-dash li::before { content: "\2014"; color: var(--muted); font-weight: 700; }
 .sec-dark .check-list.ai-dash li::before { color: var(--on-dark-soft); }
@@ -243,3 +250,14 @@
 .ai-chips { justify-content: center; margin-top: 0; }
 .ai-constraints .bc-say-q { font-size: 1.05rem; color: var(--text-soft); }
 @media (min-width: 900px) { .ai-hero .hero-stage-x { max-width: 400px; } }
+
+/* ── /features/weight-loss/ ─────────────────────────────────────────────────
+   Two of the four step tiles have no capture yet (the pace screen and the
+   Cuerpo tab of Mi progreso). Both slots are composed from the step's own
+   content in the idiom the other pages use — a mark, the real values as
+   chips or a named scale, and one line — never a mock-up of a screen. */
+.wl-pace, .wl-trend { align-self: center; max-width: 15rem; padding: 1.4rem 1rem 1.6rem; }
+.wl-chips { justify-content: center; margin-top: 0; }
+.wl-pace .bc-say-q, .wl-trend .bc-say-q { font-size: .98rem; color: var(--text-soft); }
+.wl-trend .bc-scale { max-width: 12rem; }
+@media (min-width: 900px) { .wl-hero .hero-stage-x { max-width: 400px; } }

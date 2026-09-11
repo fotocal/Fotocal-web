@@ -16,6 +16,26 @@ exist in Spanish at all. Spain is the primary market. Until it ships,
 the website claims the transcript nowhere — the copy was corrected on
 2026-09-12 rather than shipping a promise the Spanish app does not keep.
 
+## 0a · THE WEEKLY REPORT'S GOAL CARD SAYS 100% DONE WITH 20 KG TO GO
+Observed 2026-09-11, tools/captures/s2/weekly-goal-en.jpg. The "Your goal"
+card reads:
+  Start 80.0 kg   ·   Now 110.0 kg   ·   Goal 90.0 kg
+  [ a full-width green bar ]
+  "100% done"                              "20.0 kg to go"
+The bar is full and the card says finished, while its own right-hand
+figure says twenty kilograms remain. Whatever the test data is, a
+progress card that congratulates someone who is further from the goal
+than when they started is the wrong thing to show anyone, and it is
+wrong on a weight-loss screen in particular.
+Likely cause worth checking: progress is being computed as a ratio that
+goes out of range (or is clamped to 100) when "now" has moved past
+"start" in the wrong direction. The card should handle moving away from
+the goal as its own state, the way the trend card already does
+(WeightProjectionCard has a 'wrongWay' case).
+Consequence for the site: this capture cannot be published, so
+/features/weight-loss/ composes that slot from its own content and the
+goal card is on the capture list in both languages.
+
 ## 0b · THE SAME SENTENCE GIVES DIFFERENT NUMBERS IN THE TWO LANGUAGES
 Observed 2026-09-12, tools/captures/s5/, "dos huevos y tostada con
 aguacate" / "2 eggs and toast with avocado", spoken minutes apart:

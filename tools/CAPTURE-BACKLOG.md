@@ -31,6 +31,20 @@ scroll position. Same state in both languages unless it says otherwise.
   1f. Tap "Saber más" / "Learn more" under a Coach Kal answer and
      screenshot where it lands. The page used to say that line points at
      its limits section; the sentence was removed until this is known.
+  1g. Weight loss, three things, all SPANISH and ENGLISH pairs:
+       · the goal screen where the weekly pace is chosen. The app offers
+         0.25 / 0.5 / 0.75 kg per week plus a typed custom figure, and
+         nothing on the site shows it. Slot: /features/weight-loss/
+         step 1 (src marks it).
+       · the Cuerpo tab of Mi progreso — the weight chart and the trend
+         card under it. Slot: /features/weight-loss/ step 4 (src marks
+         it). The trend card names its own 30-day window, which is the
+         honest thing to show next to that copy.
+       · the "Tu objetivo" / "Your goal" card in the weekly report, on
+         an account whose numbers make sense. The English capture we
+         have (s2/weekly-goal-en.jpg) reads 100% done with 20 kg to go
+         and must not be published — tools/APP-BUGS.md item 0a.
+
   2. Result screen lower half — ENGLISH, the first three scroll positions
      ("Informe completo": quality score, sugar impact, satiety, NOVA,
      nutrient radar, micronutrients), to pair with Spanish

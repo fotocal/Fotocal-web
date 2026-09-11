@@ -176,3 +176,70 @@
 .vl-say-pair .bc-say-q + .bc-say-q { color: var(--muted); }
 .vl-after { max-width: 46rem; margin: 2rem auto 0; }
 .vl-after li { font-size: .97rem; margin-bottom: .7rem; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   /ai/ — Coach Kal. Mostly a disclosure page: what it sees, where it
+   is wrong, what it must not be used for. The one new part is the
+   callout, ported from pages.css so this page can drop that file, with
+   a dark variant for the limits section. Everything else is the grid,
+   the cards and the split the other pages use.
+   ═══════════════════════════════════════════════════════════════ */
+@media (min-width: 700px)  { .ai-grid-2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .ai-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+.ai-grid-2, .ai-grid-3 { margin-top: 2.4rem; }
+.ai-lists { display: grid; gap: 1.2rem; margin-top: 2.4rem; }
+@media (min-width: 900px) { .ai-lists { grid-template-columns: repeat(2, 1fr); } }
+.ai-list { padding: 1.7rem 1.5rem; }
+.ai-list h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin-bottom: .8rem; }
+.ai-list .check-list { margin: 0; }
+.ai-list .check-list li { font-size: .93rem; margin-bottom: .55rem; }
+/* the second list is the negative one: the same rhythm, a cross instead
+   of a tick, and no brand colour on it */
+/* .check-list.ai-* — two classes, because .check-list-dark li::before wins
+   on specificity otherwise and puts a tick beside "it can be wrong" */
+.check-list.ai-cross li::before { content: "\00d7"; color: var(--muted); font-weight: 800; }
+.check-list.ai-dash li::before { content: "\2014"; color: var(--muted); font-weight: 700; }
+.sec-dark .check-list.ai-dash li::before { color: var(--on-dark-soft); }
+.ai-list-no .habit-ico { background: var(--bg-3); color: var(--muted); box-shadow: none; }
+
+.ai-callout {
+  display: flex; gap: 1rem; align-items: flex-start; margin-top: 1.75rem;
+  background: var(--surface); border: 1px solid var(--border-soft);
+  border-radius: var(--r-md); padding: 1.15rem 1.25rem; box-shadow: var(--shadow-sm);
+}
+.ai-callout-ico {
+  width: 34px; height: 34px; flex: none; border-radius: 10px;
+  display: grid; place-items: center;
+  background: var(--grad-wash); border: 1px solid var(--border-pink); color: var(--brand-text);
+}
+.ai-callout-ico svg { width: 17px; height: 17px; }
+.ai-callout h4 { font-size: .97rem; font-weight: 700; margin-bottom: .25rem; }
+.ai-callout p { font-size: .9rem; color: var(--muted); margin: 0; }
+.ai-callout p + p { margin-top: .5rem; }
+.ai-callout a { color: var(--brand-text); font-weight: 600; text-decoration: underline; }
+.ai-callout-quiet { background: var(--bg-2); box-shadow: none; max-width: 46rem; margin-inline: auto; }
+.ai-callout-quiet .ai-callout-ico { background: var(--surface); border-color: var(--border); color: var(--muted); }
+/* on the lifted dark, the same card in the section's own materials */
+.ai-callout-dark {
+  background: rgba(var(--on-dark-rgb),.05); border-color: rgba(var(--on-dark-rgb),.12); box-shadow: none;
+}
+.ai-callout-dark h4 { color: var(--on-dark); }
+.ai-callout-dark p { color: var(--on-dark-soft); }
+.ai-callout-dark .ai-callout-ico { background: rgba(var(--on-dark-rgb),.06); border-color: rgba(var(--on-dark-rgb),.12); color: var(--coral); }
+
+/* the example questions: quiet cards, read as a list of things to say */
+.ai-exs { display: grid; gap: .7rem; margin-top: 2.4rem; }
+@media (min-width: 800px)  { .ai-exs { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1150px) { .ai-exs { grid-template-columns: repeat(3, 1fr); } }
+.ai-ex {
+  background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-md);
+  padding: 1rem 1.15rem; font-family: var(--font-display); font-size: 1rem; font-weight: 500;
+  line-height: 1.35; color: var(--text-soft);
+}
+.ai-grid-3 { margin-top: 1.6rem; }
+.ai-tile-say { min-height: 16rem; align-items: center; padding: 2.2rem 1.5rem; }
+.ai-constraints { max-width: 22rem; gap: 1rem; }
+.ai-chips { justify-content: center; margin-top: 0; }
+.ai-constraints .bc-say-q { font-size: 1.05rem; color: var(--text-soft); }
+@media (min-width: 900px) { .ai-hero .hero-stage-x { max-width: 400px; } }

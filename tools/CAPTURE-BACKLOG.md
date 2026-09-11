@@ -17,6 +17,20 @@ scroll position. Same state in both languages unless it says otherwise.
      and a greyed-out UI reads as disabled. Slot: /features/voice-logging/
      step 1 (src marks it). Careful: the recent list must not show the
      misheard "Cafea +3" row — log something over it first, or scroll.
+  1e. Coach Kal, three things, all SPANISH and ENGLISH pairs:
+       · a reply that names one of your own allergies. An older Spanish
+         one exists but only as a baked-in frame at 640px whose raw was
+         never committed, so it cannot be re-cut. Slot: /ai/ allergies
+         (src marks it).
+       · the profile screen where allergies, diet and health conditions
+         are set. Nothing on the site shows it, and it also settles
+         whether "health conditions" is a real field — the page says so
+         twice. Slot: /ai/ data (src marks it).
+       · the chat opened cold, before any message, so we can show what
+         it offers when you have not asked anything yet.
+  1f. Tap "Saber más" / "Learn more" under a Coach Kal answer and
+     screenshot where it lands. The page used to say that line points at
+     its limits section; the sentence was removed until this is known.
   2. Result screen lower half — ENGLISH, the first three scroll positions
      ("Informe completo": quality score, sugar impact, satiety, NOVA,
      nutrient radar, micronutrients), to pair with Spanish

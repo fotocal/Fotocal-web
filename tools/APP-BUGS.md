@@ -16,6 +16,44 @@ exist in Spanish at all. Spain is the primary market. Until it ships,
 the website claims the transcript nowhere — the copy was corrected on
 2026-09-12 rather than shipping a promise the Spanish app does not keep.
 
+## 0e · "BINGE EATING" AND "DEPRESSED" ARE TAGS THAT NOTHING RESPONDS TO
+Found 2026-09-12 while checking /features/lifestyle-mindset/ against the app.
+
+The daily note offers 50 tags (src/store/useNotesStore.ts NOTE_TAGS). Two of
+them are clinical rather than conversational:
+    bingeEating  "Binge Eating" / "Atracón"
+    depressed    "Depressed" / "Deprimido"
+Both are inert. Grepping the whole app for either key returns only the
+catalogue entry and its emoji — no branch, no message, no resource, no
+signpost. A person can tag a binge every day for a year and the app will
+never acknowledge it once.
+
+They also never reach Coach Kal: app/coach.tsx does not read the notes
+store, so the one part of the app that could say something kind is not
+told. And there is no crisis or support signposting anywhere in the
+codebase (grep for helpline / crisis / eating disorder returns nothing).
+
+This is not a crash and nothing is broken in the engineering sense, which
+is exactly why it is easy to leave. But the app is inviting a disclosure it
+then ignores, and "Binge Eating" is a specific thing to invite. Worth a
+product decision rather than a bug fix: either show something when those
+two are picked — a line and a link, not a diagnosis — or reconsider
+offering them as one-tap tags alongside "Movie Night".
+
+The website does not paper over it: /features/lifestyle-mindset/ says
+outright that nothing reads the notes back, and its closing note tells
+people to talk to a doctor rather than to the app.
+
+## 0f · SMALLER, SAME FAMILY: THE APP GRADES CHARACTER AT MILESTONES
+The streak screen is careful everywhere except the milestone copy:
+    streak.milestone.100.body  "One hundred days of discipline. You're
+                                unstoppable."
+                               "Cien días de disciplina. Eres imparable."
+Everything else about that screen deliberately avoids saying anything about
+the person — the code comment at app/streak.tsx:108 reads "never red, never
+'you lost'". "Discipline" and "unstoppable" are the one place it does the
+opposite, and they land hardest on whoever breaks the streak at 101.
+
 ## 0a · THE WEEKLY REPORT'S GOAL CARD SAYS 100% DONE WITH 20 KG TO GO
 Observed 2026-09-11, tools/captures/s2/weekly-goal-en.jpg. The "Your goal"
 card reads:

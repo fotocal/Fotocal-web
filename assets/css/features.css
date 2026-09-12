@@ -302,3 +302,24 @@
   .ai-profile { position: sticky; top: 6rem; }
 }
 .ai-cold-split { margin-top: 2.2rem; }
+
+/* ── /features/lifestyle-mindset/ ───────────────────────────────────────────
+   The app's own sentences, quoted. Set as quotations rather than as UI so a
+   reader can tell the difference between what the app says and what we say. */
+.lm-quotes { display: grid; gap: .9rem; margin-top: 2rem; list-style: none; padding: 0; }
+.lm-quote {
+  background: var(--bg-1); border: 1px solid var(--border-soft);
+  border-left: 3px solid var(--brand-text);
+  border-radius: var(--r-md); padding: 1.05rem 1.2rem;
+}
+.lm-quote p {
+  margin: 0; font-family: var(--font-display); font-weight: 500;
+  font-size: 1.02rem; line-height: 1.45; color: var(--text); text-wrap: pretty;
+}
+.lm-quote-note { margin-top: 1rem; font-size: .84rem; color: var(--muted); text-align: center; }
+.lm-chips { margin-top: 1.2rem; }
+.lm-chips-wide { justify-content: center; max-width: 46rem; margin-inline: auto; }
+.lm-chip-note { margin-top: .9rem; font-size: .88rem; color: var(--on-dark-soft); }
+.lm-pill { max-width: 20rem; }
+.lm-pill img { border-radius: 12px; }
+@media (min-width: 900px) { .lm-hero .hero-stage-x { max-width: 400px; } }

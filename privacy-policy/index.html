@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<!-- lang is set by tools/build_site.py: "es" for the copy at
-     /privacy-policy/, "en" for the one at /en/privacy-policy/. Nothing
-     rewrites it at runtime any more — the URL is the language. -->
-<html lang="es">
+<!-- lang is set by tools/build_site.py: "es" for the copy at /privacy-policy/,
+     "en" for the one at /en/privacy-policy/. The two data-lang-block divs below
+     are the two texts; the build keeps one per tree. -->
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidad — Fotocal</title>
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:locale:alternate" content="en_US">
   <meta name="description" content="Política de privacidad de Fotocal: cómo tratamos tus datos de salud, fotos, pasos de Health Connect, procesamiento con IA y tus derechos RGPD.">
   <link rel="canonical" href="https://getfotocal.com/privacy-policy/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/privacy-policy/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/privacy-policy/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/privacy-policy/">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Política de Privacidad — Fotocal">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://getfotocal.com/privacy-policy/">
-  <meta property="og:description" content="Política de privacidad de Fotocal: cómo tratamos tus datos de salud, fotos, pasos de Health Connect, procesamiento con IA y tus derechos RGPD.">
   <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Política de Privacidad — Fotocal">
+  <meta property="og:description" content="Política de privacidad de Fotocal: cómo tratamos tus datos de salud, fotos, pasos de Health Connect, procesamiento con IA y tus derechos RGPD.">
+  <meta property="og:url" content="https://getfotocal.com/privacy-policy/">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Política de Privacidad — Fotocal">
   <meta name="twitter:description" content="Política de privacidad de Fotocal: cómo tratamos tus datos de salud, fotos, pasos de Health Connect, procesamiento con IA y tus derechos RGPD.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=3">
+
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png?v=3">
   <link rel="icon" href="../assets/favicon.ico?v=3" sizes="32x32">
@@ -33,37 +36,20 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="stylesheet" href="../assets/css/fonts.css?v=ffc748dc">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
-
-  <link rel="stylesheet" href="../css/legal.css?v=e0ee706a">
-  <link rel="stylesheet" href="../assets/css/sections.css?v=f8d2e418">
+  <link rel="stylesheet" href="../assets/css/site.css?v=77d15311">
+  <link rel="stylesheet" href="../assets/css/home.css?v=038d30a6">
+  <link rel="stylesheet" href="../assets/css/features.css?v=062d1d22">
 </head>
-<body>
-  <header class="legal-header">
-    <div class="container legal-header-inner">
-      <a class="nav-logo" href="../">
-        <img fetchpriority="high" decoding="async" class="logo-mark"
-             src="../assets/img/logo-32.png"
-             srcset="../assets/img/logo-32.png 1x, ../assets/img/logo-64.png 2x, ../assets/img/logo-96.png 3x"
-             alt="Fotocal" width="32" height="32">
-        <span>Fotocal</span>
-      </a>
-      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Change language">
-        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
-      </button>
-    </div>
-  </header>
+<body class="page-fx">
+<div id="site-nav"></div>
 
-  <main class="legal-main">
-    <div class="container container-narrow">
-      <div class="legal-card">
-
-        <!-- ═══════════ ESPAÑOL ═══════════ -->
-        <div class="visible">
-          <div class="legal-sym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+<main id="main" class="legal-main">
+  <div class="container container-narrow">
+    <div class="legal">
+<!-- ═══════════ ESPAÑOL ═══════════ -->
+        <div>
           <h1>Política de Privacidad</h1>
-          <p class="legal-updated">Última actualización: 3 de agosto de 2026</p>
+          <p class="legal-updated">Última actualización: 12 de septiembre de 2026</p>
 
           <p>Esta Política de Privacidad describe cómo <strong>Fotocal</strong> («Fotocal», «nosotros») recoge, utiliza y protege tu información cuando usas la aplicación móvil Fotocal (paquete Android: <code>com.fotokal.app</code>) y este sitio web. Al usar Fotocal aceptas las prácticas descritas en esta política.</p>
 
@@ -88,6 +74,7 @@
             <li>Registro de agua e hidratación.</li>
             <li>Notas de estado de ánimo y entradas de diario.</li>
             <li>Recuento de pasos (a través de Health Connect, si lo autorizas).</li>
+            <li>Grabaciones de voz, si usas el registro por voz: el audio se envía a nuestro proveedor de IA para transcribirlo (ver sección 4) y no se conserva como grabación.</li>
           </ul>
           <p>Estos datos se consideran datos de salud (categoría especial según el art. 9 del RGPD). Los tratamos únicamente con tu <strong>consentimiento explícito</strong>, que otorgas al crear tu cuenta y configurar tus objetivos, y que puedes retirar en cualquier momento eliminando tu cuenta.</p>
 
@@ -117,13 +104,14 @@
             <li><strong>Mejorar la app:</strong> análisis de uso agregado y corrección de errores (interés legítimo, art. 6.1.f RGPD).</li>
             <li><strong>Gestionar suscripciones:</strong> verificar tu estado de suscripción con Google Play (ejecución del contrato).</li>
             <li><strong>Comunicaciones de servicio:</strong> avisos importantes sobre tu cuenta o cambios en esta política.</li>
+            <li><strong>Amigos (opcional):</strong> si añades a alguien con un código de invitación, esa persona ve tu nombre, tu racha actual y en qué días de la semana has registrado comidas; nada más, y solo mientras seáis amigos en la app.</li>
           </ul>
           <p><strong>No vendemos tus datos personales ni los compartimos con terceros con fines publicitarios.</strong></p>
 
           <h2>4. Procesamiento con inteligencia artificial</h2>
-          <p>Las funciones de IA de Fotocal (escaneo de comida por foto, escaneo de menús y Coach Kal) se apoyan en <strong>OpenAI</strong> como proveedor de procesamiento. Cuando usas estas funciones:</p>
+          <p>Las funciones de IA de Fotocal (escaneo de comida por foto, escaneo de menús, registro por voz, Coach Kal, el resumen semanal y el plan de comidas del día) se apoyan en <strong>OpenAI</strong> como proveedor de procesamiento. Cuando usas estas funciones:</p>
           <ul>
-            <li>Tu foto o tu mensaje se envía cifrado (TLS) a los servidores de OpenAI para su análisis y se nos devuelve el resultado nutricional o la respuesta del coach.</li>
+            <li>Tu foto, tu grabación de voz o tu mensaje se envía cifrado (TLS) a los servidores de OpenAI para su análisis y se nos devuelve el resultado nutricional o la respuesta del coach.</li>
             <li>Según las condiciones de la API de OpenAI, tus datos enviados por API <strong>no se utilizan para entrenar sus modelos</strong>.</li>
             <li>Coach Kal puede utilizar el contexto de tu diario (comidas, objetivos, progreso) para darte respuestas útiles y personalizadas.</li>
           </ul>
@@ -135,9 +123,9 @@
             <tr><td data-label="Proveedor">Supabase</td><td data-label="Finalidad">Base de datos, autenticación y almacenamiento en la nube</td><td data-label="Datos">Datos de cuenta, diario, salud y fotos</td></tr>
             <tr><td data-label="Proveedor">OpenAI</td><td data-label="Finalidad">Análisis de imágenes de comida y chat Coach Kal</td><td data-label="Datos">Fotos de comida, mensajes de chat, contexto nutricional</td></tr>
             <tr><td data-label="Proveedor">PostHog</td><td data-label="Finalidad">Analítica de producto (uso de la app)</td><td data-label="Datos">Eventos de uso, identificadores técnicos</td></tr>
-            <tr><td data-label="Proveedor">Sentry</td><td data-label="Finalidad">Informes de fallos y diagnóstico de errores</td><td data-label="Datos">Registros de errores, identificadores técnicos, diagnóstico del dispositivo/app</td></tr>
+            <tr><td data-label="Proveedor">Firebase Crashlytics (Google)</td><td data-label="Finalidad">Informes de fallos de la app</td><td data-label="Datos">Registro del fallo, modelo de dispositivo, versión de Android y de la app, identificador de usuario de la app; solo en la versión publicada</td></tr>
             <tr><td data-label="Proveedor">Google Play Billing</td><td data-label="Finalidad">Gestión y cobro de suscripciones</td><td data-label="Datos">Estado de compra (Google procesa el pago; nunca vemos tu tarjeta)</td></tr><tr><td data-label="Proveedor">RevenueCat</td><td data-label="Finalidad">Gestión de suscripciones y permisos premium</td><td data-label="Datos">Estado de compra, identificador de usuario de la app, estado de suscripción</td></tr>
-            <tr><td data-label="Proveedor">Health Connect (Google)</td><td data-label="Finalidad">Lectura del recuento de pasos</td><td data-label="Datos">Pasos diarios</td></tr><tr><td data-label="Proveedor">Expo (notificaciones/OTA)</td><td data-label="Finalidad">Notificaciones push y actualizaciones de la app</td><td data-label="Datos">Token de notificaciones y contenido de la notificación (entregado vía FCM/APNs)</td></tr><tr><td data-label="Proveedor">Open Food Facts</td><td data-label="Finalidad">Búsqueda de productos por código de barras</td><td data-label="Datos">Códigos de barras escaneados; productos que envíes</td></tr>
+            <tr><td data-label="Proveedor">Health Connect (Google)</td><td data-label="Finalidad">Lectura del recuento de pasos</td><td data-label="Datos">Pasos diarios</td></tr><tr><td data-label="Proveedor">Expo (notificaciones/OTA)</td><td data-label="Finalidad">Notificaciones push y actualizaciones de la app</td><td data-label="Datos">Token de notificaciones y contenido de la notificación (entregado vía FCM/APNs)</td></tr><tr><td data-label="Proveedor">Open Food Facts</td><td data-label="Finalidad">Búsqueda de productos por código de barras y de alimentos por nombre</td><td data-label="Datos">Códigos de barras escaneados, nombres de alimentos consultados; productos que envíes</td></tr><tr><td data-label="Proveedor">USDA FoodData Central</td><td data-label="Finalidad">Base de datos nutricional pública (búsqueda de alimentos por nombre)</td><td data-label="Datos">Nombres de alimentos consultados; ningún dato personal</td></tr><tr><td data-label="Proveedor">Wikipedia</td><td data-label="Finalidad">Resumen de referencia de un alimento cuando Coach Kal lo consulta</td><td data-label="Datos">El nombre del alimento consultado; ningún dato personal</td></tr>
           </table>
           <p>Todos nuestros proveedores actúan bajo acuerdos de tratamiento de datos. Algunos pueden procesar datos fuera del Espacio Económico Europeo; en esos casos se aplican Cláusulas Contractuales Tipo u otros mecanismos válidos de transferencia internacional.</p>
 
@@ -153,7 +141,7 @@
           <ul>
             <li><strong>Acceso</strong> a tus datos personales.</li>
             <li><strong>Rectificación</strong> de datos inexactos.</li>
-            <li><strong>Supresión</strong> («derecho al olvido») — puedes eliminar tu cuenta directamente en la app: Perfil → Ajustes → Eliminar cuenta, o ver <a href="../account-deletion/">instrucciones de eliminación</a>.</li>
+            <li><strong>Supresión</strong> («derecho al olvido») — puedes eliminar tu cuenta directamente en la app: Perfil → Ajustes de cuenta → Eliminar cuenta, o ver <a href="../account-deletion/">instrucciones de eliminación</a>.</li>
             <li><strong>Portabilidad</strong> de tus datos en un formato estructurado.</li>
             <li><strong>Limitación y oposición</strong> al tratamiento.</li>
             <li><strong>Retirar tu consentimiento</strong> en cualquier momento, sin efecto retroactivo.</li>
@@ -176,28 +164,13 @@
 
         <!-- ═══════════ ENGLISH ═══════════ -->
         
-
-        <p style="margin-top:2.5rem"><a class="back-link" href="../">← Fotocal</a></p>
-      </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer class="legal-footer">
-    <div class="container">
-      <p>© 2026 Fotocal · <a href="../privacy-policy/">Privacidad</a> · <a href="../terms/">Términos</a> · <a href="../account-deletion/">Eliminación de cuenta</a> · <a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a></p>
-    </div>
-  </footer>
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="logo-apple" viewBox="0 0 48 48">
-        <path d="M24 12c-7 -5 -16 -1.5 -16 9c0 9 7 19 13 19c1.6 0 2.2 -.9 3 -.9s1.4 .9 3 .9c6 0 13 -10 13 -19c0 -10.5 -9 -14 -16 -9z" fill="#E8A50C"/>
-        <path d="M24 12c0 -5 3.5 -8 8 -8c0 5 -3.5 8 -8 8z" fill="#7FA84B"/>
-        <circle cx="24" cy="27" r="7.5" fill="none" stroke="#FBF6EC" stroke-width="2.6"/>
-        <circle cx="24" cy="27" r="2.6" fill="#FBF6EC"/>
-      </symbol>
-    </defs>
-  </svg>
-  <script src="../js/legal.js?v=66599737"></script>
+<div id="site-footer"></div>
+<script src="../assets/js/i18n.js?v=0b46abaf"></script>
+<script src="../assets/js/layout.js?v=6d53635e" data-page=""></script>
+<script src="../assets/js/main.js?v=ffb21447"></script>
 </body>
 </html>

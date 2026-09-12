@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<!-- lang is set by tools/build_site.py: "es" for the copy at
-     /account-deletion/, "en" for the one at /en/account-deletion/. Nothing
-     rewrites it at runtime any more — the URL is the language. -->
-<html lang="en">
+<!-- lang is set by tools/build_site.py: "es" for the copy at /account-deletion/,
+     "en" for the one at /en/account-deletion/. The two data-lang-block divs below
+     are the two texts; the build keeps one per tree. -->
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eliminación de cuenta — Fotocal</title>
-  <meta name="description" content="Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes → Eliminar cuenta) o por solicitud de email.">
+  <meta name="description" content="Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes de cuenta → Eliminar cuenta) o por solicitud por email.">
   <link rel="canonical" href="https://getfotocal.com/account-deletion/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/account-deletion/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/account-deletion/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/account-deletion/">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Eliminación de cuenta — Fotocal">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://getfotocal.com/account-deletion/">
-  <meta property="og:description" content="Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes → Eliminar cuenta) o por solicitud de email.">
   <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Eliminación de cuenta — Fotocal">
+  <meta property="og:description" content="Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes de cuenta → Eliminar cuenta) o por solicitud por email.">
+  <meta property="og:url" content="https://getfotocal.com/account-deletion/">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Eliminación de cuenta — Fotocal">
-  <meta name="twitter:description" content="Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes → Eliminar cuenta) o por solicitud de email.">
+  <meta name="twitter:description" content="Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes de cuenta → Eliminar cuenta) o por solicitud por email.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=3">
+
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png?v=3">
   <link rel="icon" href="../assets/favicon.ico?v=3" sizes="32x32">
@@ -31,35 +36,18 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="stylesheet" href="../assets/css/fonts.css">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
-
-  <link rel="stylesheet" href="../css/legal.css">
-  <link rel="stylesheet" href="../assets/css/sections.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/home.css">
+  <link rel="stylesheet" href="../assets/css/features.css">
 </head>
-<body>
-  <header class="legal-header">
-    <div class="container legal-header-inner">
-      <a class="nav-logo" href="../">
-        <img fetchpriority="high" decoding="async" class="logo-mark"
-             src="../assets/img/logo-32.png"
-             srcset="../assets/img/logo-32.png 1x, ../assets/img/logo-64.png 2x, ../assets/img/logo-96.png 3x"
-             alt="Fotocal" width="32" height="32">
-        <span>Fotocal</span>
-      </a>
-      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Change language">
-        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
-      </button>
-    </div>
-  </header>
+<body class="page-fx">
+<div id="site-nav"></div>
 
-  <main class="legal-main">
-    <div class="container container-narrow">
-      <div class="legal-card">
-
-        <!-- ═══════════ ESPAÑOL ═══════════ -->
-        <div data-lang-block="es" class="visible">
-          <div class="legal-sym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M9.5 13.5l2 2 3.5-3.5"/></svg></div>
+<main id="main" class="legal-main">
+  <div class="container container-narrow">
+    <div class="legal">
+<!-- ═══════════ ESPAÑOL ═══════════ -->
+        <div data-lang-block="es">
           <h1>Eliminación de cuenta y datos</h1>
           <p class="legal-updated">App: Fotocal (<code>com.fotokal.app</code>) · Desarrollador: Fotocal</p>
 
@@ -69,9 +57,9 @@
           <ol>
             <li>Abre la app <strong>Fotocal</strong> en tu dispositivo Android.</li>
             <li>Ve a la pestaña <strong>Perfil</strong>.</li>
-            <li>Entra en <strong>Ajustes</strong>.</li>
+            <li>Entra en <strong>Ajustes de cuenta</strong>.</li>
             <li>Pulsa <strong>Eliminar cuenta</strong>.</li>
-            <li>Confirma la eliminación. Tu cuenta y tus datos se eliminarán de forma permanente.</li>
+            <li>Confirma con <strong>«Sí, eliminar permanentemente»</strong>. Tu cuenta y tus datos se eliminan en ese momento.</li>
           </ol>
           <p>Este proceso es inmediato y no necesitas contactar con nadie.</p>
 
@@ -105,7 +93,7 @@
 
           <h2>Suscripciones</h2>
           <div class="legal-callout">
-            <p><strong>Importante:</strong> eliminar tu cuenta <strong>no cancela</strong> automáticamente tu suscripción Fotocal Pro. Cancélala en <strong>Google Play → Perfil → Pagos y suscripciones → Suscripciones</strong> antes o después de eliminar la cuenta para evitar cargos futuros.</p>
+            <p><strong>Importante:</strong> eliminar tu cuenta <strong>no cancela</strong> automáticamente tu suscripción Fotocal Premium. Cancélala en <strong>Google Play → Perfil → Pagos y suscripciones → Suscripciones</strong> antes o después de eliminar la cuenta para evitar cargos futuros.</p>
           </div>
 
           <p>Más información sobre cómo tratamos tus datos en nuestra <a href="../privacy-policy/">Política de Privacidad</a>.</p>
@@ -113,7 +101,6 @@
 
         <!-- ═══════════ ENGLISH ═══════════ -->
         <div data-lang-block="en">
-          <div class="legal-sym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M9.5 13.5l2 2 3.5-3.5"/></svg></div>
           <h1>Account & data deletion</h1>
           <p class="legal-updated">App: Fotocal (<code>com.fotokal.app</code>) · Developer: Fotocal</p>
 
@@ -123,9 +110,9 @@
           <ol>
             <li>Open the <strong>Fotocal</strong> app on your Android device.</li>
             <li>Go to the <strong>Profile</strong> tab.</li>
-            <li>Open <strong>Settings</strong>.</li>
+            <li>Open <strong>Account Settings</strong>.</li>
             <li>Tap <strong>Delete account</strong>.</li>
-            <li>Confirm the deletion. Your account and data will be permanently deleted.</li>
+            <li>Confirm with <strong>"Yes, delete permanently"</strong>. Your account and data are deleted at that moment.</li>
           </ol>
           <p>This process is immediate and requires no contact with support.</p>
 
@@ -159,33 +146,18 @@
 
           <h2>Subscriptions</h2>
           <div class="legal-callout">
-            <p><strong>Important:</strong> deleting your account does <strong>not</strong> automatically cancel your Fotocal Pro subscription. Cancel it in <strong>Google Play → Profile → Payments & subscriptions → Subscriptions</strong> before or after deleting your account to avoid future charges.</p>
+            <p><strong>Important:</strong> deleting your account does <strong>not</strong> automatically cancel your Fotocal Premium subscription. Cancel it in <strong>Google Play → Profile → Payments & subscriptions → Subscriptions</strong> before or after deleting your account to avoid future charges.</p>
           </div>
 
           <p>Learn more about how we handle your data in our <a href="../privacy-policy/">Privacy Policy</a>.</p>
         </div>
-
-        <p style="margin-top:2.5rem"><a class="back-link" href="../">← Fotocal</a></p>
-      </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer class="legal-footer">
-    <div class="container">
-      <p>© 2026 Fotocal · <a href="../privacy-policy/">Privacidad</a> · <a href="../terms/">Términos</a> · <a href="../account-deletion/">Eliminación de cuenta</a> · <a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a></p>
-    </div>
-  </footer>
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="logo-apple" viewBox="0 0 48 48">
-        <path d="M24 12c-7 -5 -16 -1.5 -16 9c0 9 7 19 13 19c1.6 0 2.2 -.9 3 -.9s1.4 .9 3 .9c6 0 13 -10 13 -19c0 -10.5 -9 -14 -16 -9z" fill="#E8A50C"/>
-        <path d="M24 12c0 -5 3.5 -8 8 -8c0 5 -3.5 8 -8 8z" fill="#7FA84B"/>
-        <circle cx="24" cy="27" r="7.5" fill="none" stroke="#FBF6EC" stroke-width="2.6"/>
-        <circle cx="24" cy="27" r="2.6" fill="#FBF6EC"/>
-      </symbol>
-    </defs>
-  </svg>
-  <script src="../js/legal.js"></script>
+<div id="site-footer"></div>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/layout.js" data-page=""></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

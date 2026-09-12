@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<!-- lang is set by tools/build_site.py: "es" for the copy at
-     /terms/, "en" for the one at /en/terms/. Nothing
-     rewrites it at runtime any more — the URL is the language. -->
-<html lang="en">
+<!-- lang is set by tools/build_site.py: "es" for the copy at /terms/,
+     "en" for the one at /en/terms/. The two data-lang-block divs below
+     are the two texts; the build keeps one per tree. -->
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — Fotocal</title>
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="es_ES">
   <meta name="description" content="Fotocal's terms of service: subscriptions, auto-renewal, cancellation, the free trial and the conditions for using the app.">
   <link rel="canonical" href="https://getfotocal.com/en/terms/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/terms/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/terms/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/terms/">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Terms of Service — Fotocal">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://getfotocal.com/en/terms/">
-  <meta property="og:description" content="Fotocal's terms of service: subscriptions, auto-renewal, cancellation, the free trial and the conditions for using the app.">
   <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="Terms of Service — Fotocal">
+  <meta property="og:description" content="Fotocal's terms of service: subscriptions, auto-renewal, cancellation, the free trial and the conditions for using the app.">
+  <meta property="og:url" content="https://getfotocal.com/en/terms/">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image-en.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Terms of Service — Fotocal">
   <meta name="twitter:description" content="Fotocal's terms of service: subscriptions, auto-renewal, cancellation, the free trial and the conditions for using the app.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image-en.png">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=3">
+
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=3">
   <link rel="icon" href="/assets/favicon.ico?v=3" sizes="32x32">
@@ -33,40 +36,23 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/assets/css/fonts.css?v=ffc748dc">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
-
-  <link rel="stylesheet" href="/css/legal.css?v=e0ee706a">
-  <link rel="stylesheet" href="/assets/css/sections.css?v=f8d2e418">
+  <link rel="stylesheet" href="/assets/css/site.css?v=77d15311">
+  <link rel="stylesheet" href="/assets/css/home.css?v=038d30a6">
+  <link rel="stylesheet" href="/assets/css/features.css?v=062d1d22">
 </head>
-<body>
-  <header class="legal-header">
-    <div class="container legal-header-inner">
-      <a class="nav-logo" href="/en/">
-        <img fetchpriority="high" decoding="async" class="logo-mark"
-             src="/assets/img/logo-32.png"
-             srcset="/assets/img/logo-32.png 1x, /assets/img/logo-64.png 2x, /assets/img/logo-96.png 3x"
-             alt="Fotocal" width="32" height="32">
-        <span>Fotocal</span>
-      </a>
-      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Change language">
-        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
-      </button>
-    </div>
-  </header>
+<body class="page-fx">
+<div id="site-nav"></div>
 
-  <main class="legal-main">
-    <div class="container container-narrow">
-      <div class="legal-card">
-
-        <!-- ═══════════ ESPAÑOL ═══════════ -->
+<main id="main" class="legal-main">
+  <div class="container container-narrow">
+    <div class="legal">
+<!-- ═══════════ ESPAÑOL ═══════════ -->
         
 
         <!-- ═══════════ ENGLISH ═══════════ -->
         <div>
-          <div class="legal-sym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h6"/></svg></div>
           <h1>Terms of Service</h1>
-          <p class="legal-updated">Last updated: July 16, 2026</p>
+          <p class="legal-updated">Last updated: September 12, 2026</p>
 
           <p>These Terms of Service ("Terms") govern your use of the <strong>Fotocal</strong> mobile application (Android package: <code>com.fotokal.app</code>) and this website. By downloading or using Fotocal you agree to these Terms. If you do not agree, do not use the application.</p>
 
@@ -86,12 +72,12 @@
             <li>You may delete your account at any time (see <a href="/en/account-deletion/">account deletion</a>).</li>
           </ul>
 
-          <h2>4. Fotocal Pro subscriptions</h2>
-          <p>Fotocal can be downloaded and used for free with core features. Premium features require a <strong>Fotocal Pro</strong> subscription:</p>
+          <h2>4. Fotocal Premium subscriptions</h2>
+          <p>Fotocal can be downloaded and used for free with core features. Premium features require a <strong>Fotocal Premium</strong> subscription:</p>
           <table>
             <tr><th>Plan</th><th>Price</th><th>Period</th></tr>
-            <tr><td data-label="Plan">Pro Monthly</td><td data-label="Price">€6.99</td><td data-label="Period">1 month</td></tr>
-            <tr><td data-label="Plan">Pro Yearly</td><td data-label="Price">€34.99</td><td data-label="Period">12 months (includes a 5-day free trial)</td></tr>
+            <tr><td data-label="Plan">Premium monthly</td><td data-label="Price">€6.99</td><td data-label="Period">1 month</td></tr>
+            <tr><td data-label="Plan">Premium yearly</td><td data-label="Price">€34.99</td><td data-label="Period">12 months (includes a 5-day free trial)</td></tr>
           </table>
           <p>Prices may vary by country and are always displayed in Google Play before you confirm the purchase.</p>
 
@@ -103,7 +89,7 @@
 
           <h3>4.2 Free trial</h3>
           <ul>
-            <li>The Pro Yearly plan includes a <strong>5-day free trial</strong> for new subscribers.</li>
+            <li>The Premium yearly plan includes a <strong>5-day free trial</strong> for new subscribers.</li>
             <li>If you do not cancel before the trial ends, the yearly subscription activates and payment is charged automatically.</li>
             <li>If you cancel during the trial, you are not charged and premium access ends when the trial ends.</li>
             <li>The free trial can only be used once per user/Google Play account.</li>
@@ -154,28 +140,13 @@
           <h2>14. Contact</h2>
           <p>For any question about these Terms: <a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a></p>
         </div>
-
-        <p style="margin-top:2.5rem"><a class="back-link" href="/en/">← Fotocal</a></p>
-      </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer class="legal-footer">
-    <div class="container">
-      <p>© 2026 Fotocal · <a href="/en/privacy-policy/">Privacidad</a> · <a href="/en/terms/">Términos</a> · <a href="/en/account-deletion/">Eliminación de cuenta</a> · <a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a></p>
-    </div>
-  </footer>
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="logo-apple" viewBox="0 0 48 48">
-        <path d="M24 12c-7 -5 -16 -1.5 -16 9c0 9 7 19 13 19c1.6 0 2.2 -.9 3 -.9s1.4 .9 3 .9c6 0 13 -10 13 -19c0 -10.5 -9 -14 -16 -9z" fill="#E8A50C"/>
-        <path d="M24 12c0 -5 3.5 -8 8 -8c0 5 -3.5 8 -8 8z" fill="#7FA84B"/>
-        <circle cx="24" cy="27" r="7.5" fill="none" stroke="#FBF6EC" stroke-width="2.6"/>
-        <circle cx="24" cy="27" r="2.6" fill="#FBF6EC"/>
-      </symbol>
-    </defs>
-  </svg>
-  <script src="/js/legal.js?v=66599737"></script>
+<div id="site-footer"></div>
+<script src="/assets/js/i18n.js?v=0b46abaf"></script>
+<script src="/assets/js/layout.js?v=6d53635e" data-page=""></script>
+<script src="/assets/js/main.js?v=ffb21447"></script>
 </body>
 </html>

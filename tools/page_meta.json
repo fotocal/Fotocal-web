@@ -171,11 +171,11 @@
   "account-deletion/index.html": {
     "es": {
       "title": "Eliminación de cuenta — Fotocal",
-      "desc": "Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes → Eliminar cuenta) o por solicitud de email."
+      "desc": "Cómo eliminar tu cuenta de Fotocal y todos tus datos: desde la app (Perfil → Ajustes de cuenta → Eliminar cuenta) o por solicitud de email."
     },
     "en": {
       "title": "Account deletion — Fotocal",
-      "desc": "How to delete your Fotocal account and all your data: from the app (Profile → Settings → Delete account) or by email request."
+      "desc": "How to delete your Fotocal account and all your data: from the app (Profile → Account Settings → Delete account) or by email request."
     }
   },
   "404.html": {

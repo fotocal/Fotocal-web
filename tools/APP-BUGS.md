@@ -91,6 +91,30 @@ list that names it as one. The Spanish is already the neutral phrase;
 the English is not. Found while writing /about/, which therefore does not
 claim that the app never uses the word.
 
+## 0i · THE DATA CONSENTS SCREEN PROMISES THINGS THE CODE DOES NOT DO
+Found while auditing the privacy policy against the app (2026-09-12).
+app/settings/data-consents.tsx, strings dataConsents.* in src/i18n:
+  · "Save scanned photos … Retention: 18 months. Deleted with your account."
+    consent.savePhotos IS wired (scanUpload/mealPhoto/notePhotos honour it),
+    but nothing implements an 18-month purge: the only pg_cron jobs are the
+    streak and notification ones. Photos live until the account is deleted.
+    The policy says "while your account is active"; the app says 18 months.
+    One of them has to change, and the code says it is the app.
+  · "Coach Kal chat improvement — anonymized chats used to make Coach Kal
+    smarter." consent.coachTraining is persisted and read back by the
+    screen only; no edge function or pipeline consumes it, and nothing
+    trains on chats. The toggle does nothing and describes a use that
+    does not exist.
+  · "Marketing emails — product updates, tips." No function sends
+    marketing email; the toggle does nothing.
+  · privacy.privacyDeletionBody: "All your data is removed within 30
+    days." supabase/functions/delete-account deletes storage files, runs
+    admin_delete_user_data and deletes the auth user in one call: it is
+    immediate. The website and the app should say the same thing.
+Also seen: supabase/functions/stripe-checkout and stripe-webhook exist
+but nothing in app/ or src/ calls them; the policy does not list Stripe
+and should not while that stays true.
+
 ## 0a · THE WEEKLY REPORT'S GOAL CARD SAYS 100% DONE WITH 20 KG TO GO
 Observed 2026-09-11, tools/captures/s2/weekly-goal-en.jpg. The "Your goal"
 card reads:

@@ -54,6 +54,34 @@ the person — the code comment at app/streak.tsx:108 reads "never red, never
 'you lost'". "Discipline" and "unstoppable" are the one place it does the
 opposite, and they land hardest on whoever breaks the streak at 101.
 
+## 0g · THE PAYWALL SELLS THINGS THAT ARE FREE, AND THINGS THAT DO NOT EXIST
+Found while rebuilding the website's subscription page against the gating
+code (2026-09-12, fotocal/Fotocal @ bf728e8). The site now says only what
+the code gates; the app's own paywall and Manage Subscription screen still
+say more than that, and Play reviews paywall claims.
+  · app/paywall.tsx FEATURES_14 lists as Premium: "Health score for every
+    meal" (QualityBadge renders above the PremiumLock in scan-result.tsx —
+    free), "Macro split breakdown" and "Core nutrients tracking with goals
+    (calories, protein, carbs, fat…)" (the always-visible rows in
+    food-detail.tsx — free).
+  · src/i18n paywall strings: "Weekly PDF nutrition reports" — nothing in
+    app/ or src/ produces a PDF; "8+ personalized diet plans" — the gated
+    feature is app/plan-day.tsx, one plan for one day; "Health app sync" —
+    src/lib/healthConnect.ts has no premium check, it is free; rotator
+    line "No ads · more features" — there is no ad SDK on any plan, so
+    "no ads" is not a Premium benefit.
+  · "REAL STORIES / People love Fotocal" (paywall.realStories, peopleLove):
+    the website prints no testimonials because none have a verifiable
+    source; the paywall should hold itself to the same rule.
+  · app/settings/subscription.tsx prem5–prem7 ("Deep insights on every
+    meal", "Full nutrient breakdown with % daily values", "Advanced macro
+    and progress stats") are true but vague; prem8 "Full weekly recap" is
+    right. freef1–freef5 for the free plan are accurate.
+  · Related, not a claim: app/(tabs)/_layout.tsx auto-opens the paywall
+    for free users once per 24 h. Not wrong under Play policy, but it is
+    the one pressure element left after the fake strike-through price was
+    removed (B11 fix 3), and it is worth a deliberate yes/no.
+
 ## 0a · THE WEEKLY REPORT'S GOAL CARD SAYS 100% DONE WITH 20 KG TO GO
 Observed 2026-09-11, tools/captures/s2/weekly-goal-en.jpg. The "Your goal"
 card reads:

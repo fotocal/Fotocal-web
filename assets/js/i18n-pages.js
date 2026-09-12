@@ -133,7 +133,6 @@
       "ai.noteImg": "../assets/img/screens/ai-note-en.webp",
       "ai.noteAlt": "Real app screen: the bottom of a Coach Kal answer, with the app\u2019s own line underneath \u2014 AI-generated content, mistakes are possible",
 
-
       /* ─────────────────────────────────────────────
          SECTION PAGES (Features detail, About) + CONTACT FORM
          ───────────────────────────────────────────── */
@@ -162,25 +161,109 @@
       "cf.messageErr": "Please write a little more so we can help.",
       "cf.send": "Send message",
       "cf.privacy": "We use what you send only to answer you. Nothing else.",
-
-      /* ── Subscription: artwork alt text ── */
-      "sub.img1": "A woman at a sunlit table checking a macro ring on her phone beside a fresh grain bowl",
-      "sub.img2": "Someone photographing a colourful salad bowl with their phone",
-      "sub.img3": "A phone projecting chat bubbles with food, water and activity icons",
-      "sub.img4": "Hands holding a phone showing calorie rings and weekly charts",
-      "sub.img5": "A spread of fresh, colourful healthy food on a warm cream table",
-
-      /* ── Subscription: 5-day trial timeline ── */
-      "sub.trial.head": "How the <em class=\"accent\">5-day trial</em> works.",
-      "sub.tl.d1": "Day 0",
-      "sub.tl.t1": "Start, pay nothing",
-      "sub.tl.b1": "Begin the yearly plan from Google Play. Premium switches on immediately and you are not charged.",
-      "sub.tl.d2": "Days 1–4",
-      "sub.tl.t2": "Use everything",
-      "sub.tl.b2": "Unlimited scans, unlimited voice, the menu scanner and every nutrient — the whole thing, with no feature held back.",
-      "sub.tl.d3": "Day 5",
-      "sub.tl.t3": "Keep it or cancel",
-      "sub.tl.b3": "Cancel any time before day 5 and you pay nothing at all. Do nothing and the yearly plan simply begins.",
+      /* ── Subscription page ── */
+      "sub.img": "../assets/img/screens/nd-day-en.webp",
+      "sub.imgAlt": "Real app screen: the Progress tab's diet view on the free plan, with the day's calories and macros in a ring and the estimated energy expenditure below",
+      "sub.freeImg": "../assets/img/screens/coach-chat-en.webp",
+      "sub.freeAlt": "Real app screen: a conversation with Coach Kal, which is free on every plan with no message limit",
+      "sub.premImg": "../assets/img/screens/sf-analysis-en.webp",
+      "sub.premAlt": "Real app screen, Premium: the analysis sections of a scan result — nutrition breakdown, health impact and recommendations",
+      "sub.premFig": "Premium: the analysis sections of a scan result.",
+      "sub.t01": "Pricing",
+      "sub.t02": "Two prices, one Premium, and a free plan <em class=\"accent\">that is not a demo</em>.",
+      "sub.t03": "Fotocal is free to use every day, with no card and no time limit. Premium is €6.99 a month or €34.99 a year, and what it does is lift the daily limits on scanning and open the deeper panels. Everything on this page is what Google Play charges, in euros, tax included.",
+      "sub.t04": "The two plans ↓",
+      "sub.t05": "The plans",
+      "sub.t06": "What each one costs, and what happens on day six.",
+      "sub.t07": "There is one Premium. The monthly and yearly plans unlock exactly the same things and differ only in how you pay for them. The free plan is the app with two daily limits, and you can stay on it for good.",
+      "sub.p1n": "Free",
+      "sub.p1a": "€0",
+      "sub.p1p": "No card. No time limit.",
+      "sub.p1l1": "2 photo scans a day, 1 voice log a day",
+      "sub.p1l2": "Barcode scanner and Coach Kal without limits",
+      "sub.p1l3": "The diary, weight, water, steps, notes and the Progress tab",
+      "sub.p1b": "Nothing expires and nothing asks for a card. The full list is further down.",
+      "sub.p2n": "Monthly",
+      "sub.p2a": "€6.99",
+      "sub.p2p": "per month",
+      "sub.p2l1": "All of Premium, the same as the yearly plan",
+      "sub.p2l2": "Renews every month until you cancel",
+      "sub.p2w1": "No free trial on this plan.",
+      "sub.p2w2": "Google Play charges €6.99 the moment you subscribe, then €6.99 every month until you cancel. Cancel and you keep Premium to the end of the month you paid for.",
+      "sub.pcta": "Get the app on Google Play",
+      "sub.pfine": "You subscribe from inside the app.",
+      "sub.p3n": "Yearly",
+      "sub.p3a": "€34.99",
+      "sub.p3p": "per year",
+      "sub.p3e": "That is €2.92 a month, 58% less than paying monthly.",
+      "sub.p3l1": "All of Premium, the same as the monthly plan",
+      "sub.p3l2": "The only plan with the 5-day free trial",
+      "sub.p3w": "The five days, day by day",
+      "sub.p3d1": "Day 1",
+      "sub.p3t1": "Premium switches on. Nothing is charged.",
+      "sub.p3d2": "Days 1–5",
+      "sub.p3t2": "Cancel whenever you like. You keep Premium until the trial ends and pay nothing.",
+      "sub.p3d3": "Day 6",
+      "sub.p3t3": "If you have not cancelled, Google Play charges €34.99 for the year, and €34.99 a year after that until you cancel.",
+      "sub.p3c": "To cancel: Play Store app → your profile icon → <b>Payments and subscriptions</b> → <b>Subscriptions</b> → Fotocal → <b>Cancel subscription</b>. Two to three days before the charge the app sends you one reminder with the date and the amount.",
+      "sub.pfine2": "The trial starts from inside the app, on the yearly plan only.",
+      "sub.f1": "Both paid plans renew on their own until you cancel. That is how every Google Play subscription works.",
+      "sub.f2": "Prices are in euros and include Spanish VAT at 21%. Google Play shows the exact amount for your country before you confirm, and nothing is added after that.",
+      "sub.f3": "Fotocal is an Android app. Google Play takes the payment; we never see your card.",
+      "sub.t08": "The free plan",
+      "sub.t09": "What free actually includes, with the limits named.",
+      "sub.t10": "This list is read off the app's own code, not off our marketing. Where there is a cap, the cap is stated. Where there is none, it says so.",
+      "sub.fr1": "<b>Photo scans: 2 a day.</b> Every scan gives calories, macros, a health score and two micronutrient bars.",
+      "sub.fr2": "<b>Voice logging: 1 a day.</b>",
+      "sub.fr3": "<b>Barcode scanner: no limit.</b> Including healthier alternatives for the product you scanned.",
+      "sub.fr4": "<b>Coach Kal: no limit.</b> No message cap, no trial, on every plan.",
+      "sub.fr5": "<b>The weekly report opens free.</b> The calories chart and the habits summary are yours; two cards inside it are Premium.",
+      "sub.fr6": "<b>Everything you log stays free:</b> the meal diary, weight, water, steps through Health Connect, mood and habit notes, meal recommendations, and the Progress tab with what you ate and what you burned.",
+      "sub.fr7": "<b>Sync, and both languages.</b> No plan has ads, because the app has none.",
+      "sub.t11": "Premium",
+      "sub.t12": "Six things switch on. Nothing else changes.",
+      "sub.t13": "Premium does not make the app better behaved or take anything away from the free plan. These are the six places where the code checks for a subscription, and what each one opens.",
+      "sub.u1t": "Photo scans without the daily counter.",
+      "sub.u1b": "The 2-a-day limit is removed. Scan every meal, every day.",
+      "sub.u2t": "Voice logging without the daily counter.",
+      "sub.u2b": "The 1-a-day limit is removed.",
+      "sub.u3t": "The restaurant menu scanner.",
+      "sub.u3b": "Premium only, with no free allowance: photograph a menu and get the dish that fits what you have left today.",
+      "sub.u4t": "The whole nutrient panel.",
+      "sub.u4b": "Every micronutrient on a scan rather than two; the nutrition breakdown, health impact and recommendation sections of a scan result; the key-nutrient and vitamin rows in a food's detail; the Advanced Nutrition card on the home screen.",
+      "sub.u5t": "The rest of the reports.",
+      "sub.u5b": "The two Premium cards in the weekly report (the full nutrition table and vitamins & minerals), the detail cards of the weekly recap, and the six weekly cards in the Progress tab's diet view.",
+      "sub.u6t": "Plan my day.",
+      "sub.u6b": "An AI meal plan for the day ahead, built from your goals and what you have logged.",
+      "sub.t14": "Not on the list, because they are already free: Coach Kal, the barcode scanner, the health score, sync, and an ad-free app.",
+      "sub.t15": "Cancelling and after",
+      "sub.t16": "Google Play holds the subscription. Here is what to press.",
+      "sub.t17": "Every Fotocal subscription is bought, billed and cancelled through Google Play, in the same place as every other subscription on your phone. Uninstalling the app does not cancel it; these four taps do.",
+      "sub.s1": "Open the <b>Play Store</b> app on your phone.",
+      "sub.s2": "Tap your <b>profile icon</b> in the top right.",
+      "sub.s3": "Go to <b>Payments and subscriptions → Subscriptions</b>.",
+      "sub.s4": "Select <b>Fotocal</b> and tap <b>Cancel subscription</b>.",
+      "sub.c1t": "You keep what you paid for",
+      "sub.c1b": "Cancelling does not cut you off. Premium runs to the end of the month or year you already paid for, then you are on the free plan. Cancel during the trial and you pay nothing at all.",
+      "sub.c2t": "Your diary stays",
+      "sub.c2b": "Nothing you logged is deleted, hidden or held back when you stop paying. You go back to 2 photo scans and 1 voice log a day, and everything else is as it was.",
+      "sub.c3t": "Refunds go through Google",
+      "sub.c3b": "Google Play is the seller, so refunds follow its refund policy and are requested from it. If a charge looks wrong, <a href=\"../contact/\">write to us</a> and we will help you get there.",
+      "sub.faqTitle": "Questions about paying",
+      "sub.fq1": "Can I use Fotocal without ever paying?",
+      "sub.fa1": "Yes, for as long as you like. The free plan is 2 photo scans and 1 voice log a day, unlimited barcode scans, unlimited Coach Kal, the diary, weight, water, steps, notes, the Progress tab and the weekly report's free cards. It never expires and never asks for a card.",
+      "sub.fq2": "Which plan has the free trial?",
+      "sub.fa2": "The yearly plan only. It starts with 5 days of Premium at no charge. The monthly plan has no trial and bills €6.99 the moment you subscribe.",
+      "sub.fq3": "What exactly happens on day six?",
+      "sub.fa3": "If you have not cancelled, Google Play charges €34.99 and the yearly plan begins. If you cancelled at any point in the five days, nothing is charged and you keep Premium until the trial ends. Two to three days before the charge the app sends a single reminder naming the date and the amount, unless you have switched that reminder off in Settings.",
+      "sub.fq4": "Do both plans unlock the same things?",
+      "sub.fa4": "Yes. There is one Premium. The only differences are the price, how often it renews and which one carries the trial.",
+      "sub.fq5": "Can I switch from monthly to yearly, or back?",
+      "sub.fa5": "Cancel the plan you have in Google Play, let it run to the end of what you paid for, then subscribe to the other one from inside the app. You are never charged for both at once.",
+      "sub.fq6": "Are the prices the same everywhere?",
+      "sub.fa6": "The prices here are the euro list prices, VAT included. Google Play may show a different amount in another country or currency, and the amount it shows before you confirm is the one you pay.",
+      "sub.t18": "Start free. Pay only if the daily limits get in your way.",
+      "sub.t19": "Fotocal is free to download and free to keep using. The 5-day trial is there when you want to see the rest.",
 
       /* ─────────────────────────────────────────────
          BLOG (/blog/ + article pages)
@@ -266,7 +349,6 @@
       "fx.f3.c1": "Natural language, EN & ES",
       "fx.f3.c2": "Perfect for busy mornings",
 
-
       "fx.f4.t": "Restaurant menu scanner — eating out? We pick your best dish",
       "fx.f4.b": "Photograph the menu and get the dish that best fits your remaining calories and goal.",
       "fx.f4.c1": "Estimated calories per dish",
@@ -339,206 +421,6 @@
       "fx.cta.sub": "Download Fotocal on Google Play and see every feature in action. The first 5 days of Premium are on us.",
 
       /* ─────────────────────────────────────────────
-         SUBSCRIPTION
-         ───────────────────────────────────────────── */
-      "sub.meta.title": "Subscription & pricing — Fotocal",
-      "sub.kicker": "Subscription",
-      "sub.title": "Everything Fotocal can do, <em class=\"accent\">unlocked</em>.",
-      "sub.lead": "Fotocal is free to download and free to use every day. Premium removes the daily limits on AI photo scans and voice logging, and switches on the deeper nutrition detail, the personalised plan and the restaurant menu scanner.",
-      "sub.lead2": "Three lengths, one set of features. The longer you commit, the less it costs per month. That is the whole pricing model — no tiers to decode, no add-ons.",
-      "sub.hero.cta": "Get Fotocal on Google Play",
-      "sub.hero.compare": "Compare free and Premium ↓",
-
-      /* Coach Kal is free — stated up front because it is the thing
-         people most expect to be paywalled. */
-      "sub.kal.h": "Coach Kal is free. For everyone, with no limit.",
-      "sub.kal.b": "Your AI nutrition coach is not a Premium feature and never has been. Ask Coach Kal as many questions as you like, on the free plan, forever. It is the part of Fotocal most likely to actually change how you eat, so putting it behind a paywall would be backwards.",
-
-      /* Plans */
-      "sub.plans.kicker": "The plans",
-      "sub.plans.title": "Pick a length. <em class=\"accent\">Same Premium</em> either way.",
-      "sub.plans.sub": "Every plan unlocks exactly the same features. The only difference is how long it runs and what that works out to per month.",
-
-      "sub.p.m.name": "Monthly",
-      "sub.p.m.per": "/month",
-      "sub.p.m.equiv": "Billed every month.",
-      "sub.p.m.note": "The flexible one. Good if you want to try Premium properly for a month without thinking further ahead than that.",
-      "sub.p.m.trial": "No free trial on this plan — billing starts straight away.",
-
-      "sub.p.y.name": "Yearly",
-      "sub.p.y.per": "/year",
-      "sub.p.y.equiv": "Works out at <b>about €2.92 a month</b>.",
-      "sub.p.y.note": "The cheapest way to use Fotocal, and the only plan with a free trial. Best if you already know you want to build the habit over a full year.",
-      "sub.p.y.trial": "Includes a 5-day free trial. Cancel before it ends and you are not charged.",
-      "sub.p.y.save": "Saves about 58% vs monthly",
-
-
-      "sub.p.cta": "Get it on Google Play",
-      "sub.p.ctaY": "Start the 5-day free trial",
-
-      /* The trial caveat, stated plainly rather than buried. */
-      "sub.trial.h": "The free trial is on the yearly plan only",
-      "sub.trial.b": "This is worth being clear about, because plenty of apps are not. The 5-day free trial comes with the yearly plan. The monthly plan does not have a trial — if you pick it, billing starts immediately.",
-      "sub.trial.b2": "If you want to try Premium at no cost, start the yearly plan and cancel inside the 5 days. You will not be charged. If you would rather not deal with a trial at all, the monthly plan is the simplest option.",
-
-      "sub.vat": "All prices are in euros and include Spanish VAT at 21%. What you see here is what you pay — there is nothing added at checkout.",
-
-      /* ── Subscription: price anchor, reassurance strip and the
-         secondary-unlock label. Added when the page was reviewed for
-         how it reads to someone deciding, not just for what it lists. ── */
-      "sub.anchor": "Premium is <b>€34.99 a year</b> — about <b>€2.92 a month</b> — or <b>€6.99</b> monthly. The free plan has no time limit and no card.",
-      "sub.as1t": "No lock-in",
-      "sub.as1b": "Cancel in two taps in Google Play. You keep Premium until the period you paid for runs out.",
-      "sub.as2t": "Your diary stays yours",
-      "sub.as2b": "Cancelling drops you to the free plan. Nothing you logged is deleted, hidden or held to ransom.",
-      "sub.as3t": "No card for the free plan",
-      "sub.as3b": "You can log every meal, every day, forever without ever entering payment details.",
-      "sub.mini.label": "Also switched on",
-      "sub.imgAdv": "Weekly trend lines above habit tiles, on a tablet beside a cup of tea",
-      "sub.imgPlans": "A phone showing a short list of suggestions, standing beside a salmon and quinoa plate",
-
-      /* Comparison table */
-      "sub.cmp.kicker": "Free vs Premium",
-      "sub.cmp.title": "What you get, <em class=\"accent\">line by line</em>.",
-      "sub.cmp.sub": "The free plan is a real product, not a demo — you can log every meal, every day, forever, without paying. Here is exactly where the line sits.",
-      "sub.cmp.caption": "Fotocal free plan compared with Fotocal Premium",
-      "sub.cmp.colFeature": "Feature",
-      "sub.cmp.colFree": "Free",
-      "sub.cmp.colPro": "Premium",
-      /* Screen-reader text for the ✓ / ✕ marks — the icon alone is
-         meaningless without it, and a table of bare icons is unreadable. */
-      "sub.cmp.yes": "Included",
-      "sub.cmp.no": "Not included",
-
-      "sub.cmp.r1": "AI food scans",
-      "sub.cmp.r1s": "Photograph a meal and get calories, macros and a quality score.",
-      "sub.cmp.r1free": "2 per day",
-      "sub.cmp.r1pro": "Unlimited",
-
-      "sub.cmp.r2": "Coach Kal",
-      "sub.cmp.r2s": "Your AI nutrition coach — free for everyone, on every plan.",
-      "sub.cmp.r2free": "Unlimited",
-      "sub.cmp.r2pro": "Unlimited",
-
-      "sub.cmp.r3": "Meal diary",
-      "sub.cmp.r3s": "Log breakfast, lunch, dinner and snacks against your targets.",
-
-      "sub.cmp.r4": "Weight & progress tracking",
-      "sub.cmp.r4s": "Log your weight and measurements and watch the trend.",
-
-      "sub.cmp.r5": "Water & steps",
-      "sub.cmp.r5s": "Daily hydration, plus steps via Health Connect.",
-
-
-      "sub.cmp.r7": "Advanced nutrition insights",
-      "sub.cmp.r7s": "The deeper read on your macros and patterns, beyond the daily totals.",
-
-      "sub.cmp.r8": "Weekly reports",
-      "sub.cmp.r8s": "A weekly pull-together of trends, wins and what slipped. Two cards inside it need Premium: the full nutrition table and the vitamins and minerals card.",
-      "sub.cmp.r8free": "Most of it",
-
-      "sub.cmp.r9": "Recommendations",
-      "sub.cmp.r9s": "Swap suggestions shaped around your goals and what you actually log.",
-
-      "sub.cmp.r10": "Sync",
-      "sub.cmp.r10s": "Your data kept in step and carried to a new phone.",
-      "sub.cmp.r12": "Voice logging",
-      "sub.cmp.r12s": "Say what you ate and it is logged.",
-      "sub.cmp.r12free": "1 per day",
-      "sub.cmp.r12pro": "Unlimited",
-      "sub.cmp.r13": "Restaurant menu scanner",
-      "sub.cmp.r13s": "Photograph the menu and get the dish that fits your day.",
-      "sub.u7.t": "Restaurant menu scanner",
-      "sub.u7.li1": "Eating out? The dish that fits the calories you have left",
-      "sub.imgMenu": "Illustration: at a restaurant, a phone scans the menu and highlights the best dish",
-      "sub.u8.t": "Unlimited voice logging",
-      "sub.u8.li1": "The free plan's one voice log a day becomes as many as you like",
-      "sub.imgVoice": "Illustration: a woman speaks into her phone and the meal appears as text",
-
-
-      /* Premium storytelling rows */
-      "sub.unl.kicker": "What Premium unlocks",
-      "sub.unl.title": "Six things that <em class=\"accent\">switch on</em>.",
-      "sub.unl.sub": "Not a longer list of the same thing — these are the parts of Fotocal that need Premium, and what each one actually does for you.",
-
-      "sub.u1.pill": "The main one",
-      "sub.u1.t": "Unlimited AI food scans",
-      "sub.u1.b": "The free plan gives you 2 AI photo scans a day. It is genuinely enough to try Fotocal properly. What it does not cover is the day with a snack, a coffee, something at a friend's place and dinner out — and that is exactly the day you most want logged, because it is the one you would never reconstruct accurately from memory.",
-      "sub.u1.b2": "Premium removes the counter. Scan eleven times in a day if that is what your day looked like. The point of photo logging is that it is cheap enough to do every single time, and a daily limit quietly works against that.",
-      "sub.u1.li1": "No daily cap — scan as often as you eat",
-      "sub.u1.li2": "The messy days get logged too, not just the tidy ones",
-      "sub.u1.li3": "Same scanner, same speed, just no counter",
-      "sub.u1.slot": "Scan screen — unlimited scanning",
-
-      "sub.u2.pill": "Deeper analysis",
-      "sub.u2.t": "Advanced nutrition insights",
-      "sub.u2.b": "Daily totals tell you whether you hit your calories. They do not tell you that your protein is consistently low on the days you eat out, or that your week falls apart on Thursdays rather than at the weekend like you assumed. Advanced insights look across your logged data for the patterns underneath the numbers.",
-      "sub.u2.b2": "This is the part that turns tracking into understanding. Anyone can see a number. Knowing which of your habits is actually driving it is the useful bit — and that only becomes visible with enough logged days to look across.",
-      "sub.u2.li1": "Patterns across your macros, not just daily totals",
-      "sub.u2.li2": "Where your week reliably goes off track",
-      "sub.u2.li3": "Built from your own logged data, not averages of other people",
-      "sub.u2.slot": "Advanced insights — nutrition breakdown",
-
-      "sub.u3.pill": "Every week",
-      "sub.u3.t": "The full weekly nutrition detail",
-      "sub.u3.b": "A single day is noise. One big dinner is not a trend, and one perfect Tuesday is not progress. The weekly report is where a week's worth of logging gets pulled together, and you get it on the free plan: how your calories and macros landed, which habits held, where things slipped, and one or two specific things worth changing next week.",
-      "sub.u3.b2": "Premium adds the two deepest cards in it: the full nutrition table for the week and the vitamins and minerals card. It is deliberately not a scoreboard either way. There is no grade and nothing to fail.",
-      "sub.u3.li1": "The report itself is free, every week",
-      "sub.u3.li2": "Premium opens the full nutrition table for the week",
-      "sub.u3.li3": "And the vitamins and minerals across those days",
-      "sub.u3.slot": "Weekly report — the week's trends",
-
-      "sub.u4.pill": "Made for you",
-      "sub.u4.t": "Personalised plans",
-      "sub.u4.b": "The recommendations tab itself is free and unlimited on every plan. What Premium adds is the planning around it: targets and suggestions shaped by your goals, your logged meals and how the week is actually going, rather than a list of rules you were meant to memorise on day one.",
-      "sub.u4.b2": "They adapt as you do. Change your goal, change what you eat, or have a genuinely bad fortnight, and what Fotocal suggests moves with you instead of repeating the same advice at you.",
-      "sub.u4.li1": "Built around your goals and your real logged data",
-      "sub.u4.li2": "Adapts as your goals and habits change",
-      "sub.u4.li3": "Suggestions when they are relevant, not a rulebook",
-      "sub.u4.slot": "Personalised plan & recommendations",
-
-
-
-      /* Billing */
-      "sub.bill.kicker": "Billing & cancelling",
-      "sub.bill.title": "Handled by <em class=\"accent\">Google Play</em>.",
-      "sub.bill.p1": "Fotocal is an Android app, so every subscription is bought, billed and cancelled through Google Play. We never see or store your card details — Google handles the payment side entirely.",
-      "sub.bill.p2": "That has a practical upside: whatever you need to do with your subscription, you do it in one place you already have on your phone, and it works the same way as every other subscription you have there.",
-      "sub.bill.h3": "How to cancel",
-      "sub.bill.s1": "Open the <b>Play Store</b> app on your phone.",
-      "sub.bill.s2": "Tap your <b>profile icon</b> in the top right.",
-      "sub.bill.s3": "Go to <b>Payments and subscriptions → Subscriptions</b>.",
-      "sub.bill.s4": "Select <b>Fotocal</b> and tap <b>Cancel subscription</b>.",
-      "sub.bill.after": "You keep Premium until the end of the period you have already paid for — cancelling does not cut you off on the spot. After that you drop back to the free plan, and your logged data stays exactly where it is.",
-      "sub.bill.renew.h": "It renews automatically",
-      "sub.bill.renew.b": "Every plan renews on its own until you cancel — that is how Google Play subscriptions work. You can cancel at any time, and if you are on the yearly trial, cancelling within the 5 days means you are not charged at all.",
-      "sub.bill.refund.h": "Refunds",
-      "sub.bill.refund.b": "Refunds are handled under Google Play's own refund policy, since Google is the seller. If something has gone wrong with a charge, email us and we will help you sort it out — but the refund itself goes through Google Play.",
-
-      /* FAQ */
-      "sub.faq.kicker": "FAQ",
-      "sub.faq.title": "Subscription <em class=\"accent\">questions</em>",
-      "sub.faq.q1": "Can I use Fotocal without paying?",
-      "sub.faq.a1": "Yes, indefinitely. The free plan gives you 2 AI photo scans and 1 voice log a day, unlimited barcode scans, unlimited Coach Kal, the meal diary, weight and progress tracking, water and steps. Plenty of people will never need more than that. Premium is for when the daily limits start getting in your way or you want the weekly reports, the menu scanner and deeper insights.",
-      "sub.faq.q2": "Which plans have a free trial?",
-      "sub.faq.a2": "Only the yearly plan. It comes with a 5-day free trial, and if you cancel before the 5 days are up you are not charged. The monthly plan starts billing immediately.",
-      "sub.faq.q3": "Do both plans unlock the same things?",
-      "sub.faq.a3": "Yes. There is one Premium and both plans unlock all of it. The only thing you are choosing is how long it runs and what it works out to per month.",
-      "sub.faq.q4": "Is Coach Kal really free?",
-      "sub.faq.a4": "Really. Coach Kal is unlimited on the free plan and always has been. It is not a trial, not a teaser, and there is no message cap.",
-      "sub.faq.q5": "Do the prices include tax?",
-      "sub.faq.a5": "Yes. Prices are in euros and include Spanish VAT at 21%. Nothing is added on top at checkout.",
-      "sub.faq.q6": "What happens to my data if I cancel?",
-      "sub.faq.a6": "It stays. You drop back to the free plan and keep your diary, your weight history and everything else you have logged — you just go back to 2 AI scans and 1 voice log a day. Nothing is deleted because you stopped paying.",
-      "sub.faq.q7": "Can I switch plans?",
-      "sub.faq.a7": "Yes, through Google Play, in the same Subscriptions screen where you cancel. Google handles the proration when you change.",
-      "sub.faq.q8": "How do I cancel?",
-      "sub.faq.a8": "In the Play Store app: your profile icon → Payments and subscriptions → Subscriptions → Fotocal → Cancel subscription. You keep Premium until the period you have paid for runs out.",
-
-      "sub.cta.title": "Start free. <em class=\"accent-light\">Upgrade if it earns it</em>.",
-      "sub.cta.sub": "Download Fotocal, use it free for as long as you like, and go Premium only when the daily scan limit is the thing standing in your way.",
-
-      /* ─────────────────────────────────────────────
          BLOG
          ───────────────────────────────────────────── */
       "blog.meta.title": "Blog — Fotocal",
@@ -581,7 +463,6 @@
       "blog.demo.b": "And this is the summary line — two or three sentences explaining what the post covers, so you can tell from the card whether it is worth your time. The real thing will have a real title, a real date and a real link.",
       "blog.demo.meta": "Date goes here",
       "blog.demo.read": "5 min read",
-
 
       /* ─────────────────────────────────────────────
          ABOUT
@@ -1274,7 +1155,6 @@
       "ai.noteImg": "../assets/img/screens/ai-note-es.webp",
       "ai.noteAlt": "Pantalla real de la app: el final de una respuesta de Coach Kal, con la l\u00ednea que la propia app pone debajo \u2014 contenido generado por IA, puede haber errores",
 
-
       /* ─────────────────────────────────────────────
          PÁGINAS DE SECCIÓN + FORMULARIO DE CONTACTO
          ───────────────────────────────────────────── */
@@ -1303,25 +1183,109 @@
       "cf.messageErr": "Escribe un poco más para que podamos ayudarte.",
       "cf.send": "Enviar mensaje",
       "cf.privacy": "Usamos lo que nos envías solo para responderte. Nada más.",
-
-      /* ── Suscripción: texto alternativo de las imágenes ── */
-      "sub.img1": "Una mujer en una mesa soleada revisando un anillo de macros en el móvil junto a un bol de cereales y verduras frescas",
-      "sub.img2": "Alguien fotografía un bol de ensalada lleno de color con su móvil",
-      "sub.img3": "Un móvil proyecta bocadillos de chat con iconos de comida, agua y actividad",
-      "sub.img4": "Unas manos sostienen un móvil con anillos de calorías y gráficas semanales",
-      "sub.img5": "Una mesa color crema llena de comida sana, fresca y colorida",
-
-      /* ── Suscripción: cronología de la prueba de 5 días ── */
-      "sub.trial.head": "Cómo funciona la <em class=\"accent\">prueba de 5 días</em>.",
-      "sub.tl.d1": "Día 0",
-      "sub.tl.t1": "Empieza sin pagar",
-      "sub.tl.b1": "Activa el plan anual desde Google Play. Premium se enciende al momento y no se te cobra nada.",
-      "sub.tl.d2": "Días 1–4",
-      "sub.tl.t2": "Úsalo todo",
-      "sub.tl.b2": "Escaneos ilimitados, voz ilimitada, el escáner de cartas y todos los nutrientes: todo, sin ninguna función reservada.",
-      "sub.tl.d3": "Día 5",
-      "sub.tl.t3": "Sigue o cancela",
-      "sub.tl.b3": "Cancela en cualquier momento antes del día 5 y no pagas absolutamente nada. Si no haces nada, el plan anual simplemente empieza.",
+      /* ── Página de suscripción ── */
+      "sub.img": "../assets/img/screens/nd-day-es.webp",
+      "sub.imgAlt": "Pantalla real de la app: la vista Dieta de la pestaña Progreso en el plan gratis, con las calorías y los macros del día en un anillo y el gasto energético estimado debajo",
+      "sub.freeImg": "../assets/img/screens/coach-chat-es.webp",
+      "sub.freeAlt": "Pantalla real de la app: una conversación con Coach Kal, que es gratis en todos los planes y sin límite de mensajes",
+      "sub.premImg": "../assets/img/screens/sf-analysis-es.webp",
+      "sub.premAlt": "Pantalla real de la app, Premium: las secciones de análisis de un escaneo: análisis nutricional, impacto en la salud y recomendaciones",
+      "sub.premFig": "Premium: las secciones de análisis del resultado de un escaneo.",
+      "sub.t01": "Precios",
+      "sub.t02": "Dos precios, un solo Premium y un plan gratis <em class=\"accent\">que no es una demo</em>.",
+      "sub.t03": "Fotocal se usa gratis todos los días, sin tarjeta y sin fecha de caducidad. Premium cuesta 6,99 € al mes o 34,99 € al año, y lo que hace es quitar los límites diarios de escaneo y abrir los paneles más profundos. Todo lo que ves en esta página es lo que cobra Google Play, en euros e impuestos incluidos.",
+      "sub.t04": "Los dos planes ↓",
+      "sub.t05": "Los planes",
+      "sub.t06": "Lo que cuesta cada uno y qué pasa el día seis.",
+      "sub.t07": "Solo hay un Premium. El plan mensual y el anual desbloquean exactamente lo mismo y solo se diferencian en cómo lo pagas. El plan gratis es la app con dos límites diarios, y puedes quedarte en él para siempre.",
+      "sub.p1n": "Gratis",
+      "sub.p1a": "0 €",
+      "sub.p1p": "Sin tarjeta. Sin caducidad.",
+      "sub.p1l1": "2 escaneos por foto al día y 1 registro por voz al día",
+      "sub.p1l2": "Escáner de código de barras y Coach Kal sin límite",
+      "sub.p1l3": "El diario, el peso, el agua, los pasos, las notas y la pestaña Progreso",
+      "sub.p1b": "Nada caduca y nada te pide una tarjeta. La lista completa está más abajo.",
+      "sub.p2n": "Mensual",
+      "sub.p2a": "6,99 €",
+      "sub.p2p": "al mes",
+      "sub.p2l1": "Todo Premium, igual que el plan anual",
+      "sub.p2l2": "Se renueva cada mes hasta que lo canceles",
+      "sub.p2w1": "Este plan no tiene prueba gratis.",
+      "sub.p2w2": "Google Play cobra 6,99 € en el momento de suscribirte y después 6,99 € cada mes hasta que canceles. Si cancelas, conservas Premium hasta el final del mes que ya has pagado.",
+      "sub.pcta": "Descarga la app en Google Play",
+      "sub.pfine": "La suscripción se hace desde dentro de la app.",
+      "sub.p3n": "Anual",
+      "sub.p3a": "34,99 €",
+      "sub.p3p": "al año",
+      "sub.p3e": "Son 2,92 € al mes, un 58 % menos que pagando mes a mes.",
+      "sub.p3l1": "Todo Premium, igual que el plan mensual",
+      "sub.p3l2": "El único plan con los 5 días de prueba gratis",
+      "sub.p3w": "Los cinco días, uno a uno",
+      "sub.p3d1": "Día 1",
+      "sub.p3t1": "Premium se activa. No se cobra nada.",
+      "sub.p3d2": "Días 1–5",
+      "sub.p3t2": "Cancela cuando quieras. Conservas Premium hasta que termine la prueba y no pagas nada.",
+      "sub.p3d3": "Día 6",
+      "sub.p3t3": "Si no has cancelado, Google Play cobra 34,99 € por el año, y 34,99 € cada año a partir de entonces hasta que canceles.",
+      "sub.p3c": "Para cancelar: app Play Store → tu icono de perfil → <b>Pagos y suscripciones</b> → <b>Suscripciones</b> → Fotocal → <b>Cancelar suscripción</b>. Entre dos y tres días antes del cobro la app te envía un único recordatorio con la fecha y el importe.",
+      "sub.pfine2": "La prueba se inicia desde dentro de la app, solo en el plan anual.",
+      "sub.f1": "Los dos planes de pago se renuevan solos hasta que los cancelas. Así funciona cualquier suscripción de Google Play.",
+      "sub.f2": "Los precios están en euros e incluyen el IVA español del 21 %. Google Play muestra el importe exacto para tu país antes de confirmar, y después no se añade nada.",
+      "sub.f3": "Fotocal es una app para Android. Google Play gestiona el cobro; nosotros nunca vemos tu tarjeta.",
+      "sub.t08": "El plan gratis",
+      "sub.t09": "Lo que incluye de verdad el plan gratis, con los límites dichos.",
+      "sub.t10": "Esta lista sale del código de la propia app, no de nuestro marketing. Donde hay un límite, se dice el límite. Donde no lo hay, también se dice.",
+      "sub.fr1": "<b>Escaneos por foto: 2 al día.</b> Cada escaneo da calorías, macros, una puntuación de salud y dos barras de micronutrientes.",
+      "sub.fr2": "<b>Registro por voz: 1 al día.</b>",
+      "sub.fr3": "<b>Escáner de código de barras: sin límite.</b> Con alternativas más saludables al producto que has escaneado.",
+      "sub.fr4": "<b>Coach Kal: sin límite.</b> Sin tope de mensajes, sin prueba, en todos los planes.",
+      "sub.fr5": "<b>El informe semanal se abre gratis.</b> La gráfica de calorías y el resumen de hábitos son tuyos; dos tarjetas dentro de él son Premium.",
+      "sub.fr6": "<b>Todo lo que registras sigue siendo gratis:</b> el diario de comidas, el peso, el agua, los pasos con Health Connect, las notas de ánimo y hábitos, las recomendaciones de comidas y la pestaña Progreso con lo que has comido y lo que has gastado.",
+      "sub.fr7": "<b>Sincronización, y los dos idiomas.</b> Ningún plan tiene anuncios, porque la app no los tiene.",
+      "sub.t11": "Premium",
+      "sub.t12": "Se activan seis cosas. Nada más cambia.",
+      "sub.t13": "Premium no hace que la app se porte mejor ni le quita nada al plan gratis. Estos son los seis sitios donde el código comprueba si hay suscripción, y lo que abre cada uno.",
+      "sub.u1t": "Escaneos por foto sin contador diario.",
+      "sub.u1b": "Desaparece el límite de 2 al día. Escanea cada comida, cada día.",
+      "sub.u2t": "Registro por voz sin contador diario.",
+      "sub.u2b": "Desaparece el límite de 1 al día.",
+      "sub.u3t": "El escáner de cartas de restaurante.",
+      "sub.u3b": "Solo Premium, sin ningún uso gratis: fotografía la carta y te dice el plato que encaja con lo que te queda hoy.",
+      "sub.u4t": "El panel de nutrientes completo.",
+      "sub.u4b": "Todos los micronutrientes de un escaneo en vez de dos; las secciones de análisis nutricional, impacto en la salud y recomendaciones del resultado; las filas de nutrientes clave y vitaminas en el detalle de un alimento; la tarjeta de Nutrición Avanzada de la pantalla de inicio.",
+      "sub.u5t": "El resto de los informes.",
+      "sub.u5b": "Las dos tarjetas Premium del informe semanal (la tabla nutricional completa y las vitaminas y minerales), las tarjetas de detalle del resumen semanal y las seis tarjetas semanales de la vista Dieta de la pestaña Progreso.",
+      "sub.u6t": "Planificar mi día.",
+      "sub.u6b": "Un plan de comidas con IA para el día siguiente, hecho con tus objetivos y lo que has registrado.",
+      "sub.t14": "No están en la lista porque ya son gratis: Coach Kal, el escáner de código de barras, la puntuación de salud, la sincronización y una app sin anuncios.",
+      "sub.t15": "Cancelar, y después",
+      "sub.t16": "La suscripción la guarda Google Play. Esto es lo que hay que pulsar.",
+      "sub.t17": "Toda suscripción a Fotocal se compra, se cobra y se cancela a través de Google Play, en el mismo sitio que cualquier otra suscripción de tu móvil. Desinstalar la app no la cancela; estos cuatro toques sí.",
+      "sub.s1": "Abre la app de <b>Play Store</b> en tu móvil.",
+      "sub.s2": "Toca tu <b>icono de perfil</b> arriba a la derecha.",
+      "sub.s3": "Entra en <b>Pagos y suscripciones → Suscripciones</b>.",
+      "sub.s4": "Selecciona <b>Fotocal</b> y toca <b>Cancelar suscripción</b>.",
+      "sub.c1t": "Conservas lo que has pagado",
+      "sub.c1b": "Cancelar no te corta el acceso. Premium sigue hasta el final del mes o del año que ya has pagado, y después pasas al plan gratis. Si cancelas durante la prueba, no pagas nada.",
+      "sub.c2t": "Tu diario se queda",
+      "sub.c2b": "Nada de lo que has registrado se borra, se esconde ni se retiene cuando dejas de pagar. Vuelves a 2 escaneos por foto y 1 registro por voz al día, y todo lo demás sigue igual.",
+      "sub.c3t": "Los reembolsos van por Google",
+      "sub.c3b": "Google Play es el vendedor, así que los reembolsos siguen su política de reembolsos y se le piden a Google. Si un cobro no te cuadra, <a href=\"../contact/\">escríbenos</a> y te ayudamos a llegar hasta allí.",
+      "sub.faqTitle": "Preguntas sobre el pago",
+      "sub.fq1": "¿Puedo usar Fotocal sin pagar nunca?",
+      "sub.fa1": "Sí, todo el tiempo que quieras. El plan gratis son 2 escaneos por foto y 1 registro por voz al día, escaneos de código de barras sin límite, Coach Kal sin límite, el diario, el peso, el agua, los pasos, las notas, la pestaña Progreso y las tarjetas gratis del informe semanal. No caduca nunca y nunca te pide una tarjeta.",
+      "sub.fq2": "¿Qué plan tiene la prueba gratis?",
+      "sub.fa2": "Solo el plan anual. Empieza con 5 días de Premium sin cobro. El plan mensual no tiene prueba y cobra 6,99 € en el momento de suscribirte.",
+      "sub.fq3": "¿Qué pasa exactamente el día seis?",
+      "sub.fa3": "Si no has cancelado, Google Play cobra 34,99 € y empieza el plan anual. Si has cancelado en cualquier momento de los cinco días, no se cobra nada y conservas Premium hasta que termine la prueba. Entre dos y tres días antes del cobro la app envía un único recordatorio con la fecha y el importe, salvo que hayas apagado ese recordatorio en Ajustes.",
+      "sub.fq4": "¿Los dos planes desbloquean lo mismo?",
+      "sub.fa4": "Sí. Solo hay un Premium. Las únicas diferencias son el precio, cada cuánto se renueva y cuál lleva la prueba.",
+      "sub.fq5": "¿Puedo cambiar de mensual a anual, o al revés?",
+      "sub.fa5": "Cancela el plan que tienes en Google Play, deja que termine lo que has pagado y después suscríbete al otro desde dentro de la app. Nunca se te cobran los dos a la vez.",
+      "sub.fq6": "¿Los precios son iguales en todas partes?",
+      "sub.fa6": "Los precios de aquí son los precios de lista en euros, IVA incluido. Google Play puede mostrar otro importe en otro país u otra moneda, y el importe que muestra antes de confirmar es el que pagas.",
+      "sub.t18": "Empieza gratis. Paga solo si los límites diarios se te quedan cortos.",
+      "sub.t19": "Fotocal es gratis de descargar y gratis de seguir usando. Los 5 días de prueba están ahí para cuando quieras ver el resto.",
 
       /* ─────────────────────────────────────────────
          BLOG (/blog/ + artículos)
@@ -1406,7 +1370,6 @@
       "fx.f3.c1": "Lenguaje natural, ES e EN",
       "fx.f3.c2": "Perfecto para mañanas con prisa",
 
-
       "fx.f4.t": "Escáner de cartas — ¿comes fuera? Elegimos tu mejor plato",
       "fx.f4.b": "Fotografía la carta y obtén el plato que mejor encaja con tus calorías restantes y tu objetivo.",
       "fx.f4.c1": "Calorías estimadas por plato",
@@ -1479,196 +1442,6 @@
       "fx.cta.sub": "Descarga Fotocal en Google Play y ve cada función en acción. Los primeros 5 días de Premium corren de nuestra cuenta.",
 
       /* ─────────────────────────────────────────────
-         SUSCRIPCIÓN
-         ───────────────────────────────────────────── */
-      "sub.meta.title": "Suscripción y precios — Fotocal",
-      "sub.kicker": "Suscripción",
-      "sub.title": "Todo lo que Fotocal sabe hacer, <em class=\"accent\">desbloqueado</em>.",
-      "sub.lead": "Fotocal se descarga gratis y se usa gratis todos los días. Premium quita los límites diarios de escaneos con IA y de registro por voz, y enciende el detalle nutricional profundo, el plan personalizado y el escáner de cartas.",
-      "sub.lead2": "Tres duraciones, un mismo conjunto de funciones. Cuanto más largo el plan, menos cuesta al mes. Ese es todo el modelo de precios: sin niveles que descifrar, sin extras.",
-      "sub.hero.cta": "Descargar en Google Play",
-      "sub.hero.compare": "Comparar gratis y Premium ↓",
-
-      "sub.kal.h": "Coach Kal es gratis. Para todos y sin límite.",
-      "sub.kal.b": "Tu entrenador nutricional con IA no es una función Premium y nunca lo ha sido. Pregúntale a Coach Kal todo lo que quieras, en el plan gratuito, para siempre. Es la parte de Fotocal que más probablemente cambie cómo comes, así que ponerla detrás de un muro de pago sería hacerlo al revés.",
-
-      "sub.plans.kicker": "Los planes",
-      "sub.plans.title": "Elige duración. <em class=\"accent\">El mismo Premium</em> en todas.",
-      "sub.plans.sub": "Todos los planes desbloquean exactamente las mismas funciones. La única diferencia es cuánto duran y a cuánto salen al mes.",
-
-      "sub.p.m.name": "Mensual",
-      "sub.p.m.per": "/mes",
-      "sub.p.m.equiv": "Se cobra cada mes.",
-      "sub.p.m.note": "El flexible. Va bien si quieres probar Premium a fondo durante un mes sin pensar más allá de eso.",
-      "sub.p.m.trial": "Este plan no tiene prueba gratis: el cobro empieza directamente.",
-
-      "sub.p.y.name": "Anual",
-      "sub.p.y.per": "/año",
-      "sub.p.y.equiv": "Sale a <b>unos 2,92 € al mes</b>.",
-      "sub.p.y.note": "La forma más barata de usar Fotocal y el único plan con prueba gratis. Ideal si ya sabes que quieres construir el hábito durante todo un año.",
-      "sub.p.y.trial": "Incluye 5 días de prueba gratis. Si cancelas antes de que terminen, no se te cobra nada.",
-      "sub.p.y.save": "Ahorras un 58% aprox. frente al mensual",
-
-
-      "sub.p.cta": "Descargar en Google Play",
-      "sub.p.ctaY": "Empezar los 5 días gratis",
-
-      "sub.trial.h": "La prueba gratis es solo del plan anual",
-      "sub.trial.b": "Merece la pena dejarlo claro, porque muchas apps no lo hacen. Los 5 días de prueba gratis vienen con el plan anual. El plan mensual no tiene prueba: si lo eliges, el cobro empieza de inmediato.",
-      "sub.trial.b2": "Si quieres probar Premium sin coste, empieza el plan anual y cancela dentro de los 5 días. No se te cobrará nada. Y si prefieres no lidiar con una prueba, el plan mensual es la opción más sencilla.",
-
-      "sub.vat": "Todos los precios están en euros e incluyen el IVA español del 21%. Lo que ves aquí es lo que pagas: no se añade nada al finalizar la compra.",
-
-      /* ── Subscription: price anchor, reassurance strip and the
-         secondary-unlock label. Added when the page was reviewed for
-         how it reads to someone deciding, not just for what it lists. ── */
-      "sub.anchor": "Premium cuesta <b>34,99 € al año</b> — unos <b>2,92 € al mes</b> — o <b>6,99 €</b> al mes suelto. El plan gratuito no caduca y no pide tarjeta.",
-      "sub.as1t": "Sin permanencia",
-      "sub.as1b": "Se cancela con dos toques en Google Play. Conservas Premium hasta que termine el periodo que ya has pagado.",
-      "sub.as2t": "Tu diario sigue siendo tuyo",
-      "sub.as2b": "Al cancelar vuelves al plan gratuito. Nada de lo que has registrado se borra, se oculta ni se retiene.",
-      "sub.as3t": "El plan gratuito no pide tarjeta",
-      "sub.as3b": "Puedes registrar cada comida, cada día, para siempre, sin introducir jamás datos de pago.",
-      "sub.mini.label": "También se activa",
-      "sub.imgAdv": "Líneas de tendencia semanales sobre tarjetas de hábitos, en una tableta junto a una taza de té",
-      "sub.imgPlans": "Un móvil con una lista breve de sugerencias, apoyado junto a un plato de salmón con quinoa",
-
-      "sub.cmp.kicker": "Gratis vs Premium",
-      "sub.cmp.title": "Qué incluye cada uno, <em class=\"accent\">línea por línea</em>.",
-      "sub.cmp.sub": "El plan gratuito es un producto de verdad, no una demo: puedes registrar todas tus comidas, todos los días, para siempre, sin pagar. Aquí está exactamente dónde está la línea.",
-      "sub.cmp.caption": "Plan gratuito de Fotocal comparado con Fotocal Premium",
-      "sub.cmp.colFeature": "Función",
-      "sub.cmp.colFree": "Gratis",
-      "sub.cmp.colPro": "Premium",
-      "sub.cmp.yes": "Incluido",
-      "sub.cmp.no": "No incluido",
-
-      "sub.cmp.r1": "Escaneos de comida con IA",
-      "sub.cmp.r1s": "Fotografía una comida y obtén calorías, macros y una puntuación de calidad.",
-      "sub.cmp.r1free": "2 al día",
-      "sub.cmp.r1pro": "Ilimitados",
-
-      "sub.cmp.r2": "Coach Kal",
-      "sub.cmp.r2s": "Tu entrenador nutricional con IA: gratis para todos, en todos los planes.",
-      "sub.cmp.r2free": "Ilimitado",
-      "sub.cmp.r2pro": "Ilimitado",
-
-      "sub.cmp.r3": "Diario de comidas",
-      "sub.cmp.r3s": "Registra desayuno, comida, cena y snacks frente a tus objetivos.",
-
-      "sub.cmp.r4": "Peso y progreso",
-      "sub.cmp.r4s": "Registra tu peso y tus medidas y observa la tendencia.",
-
-      "sub.cmp.r5": "Agua y pasos",
-      "sub.cmp.r5s": "Hidratación diaria y pasos a través de Health Connect.",
-
-
-      "sub.cmp.r7": "Análisis nutricional avanzado",
-      "sub.cmp.r7s": "La lectura profunda de tus macros y tus patrones, más allá de los totales del día.",
-
-      "sub.cmp.r8": "Informes semanales",
-      "sub.cmp.r8s": "Un resumen semanal de tendencias, aciertos y lo que se torció. Dos tarjetas de dentro necesitan Premium: la tabla nutricional completa y la de vitaminas y minerales.",
-      "sub.cmp.r8free": "Casi todo",
-
-      "sub.cmp.r9": "Recomendaciones",
-      "sub.cmp.r9s": "Sugerencias de alternativas según tus objetivos y lo que registras de verdad.",
-
-      "sub.cmp.r10": "Sincronización",
-      "sub.cmp.r10s": "Tus datos al día y trasladados a un móvil nuevo.",
-      "sub.cmp.r12": "Registro por voz",
-      "sub.cmp.r12s": "Di lo que comiste y queda registrado.",
-      "sub.cmp.r12free": "1 al día",
-      "sub.cmp.r12pro": "Ilimitado",
-      "sub.cmp.r13": "Escáner de cartas",
-      "sub.cmp.r13s": "Fotografía la carta y te decimos el plato que encaja en tu día.",
-      "sub.u7.t": "Escáner de cartas",
-      "sub.u7.li1": "¿Comes fuera? El plato que encaja en las calorías que te quedan",
-      "sub.imgMenu": "Ilustración: en un restaurante, un móvil escanea la carta y resalta el mejor plato",
-      "sub.u8.t": "Registro por voz ilimitado",
-      "sub.u8.li1": "El registro por voz diario del plan gratuito pasa a ser ilimitado",
-      "sub.imgVoice": "Ilustración: una mujer habla a su móvil y la comida aparece como texto",
-
-
-      "sub.unl.kicker": "Qué desbloquea Premium",
-      "sub.unl.title": "Seis cosas que <em class=\"accent\">se encienden</em>.",
-      "sub.unl.sub": "No es una lista más larga de lo mismo: estas son las partes de Fotocal que necesitan Premium, y lo que hace cada una por ti.",
-
-      "sub.u1.pill": "La principal",
-      "sub.u1.t": "Escaneos de comida con IA ilimitados",
-      "sub.u1.b": "El plan gratuito te da 2 escaneos con IA al día. Es de verdad suficiente para probar Fotocal como toca. Lo que no cubre es el día con un snack, un café, algo en casa de un amigo y cena fuera. Y justo ese es el día que más te interesa registrar, porque es el que nunca reconstruirías bien de memoria.",
-      "sub.u1.b2": "Premium quita el contador. Escanea once veces en un día si tu día fue así. La gracia de registrar con fotos es que sale tan barato que lo haces siempre, y un límite diario juega en contra de eso sin hacer ruido.",
-      "sub.u1.li1": "Sin tope diario: escanea tantas veces como comas",
-      "sub.u1.li2": "Los días caóticos también se registran, no solo los ordenados",
-      "sub.u1.li3": "El mismo escáner, la misma velocidad, sin contador",
-      "sub.u1.slot": "Pantalla de escaneo — escaneos ilimitados",
-
-      "sub.u2.pill": "Análisis profundo",
-      "sub.u2.t": "Análisis nutricional avanzado",
-      "sub.u2.b": "Los totales del día te dicen si has llegado a tus calorías. No te dicen que tu proteína está siempre baja los días que comes fuera, ni que tu semana se rompe los jueves y no el fin de semana como tú creías. El análisis avanzado busca en tus datos registrados los patrones que hay debajo de los números.",
-      "sub.u2.b2": "Esta es la parte que convierte el registro en comprensión. Un número lo ve cualquiera. Lo útil es saber cuál de tus hábitos lo está provocando, y eso solo se ve cuando hay suficientes días registrados como para mirar el conjunto.",
-      "sub.u2.li1": "Patrones en tus macros, no solo totales diarios",
-      "sub.u2.li2": "Dónde se te tuerce la semana de forma sistemática",
-      "sub.u2.li3": "Construido con tus datos, no con la media de otras personas",
-      "sub.u2.slot": "Análisis avanzado — desglose nutricional",
-
-      "sub.u3.pill": "Cada semana",
-      "sub.u3.t": "El detalle nutricional completo de la semana",
-      "sub.u3.b": "Un día suelto es ruido. Una cena copiosa no es una tendencia, y un martes perfecto no es progreso. El informe semanal es donde una semana de registro se junta, y lo tienes en el plan gratuito: cómo quedaron tus calorías y macros, qué hábitos aguantaron, dónde se torció la cosa y una o dos cosas concretas que cambiar la semana que viene.",
-      "sub.u3.b2": "Premium añade las dos tarjetas más profundas: la tabla nutricional completa de la semana y la de vitaminas y minerales. A propósito no es un marcador, en ninguno de los dos casos. No hay nota ni hay nada que suspender.",
-      "sub.u3.li1": "El informe en sí es gratis, cada semana",
-      "sub.u3.li2": "Premium abre la tabla nutricional completa de la semana",
-      "sub.u3.li3": "Y las vitaminas y minerales de esos días",
-      "sub.u3.slot": "Informe semanal — las tendencias de la semana",
-
-      "sub.u4.pill": "Hecho para ti",
-      "sub.u4.t": "Planes personalizados",
-      "sub.u4.b": "La pestaña de recomendaciones en sí es gratis e ilimitada en todos los planes. Lo que añade Premium es la planificación alrededor: objetivos y sugerencias moldeados por tus metas, tus comidas registradas y cómo va la semana de verdad, en lugar de una lista de normas que tenías que memorizar el primer día.",
-      "sub.u4.b2": "Se adaptan según cambias tú. Cambia de objetivo, cambia lo que comes o ten quince días francamente malos: lo que Fotocal te sugiere se mueve contigo en vez de repetirte el mismo consejo.",
-      "sub.u4.li1": "Construidas sobre tus objetivos y tus datos reales",
-      "sub.u4.li2": "Se adaptan cuando cambian tus objetivos y hábitos",
-      "sub.u4.li3": "Sugerencias cuando vienen a cuento, no un reglamento",
-      "sub.u4.slot": "Plan y recomendaciones personalizadas",
-
-
-
-      "sub.bill.kicker": "Cobros y cancelación",
-      "sub.bill.title": "Lo gestiona <em class=\"accent\">Google Play</em>.",
-      "sub.bill.p1": "Fotocal es una app de Android, así que todas las suscripciones se compran, se cobran y se cancelan a través de Google Play. Nosotros nunca vemos ni guardamos los datos de tu tarjeta: del pago se encarga Google por completo.",
-      "sub.bill.p2": "Eso tiene una ventaja práctica: hagas lo que hagas con tu suscripción, lo haces en un único sitio que ya tienes en el móvil, y funciona igual que cualquier otra suscripción que tengas allí.",
-      "sub.bill.h3": "Cómo cancelar",
-      "sub.bill.s1": "Abre la app de <b>Play Store</b> en tu móvil.",
-      "sub.bill.s2": "Toca tu <b>icono de perfil</b> arriba a la derecha.",
-      "sub.bill.s3": "Entra en <b>Pagos y suscripciones → Suscripciones</b>.",
-      "sub.bill.s4": "Selecciona <b>Fotocal</b> y toca <b>Cancelar suscripción</b>.",
-      "sub.bill.after": "Mantienes Premium hasta el final del periodo que ya has pagado: cancelar no te corta en el acto. Después vuelves al plan gratuito, y tus datos registrados se quedan exactamente donde están.",
-      "sub.bill.renew.h": "Se renueva automáticamente",
-      "sub.bill.renew.b": "Todos los planes se renuevan solos hasta que canceles: así funcionan las suscripciones de Google Play. Puedes cancelar cuando quieras, y si estás en la prueba del plan anual, cancelar dentro de los 5 días significa que no se te cobra nada.",
-      "sub.bill.refund.h": "Reembolsos",
-      "sub.bill.refund.b": "Los reembolsos se gestionan según la propia política de Google Play, ya que Google es el vendedor. Si ha habido algún problema con un cobro, escríbenos y te ayudamos a resolverlo, pero el reembolso en sí pasa por Google Play.",
-
-      "sub.faq.kicker": "FAQ",
-      "sub.faq.title": "Preguntas sobre la <em class=\"accent\">suscripción</em>",
-      "sub.faq.q1": "¿Puedo usar Fotocal sin pagar?",
-      "sub.faq.a1": "Sí, indefinidamente. El plan gratuito te da 2 escaneos con IA y 1 registro por voz al día, escaneo de códigos de barras ilimitado, Coach Kal ilimitado, el diario de comidas, seguimiento de peso y progreso, agua y pasos. Mucha gente no necesitará nunca más que eso. Premium es para cuando los límites diarios empiecen a estorbarte o quieras los informes semanales, el escáner de cartas y el análisis profundo.",
-      "sub.faq.q2": "¿Qué planes tienen prueba gratis?",
-      "sub.faq.a2": "Solo el plan anual. Viene con 5 días de prueba gratis, y si cancelas antes de que terminen no se te cobra nada. El plan mensual empieza a cobrar de inmediato.",
-      "sub.faq.q3": "¿Los dos planes desbloquean lo mismo?",
-      "sub.faq.a3": "Sí. Hay un único Premium y los dos planes lo desbloquean entero. Lo único que eliges es cuánto dura y a cuánto sale al mes.",
-      "sub.faq.q4": "¿Coach Kal es gratis de verdad?",
-      "sub.faq.a4": "De verdad. Coach Kal es ilimitado en el plan gratuito y siempre lo ha sido. No es una prueba, no es un anzuelo y no hay tope de mensajes.",
-      "sub.faq.q5": "¿Los precios incluyen impuestos?",
-      "sub.faq.a5": "Sí. Los precios están en euros e incluyen el IVA español del 21%. No se añade nada al finalizar la compra.",
-      "sub.faq.q6": "¿Qué pasa con mis datos si cancelo?",
-      "sub.faq.a6": "Se quedan. Vuelves al plan gratuito y conservas tu diario, tu histórico de peso y todo lo que hayas registrado: simplemente vuelves a tener 2 escaneos con IA y 1 registro por voz al día. No se borra nada por dejar de pagar.",
-      "sub.faq.q7": "¿Puedo cambiar de plan?",
-      "sub.faq.a7": "Sí, desde Google Play, en la misma pantalla de Suscripciones donde se cancela. Google se encarga del prorrateo cuando cambias.",
-      "sub.faq.q8": "¿Cómo cancelo?",
-      "sub.faq.a8": "En la app de Play Store: tu icono de perfil → Pagos y suscripciones → Suscripciones → Fotocal → Cancelar suscripción. Mantienes Premium hasta que se agote el periodo que has pagado.",
-
-      "sub.cta.title": "Empieza gratis. <em class=\"accent-light\">Paga si se lo gana</em>.",
-      "sub.cta.sub": "Descarga Fotocal, úsalo gratis todo el tiempo que quieras y pasa a Premium solo cuando el límite diario de escaneos sea lo que te está estorbando.",
-
-      /* ─────────────────────────────────────────────
          BLOG
          ───────────────────────────────────────────── */
       "blog.meta.title": "Blog — Fotocal",
@@ -1711,7 +1484,6 @@
       "blog.demo.b": "Y esta es la línea de resumen: dos o tres frases explicando de qué va el artículo, para que puedas decidir desde la tarjeta si merece tu tiempo. El artículo de verdad tendrá un título real, una fecha real y un enlace real.",
       "blog.demo.meta": "Aquí irá la fecha",
       "blog.demo.read": "5 min de lectura",
-
 
       /* ─────────────────────────────────────────────
          SOBRE NOSOTROS

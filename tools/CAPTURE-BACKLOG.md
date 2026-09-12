@@ -55,10 +55,13 @@ composed from its own content and reads as finished, not as a hole.
     "Save 58%" pill, the Spanish one "Invitar". Cosmetic; swap only if
     a matching pair is easy.
 
-## Subscription page mini cards (menu scanner, unlimited voice)
-  Placeholder illustrations (feat-menu.webp, feat-voice.webp) until the
-  page is redone — the real menu and voice crops now exist in
-  assets/img/screens/ and can be reused there.
+## Subscription page — done 2026-09-12, no placeholders left
+  The page now uses nd-day, coach-chat and sf-analysis only. It has no
+  menu-scanner crop on purpose: the only menu capture (log-menu-es) has
+  English AI text inside the Spanish UI (APP-BUGS sitting-2 item 2). The
+  Google Play purchase sheet for each plan, ES+EN, would be the one
+  capture that shows the price exactly as the store charges it; the page
+  states the list prices from src/lib/pricing.ts instead.
 
 ## /ai/ social-share image
   og:image on /ai/ now points at the shared site card (assets/og-image.png)

@@ -63,6 +63,11 @@ composed from its own content and reads as finished, not as a hole.
   capture that shows the price exactly as the store charges it; the page
   states the list prices from src/lib/pricing.ts instead.
 
+## /about/ and /contact/ — done 2026-09-12, no captures by design
+  Neither page makes a claim about a screen, so neither carries one. The
+  five stock photographs they used (about-hero/band/diary/progress,
+  contact) are retired. Nothing to capture.
+
 ## /ai/ social-share image
   og:image on /ai/ now points at the shared site card (assets/og-image.png)
   and the retired coach-kal illustration is deleted. A purpose-built

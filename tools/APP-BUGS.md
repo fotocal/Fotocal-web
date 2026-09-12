@@ -82,6 +82,15 @@ say more than that, and Play reviews paywall claims.
     the one pressure element left after the fake strike-through price was
     removed (B11 fix 3), and it is worth a deliberate yes/no.
 
+## 0h · A NOTE TAG IS CALLED "CHEAT DAY" / "DÍA LIBRE"
+src/store/useNotesStore.ts:361 { key: 'cheatDay', emoji: '🍩' }; strings
+notes.tags.cheatDay = "Cheat Day" (en) / "Día Libre" (es). Same family as
+0e/0f: the site's stance (and the founder's) is that food is never a
+cheat, a treat, a reward or a punishment, and this is the one tag in the
+list that names it as one. The Spanish is already the neutral phrase;
+the English is not. Found while writing /about/, which therefore does not
+claim that the app never uses the word.
+
 ## 0a · THE WEEKLY REPORT'S GOAL CARD SAYS 100% DONE WITH 20 KG TO GO
 Observed 2026-09-11, tools/captures/s2/weekly-goal-en.jpg. The "Your goal"
 card reads:

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto — Fotocal</title>
   <meta name="description" content="Contacta con Fotocal: soporte, dudas sobre privacidad y datos, y consultas comerciales. Escribe un mensaje y llega directo al equipo.">
-  <meta name="keywords" content="Fotocal contact, Fotocal support, Fotocal email, calorie app help">
+  <meta name="keywords" content="contact Fotocal, Fotocal support, Fotocal email, Fotocal refund, delete Fotocal account">
   <link rel="canonical" href="https://getfotocal.com/contact/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/contact/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/contact/">
@@ -13,15 +13,6 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
 
-  <!-- HOW THE FORM WORKS
-       This is a static site on GitHub Pages, so there is no backend to post
-       to. The form submits to Web3Forms, which holds the destination inbox
-       server-side: only a public access key appears in this page, never an
-       address, so the support inbox cannot be scraped from the source.
-       Submission is AJAX, so the sender stays on the page and gets a real
-       confirmation rather than being bounced to a third-party thank-you. -->
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
   <meta property="og:title" content="Contacto — Fotocal">
@@ -35,20 +26,16 @@
   <meta name="twitter:description" content="Contacta con Fotocal: soporte, dudas sobre privacidad y datos, y consultas comerciales. Escribe un mensaje y llega directo al equipo.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
 
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png?v=3">
   <link rel="icon" href="../assets/favicon.ico?v=3" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
   <link rel="manifest" href="../site.webmanifest">
-
   <link rel="stylesheet" href="../assets/css/fonts.css?v=ffc748dc">
   <link rel="stylesheet" href="../assets/css/site.css?v=77d15311">
   <link rel="stylesheet" href="../assets/css/home.css?v=038d30a6">
-  <link rel="stylesheet" href="../assets/css/pages.css?v=0ed0fa48">
-  <link rel="stylesheet" href="../assets/css/sections.css?v=f8d2e418">
-
+  <link rel="stylesheet" href="../assets/css/features.css?v=006e63c5">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,10 +46,12 @@
     "@type": "Organization",
     "name": "Fotocal",
     "url": "https://getfotocal.com/",
+    "email": "fotocal.app@gmail.com",
     "contactPoint": [
       {
         "@type": "ContactPoint",
         "contactType": "customer support",
+        "email": "fotocal.app@gmail.com",
         "availableLanguage": [
           "en",
           "es"
@@ -73,244 +62,180 @@
   "inLanguage": "es"
 }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://getfotocal.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contacto",
+      "item": "https://getfotocal.com/contact/"
+    }
+  ],
+  "inLanguage": "es"
+}
+  </script>
 </head>
-<body>
+<body class="page-fx">
+<div id="site-nav"></div>
 
-  <div id="site-nav"></div>
+<main id="main">
 
-  <main id="main">
-
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="sp-hero">
-      <div class="container">
-        <div class="sp-hero-grid">
-          <div class="reveal">
-            <span class="kicker">Contacto</span>
-            <h1>Habla con <em class="accent">una persona de verdad</em>.</h1>
-            <p class="lead">Envíanos un mensaje y llega directo a las personas que hicieron la app. Sin número de ticket, sin chatbot y sin niveles de soporte que escalar.</p>
-            <p class="lead">Rellena el formulario de abajo: cuéntanos de qué se trata y nos encargamos.</p>
-            <div class="sp-hero-actions">
-              <a class="btn btn-cta" href="#message">Escribir un mensaje</a>
-            </div>
-          </div>
-          <div class="reveal" style="--rd:.1s">
-            <div class="illus">
-              <img src="../assets/img/pages/contact.webp" width="880" height="1100" fetchpriority="high" decoding="async"
-                   alt="Una mujer con una taza lee respuestas en su móvil en una habitación acogedora">
-            </div>
-          </div>
+  <!-- ═══════ HERO — dark, copy only ═══════ -->
+  <section class="hero-x sec-dark fx-hero">
+    <div class="container">
+      <div class="fx-hero-inner">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <span class="kicker reveal">Contacto</span>
+        <h1 class="hero-title reveal">Una bandeja de entrada, <em class="accent">una persona que la lee</em>.</h1>
+        <p class="hero-sub reveal">Escribe con el formulario de abajo o desde tu propia app de correo. Las respuestas suelen tardar un par de días, a veces más, porque todo lo responde una sola persona. No hay teléfono ni chat, y esta página no va a fingir lo contrario.</p>
+        <p class="ct-email reveal"><a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a></p>
+        <div class="reveal">
+          <a class="btn btn-cta btn-lg" href="#message">Escribir un mensaje</a>
+          <a class="sb-jump" href="#routes">A dónde va cada cosa ↓</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════ MESSAGE FORM ═══════════════════ -->
-    <section class="section" id="message">
-      <div class="container">
-        <div class="cf-grid" style="grid-template-columns:1fr;max-width:640px;margin-inline:auto">
-          <div class="reveal">
-            <span class="kicker">Envíanos un mensaje</span>
-            <h2 class="section-title">Cuéntanos qué pasa.</h2>
-            <p class="section-sub">Con dos campos nos vale. Deja tu correo si quieres respuesta: sin él podemos leer tu mensaje, pero no contestarte.</p>
-
-            <form class="cf-form" id="contactForm" novalidate>
-              <!-- Public access key. The destination inbox lives on Web3Forms,
-                   so it is never exposed in this document. -->
-              <input type="hidden" name="access_key" value="811b2c31-68e4-4141-8da2-781bd37d8762">
-              <input type="hidden" name="subject" value="New message from the Fotocal website">
-              <input type="hidden" name="from_name" value="Fotocal website">
-
-              <!-- Honeypot: hidden from people, irresistible to bots. -->
-              <div class="cf-hp" aria-hidden="true">
-                <label>Do not fill this in <input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
-              </div>
-
-              <div class="cf-field">
-                <label for="cfName">Tu nombre</label>
-                <input type="text" id="cfName" name="name" required minlength="2" maxlength="80"
-                       autocomplete="name" placeholder="¿Cómo te llamamos?">
-                <span class="cf-err">Dinos tu nombre, por favor.</span>
-              </div>
-
-              <div class="cf-field">
-                <label for="cfEmail">
-                  <span>Tu correo</span>
-                  <span class="opt">(opcional — necesario para responderte)</span>
-                </label>
-                <input type="email" id="cfEmail" name="email" maxlength="120"
-                       autocomplete="email" placeholder="tu@ejemplo.com">
-                <span class="cf-err">Ese correo no parece válido.</span>
-              </div>
-
-              <div class="cf-field">
-                <label for="cfMessage">Tu mensaje</label>
-                <textarea id="cfMessage" name="message" required minlength="10" maxlength="4000" placeholder="Qué ha pasado, qué esperabas y cualquier cosa que nos ayude a entenderlo."></textarea>
-                <span class="cf-err">Escribe un poco más para que podamos ayudarte.</span>
-              </div>
-
-              <button type="submit" class="btn btn-cta cf-submit" id="cfSubmit">Enviar mensaje</button>
-              <p class="cf-note">Usamos lo que nos envías solo para responderte. Nada más.</p>
-
-              <div class="cf-result cf-result-ok"  id="cfOk"  role="status" aria-live="polite"></div>
-              <div class="cf-result cf-result-bad" id="cfBad" role="alert"  aria-live="assertive"></div>
-            </form>
-          </div>
-
-        </div>
+  <!-- ═══════ WHERE THINGS GO — light ═══════ -->
+  <section class="section sec-light" id="routes">
+    <div class="container">
+      <header class="fx-chap">
+        <span class="kicker reveal">Antes de escribir</span>
+        <h2 class="section-title reveal">Las cuatro cosas por las que la gente escribe, y a dónde va cada una.</h2>
+        <p class="section-sub reveal">Dos de ellas se resuelven más rápido en otro sitio, y una no podemos hacerla en absoluto. Decirlo aquí te ahorra una semana.</p>
+      </header>
+      <div class="ct-routes">
+        <article class="ct-route reveal">
+          <h3>Eliminar tu cuenta</h3>
+          <p>Puedes hacerlo tú, en la app: Perfil → Ajustes de cuenta → Eliminar cuenta. Eso elimina tu cuenta y los datos con ella. No hace falta que nos escribas antes, aunque puedes.</p>
+          <a class="fx-link" href="../account-deletion/">La página de eliminación de cuenta →</a>
+        </article>
+        <article class="ct-route reveal" style="--rd:.06s">
+          <h3>Un reembolso, o un cobro que no esperabas</h3>
+          <p>Google Play es el vendedor, así que los reembolsos los concede Google y se piden desde tu historial de pedidos de Play, no a nosotros. No podemos emitir uno ni cancelar una suscripción por ti. Si Google ya te ha dicho que no y crees que se equivoca, escríbenos con el número de pedido y te ayudamos a defenderlo.</p>
+          <a class="fx-link" href="../subscription/#cancel">Cómo funciona la cancelación →</a>
+        </article>
+        <article class="ct-route reveal" style="--rd:.12s">
+          <h3>Un escaneo que se ha equivocado</h3>
+          <p>Primero, corrígelo en la app: cada escaneo se puede editar antes de guardarlo. Después, si tienes un minuto, envíanos la foto original y lo que dijo la app. Es la única forma de saber si el modelo leyó mal el alimento o la ración, y así es como mejoran las estimaciones.</p>
+          <a class="fx-link" href="#message">Envíalo con el formulario →</a>
+        </article>
+        <article class="ct-route reveal" style="--rd:.18s">
+          <h3>Un fallo</h3>
+          <p>La app tiene su propia pantalla de comentarios, en tu perfil, y adjunta los detalles técnicos por ti, así que es la mejor vía. Si prefieres el formulario, incluye el modelo de tu móvil, tu versión de Android, la pantalla en la que estabas y una captura. Esas cuatro cosas suelen decidir si se arregla en una respuesta o en tres.</p>
+          <a class="fx-link" href="#message">O usa el formulario →</a>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <!-- ═══════════════════ THREE ROUTES ═══════════════════ -->
-    <section class="section" id="routes">
-      <div class="container">
-        <div class="sec-head">
-          <span class="kicker reveal">¿De qué se trata?</span>
-          <h2 class="section-title reveal">Tres tipos de mensaje. <em class="accent">Un formulario</em>.</h2>
-          <p class="section-sub reveal">Los tres llegan a la misma bandeja. Decirnos cuál es solo nos ayuda a saber qué tenemos delante antes de abrirlo.</p>
-        </div>
-
-        <div class="contact-grid">
-
-          <!-- Support -->
-          <article class="card contact-card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 12a6.5 6.5 0 1 0-13 0v4.5a2 2 0 0 0 2 2h1v-6h-3"/><path d="M18.5 12v4.5a2 2 0 0 1-2 2h-1v-6h3"/></svg>
-            </div>
-            <h3>Soporte y ayuda</h3>
-            <p>Algo no funciona, un escaneo se comporta raro, te has atascado o tienes una duda sobre tu suscripción o un cobro. Esta es la vía para casi todo.</p>
-            <ul class="check-list">
-              <li>Errores y cierres inesperados</li>
-              <li>Escaneos, Coach Kal, sincronización</li>
-              <li>Suscripciones y cobros</li>
-            </ul>
-          </article>
-
-          <!-- Privacy -->
-          <article class="card contact-card reveal" style="--rd:.08s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <h3>Privacidad y tus datos</h3>
-            <p>Cualquier cosa sobre qué guardamos, cómo lo usamos o cómo borrarlo. Si quieres que tu cuenta y tus datos desaparezcan, la app lo hace en un par de toques, pero también puedes pedírnoslo sin más.</p>
-            <ul class="check-list">
-              <li>Acceso y eliminación de datos</li>
-              <li>Dudas sobre la Política de Privacidad</li>
-              <li>Cómo se trata tu información</li>
-            </ul>
-          </article>
-
-          <!-- Business -->
-          <article class="card contact-card reveal" style="--rd:.16s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            </div>
-            <h3>Negocio y prensa</h3>
-            <p>Colaboraciones, prensa o cualquier cosa comercial. Somos pequeños e independientes, así que esto lo leemos nosotros, y te diremos claramente si no encaja.</p>
-            <ul class="check-list">
-              <li>Colaboraciones y acuerdos</li>
-              <li>Prensa y medios</li>
-              <li>Cualquier asunto comercial</li>
-            </ul>
-          </article>
-        </div>
-
-        <!-- Honest expectation setting — a best effort, not an SLA. -->
-        <div class="container-narrow" style="padding:0;margin-top:2.5rem">
-          <div class="callout reveal">
-            <div class="callout-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            </div>
-            <div>
-              <h4>Cuándo tendrás respuesta</h4>
-              <p>Intentamos responder en unos pocos días. Fotocal lo lleva un equipo pequeño e independiente, así que esto es un compromiso sincero y no una garantía de servicio: preferimos decírtelo antes que prometer un plazo que quizá no cumplamos. Todos los correos se leen, y si alguno lleva más de una semana sin respuesta, vuelve a mandarlo sin más. Será un despiste, no una decisión.</p>
-            </div>
+  <!-- ═══════ THE FORM — light-2 ═══════ -->
+  <section class="section sec-light-2" id="message">
+    <div class="container">
+      <div class="ct-grid">
+        <div class="ct-aside reveal">
+          <span class="kicker">Envíanos un mensaje</span>
+          <h2 class="section-title">Cuéntanos qué pasa.</h2>
+          <p class="section-sub">Con dos campos nos vale. Deja tu correo si quieres respuesta: sin él podemos leer tu mensaje, pero no contestarte.</p>
+          <div class="ct-facts">
+            <p><b>O escribe desde tu propia app de correo:</b> <a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a>. Llega a la misma bandeja que el formulario.</p>
+            <p><b>Cuándo tendrás respuesta:</b> normalmente en un par de días, a veces más. Una sola persona lee y responde todos los mensajes. Si pasa una semana sin nada, vuelve a enviarlo: se ha perdido, no se ha ignorado.</p>
+            <p><b>Qué pasa con tu mensaje:</b> el formulario lo entrega Web3Forms, un servicio de formularios, en nuestra bandeja. Usamos lo que nos envías solo para responderte, y la <a href="../privacy-policy/">política de privacidad</a> cubre el resto.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ WHAT TO PUT IN THE EMAIL ═══════════════════ -->
-    <section class="section section-alt" id="what-to-send">
-      <div class="container-narrow">
-        <div class="sec-head">
-          <span class="kicker reveal">Cómo obtener una buena respuesta antes</span>
-          <h2 class="section-title reveal">Qué <em class="accent">poner en tu mensaje</em>.</h2>
-        </div>
-
-        <div class="prose mx-auto reveal">
-          <p>Nada de esto es obligatorio: mándanos un correo de una línea si es lo que tienes y te responderemos igual. Pero si algo no funciona, estos son los datos que suelen decidir si lo arreglamos en una respuesta o tenemos que gastar tres correos preguntándote cosas.</p>
-          <ol class="num-list">
-            <li><b>Tu móvil y tu versión de Android.</b> Ajustes → Información del teléfono. Un número sorprendente de errores solo ocurre en la versión de un fabricante.</li>
-            <li><b>Qué estabas haciendo.</b> En qué pantalla estabas y qué fue lo último que tocaste antes de que fallara.</li>
-            <li><b>Una captura de pantalla.</b> Vale aproximadamente por una página de explicación, sobre todo si es algo visual o un escaneo que ha salido raro.</li>
-            <li><b>El correo de tu cuenta</b>, si es una duda de suscripción o de cuenta; si no, no podemos encontrarte.</li>
-          </ol>
-          <p>Si un escaneo se ha equivocado, la foto original ayuda muchísimo. Es la única forma de saber si el modelo leyó mal la comida o la ración.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ INSTANT ANSWERS ═══════════════════
-         The three things people most often email about that they can
-         resolve themselves faster than we can reply. -->
-    <section class="section" id="quick">
-      <div class="container">
-        <div class="sec-head">
-          <span class="kicker reveal">Antes de escribir</span>
-          <h2 class="section-title reveal">Tres cosas con <em class="accent">respuesta inmediata</em>.</h2>
-          <p class="section-sub reveal">Son las tres que más nos preguntan, y las tres se hacen antes de lo que se tarda en escribir un correo.</p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="card contact-card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <div class="reveal" style="--rd:.06s">
+          <form class="cf-form" id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="811b2c31-68e4-4141-8da2-781bd37d8762">
+            <input type="hidden" name="subject" value="New message from the Fotocal website">
+            <input type="hidden" name="from_name" value="Fotocal website">
+            <div class="cf-hp" aria-hidden="true">
+              <label>Do not fill this in <input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
             </div>
-            <h3>Cancelar tu suscripción</h3>
-            <p>No podemos cancelarla por ti: el vendedor es Google Play, así que tiene que hacerse allí. Play Store → tu icono de perfil → Pagos y suscripciones → Suscripciones → Fotocal → Cancelar. Mantienes Premium hasta que acabe el periodo que has pagado.</p>
-            <a class="btn btn-outline btn-sm" href="../subscription/#billing">Más sobre cobros</a>
-          </article>
-
-          <article class="card contact-card reveal" style="--rd:.08s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v5M14 11v5"/></svg>
+            <div class="cf-field">
+              <label for="cfName">Tu nombre</label>
+              <input type="text" id="cfName" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="¿Cómo te llamamos?">
+              <span class="cf-err">Dinos tu nombre, por favor.</span>
             </div>
-            <h3>Eliminar tu cuenta</h3>
-            <p>Puedes hacerlo tú mismo desde la app, y elimina tus datos. Los pasos están en nuestra página de eliminación de cuenta, y si lo prefieres puedes escribirnos.</p>
-            <a class="btn btn-outline btn-sm" href="../account-deletion/">Eliminación de cuenta</a>
-          </article>
-
-          <article class="card contact-card reveal" style="--rd:.16s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="cf-field">
+              <label for="cfEmail">
+                <span>Tu correo</span>
+                <span class="opt">(opcional — necesario para responderte)</span>
+              </label>
+              <input type="email" id="cfEmail" name="email" maxlength="120" autocomplete="email" placeholder="tu@ejemplo.com">
+              <span class="cf-err">Ese correo no parece válido.</span>
             </div>
-            <h3>Qué hacemos con tus datos</h3>
-            <p>La Política de Privacidad cubre qué se guarda, por qué y cómo deshacerse de ello. Si no responde a tu duda, eso es un hueco en la política y nos gustaría saberlo.</p>
-            <a class="btn btn-outline btn-sm" href="../privacy-policy/">Política de Privacidad</a>
-          </article>
+            <div class="cf-field">
+              <label for="cfMessage">Tu mensaje</label>
+              <textarea id="cfMessage" name="message" required minlength="10" maxlength="4000" placeholder="Qué ha pasado, qué esperabas y cualquier cosa que nos ayude a entenderlo."></textarea>
+              <span class="cf-err">Escribe un poco más para que podamos ayudarte.</span>
+            </div>
+            <button type="submit" class="btn btn-cta cf-submit" id="cfSubmit">Enviar mensaje</button>
+            <p class="cf-note">Usamos lo que nos envías solo para responderte. Nada más.</p>
+            <div class="cf-result cf-result-ok"  id="cfOk"  role="status" aria-live="polite"></div>
+            <div class="cf-result cf-result-bad" id="cfBad" role="alert"  aria-live="assertive"></div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
-    <section class="final-cta">
-      <div class="container">
-        <div class="final-inner reveal">
-          <h2>Preferimos oírlo <em class="accent-light">a no oírlo</em>.</h2>
-          <p>Errores, confusión, críticas sin filtro o una idea de algo que Fotocal debería hacer: todo ayuda y todo se lee.</p>
-          <a class="btn btn-cta" href="#message">Escribir un mensaje</a>
-        </div>
+  <!-- ═══════ WHO YOU ARE WRITING TO — light ═══════ -->
+  <section class="section sec-light" id="who">
+    <div class="container-narrow">
+      <header class="fx-chap">
+        <span class="kicker reveal">A quién le escribes</span>
+        <h2 class="section-title reveal">Una persona en Madrid, y las páginas que cuentan el resto.</h2>
+        <p class="section-sub reveal">Fotocal la hace y la responde una sola persona. No hay equipo de soporte, ni sistema de tickets, ni horario de atención, y por eso el plazo de respuesta de arriba es sincero en vez de impresionante. Las páginas legales son donde vive la parte formal.</p>
+      </header>
+      <div class="ab-links reveal">
+        <a class="ab-link" href="../about/">
+          <strong>Sobre Fotocal</strong>
+          <span>Por qué existe la app, para quién es y cómo se paga</span>
+        </a>
+        <a class="ab-link" href="../privacy-policy/">
+          <strong>Política de privacidad</strong>
+          <span>Qué se guarda, quién lo trata y cómo pedir que se elimine</span>
+        </a>
+        <a class="ab-link" href="../terms/">
+          <strong>Términos de servicio</strong>
+          <span>La suscripción, la renovación, la cancelación y las condiciones de uso</span>
+        </a>
+        <a class="ab-link" href="../account-deletion/">
+          <strong>Eliminación de cuenta</strong>
+          <span>Cómo eliminar tu cuenta y todo lo que contiene</span>
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- ═══════ FINAL CTA ═══════ -->
+  <section class="final-band">
+    <div class="container">
+      <div class="final-band-inner reveal">
+        <h2>Preferimos oírlo a no oírlo.</h2>
+        <p>Fallos, confusiones, críticas sin rodeos o una idea de algo que Fotocal debería hacer. Todo se lee.</p>
+        <a class="btn btn-white btn-lg" href="#message">Escribir un mensaje</a>
+        <span class="final-note"><a href="mailto:fotocal.app@gmail.com">fotocal.app@gmail.com</a></span>
+      </div>
+    </div>
+  </section>
 
-  <div id="site-footer"></div>
+</main>
 
-  <!-- Load order matters: i18n.js -> layout.js -> main.js -->
-  <script src="../assets/js/i18n.js?v=0b46abaf"></script>
-  <script src="../assets/js/layout.js?v=6d53635e" data-page="about"></script>
-  <script src="../assets/js/main.js?v=ffb21447"></script>
-  <script src="../assets/js/contact-form.js?v=4992c0d3"></script>
+<div id="site-footer"></div>
+<script src="../assets/js/i18n.js?v=0b46abaf"></script>
+<script src="../assets/js/layout.js?v=6d53635e" data-page="about"></script>
+<script src="../assets/js/main.js?v=ffb21447"></script>
+<script src="../assets/js/contact-form.js?v=4992c0d3"></script>
 </body>
 </html>

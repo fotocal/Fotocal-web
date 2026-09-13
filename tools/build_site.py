@@ -423,8 +423,13 @@ def render_head(src, lang, rel_path, meta):
     # default tree, and it is what a visitor with no matching locale should get.
     self_url = page_url(rel_path, lang)
     # A redirect stub (meta refresh + noindex, from tools/gen_blog.py) keeps the
-    # canonical it declares: the target, not itself.
-    if 'http-equiv="refresh"' not in src:
+    # canonical it declares — the target, not itself — but the target must sit
+    # in this tree: the English stub canonicalises to /en/blog/<target>/.
+    if 'http-equiv="refresh"' in src:
+        m = re.search(r'<link rel="canonical" href="https://getfotocal\.com/([^"]*)">', src)
+        if m:
+            src = src.replace(m.group(0), '<link rel="canonical" href="%s">' % page_url(m.group(1), lang), 1)
+    else:
         src = re.sub(r'<link rel="canonical" href="[^"]*">',
                      '<link rel="canonical" href="%s">' % self_url, src, count=1)
     alts = ('<link rel="alternate" hreflang="es" href="%s">\n'

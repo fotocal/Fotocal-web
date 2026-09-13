@@ -123,6 +123,25 @@ Also seen: supabase/functions/stripe-checkout and stripe-webhook exist
 but nothing in app/ or src/ calls them; the policy does not list Stripe
 and should not while that stays true.
 
+## 0k · STORE CONFIGURATION, verified in Play Console 2026-09-14 (not code)
+  · The 5-day trial (offer free-trial-5d, 174 countries) is on ALL paid
+    plans. The site said yearly-only until 2026-09-14; fixed everywhere.
+  · A THIRD product is active: Fotocal Pro Trimestral, €16.99 every three
+    months, base plan quarterly-3m, same trial. THE APP DOES NOT SELL IT:
+    app/paywall.tsx has `type ShownPlan = 'monthly' | 'yearly'` and maps a
+    three-month package into a bucket it never shows, by design ("Only
+    Monthly + Yearly are sold"). Nobody can buy it from anywhere today. The
+    website keeps its quarterly card written but hidden (src/subscription/
+    index.html, "quarterly:hidden") until one of two owner decisions: show
+    it in the app (paywall toggle becomes three positions; LIST_PRICE gains
+    quarterly: 16.99; pricing.ts savings maths generalised) or deactivate
+    the product in Play Console.
+  · Product names in Play Console are "Fotocal Pro Mensual / Trimestral /
+    Anual"; app and site say Premium. Owner to decide which side changes.
+  · The yearly product also carries an inactive legacy base plan "yearly"
+    with duration Monthly, and an inactive trial3d offer. Harmless; not
+    acted on; flagged so nobody reactivates the wrong one.
+
 ## 0j · THE HOME SCREEN ADDS EXERCISE CALORIES BACK INTO THE DAY'S BUDGET
 src/lib/calorieFit.ts: budget = dayTarget + exerciseKcal; left = budget −
 consumed. The Home "Left" figure therefore grows with every logged

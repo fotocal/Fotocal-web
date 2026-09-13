@@ -494,3 +494,8 @@
   .sb-incl-list { columns: 2; column-gap: 2.2rem; }
   .sb-incl-list li { break-inside: avoid; }
 }
+
+/* ─── subscription: the five days, once, under the cards; four-card grid when the quarterly card goes live ─── */
+.sb-trial-all { margin: 1.1rem 0 0; }
+@media (min-width: 900px) { .sb-plans-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1180px) { .sb-plans-4 { grid-template-columns: repeat(4, 1fr); } }

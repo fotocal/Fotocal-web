@@ -102,7 +102,7 @@ window.FOTOCAL_I18N = {
     "cta.play": "On Google Play · Android",
     "bar.line": "Calories from a photo",
     "cta.free": "Get it free",
-    "hero.note": "Free to download · 5-day trial on the yearly plan · Android",
+    "hero.note": "Free to download · 5-day trial on every paid plan · Android",
 
     /* ── Trust marquee ── */
     "mq.1": "Advanced AI vision",
@@ -416,7 +416,7 @@ window.FOTOCAL_I18N = {
     "cta.play": "En Google Play · Android",
     "bar.line": "Calorías con una foto",
     "cta.free": "Descárgala gratis",
-    "hero.note": "Descarga gratuita · 5 días de prueba en el plan anual · Android",
+    "hero.note": "Descarga gratuita · 5 días de prueba en todos los planes de pago · Android",
 
     /* ── Trust marquee ── */
     "mq.1": "Visión IA avanzada",

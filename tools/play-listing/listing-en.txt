@@ -1,0 +1,36 @@
+=== SHORT DESCRIPTION (77/80 characters) — paste as is ===
+Photograph your plate and get calories, macros and a health score in seconds.
+
+=== FULL DESCRIPTION (2221/4000 characters) — paste as is ===
+Fotocal counts what you eat from a photo. Point the camera at your plate and in seconds you get the calories, the macros and a health score, ready to log. When a photo is not practical, say what you ate out loud, scan a barcode or type it in.
+
+FREE PLAN: NO CARD, NO TIME LIMIT
+• 2 photo scans a day and 1 voice log a day
+• Barcode scanner without limits, with healthier alternatives for the product you scanned
+• Coach Kal, the nutrition chat, without limits
+• The food diary, weight, water, steps through Health Connect, mood and habit notes
+• A health score and two micronutrient bars on every scan
+• The weekly report, which opens on the free plan
+• Sync across devices, in Spanish and English
+
+PREMIUM
+There is one Premium, paid monthly or yearly. It unlocks exactly these nine things:
+• Unlimited AI food scans (free plan: 2 a day)
+• Unlimited voice logging (free plan: 1 a day)
+• Restaurant menu scanner
+• AI daily meal plan
+• Full nutrient panel on every meal: fiber, sugars, saturated fat, sodium, cholesterol, vitamins and minerals, with % daily values
+• Glucose steadiness, satiety and processing level (NOVA) per meal
+• "Fits your day" and nutrient radar on every scan
+• Full scan report: health impact, recommendations and a healthier swap
+• Weekly report: calories, macro targets, micronutrients and daily limits
+
+Everything else stays free, and nothing you logged is hidden or deleted when you stop paying.
+
+PRICES
+In Spain, Premium is €6.99 a month or €34.99 a year, billed through Google Play, which shows the exact price for your country before you confirm. Premium comes with a 5-day free trial: cancel before it ends and you pay nothing. Subscriptions renew automatically until you cancel them in Google Play.
+
+WHAT FOTOCAL IS NOT
+Fotocal estimates; it does not weigh. A photo estimate can be wrong, and you can correct any entry. The app is general information, not medical advice. If you are pregnant, living with a medical condition, under eighteen, or have a history of an eating disorder, talk to a doctor or a registered dietitian before changing how you eat or using a calorie tracker.
+
+Android only. Privacy policy: https://getfotocal.com/privacy-policy/ · Terms: https://getfotocal.com/terms/

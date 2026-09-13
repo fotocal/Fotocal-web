@@ -1,0 +1,51 @@
+{
+  "_readme": [
+    "THE ONE PLACE on this site that says what Premium includes. The nine",
+    "`title` lines are the app's own paywall list, word for word — the FEATURES",
+    "array in app/paywall.tsx of fotocal/Fotocal — and each maps to a gate in",
+    "the app's code (`gate`). tools/premium_list.py renders them into the",
+    "subscription page (the list above the plan cards and the Premium section)",
+    "and into assets/js/i18n-pages.js (sub.pl*/sub.plb*); check_site.py fails",
+    "if either is stale, and, when the app checkout is on disk, if these titles",
+    "differ from the app's array. If the app's list changes, change it here in",
+    "the same sitting and re-run the renderer. `body` is the site's one-line",
+    "explanation of each line; it has no counterpart in the app."
+  ],
+  "app_source": {
+    "repo": "fotocal/Fotocal",
+    "file": "app/paywall.tsx",
+    "symbol": "FEATURES",
+    "commit": "e52725f",
+    "local_checkout": "/home/user/fotocal"
+  },
+  "checked_on": "2026-09-14",
+  "features": [
+    { "gate": "src/lib/paywall.ts LIMITS.scan (free 2/day)",
+      "title": { "en": "Unlimited AI food scans (free plan: 2 a day)", "es": "Escaneos de comida con IA ilimitados (gratis: 2 al día)" },
+      "body":  { "en": "The 2-a-day counter is removed. Scan every meal, every day.", "es": "Desaparece el contador de 2 al día. Escanea cada comida, cada día." } },
+    { "gate": "src/lib/paywall.ts LIMITS.voice (free 1/day)",
+      "title": { "en": "Unlimited voice logging (free plan: 1 a day)", "es": "Registro por voz ilimitado (gratis: 1 al día)" },
+      "body":  { "en": "The 1-a-day counter is removed.", "es": "Desaparece el contador de 1 al día." } },
+    { "gate": "app/scan-menu.tsx premium gate",
+      "title": { "en": "Restaurant menu scanner", "es": "Escáner de menús de restaurante" },
+      "body":  { "en": "Premium only, with no free allowance: photograph a menu and get the dish that fits what you have left today.", "es": "Solo Premium, sin ningún uso gratis: fotografía la carta y te dice el plato que encaja con lo que te queda hoy." } },
+    { "gate": "app/plan-day.tsx premium gate",
+      "title": { "en": "AI daily meal plan", "es": "Plan de comidas diario con IA" },
+      "body":  { "en": "A plan for the day ahead, built from your goals and what you have logged.", "es": "Un plan para el día siguiente, hecho con tus objetivos y lo que has registrado." } },
+    { "gate": "app/scan-result.tsx PremiumLock (ExtendedNutrientsRow, MicrosPanel beyond 2 bars, nutrition breakdown) + app/food-detail.tsx locked rows",
+      "title": { "en": "Full nutrient panel on every meal: fiber, sugars, saturated fat, sodium, cholesterol, vitamins and minerals, with % daily values", "es": "Panel completo de nutrientes en cada comida: fibra, azúcares, grasa saturada, sodio, colesterol, vitaminas y minerales, con % del valor diario" },
+      "body":  { "en": "Every micronutrient bar on a scan rather than two, the locked rows in a food's detail, and the Advanced Nutrition card on the home screen.", "es": "Todas las barras de micronutrientes de un escaneo en vez de dos, las filas bloqueadas en el detalle de un alimento y la tarjeta de Nutrición Avanzada de la pantalla de inicio." } },
+    { "gate": "app/scan-result.tsx PremiumLock (SugarImpactSection, FullnessSection, ProcessingSection)",
+      "title": { "en": "Glucose steadiness, satiety and processing level (NOVA) per meal", "es": "Estabilidad de glucosa, saciedad y nivel de procesado (NOVA) por comida" },
+      "body":  { "en": "Three cards on every scan result: how steady the meal keeps your energy, how filling it is for its calories, and how processed it is.", "es": "Tres tarjetas en cada resultado: lo estable que mantiene tu energía, lo que llena para sus calorías y lo procesada que está." } },
+    { "gate": "app/scan-result.tsx PremiumLock (FitsYourDaySection, NutrientRadarSection) + TuDiaCard",
+      "title": { "en": "\"Fits your day\" and nutrient radar on every scan", "es": "«Encaja en tu día» y radar de nutrientes en cada escaneo" },
+      "body":  { "en": "The meal measured against what you have left today, and a radar of the nutrients it is rich in.", "es": "La comida medida contra lo que te queda hoy, y un radar de los nutrientes en los que es rica." } },
+    { "gate": "app/scan-result.tsx PremiumLock (health impact, smart recommendations, premium AI report, final recommendation, healthy suggestion)",
+      "title": { "en": "Full scan report: health impact, recommendations and a healthier swap", "es": "Informe completo del escaneo: impacto en la salud, recomendaciones y alternativa más sana" },
+      "body":  { "en": "The report sections under a scan result. The health score above them is free.", "es": "Las secciones de informe bajo el resultado de un escaneo. La puntuación de salud que hay encima es gratis." } },
+    { "gate": "WeeklyDietReport PremiumLockBox cards + app/weekly-report.tsx nutrition and micros cards",
+      "title": { "en": "Weekly report: calories, macro targets, micronutrients and daily limits", "es": "Informe semanal: calorías, objetivos de macros, micronutrientes y límites diarios" },
+      "body":  { "en": "The weekly report opens free; these are its Premium cards, plus the six weekly cards in the Progress tab's diet view.", "es": "El informe semanal se abre gratis; estas son sus tarjetas Premium, más las seis tarjetas semanales de la vista Dieta de la pestaña Progreso." } }
+  ]
+}

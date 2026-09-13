@@ -46,6 +46,21 @@ existing `glyph`/`pal` pairing so the art does not shuffle around:
 python3 tools/regen_covers.py
 ```
 
+## What Premium includes — one source (2026-09-14)
+
+`tools/premium_features.json` holds the nine Premium lines, word for word
+the FEATURES array in the app's `app/paywall.tsx`, with a gate reference
+and a one-sentence explanation each. `tools/premium_list.py` renders them
+into the subscription page (the list above the plan cards and the Premium
+section) and into `assets/js/i18n-pages.js` (`sub.pl*`, `sub.plb*`);
+`check_site.py` fails if either is stale and, when the app checkout is on
+disk at the path in `app_source`, if the titles differ from the app's
+array. When the app list changes: change the JSON in the same sitting,
+run `python3 tools/premium_list.py`, then build. Never write the Premium
+list out by hand anywhere else on the site; sentences elsewhere that
+mention Premium (home FAQ, the AI page, About, the product JSON-LD) must
+stay shorter than this list, never longer.
+
 ## Blog — one template, tools/gen_blog.py (2026-09-14)
 
 The 53 posts, nine series hubs and the index are GENERATED. The writing

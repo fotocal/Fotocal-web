@@ -483,3 +483,14 @@
   .legal td::before { content: attr(data-label); display: block; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 }
 @media (min-width: 900px) { .legal { padding: 2.8rem 2.6rem 3rem; } .legal-main { padding: 3rem 0 5rem; } }
+
+/* ─── subscription: what Premium includes, once, above the cards ─── */
+.sb-incl { margin-top: 2rem; padding: 1.3rem 1.2rem 1.1rem; border-radius: var(--r-xl); background: var(--surface); border: 1px solid var(--border-pink); box-shadow: var(--shadow-sm); }
+.sb-incl-k { display: block; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-text); }
+.sb-incl-sub { font-size: .92rem; color: var(--text-soft); margin: .4rem 0 .9rem; }
+.sb-incl-list { margin: 0; }
+.sb-incl-list li { font-size: .92rem; margin-bottom: .45rem; }
+@media (min-width: 900px) {
+  .sb-incl-list { columns: 2; column-gap: 2.2rem; }
+  .sb-incl-list li { break-inside: avoid; }
+}

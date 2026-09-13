@@ -211,6 +211,15 @@ def check_colour_literals():
                               % (html.count("\n", 0, m.start()) + 1, c.group(0)))
 
 
+def check_premium_list():
+    """12 · the Premium list on the subscription page, the sub.pl* strings and
+    the app's own paywall array must all be the same nine lines
+    (tools/premium_features.json; run tools/premium_list.py)."""
+    import premium_list
+    for p in premium_list.check(premium_list.load()):
+        fail(p.split(":")[0], p.split(": ", 1)[1] if ": " in p else p)
+
+
 def check_compare_table():
     """Check 11 — the comparison table and its dated footnote are exactly
     what tools/compare_data.json says (run tools/compare_table.py), and the
@@ -326,6 +335,7 @@ def main():
 
     check_colour_literals()
     check_compare_table()
+    check_premium_list()
 
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}

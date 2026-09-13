@@ -88,6 +88,29 @@
         <p class="section-sub reveal" data-i18n="sub.t07">There is one Premium. The monthly and yearly plans unlock exactly the same things and differ only in how you pay for them. The free plan is the app with two daily limits, and you can stay on it for good.</p>
       </header>
 
+      <!--# What Premium includes, ONCE, above the three cards and therefore
+           above every price. The nine lines are rendered by
+           tools/premium_list.py from tools/premium_features.json, which holds
+           the app's own paywall list word for word; check_site fails if the
+           two drift. The cards below say "All of Premium" and point up here. -->
+      <div class="sb-incl reveal">
+        <span class="sb-incl-k" data-i18n="sub.plh">What Premium includes</span>
+        <p class="sb-incl-sub" data-i18n="sub.pls">These nine lines are the app's own Premium list, word for word. Both paid plans unlock all of them; the free plan is the app with the two daily counters.</p>
+        <ul class="check-list check-list-lt sb-incl-list">
+              <!--# premium:list -->
+              <li data-i18n="sub.pl1">Unlimited AI food scans (free plan: 2 a day)</li>
+              <li data-i18n="sub.pl2">Unlimited voice logging (free plan: 1 a day)</li>
+              <li data-i18n="sub.pl3">Restaurant menu scanner</li>
+              <li data-i18n="sub.pl4">AI daily meal plan</li>
+              <li data-i18n="sub.pl5">Full nutrient panel on every meal: fiber, sugars, saturated fat, sodium, cholesterol, vitamins and minerals, with % daily values</li>
+              <li data-i18n="sub.pl6">Glucose steadiness, satiety and processing level (NOVA) per meal</li>
+              <li data-i18n="sub.pl7">"Fits your day" and nutrient radar on every scan</li>
+              <li data-i18n="sub.pl8">Full scan report: health impact, recommendations and a healthier swap</li>
+              <li data-i18n="sub.pl9">Weekly report: calories, macro targets, micronutrients and daily limits</li>
+              <!--# /premium:list -->
+        </ul>
+      </div>
+
       <div class="sb-plans">
 
         <!-- Free -->
@@ -100,7 +123,7 @@
             <li data-i18n="sub.p1l2">Barcode scanner and Coach Kal without limits</li>
             <li data-i18n="sub.p1l3">The diary, weight, water, steps, notes and the Progress tab</li>
           </ul>
-          <p class="sb-plan-note" data-i18n="sub.p1b">Nothing expires and nothing asks for a card. The full list is further down.</p>
+          <p class="sb-plan-note" data-i18n="sub.p1b">Nothing expires and nothing asks for a card. What free includes, with its limits, is further down.</p>
           <a class="btn btn-outline btn-block" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
         </article>
 
@@ -110,7 +133,7 @@
           <div class="sb-plan-price"><span data-i18n="sub.p2a">€6.99</span></div>
           <span class="sb-plan-per" data-i18n="sub.p2p">per month</span>
           <ul class="check-list check-list-lt sb-plan-list">
-            <li data-i18n="sub.p2l1">All of Premium, the same as the yearly plan</li>
+            <li data-i18n="sub.p2l1">All nine Premium lines above, the same as the yearly plan</li>
             <li data-i18n="sub.p2l2">Renews every month until you cancel</li>
           </ul>
           <!--# No trial on this plan is a store fact the app reads at runtime
@@ -134,7 +157,7 @@
                the same sum the app does in src/lib/pricing.ts. -->
           <p class="sb-plan-equiv" data-i18n="sub.p3e">That is €2.92 a month, 58% less than paying monthly.</p>
           <ul class="check-list check-list-lt sb-plan-list">
-            <li data-i18n="sub.p3l1">All of Premium, the same as the monthly plan</li>
+            <li data-i18n="sub.p3l1">All nine Premium lines above, the same as the monthly plan</li>
             <li data-i18n="sub.p3l2">The only plan with the 5-day free trial</li>
           </ul>
           <div class="sb-when sb-when-trial">
@@ -200,15 +223,20 @@
         </div>
         <div class="split-copy">
           <span class="kicker reveal" data-i18n="sub.t11">Premium</span>
-          <h2 class="section-title reveal" data-i18n="sub.t12">Six things switch on. Nothing else changes.</h2>
-          <p class="section-sub reveal" data-i18n="sub.t13">Premium does not make the app better behaved or take anything away from the free plan. These are the six places where the code checks for a subscription, and what each one opens.</p>
+          <h2 class="section-title reveal" data-i18n="sub.t12">Nine things switch on. Nothing else changes.</h2>
+          <p class="section-sub reveal" data-i18n="sub.t13">Premium does not make the app better behaved or take anything away from the free plan. These nine lines are the paywall's own list, and each one is a place where the code checks for a subscription.</p>
           <ol class="sb-six reveal">
-            <li><b data-i18n="sub.u1t">Photo scans without the daily counter.</b><span data-i18n="sub.u1b">The 2-a-day limit is removed. Scan every meal, every day.</span></li>
-            <li><b data-i18n="sub.u2t">Voice logging without the daily counter.</b><span data-i18n="sub.u2b">The 1-a-day limit is removed.</span></li>
-            <li><b data-i18n="sub.u3t">The restaurant menu scanner.</b><span data-i18n="sub.u3b">Premium only, with no free allowance: photograph a menu and get the dish that fits what you have left today.</span></li>
-            <li><b data-i18n="sub.u4t">The whole nutrient panel.</b><span data-i18n="sub.u4b">Every micronutrient on a scan rather than two; the nutrition breakdown, health impact and recommendation sections of a scan result; the key-nutrient and vitamin rows in a food's detail; the Advanced Nutrition card on the home screen.</span></li>
-            <li><b data-i18n="sub.u5t">The rest of the reports.</b><span data-i18n="sub.u5b">The two Premium cards in the weekly report (the full nutrition table and vitamins &amp; minerals), the detail cards of the weekly recap, and the six weekly cards in the Progress tab's diet view.</span></li>
-            <li><b data-i18n="sub.u6t">Plan my day.</b><span data-i18n="sub.u6b">An AI meal plan for the day ahead, built from your goals and what you have logged.</span></li>
+            <!--# premium:detail -->
+            <li><b data-i18n="sub.pl1">Unlimited AI food scans (free plan: 2 a day)</b><span data-i18n="sub.plb1">The 2-a-day counter is removed. Scan every meal, every day.</span></li>
+            <li><b data-i18n="sub.pl2">Unlimited voice logging (free plan: 1 a day)</b><span data-i18n="sub.plb2">The 1-a-day counter is removed.</span></li>
+            <li><b data-i18n="sub.pl3">Restaurant menu scanner</b><span data-i18n="sub.plb3">Premium only, with no free allowance: photograph a menu and get the dish that fits what you have left today.</span></li>
+            <li><b data-i18n="sub.pl4">AI daily meal plan</b><span data-i18n="sub.plb4">A plan for the day ahead, built from your goals and what you have logged.</span></li>
+            <li><b data-i18n="sub.pl5">Full nutrient panel on every meal: fiber, sugars, saturated fat, sodium, cholesterol, vitamins and minerals, with % daily values</b><span data-i18n="sub.plb5">Every micronutrient bar on a scan rather than two, the locked rows in a food's detail, and the Advanced Nutrition card on the home screen.</span></li>
+            <li><b data-i18n="sub.pl6">Glucose steadiness, satiety and processing level (NOVA) per meal</b><span data-i18n="sub.plb6">Three cards on every scan result: how steady the meal keeps your energy, how filling it is for its calories, and how processed it is.</span></li>
+            <li><b data-i18n="sub.pl7">"Fits your day" and nutrient radar on every scan</b><span data-i18n="sub.plb7">The meal measured against what you have left today, and a radar of the nutrients it is rich in.</span></li>
+            <li><b data-i18n="sub.pl8">Full scan report: health impact, recommendations and a healthier swap</b><span data-i18n="sub.plb8">The report sections under a scan result. The health score above them is free.</span></li>
+            <li><b data-i18n="sub.pl9">Weekly report: calories, macro targets, micronutrients and daily limits</b><span data-i18n="sub.plb9">The weekly report opens free; these are its Premium cards, plus the six weekly cards in the Progress tab's diet view.</span></li>
+            <!--# /premium:detail -->
           </ol>
           <p class="sb-not reveal" data-i18n="sub.t14">Not on the list, because they are already free: Coach Kal, the barcode scanner, the health score, sync, and an ad-free app.</p>
         </div>

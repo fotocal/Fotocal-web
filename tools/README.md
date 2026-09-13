@@ -46,7 +46,20 @@ existing `glyph`/`pal` pairing so the art does not shuffle around:
 python3 tools/regen_covers.py
 ```
 
-## Spanish blog translations
+## Blog — one template, tools/gen_blog.py (2026-09-13)
+
+The 54 posts and the index are GENERATED. The writing lives in
+`tools/blog/posts/<slug>.json` (slug, category, date, optional
+`updated`, keywords, and per language the title, the one-line lead and
+the body HTML). `tools/gen_blog.py` renders `src/blog/<slug>/index.html`
+and `src/blog/index.html` from one template; `tools/build_site.py`
+then renders both trees. To change the template, edit gen_blog.py and
+run it; to change a post, edit its JSON, set `updated`, and run it.
+Never edit src/blog/ by hand — the next run overwrites it.
+`tools/blog_extract.py` is the one-off that lifted the writing out of
+the old hand-built pages; it is kept for the record.
+
+## Spanish blog translations (historical)
 
 `tools/blog_es/b1.py … b9.py` hold the Spanish title, lead and body for
 every post, keyed by slug. `tools/inject_es.py` writes them into the

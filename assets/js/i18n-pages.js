@@ -153,6 +153,8 @@
       "cf.messageErr": "Please write a little more so we can help.",
       "cf.send": "Send message",
       "cf.privacy": "We use what you send only to answer you. Nothing else.",
+      "blog.app.h": "If you want to see this in your own meals",
+      "blog.app.p": "Fotocal logs a plate from a photo and shows the calories, macros and a health score. The free plan has no card and no time limit: 2 photo scans a day, the barcode scanner and Coach Kal without limits. Android only.",
       /* ── About page ── */
       "about.t01": "About",
       "about.t02": "One person, one app, and <em class=\"accent\">no story to sell you</em>.",
@@ -1140,6 +1142,8 @@
       "cf.messageErr": "Escribe un poco más para que podamos ayudarte.",
       "cf.send": "Enviar mensaje",
       "cf.privacy": "Usamos lo que nos envías solo para responderte. Nada más.",
+      "blog.app.h": "Si quieres verlo en tus propias comidas",
+      "blog.app.p": "Fotocal registra un plato a partir de una foto y muestra las calorías, los macros y una puntuación de salud. El plan gratis no pide tarjeta ni caduca: 2 escaneos por foto al día, el escáner de código de barras y Coach Kal sin límite. Solo Android.",
       /* ── Página Sobre Fotocal ── */
       "about.t01": "Sobre Fotocal",
       "about.t02": "Una persona, una app y <em class=\"accent\">ninguna historia que venderte</em>.",

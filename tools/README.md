@@ -46,16 +46,32 @@ existing `glyph`/`pal` pairing so the art does not shuffle around:
 python3 tools/regen_covers.py
 ```
 
-## Blog — one template, tools/gen_blog.py (2026-09-13)
+## Blog — one template, tools/gen_blog.py (2026-09-14)
 
-The 54 posts and the index are GENERATED. The writing lives in
-`tools/blog/posts/<slug>.json` (slug, category, date, optional
-`updated`, keywords, and per language the title, the one-line lead and
-the body HTML). `tools/gen_blog.py` renders `src/blog/<slug>/index.html`
-and `src/blog/index.html` from one template; `tools/build_site.py`
-then renders both trees. To change the template, edit gen_blog.py and
-run it; to change a post, edit its JSON, set `updated`, and run it.
-Never edit src/blog/ by hand — the next run overwrites it.
+The 53 posts, nine series hubs and the index are GENERATED. The writing
+lives in `tools/blog/posts/<slug>.json` (slug, category, date, optional
+`updated`, keywords, optional `caution`, and per language the title,
+the one-line lead and the body HTML). `tools/gen_blog.py` renders
+`src/blog/<slug>/index.html`, `src/blog/series/<id>/index.html` and
+`src/blog/index.html` from one template; `tools/build_site.py` then
+renders both trees. To change the template, edit gen_blog.py and run
+it; to change a post, edit its JSON, set `updated`, and run it. Never
+edit src/blog/ by hand — the next run overwrites it.
+
+**Series** (`tools/blog/series.json`) are the reading order. Every live
+post is in exactly one series (the generator asserts it); a post's
+previous/next links follow the series, never the date, and the first
+and last post of a series point at its hub. Each series sits under one
+of six filter chips — calories, weightloss, nutrition, eating, mindset,
+movement — named by `blog.cat.<key>` in assets/js/i18n-pages.js; a
+post's `category` must match its series' `category`. Series titles are
+also i18n keys (`blog.series.t.<id>`) because the hub's breadcrumb
+JSON-LD needs them as tokens.
+
+**Retiring a post**: move its JSON to `tools/blog/retired/`, add
+`{"old-slug": "target-slug"}` to `tools/blog/redirects.json`, and take
+it out of series.json. The old URL then renders a noindex redirect stub
+to the target and never 404s. Same rule for merges.
 `tools/blog_extract.py` is the one-off that lifted the writing out of
 the old hand-built pages; it is kept for the record.
 

@@ -19,7 +19,10 @@ What the template decides, once, for all 54 pages:
   · related posts: three from the same category, ranked by shared
     keywords and then by date, balanced so that no post is left with
     nobody linking to it
-  · previous / next by publication date
+  · previous / next inside the post's series (tools/blog/series.json),
+    never by date — date order means nothing to a reader arriving from
+    a search; the ends of a series point at its hub, /blog/series/<id>/
+  · one hub page per series, and a series section on the index
   · BlogPosting + BreadcrumbList structured data; the build localises
     headline, description and inLanguage per tree and rewrites hreflang
   · one quiet route into the app after the article, and the disclaimer
@@ -66,6 +69,20 @@ for p in posts:
     assert re.match(r"\d{4}-\d{2}-\d{2}$", p["date"]), p["slug"]
     if p.get("updated"):
         assert p["updated"] >= p["date"], ("updated before published", p["slug"])
+
+# ── series: the reading order; every live post sits in exactly one ────
+SERIES = json.load(open(os.path.join(ROOT, "tools", "blog", "series.json"), encoding="utf-8"))
+SERIES.pop("_comment", None)
+series_of = {}
+for sid, sr in SERIES.items():
+    assert re.match(r"[a-z0-9-]+$", sid), sid
+    for n, slug in enumerate(sr["posts"]):
+        assert slug in by_slug, ("series names a missing post", sid, slug)
+        assert slug not in series_of, ("post in two series", slug)
+        assert by_slug[slug]["category"] == sr["category"], ("post category disagrees with its series", slug, sid)
+        series_of[slug] = (sid, n)
+missing = [p["slug"] for p in posts if p["slug"] not in series_of]
+assert not missing, ("posts in no series", missing)
 
 # ── related: same category, keyword overlap, then nearest date; balanced ──
 def related_for(p):
@@ -133,7 +150,8 @@ HEAD = """<!DOCTYPE html>
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
-  <script type="application/ld+json">{ld_post}</script>
+  <script type="application/ld+json" data-lang-block="en">{ld_post}</script>
+  <script type="application/ld+json" data-lang-block="es">{ld_post_es}</script>
   <script type="application/ld+json">{ld_crumbs}</script>
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png?v=3">
@@ -168,7 +186,7 @@ HEAD = """<!DOCTYPE html>
           <span data-lang-block="en">{min_en} <span data-i18n="blog.min">min read</span></span>
           <span data-lang-block="es">{min_es} <span data-i18n="blog.min">min de lectura</span></span>
         </div>
-      </div>
+{strip}      </div>
     </header>
 
     <figure class="post-cover reveal">
@@ -281,23 +299,37 @@ CARD = """        <a class="habit-card sf-read post-card reveal" href="{href}"{d
           <span class="fx-link" data-i18n="feat.read">Read →</span>
         </a>"""
 
-NAVITEM = """<a class="post-nav-item{cls}" href="../{slug}/"><small data-i18n="blog.{which}">{label}</small><strong data-lang-block="en">{title_en}</strong><strong data-lang-block="es">{title_es}</strong></a>"""
+NAVITEM = """<a class="post-nav-item{cls}" href="{href}"><small data-i18n="blog.{which}">{label}</small><strong data-lang-block="en">{title_en}</strong><strong data-lang-block="es">{title_es}</strong></a>"""
 
-CAT_EN = {"nutrition": "Nutrition", "weightloss": "Weight loss", "healthy": "Healthy eating", "diet": "Diet tips", "mindset": "Mindset",
-          "fitness": "Fitness", "calories": "Calorie counting", "mealplan": "Meal planning", "lifestyle": "Lifestyle"}
+# The strip under the article meta: which series this is, and where in it.
+STRIP = """        <p class="post-series reveal">
+          <a href="../series/{sid}/"><span data-lang-block="en">Part {n} of {total} in <strong>{title_en}</strong></span><span data-lang-block="es">Parte {n} de {total} de <strong>{title_es}</strong></span></a>
+        </p>
+"""
+
+# Six filter chips. Each series sits wholly inside one; the keys are the
+# blog.cat.<key> strings in assets/js/i18n-pages.js.
+CAT_EN = {"calories": "Calorie counting", "weightloss": "Weight loss", "nutrition": "Nutrition", "eating": "Everyday eating",
+          "mindset": "Mindset", "movement": "Movement and sleep"}
 
 def card(q, href, i=0):
     return CARD.format(href=href, delay=(' style="--rd:%.2fs"' % (0.06 * i)) if i else "", cat=q["category"], cat_en=CAT_EN[q["category"]],
                        title_en=q["en"]["title"], title_es=q["es"]["title"], lead_en=q["en"]["lead"], lead_es=q["es"]["lead"],
                        date_en=fmt_date(q["date"], "en"), date_es=fmt_date(q["date"], "es"), min_en=minutes(q["en"]["body"]), min_es=minutes(q["es"]["body"]))
 
+def hub_nav(sid, cls):
+    sr = SERIES[sid]
+    return NAVITEM.format(cls=cls, href="../series/%s/" % sid, which="series.all", label="All articles in this series", title_en=sr["en"]["title"], title_es=sr["es"]["title"])
+
 def render_post(p, idx):
-    prev_p = by_date[idx - 1] if idx > 0 else None
-    next_p = by_date[idx + 1] if idx + 1 < len(by_date) else None
+    sid, n = series_of[p["slug"]]
+    order = SERIES[sid]["posts"]
+    prev_p = by_slug[order[n - 1]] if n > 0 else None
+    next_p = by_slug[order[n + 1]] if n + 1 < len(order) else None
     modified = p.get("updated") or p["date"]
     upd_en = (' <span class="post-updated">Updated <time datetime="%s">%s</time></span>' % (p["updated"], fmt_date(p["updated"], "en"))) if p.get("updated") and p["updated"] != p["date"] else ""
     upd_es = (' <span class="post-updated">Actualizado <time datetime="%s">%s</time></span>' % (p["updated"], fmt_date(p["updated"], "es"))) if p.get("updated") and p["updated"] != p["date"] else ""
-    ld_post = json.dumps({
+    def ld_for(lang): return json.dumps({
         "@context": "https://schema.org", "@type": "BlogPosting",
         "headline": strip_tags(p["en"]["title"]), "description": strip_tags(p["en"]["lead"]),
         "datePublished": p["date"], "dateModified": modified,
@@ -307,13 +339,17 @@ def render_post(p, idx):
         "image": "https://getfotocal.com/assets/img/blog/%s.svg" % p["slug"],
         "articleSection": CAT_EN[p["category"]], "keywords": p.get("keywords") or "",
         "wordCount": words(p["en"]["body"]), "isAccessibleForFree": True,
+        "isPartOf": {"@type": "Collection", "name": SERIES[sid][lang]["title"], "url": "https://getfotocal.com/blog/series/%s/" % sid, "position": n + 1},
     }, ensure_ascii=False)
+    ld_post, ld_post_es = ld_for("en"), ld_for("es")
     ld_crumbs = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "{{i18n:nav.home}}", "item": "https://getfotocal.com/"},
         {"@type": "ListItem", "position": 2, "name": "{{i18n:nav.blog}}", "item": "https://getfotocal.com/blog/"},
         {"@type": "ListItem", "position": 3, "name": strip_tags(p["en"]["title"]), "item": "https://getfotocal.com/blog/%s/" % p["slug"]}]}, ensure_ascii=False)
-    prev_html = NAVITEM.format(cls="", slug=prev_p["slug"], which="prev", label="Previous article", title_en=prev_p["en"]["title"], title_es=prev_p["es"]["title"]) if prev_p else '<span class="post-nav-item post-nav-empty" aria-hidden="true"></span>'
-    next_html = NAVITEM.format(cls=" post-nav-next", slug=next_p["slug"], which="next", label="Next article", title_en=next_p["en"]["title"], title_es=next_p["es"]["title"]) if next_p else '<span class="post-nav-item post-nav-empty" aria-hidden="true"></span>'
+    # the first and last post of a series point back at the hub instead of at nothing
+    prev_html = NAVITEM.format(cls="", href="../%s/" % prev_p["slug"], which="prev", label="Previous in the series", title_en=prev_p["en"]["title"], title_es=prev_p["es"]["title"]) if prev_p else hub_nav(sid, "")
+    next_html = NAVITEM.format(cls=" post-nav-next", href="../%s/" % next_p["slug"], which="next", label="Next in the series", title_en=next_p["en"]["title"], title_es=next_p["es"]["title"]) if next_p else hub_nav(sid, " post-nav-next")
+    strip = STRIP.format(sid=sid, n=n + 1, total=len(order), title_en=SERIES[sid]["en"]["title"], title_es=SERIES[sid]["es"]["title"])
     rel = "\n".join(card(by_slug[s], "../%s/" % s, i) for i, s in enumerate(related[p["slug"]]))
     care = CARE if p.get("caution") else ""
     return HEAD.format(care="", care_top=care, slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
@@ -321,7 +357,130 @@ def render_post(p, idx):
                        date=p["date"], modified=modified, date_en=fmt_date(p["date"], "en"), date_es=fmt_date(p["date"], "es"),
                        updated_en=upd_en, updated_es=upd_es, min_en=minutes(p["en"]["body"]), min_es=minutes(p["es"]["body"]),
                        cat=p["category"], cat_en=CAT_EN[p["category"]], body_en=p["en"]["body"], body_es=p["es"]["body"],
-                       ld_post=ld_post, ld_crumbs=ld_crumbs, play=PLAY, prev=prev_html, next=next_html, related=rel)
+                       ld_post=ld_post, ld_post_es=ld_post_es, ld_crumbs=ld_crumbs, play=PLAY, prev=prev_html, next=next_html, related=rel, strip=strip)
+
+
+# ── series hub: /blog/series/<id>/ ─────────────────────────────────────
+HUB = """<!DOCTYPE html>
+<!-- GENERATED by tools/gen_blog.py from tools/blog/series.json — do not edit here. -->
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title_en} — Fotocal</title>
+  <meta name="description" content="{intro_en}">
+  <link rel="canonical" href="https://getfotocal.com/blog/series/{sid}/">
+  <link rel="alternate" hreflang="en" href="https://getfotocal.com/blog/series/{sid}/">
+  <link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/{sid}/">
+  <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/series/{sid}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fotocal">
+  <meta property="og:title" content="{title_en}">
+  <meta property="og:description" content="{intro_en}">
+  <meta property="og:url" content="https://getfotocal.com/blog/series/{sid}/">
+  <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{title_en}">
+  <meta name="twitter:description" content="{intro_en}">
+  <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+  <script type="application/ld+json" data-lang-block="en">{ld}</script>
+  <script type="application/ld+json" data-lang-block="es">{ld_es}</script>
+  <script type="application/ld+json">{ld_crumbs}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png?v=3">
+  <link rel="icon" href="../../../assets/favicon.ico?v=3" sizes="32x32">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/icon-192.png">
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/css/fonts.css">
+  <link rel="stylesheet" href="../../../assets/css/site.css">
+  <link rel="stylesheet" href="../../../assets/css/home.css">
+  <link rel="stylesheet" href="../../../assets/css/features.css">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body class="page-fx page-blog page-series">
+<div id="site-nav"></div>
+
+<main id="main">
+  <article class="post hub">
+    <header class="post-head">
+      <div class="container-narrow">
+        <nav class="post-crumbs reveal" aria-label="Breadcrumb">
+          <a href="../../../" data-i18n="nav.home">Home</a><span class="sep" aria-hidden="true">/</span><a href="../../" data-i18n="nav.blog">Blog</a><span class="sep" aria-hidden="true">/</span><a href="../../?cat={cat}" data-i18n="blog.cat.{cat}">{cat_en}</a>
+        </nav>
+        <span class="kicker reveal" data-i18n="blog.series.one">A series</span>
+        <h1 class="post-title reveal" data-lang-block="en">{title_en}</h1>
+        <h1 class="post-title reveal" data-lang-block="es">{title_es}</h1>
+        <p class="post-lead art-lead reveal" data-lang-block="en">{intro_en}</p>
+        <p class="post-lead art-lead reveal" data-lang-block="es">{intro_es}</p>
+        <div class="post-meta reveal">
+          <span data-lang-block="en">{count} articles · {min_en} <span data-i18n="blog.min">min read</span></span>
+          <span data-lang-block="es">{count} artículos · {min_es} <span data-i18n="blog.min">min de lectura</span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-narrow">
+      <ol class="hub-list reveal">
+{items}
+      </ol>
+      <p class="hub-back reveal"><a href="../../" data-i18n="blog.series.back">← All articles</a></p>
+    </div>
+  </article>
+</main>
+
+<div id="site-footer"></div>
+<script src="../../../assets/js/i18n.js"></script>
+<script src="../../../assets/js/layout.js" data-page="blog"></script>
+<script src="../../../assets/js/main.js"></script>
+</body>
+</html>
+"""
+
+HUB_ITEM = """        <li class="hub-item">
+          <a class="hub-link" href="../../{slug}/">
+            <span class="hub-num" aria-hidden="true">{n}</span>
+            <span class="hub-text">
+              <strong data-lang-block="en">{title_en}</strong><strong data-lang-block="es">{title_es}</strong>
+              <span data-lang-block="en">{lead_en}</span><span data-lang-block="es">{lead_es}</span>
+              <small><span data-lang-block="en">{min_en} <span data-i18n="blog.min">min read</span></span><span data-lang-block="es">{min_es} <span data-i18n="blog.min">min de lectura</span></span></small>
+            </span>
+          </a>
+        </li>"""
+
+def render_hub(sid):
+    sr = SERIES[sid]
+    ps = [by_slug[s] for s in sr["posts"]]
+    items = "\n".join(HUB_ITEM.format(slug=q["slug"], n=i + 1, title_en=q["en"]["title"], title_es=q["es"]["title"], lead_en=q["en"]["lead"], lead_es=q["es"]["lead"],
+                                      min_en=minutes(q["en"]["body"]), min_es=minutes(q["es"]["body"])) for i, q in enumerate(ps))
+    def ld_for(lang): return json.dumps({"@context": "https://schema.org", "@type": "Collection", "name": sr[lang]["title"], "description": sr[lang]["intro"],
+                     "url": "https://getfotocal.com/blog/series/%s/" % sid,
+                     "hasPart": [{"@type": "BlogPosting", "position": i + 1, "headline": strip_tags(q[lang]["title"]), "url": "https://getfotocal.com/blog/%s/" % q["slug"]} for i, q in enumerate(ps)]}, ensure_ascii=False)
+    ld_crumbs = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "{{i18n:nav.home}}", "item": "https://getfotocal.com/"},
+        {"@type": "ListItem", "position": 2, "name": "{{i18n:nav.blog}}", "item": "https://getfotocal.com/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "{{i18n:blog.series.t.%s}}" % sid, "item": "https://getfotocal.com/blog/series/%s/" % sid}]}, ensure_ascii=False)
+    return HUB.format(ld_es=ld_for("es"), sid=sid, cat=sr["category"], cat_en=CAT_EN[sr["category"]], title_en=sr["en"]["title"], title_es=sr["es"]["title"],
+                      intro_en=esc(sr["en"]["intro"]), intro_es=esc(sr["es"]["intro"]), count=len(ps),
+                      min_en=sum(minutes(q["en"]["body"]) for q in ps), min_es=sum(minutes(q["es"]["body"]) for q in ps),
+                      items=items, ld=ld_for("en"), ld_crumbs=ld_crumbs)
+
+SERIES_CARD = """        <a class="habit-card sf-read series-card reveal" href="series/{sid}/"{delay}>
+          <span class="log-tag" data-i18n="blog.cat.{cat}">{cat_en}</span>
+          <h3 data-lang-block="en">{title_en}</h3>
+          <h3 data-lang-block="es">{title_es}</h3>
+          <p data-lang-block="en">{intro_en}</p>
+          <p data-lang-block="es">{intro_es}</p>
+          <span class="post-card-meta"><span data-lang-block="en">{count} articles</span><span data-lang-block="es">{count} artículos</span></span>
+          <span class="fx-link" data-i18n="blog.series.start">Start the series →</span>
+        </a>"""
+
+def series_cards():
+    return "\n".join(SERIES_CARD.format(sid=sid, cat=sr["category"], cat_en=CAT_EN[sr["category"]], title_en=sr["en"]["title"], title_es=sr["es"]["title"],
+                                        intro_en=sr["en"]["intro"], intro_es=sr["es"]["intro"], count=len(sr["posts"]),
+                                        delay=(' style="--rd:%.2fs"' % (0.06 * i)) if i else "") for i, (sid, sr) in enumerate(SERIES.items()))
 
 # ── index ─────────────────────────────────────────────────────────────
 INDEX = """<!DOCTYPE html>
@@ -373,6 +532,20 @@ INDEX = """<!DOCTYPE html>
         <span class="kicker reveal" data-i18n="blog.kicker">The Fotocal blog</span>
         <h1 class="hero-title reveal" data-i18n-html="blog.title">Notes on eating, <em class="accent">honestly</em>.</h1>
         <p class="hero-sub reveal" data-i18n="blog.lead">Practical, unglamorous writing on nutrition, weight and the habits that hold the whole thing together.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sec-light-2" id="series">
+    <div class="container">
+      <!--# Nine reading orders, from tools/blog/series.json. Every post is in
+           exactly one; the hub at series/<id>/ lists it in order. -->
+      <header class="fx-chap">
+        <span class="kicker reveal" data-i18n="blog.series.kicker">Read in order</span>
+        <h2 class="section-title reveal" data-i18n="blog.series.h">Nine short series, from first question to last</h2>
+      </header>
+      <div class="habit-grid sf-grid-3 series-grid">
+{series}
       </div>
     </div>
   </section>
@@ -442,7 +615,7 @@ def render_index():
     ld_crumbs = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "{{i18n:nav.home}}", "item": "https://getfotocal.com/"},
         {"@type": "ListItem", "position": 2, "name": "{{i18n:nav.blog}}", "item": "https://getfotocal.com/blog/"}]}, ensure_ascii=False)
-    return INDEX.format(count=len(posts), ld=ld, ld_crumbs=ld_crumbs, play=PLAY, chips=chips, cards=cards,
+    return INDEX.format(count=len(posts), ld=ld, ld_crumbs=ld_crumbs, play=PLAY, chips=chips, cards=cards, series=series_cards(),
                         f_slug=newest["slug"], f_cat=newest["category"], f_cat_en=CAT_EN[newest["category"]],
                         f_title_en=newest["en"]["title"], f_title_es=newest["es"]["title"], f_lead_en=newest["en"]["lead"], f_lead_es=newest["es"]["lead"],
                         f_date_en=fmt_date(newest["date"], "en"), f_date_es=fmt_date(newest["date"], "es"),
@@ -455,6 +628,11 @@ if __name__ == "__main__":
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(render_post(p, i))
     open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(render_index())
+    for sid in SERIES:
+        d = os.path.join(SRC, "series", sid)
+        os.makedirs(d, exist_ok=True)
+        open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(render_hub(sid))
+    print("series hubs:", len(SERIES))
     # retired posts: a redirect stub at the old URL, never a 404
     rpath = os.path.join(ROOT, "tools", "blog", "redirects.json")
     redirects = json.load(open(rpath, encoding="utf-8")) if os.path.exists(rpath) else {}

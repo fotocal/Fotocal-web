@@ -1,0 +1,57 @@
+{
+ "_comment": "Reading order for the blog. Every live post belongs to exactly one series; tools/gen_blog.py asserts this, renders /blog/series/<id>/ hubs, and takes each post's prev/next from the series order. 'category' names the filter chip the whole series sits under (blog.cat.<key> in i18n-pages.js).",
+ "calories": {
+  "category": "calories",
+  "en": {"title": "Calories, from the ground up", "intro": "What your body burns, what a deficit is, how fast to lose, and how to count without turning it into a second job. Seven articles, in the order the questions usually come."},
+  "es": {"title": "Las calorías, desde cero", "intro": "Qué gasta tu cuerpo, qué es un déficit, a qué ritmo perder y cómo contar sin convertirlo en un segundo trabajo. Siete artículos, en el orden en que suelen llegar las preguntas."},
+  "posts": ["understanding-your-basal-metabolic-rate", "tdee-how-many-calories-you-need", "calorie-deficit-for-fat-loss", "how-fast-should-you-lose-weight", "how-to-count-calories-accurately", "track-calories-without-weighing", "common-calorie-counting-mistakes"]
+ },
+ "keeping-it-off": {
+  "category": "weightloss",
+  "en": {"title": "Losing weight that stays off", "intro": "The part after the first month: stalls, the scale, the “starvation mode” story, and what maintenance actually asks of you."},
+  "es": {"title": "Perder peso que no vuelve", "intro": "La parte que viene después del primer mes: estancamientos, la báscula, el cuento del «modo supervivencia» y qué te pide de verdad el mantenimiento."},
+  "posts": ["how-to-lose-weight-sustainably", "weight-loss-plateaus", "the-truth-about-starvation-mode", "why-the-scale-is-not-the-whole-story", "maintaining-weight-loss"]
+ },
+ "popular-diets": {
+  "category": "weightloss",
+  "en": {"title": "Popular diets, examined", "intro": "Crash diets, fasting, low-carb against low-fat, meal timing and detoxes, each held up against the evidence rather than the marketing."},
+  "es": {"title": "Las dietas de moda, examinadas", "intro": "Dietas exprés, ayuno, baja en carbohidratos frente a baja en grasa, horarios y détox, cada una contrastada con la evidencia y no con el marketing."},
+  "posts": ["why-crash-diets-fail", "intermittent-fasting-what-the-evidence-says", "low-carb-vs-low-fat", "does-meal-timing-matter-for-weight-loss", "the-truth-about-detox-diets-and-cleanses"]
+ },
+ "macros": {
+  "category": "nutrition",
+  "en": {"title": "Macros: protein, carbs and fat", "intro": "What the three macronutrients do, how much of each you need, and how to set targets for weight loss without a spreadsheet."},
+  "es": {"title": "Macros: proteína, carbohidratos y grasa", "intro": "Qué hace cada uno de los tres macronutrientes, cuánto necesitas de cada uno y cómo fijar objetivos para perder peso sin hoja de cálculo."},
+  "posts": ["macronutrients-101", "how-much-protein-per-day", "does-protein-timing-matter", "high-protein-diet-benefits-and-how-to-start", "carbs-are-not-the-enemy", "dietary-fat-how-much-and-which-kinds", "how-to-set-your-macros-for-weight-loss"]
+ },
+ "beyond-macros": {
+  "category": "nutrition",
+  "en": {"title": "Beyond the macros", "intro": "Fiber, vitamins and minerals, sugar, food quality and the label on the back of the packet: the things a calorie count does not show you."},
+  "es": {"title": "Más allá de los macros", "intro": "Fibra, vitaminas y minerales, azúcar, calidad de la comida y la etiqueta de la parte de atrás del envase: lo que un recuento de calorías no te enseña."},
+  "posts": ["fiber-the-underrated-nutrient", "why-micronutrients-matter", "added-sugar-vs-natural-sugar", "do-calories-matter-or-food-quality", "how-to-read-nutrition-labels"]
+ },
+ "everyday-eating": {
+  "category": "eating",
+  "en": {"title": "Eating well on an ordinary day", "intro": "The plate, the foods that fill you up, portions, snacks, breakfast, restaurants and the food budget. No rules you could not keep on a Tuesday."},
+  "es": {"title": "Comer bien un día normal", "intro": "El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes y el presupuesto. Sin reglas que no puedas cumplir un martes."},
+  "posts": ["what-a-balanced-plate-looks-like", "best-foods-for-weight-loss", "portion-control-simple-tricks", "healthy-snacks-that-satisfy", "high-protein-breakfast-ideas", "eating-out-without-wrecking-your-diet", "how-to-eat-healthy-on-a-budget"]
+ },
+ "planning-the-week": {
+  "category": "eating",
+  "en": {"title": "Planning the week", "intro": "Thirty minutes of planning, a list written from the plan, and two ways to cook ahead. Four articles, in the order you would do them."},
+  "es": {"title": "Planificar la semana", "intro": "Treinta minutos de planificación, una lista escrita a partir del plan y dos formas de cocinar por adelantado. Cuatro artículos, en el orden en que los harías."},
+  "posts": ["plan-a-week-of-meals-in-30-minutes", "how-to-build-a-healthy-grocery-list", "meal-prep-for-beginners", "batch-cooking-save-time-eat-better"]
+ },
+ "mind-and-appetite": {
+  "category": "mindset",
+  "en": {"title": "Appetite, mood and habit", "intro": "Attention at the table, cravings, eating for reasons other than hunger, the evening, and staying consistent when motivation is not there. Gentler than the rest of the blog, on purpose."},
+  "es": {"title": "Apetito, ánimo y hábito", "intro": "Atención en la mesa, antojos, comer por motivos que no son el hambre, las noches y la constancia cuando no hay motivación. Más suave que el resto del blog, a propósito."},
+  "posts": ["mindful-eating-beginners-guide", "intuitive-eating-vs-calorie-counting", "how-to-handle-cravings-without-guilt", "emotional-eating", "how-to-stop-overeating-at-night", "how-to-stay-consistent-with-healthy-habits"]
+ },
+ "movement-and-sleep": {
+  "category": "movement",
+  "en": {"title": "Movement, sleep and water", "intro": "What exercise does and does not do for weight, the movement you are not counting, lifting against cardio, and the two habits that quietly decide how the rest goes: sleep and water."},
+  "es": {"title": "Movimiento, sueño y agua", "intro": "Qué hace y qué no hace el ejercicio por tu peso, el movimiento que no cuentas, pesas frente a cardio y los dos hábitos que deciden en silencio cómo va todo lo demás: dormir y beber agua."},
+  "posts": ["do-you-need-to-exercise-to-lose-weight", "how-many-calories-does-exercise-burn", "neat-the-hidden-calorie-burn", "cardio-vs-strength-training-for-fat-loss", "building-muscle-while-losing-fat", "how-sleep-affects-your-weight", "hydration-and-weight"]
+ }
+}

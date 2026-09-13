@@ -1,5 +1,13 @@
 # App bugs observed during website work — for the next app batch
 
+> **2026-09-14 — status.** Items 0a, 0d (root cause), 0g, 0h and 0i are fixed
+> on app branch `claude/celebration-ceiling-and-milestone-copy` (commit on top
+> of 456ea9b), together with the celebration ceiling, milestone copy and
+> support sheets already on that branch. None of it has been on a screen yet;
+> the branch is waiting for one build. 0j is a design decision put to the
+> owner, unchanged in code. 0 (Spanish voice transcript), 0b, 0c, 0e and the
+> coach items are untouched.
+
 Logged here so they survive the website sessions. These are APP defects,
 not website work. Do not fix from this repo; do not chase during Part 3.
 

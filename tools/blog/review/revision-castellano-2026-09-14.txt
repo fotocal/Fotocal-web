@@ -1,0 +1,472 @@
+# Revisión del castellano — blog de Fotocal
+
+Doce artículos, en el orden en que se leen en la web. Cada uno lleva su TÍTULO, su ENTRADILLA (la frase que aparece bajo el título y en Google) y su CUERPO.
+
+Qué te pedimos: que el texto suene a alguien que escribe en castellano de España, no a una traducción. Corrige lo que te suene forzado, calcado del inglés o poco natural. No hace falta cambiar lo que ya está bien, ni el contenido, ni las cifras.
+
+Cómo hacerlo: escribe directamente encima del texto, en este mismo documento (Word, Google Docs o el bloc de notas: cualquiera vale). Puedes activar el control de cambios si te resulta cómodo, pero no es necesario.
+
+Tres cosas que no hay que tocar: los títulos de sección en negrita siguen siendo títulos de sección; cada punto de una lista sigue siendo una línea; y las líneas grises que empiezan por «ref:» son la referencia técnica de cada artículo y no se traducen.
+
+Los enlaces internos no se ven aquí a propósito; se vuelven a colocar al montar la web, así que puedes reescribir cualquier frase sin preocuparte por ellos.
+
+Al terminar, devuelve este mismo archivo tal cual.
+
+
+======================================================================
+SERIE: Las calorías, desde cero
+======================================================================
+
+----------------------------------------------------------------------
+ref: 1 · tdee-how-many-calories-you-need
+
+TÍTULO:
+TDEE explicado: cuántas calorías necesitas de verdad
+
+ENTRADILLA:
+Tu TDEE es el número de calorías que quemas al día. Cómo estimarlo, por qué cambia y cómo usarlo para perder, ganar o mantener peso.
+
+CUERPO:
+Si alguna vez te has preguntado «¿cuántas calorías debo comer?», la respuesta honesta es: depende de tu TDEE. El Gasto Energético Total Diario es la cantidad total de calorías que tu cuerpo quema en 24 horas. Come por debajo y pierdes peso; come por encima y ganas. Todo lo demás son detalles.
+
+## Las cuatro partes de tu TDEE
+- TMB (tasa metabólica basal): la energía que te mantiene vivo en reposo, normalmente el 60–70 % del total.
+- ETA (efecto térmico de los alimentos): las calorías que gastas digiriendo, alrededor del 10 %. La proteína es la que más cuesta digerir.
+- NEAT: caminar, moverte, las tareas de casa. Varía muchísimo entre personas.
+- Ejercicio: los entrenamientos deliberados, a menudo menos de lo que la gente supone.
+
+## Cómo estimar tu TDEE
+Empieza con una fórmula de TMB como la de Mifflin-St Jeor y multiplícala por un factor de actividad: 1,2 si eres sedentario y hasta alrededor de 1,7 si eres muy activo. Eso te da una cifra aproximada. Pero las fórmulas son medias, y tu número real puede diferir en 200–300 calorías en cualquier dirección.
+
+## La mejor forma: medirlo
+El TDEE más exacto son tus propios datos. Registra lo que comes de forma constante durante dos o tres semanas y sigue tu peso. Si el peso se mantiene estable, tu ingesta media diaria es tu TDEE de mantenimiento. Esto gana a cualquier calculadora porque refleja tu metabolismo y tu actividad concretos.
+> Una calculadora te da una suposición de partida. Tu báscula, con el tiempo, te da la verdad.
+
+## Por qué cambia tu TDEE
+El TDEE no es fijo. Baja según pierdes peso (un cuerpo más pequeño quema menos), sube con la masa muscular y se mueve con la actividad, el estrés y el sueño. Por eso un déficit que funcionaba al principio puede estancarse después: hay que actualizar el objetivo.
+
+## Cómo aplicarlo
+Para perder grasa, resta un 15–20 % a tu TDEE (el artículo sobre el déficit explica por qué no más). Para ganar músculo, súmale alrededor de un 10 %. Para mantener, come justo en él. Recalcúlalo cada cuatro o seis semanas o tras un cambio de peso notable. Registrar tus comidas durante esas pocas semanas es la única parte que cuesta, y es lo que convierte la suposición de una calculadora en tu propio número.
+
+## Ideas clave
+- TDEE = TMB + digestión + movimiento diario + ejercicio.
+- Las calculadoras estiman; tus propios datos registrados confirman.
+- Tu TDEE baja según pierdes peso: ve ajustando.
+- Un déficit del 15–20 % para una pérdida de grasa estable y sostenible.
+
+
+----------------------------------------------------------------------
+ref: 2 · calorie-deficit-for-fat-loss
+
+TÍTULO:
+Déficit calórico: la regla detrás de toda pérdida de grasa
+
+ENTRADILLA:
+Toda dieta que funciona lo hace porque crea un déficit calórico. Qué es un déficit, cómo de grande debe ser y cómo sostenerlo sin pasarlo mal.
+
+CUERPO:
+Hay cientos de dietas y no paran de discutir entre ellas. Pero si quitas el marketing, todas las que hacen perder grasa lo consiguen igual: poniéndote en déficit calórico, es decir, consumiendo menos energía de la que gastas. Cuando entiendes esto, dejas de buscar magia y empiezas a elegir un enfoque que puedas mantener de verdad.
+
+## Qué es realmente un déficit
+Tu cuerpo necesita energía cada día (tu TDEE). Cuando comes menos que eso, cubre la diferencia sobre todo con grasa almacenada. La vieja regla dice que medio kilo de grasa guarda unas 3.500 calorías, así que un déficit de 500 al día da cerca de medio kilo por semana. Tómalo como una media aproximada: exagera la pérdida con el paso de las semanas, porque un cuerpo más ligero quema menos, pero te da el orden de magnitud.
+
+## ¿Cómo de grande debe ser el déficit?
+Más grande no es mejor. Un déficit demasiado agresivo trae hambre, cansancio y pérdida de músculo, y suele acabar en comer mucho más después. Un déficit moderado —entre un 15 % y un 25 % por debajo del mantenimiento— protege el músculo, mantiene la energía y es mucho más fácil de sostener.
+- Pequeño (10–15 %): lento pero muy sostenible.
+- Moderado (15–25 %): el punto dulce para la mayoría.
+- Agresivo (más del 25 %): solo a corto plazo, y pocas veces compensa.
+
+## Por qué se estanca un déficit
+Por dos motivos. Primero, según pierdes peso tu mantenimiento baja y el déficit se encoge. Segundo —y más habitual—: el registro se relaja. Los picoteos sin apuntar, las raciones más grandes y los findes relajados borran el déficit sin que te enteres. Registrar con honestidad es lo que lo mantiene real, y el artículo sobre estancamientos explica cómo comprobarlo.
+
+## Proteger el músculo en déficit
+Come suficiente proteína (más o menos 1,6–2,2 g por kilo de peso) y haz algo de entrenamiento de fuerza. Las dos cosas le dicen a tu cuerpo que conserve músculo y tire de la grasa en su lugar.
+
+## Hacerlo llevadero
+Un déficit que odias no dura. Llena el plato de alimentos con volumen, fibra y proteína, que sacian con menos calorías. Mantén el registro lo bastante sencillo como para seguir haciéndolo; un déficit solo existe los días en que es real.
+
+## Ideas clave
+- Toda dieta eficaz funciona creando un déficit calórico.
+- Apunta a un 15–25 % por debajo del mantenimiento, no al recorte más grande posible.
+- Come suficiente proteína y haz algo de fuerza para conservar músculo.
+- Los estancamientos suelen significar que el déficit se encogió o que el registro se relajó.
+
+
+----------------------------------------------------------------------
+ref: 3 · how-fast-should-you-lose-weight
+
+TÍTULO:
+¿A qué velocidad deberías perder peso?
+
+ENTRADILLA:
+Más rápido no es mejor. El ritmo ideal de pérdida de peso para proteger el músculo, evitar el efecto rebote y no recuperarlo.
+
+CUERPO:
+Para la mayoría, en torno al 0,5–1 % del peso corporal a la semana —unos 0,4–0,8 kg para alguien de 80 kg—, y más despacio también vale. Más rápido cuesta músculo y rara vez se mantiene. El ritmo que elijas moldea el resultado, no solo lo pronto que llegas.
+
+## El punto dulce
+La mayoría de las guías se sitúan en torno a un 0,5–1 % del peso corporal por semana: para alguien de 80 kg, unos 0,4–0,8 kg. Es un rango que se ha visto que funciona, no un objetivo que cumplir, y más despacio también está bien.
+
+## Por qué ir más rápido sale mal
+- Pérdida de músculo: los déficits agresivos cuestan músculo junto con la grasa, y acabas pesando menos pero con menos fuerza.
+- Hambre de rebote: la restricción extrema sube el apetito, y comer mucho después se vuelve mucho más probable.
+- Bajones de energía y ánimo: comer demasiado poco hunde los entrenamientos, el sueño y el humor.
+- Carencias de nutrientes: con calorías muy bajas cuesta cubrir los micronutrientes.
+
+## Cuándo tiene sentido ir más rápido
+Quien tiene más peso que perder normalmente puede bajar algo más rápido al principio, porque un cuerpo más grande soporta un déficit mayor. A medida que pesas menos, baja el ritmo para conservar músculo y para que el plan siga siendo vivible.
+
+## El objetivo real: no recuperarlo
+Lo que sabemos de las personas que mantienen el peso perdido apunta a que importa cómo se perdió: los enfoques exprés tienden a rebotar, y los graduales, basados en hábitos, aguantan mejor. El artículo sobre el mantenimiento cubre lo que viene después.
+Un ritmo constante es más fácil de mantener cuando ves lo que comes, porque un déficit moderado se convierte en uno extremo sin querer, no a propósito.
+
+## Ideas clave
+- Un 0,5–1 % del peso corporal por semana es el rango habitual; más despacio también vale.
+- Perder muy rápido cuesta músculo y suele rebotar.
+- Con más peso de partida se puede ir más rápido al principio, y luego frenar.
+- Cómo lo pierdes decide si se queda fuera.
+
+
+----------------------------------------------------------------------
+ref: 4 · how-to-count-calories-accurately
+
+TÍTULO:
+Cómo contar calorías con precisión: guía para principiantes
+
+ENTRADILLA:
+Aprende a contar calorías con precisión sin quemarte. Una guía práctica y sin rodeos sobre raciones, etiquetas y cómo crear un hábito que dure.
+
+CUERPO:
+Contar calorías es una de las formas más fiables de entender cómo comes, pero casi todo el mundo lo deja en una semana porque busca una precisión que en realidad nadie necesita. El objetivo no es ser perfecto. Es ser constante y aproximadamente correcto, día tras día. Esta guía te enseña cómo.
+
+## Por qué las calorías siguen importando
+El cambio de peso lo impulsa en gran medida el balance energético: las calorías que entran frente a las que gastas. Las hormonas, el sueño, la calidad de la comida y la actividad influyen en ese balance, pero no lo suspenden. Cuando cuentas calorías, haces visible un número invisible, y los números visibles son mucho más fáciles de manejar.
+
+## Paso 1: encuentra tu punto de partida
+Antes de recortar nada, pasa de tres a cinco días registrando lo que comes normalmente. No cambies todavía tus hábitos. Esa base te dice dónde están de verdad tus calorías de mantenimiento, algo mucho más útil que una estimación genérica de internet.
+
+## Paso 2: pesa, no adivines (al principio)
+La mayor fuente de error es el tamaño de las raciones. Los estudios muestran una y otra vez que la gente subestima lo que come entre un 20 % y un 40 %. Una báscula de cocina barata corrige casi todo eso. Pesa sobre todo los alimentos densos en calorías —aceites, cremas de frutos secos, queso, arroz y pasta—, porque una «cucharada» de aceite se convierte fácilmente en tres.
+- Sólidos: pésalos en gramos y busca la entrada correspondiente.
+- Líquidos: usa mililitros o la ración de la etiqueta.
+- Envasados: fíate de la etiqueta por 100 g y multiplica.
+
+## Paso 3: lee las etiquetas con cabeza
+Las etiquetas nutricionales indican las calorías por ración y por 100 g. La cifra por 100 g es tu aliada, porque las raciones que marcan suelen ser poco realistas. Mira cuántas raciones trae el paquete: una bolsa de «250 calorías» que contiene 2,5 raciones son en realidad 625 calorías.
+
+## Paso 4: restaurantes y comida casera
+No puedes pesar un plato de restaurante, así que estima por bloques: una palma de proteína, un puño de carbohidratos, un pulgar de grasas (el método de las porciones de la mano tiene el juego completo). Para la comida casera, registra los ingredientes según los echas y divide por el número de raciones. No será exacto, pero una estimación constante gana a no estimar nada.
+> La precisión es una dirección, no un destino. Una comida registrada con un 90 % de acierto cada día gana a una registrada a la perfección una vez por semana.
+
+## Paso 5: haz que el hábito se quede
+Registra en el momento o justo después de comer: la memoria se desvanece rápido. Cuando puedas, registra las comidas grandes por adelantado, para decidir antes de tener hambre. Y no «ahorres» calorías saltándote comidas; suele salir mal y acabar en un exceso más tarde.
+
+## Dónde ayuda el registro por foto
+La fricción de buscar en bases de datos y teclear raciones es la razón por la que casi todo el mundo lo deja. Hacer una foto del plato y obtener una estimación quita casi toda esa fricción. Una estimación por foto es menos precisa que una báscula, así que úsala por rapidez en los días de lío y la báscula cuando quieras precisión. Los dos juntos son lo que hace que un registro fiable dure.
+
+## Ideas clave
+- Busca ser constante y aproximadamente correcto, no perfecto.
+- Pesa los alimentos densos en calorías: causan los mayores errores.
+- Usa la cifra por 100 g y mira las raciones por paquete.
+- Estima los platos de restaurante con las porciones de la mano.
+- Registra al momento y reduce la fricción para no abandonar.
+
+
+======================================================================
+SERIE: Perder peso que no vuelve
+======================================================================
+
+----------------------------------------------------------------------
+ref: 5 · how-to-lose-weight-sustainably
+
+TÍTULO:
+Cómo perder peso de forma sostenible (sin dietas exprés)
+
+ENTRADILLA:
+Las dietas exprés fracasan porque son invivibles. Un enfoque sostenible y basado en la evidencia que sí puedes mantener toda la vida.
+
+CUERPO:
+La mayoría de la gente no fracasa al perder peso porque no pueda perderlo. Fracasa porque lo pierde de una forma que no puede sostener y luego rebota. Perder peso de forma sostenible tiene menos que ver con la intensidad y más con construir un enfoque con el que puedas vivir.
+
+## Fija un déficit moderado
+Un déficit suave, el que pierde alrededor de un 0,5–1 % del peso corporal por semana o menos, protege el músculo, conserva la energía y, lo más importante, no dispara el hambre intensa que hace difícil mantener cualquier plan.
+
+## Construye las comidas sobre proteína y fibra
+Estos dos nutrientes hacen el trabajo pesado de la saciedad. Un plato de proteína magra, verduras y un carbohidrato integral te mantiene satisfecho durante horas y hace que el déficit apenas se note.
+
+## Conserva los alimentos que te gustan
+Quitar todo lo que disfrutas suele acabar en comer mucho de eso más tarde. Deja margen, digamos un 10–20 % de las calorías, para lo que te gusta (el artículo sobre antojos explica por qué funciona). Una forma de comer que incluye una onza de chocolate es una que vas a mantener.
+
+## Registra, pero sin obsesionarte
+Ser consciente es potente. Registrar lo que comes durante un tiempo te crea una intuición para las raciones y las calorías que perdura incluso cuando lo dejas. Lo que te haga el registro rápido, una foto, una báscula, una comida guardada, es lo que hace que sigas más allá de la segunda semana.
+
+## Cuenta con que la báscula haga zigzag
+El peso fluctúa a diario con el agua, la comida y las hormonas. Juzga el progreso por la tendencia de varias semanas, no por una mañana suelta. Un pico hacia arriba no es un fracaso y uno hacia abajo no es un éxito.
+
+## Piensa en el mantenimiento desde el primer día
+Perder el peso es la mitad del trabajo. Decide pronto cómo vas a comer cuando llegues a tu objetivo (el artículo sobre el mantenimiento va justo de eso), para hacer una transición suave en vez de volver de golpe a los viejos hábitos.
+
+## Ideas clave
+- Mantén el déficit suave; más despacio también vale.
+- Construye las comidas sobre proteína y fibra para saciarte sin esfuerzo.
+- Conserva algunos alimentos que te gusten, para que el plan dure.
+- Registra para crear intuición y juzga el progreso por la tendencia.
+
+
+----------------------------------------------------------------------
+ref: 6 · weight-loss-plateaus
+
+TÍTULO:
+Estancamientos al perder peso: por qué pasan y qué hacer
+
+ENTRADILLA:
+¿Progreso parado? Los estancamientos son normales y tienen arreglo. Las razones reales por las que se frena la pérdida y formas prácticas de reactivarla.
+
+CUERPO:
+Estabas bajando de forma constante y de pronto la báscula se congeló dos, tres, cuatro semanas. Casi siempre significa que el déficit se ha cerrado sin que lo notes: un cuerpo más ligero gasta menos, el registro se ha relajado o te mueves menos que antes. A veces ni siquiera es un estancamiento, solo agua que tapa la pérdida de grasa. Así se distingue, y qué hacer.
+
+## Primero: ¿es realmente un estancamiento?
+Unos días planos son solo ruido de agua. Un estancamiento de verdad son tres semanas o más sin cambio en tu media semanal. Si ha pasado menos, sigue adelante: puede que ni siquiera te hayas estancado.
+
+## Motivo 1: tu mantenimiento ha bajado
+Un cuerpo más ligero quema menos calorías, así que tu mantenimiento es más bajo. El déficit que antes funcionaba se ha encogido a medida que perdías peso, y tras meses de dieta el cuerpo además economiza un poco: la parte real del cuento del «modo supervivencia». Esta es la causa más habitual y más legítima.
+
+## Motivo 2: el registro se ha relajado
+Las raciones crecen, los bocados se quedan sin apuntar y las estimaciones se deslizan con el tiempo. Aprieta el registro durante una semana, vuelve a pesar los alimentos, y muchas veces el déficit reaparece solo.
+
+## Motivo 3: menos movimiento diario
+Las dietas pueden hacerte mover menos sin que te des cuenta (el NEAT baja): menos inquietud, andar más despacio. Puede que tus entrenamientos sigan intactos mientras tu actividad de fondo ha caído en silencio.
+
+## Cómo romperlo
+- Recalcula tus calorías para tu peso nuevo y recorta 100–200 si hace falta.
+- Aprieta el registro durante una semana para detectar desvíos ocultos.
+- Añade movimiento: un objetivo diario de pasos es la palanca más fácil.
+- Plantéate una pausa en mantenimiento una o dos semanas para recuperar adherencia.
+Una «semana de precisión» pesando y registrándolo todo suele enseñar por dónde se colaron las calorías de más, y con una semana basta.
+
+## Ideas clave
+- Un estancamiento real son 3 semanas o más sin cambio en la media.
+- Causas habituales: menos mantenimiento, registro relajado, menos movimiento.
+- Recalcula calorías, aprieta el registro y suma pasos.
+- Una pausa corta de la dieta puede restaurar la adherencia.
+
+
+----------------------------------------------------------------------
+ref: 7 · the-truth-about-starvation-mode
+
+TÍTULO:
+La verdad sobre el «modo supervivencia»
+
+ENTRADILLA:
+¿Comer muy poco detiene la pérdida de peso? La ciencia real de la adaptación metabólica, los mitos desmontados y qué pasa de verdad cuando comes poco.
+
+CUERPO:
+Seguro que lo has oído: «no bajas porque no comes suficiente, tu cuerpo está en modo supervivencia». La respuesta corta: tu metabolismo sí se ralentiza algo con la dieta, pero nunca impide que pierdas peso. Si comes muy poco y no bajas, la explicación habitual es una ingesta mayor de lo que crees y menos movimiento. Aquí van el fenómeno real y el mito que lo envuelve.
+
+## El mito
+El mito sostiene que comer muy poco hace que tu cuerpo se aferre a la grasa con tanta fuerza que dejas de perder peso por completo, o incluso ganas. El balance energético no funciona así. Si comes de verdad por debajo de tus necesidades a lo largo del tiempo, perderás peso. Los cuerpos no crean grasa de la nada.
+
+## El fenómeno real: la adaptación metabólica
+Lo que sí es real es la termogénesis adaptativa, lo mismo que hay detrás de muchos estancamientos. A medida que pierdes peso y llevas un tiempo a dieta, tu metabolismo se ralentiza algo: en parte porque un cuerpo más pequeño quema menos, y en parte porque tu cuerpo reduce el movimiento espontáneo y se vuelve más eficiente. Pero eso frena la pérdida; no la detiene ni la invierte.
+
+## Por qué la gente cree estar atascada
+Casi siempre, una situación de «como poquísimo y no bajo» se reduce a una ingesta infraestimada —bocados olvidados, raciones calculadas por lo bajo, huecos del fin de semana— combinada con menos movimiento diario. Se siente como modo supervivencia; en realidad es un error de contabilidad más adaptación.
+
+## Qué hacer con la adaptación
+Si tu peso ha dejado de moverse, el artículo sobre estancamientos explica cómo revisar el registro, recalcular y sumar pasos. Lo que pide la adaptación en sí es más concreto: no recortes las calorías a extremos, que la agravan; mantén la proteína alta y entrena fuerza para que la ralentización cueste grasa y no músculo; y haz de vez en cuando una semana en mantenimiento para aliviarla.
+
+## Ideas clave
+- Comer muy poco no te hará ganar grasa: el mito es falso.
+- La adaptación metabólica es real, pero solo frena la pérdida, no la detiene.
+- Casi todos los casos de «atasco» son ingesta infraestimada más menos movimiento.
+- Contra la adaptación: sin recortes extremos, proteína alta y alguna semana en mantenimiento.
+
+
+======================================================================
+SERIE: Las dietas de moda, examinadas
+======================================================================
+
+----------------------------------------------------------------------
+ref: 8 · why-crash-diets-fail
+
+TÍTULO:
+Por qué fracasan las dietas exprés (y qué hacer en su lugar)
+
+ENTRADILLA:
+Las dietas exprés prometen resultados rápidos y entregan efecto rebote. La ciencia de por qué fallan y una alternativa sostenible que sí funciona.
+
+CUERPO:
+Cada enero, millones de personas empiezan una dieta exprés: calorías extremadamente bajas, grupos enteros de alimentos prohibidos y resultados rápidos garantizados. Y la mayoría termina el año con el mismo peso o con más. Fracasan por cuatro razones: son imposibles de sostener, cuestan músculo, terminan en un rebote y no enseñan nada que sirva después. Aquí va cada una, y qué hacer en su lugar.
+
+## Son imposibles de sostener
+La restricción severa te pide ignorar el hambre a cada hora de cada día, y nadie puede sostener eso mucho tiempo. Cuando la dieta termina, inevitablemente, vuelven los viejos hábitos, ahora con semanas de apetito acumulado detrás.
+
+## Queman músculo
+Los déficits muy agresivos, sobre todo con poca proteína, hacen que pierdas músculo junto con la grasa. Menos músculo significa un metabolismo algo más bajo, así que quemas menos calorías que antes, lo que facilita recuperar el peso y dificulta perderlo en el futuro.
+
+## Disparan el comer de rebote
+La restricción extrema dispara las hormonas del hambre y los antojos psicológicos. El resultado es una temporada de comer muchísimo, que a menudo anula con creces las calorías que la dieta llegó a ahorrar. Ese es el motor del efecto yoyó.
+
+## No enseñan nada
+Una dieta exprés es un acontecimiento temporal, no una habilidad. No construye los hábitos —conciencia de las raciones, comidas equilibradas, constancia— que mantienen el peso fuera. Cuando termina, estás donde empezaste, menos algo de músculo.
+
+## Qué hacer en su lugar
+- Usa un déficit moderado (15–20 % por debajo del mantenimiento) con el que puedas vivir de verdad.
+- Mantén la proteína alta y entrena fuerza para proteger el músculo.
+- Construye hábitos que puedas conservar después de perder el peso.
+- Registra para mantenerte consciente: un déficit moderado se pierde de vista con facilidad, en las dos direcciones.
+Aquí, ir más despacio es de verdad ir más rápido: el enfoque gradual es el que sigue mostrando resultados un año después.
+
+## Ideas clave
+- Las dietas exprés son insostenibles porque van contra el hambre todo el día.
+- Queman músculo, bajan el metabolismo y facilitan recuperar el peso.
+- La restricción extrema suele acabar en comer muchísimo, el motor del efecto yoyó.
+- Lo que funciona es un déficit moderado más hábitos duraderos.
+
+
+----------------------------------------------------------------------
+ref: 9 · intermittent-fasting-what-the-evidence-says
+
+TÍTULO:
+Ayuno intermitente: qué dice la evidencia
+
+ENTRADILLA:
+¿El ayuno intermitente es magia o control de calorías disfrazado? Una mirada basada en la evidencia a sus beneficios reales y a quién le encaja.
+
+CUERPO:
+El ayuno intermitente es uno de los patrones de alimentación más populares de la última década. Sus defensores le atribuyen desde una pérdida de grasa sin esfuerzo hasta más longevidad. La evidencia cuenta una historia más tranquila: es una herramienta útil para algunas personas, sobre todo por cómo afecta a las calorías, no por magia del ayuno.
+
+## Qué es el ayuno intermitente
+Va de cuándo comes, no de qué. Las versiones más habituales son 16:8 (una ventana diaria de ocho horas para comer), 5:2 (dos días de calorías bajas por semana) y los enfoques de días alternos. Es una estrategia de horarios, no una dieta en el sentido tradicional.
+
+## Por qué puede funcionar
+La razón principal por la que ayuda a perder peso no tiene nada de glamurosa: una ventana de comida más corta suele significar menos calorías totales. Si te saltas el desayuno y el picoteo nocturno, mucha gente come menos de forma natural sin contar nada. Para algunas personas, esa estructura es genuinamente más fácil de seguir.
+
+## ¿Y el resto de afirmaciones?
+Cuando se igualan las calorías y la proteína, el ayuno intermitente no parece producir una pérdida de grasa significativamente mayor que comer de forma normal, el mismo resultado que en low-carb frente a low-fat. Algunos posibles beneficios para la glucosa y la reparación celular se están estudiando, pero no están cerrados. Toma las afirmaciones más grandilocuentes con un escepticismo sano.
+
+## A quién le encaja y a quién no
+- Puede encajar: a quien no tiene hambre por la mañana y prefiere comidas menos frecuentes y más grandes.
+- Puede no encajar: a quien entrena temprano, pasa mucha hambre o tiene antecedentes de trastornos de la conducta alimentaria.
+
+## En resumen
+El ayuno intermitente es una herramienta válida más entre muchas. Si una ventana de comida más corta te ayuda a controlar las calorías y te resulta sostenible, es una buena opción. Si te hace sentir fatal, o las noches se convierten en comer muchísimo de golpe, no es para ti. Elijas la ventana que elijas, las calorías tienen que seguir cuadrando a tu favor, y el reloj por sí solo hace poco.
+
+## Ideas clave
+- El ayuno intermitente controla cuándo comes, no qué: es una herramienta de horarios.
+- Funciona sobre todo porque reduce las calorías totales.
+- Con las calorías igualadas, no es mágicamente superior para perder grasa.
+- Genial para algunos y equivocado para otros: decide la sostenibilidad.
+
+
+======================================================================
+SERIE: Apetito, ánimo y hábito
+======================================================================
+
+----------------------------------------------------------------------
+ref: 10 · how-to-handle-cravings-without-guilt
+
+TÍTULO:
+Cómo manejar los antojos sin sentir culpa
+
+ENTRADILLA:
+Los antojos son normales, no un fallo moral. Por qué aparecen y cómo satisfacerlos de una forma que encaje con tus objetivos, sin culpa.
+
+CUERPO:
+Todo el mundo tiene antojos, y tratarlos como fallos morales solo los hace más fuertes. La culpa lleva a restringir, la restricción afila el antojo y el bucle se repite; mucha gente está atrapada en él. Lo que funciona es lo contrario de prohibir: mete ese alimento en tu plan, espera diez minutos cuando llegue el antojo y, si sigue ahí, toma una ración normal de lo auténtico sin juicio posterior. Empieza por entender de dónde vienen.
+
+## Por qué aparecen los antojos
+- Restricción: cuanto más prohibido está un alimento, más lo quieres. Decirte «nunca» suele volverse en tu contra.
+- Hábito y señales: la película, el café de la tarde, esa silla concreta: los contextos disparan antojos.
+- Emociones: el estrés, el aburrimiento y el cansancio se disfrazan a menudo de antojo.
+- Hambre real: a veces un antojo es simplemente que estás comiendo poco y te está pasando factura.
+
+## Incluye, no prohíbas
+Las prohibiciones totales intensifican los antojos. Meter pequeñas cantidades de lo que te gusta dentro de tu plan —un capricho planificado, una ración que encaje en tus calorías— les quita el poder de fruta prohibida. Los alimentos que puedes tomar cuando quieras pierden su fuerza.
+
+## La pausa
+Cuando llegue un antojo, espera diez minutos y bebe algo de agua. Muchos se desvanecen solos; los que quedan merecen que los atiendas a conciencia en vez de comer en piloto automático.
+
+## Satisfácelo bien
+Si de verdad te apetece chocolate, una ración pequeña de buen chocolate satisface mucho más que una montaña de un sustituto «light» que nunca acaba de calmar las ganas. Toma lo auténtico, con atención y en una cantidad sensata.
+
+## Suelta la culpa
+Comer algo que te apetecía no es un fracaso, y la culpa solo hace más difícil manejar el siguiente antojo. Regístralo, sigue adelante y mantén el foco en el patrón semanal. Apuntado, un capricho planificado es solo una parte del total del día, sin dramas.
+
+## Ideas clave
+- Los antojos son normales y muchas veces los provoca la restricción.
+- Incluir con moderación tus alimentos favoritos les resta poder.
+- Haz una pausa y bebe agua: muchos antojos pasan.
+- Satisface los antojos reales con una ración sensata y sin culpa.
+
+
+----------------------------------------------------------------------
+ref: 11 · emotional-eating
+
+TÍTULO:
+Comer por emociones: cómo reconocerlo y manejarlo
+
+ENTRADILLA:
+Comer para calmar el estrés, el aburrimiento o la tristeza es humano, pero puede desviarte de tus objetivos. Cómo detectarlo y responder con amabilidad.
+
+CUERPO:
+Casi todo el mundo come alguna vez por razones que no son el hambre: un día duro, aburrimiento, una celebración, consuelo. Eso es normal y no es un problema en sí mismo. Lo es cuando la comida se convierte en tu herramienta principal para gestionar las emociones. El objetivo no es eliminarlo a base de fuerza de voluntad, sino entenderlo: aprender a distinguir el hambre emocional de la física, encontrar el detonante y tener preparado algo que no sea comida.
+
+## Hambre física frente a hambre emocional
+- El hambre física aparece poco a poco, acepta muchos alimentos y se detiene al llenarte.
+- El hambre emocional llega de golpe, pide un alimento de consuelo concreto y suele seguir más allá de la saciedad, seguida de culpa.
+Aprender a distinguirlas es el primer paso, y el más potente; la escala del hambre de nuestra guía de alimentación consciente es una forma sencilla de empezar.
+
+## Encuentra el detonante
+Comer por emociones suele tener un patrón: estrés, soledad, cansancio o simplemente el bajón de las cinco de la tarde. Prueba a hacer una pausa breve antes de comer y preguntarte: «¿tengo hambre o estoy sintiendo algo?». Ponerle nombre a la emoción le quita una fuerza sorprendente al impulso.
+
+## Prepara un menú de alternativas
+No puedes quitar una herramienta de afrontamiento sin sustituirla. Ten a mano una lista corta de opciones que no sean comida para los detonantes habituales: un paseo, llamar a alguien, unos minutos de música, estirar, un vaso de agua. Ninguna es mágica, pero juntas amplían tus opciones.
+
+## Sé amable, no estricto
+La culpa y el diálogo interno duro empeoran el comer emocional, no lo mejoran: la vergüenza es en sí misma un detonante. Trata un tropiezo como información, no como fracaso; con los antojos pasa lo mismo. La autocompasión suele funcionar mejor que la autocrítica; la investigación al respecto todavía es modesta, pero apunta en esa dirección.
+Si comer por emociones te desborda o está ligado a un malestar más profundo, hablar con un médico o un terapeuta es un paso genuinamente útil. Una nota breve de lo que sentías antes de comer, durante una o dos semanas, suele mostrar el patrón con más claridad que la memoria, para que respondas a la causa y no solo a las calorías.
+
+## Ideas clave
+- Comer por emociones es una estrategia de afrontamiento común, no un defecto.
+- El hambre emocional es repentina y concreta; la física, gradual.
+- Identifica los detonantes y crea alternativas que no sean comida.
+- Responde con autocompasión y busca ayuda si te desborda.
+
+
+----------------------------------------------------------------------
+ref: 12 · how-to-stop-overeating-at-night
+
+TÍTULO:
+Cómo dejar de comer de más por la noche
+
+ENTRADILLA:
+Comer de noche echa a perder muchos días buenos. Por qué ocurre y estrategias prácticas para que tus noches no se descontrolen.
+
+CUERPO:
+A mucha gente se le deshacen de noche todas las buenas intenciones del día. Comer de más por la noche es increíblemente común y rara vez tiene que ver con falta de fuerza de voluntad. La solución suele estar antes en el día: come suficiente en las comidas, deja margen planificado para la noche, cambia la señal que te manda a la cocina y mantén fuera de alcance lo que desaparece a las nueve.
+
+## Por qué ocurre
+- Comer poco durante el día: saltarse comidas o apretar demasiado la dieta te deja voraz al llegar la noche.
+- Poca proteína y fibra: las comidas que no sacian dejan un hueco de hambre que aparece de noche.
+- Emociones y hábito: por la tarde-noche es cuando te alcanzan el estrés y el aburrimiento del día, y cuando muchos tenemos la costumbre de premiarnos con comida.
+- Picoteo automático: comer delante de la tele no tiene un final natural.
+
+## Come suficiente antes
+La solución más eficaz es contraintuitiva: come más durante el día. Comidas equilibradas con proteína y fibra, repartidas a lo largo del día, evitan el pico de hambre nocturno antes de que empiece.
+
+## Guarda calorías para la noche
+Si la noche es cuando más disfrutas comiendo, planifícalo. Deja margen a propósito en tu día —un snack nocturno previsto o una cena más grande— para trabajar a favor de tus tendencias y no en contra.
+
+## Rompe el bucle del hábito
+Si comer de noche es hábito y no hambre, cambia la señal. Lávate los dientes después de cenar, prepárate una infusión o cámbiate de habitación. Interrumpir la rutina debilita el gesto automático de buscar comida.
+
+## Deja los alimentos detonantes fuera de alcance
+Una noche de cansancio es mal momento para fiarlo todo a decir que no. Si ciertos snacks desaparecen a las nueve de la noche, no los tengas a mano. Apuntar durante una semana lo que comes después de cenar puede enseñarte cuánto suman esos picoteos; a veces es la pieza que faltaba en un déficit estancado.
+
+## Ideas clave
+- Comer de noche suele venir de comer poco antes o de comidas que no sacian.
+- Toma suficiente proteína y fibra a lo largo del día.
+- Reserva calorías para la noche si es cuando disfrutas comiendo.
+- Cambia la señal del hábito y aparta los alimentos detonantes.
+

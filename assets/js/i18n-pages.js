@@ -153,6 +153,8 @@
       "cf.messageErr": "Please write a little more so we can help.",
       "cf.send": "Send message",
       "cf.privacy": "We use what you send only to answer you. Nothing else.",
+      "blog.care.h": "This is not medical advice",
+      "blog.care.p": "If you are pregnant, living with diabetes or another condition, taking medication, under eighteen, or have any history of an eating disorder, please speak to a doctor or a registered dietitian before changing how you eat or using a calorie tracker. Their advice comes first, and nothing here overrides it.",
       "blog.app.h": "If you want to see this in your own meals",
       "blog.app.p": "Fotocal logs a plate from a photo and shows the calories, macros and a health score. The free plan has no card and no time limit: 2 photo scans a day, the barcode scanner and Coach Kal without limits. Android only.",
       /* ── About page ── */
@@ -1142,6 +1144,8 @@
       "cf.messageErr": "Escribe un poco más para que podamos ayudarte.",
       "cf.send": "Enviar mensaje",
       "cf.privacy": "Usamos lo que nos envías solo para responderte. Nada más.",
+      "blog.care.h": "Esto no es consejo médico",
+      "blog.care.p": "Si estás embarazada, convives con diabetes u otra condición, tomas medicación, eres menor de dieciocho años o tienes cualquier historial de un trastorno de la conducta alimentaria, habla con un médico o con un dietista-nutricionista antes de cambiar cómo comes o de usar un contador de calorías. Su criterio va por delante, y nada de lo que hay aquí lo sustituye.",
       "blog.app.h": "Si quieres verlo en tus propias comidas",
       "blog.app.p": "Fotocal registra un plato a partir de una foto y muestra las calorías, los macros y una puntuación de salud. El plan gratis no pide tarjeta ni caduca: 2 escaneos por foto al día, el escáner de código de barras y Coach Kal sin límite. Solo Android.",
       /* ── Página Sobre Fotocal ── */

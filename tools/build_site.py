@@ -422,8 +422,11 @@ def render_head(src, lang, rel_path, meta):
     # canonical + reciprocal hreflang. x-default points at Spanish: it is the
     # default tree, and it is what a visitor with no matching locale should get.
     self_url = page_url(rel_path, lang)
-    src = re.sub(r'<link rel="canonical" href="[^"]*">',
-                 '<link rel="canonical" href="%s">' % self_url, src, count=1)
+    # A redirect stub (meta refresh + noindex, from tools/gen_blog.py) keeps the
+    # canonical it declares: the target, not itself.
+    if 'http-equiv="refresh"' not in src:
+        src = re.sub(r'<link rel="canonical" href="[^"]*">',
+                     '<link rel="canonical" href="%s">' % self_url, src, count=1)
     alts = ('<link rel="alternate" hreflang="es" href="%s">\n'
             '  <link rel="alternate" hreflang="en" href="%s">\n'
             '  <link rel="alternate" hreflang="x-default" href="%s">'

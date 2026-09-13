@@ -115,6 +115,20 @@ Also seen: supabase/functions/stripe-checkout and stripe-webhook exist
 but nothing in app/ or src/ calls them; the policy does not list Stripe
 and should not while that stays true.
 
+## 0j · THE HOME SCREEN ADDS EXERCISE CALORIES BACK INTO THE DAY'S BUDGET
+src/lib/calorieFit.ts: budget = dayTarget + exerciseKcal; left = budget −
+consumed. The Home "Left" figure therefore grows with every logged
+workout and with the Health Connect burn. This is a design decision, not
+a bug, and it deserves a deliberate answer, because it pulls against the
+advice the site now gives: the blog post on exercise calories says do
+not "eat back" a workout, since trackers and machines overstate burn by
+20–90% and the day's target already assumes an activity level. Two
+consistent options: (a) keep the addition but scale it (the post's own
+suggestion: count roughly half), or (b) show exercise as information
+next to the ring and leave the budget alone. Either way the app and the
+site should say the same thing; today they do not, and the post has been
+worded so that it does not claim the app agrees with it.
+
 ## 0a · THE WEEKLY REPORT'S GOAL CARD SAYS 100% DONE WITH 20 KG TO GO
 Observed 2026-09-11, tools/captures/s2/weekly-goal-en.jpg. The "Your goal"
 card reads:

@@ -95,3 +95,5 @@
   .post-nav { grid-template-columns: 1fr 1fr; }
   .post-feature { grid-template-columns: 1.1fr 1fr; align-items: center; padding: 1.2rem; gap: 1.8rem; }
 }
+.post-care { margin: 0 0 1.8rem; }
+.post-care p { margin: 0; }

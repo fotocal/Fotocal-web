@@ -221,7 +221,7 @@
   background: var(--grad-wash); border: 1px solid var(--border-pink); color: var(--brand-text);
 }
 .ai-callout-ico svg { width: 17px; height: 17px; }
-.ai-callout h4 { font-size: .97rem; font-weight: 700; margin-bottom: .25rem; }
+.ai-callout h3, .ai-callout .ai-callout-h { font-size: .97rem; font-weight: 700; margin-bottom: .25rem; }
 .ai-callout p { font-size: .9rem; color: var(--muted); margin: 0; }
 .ai-callout p + p { margin-top: .5rem; }
 .ai-callout a { color: var(--brand-text); font-weight: 600; text-decoration: underline; }
@@ -231,7 +231,7 @@
 .ai-callout-dark {
   background: rgba(var(--on-dark-rgb),.05); border-color: rgba(var(--on-dark-rgb),.12); box-shadow: none;
 }
-.ai-callout-dark h4 { color: var(--on-dark); }
+.ai-callout-dark h3, .ai-callout-dark .ai-callout-h { color: var(--on-dark); }
 .ai-callout-dark p { color: var(--on-dark-soft); }
 .ai-callout-dark .ai-callout-ico { background: rgba(var(--on-dark-rgb),.06); border-color: rgba(var(--on-dark-rgb),.12); color: var(--coral); }
 

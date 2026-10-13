@@ -28,8 +28,8 @@
     })();
   </script>
 
-  <title>Fotocal — One photo. All your nutrition, instantly.</title>
-  <meta name="description" content="Photograph any meal and Fotocal returns calories, macros, micronutrients and a health score in seconds. AI food scanner for Android. 5-day free trial.">
+  <title>AI Calorie Counter from a Photo — Fotocal</title>
+  <meta name="description" content="Photograph your plate and Fotocal counts calories, macros and a health score in seconds. Free, no card, on Android, with voice logging and a barcode scanner.">
   <meta name="keywords" content="calorie counter, AI food scanner, photo calorie tracker, macros, nutrition app, contador de calorías, Fotocal">
   <link rel="canonical" href="https://getfotocal.com/en/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/">
@@ -41,15 +41,15 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
-  <meta property="og:title" content="Fotocal — One photo. All your nutrition, instantly.">
-  <meta property="og:description" content="Photograph any meal and Fotocal returns calories, macros, micronutrients and a health score in seconds. AI food scanner for Android. 5-day free trial.">
+  <meta property="og:title" content="AI Calorie Counter from a Photo — Fotocal">
+  <meta property="og:description" content="Photograph your plate and Fotocal counts calories, macros and a health score in seconds. Free, no card, on Android, with voice logging and a barcode scanner.">
   <meta property="og:url" content="https://getfotocal.com/en/">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image-en.png">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fotocal — One photo. All your nutrition, instantly.">
-  <meta name="twitter:description" content="Photograph any meal and Fotocal returns calories, macros, micronutrients and a health score in seconds. AI food scanner for Android. 5-day free trial.">
+  <meta name="twitter:title" content="AI Calorie Counter from a Photo — Fotocal">
+  <meta name="twitter:description" content="Photograph your plate and Fotocal counts calories, macros and a health score in seconds. Free, no card, on Android, with voice logging and a barcode scanner.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image-en.png">
 
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=3">
@@ -68,12 +68,19 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MobileApplication",
+  "@type": "SoftwareApplication",
+  "@id": "https://getfotocal.com/en/#app",
   "name": "Fotocal",
-  "operatingSystem": "ANDROID",
+  "operatingSystem": "Android",
   "applicationCategory": "HealthApplication",
   "description": "AI nutrition app: photograph your meal and get calories, macros, micronutrients and a health score instantly. Includes barcode and menu scanning, voice logging and an AI nutrition coach.",
   "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "name": "Free"
+    },
     {
       "@type": "Offer",
       "price": "6.99",
@@ -89,6 +96,49 @@
   ],
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
   "installUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
+  "screenshot": "https://getfotocal.com/assets/img/screens/hero-home-1080-es.webp",
+  "author": {
+    "@id": "https://getfotocal.com/en/#org"
+  },
+  "publisher": {
+    "@id": "https://getfotocal.com/en/#org"
+  },
+  "inLanguage": "en"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://getfotocal.com/en/#org",
+  "name": "Fotocal",
+  "url": "https://getfotocal.com/en/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://getfotocal.com/assets/img/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "sameAs": [
+    "https://play.google.com/store/apps/details?id=com.fotokal.app",
+    "https://www.facebook.com/share/1HbMUZSBJ6/",
+    "https://www.instagram.com/getfotocal",
+    "https://youtube.com/@getfotocal",
+    "https://play.google.com/store/apps/details?id=com.fotokal.app"
+  ],
+  "inLanguage": "en"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://getfotocal.com/en/#site",
+  "name": "Fotocal",
+  "url": "https://getfotocal.com/en/",
+  "publisher": {
+    "@id": "https://getfotocal.com/en/#org"
+  },
   "inLanguage": "en"
 }
   </script>
@@ -195,7 +245,7 @@
 
           <div class="hero-copy">
             <span class="kicker">AI nutrition tracking · Android</span>
-            <h1 class="hero-title">One photo. All your nutrition, <em class="accent">instantly</em>.</h1>
+            <h1 class="hero-title">The calorie counter that works <em class="accent">from a photo</em>.</h1>
             <p class="hero-sub">Snap your meal and get calories, macros and a health score in seconds. Nothing to weigh.</p>
             <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Get it free</a>
             <span class="hero-note">On Google Play · Android</span>
@@ -536,8 +586,8 @@
   <!-- The sticky mobile app CTA lives in assets/js/layout.js + site.css now,
        so every page gets it and not just this one. -->
 
-  <script src="/assets/js/i18n.js?v=d8fd7eed"></script>
-  <script src="/assets/js/layout.js?v=6d53635e" data-page="home"></script>
+  <script src="/assets/js/i18n.js?v=83df1f8f"></script>
+  <script src="/assets/js/layout.js?v=d32d4737" data-page="home"></script>
   <script src="/assets/js/main.js?v=ffb21447"></script>
 </body>
 </html>

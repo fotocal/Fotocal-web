@@ -54,7 +54,7 @@ LANGS = ("es", "en")
 DEFAULT = "es"                    # Spanish is the default tree, served at /
 PREFIX = {"es": "", "en": "en/"}  # path prefix per tree
 SITE = "https://getfotocal.com/"
-TITLE_MAX = 62                    # beyond this Google truncates the snippet
+TITLE_MAX = 60                    # beyond this Google truncates the snippet (PART 46: 60, not 62)
 
 # Directories the builder owns and rewrites on every run. Anything else at
 # the repo root (assets, css, js, CNAME, robots.txt …) is left alone.

@@ -38,9 +38,9 @@ Verdicts. **OUTDATED**: the app screen was changed after the capture (sittings 2
 | 111–114 | `assets/img/screens/` sf-edit-440-en.webp, sf-edit-440-es.webp, sf-edit-660-en.webp, sf-edit-660-es.webp | features/scan-food › how | Real app screen: the detected ingredients with their grams and calories, chicken 150 g, rice 150 g, avocado 50 g, corn 50 g, onion 30 g | 440×608, 660×912 | OUTDATED (alta) | 76 |
 | 115–118 | `assets/img/screens/` sf-hero-1075-en.webp, sf-hero-1075-es.webp, sf-hero-700-en.webp, sf-hero-700-es.webp | features/scan-food | Real app screen: the scanned Baked Chicken Bowl, health score 79 and Good choice over the photo, 475 kcal, about 450 g | 700×1260, 1073×1931, 1075×1935 | OUTDATED (alta) | 76 |
 | 119–122 | `assets/img/screens/` sf-read-440-en.webp, sf-read-440-es.webp, sf-read-660-en.webp, sf-read-660-es.webp | features/scan-food › how | Real app screen: the result, Baked Chicken Bowl, health score 79, the name ready to edit | 440×608, 660×912 | OUTDATED (alta) | 76 |
-| 123–126 | `assets/img/screens/` step-camera-460-en.webp, step-camera-460-es.webp, step-camera-690-en.webp, step-camera-690-es.webp | — (unused) | — | 460×856, 690×1285 | OUTDATED (baja) | 16 |
-| 127–130 | `assets/img/screens/` step-day-460-en.webp, step-day-460-es.webp, step-day-690-en.webp, step-day-690-es.webp | — (unused) | — | 460×857, 690×1285 | OUTDATED (baja) | 82 |
-| 131–134 | `assets/img/screens/` step-result-460-en.webp, step-result-460-es.webp, step-result-690-en.webp, step-result-690-es.webp | — (unused) | — | 460×857, 690×1285 | OUTDATED (baja) | 76 |
+| 123–126 | `assets/img/screens/` step-camera-460-en.webp, step-camera-460-es.webp, step-camera-690-en.webp, step-camera-690-es.webp | index.html › how-it-works | The scan screen: the camera framing a chicken bowl, ready to detect the items in it | 460×856, 690×1285 | OUTDATED (alta) | 16 |
+| 127–130 | `assets/img/screens/` step-day-460-en.webp, step-day-460-es.webp, step-day-690-en.webp, step-day-690-es.webp | index.html › how-it-works | Your day, updated: this meal is 39% of the day — calories, protein, carbs and fat with the bowl counted in, and the detected ingredients | 460×857, 690×1285 | OUTDATED (alta) | 82 |
+| 131–134 | `assets/img/screens/` step-result-460-en.webp, step-result-460-es.webp, step-result-690-en.webp, step-result-690-es.webp | index.html › how-it-works | The result: Baked Chicken Bowl, health score 79 “good choice”, 475 kcal, about 450 g | 460×857, 690×1285 | OUTDATED (alta) | 76 |
 | 135–138 | `assets/img/screens/` vl-listen-440-en.webp, vl-listen-440-es.webp, vl-listen-660-en.webp, vl-listen-660-es.webp | features/voice-logging › how | Real app screen: You can speak now \u2014 the microphone, and an example of the kind of sentence to say | 440×608, 660×912 | OUTDATED (media) | 25 |
 | 139–142 | `assets/img/screens/` vl-result-440-en.webp, vl-result-440-es.webp, vl-result-660-en.webp, vl-result-660-es.webp | features/voice-logging | Real app screen: the voice result \u2014 the sentence it heard, then eggs, toast and avocado, each with its calories and macros, ready to check before saving | 440×608, 660×912 | OUTDATED (alta) | 25 |
 | 143–146 | `assets/img/screens/` vl-tabs-1050-en.webp, vl-tabs-1050-es.webp, vl-tabs-700-en.webp, vl-tabs-700-es.webp | features/voice-logging › how | Real app screen: the logging screen&#x27;s three tabs, Scan, Barcode and Voice, with Voice selected, above the recent voice logs | 700×450, 1050×676 | OUTDATED (media) | 38 |
@@ -71,24 +71,6 @@ Verdicts. **OUTDATED**: the app screen was changed after the capture (sittings 2
 - `assets/img/blog/are-cheat-meals-helpful-or-harmful.svg` (#161)
 - `assets/img/blog/batch-cooking-save-time-eat-better.svg` (#162)
 - `assets/img/bowl.jpg` (#214)
-- `assets/img/screens/sf-hero-1075-en.webp` (#115)
-- `assets/img/screens/sf-hero-1075-es.webp` (#116)
-- `assets/img/screens/step-camera-460-en.webp` (#123)
-- `assets/img/screens/step-camera-460-es.webp` (#124)
-- `assets/img/screens/step-camera-690-en.webp` (#125)
-- `assets/img/screens/step-camera-690-es.webp` (#126)
-- `assets/img/screens/step-day-460-en.webp` (#127)
-- `assets/img/screens/step-day-460-es.webp` (#128)
-- `assets/img/screens/step-day-690-en.webp` (#129)
-- `assets/img/screens/step-day-690-es.webp` (#130)
-- `assets/img/screens/step-result-460-en.webp` (#131)
-- `assets/img/screens/step-result-460-es.webp` (#132)
-- `assets/img/screens/step-result-690-en.webp` (#133)
-- `assets/img/screens/step-result-690-es.webp` (#134)
-- `assets/img/screens/vl-tabs-1050-en.webp` (#143)
-- `assets/img/screens/vl-tabs-1050-es.webp` (#144)
-- `assets/img/screens/wl-goal-1050-en.webp` (#151)
-- `assets/img/screens/wl-goal-1050-es.webp` (#152)
 - `assets/og-image-en.png` (#227)
 
 ## Capturas que hacen falta (en español e inglés cada una: cambia el idioma de la app entre las dos)
@@ -126,4 +108,3 @@ Prioridad alta primero. Cada pantalla se pide una vez aunque la usen varias imá
 24. **Pestañas de registro** — La pantalla de registro con las tres pestañas (Escanear, Código de barras, Voz), con Voz seleccionada.
 25. **Cuerpo · objetivo** — La pestaña Cuerpo con la tarjeta del objetivo (peso inicial, peso actual, meta y lo que llevas).
 
-Las familias `step-camera`, `step-day` y `step-result` no se usan en ninguna página: no hace falta recapturarlas, se borran.

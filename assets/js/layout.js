@@ -112,7 +112,8 @@
     { id: "subscription", key: "nav.subscription", href: u("subscription/") },
     { id: "about",        key: "nav.about",        children: [
         { key: "nav.aboutUs",   href: u("about/") },
-        { key: "nav.contactUs", href: u("contact/") }
+        { key: "nav.contactUs", href: u("contact/") },
+        { key: "nav.faq",       href: u("faq/") }
       ] }
   ];
 
@@ -260,6 +261,7 @@
             '<h5>' + t("footer.company") + '</h5>' +
             '<a href="' + u("about/") + '">' + t("nav.aboutUs") + '</a>' +
             '<a href="' + u("contact/") + '">' + t("nav.contactUs") + '</a>' +
+            '<a href="' + u("faq/") + '">' + t("nav.faq") + '</a>' +
             '<a href="' + u("privacy-policy/") + '">' + t("footer.privacy") + '</a>' +
             '<a href="' + u("terms/") + '">' + t("footer.terms") + '</a>' +
             '<a href="' + u("account-deletion/") + '">' + t("footer.deletion") + '</a>' +

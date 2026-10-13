@@ -98,7 +98,7 @@ def figures(app_id):
     """What the app shows for this dish, and where it came from."""
     h = HAND[app_id]
     out = {"name_app": h["name_es"], "serving_label": h["servingLabel"], "serving_g": h["servingGrams"],
-           "composed": False, "sources": [], "fiber": None, "sugar": None, "satfat": None, "salt": None}
+           "composed": False, "rejected": False, "sources": [], "fiber": None, "sugar": None, "satfat": None, "salt": None}
     rec = RECIPES.get(app_id)
     if rec:
         grams, v = compose(rec)
@@ -109,6 +109,9 @@ def figures(app_id):
                        salt=None if v["sodiumMg"] is None else r1(v["sodiumMg"] * 2.5 / 1000))
             out["sources"] = [{"grams": l["grams"], "es": FOODS[l["foodId"]]["es"], "db": FOODS[l["foodId"]]["src"]["db"],
                                "ref": FOODS[l["foodId"]]["src"]["ref"], "method": l.get("method")} for l in rec]
+        elif v["kcal"] is not None:
+            out["rejected"] = True
+        if out["composed"]:
             if abs(grams - h["servingGrams"]) / h["servingGrams"] > 0.05:
                 print("  note: %s composition weighs %d g, hand serving %d g" % (app_id, grams, h["servingGrams"]), file=sys.stderr)
     if not out["composed"]:
@@ -160,14 +163,23 @@ def blog_title(slug):
 
 
 def fill(text, d, fig):
-    """{kcal} {per100} {per1000} {kcal:<app-id>} {g} inside the editorial text."""
+    """Numbers inside the editorial text, always from the figures:
+    {kcal} {per100} {per1000} {g} {protein} {carbs} {fat} {name}
+    {kcal:<app-id>}            another app dish's kcal per serving
+    {kcal/4} {per100*3} …      simple arithmetic on this dish's kcal or per-100 g"""
     def rep(m):
-        key, arg = m.group(1), m.group(2)
-        if key == "kcal" and arg:
-            return n(figures(arg)["kcal"])
-        return {"kcal": n(fig["kcal"]), "per100": n(fig["per100"]), "per1000": n(fig["per100"] * 10),
-                "g": n(fig["serving_g"]), "name": d["name"]}[key]
-    return re.sub(r"\{(kcal|per100|per1000|g|name)(?::([a-z0-9-]+))?\}", rep, text)
+        key, arg, op, k = m.group(1), m.group(2), m.group(3), m.group(4)
+        if key == "name":
+            return d["name"]
+        src = figures(arg) if arg else fig
+        base = {"kcal": src["kcal"], "per100": src["per100"], "per1000": src["per100"] * 10, "g": src["serving_g"],
+                "protein": src["protein"], "carbs": src["carbs"], "fat": src["fat"]}
+        v = base[key]
+        if op:
+            v = v * float(k) if op == "*" else v / float(k)
+            return n(r0(v))
+        return n(v)
+    return re.sub(r"\{(kcal|per100|per1000|g|protein|carbs|fat|name)(?::([a-z0-9-]+))?(?:([*/])(\d+(?:\.\d+)?))?\}", rep, text)
 
 
 # ── head ─────────────────────────────────────────────────────────────
@@ -498,6 +510,8 @@ def dish_page(d, ready_by_app):
         for s in fig["sources"]:
             o('          <li>%s g de %s — %s, %s%s</li>' % (n(s["grams"]), esc(s["es"]), esc(s["db"]), esc(s["ref"]), (" (%s)" % {"boiled": "cocido", "stewed": "guisado", "sauteed": "salteado", "fried": "frito", "grilled": "a la plancha", "baked": "al horno"}.get(s["method"], s["method"])) if s.get("method") else ""))
         o('        </ul><p>La ración (%s, %s g) la fija Fotocal. El valor por 100 g se deriva de la ración. Snapshot de la app: commit %s (%s).</p>' % (esc(fig["serving_label"]), n(g), APP["_source"]["commit"], APP["_source"]["commit_date"]))
+    elif fig["rejected"]:
+        o('        <p>Es la cifra de referencia que usa la app Fotocal para una ración de %s (%s g). El plato tiene una receta de ingredientes en la base de datos, pero su suma se aleja más de un 25 %% de la cifra de referencia (la regla de la app para no mezclar fuentes), así que la app muestra la referencia y esta página también. Por eso no hay fibra, azúcares ni sal. Snapshot de la app: commit %s (%s).</p>' % (esc(fig["serving_label"]), n(g), APP["_source"]["commit"], APP["_source"]["commit_date"]))
     else:
         o('        <p>Es la cifra de referencia que usa la app Fotocal para una ración de %s (%s g). Este plato no tiene todavía desglose por ingredientes en su base de datos, así que no se muestran fibra, azúcares ni sal. Snapshot de la app: commit %s (%s).</p>' % (esc(fig["serving_label"]), n(g), APP["_source"]["commit"], APP["_source"]["commit_date"]))
     o('        <p>Esta página es información general sobre alimentos, no consejo médico ni dietético.</p>\n      </section>')
@@ -588,7 +602,7 @@ def main():
         p = os.path.join(SRC, d["slug"])
         os.makedirs(p, exist_ok=True)
         open(os.path.join(p, "index.html"), "w", encoding="utf-8").write(page)
-        print("  /calorias/%s/  %s g -> %d kcal (%d/100 g)%s" % (d["slug"], n(fig["serving_g"]), fig["kcal"], fig["per100"], "" if fig["composed"] else "  [hand figure, no recipe]"))
+        print("  /calorias/%s/  %s g -> %d kcal (%d/100 g)%s" % (d["slug"], n(fig["serving_g"]), fig["kcal"], fig["per100"], "" if fig["composed"] else ("  [hand figure; recipe rejected >25%]" if fig["rejected"] else "  [hand figure, no recipe]")))
     open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(hub_page(ready))
     print("%d dish pages + hub -> src/calorias/" % len(ready))
 

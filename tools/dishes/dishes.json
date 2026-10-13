@@ -17,11 +17,23 @@
       "app_id": "tortilla-espanola",
       "name": "tortilla de patatas",
       "article": "la",
-      "aliases": ["tortilla española", "tortilla de patata"],
+      "aliases": [
+        "tortilla española",
+        "tortilla de patata"
+      ],
       "status": "ready",
       "published": "2026-10-13",
-      "compare": ["pincho-de-tortilla", "tortilla-francesa", "bocadillo-de-tortilla", "huevos-fritos-con-patatas"],
-      "blog": ["track-calories-without-weighing", "portion-control-simple-tricks", "eating-out-without-wrecking-your-diet"],
+      "compare": [
+        "pincho-de-tortilla",
+        "tortilla-francesa",
+        "bocadillo-de-tortilla",
+        "huevos-fritos-con-patatas"
+      ],
+      "blog": [
+        "track-calories-without-weighing",
+        "portion-control-simple-tricks",
+        "eating-out-without-wrecking-your-diet"
+      ],
       "calc": "deficit-calorico",
       "portion": "<p>La ración que usa Fotocal es una porción de 150 g: el trozo que se sirve de plato en casa, más o menos un octavo de una tortilla grande. En un bar la unidad es el pincho, que suele pesar entre 100 y 130 g (la app lo cuenta como 120 g), y en el bocadillo van unos 110 g de tortilla más el pan.</p><p>Una tortilla gruesa y jugosa pesa más por trozo que una fina, y eso mueve la cuenta más que cualquier otra cosa. Pesar el trozo una sola vez quita la duda: a partir de ahí, la cifra por 100 g hace el resto.</p>",
       "drivers": "<p>La grasa es sobre todo el aceite que absorbe la patata al freírse o confitarse, y es lo que más varía de una tortilla a otra. El huevo también aporta grasa, pero menos y siempre la misma. Por eso dos tortillas con la misma patata y los mismos huevos pueden diferir bastante en calorías: la diferencia está en cuánto aceite se escurrió antes de cuajar.</p><p>La patata pone casi todos los hidratos; el huevo, la proteína y la mayor parte de los micronutrientes. La cebolla, para quien la ponga, apenas cuenta: la discusión es de sabor, no de nutrición.</p>",
@@ -41,24 +53,545 @@
         }
       ]
     },
-    { "slug": "paella-valenciana", "app_id": "paella-valenciana", "name": "paella valenciana", "article": "la", "aliases": ["paella"], "status": "planned", "compare": ["paella-de-marisco", "arroz-con-pollo", "fideua"], "blog": ["eating-out-without-wrecking-your-diet", "portion-control-simple-tricks"], "calc": "calorias-diarias" },
-    { "slug": "croquetas-de-jamon", "app_id": "croquetas-de-jamon", "name": "croquetas de jamón", "article": "las", "aliases": ["croquetas"], "status": "planned", "compare": ["empanadilla-de-atun", "san-jacobo", "pincho-de-tortilla"], "blog": ["eating-out-without-wrecking-your-diet"], "calc": "deficit-calorico" },
-    { "slug": "cocido-madrileno", "app_id": "cocido-madrileno", "name": "cocido madrileño", "article": "el", "aliases": ["cocido"], "status": "planned", "compare": ["fabada-asturiana", "lentejas-estofadas", "potaje-de-garbanzos"], "blog": ["how-fast-should-you-lose-weight"], "calc": "calorias-diarias" },
-    { "slug": "gazpacho", "app_id": "gazpacho", "name": "gazpacho", "article": "el", "aliases": ["gazpacho andaluz"], "status": "planned", "compare": ["salmorejo", "crema-de-calabacin", "ensalada-de-tomate"], "blog": ["healthy-snacks-that-satisfy"], "calc": "deficit-calorico" },
-    { "slug": "salmorejo", "app_id": "salmorejo", "name": "salmorejo", "article": "el", "aliases": ["salmorejo cordobés"], "status": "planned", "compare": ["gazpacho", "crema-de-calabaza"], "blog": ["dietary-fat-how-much-and-which-kinds"], "calc": "deficit-calorico" },
-    { "slug": "lentejas-estofadas", "app_id": "lentejas-estofadas", "name": "lentejas estofadas", "article": "las", "aliases": ["lentejas", "plato de lentejas"], "status": "planned", "compare": ["lentejas-con-chorizo", "garbanzos-con-espinacas", "potaje-de-garbanzos"], "blog": ["fiber-the-underrated-nutrient", "how-much-protein-per-day"], "calc": "macros" },
-    { "slug": "fabada-asturiana", "app_id": "fabada-asturiana", "name": "fabada asturiana", "article": "la", "aliases": ["fabada"], "status": "planned", "compare": ["cocido-madrileno", "lentejas-con-chorizo"], "blog": ["how-to-handle-cravings-without-guilt"], "calc": "calorias-diarias" },
-    { "slug": "ensaladilla-rusa", "app_id": "ensaladilla-rusa", "name": "ensaladilla rusa", "article": "la", "aliases": ["ensaladilla"], "status": "planned", "compare": ["ensalada-mixta", "ensalada-de-pasta"], "blog": ["dietary-fat-how-much-and-which-kinds"], "calc": "deficit-calorico" },
-    { "slug": "churros-con-chocolate", "app_id": "churros-con-chocolate", "name": "churros con chocolate", "article": "los", "aliases": ["churros", "chocolate con churros"], "status": "planned", "compare": ["churros", "porras", "croissant"], "blog": ["how-to-handle-cravings-without-guilt"], "calc": "deficit-calorico" },
-    { "slug": "pulpo-a-la-gallega", "app_id": "pulpo-a-la-gallega", "name": "pulpo a la gallega", "article": "el", "aliases": ["pulpo a feira"], "status": "planned", "compare": ["sepia-a-la-plancha", "gambas-a-la-plancha"], "blog": ["how-much-protein-per-day"], "calc": "macros" },
-    { "slug": "empanada-gallega", "app_id": "empanada-gallega", "name": "empanada gallega", "article": "la", "aliases": ["empanada de atún"], "status": "planned", "compare": ["empanadilla-de-atun", "quiche-de-verduras"], "blog": ["portion-control-simple-tricks"], "calc": "deficit-calorico" },
-    { "slug": "migas", "app_id": "migas", "name": "migas", "article": "las", "aliases": ["migas extremeñas", "migas manchegas"], "status": "planned", "compare": ["huevos-fritos-con-patatas", "arroz-a-la-cubana"], "blog": ["carbs-are-not-the-enemy"], "calc": "calorias-diarias" },
-    { "slug": "torrijas", "app_id": "torrija", "name": "torrijas", "article": "las", "aliases": ["torrija"], "status": "planned", "compare": ["arroz-con-leche", "flan-de-huevo", "napolitana-de-chocolate"], "blog": ["how-to-handle-cravings-without-guilt"], "calc": "deficit-calorico" },
-    { "slug": "tostada-con-tomate-y-aceite", "app_id": "tostada-con-tomate-y-aceite", "name": "tostada con tomate y aceite", "article": "la", "aliases": ["tostada de tomate", "pan con tomate y aceite"], "status": "planned", "compare": ["tostada-con-aceite-de-oliva", "tostada-con-mantequilla-y-mermelada", "croissant"], "blog": ["high-protein-breakfast-ideas"], "calc": "calorias-diarias" },
-    { "slug": "cafe-con-leche", "app_id": "cafe-con-leche", "name": "café con leche", "article": "el", "aliases": ["café con leche entera"], "status": "planned", "compare": ["cafe-solo", "cafe-cortado", "cafe-con-leche-desnatada"], "blog": ["common-calorie-counting-mistakes"], "calc": "deficit-calorico" },
-    { "slug": "huevos-fritos-con-patatas", "app_id": "huevos-fritos-con-patatas", "name": "huevos fritos con patatas", "article": "los", "aliases": ["huevos rotos", "huevos con patatas"], "status": "planned", "compare": ["tortilla-espanola", "huevos-revueltos", "salchichas-con-patatas"], "blog": ["dietary-fat-how-much-and-which-kinds"], "calc": "deficit-calorico" },
-    { "slug": "arroz-con-leche", "app_id": "arroz-con-leche", "name": "arroz con leche", "article": "el", "aliases": ["arroz con leche casero"], "status": "planned", "compare": ["natillas", "flan-de-huevo", "yogur-natural-azucarado"], "blog": ["added-sugar-vs-natural-sugar"], "calc": "deficit-calorico" },
-    { "slug": "albondigas-en-salsa", "app_id": "albondigas-en-salsa", "name": "albóndigas en salsa", "article": "las", "aliases": ["albóndigas"], "status": "planned", "compare": ["estofado-de-ternera", "filete-de-ternera-a-la-plancha"], "blog": ["how-much-protein-per-day"], "calc": "macros" },
-    { "slug": "pincho-de-tortilla", "app_id": "pincho-de-tortilla", "name": "pincho de tortilla", "article": "el", "aliases": ["tapa de tortilla"], "status": "planned", "compare": ["tortilla-espanola", "bocadillo-de-tortilla"], "blog": ["eating-out-without-wrecking-your-diet"], "calc": "deficit-calorico" }
+    {
+      "slug": "paella-valenciana",
+      "app_id": "paella-valenciana",
+      "name": "paella valenciana",
+      "article": "la",
+      "aliases": [
+        "paella"
+      ],
+      "status": "ready",
+      "compare": [
+        "paella-de-marisco",
+        "arroz-con-pollo",
+        "fideua"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet",
+        "portion-control-simple-tricks"
+      ],
+      "calc": "calorias-diarias",
+      "published": "2026-10-13",
+      "portion": "<p>La ración de Fotocal son 300 g de paella servida: un plato normal en casa o en un restaurante que sirve por raciones, no la paellera entera. En una comida de domingo es fácil repetir y plantarse en 450 o 500 g; en un menú del día suele ser menos. La paella se come por volumen y el arroz pesa menos de lo que parece a la vista: pesar el plato una sola vez cambia la idea que uno tiene de lo que come.</p>",
+      "drivers": "<p>El arroz pone los hidratos y la mitad del peso del plato; el pollo y el conejo, la proteína; el aceite del sofrito, buena parte de la grasa, que además es lo que más cambia de una cocina a otra. La valenciana de verdad, con carne y verdura, es más proteica que una mixta o una de marisco escasa de género. Lo que convierte la paella en una comida pesada no es el arroz: es la cantidad y el aceite del sofrito.</p>",
+      "lighter": "<p>Más carne y verdura y menos arroz por plato, servir con la cuchara pesada en lugar de rascar la paellera, y medir el aceite del sofrito en vez de echarlo a ojo. El socarrat es sabor, no calorías. Y una ensalada delante baja la cantidad de arroz que uno se come sin notarlo.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un plato de paella?",
+          "a": "Un plato de unos 300 g tiene {kcal} kcal con la receta valenciana de pollo, conejo y judía verde. Si el plato es grande, la cuenta sube en proporción: a {per100} kcal por cada 100 g, 450 g son unas {per100*4.5} kcal."
+        },
+        {
+          "q": "¿Engorda la paella?",
+          "a": "Como cualquier plato, solo si el total del día pasa de lo que gastas. Un plato de {kcal} kcal es una comida completa normal, con proteína de sobra. Lo que la saca de sitio es repetir, el pan para rebañar y lo que va antes y después en una comida de domingo."
+        },
+        {
+          "q": "¿Paella valenciana o de marisco, cuál tiene menos calorías?",
+          "a": "En la base de datos de Fotocal, la de marisco queda en {kcal:paella-de-marisco} kcal por 300 g frente a {kcal} la valenciana: parecidas, porque el arroz y el aceite son los mismos y el marisco es magro. La diferencia está en la proteína, mayor en la valenciana por el pollo y el conejo."
+        }
+      ]
+    },
+    {
+      "slug": "croquetas-de-jamon",
+      "app_id": "croquetas-de-jamon",
+      "name": "croquetas de jamón",
+      "article": "las",
+      "aliases": [
+        "croquetas"
+      ],
+      "status": "ready",
+      "compare": [
+        "empanadilla-de-atun",
+        "san-jacobo",
+        "pincho-de-tortilla"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet"
+      ],
+      "calc": "deficit-calorico",
+      "published": "2026-10-13",
+      "portion": "<p>Fotocal cuenta la ración como cuatro croquetas de unos 30 g cada una, 120 g en total: lo que trae una tapa generosa o media ración de bar. Una croqueta casera pequeña pesa 25 g; las de bar grandes, 40 o 50. Como se comen por unidades, la cifra útil es la de cada pieza: {kcal/4} kcal una croqueta de 30 g.</p>",
+      "drivers": "<p>Una croqueta es bechamel, es decir leche, harina y mantequilla o aceite, con algo de jamón, rebozada y frita. La grasa viene de la bechamel y, sobre todo, del aceite que absorbe el rebozado al freír; el jamón apenas pesa en la cuenta. Por eso la cifra depende tanto del tamaño y de cómo se escurran como de la receta.</p>",
+      "lighter": "<p>Al horno o en freidora de aire se ahorra la mayor parte del aceite de fritura. Hacerlas más pequeñas ayuda más de lo que parece, porque se comen por unidades y no por peso. Y en el bar, media ración en vez de la entera: la diferencia son cuatro croquetas.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una croqueta de jamón?",
+          "a": "Unas {kcal/4} kcal una croqueta de 30 g, la de tapa o la casera normal. Una de bar grande, de 50 g, ronda las {per100/2} kcal. Por 100 g, {per100} kcal."
+        },
+        {
+          "q": "¿Engordan las croquetas?",
+          "a": "Cuatro croquetas son {kcal} kcal, lo mismo que un plato de lentejas, en mucho menos volumen y con menos saciedad. Ese es el problema: no es que sean prohibidas, es que llenan poco para lo que cuestan y se comen rápido. Contarlas por unidades es lo que mantiene la cuenta en su sitio."
+        },
+        {
+          "q": "¿Las croquetas congeladas tienen las mismas calorías?",
+          "a": "Por 100 g suelen moverse en un rango parecido, con diferencias entre marcas: la etiqueta manda. Lo que más cambia la cifra final no es si son caseras o congeladas, sino el aceite que absorben al freírlas."
+        }
+      ]
+    },
+    {
+      "slug": "cocido-madrileno",
+      "app_id": "cocido-madrileno",
+      "name": "cocido madrileño",
+      "article": "el",
+      "aliases": [
+        "cocido"
+      ],
+      "status": "ready",
+      "compare": [
+        "fabada-asturiana",
+        "lentejas-estofadas",
+        "potaje-de-garbanzos"
+      ],
+      "blog": [
+        "how-fast-should-you-lose-weight"
+      ],
+      "calc": "calorias-diarias",
+      "published": "2026-10-13",
+      "portion": "<p>La ración de Fotocal es un plato de 400 g del cocido completo, con garbanzos, verdura, carne y embutido servidos de una vez y sin contar la sopa: el cocido de casa en un plato hondo. En un restaurante de Madrid, con la sopa de primero y la fuente de garbanzos y carnes de segundo, la comida entera se va con facilidad al doble.</p>",
+      "drivers": "<p>El garbanzo pone los hidratos y la fibra, y es la parte sana del plato. La proteína sale del morcillo, el pollo y el embutido. La grasa, casi toda, del chorizo, la morcilla y el tocino: el embutido, que es una parte pequeña del plato, aporta más calorías que la patata y la verdura juntas. Por eso dos cocidos con los mismos garbanzos pueden diferir en cientos de calorías según lo que se sirva de la fuente de carnes.</p>",
+      "lighter": "<p>Menos embutido y más garbanzo y verdura es lo único que mueve la cuenta de verdad. Desgrasar el caldo, enfriándolo y retirando la capa de grasa, mejora la sopa sin tocar el sabor. Y el cocido es comida de un solo plato: con la sopa delante, el segundo debería ser más pequeño, no el mismo plato de siempre.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un cocido completo con sopa?",
+          "a": "El plato de garbanzos, carne y embutido de 400 g son {kcal} kcal. Un plato de sopa de fideos de 300 g añade {kcal:sopa-de-fideos} kcal más en la base de datos de Fotocal, y bastante más si el caldo lleva la grasa sin retirar."
+        },
+        {
+          "q": "¿Es sano el cocido?",
+          "a": "Los garbanzos, la verdura y la carne magra lo son: fibra, proteína y hierro en un plato que llena. Lo que lo carga es el embutido y la cantidad. Un cocido a la semana, con el chorizo y la morcilla como acompañamiento y no como protagonista, entra en cualquier alimentación razonable."
+        },
+        {
+          "q": "¿Cuántas calorías tiene el cocido de restaurante?",
+          "a": "Más que estas: la ración suele pasar de 400 g y va con sopa, pan y a veces repetición. Pesar no es posible en un restaurante; lo que sí se puede es dejar embutido en la fuente y comer el segundo como lo que es, el plato principal, no uno más."
+        }
+      ]
+    },
+    {
+      "slug": "gazpacho",
+      "app_id": "gazpacho",
+      "name": "gazpacho",
+      "article": "el",
+      "aliases": [
+        "gazpacho andaluz"
+      ],
+      "status": "ready",
+      "compare": [
+        "salmorejo",
+        "crema-de-calabacin",
+        "ensalada-de-tomate"
+      ],
+      "blog": [
+        "healthy-snacks-that-satisfy"
+      ],
+      "calc": "deficit-calorico",
+      "published": "2026-10-13",
+      "portion": "<p>Un bol o vaso grande de 250 ml es la ración de Fotocal: lo que se sirve de primero en casa o en un menú. Un vaso de tapa es la mitad. El gazpacho se bebe, y por eso se repite sin pensar; aun así, dos boles siguen siendo menos que una tostada con aceite.</p>",
+      "drivers": "<p>Casi todo el peso es tomate, pepino y pimiento, que apenas tienen calorías. Lo que cuenta es el aceite, y el pan si lleva: un gazpacho con poco aceite queda por debajo de la cifra de arriba, y uno generoso en aceite y pan puede doblarla. Es el plato en el que la receta importa más que la ración.</p>",
+      "lighter": "<p>No hace falta. Si acaso, medir el aceite en lugar de echarlo a chorro y no añadir pan. El gazpacho es de los pocos platos que se pueden repetir sin que la cuenta del día se mueva.</p>",
+      "faq": [
+        {
+          "q": "¿Engorda el gazpacho?",
+          "a": "No, en ninguna cantidad razonable: {kcal} kcal el bol de 250 ml, {per100} por cada 100 g. Lo que puede engordar es lo que va con él: el pan, la tortilla de al lado o la cerveza."
+        },
+        {
+          "q": "¿El gazpacho de brik tiene más calorías?",
+          "a": "Depende de la marca, y la etiqueta por 100 ml manda. La diferencia entre unos y otros la hace el aceite: hay briks en el rango de un gazpacho casero y otros con el doble."
+        },
+        {
+          "q": "¿Gazpacho o salmorejo, cuál tiene menos calorías?",
+          "a": "El gazpacho, con diferencia: {kcal} kcal el bol frente a {kcal:salmorejo} el de salmorejo, por el pan y el aceite que lleva el salmorejo para espesar."
+        }
+      ]
+    },
+    {
+      "slug": "salmorejo",
+      "app_id": "salmorejo",
+      "name": "salmorejo",
+      "article": "el",
+      "aliases": [
+        "salmorejo cordobés"
+      ],
+      "status": "ready",
+      "compare": [
+        "gazpacho",
+        "crema-de-calabaza"
+      ],
+      "blog": [
+        "dietary-fat-how-much-and-which-kinds"
+      ],
+      "calc": "deficit-calorico",
+      "published": "2026-10-13",
+      "portion": "<p>Un bol de 250 g, el primero de un menú en Córdoba o un plato de verano en casa. Como tapa, en un vasito de 100 g, es poco más de un tercio. El salmorejo es más denso que el gazpacho y llena más: una ración suele bastar.</p>",
+      "drivers": "<p>Pan y aceite. El tomate es casi todo el volumen, pero la energía viene del pan que lo espesa y del aceite que lo emulsiona, y de los dos lleva bastante más que un gazpacho. El huevo duro y el jamón de encima suman poco si son un adorno y bastante si son un puñado.</p>",
+      "lighter": "<p>Menos aceite y menos pan es el único camino, y cambia la textura: un salmorejo ligero es casi un gazpacho espeso. Mejor comerlo como lo que es, un plato con más calorías de las que aparenta, y no repetir.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un vaso de salmorejo?",
+          "a": "Un vasito de tapa de 100 g son unas {per100} kcal; el bol de 250 g, {kcal}. Con el huevo y el jamón de encima, algo más."
+        },
+        {
+          "q": "¿Engorda el salmorejo?",
+          "a": "Un bol son {kcal} kcal, lo mismo que una tostada con tomate y aceite: cabe en cualquier comida como primero. Lo que lo saca de sitio es tomarlo como acompañamiento de otro plato fuerte, o repetir, porque entra con facilidad."
+        },
+        {
+          "q": "¿El salmorejo tiene muchos hidratos?",
+          "a": "Más que el gazpacho por el pan, {carbs} g por bol, pero no es un plato de hidratos: más de la mitad de sus calorías son grasa, la del aceite de oliva, que es también lo que lo hace saciante."
+        }
+      ]
+    },
+    {
+      "slug": "lentejas-estofadas",
+      "app_id": "lentejas-estofadas",
+      "name": "lentejas estofadas",
+      "article": "las",
+      "aliases": [
+        "lentejas",
+        "plato de lentejas"
+      ],
+      "status": "ready",
+      "compare": [
+        "lentejas-con-chorizo",
+        "garbanzos-con-espinacas",
+        "potaje-de-garbanzos"
+      ],
+      "blog": [
+        "fiber-the-underrated-nutrient",
+        "how-much-protein-per-day"
+      ],
+      "calc": "macros",
+      "published": "2026-10-13",
+      "portion": "<p>Un plato hondo de 320 g, servido con cucharón: dos cucharones y medio, más o menos. Es la ración de Fotocal y la de un plato de casa normal. Las lentejas se comen de primero y de plato único, y la diferencia la hace la segunda vuelta al cucharón: pesar una vez el plato lleno sirve para siempre.</p>",
+      "drivers": "<p>Las lentejas ponen los hidratos, la fibra y buena parte de la proteína: más de la mitad de las calorías son hidratos, y de los lentos. La patata suma hidratos; el sofrito con aceite, la grasa. Sin embutido es un plato de poca grasa y de la fibra que a casi todo el mundo le falta.</p>",
+      "lighter": "<p>Ya es ligero. Lo que más pesa es lo que se le añade: con chorizo el plato sube a {kcal:lentejas-con-chorizo} kcal, más de cien por encima, y el pan de al lado suma aparte. Las lentejas con su verdura y sin más son de las comidas que mejor salen en calorías por lo que llenan.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un plato de lentejas con chorizo?",
+          "a": "{kcal:lentejas-con-chorizo} kcal un plato de 330 g en la base de datos de Fotocal, frente a {kcal} el plato estofado sin embutido. El chorizo es también lo que convierte un plato bajo en grasa en uno con bastante grasa saturada."
+        },
+        {
+          "q": "¿Engordan las lentejas?",
+          "a": "No más que cualquier plato de {kcal} kcal, y bastante menos que la mayoría por lo que sacian: hidratos lentos, fibra y proteína en un plato que tarda en digerirse. Si alguien engorda a base de lentejas es por lo que lleva dentro y por el pan, no por la legumbre."
+        },
+        {
+          "q": "¿Las lentejas tienen proteína suficiente?",
+          "a": "{protein} g por plato, una cantidad respetable, aunque la proteína de la legumbre es algo incompleta por sí sola. Con arroz o pan en la misma comida se completa, que es lo que la cocina tradicional ya hacía sin saberlo."
+        }
+      ]
+    },
+    {
+      "slug": "fabada-asturiana",
+      "app_id": "fabada-asturiana",
+      "name": "fabada asturiana",
+      "article": "la",
+      "aliases": [
+        "fabada"
+      ],
+      "status": "ready",
+      "compare": [
+        "cocido-madrileno",
+        "lentejas-con-chorizo"
+      ],
+      "blog": [
+        "how-to-handle-cravings-without-guilt"
+      ],
+      "calc": "calorias-diarias",
+      "published": "2026-10-13",
+      "portion": "<p>Un plato de 300 g con las fabes y su compango, chorizo y morcilla, en proporción de casa: es la ración de Fotocal. En un restaurante en Asturias la fabada llega en una fuente para repetir y la ración real se acerca al doble; en lata, la ración de etiqueta suele ser mayor que esta y va con todo el compango.</p>",
+      "drivers": "<p>Las fabes ponen los hidratos y la fibra; el compango, la grasa y la sal. Los 70 g de chorizo y morcilla del plato aportan más calorías que los 190 g de fabes, y casi toda la grasa saturada. Sin compango la fabada sería un plato de legumbre como las lentejas; con él es un plato de invierno de más de 500 kcal.</p>",
+      "lighter": "<p>Compango a la mitad, o solo chorizo, y las fabes enteras. Desgrasar el guiso en frío retira buena parte de la grasa fundida del embutido. Y no repetir: la fabada es plato único, con una ensalada o fruta detrás, no con segundo.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una lata de fabada?",
+          "a": "Depende de la marca y de los gramos: la etiqueta da la cifra por 100 g y por ración, y la lata entera suele ser más de una ración. Por 100 g, la fabada de la base de datos de Fotocal son {per100} kcal; las de lata quedan por encima o por debajo según cuánto compango lleven."
+        },
+        {
+          "q": "¿Fabada o cocido, cuál tiene más calorías?",
+          "a": "Por plato, parecidos: {kcal} kcal la fabada de 300 g y {kcal:cocido-madrileno} el cocido de 400 g. Por peso, la fabada es más densa, {per100} kcal por 100 g frente a {per100:cocido-madrileno}, porque lleva más embutido en proporción."
+        },
+        {
+          "q": "¿Es la fabada muy salada?",
+          "a": "Bastante: el chorizo y la morcilla son embutidos curados y el plato pasa de los 2 g de sal, casi la mitad de los 5 g diarios que recomienda la OMS. Si la tensión es un tema, es el plato en el que el compango importa dos veces."
+        }
+      ]
+    },
+    {
+      "slug": "ensaladilla-rusa",
+      "app_id": "ensaladilla-rusa",
+      "name": "ensaladilla rusa",
+      "article": "la",
+      "aliases": [
+        "ensaladilla"
+      ],
+      "status": "ready",
+      "compare": [
+        "ensalada-mixta",
+        "ensalada-de-pasta"
+      ],
+      "blog": [
+        "dietary-fat-how-much-and-which-kinds"
+      ],
+      "calc": "deficit-calorico",
+      "published": "2026-10-13",
+      "portion": "<p>Una ración de 200 g: la tapa grande de bar o el plato de primero en casa. La tapa pequeña que viene con la caña ronda los 80 g. La ensaladilla se sirve con pala y queda compacta, así que un montón pequeño pesa más de lo que parece.</p>",
+      "drivers": "<p>La mayonesa. En la ración hay unos 30 g de mayonesa y aportan más calorías que los 100 g de patata. La patata, la zanahoria y los guisantes son la parte barata; el huevo y el atún ponen la proteína. Casi dos tercios de las calorías son grasa, y casi toda es de la salsa.</p>",
+      "lighter": "<p>Menos mayonesa y más patata y verdura en proporción, o una mayonesa ligera; con yogur en parte de la salsa se baja sin cambiar mucho el plato. En el bar no se elige: ahí lo que funciona es la tapa pequeña y no los picos.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una tapa de ensaladilla?",
+          "a": "La tapa pequeña de 80 g, unas {per100*0.8} kcal; la ración de 200 g, {kcal}. Los picos o el pan van aparte."
+        },
+        {
+          "q": "¿Engorda la ensaladilla rusa?",
+          "a": "Por 100 g tiene más calorías que la tortilla de patatas, {per100} frente a {per100:tortilla-espanola}, y llena menos. No está prohibida: es que la ración de bar se come en tres minutos y cuesta lo que medio plato de lentejas. Contarla como lo que es, un primero con grasa, la deja en su sitio."
+        },
+        {
+          "q": "¿Cuánta proteína tiene la ensaladilla?",
+          "a": "{protein} g por ración, del huevo y el atún: poca para lo que pesa en calorías. Es un primero, no una fuente de proteína; el segundo tiene que poner el resto."
+        }
+      ]
+    },
+    {
+      "slug": "churros-con-chocolate",
+      "app_id": "churros-con-chocolate",
+      "name": "churros con chocolate",
+      "article": "los",
+      "aliases": [
+        "churros",
+        "chocolate con churros"
+      ],
+      "status": "ready",
+      "compare": [
+        "churros",
+        "porras",
+        "croissant"
+      ],
+      "blog": [
+        "how-to-handle-cravings-without-guilt"
+      ],
+      "calc": "deficit-calorico",
+      "published": "2026-10-13",
+      "portion": "<p>La ración de Fotocal es el desayuno de churrería estándar: 80 g de churros, dos o tres de los normales, con una taza de 120 g de chocolate hecho con leche. Una ración de seis churros grandes, o de porras, pesa bastante más, y el chocolate a la taza espeso de cafetería puede llevar más azúcar y más chocolate que este.</p>",
+      "drivers": "<p>Los churros son masa frita: harina y agua que absorbe aceite al freírse, y ahí está la mitad de la grasa. El chocolate pone el azúcar y la otra parte de la grasa: casi 20 g de azúcar en la ración, entre la taza y lo que se espolvorea. Más de la mitad de las calorías del desayuno son grasa.</p>",
+      "lighter": "<p>Es un desayuno de domingo y conviene tratarlo como tal: una vez, no una costumbre. Si se quiere recortar, menos churros y el chocolate para mojar, no para beber; quitar el azúcar de encima ahorra poco. Lo que de verdad lo compensa es el resto del día, no el churro.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un churro?",
+          "a": "Unas {kcal:churros/3} kcal un churro normal de 30 g, sin el azúcar de encima ni el chocolate. Tres churros son {kcal:churros} kcal; el desayuno completo con la taza, {kcal}."
+        },
+        {
+          "q": "¿Y las porras?",
+          "a": "Una porra de 80 g son {kcal:porras} kcal en la base de datos de Fotocal, casi lo que tres churros: pesa más por unidad, no es más ligera. Churro o porra, la cuenta la hace el peso de masa frita, no la forma."
+        },
+        {
+          "q": "¿Engordan los churros con chocolate?",
+          "a": "Un desayuno de {kcal} kcal es una comida entera. Un domingo al mes no cambia nada; cada fin de semana, suma. Lo que decide no es el churro sino si ese día se come como si no hubiera habido churros."
+        }
+      ]
+    },
+    {
+      "slug": "pulpo-a-la-gallega",
+      "app_id": "pulpo-a-la-gallega",
+      "name": "pulpo a la gallega",
+      "article": "el",
+      "aliases": [
+        "pulpo a feira"
+      ],
+      "status": "ready",
+      "compare": [
+        "sepia-a-la-plancha",
+        "gambas-a-la-plancha"
+      ],
+      "blog": [
+        "how-much-protein-per-day"
+      ],
+      "calc": "macros",
+      "published": "2026-10-13",
+      "portion": "<p>Una ración de 200 g con el pulpo, su cama de cachelos y el aceite con pimentón por encima: la ración individual de restaurante, en el plato de madera. La ración para compartir suele llevar de 300 a 400 g de pulpo. Sin patata, el pulpo es casi todo proteína.</p>",
+      "drivers": "<p>El pulpo cocido tiene pocas calorías para la proteína que lleva. Lo que suma es lo que se le pone encima, el aceite de oliva, y lo que va debajo, el cachelo: un chorro generoso de aceite puede acercarse a la mitad de las calorías del plato. El pimentón y la sal gorda no cuentan.</p>",
+      "lighter": "<p>Aceite medido en vez de regado. Más pulpo y menos cachelo si se busca proteína; al revés si se busca llenar. Es de las raciones de bar que mejor salen en la cuenta por lo que sacia.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una ración de pulpo a la gallega?",
+          "a": "{kcal} kcal la ración individual de 200 g con cachelos y aceite, {per100} por cada 100 g. La ración para compartir, pesada entera, se calcula igual: gramos por {per100} entre 100."
+        },
+        {
+          "q": "¿El pulpo tiene mucha proteína?",
+          "a": "{protein} g en la ración, con poca grasa propia: es de los platos de bar con mejor proporción de proteína por caloría, mientras el aceite no se lleve el plato."
+        },
+        {
+          "q": "¿Engorda el pulpo a la gallega?",
+          "a": "Difícil: {kcal} kcal una ración que sacia como un segundo plato. Lo que engorda en una mesa gallega es lo que rodea al pulpo, el pan, la empanada y el vino, no el pulpo."
+        }
+      ]
+    },
+    {
+      "slug": "empanada-gallega",
+      "app_id": "empanada-gallega",
+      "name": "empanada gallega",
+      "article": "la",
+      "aliases": [
+        "empanada de atún"
+      ],
+      "status": "planned",
+      "compare": [
+        "empanadilla-de-atun",
+        "quiche-de-verduras"
+      ],
+      "blog": [
+        "portion-control-simple-tricks"
+      ],
+      "calc": "deficit-calorico"
+    },
+    {
+      "slug": "migas",
+      "app_id": "migas",
+      "name": "migas",
+      "article": "las",
+      "aliases": [
+        "migas extremeñas",
+        "migas manchegas"
+      ],
+      "status": "planned",
+      "compare": [
+        "huevos-fritos-con-patatas",
+        "arroz-a-la-cubana"
+      ],
+      "blog": [
+        "carbs-are-not-the-enemy"
+      ],
+      "calc": "calorias-diarias"
+    },
+    {
+      "slug": "torrijas",
+      "app_id": "torrija",
+      "name": "torrijas",
+      "article": "las",
+      "aliases": [
+        "torrija"
+      ],
+      "status": "planned",
+      "compare": [
+        "arroz-con-leche",
+        "flan-de-huevo",
+        "napolitana-de-chocolate"
+      ],
+      "blog": [
+        "how-to-handle-cravings-without-guilt"
+      ],
+      "calc": "deficit-calorico"
+    },
+    {
+      "slug": "tostada-con-tomate-y-aceite",
+      "app_id": "tostada-con-tomate-y-aceite",
+      "name": "tostada con tomate y aceite",
+      "article": "la",
+      "aliases": [
+        "tostada de tomate",
+        "pan con tomate y aceite"
+      ],
+      "status": "planned",
+      "compare": [
+        "tostada-con-aceite-de-oliva",
+        "tostada-con-mantequilla-y-mermelada",
+        "croissant"
+      ],
+      "blog": [
+        "high-protein-breakfast-ideas"
+      ],
+      "calc": "calorias-diarias"
+    },
+    {
+      "slug": "cafe-con-leche",
+      "app_id": "cafe-con-leche",
+      "name": "café con leche",
+      "article": "el",
+      "aliases": [
+        "café con leche entera"
+      ],
+      "status": "planned",
+      "compare": [
+        "cafe-solo",
+        "cafe-cortado",
+        "cafe-con-leche-desnatada"
+      ],
+      "blog": [
+        "common-calorie-counting-mistakes"
+      ],
+      "calc": "deficit-calorico"
+    },
+    {
+      "slug": "huevos-fritos-con-patatas",
+      "app_id": "huevos-fritos-con-patatas",
+      "name": "huevos fritos con patatas",
+      "article": "los",
+      "aliases": [
+        "huevos rotos",
+        "huevos con patatas"
+      ],
+      "status": "planned",
+      "compare": [
+        "tortilla-espanola",
+        "huevos-revueltos",
+        "salchichas-con-patatas"
+      ],
+      "blog": [
+        "dietary-fat-how-much-and-which-kinds"
+      ],
+      "calc": "deficit-calorico"
+    },
+    {
+      "slug": "arroz-con-leche",
+      "app_id": "arroz-con-leche",
+      "name": "arroz con leche",
+      "article": "el",
+      "aliases": [
+        "arroz con leche casero"
+      ],
+      "status": "planned",
+      "compare": [
+        "natillas",
+        "flan-de-huevo",
+        "yogur-natural-azucarado"
+      ],
+      "blog": [
+        "added-sugar-vs-natural-sugar"
+      ],
+      "calc": "deficit-calorico"
+    },
+    {
+      "slug": "albondigas-en-salsa",
+      "app_id": "albondigas-en-salsa",
+      "name": "albóndigas en salsa",
+      "article": "las",
+      "aliases": [
+        "albóndigas"
+      ],
+      "status": "planned",
+      "compare": [
+        "estofado-de-ternera",
+        "filete-de-ternera-a-la-plancha"
+      ],
+      "blog": [
+        "how-much-protein-per-day"
+      ],
+      "calc": "macros"
+    },
+    {
+      "slug": "pincho-de-tortilla",
+      "app_id": "pincho-de-tortilla",
+      "name": "pincho de tortilla",
+      "article": "el",
+      "aliases": [
+        "tapa de tortilla"
+      ],
+      "status": "planned",
+      "compare": [
+        "tortilla-espanola",
+        "bocadillo-de-tortilla"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet"
+      ],
+      "calc": "deficit-calorico"
+    }
   ]
 }

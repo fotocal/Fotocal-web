@@ -18,24 +18,30 @@ meses, cualquier cifra de visitas sería inventada.
   cada uno. Y cada plato son 20–40 minutos de texto bien hecho, no un
   minuto de generador.
 
-## Mes 1 · octubre–noviembre: cimientos
+## Estado al cierre del 13 de octubre
+
+Los 20 platos, las 4 calculadoras y los dos índices están **publicados en
+main**. Lo que queda de este plan es verificación, lectura de datos y la
+segunda tanda; no hay nada pendiente de escribir de la primera lista.
+
+## Mes 1 · octubre–noviembre: que Google lo vea
 
 | Semana | Qué | Quién |
 |---|---|---|
-| 1 | Aprobar la tortilla y la lista de 20. Fusionar. Reenviar sitemap. Validar Merchant listing. Pedir indexación de portada, `/calorias/`, `/calculadoras/`. | Propietario + Claude |
-| 1 | Comprobar en google.es las diez consultas ★ del mapa y anotar «Otras preguntas» para los platos. | Propietario (30 min) |
-| 2 | Platos 2–6: paella valenciana, croquetas, cocido, gazpacho, salmorejo. | Claude escribe, propietario lee |
-| 3 | Platos 7–11: lentejas, fabada, ensaladilla, churros con chocolate, pulpo. | Idem |
-| 4 | Platos 12–16: empanada, migas, torrijas (antes de marzo importa), tostada con tomate, café con leche. | Idem |
+| 1 | Reenviar el sitemap en Search Console (no se lee desde el 23 de julio). Pedir indexación a mano de la portada, `/calorias/`, `/calculadoras/` y tres platos. Validar la corrección del Merchant listing. | Propietario (20 min) |
+| 1 | Comprobar en google.es, en incógnito y desde el móvil, las diez consultas ★ del mapa; anotar «Otras preguntas» para añadirlas a las FAQ de cada plato. | Propietario (30 min) |
+| 2 | Añadir a la app los platos con demanda que no tiene (lista en el informe de PART 47 y en el mapa §5.2), con su ración. | App |
+| 3 | Revisión del castellano de los 20 platos de una sentada; corregir en `dishes.json` y regenerar. | Lector nativo + Claude |
+| 4 | Search Console → Páginas: confirmar que `/calorias/…` y `/calculadoras/…` pasan de «Descubierta» a «Indexada». Si no, volver a pedir indexación. | Propietario |
 
-## Mes 2 · noviembre–diciembre: completar y medir
+## Mes 2 · noviembre–diciembre: segunda tanda
 
 | Semana | Qué |
 |---|---|
-| 5 | Platos 17–20: huevos fritos con patatas, arroz con leche, albóndigas, pincho de tortilla. Regenerar el índice `/calorias/`. |
-| 6 | Primera lectura de Search Console con filtro España: qué consultas traen impresiones a `/calorias/` y `/calculadoras/`. Añadir al mapa de palabras clave lo que aparezca. |
-| 7 | Pedir a la app los platos con demanda que no tiene (patatas bravas, bocadillo de jamón, calamares a la romana, callos, jamón 100 g, pimientos de Padrón, cerveza, tinto de verano). Es trabajo de app: añadirlos a `spanishFoods.ts` con su ración. |
-| 8 | Revisar el castellano de los 20 platos de una sentada (el paquete de revisión de septiembre sirve de patrón). Corregir, regenerar. |
+| 5 | Sincronizar `app-data.json` con la app (`sync_from_app.py`) cuando entren los platos nuevos; generar sus páginas: patatas bravas, bocadillo de jamón, calamares a la romana, callos, jamón, cerveza, tinto de verano. |
+| 6 | Primera lectura de Search Console con filtro España: qué consultas traen impresiones a `/calorias/` y `/calculadoras/`. Añadir al mapa lo que aparezca. |
+| 7 | Siguientes 10 platos de los que la app ya tiene (candidatos en el mapa §5.2), elegidos por lo que Search Console enseñe, no por la lista. |
+| 8 | Dulces de temporada si la app los tiene (turrón, roscón): publicar antes de diciembre o no publicar. |
 
 ## Mes 3 · diciembre–enero: segunda tanda y ajuste
 

@@ -1,14 +1,14 @@
 # PART 47 — notas técnicas (SEO en español, de la A a la Z)
 
-Fecha: 13 de octubre de 2026. Rama `part47-spanish-seo`, sin fusionar a
-`main` hasta que el propietario lo apruebe.
+Fecha: 13 de octubre de 2026. Aprobado y fusionado a `main` el mismo día:
+los 20 platos, las 4 calculadoras, los índices y los cambios técnicos están publicados.
 
 ## 1 · Qué se ha construido
 
 | Qué | Dónde | Cómo se mantiene |
 |---|---|---|
 | Mapa de palabras clave con evidencia | `tools/seo/keyword-map.md` | A mano, tras cada lectura de Search Console |
-| Páginas de platos (1 de 20 publicada) | `/calorias/<plato>/` + índice `/calorias/` | `tools/dishes/dishes.json` (texto) + `tools/dishes/app-data.json` (cifras de la app, `sync_from_app.py`) → `python3 tools/gen_dishes.py` |
+| Páginas de platos (20 publicadas) | `/calorias/<plato>/` + índice `/calorias/` | `tools/dishes/dishes.json` (texto) + `tools/dishes/app-data.json` (cifras de la app, `sync_from_app.py`) → `python3 tools/gen_dishes.py` |
 | Cuatro calculadoras + índice | `/calculadoras/{calorias-diarias,deficit-calorico,imc,macros}/` | `tools/gen_calcs.py` (texto y formularios) + `assets/js/calc.js` (aritmética) |
 | Soporte de páginas solo en español | `tools/build_site.py` (`ES_ONLY`) | Prefijos `calorias/` y `calculadoras/`: una sola copia, hreflang es + x-default, una entrada de sitemap |
 | `lastmod` por página en el sitemap | `tools/build_site.py` (`page_lastmod`) | Fecha de modificación declarada por la página o, si no, último commit del fuente |
@@ -128,7 +128,7 @@ apuntado en el mapa de palabras clave (§4) con dos medidas baratas.
 
 ## 8 · Lo que necesita al propietario
 
-1. Aprobar la primera página de plato y la lista de 20 (o cambiarla).
+1. Reenviar el sitemap en Search Console (Sitemaps → `https://getfotocal.com/sitemap.xml` → Enviar) y pedir indexación de la portada, `/calorias/` y `/calculadoras/` desde el inspector de URL.
 2. Comprobar en google.es, en incógnito y desde el móvil, las diez
    consultas marcadas ★ en el mapa de palabras clave.
 3. Exportar de Search Console las 21 URL no indexadas con su motivo.

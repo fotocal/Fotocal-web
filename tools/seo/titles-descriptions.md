@@ -360,14 +360,14 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calorías de las albóndigas en salsa
 
 ### `/calorias/arroz-con-leche/`
-- **Title** (56): Calorías de el arroz con leche: ración y 100 g — Fotocal
+- **Title** (54): Calorías del arroz con leche: ración y 100 g — Fotocal
 - **Description** (157): Una ración de arroz con leche (150 g) tiene 182 kcal, 121 por 100 g: 4,5 g de proteínas, 28,4 g de hidratos y 5,1 g de grasas. Qué pesa una ración de verdad.
-- **H1**: Calorías de el arroz con leche
+- **H1**: Calorías del arroz con leche
 
 ### `/calorias/cafe-con-leche/`
-- **Title** (55): Calorías de el café con leche: ración y 100 g — Fotocal
+- **Title** (53): Calorías del café con leche: ración y 100 g — Fotocal
 - **Description** (153): Una ración de café con leche (200 g) tiene 91 kcal, 46 por 100 g: 4,5 g de proteínas, 7,7 g de hidratos y 4,7 g de grasas. Qué pesa una ración de verdad.
-- **H1**: Calorías de el café con leche
+- **H1**: Calorías del café con leche
 
 ### `/calorias/churros-con-chocolate/`
 - **Title** (53): Calorías de los churros con chocolate: ración y 100 g
@@ -375,9 +375,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calorías de los churros con chocolate
 
 ### `/calorias/cocido-madrileno/`
-- **Title** (57): Calorías de el cocido madrileño: ración y 100 g — Fotocal
+- **Title** (55): Calorías del cocido madrileño: ración y 100 g — Fotocal
 - **Description** (160): Una ración de cocido madrileño (400 g) tiene 594 kcal, 149 por 100 g: 44,5 g de proteínas, 49,7 g de hidratos y 24,2 g de grasas. Qué pesa una ración de verdad.
-- **H1**: Calorías de el cocido madrileño
+- **H1**: Calorías del cocido madrileño
 
 ### `/calorias/croquetas-de-jamon/`
 - **Title** (60): Calorías de las croquetas de jamón: ración y 100 g — Fotocal
@@ -400,9 +400,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calorías de la fabada asturiana
 
 ### `/calorias/gazpacho/`
-- **Title** (49): Calorías de el gazpacho: ración y 100 g — Fotocal
+- **Title** (47): Calorías del gazpacho: ración y 100 g — Fotocal
 - **Description** (159): Una ración de gazpacho (250 g) tiene 90 kcal, 36 por 100 g: 2 g de proteínas, 10 g de hidratos y 5 g de grasas. Ración real y comparación con platos parecidos.
-- **H1**: Calorías de el gazpacho
+- **H1**: Calorías del gazpacho
 
 ### `/calorias/huevos-fritos-con-patatas/`
 - **Title** (57): Calorías de los huevos fritos con patatas: ración y 100 g
@@ -430,19 +430,19 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calorías de la paella valenciana
 
 ### `/calorias/pincho-de-tortilla/`
-- **Title** (59): Calorías de el pincho de tortilla: ración y 100 g — Fotocal
+- **Title** (57): Calorías del pincho de tortilla: ración y 100 g — Fotocal
 - **Description** (159): Una ración de pincho de tortilla (120 g) tiene 198 kcal, 165 por 100 g: 6,7 g de proteínas, 14 g de hidratos y 11,9 g de grasas. Qué pesa una ración de verdad.
-- **H1**: Calorías de el pincho de tortilla
+- **H1**: Calorías del pincho de tortilla
 
 ### `/calorias/pulpo-a-la-gallega/`
-- **Title** (59): Calorías de el pulpo a la gallega: ración y 100 g — Fotocal
+- **Title** (57): Calorías del pulpo a la gallega: ración y 100 g — Fotocal
 - **Description** (156): Una ración de pulpo a la gallega (200 g) tiene 250 kcal, 125 por 100 g: 24 g de proteínas, 14 g de hidratos y 11 g de grasas. Qué pesa una ración de verdad.
-- **H1**: Calorías de el pulpo a la gallega
+- **H1**: Calorías del pulpo a la gallega
 
 ### `/calorias/salmorejo/`
-- **Title** (50): Calorías de el salmorejo: ración y 100 g — Fotocal
+- **Title** (48): Calorías del salmorejo: ración y 100 g — Fotocal
 - **Description** (153): Una ración de salmorejo (250 g) tiene 210 kcal, 84 por 100 g: 4 g de proteínas, 18 g de hidratos y 13 g de grasas. Con la ración real y platos parecidos.
-- **H1**: Calorías de el salmorejo
+- **H1**: Calorías del salmorejo
 
 ### `/calorias/torrijas/`
 - **Title** (50): Calorías de las torrijas: ración y 100 g — Fotocal

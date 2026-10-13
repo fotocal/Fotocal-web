@@ -148,6 +148,11 @@ def cap(s):
     return s[:1].upper() + s[1:]
 
 
+def de(art):
+    """'de' + article, with the contraction Spanish requires: de el -> del."""
+    return "del" if art == "el" else "de " + art
+
+
 def fecha(iso):
     y, m, d = iso.split("-")
     meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
@@ -272,7 +277,7 @@ def dish_page(d, ready_by_app):
     pub = d.get("published", date.today().isoformat())
     upd = d.get("updated", pub)
 
-    title = d.get("title") or "Calorías de %s %s: ración y 100 g" % (art, name)
+    title = d.get("title") or "Calorías %s %s: ración y 100 g" % (de(art), name)
     if len(title) + len(" — Fotocal") <= TITLE_MAX:
         title += " — Fotocal"
     assert len(title) <= TITLE_MAX, (d["slug"], len(title), title)
@@ -340,7 +345,7 @@ def dish_page(d, ready_by_app):
       '<a href="../../">Inicio</a><span class="sep" aria-hidden="true">/</span>'
       '<a href="../">Calorías de platos</a><span class="sep" aria-hidden="true">/</span>'
       '<a href="./" aria-current="page">%s</a></nav>' % esc(cap(name)))
-    o('        <h1 class="post-title reveal">Calorías de %s %s</h1>' % (art, esc(name)))
+    o('        <h1 class="post-title reveal">Calorías %s %s</h1>' % (de(art), esc(name)))
     o('        <p class="post-lead reveal">%s</p>' % esc(lead))
     o('        <div class="post-meta reveal"><span>Actualizado <time datetime="%s">%s</time></span>'
       '<span class="dot" aria-hidden="true">&middot;</span><span>Cifras de la base de datos de Fotocal</span></div>' % (upd, fecha(upd)))
@@ -356,7 +361,7 @@ def dish_page(d, ready_by_app):
 
     # nutrition table
     o('      <div class="post-body reveal">')
-    o('      <h2 id="valores">Valores nutricionales de %s %s</h2>' % (art, esc(name)))
+    o('      <h2 id="valores">Valores nutricionales %s %s</h2>' % (de(art), esc(name)))
     o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">&nbsp;</th><th scope="col">Por ración (%s g)</th><th scope="col">Por 100 g</th></tr></thead><tbody>' % n(g))
     o('        <tr><th scope="row">Calorías</th><td class="hl">%s kcal</td><td class="hl">%s kcal</td></tr>' % (n(fig["kcal"]), n(fig["per100"])))
     o('        <tr><th scope="row">Proteínas</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["protein"]), n(fig["per100_p"])))
@@ -387,7 +392,7 @@ def dish_page(d, ready_by_app):
     o('      ' + fill(d["drivers"], d, fig))
 
     # comparison
-    o('      <h2 id="comparacion">Comparada con platos parecidos</h2>')
+    o('      <h2 id="comparacion">Comparación con platos parecidos</h2>')
     o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Plato</th><th scope="col">Ración</th><th scope="col">kcal / ración</th><th scope="col">kcal / 100 g</th><th scope="col">Proteínas</th></tr></thead><tbody>')
     for label, f2, is_this in rows:
         slug2 = ready_by_app.get(next((k for k, v in HAND.items() if v["name_es"] == label), None))
@@ -436,7 +441,7 @@ def dish_page(d, ready_by_app):
       '<a href="../../">Inicio</a><span class="sep" aria-hidden="true">/</span>'
       '<a href="../">Calorías de platos</a><span class="sep" aria-hidden="true">/</span>'
       '<a href="./" aria-current="page">%s</a></nav>' % esc(cap(name)))
-    o('        <h1 class="post-title reveal">Calorías de %s %s</h1>' % (art, esc(name)))
+    o('        <h1 class="post-title reveal">Calorías %s %s</h1>' % (de(art), esc(name)))
     o('        <p class="post-lead reveal">%s</p>' % esc(lead))
     o('        <div class="post-meta reveal"><span>Actualizado <time datetime="%s">%s</time></span>'
       '<span class="dot" aria-hidden="true">&middot;</span><span>Cifras de la base de datos de Fotocal</span></div>' % (upd, fecha(upd)))
@@ -452,7 +457,7 @@ def dish_page(d, ready_by_app):
 
     # nutrition table
     o('      <div class="post-body reveal">')
-    o('      <h2 id="valores">Valores nutricionales de %s %s</h2>' % (art, esc(name)))
+    o('      <h2 id="valores">Valores nutricionales %s %s</h2>' % (de(art), esc(name)))
     o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">&nbsp;</th><th scope="col">Por ración (%s g)</th><th scope="col">Por 100 g</th></tr></thead><tbody>' % n(g))
     o('        <tr><th scope="row">Calorías</th><td class="hl">%s kcal</td><td class="hl">%s kcal</td></tr>' % (n(fig["kcal"]), n(fig["per100"])))
     o('        <tr><th scope="row">Proteínas</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["protein"]), n(fig["per100_p"])))
@@ -483,7 +488,7 @@ def dish_page(d, ready_by_app):
     o('      ' + fill(d["drivers"], d, fig))
 
     # comparison
-    o('      <h2 id="comparacion">Comparada con platos parecidos</h2>')
+    o('      <h2 id="comparacion">Comparación con platos parecidos</h2>')
     o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Plato</th><th scope="col">Ración</th><th scope="col">kcal / ración</th><th scope="col">kcal / 100 g</th><th scope="col">Proteínas</th></tr></thead><tbody>')
     for label, f2, is_this in rows:
         slug2 = ready_by_app.get(next((k for k, v in HAND.items() if v["name_es"] == label), None))
@@ -527,7 +532,7 @@ def dish_page(d, ready_by_app):
     o('      <nav class="dp-related reveal" aria-label="Páginas relacionadas">\n        <h2>Seguir por aquí</h2>\n        <div class="post-nav">')
     others = [x for x in DISHES if x.get("status") == "ready" and x["slug"] != d["slug"]][:4]
     for x in others:
-        o('          <a class="post-nav-item" href="../%s/"><small>Otro plato</small><strong>Calorías de %s %s</strong></a>' % (x["slug"], x["article"], esc(x["name"])))
+        o('          <a class="post-nav-item" href="../%s/"><small>Otro plato</small><strong>Calorías %s %s</strong></a>' % (x["slug"], de(x["article"]), esc(x["name"])))
     o('          <a class="post-nav-item" href="../"><small>Tabla</small><strong>Calorías de los platos españoles, por ración y por 100 g</strong></a>')
     c = d.get("calc", "deficit-calorico")
     o('          <a class="post-nav-item" href="../../calculadoras/%s/"><small>Calculadora</small><strong>%s</strong></a>' % (c, CALCS[c]))
@@ -547,7 +552,7 @@ def hub_page(ready):
     assert len(title) <= TITLE_MAX and 140 <= len(desc) <= 160, (len(title), len(desc))
     path = "calorias/"
     url = SITE + path
-    items = [{"@type": "ListItem", "position": i + 1, "name": "Calorías de %s %s" % (d["article"], d["name"]), "url": SITE + "calorias/%s/" % d["slug"]} for i, d in enumerate(ready)]
+    items = [{"@type": "ListItem", "position": i + 1, "name": "Calorías %s %s" % (de(d["article"]), d["name"]), "url": SITE + "calorias/%s/" % d["slug"]} for i, d in enumerate(ready)]
     ld = [
         ld_block({"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": desc,
                   "inLanguage": "es", "url": url, "publisher": ORG,

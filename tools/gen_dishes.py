@@ -280,7 +280,11 @@ def dish_page(d, ready_by_app):
     macros = "%s g de proteínas, %s g de hidratos y %s g de grasas" % (n(fig["protein"]), n(fig["carbs"]), n(fig["fat"]))
     desc = d.get("desc")
     if not desc:
-        base = "Una ración de %s (%s g) tiene %s kcal, %s por 100 g: %s." % (name, n(g), n(fig["kcal"]), n(fig["per100"]), macros)
+        bases = [
+            "Una ración de %s (%s g) tiene %s kcal, %s por 100 g: %s." % (name, n(g), n(fig["kcal"]), n(fig["per100"]), macros),
+            "Una ración de %s (%s g) tiene %s kcal, %s por 100 g: %s g de proteínas, %s de hidratos y %s de grasas." % (name, n(g), n(fig["kcal"]), n(fig["per100"]), n(fig["protein"]), n(fig["carbs"]), n(fig["fat"])),
+            "%s (%s g): %s kcal, %s por 100 g; %s g de proteínas, %s de hidratos y %s de grasas." % (cap(name), n(g), n(fig["kcal"]), n(fig["per100"]), n(fig["protein"]), n(fig["carbs"]), n(fig["fat"])),
+        ]
         tails = sorted({" Ración real, de dónde salen las calorías y comparación con platos parecidos.",
                         " Ración real, de dónde salen y comparación con platos parecidos.",
                         " Qué pesa una ración real y comparación con platos parecidos.",
@@ -289,10 +293,13 @@ def dish_page(d, ready_by_app):
                         " Qué pesa una ración de verdad.",
                         " Ración real y comparación.",
                         " Y qué pesa una ración real.",
-                        " Y la ración de verdad.", ""}, key=len, reverse=True)
-        for tail in tails:
-            if 140 <= len(base + tail) <= 160:
-                desc = base + tail
+                        " Y la ración de verdad.", " Y la ración real.", ""}, key=len, reverse=True)
+        for base in bases:
+            for tail in tails:
+                if 140 <= len(base + tail) <= 160:
+                    desc = base + tail
+                    break
+            if desc:
                 break
     assert desc and 140 <= len(desc) <= 160, (d["slug"], len(desc or ""), desc)
 

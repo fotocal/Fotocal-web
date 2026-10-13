@@ -34,8 +34,27 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 ## /calorias/
 
+- `/calorias/albondigas-en-salsa/` — Calorías de las albóndigas en salsa: ración y 100 g  _solo ES_
+- `/calorias/arroz-con-leche/` — Calorías de el arroz con leche: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/cafe-con-leche/` — Calorías de el café con leche: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/churros-con-chocolate/` — Calorías de los churros con chocolate: ración y 100 g  _solo ES_
+- `/calorias/cocido-madrileno/` — Calorías de el cocido madrileño: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/croquetas-de-jamon/` — Calorías de las croquetas de jamón: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/empanada-gallega/` — Calorías de la empanada gallega: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/ensaladilla-rusa/` — Calorías de la ensaladilla rusa: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/fabada-asturiana/` — Calorías de la fabada asturiana: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/gazpacho/` — Calorías de el gazpacho: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/huevos-fritos-con-patatas/` — Calorías de los huevos fritos con patatas: ración y 100 g  _solo ES_
 - `/calorias/` — Calorías de platos españoles: tabla por ración y 100 g  _solo ES_
+- `/calorias/lentejas-estofadas/` — Calorías de las lentejas estofadas: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/migas/` — Calorías de las migas: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/paella-valenciana/` — Calorías de la paella valenciana: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/pincho-de-tortilla/` — Calorías de el pincho de tortilla: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/pulpo-a-la-gallega/` — Calorías de el pulpo a la gallega: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/salmorejo/` — Calorías de el salmorejo: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/torrijas/` — Calorías de las torrijas: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tortilla-de-patatas/` — Calorías de la tortilla de patatas: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/tostada-con-tomate-y-aceite/` — Calorías de la tostada con tomate y aceite: ración y 100 g  _solo ES_
 
 ## /calculadoras/
 
@@ -135,4 +154,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 89 páginas en español, 82 con copia inglesa (171 URLs servidas).
+Total: 108 páginas en español, 82 con copia inglesa (190 URLs servidas).

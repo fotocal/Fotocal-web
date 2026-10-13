@@ -354,15 +354,110 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (160): Reparte tus calorías en proteínas, grasas e hidratos según tu peso y tu objetivo: perder grasa, mantener o ganar músculo. Gramos al día, con la regla explicada.
 - **H1**: Calculadora de macros
 
+### `/calorias/albondigas-en-salsa/`
+- **Title** (51): Calorías de las albóndigas en salsa: ración y 100 g
+- **Description** (160): Una ración de albóndigas en salsa (250 g) tiene 394 kcal, 163 por 100 g: 29,3 g de proteínas, 12,8 g de hidratos y 23,9 g de grasas. Y qué pesa una ración real.
+- **H1**: Calorías de las albóndigas en salsa
+
+### `/calorias/arroz-con-leche/`
+- **Title** (56): Calorías de el arroz con leche: ración y 100 g — Fotocal
+- **Description** (157): Una ración de arroz con leche (150 g) tiene 182 kcal, 121 por 100 g: 4,5 g de proteínas, 28,4 g de hidratos y 5,1 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de el arroz con leche
+
+### `/calorias/cafe-con-leche/`
+- **Title** (55): Calorías de el café con leche: ración y 100 g — Fotocal
+- **Description** (153): Una ración de café con leche (200 g) tiene 91 kcal, 46 por 100 g: 4,5 g de proteínas, 7,7 g de hidratos y 4,7 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de el café con leche
+
+### `/calorias/churros-con-chocolate/`
+- **Title** (53): Calorías de los churros con chocolate: ración y 100 g
+- **Description** (157): Una ración de churros con chocolate (200 g) tiene 531 kcal, 266 por 100 g: 10,7 g de proteínas, 47,6 g de hidratos y 32,7 g de grasas. Y la ración de verdad.
+- **H1**: Calorías de los churros con chocolate
+
+### `/calorias/cocido-madrileno/`
+- **Title** (57): Calorías de el cocido madrileño: ración y 100 g — Fotocal
+- **Description** (160): Una ración de cocido madrileño (400 g) tiene 594 kcal, 149 por 100 g: 44,5 g de proteínas, 49,7 g de hidratos y 24,2 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de el cocido madrileño
+
+### `/calorias/croquetas-de-jamon/`
+- **Title** (60): Calorías de las croquetas de jamón: ración y 100 g — Fotocal
+- **Description** (156): Una ración de croquetas de jamón (120 g) tiene 290 kcal, 242 por 100 g: 10 g de proteínas, 24 g de hidratos y 17 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de las croquetas de jamón
+
+### `/calorias/empanada-gallega/`
+- **Title** (57): Calorías de la empanada gallega: ración y 100 g — Fotocal
+- **Description** (154): Una ración de empanada gallega (150 g) tiene 400 kcal, 267 por 100 g: 12 g de proteínas, 42 g de hidratos y 20 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de la empanada gallega
+
+### `/calorias/ensaladilla-rusa/`
+- **Title** (57): Calorías de la ensaladilla rusa: ración y 100 g — Fotocal
+- **Description** (159): Una ración de ensaladilla rusa (200 g) tiene 375 kcal, 183 por 100 g: 9,9 g de proteínas, 24,5 g de hidratos y 26,5 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de la ensaladilla rusa
+
+### `/calorias/fabada-asturiana/`
+- **Title** (57): Calorías de la fabada asturiana: ración y 100 g — Fotocal
+- **Description** (160): Una ración de fabada asturiana (300 g) tiene 546 kcal, 182 por 100 g: 31,8 g de proteínas, 48,6 g de hidratos y 25,4 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de la fabada asturiana
+
+### `/calorias/gazpacho/`
+- **Title** (49): Calorías de el gazpacho: ración y 100 g — Fotocal
+- **Description** (159): Una ración de gazpacho (250 g) tiene 90 kcal, 36 por 100 g: 2 g de proteínas, 10 g de hidratos y 5 g de grasas. Ración real y comparación con platos parecidos.
+- **H1**: Calorías de el gazpacho
+
+### `/calorias/huevos-fritos-con-patatas/`
+- **Title** (57): Calorías de los huevos fritos con patatas: ración y 100 g
+- **Description** (160): Una ración de huevos fritos con patatas (250 g) tiene 480 kcal, 192 por 100 g: 16 g de proteínas, 38 g de hidratos y 30 g de grasas. Y qué pesa una ración real.
+- **H1**: Calorías de los huevos fritos con patatas
+
 ### `/calorias/`
 - **Title** (54): Calorías de platos españoles: tabla por ración y 100 g
 - **Description** (159): Tabla de calorías de los platos españoles de cada día, por ración real y por 100 g, con proteínas, hidratos y grasas. Las mismas cifras que usa la app Fotocal.
 - **H1**: Calorías de los platos españoles, por ración y por 100 g
 
+### `/calorias/lentejas-estofadas/`
+- **Title** (60): Calorías de las lentejas estofadas: ración y 100 g — Fotocal
+- **Description** (159): Una ración de lentejas estofadas (320 g) tiene 373 kcal, 117 por 100 g: 18,1 g de proteínas, 53,8 g de hidratos y 10,9 g de grasas. Y qué pesa una ración real.
+- **H1**: Calorías de las lentejas estofadas
+
+### `/calorias/migas/`
+- **Title** (47): Calorías de las migas: ración y 100 g — Fotocal
+- **Description** (160): Una ración de migas (250 g) tiene 500 kcal, 200 por 100 g: 14 g de proteínas, 55 g de hidratos y 25 g de grasas. Ración real y comparación con platos parecidos.
+- **H1**: Calorías de las migas
+
+### `/calorias/paella-valenciana/`
+- **Title** (58): Calorías de la paella valenciana: ración y 100 g — Fotocal
+- **Description** (158): Una ración de paella valenciana (300 g) tiene 515 kcal, 168 por 100 g: 31,9 g de proteínas, 47,5 g de hidratos y 20,8 g de grasas. Y qué pesa una ración real.
+- **H1**: Calorías de la paella valenciana
+
+### `/calorias/pincho-de-tortilla/`
+- **Title** (59): Calorías de el pincho de tortilla: ración y 100 g — Fotocal
+- **Description** (159): Una ración de pincho de tortilla (120 g) tiene 198 kcal, 165 por 100 g: 6,7 g de proteínas, 14 g de hidratos y 11,9 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de el pincho de tortilla
+
+### `/calorias/pulpo-a-la-gallega/`
+- **Title** (59): Calorías de el pulpo a la gallega: ración y 100 g — Fotocal
+- **Description** (156): Una ración de pulpo a la gallega (200 g) tiene 250 kcal, 125 por 100 g: 24 g de proteínas, 14 g de hidratos y 11 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de el pulpo a la gallega
+
+### `/calorias/salmorejo/`
+- **Title** (50): Calorías de el salmorejo: ración y 100 g — Fotocal
+- **Description** (153): Una ración de salmorejo (250 g) tiene 210 kcal, 84 por 100 g: 4 g de proteínas, 18 g de hidratos y 13 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías de el salmorejo
+
+### `/calorias/torrijas/`
+- **Title** (50): Calorías de las torrijas: ración y 100 g — Fotocal
+- **Description** (156): Una ración de torrijas (80 g) tiene 228 kcal, 271 por 100 g: 5,6 g de proteínas, 26,8 g de hidratos y 11 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías de las torrijas
+
 ### `/calorias/tortilla-de-patatas/`
 - **Title** (60): Calorías de la tortilla de patatas: ración y 100 g — Fotocal
 - **Description** (159): Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g: 8,3 g de proteínas, 17,6 g de hidratos y 14,9 g de grasas. Y qué pesa una ración real.
 - **H1**: Calorías de la tortilla de patatas
+
+### `/calorias/tostada-con-tomate-y-aceite/`
+- **Title** (58): Calorías de la tostada con tomate y aceite: ración y 100 g
+- **Description** (156): Una ración de tostada con tomate y aceite (90 g) tiene 235 kcal, 267 por 100 g: 5,2 g de proteínas, 30,9 g de hidratos y 10,3 g de grasas. Y la ración real.
+- **H1**: Calorías de la tostada con tomate y aceite
 
 ### `/contact/`
 - **Title** (50): Contacto de Fotocal: soporte, borrado y reembolsos

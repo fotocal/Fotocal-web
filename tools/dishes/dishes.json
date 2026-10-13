@@ -1,0 +1,64 @@
+{
+  "_comment": [
+    "The Spanish dish pages, /calorias/<slug>/ (PART 47). One entry per page.",
+    "Figures are NEVER typed here: tools/gen_dishes.py takes them from",
+    "tools/dishes/app-data.json (a snapshot of the app, tools/dishes/sync_from_app.py)",
+    "and applies the app's own rule, so the page shows what the app shows.",
+    "What IS written here: the slug and the search name, the name variants,",
+    "which app dishes to compare with, which blog posts and calculator to link,",
+    "and the four editorial pieces: portion, drivers, lighter, faq.",
+    "status: 'ready' renders; anything else is listed nowhere (the hub links",
+    "only pages that exist). title/desc are optional overrides; the generator",
+    "asserts title <= 60 and 140 <= desc <= 160."
+  ],
+  "dishes": [
+    {
+      "slug": "tortilla-de-patatas",
+      "app_id": "tortilla-espanola",
+      "name": "tortilla de patatas",
+      "article": "la",
+      "aliases": ["tortilla española", "tortilla de patata"],
+      "status": "ready",
+      "published": "2026-10-13",
+      "compare": ["pincho-de-tortilla", "tortilla-francesa", "bocadillo-de-tortilla", "huevos-fritos-con-patatas"],
+      "blog": ["track-calories-without-weighing", "portion-control-simple-tricks", "eating-out-without-wrecking-your-diet"],
+      "calc": "deficit-calorico",
+      "portion": "<p>La ración que usa Fotocal es una porción de 150 g: el trozo que se sirve de plato en casa, más o menos un octavo de una tortilla grande. En un bar la unidad es el pincho, que suele pesar entre 100 y 130 g (la app lo cuenta como 120 g), y en el bocadillo van unos 110 g de tortilla más el pan.</p><p>Una tortilla gruesa y jugosa pesa más por trozo que una fina, y eso mueve la cuenta más que cualquier otra cosa. Pesar el trozo una sola vez quita la duda: a partir de ahí, la cifra por 100 g hace el resto.</p>",
+      "drivers": "<p>La grasa es sobre todo el aceite que absorbe la patata al freírse o confitarse, y es lo que más varía de una tortilla a otra. El huevo también aporta grasa, pero menos y siempre la misma. Por eso dos tortillas con la misma patata y los mismos huevos pueden diferir bastante en calorías: la diferencia está en cuánto aceite se escurrió antes de cuajar.</p><p>La patata pone casi todos los hidratos; el huevo, la proteína y la mayor parte de los micronutrientes. La cebolla, para quien la ponga, apenas cuenta: la discusión es de sabor, no de nutrición.</p>",
+      "lighter": "<p>Escurrir bien la patata sobre papel absorbente después de freírla es lo que más cambia la cuenta sin cambiar el plato. Hacer la patata cocida o al microondas en lugar de frita baja las calorías de forma clara, aunque la textura ya no es la misma. Más huevo y menos patata sube la proteína por ración. Y en el bar, pedir el pincho sin pan ahorra más que cualquier truco en la sartén.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un pincho de tortilla?",
+          "a": "Un pincho de bar de unos 120 g tiene unas {kcal:pincho-de-tortilla} kcal, a razón de {per100} kcal por cada 100 g. Si lleva una rebanada de pan debajo, suma unas 80 kcal más por cada 30 g de pan."
+        },
+        {
+          "q": "¿Engorda la tortilla de patatas?",
+          "a": "Ningún alimento engorda por sí solo: engorda comer, un día tras otro, más calorías de las que gastas. Una ración de 150 g son {kcal} kcal, parecidas a las de un sándwich mixto, y cabe en una cena normal si el resto del día está en orden. Lo que la saca de sitio es la ración de bar con pan y cerveza, no la tortilla."
+        },
+        {
+          "q": "¿Cuántas calorías tiene una tortilla entera?",
+          "a": "Depende del tamaño, así que la cuenta es por peso: {per100} kcal por cada 100 g. Una tortilla de un kilo son unas {per1000} kcal, a repartir entre quienes se la coman."
+        }
+      ]
+    },
+    { "slug": "paella-valenciana", "app_id": "paella-valenciana", "name": "paella valenciana", "article": "la", "aliases": ["paella"], "status": "planned", "compare": ["paella-de-marisco", "arroz-con-pollo", "fideua"], "blog": ["eating-out-without-wrecking-your-diet", "portion-control-simple-tricks"], "calc": "calorias-diarias" },
+    { "slug": "croquetas-de-jamon", "app_id": "croquetas-de-jamon", "name": "croquetas de jamón", "article": "las", "aliases": ["croquetas"], "status": "planned", "compare": ["empanadilla-de-atun", "san-jacobo", "pincho-de-tortilla"], "blog": ["eating-out-without-wrecking-your-diet"], "calc": "deficit-calorico" },
+    { "slug": "cocido-madrileno", "app_id": "cocido-madrileno", "name": "cocido madrileño", "article": "el", "aliases": ["cocido"], "status": "planned", "compare": ["fabada-asturiana", "lentejas-estofadas", "potaje-de-garbanzos"], "blog": ["how-fast-should-you-lose-weight"], "calc": "calorias-diarias" },
+    { "slug": "gazpacho", "app_id": "gazpacho", "name": "gazpacho", "article": "el", "aliases": ["gazpacho andaluz"], "status": "planned", "compare": ["salmorejo", "crema-de-calabacin", "ensalada-de-tomate"], "blog": ["healthy-snacks-that-satisfy"], "calc": "deficit-calorico" },
+    { "slug": "salmorejo", "app_id": "salmorejo", "name": "salmorejo", "article": "el", "aliases": ["salmorejo cordobés"], "status": "planned", "compare": ["gazpacho", "crema-de-calabaza"], "blog": ["dietary-fat-how-much-and-which-kinds"], "calc": "deficit-calorico" },
+    { "slug": "lentejas-estofadas", "app_id": "lentejas-estofadas", "name": "lentejas estofadas", "article": "las", "aliases": ["lentejas", "plato de lentejas"], "status": "planned", "compare": ["lentejas-con-chorizo", "garbanzos-con-espinacas", "potaje-de-garbanzos"], "blog": ["fiber-the-underrated-nutrient", "how-much-protein-per-day"], "calc": "macros" },
+    { "slug": "fabada-asturiana", "app_id": "fabada-asturiana", "name": "fabada asturiana", "article": "la", "aliases": ["fabada"], "status": "planned", "compare": ["cocido-madrileno", "lentejas-con-chorizo"], "blog": ["how-to-handle-cravings-without-guilt"], "calc": "calorias-diarias" },
+    { "slug": "ensaladilla-rusa", "app_id": "ensaladilla-rusa", "name": "ensaladilla rusa", "article": "la", "aliases": ["ensaladilla"], "status": "planned", "compare": ["ensalada-mixta", "ensalada-de-pasta"], "blog": ["dietary-fat-how-much-and-which-kinds"], "calc": "deficit-calorico" },
+    { "slug": "churros-con-chocolate", "app_id": "churros-con-chocolate", "name": "churros con chocolate", "article": "los", "aliases": ["churros", "chocolate con churros"], "status": "planned", "compare": ["churros", "porras", "croissant"], "blog": ["how-to-handle-cravings-without-guilt"], "calc": "deficit-calorico" },
+    { "slug": "pulpo-a-la-gallega", "app_id": "pulpo-a-la-gallega", "name": "pulpo a la gallega", "article": "el", "aliases": ["pulpo a feira"], "status": "planned", "compare": ["sepia-a-la-plancha", "gambas-a-la-plancha"], "blog": ["how-much-protein-per-day"], "calc": "macros" },
+    { "slug": "empanada-gallega", "app_id": "empanada-gallega", "name": "empanada gallega", "article": "la", "aliases": ["empanada de atún"], "status": "planned", "compare": ["empanadilla-de-atun", "quiche-de-verduras"], "blog": ["portion-control-simple-tricks"], "calc": "deficit-calorico" },
+    { "slug": "migas", "app_id": "migas", "name": "migas", "article": "las", "aliases": ["migas extremeñas", "migas manchegas"], "status": "planned", "compare": ["huevos-fritos-con-patatas", "arroz-a-la-cubana"], "blog": ["carbs-are-not-the-enemy"], "calc": "calorias-diarias" },
+    { "slug": "torrijas", "app_id": "torrija", "name": "torrijas", "article": "las", "aliases": ["torrija"], "status": "planned", "compare": ["arroz-con-leche", "flan-de-huevo", "napolitana-de-chocolate"], "blog": ["how-to-handle-cravings-without-guilt"], "calc": "deficit-calorico" },
+    { "slug": "tostada-con-tomate-y-aceite", "app_id": "tostada-con-tomate-y-aceite", "name": "tostada con tomate y aceite", "article": "la", "aliases": ["tostada de tomate", "pan con tomate y aceite"], "status": "planned", "compare": ["tostada-con-aceite-de-oliva", "tostada-con-mantequilla-y-mermelada", "croissant"], "blog": ["high-protein-breakfast-ideas"], "calc": "calorias-diarias" },
+    { "slug": "cafe-con-leche", "app_id": "cafe-con-leche", "name": "café con leche", "article": "el", "aliases": ["café con leche entera"], "status": "planned", "compare": ["cafe-solo", "cafe-cortado", "cafe-con-leche-desnatada"], "blog": ["common-calorie-counting-mistakes"], "calc": "deficit-calorico" },
+    { "slug": "huevos-fritos-con-patatas", "app_id": "huevos-fritos-con-patatas", "name": "huevos fritos con patatas", "article": "los", "aliases": ["huevos rotos", "huevos con patatas"], "status": "planned", "compare": ["tortilla-espanola", "huevos-revueltos", "salchichas-con-patatas"], "blog": ["dietary-fat-how-much-and-which-kinds"], "calc": "deficit-calorico" },
+    { "slug": "arroz-con-leche", "app_id": "arroz-con-leche", "name": "arroz con leche", "article": "el", "aliases": ["arroz con leche casero"], "status": "planned", "compare": ["natillas", "flan-de-huevo", "yogur-natural-azucarado"], "blog": ["added-sugar-vs-natural-sugar"], "calc": "deficit-calorico" },
+    { "slug": "albondigas-en-salsa", "app_id": "albondigas-en-salsa", "name": "albóndigas en salsa", "article": "las", "aliases": ["albóndigas"], "status": "planned", "compare": ["estofado-de-ternera", "filete-de-ternera-a-la-plancha"], "blog": ["how-much-protein-per-day"], "calc": "macros" },
+    { "slug": "pincho-de-tortilla", "app_id": "pincho-de-tortilla", "name": "pincho de tortilla", "article": "el", "aliases": ["tapa de tortilla"], "status": "planned", "compare": ["tortilla-espanola", "bocadillo-de-tortilla"], "blog": ["eating-out-without-wrecking-your-diet"], "calc": "deficit-calorico" }
+  ]
+}

@@ -44,6 +44,13 @@
 
   /* The same page in the other tree. /en/foo/ <-> /foo/ */
   function counterpart(lang) {
+    /* A Spanish-only page (calorias/, calculadoras/) declares no
+       hreflang="en", because no English copy exists. Sending the visitor
+       to /en/<same path> would be a 404, so English goes to the English
+       home instead. */
+    if (lang === "en" && !document.querySelector('link[rel="alternate"][hreflang="en"]')) {
+      return "/en/";
+    }
     var p = location.pathname;
     var bare = p.indexOf("/en/") === 0 ? p.slice(3) : (p === "/en" ? "/" : p);
     return (lang === "en" ? "/en" + bare : bare) + location.search + location.hash;

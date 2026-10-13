@@ -247,6 +247,12 @@
             '<a href="' + u("") + '">' + t("nav.home") + '</a>' +
             '<a href="' + u("subscription/") + '">' + t("nav.subscription") + '</a>' +
             '<a href="' + u("blog/") + '">' + t("nav.blog") + '</a>' +
+            /* Spanish-only sections (PART 47): no /en/ copy exists, so the
+               English footer does not point at them. */
+            (LANG === "es"
+              ? '<a href="' + u("calorias/") + '">' + t("nav.dishes") + '</a>' +
+                '<a href="' + u("calculadoras/") + '">' + t("nav.calcs") + '</a>'
+              : "") +
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +
           '<div class="footer-col">' +

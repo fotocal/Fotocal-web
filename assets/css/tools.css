@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════════════════
+   FOTOCAL — Spanish-only tool pages (PART 47)
+   /calorias/<plato>/ (tools/gen_dishes.py) and /calculadoras/<x>/.
+   Built on the article stack (site.css, home.css, features.css,
+   blog.css): this file holds only the figure cards, the nutrition
+   tables, the macro bar and the calculator forms. Tokens only.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── figure cards under the lead ─── */
+.dp-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin: 1.4rem 0 1.8rem; }
+.dp-kpi { padding: .95rem 1.05rem; border-radius: var(--r-md); background: var(--surface); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); }
+.dp-kpi b { display: block; font-family: var(--font-display); font-size: 1.65rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.05; color: var(--text); }
+.dp-kpi b small { font-family: var(--font-body); font-size: .8rem; font-weight: 700; letter-spacing: 0; color: var(--muted); margin-left: .15rem; }
+.dp-kpi span { display: block; font-size: .8rem; color: var(--muted); margin-top: .35rem; line-height: 1.35; }
+.dp-kpi-main { background: var(--grad-wash); border-color: var(--border-pink); }
+.dp-kpi-main b { color: var(--brand-text); }
+@media (min-width: 600px) { .dp-kpis { grid-template-columns: repeat(4, 1fr); } }
+
+/* ─── nutrition and comparison tables ─── */
+.dp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border-soft); border-radius: var(--r-lg); background: var(--surface); box-shadow: var(--shadow-sm); margin: 1rem 0 .7rem; }
+.dp-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.dp-table th, .dp-table td { padding: .7rem .9rem; border-bottom: 1px solid var(--border-soft); text-align: right; white-space: nowrap; }
+.dp-table th:first-child, .dp-table td:first-child { text-align: left; white-space: normal; }
+.dp-table thead th { background: var(--bg-2); font-weight: 700; color: var(--text); font-size: .84rem; }
+.dp-table tbody th { font-weight: 600; color: var(--text-soft); }
+.dp-table tbody tr:last-child td, .dp-table tbody tr:last-child th { border-bottom: none; }
+.dp-table td.hl { font-weight: 700; color: var(--text); }
+.dp-table tr.is-this th, .dp-table tr.is-this td { background: var(--grad-wash); }
+.dp-table a { color: var(--brand-text); font-weight: 600; text-decoration: none; }
+.dp-table a:hover { text-decoration: underline; }
+.dp-table-note { font-size: .82rem; color: var(--muted); margin: 0 0 1.4rem; }
+
+/* ─── where the energy comes from ─── */
+.dp-bar { display: flex; height: 14px; border-radius: 999px; overflow: hidden; margin: .7rem 0 .55rem; background: var(--bg-2); }
+.dp-bar span { display: block; height: 100%; }
+.dp-bar .p { background: var(--macro-protein); }
+.dp-bar .c { background: var(--macro-carbs); }
+.dp-bar .f { background: var(--macro-fats); }
+.dp-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; font-size: .84rem; color: var(--text-soft); margin: 0 0 1.1rem; }
+.dp-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: .4rem; vertical-align: -1px; }
+.dp-legend .p i { background: var(--macro-protein); }
+.dp-legend .c i { background: var(--macro-carbs); }
+.dp-legend .f i { background: var(--macro-fats); }
+
+/* ─── sources, related ─── */
+.dp-src { font-size: .88rem; color: var(--muted); margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid var(--border-soft); }
+.dp-src h2 { font-size: 1rem; font-family: var(--font-body); font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--text-soft); margin: 0 0 .6em; }
+.dp-src ul { margin: .4em 0 .8em; padding-left: 1.2em; }
+.dp-src li { margin-bottom: .3em; }
+.dp-src a { color: var(--brand-text); }
+.dp-related { margin: 1.6rem 0 0; }
+.dp-related h2 { font-size: 1.05rem; font-weight: 800; margin: 0 0 .7em; color: var(--text); }
+.dp-related .post-nav { margin-top: .4rem; }
+
+/* ─── the hub table ─── */
+.dp-hub .dp-table td:first-child { font-weight: 600; }
+.dp-hub .post-head { padding-bottom: .4rem; }
+
+/* ─── calculators ─── */
+.calc { margin: 1.4rem 0 2rem; padding: 1.2rem 1.15rem 1.1rem; border-radius: var(--r-xl); background: var(--surface); border: 1px solid var(--border-pink); box-shadow: var(--shadow-card); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem .9rem; }
+.calc-field { display: grid; gap: .3rem; }
+.calc-field.wide { grid-column: 1 / -1; }
+.calc-field label { font-size: .8rem; font-weight: 700; color: var(--text-soft); letter-spacing: .02em; }
+.calc-field input, .calc-field select { font: inherit; font-size: 1rem; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-md); padding: .65rem .75rem; min-height: 46px; width: 100%; }
+.calc-field input:focus, .calc-field select:focus { outline: 2px solid var(--pink); outline-offset: 1px; border-color: var(--pink); }
+.calc-seg { display: flex; gap: .4rem; }
+.calc-seg label { flex: 1; display: grid; place-items: center; min-height: 46px; border: 1px solid var(--border); border-radius: var(--r-md); font-size: .92rem; font-weight: 600; color: var(--text-soft); cursor: pointer; background: var(--bg); }
+.calc-seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.calc-seg input:checked + label { background: var(--grad-wash); border-color: var(--border-pink); color: var(--brand-text); }
+.calc-seg input:focus-visible + label { outline: 2px solid var(--pink); outline-offset: 1px; }
+.calc-out { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid var(--border-soft); }
+.calc-out[hidden] { display: none; }
+.calc-main { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+.calc-main b { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; letter-spacing: -.02em; line-height: 1; color: var(--brand-text); }
+.calc-main span { font-size: .95rem; color: var(--text-soft); }
+.calc-rows { margin: .9rem 0 0; display: grid; gap: .45rem; }
+.calc-row { display: flex; justify-content: space-between; gap: 1rem; font-size: .95rem; color: var(--text-soft); padding: .45rem 0; border-bottom: 1px dashed var(--border-soft); }
+.calc-row:last-child { border-bottom: none; }
+.calc-row b { color: var(--text); font-weight: 700; white-space: nowrap; }
+.calc-row.is-hl { color: var(--text); }
+.calc-row.is-hl b { color: var(--brand-text); }
+.calc-warn { margin-top: .9rem; font-size: .88rem; color: var(--text-soft); background: var(--bg-2); border-radius: var(--r-md); padding: .75rem .9rem; }
+.calc-warn[hidden] { display: none; }
+.calc-note { font-size: .82rem; color: var(--muted); margin: .8rem 0 0; }
+.calc-formula { font-size: .92rem; color: var(--text-soft); background: var(--bg-2); border-radius: var(--r-md); padding: .9rem 1rem; margin: .8em 0 1.2em; overflow-x: auto; }
+.calc-formula code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; color: var(--text); }
+@media (max-width: 480px) { .calc-grid { grid-template-columns: 1fr; } .calc-main b { font-size: 1.9rem; } }

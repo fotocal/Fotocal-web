@@ -35,6 +35,14 @@ WHAT IT DOES PER PAGE
   · canonical -> itself;  hreflang es + en + x-default -> the pair
   · internal links rewritten so an English page links to English pages
 
+SPANISH-ONLY PAGES (PART 47)
+Pages under the prefixes in ES_ONLY (calorias/, calculadoras/) are written
+for the Spanish market and have no English counterpart: they are rendered
+into the Spanish tree only, declare hreflang es + x-default (no en), and
+appear once in the sitemap. Their title/description travel inside the
+source as a `<!--# meta {...} -->` comment, written by their generator,
+so neither page_meta.json nor the blog heuristics have to know them.
+
 The i18n attributes are STRIPPED from the output. With the text baked in,
 leaving them would let main.js re-translate the page on load from a stale
 localStorage value and contradict the URL.
@@ -58,9 +66,22 @@ TITLE_MAX = 60                    # beyond this Google truncates the snippet (PA
 
 # Directories the builder owns and rewrites on every run. Anything else at
 # the repo root (assets, css, js, CNAME, robots.txt …) is left alone.
-OWNED = ["about", "account-deletion", "ai", "blog", "contact", "features",
-         "privacy-policy", "subscription", "terms", "en"]
+OWNED = ["about", "account-deletion", "ai", "blog", "calculadoras", "calorias",
+         "contact", "features", "privacy-policy", "subscription", "terms", "en"]
 OWNED_FILES = ["index.html", "404.html"]
+
+# Spanish-only sections: rendered once, hreflang es + x-default, no /en/ copy.
+ES_ONLY = ("calorias/", "calculadoras/")
+# Per-page head meta carried inside the source: <!--# meta {"es": {"title": …, "desc": …}} -->
+PAGE_META = re.compile(r'<!--#\s*meta\s*(\{.*?\})\s*-->', re.S)
+
+
+def es_only(rel):
+    return rel.startswith(ES_ONLY)
+
+
+def langs_for(rel):
+    return ("es",) if es_only(rel) else LANGS
 
 
 # ── dictionary ──────────────────────────────────────────────────────
@@ -432,10 +453,17 @@ def render_head(src, lang, rel_path, meta):
     else:
         src = re.sub(r'<link rel="canonical" href="[^"]*">',
                      '<link rel="canonical" href="%s">' % self_url, src, count=1)
-    alts = ('<link rel="alternate" hreflang="es" href="%s">\n'
-            '  <link rel="alternate" hreflang="en" href="%s">\n'
-            '  <link rel="alternate" hreflang="x-default" href="%s">'
-            % (page_url(rel_path, "es"), page_url(rel_path, "en"), page_url(rel_path, "es")))
+    if es_only(rel_path):
+        # No English copy exists, so none is declared: an hreflang="en" that
+        # 404s is a Search Console error, not a hint.
+        alts = ('<link rel="alternate" hreflang="es" href="%s">\n'
+                '  <link rel="alternate" hreflang="x-default" href="%s">'
+                % (page_url(rel_path, "es"), page_url(rel_path, "es")))
+    else:
+        alts = ('<link rel="alternate" hreflang="es" href="%s">\n'
+                '  <link rel="alternate" hreflang="en" href="%s">\n'
+                '  <link rel="alternate" hreflang="x-default" href="%s">'
+                % (page_url(rel_path, "es"), page_url(rel_path, "en"), page_url(rel_path, "es")))
     src = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\s*'
                  r'(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*">\s*)*',
                  alts + "\n  ", src, count=1)
@@ -589,13 +617,14 @@ def write_sitemap(srcs, lastmod):
             continue
         path = rel[:-len("index.html")] if rel.endswith("index.html") else rel
         freq, pri = sitemap_entry(path)
-        for lang in LANGS:
+        langs = langs_for(rel)
+        for lang in langs:
             out.append("  <url>")
             out.append("    <loc>%s</loc>" % page_url(rel, lang))
             out.append("    <lastmod>%s</lastmod>" % lastmod)
             out.append("    <changefreq>%s</changefreq>" % freq)
             out.append("    <priority>%s</priority>" % pri)
-            for alt in LANGS:
+            for alt in langs:
                 out.append('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>'
                            % (alt, page_url(rel, alt)))
             out.append('    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>'
@@ -603,7 +632,7 @@ def write_sitemap(srcs, lastmod):
             out.append("  </url>")
     out.append("</urlset>")
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(out) + "\n")
-    return sum(1 for r in srcs if r != "404.html") * len(LANGS)
+    return sum(len(langs_for(r)) for r in srcs if r != "404.html")
 
 
 def main():
@@ -631,14 +660,18 @@ def main():
     written = 0
     for rel in srcs:
         raw = open(os.path.join(SRC, rel), encoding="utf-8").read()
-        for lang in LANGS:
+        inline_meta = PAGE_META.search(raw)
+        inline_meta = json.loads(inline_meta.group(1)) if inline_meta else None
+        for lang in langs_for(rel):
             s = SOURCE_ONLY.sub("", raw)
             s = render_lang_blocks(s, lang)
             s = render_text_nodes(s, dic[lang], missing)
             s = render_attr_nodes(s, dic[lang], missing)
 
             article = None
-            if rel in meta_all:
+            if inline_meta:
+                m = inline_meta[lang]
+            elif rel in meta_all:
                 m = meta_all[rel][lang]
             else:
                 t, d = blog_meta(raw, lang)

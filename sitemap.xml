@@ -1172,6 +1172,62 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/why-the-scale-is-not-the-whole-story/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calculadoras/calorias-diarias/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/calorias-diarias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/calorias-diarias/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calculadoras/deficit-calorico/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/deficit-calorico/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/deficit-calorico/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calculadoras/imc/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/imc/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/imc/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calculadoras/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calculadoras/macros/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/macros/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/macros/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/tortilla-de-patatas/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/tortilla-de-patatas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/tortilla-de-patatas/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/contact/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>

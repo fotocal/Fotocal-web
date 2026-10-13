@@ -248,9 +248,13 @@ def main():
     if not rels:
         sys.exit("no rendered pages found — run tools/build_site.py first")
 
+    # Spanish-only sections (PART 47) have no English copy by design.
+    ES_ONLY = ("calorias/", "calculadoras/")
     es = {r for r in rels if not r.startswith("en/")}
     en = {r[3:] for r in rels if r.startswith("en/")}
     for missing in sorted(es - en):
+        if missing.startswith(ES_ONLY):
+            continue
         fail("en/" + missing, "no English counterpart")
     for missing in sorted(en - es):
         fail(missing, "no Spanish counterpart")
@@ -308,6 +312,8 @@ def main():
                 "en": SITE + "en/" + public(bare),
                 "x-default": SITE + public(bare),
             }
+            if bare.startswith(ES_ONLY):
+                del want["en"]
             if alts != want:
                 fail(rel, "hreflang set is %r" % (alts,))
 

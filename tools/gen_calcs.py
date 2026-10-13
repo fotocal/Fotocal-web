@@ -256,7 +256,7 @@ def page(c):
     for i, (q, a) in enumerate(c["faq"]):
         o('        <details class="faq-item"%s><summary><span>%s</span><i class="faq-plus" aria-hidden="true"></i></summary><p>%s</p></details>' % (" open" if i == 0 else "", esc(q), esc(a)))
     o('      </div>\n      </div>')
-    o(APP_ASIDE.replace("Si quieres las calorías de tu plato, no las de la media", "El siguiente paso: saber cuánto comes de verdad")
+    o(APP_ASIDE.replace("{UP}", "../../").replace("Si quieres las calorías de tu plato, no las de la media", "El siguiente paso: saber cuánto comes de verdad")
       .replace("Fotocal estima la ración a partir de una foto, con los mismos datos de esta página, y te deja corregir cada ingrediente y sus gramos antes de guardar.",
                "Una cifra objetivo solo sirve si sabes cuánto comes. Fotocal estima cada plato a partir de una foto, te deja corregir los gramos antes de guardar y compara el día con tu objetivo."))
     o('      <p class="post-disclaimer reveal">Información general, no consejo médico. Si estás embarazada, tienes una enfermedad, eres menor de 18 años o has tenido un trastorno de la conducta alimentaria, habla antes con un médico o dietista.</p>')
@@ -308,7 +308,9 @@ def hub():
     o('      <h2>Lo que ninguna calculadora puede hacer</h2>')
     o('      <p>Saber cuánto comes de verdad. Todas estas cuentas dan una cifra objetivo; la diferencia entre perder peso o no está en compararla cada día con lo que entra, y ahí es donde casi todo el mundo falla por estimar a ojo. Para eso está la app: una foto del plato, los gramos corregidos si hace falta, y el día comparado con tu objetivo. Y para saber cuánto tienen los platos de aquí, la <a href="../calorias/">tabla de calorías de platos españoles</a>.</p>')
     o('      </div>')
-    o(APP_ASIDE)
+    o(APP_ASIDE.replace("{UP}", "../").replace("Si quieres las calorías de tu plato, no las de la media", "El siguiente paso: saber cuánto comes de verdad")
+      .replace("Fotocal estima la ración a partir de una foto, con los mismos datos de esta página, y te deja corregir cada ingrediente y sus gramos antes de guardar.",
+               "Una cifra objetivo solo sirve si sabes cuánto comes. Fotocal estima cada plato a partir de una foto, te deja corregir los gramos antes de guardar y compara el día con tu objetivo."))
     o('      <p class="post-disclaimer reveal">Información general, no consejo médico.</p>')
     o('    </div>\n  </article>\n</main>')
     o(foot(1))

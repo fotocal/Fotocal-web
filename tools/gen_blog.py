@@ -216,6 +216,9 @@ HEAD = """<!DOCTYPE html>
           <p><a href="{play}" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a></p>
         </div>
       </aside>
+      <!--# PART 47: the calculators and dish pages exist in Spanish only, so
+           this line is dropped from /en/ by the build. -->
+      <p class="post-tools reveal" data-lang-block="es"><strong>Herramientas:</strong> <a href="../../calculadoras/calorias-diarias/">calorías diarias</a> · <a href="../../calculadoras/deficit-calorico/">déficit calórico</a> · <a href="../../calculadoras/macros/">macros</a> · <a href="../../calculadoras/imc/">IMC</a> · <a href="../../calorias/">calorías de platos españoles</a></p>
 
       <nav class="post-nav reveal" aria-label="Previous and next article">
         {prev}

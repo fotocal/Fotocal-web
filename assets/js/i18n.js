@@ -318,6 +318,7 @@ window.FOTOCAL_I18N = {
     "ld.blog.name": "Fotocal Blog",
     "ld.blog.desc": "Practical guides on nutrition, calorie counting, weight loss and healthy habits.",
     "ld.contact.name": "Contact Fotocal",
+    "sub.ld.name": "Fotocal Premium: plans and prices",
     "ld.product.desc": "Premium removes the daily limits on photo and voice logging and adds the restaurant menu scanner, the full nutrient panel, the full weekly reports and a daily meal plan. Coach Kal is free on every plan.",
     "ld.features.name": "Fotocal features",
 
@@ -630,6 +631,7 @@ window.FOTOCAL_I18N = {
     "ld.blog.name": "Blog de Fotocal",
     "ld.blog.desc": "Guías prácticas sobre nutrición, conteo de calorías, pérdida de peso y hábitos saludables.",
     "ld.contact.name": "Contacto de Fotocal",
+    "sub.ld.name": "Fotocal Premium: planes y precios",
     "ld.product.desc": "Premium quita los límites diarios del registro por foto y por voz y añade el escáner de cartas, el panel de nutrientes completo, los informes semanales completos y un plan de comidas diario. Coach Kal es gratis en todos los planes.",
     "ld.features.name": "Funciones de Fotocal",
 

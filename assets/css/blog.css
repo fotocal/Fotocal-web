@@ -49,6 +49,8 @@
 .post-body .key-takeaways li { color: var(--text); }
 
 .post-disclaimer { font-size: .84rem; color: var(--muted); margin: 1.6rem 0 0; }
+.post-tools { font-size: .9rem; color: var(--text-soft); margin: 1rem 0 0; line-height: 1.7; }
+.post-tools a { color: var(--brand-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ─── the one route into the app: a quiet callout, after the article ─── */
 .post-app { margin-top: 1.6rem; }

@@ -245,7 +245,7 @@ APP_ASIDE = """
         <div>
           <h3>Si quieres las calorías de tu plato, no las de la media</h3>
           <p>Fotocal estima la ración a partir de una foto, con los mismos datos de esta página, y te deja corregir cada ingrediente y sus gramos antes de guardar. El plan gratis no caduca ni pide tarjeta: 2 fotos al día, el escáner de códigos de barras y Coach Kal sin límite. Solo en Android.</p>
-          <p><a href="%s" target="_blank" rel="noopener">Descárgala gratis</a></p>
+          <p><a href="%s" target="_blank" rel="noopener">Descárgala gratis</a> · <a href="{UP}features/scan-food/">Cómo funciona el escáner de comida</a></p>
         </div>
       </aside>""" % PLAY
 
@@ -489,7 +489,7 @@ def dish_page(d, ready_by_app):
         o('      </div>')
     o('      </div>')  # post-body
 
-    o(APP_ASIDE)
+    o(APP_ASIDE.replace("{UP}", "../../"))
 
     # sources
     o('      <section class="dp-src reveal" id="fuentes">\n        <h2>De dónde salen estas cifras</h2>')
@@ -560,7 +560,7 @@ def hub_page(ready):
     o('      <h2>Para seguir</h2>')
     o('      <p>Si la pregunta de fondo es cuánto deberías comer tú, y no cuánto tiene el plato, empieza por la <a href="../calculadoras/calorias-diarias/">calculadora de calorías diarias</a> y la de <a href="../calculadoras/deficit-calorico/">déficit calórico</a>. Y en el blog, <a href="../blog/track-calories-without-weighing/">cómo contar calorías sin pesar cada comida</a>.</p>')
     o('      </div>')
-    o(APP_ASIDE)
+    o(APP_ASIDE.replace("{UP}", "../"))
     o('      <p class="post-disclaimer reveal">Información general sobre alimentos, no consejo médico ni dietético.</p>')
     o('    </div>\n  </article>\n</main>')
     o(foot(1))

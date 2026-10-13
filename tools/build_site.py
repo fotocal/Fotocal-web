@@ -54,6 +54,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -578,6 +579,8 @@ WEIGHTS = [
     ("features/",       "monthly", "0.9"),
     ("ai/",             "monthly", "0.9"),   # a feature page, just not under features/
     ("blog/",           "monthly", "0.7"),
+    ("calorias/",       "monthly", "0.8"),   # PART 47: the Spanish dish pages
+    ("calculadoras/",   "monthly", "0.8"),
     ("",                "monthly", "0.7"),
 ]
 
@@ -594,7 +597,31 @@ def sitemap_entry(path):
     return "monthly", "0.7"
 
 
-def write_sitemap(srcs, lastmod):
+def page_lastmod(rel, raw):
+    """When this page's content last changed, for <lastmod>.
+
+    One date for the whole sitemap (what this replaced) tells Google nothing:
+    every URL looked edited on every deploy, so the signal was ignored. Per
+    page: the article's own modified date where it states one (blog posts,
+    dish pages: article:modified_time; calculators: dateModified in their
+    structured data), else the last commit that touched the source file,
+    else today for a file not yet committed."""
+    m = re.search(r'<meta property="article:modified_time" content="(\d{4}-\d{2}-\d{2})', raw)
+    if not m:
+        m = re.search(r'"dateModified":\s*"(\d{4}-\d{2}-\d{2})', raw)
+    if m:
+        return m.group(1)
+    try:
+        out = subprocess.run(["git", "-C", ROOT, "log", "-1", "--format=%cs", "--", os.path.join("src", rel)],
+                             capture_output=True, text=True, check=True).stdout.strip()
+        if out:
+            return out
+    except (subprocess.CalledProcessError, OSError):
+        pass
+    return datetime.date.today().isoformat()
+
+
+def write_sitemap(srcs, lastmod=None):
     """One <url> per page per language, each declaring both alternates.
 
     Both trees are listed: the whole point of the split is that Google can
@@ -609,6 +636,7 @@ def write_sitemap(srcs, lastmod):
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
            '        xmlns:xhtml="%s">' % NS]
+    count = 0
     for rel in srcs:
         # noindex pages are not asking to be ranked (404, and redirect stubs
         # for URLs whose feature left the app), so they are not listed
@@ -618,7 +646,9 @@ def write_sitemap(srcs, lastmod):
         path = rel[:-len("index.html")] if rel.endswith("index.html") else rel
         freq, pri = sitemap_entry(path)
         langs = langs_for(rel)
+        lastmod = page_lastmod(rel, raw)
         for lang in langs:
+            count += 1
             out.append("  <url>")
             out.append("    <loc>%s</loc>" % page_url(rel, lang))
             out.append("    <lastmod>%s</lastmod>" % lastmod)
@@ -632,7 +662,7 @@ def write_sitemap(srcs, lastmod):
             out.append("  </url>")
     out.append("</urlset>")
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(out) + "\n")
-    return sum(len(langs_for(r)) for r in srcs if r != "404.html")
+    return count
 
 
 def main():
@@ -702,7 +732,7 @@ def main():
             print("  " + k, file=sys.stderr)
         sys.exit(1)
 
-    urls = write_sitemap(srcs, datetime.date.today().isoformat())
+    urls = write_sitemap(srcs)
 
     print("%d source pages -> %d rendered (%s)" % (len(srcs), written, " + ".join(LANGS)))
     print("sitemap.xml -> %d URLs" % urls)

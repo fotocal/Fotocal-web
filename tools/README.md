@@ -107,3 +107,34 @@ python3 tools/inject_es.py
 
 The script is idempotent — it strips its own previous injection before
 writing, so running it twice is safe.
+
+
+## PART 47 — Spanish-only sections: dish pages and calculators
+
+Two sections exist only in the Spanish tree (`tools/build_site.py`, `ES_ONLY`):
+one rendered copy, hreflang `es` + `x-default`, one sitemap entry, no `/en/`
+counterpart (check_site knows). Their title/description travel inside the
+source as `<!--# meta {...} -->`, written by their generators.
+
+- **Dish pages** `/calorias/<slug>/` + hub `/calorias/`
+  - `tools/dishes/sync_from_app.py <app clone>` → `tools/dishes/app-data.json`:
+    a snapshot of the app's hand-entered dishes, standard recipes and the
+    food-table rows they use (USDA / CIQUAL), with the app commit.
+  - `tools/dishes/dishes.json`: which dishes, slugs, comparisons, links and
+    the editorial text. Numbers are never typed here.
+  - `python3 tools/gen_dishes.py` applies the app's composition rule
+    (recipe sum, used only within 25 % of the hand energy) and renders.
+    Only `status: "ready"` entries render; the hub lists only those.
+- **Calculators** `/calculadoras/{calorias-diarias,deficit-calorico,imc,macros}/`
+  + hub: `python3 tools/gen_calcs.py` (copy, forms) and `assets/js/calc.js`
+  (the arithmetic, in the browser; body data shared between pages via
+  localStorage, nothing sent).
+- **SEO files** in `tools/seo/`: `keyword-map.md` (evidence per query),
+  `part47-notas-tecnicas.md`, `plan-3-meses.md`, and two generated
+  listings — `python3 tools/seo/site_tree.py` → `site-tree.md`,
+  `python3 tools/seo/titles.py` → `titles-descriptions.md`.
+- Sitemap `lastmod` is per page: the page's declared modified date, else
+  the last commit touching its source.
+
+Full regeneration order: `gen_blog.py` → `gen_dishes.py` → `gen_calcs.py`
+→ `build_site.py` → `check_site.py` → `seo/site_tree.py` → `seo/titles.py`.

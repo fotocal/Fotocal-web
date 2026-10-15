@@ -1,8 +1,8 @@
 {
  "_source": {
   "repo": "fotocal/Fotocal",
-  "commit": "de9424c",
-  "commit_date": "2026-10-10",
+  "commit": "d2594a0",
+  "commit_date": "2026-10-15",
   "files": [
    "src/data/spanishFoods.ts",
    "src/data/spanishFoodRecipes.json",
@@ -2789,10 +2789,10 @@
    "servingLabel": "1 plato",
    "servingGrams": 250.0,
    "region": "General",
-   "kcal": 450.0,
-   "carbs_g": 30.0,
-   "protein_g": 18.0,
-   "fat_g": 28.0
+   "kcal": 577.0,
+   "carbs_g": 37.4,
+   "protein_g": 14.0,
+   "fat_g": 41.9
   },
   {
    "id": "pechuga-de-pavo-a-la-plancha",
@@ -3125,6 +3125,202 @@
    "carbs_g": 30.0,
    "protein_g": 24.0,
    "fat_g": 22.0
+  },
+  {
+   "id": "patatas-bravas",
+   "name_es": "Patatas bravas",
+   "name_en": "patatas bravas (fried potatoes with spicy tomato sauce)",
+   "primarySlot": "merienda",
+   "secondarySlots": [
+    "comida",
+    "cena"
+   ],
+   "servingLabel": "1 ración",
+   "servingGrams": 200.0,
+   "region": "Madrid",
+   "kcal": 380.0,
+   "carbs_g": 41.5,
+   "protein_g": 4.7,
+   "fat_g": 22.8
+  },
+  {
+   "id": "bocadillo-de-jamon-serrano",
+   "name_es": "Bocadillo de jamón serrano",
+   "name_en": "serrano ham baguette sandwich",
+   "primarySlot": "merienda",
+   "secondarySlots": [
+    "comida",
+    "desayuno"
+   ],
+   "servingLabel": "1 unidad",
+   "servingGrams": 180.0,
+   "region": "General",
+   "kcal": 495.0,
+   "carbs_g": 61.7,
+   "protein_g": 24.9,
+   "fat_g": 16.3
+  },
+  {
+   "id": "calamares-a-la-romana",
+   "name_es": "Calamares a la romana",
+   "name_en": "battered fried squid rings",
+   "primarySlot": "comida",
+   "secondarySlots": [
+    "cena"
+   ],
+   "servingLabel": "1 ración",
+   "servingGrams": 150.0,
+   "region": "General",
+   "kcal": 255.0,
+   "carbs_g": 11.8,
+   "protein_g": 26.1,
+   "fat_g": 10.9
+  },
+  {
+   "id": "callos-a-la-madrilena",
+   "name_es": "Callos a la madrileña",
+   "name_en": "Madrid-style tripe stew with chorizo and morcilla",
+   "primarySlot": "comida",
+   "secondarySlots": [],
+   "servingLabel": "1 ración",
+   "servingGrams": 300.0,
+   "region": "Madrid",
+   "kcal": 516.0,
+   "carbs_g": 15.4,
+   "protein_g": 42.6,
+   "fat_g": 31.7
+  },
+  {
+   "id": "jamon-serrano",
+   "name_es": "Jamón serrano",
+   "name_en": "serrano cured ham",
+   "primarySlot": "merienda",
+   "secondarySlots": [
+    "cena",
+    "desayuno"
+   ],
+   "servingLabel": "1 ración",
+   "servingGrams": 50.0,
+   "region": "General",
+   "kcal": 120.0,
+   "carbs_g": 2.1,
+   "protein_g": 13.0,
+   "fat_g": 6.6
+  },
+  {
+   "id": "cana-de-cerveza",
+   "name_es": "Caña de cerveza",
+   "name_en": "small draught beer",
+   "primarySlot": "merienda",
+   "secondarySlots": [
+    "comida",
+    "cena"
+   ],
+   "servingLabel": "1 caña",
+   "servingGrams": 200.0,
+   "region": "General",
+   "kcal": 86.0,
+   "carbs_g": 7.1,
+   "protein_g": 0.9,
+   "fat_g": 0.0
+  },
+  {
+   "id": "tinto-de-verano",
+   "name_es": "Tinto de verano",
+   "name_en": "red wine with lemon soda",
+   "primarySlot": "comida",
+   "secondarySlots": [
+    "merienda",
+    "cena"
+   ],
+   "servingLabel": "1 vaso",
+   "servingGrams": 250.0,
+   "region": "General",
+   "kcal": 108.0,
+   "carbs_g": 3.8,
+   "protein_g": 0.1,
+   "fat_g": 0.0
+  },
+  {
+   "id": "pimientos-de-padron",
+   "name_es": "Pimientos de Padrón",
+   "name_en": "fried Padrón peppers",
+   "primarySlot": "cena",
+   "secondarySlots": [
+    "comida",
+    "merienda"
+   ],
+   "servingLabel": "1 ración",
+   "servingGrams": 120.0,
+   "region": "Galicia",
+   "kcal": 120.0,
+   "carbs_g": 7.3,
+   "protein_g": 1.4,
+   "fat_g": 10.3
+  },
+  {
+   "id": "tarta-de-santiago",
+   "name_es": "Tarta de Santiago",
+   "name_en": "Galician almond cake",
+   "primarySlot": "merienda",
+   "secondarySlots": [
+    "desayuno"
+   ],
+   "servingLabel": "1 porción",
+   "servingGrams": 80.0,
+   "region": "Galicia",
+   "kcal": 330.0,
+   "carbs_g": 37.0,
+   "protein_g": 9.3,
+   "fat_g": 17.9
+  },
+  {
+   "id": "gambas-al-ajillo",
+   "name_es": "Gambas al ajillo",
+   "name_en": "garlic prawns",
+   "primarySlot": "cena",
+   "secondarySlots": [
+    "comida"
+   ],
+   "servingLabel": "1 ración",
+   "servingGrams": 150.0,
+   "region": "General",
+   "kcal": 325.0,
+   "carbs_g": 3.8,
+   "protein_g": 28.3,
+   "fat_g": 22.4
+  },
+  {
+   "id": "bocadillo-de-calamares",
+   "name_es": "Bocadillo de calamares",
+   "name_en": "fried squid baguette sandwich",
+   "primarySlot": "comida",
+   "secondarySlots": [
+    "merienda"
+   ],
+   "servingLabel": "1 unidad",
+   "servingGrams": 180.0,
+   "region": "Madrid",
+   "kcal": 408.0,
+   "carbs_g": 59.9,
+   "protein_g": 21.5,
+   "fat_g": 8.5
+  },
+  {
+   "id": "sopa-castellana",
+   "name_es": "Sopa castellana",
+   "name_en": "Castilian garlic soup with egg and ham",
+   "primarySlot": "cena",
+   "secondarySlots": [
+    "comida"
+   ],
+   "servingLabel": "1 plato",
+   "servingGrams": 300.0,
+   "region": "Castilla",
+   "kcal": 347.0,
+   "carbs_g": 24.3,
+   "protein_g": 15.6,
+   "fat_g": 20.8
   }
  ],
  "recipes": {
@@ -4625,8 +4821,12 @@
     "grams": 60
    },
    {
-    "foodId": "patatas_fritas",
-    "grams": 100
+    "foodId": "patatas_fritas_horno",
+    "grams": 92
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 8
    },
    {
     "foodId": "lechuga",
@@ -5182,8 +5382,12 @@
     "grams": 100
    },
    {
-    "foodId": "patatas_fritas",
-    "grams": 140
+    "foodId": "patatas_fritas_horno",
+    "grams": 129
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 11
    }
   ],
   "gazpacho-cena": [
@@ -5477,8 +5681,12 @@
     "grams": 90
    },
    {
-    "foodId": "patatas_fritas",
-    "grams": 130
+    "foodId": "patatas_fritas_horno",
+    "grams": 120
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 10
    },
    {
     "foodId": "ketchup",
@@ -5884,6 +6092,204 @@
    {
     "foodId": "aceite_oliva",
     "grams": 8
+   }
+  ],
+  "patatas-bravas": [
+   {
+    "foodId": "patatas_fritas_horno",
+    "grams": 150
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 14
+   },
+   {
+    "foodId": "tomate_frito",
+    "grams": 32
+   },
+   {
+    "foodId": "guindilla",
+    "grams": 2
+   },
+   {
+    "foodId": "ajo",
+    "grams": 2
+   }
+  ],
+  "bocadillo-de-jamon-serrano": [
+   {
+    "foodId": "pan_blanco",
+    "grams": 120
+   },
+   {
+    "foodId": "jamon_serrano",
+    "grams": 55
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 5
+   }
+  ],
+  "calamares-a-la-romana": [
+   {
+    "foodId": "calamares_fritos",
+    "grams": 145
+   },
+   {
+    "foodId": "limon",
+    "grams": 5
+   }
+  ],
+  "callos-a-la-madrilena": [
+   {
+    "foodId": "callos_cocidos",
+    "grams": 150
+   },
+   {
+    "foodId": "garbanzos_cocidos",
+    "grams": 40
+   },
+   {
+    "foodId": "chorizo",
+    "grams": 30
+   },
+   {
+    "foodId": "morcilla",
+    "grams": 20
+   },
+   {
+    "foodId": "tomate_frito",
+    "grams": 30
+   },
+   {
+    "foodId": "cebolla",
+    "grams": 15,
+    "method": "stewed"
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 8
+   },
+   {
+    "foodId": "agua",
+    "grams": 7
+   }
+  ],
+  "jamon-serrano": [
+   {
+    "foodId": "jamon_serrano",
+    "grams": 50
+   }
+  ],
+  "cana-de-cerveza": [
+   {
+    "foodId": "cerveza",
+    "grams": 200
+   }
+  ],
+  "tinto-de-verano": [
+   {
+    "foodId": "vino_tinto",
+    "grams": 125
+   },
+   {
+    "foodId": "gaseosa",
+    "grams": 120
+   },
+   {
+    "foodId": "limon",
+    "grams": 5
+   }
+  ],
+  "pimientos-de-padron": [
+   {
+    "foodId": "pimiento_verde",
+    "grams": 110,
+    "method": "fried"
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 10
+   }
+  ],
+  "tarta-de-santiago": [
+   {
+    "foodId": "almendras",
+    "grams": 32
+   },
+   {
+    "foodId": "azucar",
+    "grams": 30
+   },
+   {
+    "foodId": "huevo_crudo",
+    "grams": 18,
+    "method": "baked"
+   }
+  ],
+  "gambas-al-ajillo": [
+   {
+    "foodId": "gambas",
+    "grams": 115
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 22
+   },
+   {
+    "foodId": "ajo",
+    "grams": 8,
+    "method": "sauteed"
+   },
+   {
+    "foodId": "guindilla",
+    "grams": 2
+   },
+   {
+    "foodId": "perejil",
+    "grams": 3
+   }
+  ],
+  "bocadillo-de-calamares": [
+   {
+    "foodId": "pan_blanco",
+    "grams": 110
+   },
+   {
+    "foodId": "calamares_fritos",
+    "grams": 65
+   },
+   {
+    "foodId": "limon",
+    "grams": 5
+   }
+  ],
+  "sopa-castellana": [
+   {
+    "foodId": "agua",
+    "grams": 170
+   },
+   {
+    "foodId": "pan_blanco",
+    "grams": 40
+   },
+   {
+    "foodId": "aceite_oliva",
+    "grams": 12
+   },
+   {
+    "foodId": "ajo",
+    "grams": 8,
+    "method": "sauteed"
+   },
+   {
+    "foodId": "huevo_crudo",
+    "grams": 50,
+    "method": "boiled"
+   },
+   {
+    "foodId": "jamon_serrano",
+    "grams": 20
    }
   ]
  },
@@ -7693,6 +8099,124 @@
     "baked": "2750"
    }
   },
+  "calamares_fritos": {
+   "id": "calamares_fritos",
+   "es": "Calamares a la romana",
+   "aliases": [
+    "calamares fritos",
+    "fried squid"
+   ],
+   "group": "fish",
+   "src": {
+    "db": "USDA FoodData Central — SR Legacy",
+    "ref": "fdc:171982",
+    "desc": "Mollusks, squid, mixed species, cooked, fried",
+    "ndb": "15176",
+    "fdcId": "171982"
+   },
+   "per100": {
+    "kcal": 175,
+    "protein": 17.94,
+    "carbs": 7.79,
+    "fat": 7.48,
+    "fiberG": 0,
+    "sugarG": null,
+    "satFatG": 1.878,
+    "monoFatG": 2.749,
+    "polyFatG": 2.136,
+    "cholesterolMg": 260,
+    "sodiumMg": 306,
+    "potassiumMg": 279,
+    "calciumMg": 39,
+    "ironMg": 1.01,
+    "magnesiumMg": 38,
+    "phosphorusMg": 251,
+    "zincMg": 1.74,
+    "copperMg": 2.114,
+    "manganeseMg": 0.07,
+    "seleniumMcg": 51.8,
+    "vitAMcg": 11,
+    "vitB1Mg": 0.056,
+    "vitB2Mg": 0.458,
+    "vitB3Mg": 2.602,
+    "vitB5Mg": 0.51,
+    "vitB6Mg": 0.058,
+    "vitB9Mcg": 20,
+    "vitB12Mcg": 1.23,
+    "vitCMg": 4.2,
+    "vitDMcg": null,
+    "vitEMg": null,
+    "vitKMcg": null,
+    "cholineMg": null
+   },
+   "measures": [
+    {
+     "label": "3 onza",
+     "g": 85,
+     "sr": "3 oz"
+    }
+   ]
+  },
+  "callos_cocidos": {
+   "id": "callos_cocidos",
+   "es": "Callos de ternera cocidos",
+   "aliases": [
+    "callos",
+    "tripa",
+    "tripas",
+    "tripe"
+   ],
+   "group": "meat",
+   "src": {
+    "db": "USDA FoodData Central — SR Legacy",
+    "ref": "fdc:173095",
+    "desc": "Beef, New Zealand, imported, variety meats and by-products, tripe cooked, boiled",
+    "ndb": "23444",
+    "fdcId": "173095"
+   },
+   "per100": {
+    "kcal": 103,
+    "protein": 19,
+    "carbs": 0,
+    "fat": 2.98,
+    "fiberG": 0,
+    "sugarG": 0,
+    "satFatG": 0.922,
+    "monoFatG": 0.718,
+    "polyFatG": 0.159,
+    "cholesterolMg": 199,
+    "sodiumMg": 40,
+    "potassiumMg": 102,
+    "calciumMg": 158,
+    "ironMg": 3.72,
+    "magnesiumMg": 24,
+    "phosphorusMg": 168,
+    "zincMg": 2.39,
+    "copperMg": 0.106,
+    "manganeseMg": 6.066,
+    "seleniumMcg": 4.3,
+    "vitAMcg": 6,
+    "vitB1Mg": 0.022,
+    "vitB2Mg": 0.103,
+    "vitB3Mg": 2.616,
+    "vitB5Mg": 0.226,
+    "vitB6Mg": 0.013,
+    "vitB9Mcg": null,
+    "vitB12Mcg": 2.29,
+    "vitCMg": 0,
+    "vitDMcg": 0.3,
+    "vitEMg": 0.51,
+    "vitKMcg": null,
+    "cholineMg": null
+   },
+   "measures": [
+    {
+     "label": "3 onza",
+     "g": 85,
+     "sr": "3 oz"
+    }
+   ]
+  },
   "carne_picada": {
    "id": "carne_picada",
    "es": "Carne picada de vacuno cocinada",
@@ -7981,6 +8505,69 @@
     "cholineMg": null
    },
    "measures": []
+  },
+  "cerveza": {
+   "id": "cerveza",
+   "es": "Cerveza",
+   "aliases": [
+    "caña",
+    "beer"
+   ],
+   "group": "drink",
+   "src": {
+    "db": "USDA FoodData Central — SR Legacy",
+    "ref": "fdc:168746",
+    "desc": "Alcoholic beverage, beer, regular, all",
+    "ndb": "14003",
+    "fdcId": "168746"
+   },
+   "per100": {
+    "kcal": 43,
+    "protein": 0.46,
+    "carbs": 3.55,
+    "fat": 0,
+    "fiberG": 0,
+    "sugarG": 0,
+    "satFatG": 0,
+    "monoFatG": 0,
+    "polyFatG": 0,
+    "cholesterolMg": 0,
+    "sodiumMg": 4,
+    "potassiumMg": 27,
+    "calciumMg": 4,
+    "ironMg": 0.02,
+    "magnesiumMg": 6,
+    "phosphorusMg": 14,
+    "zincMg": 0.01,
+    "copperMg": 0.005,
+    "manganeseMg": 0.008,
+    "seleniumMcg": 0.6,
+    "vitAMcg": 0,
+    "vitB1Mg": 0.005,
+    "vitB2Mg": 0.025,
+    "vitB3Mg": 0.513,
+    "vitB5Mg": 0.041,
+    "vitB6Mg": 0.046,
+    "vitB9Mcg": 6,
+    "vitB12Mcg": 0.02,
+    "vitCMg": 0,
+    "vitDMcg": 0,
+    "vitEMg": 0,
+    "vitKMcg": 0,
+    "cholineMg": 10.1
+   },
+   "measures": [
+    {
+     "label": "1 onza",
+     "g": 29.7,
+     "sr": "1 fl oz"
+    },
+    {
+     "label": "1 lata",
+     "g": 356,
+     "sr": "1 can"
+    }
+   ]
   },
   "champinones": {
    "id": "champinones",
@@ -9306,6 +9893,66 @@
      "label": "1 taza",
      "g": 164,
      "sr": "1 cup"
+    }
+   ]
+  },
+  "gaseosa": {
+   "id": "gaseosa",
+   "es": "Gaseosa",
+   "aliases": [
+    "gaseosa",
+    "casera",
+    "soda",
+    "club soda"
+   ],
+   "group": "drink",
+   "src": {
+    "db": "USDA FoodData Central — SR Legacy",
+    "ref": "fdc:175113",
+    "desc": "Carbonated beverage, low calorie, other than cola or pepper, with sodium saccharin, without caffeine",
+    "ndb": "14537",
+    "fdcId": "175113"
+   },
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "carbs": 0.1,
+    "fat": 0,
+    "fiberG": 0,
+    "sugarG": null,
+    "satFatG": 0,
+    "monoFatG": 0,
+    "polyFatG": 0,
+    "cholesterolMg": 0,
+    "sodiumMg": 16,
+    "potassiumMg": 2,
+    "calciumMg": 4,
+    "ironMg": 0.04,
+    "magnesiumMg": 1,
+    "phosphorusMg": 0,
+    "zincMg": 0.05,
+    "copperMg": 0.025,
+    "manganeseMg": 0.017,
+    "seleniumMcg": 0,
+    "vitAMcg": 0,
+    "vitB1Mg": 0,
+    "vitB2Mg": 0,
+    "vitB3Mg": 0,
+    "vitB5Mg": 0,
+    "vitB6Mg": 0,
+    "vitB9Mcg": 0,
+    "vitB12Mcg": 0,
+    "vitCMg": 0,
+    "vitDMcg": null,
+    "vitEMg": null,
+    "vitKMcg": null,
+    "cholineMg": null
+   },
+   "measures": [
+    {
+     "label": "1 onza",
+     "g": 29.6,
+     "sr": "1 fl oz"
     }
    ]
   },
@@ -11843,69 +12490,57 @@
     }
    ]
   },
-  "patatas_fritas": {
-   "id": "patatas_fritas",
-   "es": "Patatas fritas",
+  "patatas_fritas_horno": {
+   "id": "patatas_fritas_horno",
+   "es": "Patatas fritas congeladas (al horno)",
    "aliases": [
-    "papas fritas",
-    "french fries",
-    "chips"
+    "patatas de bolsa congeladas",
+    "frozen fries"
    ],
    "group": "veg",
    "src": {
     "db": "USDA FoodData Central — SR Legacy",
-    "ref": "fdc:170698",
-    "desc": "Fast foods, potato, french fried in vegetable oil",
-    "ndb": "21138",
-    "fdcId": "170698"
+    "ref": "fdc:169264",
+    "desc": "Potatoes, french fried, all types, salt added in processing, frozen, home-prepared, oven heated",
+    "ndb": "11403",
+    "fdcId": "169264"
    },
    "per100": {
-    "kcal": 312,
-    "protein": 3.43,
-    "carbs": 41.44,
-    "fat": 14.73,
-    "fiberG": 3.8,
-    "sugarG": 0.3,
-    "satFatG": 2.336,
-    "monoFatG": 5.969,
-    "polyFatG": 5.398,
+    "kcal": 158,
+    "protein": 2.75,
+    "carbs": 25.55,
+    "fat": 5.48,
+    "fiberG": 2,
+    "sugarG": 0.37,
+    "satFatG": 0.848,
+    "monoFatG": 1.874,
+    "polyFatG": 1.502,
     "cholesterolMg": 0,
-    "sodiumMg": 210,
-    "potassiumMg": 579,
-    "calciumMg": 18,
-    "ironMg": 0.81,
-    "magnesiumMg": 35,
-    "phosphorusMg": 125,
-    "zincMg": 0.5,
-    "copperMg": 0.124,
-    "manganeseMg": 0.247,
-    "seleniumMcg": 0.9,
+    "sodiumMg": 324,
+    "potassiumMg": 478,
+    "calciumMg": 12,
+    "ironMg": 0.57,
+    "magnesiumMg": 24,
+    "phosphorusMg": 87,
+    "zincMg": 0.35,
+    "copperMg": 0.104,
+    "manganeseMg": 0.154,
+    "seleniumMcg": 0.4,
     "vitAMcg": 0,
-    "vitB1Mg": 0.17,
-    "vitB2Mg": 0.039,
-    "vitB3Mg": 3.004,
-    "vitB5Mg": 0.58,
-    "vitB6Mg": 0.372,
-    "vitB9Mcg": 30,
+    "vitB1Mg": 0.13,
+    "vitB2Mg": 0.032,
+    "vitB3Mg": 2.077,
+    "vitB5Mg": 0.463,
+    "vitB6Mg": 0.261,
+    "vitB9Mcg": 23,
     "vitB12Mcg": 0,
-    "vitCMg": 4.7,
+    "vitCMg": 8.6,
     "vitDMcg": 0,
-    "vitEMg": 1.67,
-    "vitKMcg": 11.2,
-    "cholineMg": 36.8
+    "vitEMg": 0.39,
+    "vitKMcg": 7.4,
+    "cholineMg": 23.7
    },
-   "measures": [
-    {
-     "label": "1 ración pequeño",
-     "g": 71,
-     "sr": "1 serving small"
-    },
-    {
-     "label": "1 ración mediano",
-     "g": 117,
-     "sr": "1 serving medium"
-    }
-   ]
+   "measures": []
   },
   "pavo_fiambre": {
    "id": "pavo_fiambre",
@@ -12220,7 +12855,9 @@
    "es": "Pimiento verde",
    "aliases": [
     "ají verde",
-    "green pepper"
+    "green pepper",
+    "pimientos de padrón",
+    "pimiento de padrón"
    ],
    "group": "veg",
    "src": {

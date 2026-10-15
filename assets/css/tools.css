@@ -36,11 +36,13 @@
 .dp-bar .p { background: var(--macro-protein); }
 .dp-bar .c { background: var(--macro-carbs); }
 .dp-bar .f { background: var(--macro-fats); }
+.dp-bar .a { background: var(--muted); }
 .dp-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; font-size: .84rem; color: var(--text-soft); margin: 0 0 1.1rem; }
 .dp-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: .4rem; vertical-align: -1px; }
 .dp-legend .p i { background: var(--macro-protein); }
 .dp-legend .c i { background: var(--macro-carbs); }
 .dp-legend .f i { background: var(--macro-fats); }
+.dp-legend .a i { background: var(--muted); }
 
 /* ─── sources, related ─── */
 .dp-src { font-size: .88rem; color: var(--muted); margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid var(--border-soft); }

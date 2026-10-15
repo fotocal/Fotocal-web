@@ -754,6 +754,464 @@
           "a": "Es un desayuno de {kcal} kcal con {protein} g de proteína, parecido a un sándwich mixto y mejor que un cruasán. Con el café con leche, un desayuno de bar completo por debajo de 300 kcal."
         }
       ]
+    },
+    {
+      "slug": "patatas-bravas",
+      "app_id": "patatas-bravas",
+      "name": "patatas bravas",
+      "article": "las",
+      "aliases": [
+        "bravas"
+      ],
+      "compare": [
+        "huevos-fritos-con-patatas",
+        "croquetas-de-jamon",
+        "pimientos-de-padron"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet",
+        "portion-control-simple-tricks"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>La ración de Fotocal es una tapa de bar de 200 g: un plato pequeño de patata frita en dados con su salsa brava por encima. La ración para compartir suele doblarla, y si lleva alioli además de la brava, la cuenta sube porque el alioli es casi todo aceite.</p><p>Las bravas se comen con palillo y entre varios, así que nadie sabe cuántas se ha comido. Contar el plato entero y dividirlo entre los que estáis es más fiable que intentar recordar los dados.</p>",
+      "drivers": "<p>El aceite de la fritura, que la patata absorbe, y la salsa. La base de datos de Fotocal las compone con patata frita de dado, no con la patata fina de cadena de comida rápida, más una línea de aceite visible que la app deja editar, porque es lo que más varía de un bar a otro. La brava casera es tomate, pimentón y guindilla: poco. La de bote y el alioli son otra cosa.</p>",
+      "lighter": "<p>Al horno o en freidora de aire se va la mayor parte del aceite, y la salsa brava casera no pesa. En el bar, sin alioli y la tapa en lugar de la ración: la diferencia entre una tapa y una ración para dos es la de una comida.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una ración de bravas?",
+          "a": "La tapa de 200 g, {kcal} kcal; una ración para compartir de 400 g, {kcal*2}. Por 100 g, {per100} kcal sin alioli."
+        },
+        {
+          "q": "¿Engordan las patatas bravas?",
+          "a": "Una tapa de {kcal} kcal es como un segundo plato ligero; el problema es que va antes de la comida, no en su lugar. Si las bravas son la cena, no hay drama; si son el aperitivo de una comida completa, suman enteras."
+        },
+        {
+          "q": "¿Bravas o croquetas, qué tiene menos calorías?",
+          "a": "La tapa de bravas son {kcal} kcal y cuatro croquetas {kcal:croquetas-de-jamon}; por 100 g, las croquetas pesan más ({per100:croquetas-de-jamon} frente a {per100}) porque son bechamel frita. Las bravas llenan más por caloría."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "bocadillo-de-jamon-serrano",
+      "app_id": "bocadillo-de-jamon-serrano",
+      "name": "bocadillo de jamón serrano",
+      "article": "el",
+      "aliases": [
+        "bocadillo de jamón",
+        "bocata de jamón"
+      ],
+      "compare": [
+        "bocadillo-de-tortilla",
+        "bocadillo-de-chorizo",
+        "bocadillo-de-calamares",
+        "pan-con-jamon-serrano"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet",
+        "how-much-protein-per-day"
+      ],
+      "calc": "calorias-diarias",
+      "portion": "<p>Un bocadillo de 180 g: unos 120 g de pan de barra, una media barra de las de cuarto, y 55 g de jamón serrano, con un hilo de aceite en el pan. Es la ración de Fotocal y el bocadillo de bar normal. El de media barra entera de panadería se va a 250 o 300 g; el de pulguita, a la mitad.</p>",
+      "drivers": "<p>El pan. Dos tercios del peso y la mayor parte de las calorías son pan blanco; el jamón pone la proteína y la sal, y el aceite, la grasa que el jamón no tiene. Con tomate restregado no cambia la cuenta; con queso encima, sí.</p>",
+      "lighter": "<p>Menos pan y el mismo jamón: un bocadillo de pulguita con 50 g de jamón es casi todo proteína. El pan integral no baja las calorías, pero sacia más. Y el aceite, si va, con medida: regado dobla la grasa del bocadillo.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un bocadillo de jamón serrano?",
+          "a": "{kcal} kcal el bocadillo de 180 g de bar; por 100 g, {per100}. Un bocadillo de media barra de panadería, de 250 a 300 g, se va a las 700 u 800 kcal."
+        },
+        {
+          "q": "¿Es sano el bocadillo de jamón?",
+          "a": "Como desayuno o almuerzo de media mañana es una comida de verdad: {protein} g de proteína, grasa moderada y el pan como energía. Lo que lo carga es el tamaño y la sal, que con el jamón curado pasa de los 4 g por bocadillo: casi la dosis diaria recomendada."
+        },
+        {
+          "q": "¿Bocadillo de jamón o de tortilla?",
+          "a": "Parecidos: {kcal} kcal frente a {kcal:bocadillo-de-tortilla} el de tortilla, de 200 g. El de jamón tiene más proteína y mucha más sal; el de tortilla, más grasa del aceite. Por saciedad empatan; por sal, gana el de tortilla."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "calamares-a-la-romana",
+      "app_id": "calamares-a-la-romana",
+      "name": "calamares a la romana",
+      "article": "los",
+      "aliases": [
+        "calamares fritos",
+        "calamares rebozados",
+        "rabas"
+      ],
+      "compare": [
+        "bocadillo-de-calamares",
+        "gambas-al-ajillo",
+        "pescaito-frito"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>Una ración de 150 g de anillas rebozadas y fritas, con su limón: la ración individual de Fotocal, la de un segundo plato de menú o una tapa generosa. La ración de bar para compartir suele ser de 250 a 300 g, y las rabas de pincho del norte, menos. Sin la salsa: el alioli o la mayonesa van aparte.</p>",
+      "drivers": "<p>El rebozado y la fritura. El calamar por sí solo es magro, casi todo proteína; lo que le pone la grasa es la harina que absorbe el aceite al freírse. La fila de la base de datos de Fotocal es calamar rebozado y frito ya medido, con el aceite absorbido dentro, no calamar más harina por separado.</p>",
+      "lighter": "<p>Calamar a la plancha o a la andaluza con poca harina en lugar de rebozado espeso. Si son fritos, bien escurridos y sin salsa: dos cucharadas de alioli añaden más calorías que todo el calamar. Y el limón es gratis.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una ración de calamares a la romana?",
+          "a": "{kcal} kcal la ración individual de 150 g, {per100} por cada 100 g, sin salsa. Una ración para compartir de 300 g, el doble: {kcal*2}."
+        },
+        {
+          "q": "¿Engordan los calamares?",
+          "a": "A la plancha, no: son proteína casi pura. Rebozados y fritos, una ración de {kcal} kcal sigue siendo un segundo plato razonable; lo que los convierte en una bomba es el alioli, el pan y la caña que van alrededor en una terraza."
+        },
+        {
+          "q": "¿Cuánta proteína tienen?",
+          "a": "{protein} g en la ración de 150 g, más que un filete pequeño. El rebozado añade hidratos y grasa, pero no le quita al calamar lo que tiene."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "callos-a-la-madrilena",
+      "app_id": "callos-a-la-madrilena",
+      "name": "callos a la madrileña",
+      "article": "los",
+      "aliases": [
+        "callos"
+      ],
+      "compare": [
+        "cocido-madrileno",
+        "fabada-asturiana",
+        "lentejas-con-chorizo"
+      ],
+      "blog": [
+        "dietary-fat-how-much-and-which-kinds"
+      ],
+      "calc": "calorias-diarias",
+      "portion": "<p>Una ración de 300 g de callos con su salsa, chorizo y morcilla, servida en cazuela: la ración de Fotocal y la de un plato de taberna. De tapa, en cazuelita, son unos 120 g. La mitad del peso es el callo, que es tripa de ternera cocida durante horas, y el resto, garbanzos, salsa y embutido.</p>",
+      "drivers": "<p>El embutido y la salsa. El callo en sí es proteína con poca grasa, parecida a la carne magra; el chorizo y la morcilla que lo acompañan ponen casi toda la grasa, y la grasa saturada, del plato. La salsa de pimentón se hace con aceite y lleva el jugo del embutido. Por eso dos cazuelas con los mismos callos pueden diferir un tercio.</p>",
+      "lighter": "<p>Menos chorizo y morcilla, que es donde está la grasa, y la salsa desgrasada en frío. Los callos no son el problema: son el plato de casquería más proteico que hay. Y como son plato único, no van seguidos de segundo.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tienen los callos a la madrileña?",
+          "a": "{kcal} kcal la ración de 300 g con chorizo y morcilla; {per100} por cada 100 g. La cazuelita de tapa, de unos 120 g, ronda las {per100*1.2} kcal."
+        },
+        {
+          "q": "¿Son sanos los callos?",
+          "a": "El callo es proteína y colágeno con poca grasa, y hierro. Lo que no es ligero es el conjunto: {protein} g de proteína en la ración, pero también {fat} g de grasa, casi toda del embutido, y más de 2 g de sal. Un plato de invierno, de vez en cuando."
+        },
+        {
+          "q": "¿Callos o cocido, cuál tiene menos calorías?",
+          "a": "La ración de callos, {kcal} kcal, frente al plato de cocido de 400 g, {kcal:cocido-madrileno}. Por peso son parecidos ({per100} y {per100:cocido-madrileno} kcal por 100 g); los callos tienen más proteína y menos hidratos."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "jamon-serrano",
+      "app_id": "jamon-serrano",
+      "name": "jamón serrano",
+      "article": "el",
+      "aliases": [
+        "jamón curado",
+        "jamón"
+      ],
+      "compare": [
+        "pan-con-jamon-serrano",
+        "tabla-de-quesos-y-embutidos",
+        "bocadillo-de-jamon-serrano"
+      ],
+      "blog": [
+        "how-much-protein-per-day",
+        "healthy-snacks-that-satisfy"
+      ],
+      "calc": "macros",
+      "portion": "<p>Una ración de 50 g de jamón en lonchas: el platito de tapa o lo que va en un bocadillo. Es la ración de Fotocal. Una loncha fina de cuchillo pesa de 10 a 15 g; una ración de restaurante para compartir, 100 g. Por eso la cifra por 100 g, {per100} kcal, es la que conviene tener en la cabeza.</p>",
+      "drivers": "<p>La grasa que lleva la loncha. El magro del jamón curado es proteína concentrada; la grasa, que en el serrano suele ser menos que en el ibérico, es lo que mueve la cuenta de una pieza a otra. El resto es sal: curar es salar, y 50 g de jamón pasan de los 2,5 g de sal, la mitad del máximo diario que recomienda la OMS.</p>",
+      "lighter": "<p>No hace falta: 50 g son {kcal} kcal y {protein} g de proteína, una de las mejores proporciones que hay en un bar. Lo que conviene vigilar es la sal, no las calorías: quien tenga la tensión alta debería contarlo como lo que es, un embutido curado.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tienen 100 g de jamón serrano?",
+          "a": "{per100} kcal, con el reparto de la fila de jamón curado de la base de datos CIQUAL que usa Fotocal. Una ración de tapa de 50 g, {kcal}; una loncha de 12 g, unas {per100*0.12}."
+        },
+        {
+          "q": "¿El jamón ibérico tiene más calorías que el serrano?",
+          "a": "En general sí, porque lleva más grasa infiltrada, pero Fotocal no publica una cifra para el ibérico porque no existe una fila de base de datos pública que lo mida por separado, y copiar la del serrano sería inventar. Cuando haya una fuente, tendrá su página."
+        },
+        {
+          "q": "¿Engorda el jamón?",
+          "a": "Por calorías, poco para lo que sacia: {kcal} kcal la ración de 50 g. Lo que engorda es el formato: el jamón se come con pan, con queso y con vino, y la ración de celebración son 100 o 150 g. El jamón solo, como tapa, es de lo más razonable de la barra."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "cana-de-cerveza",
+      "app_id": "cana-de-cerveza",
+      "name": "caña de cerveza",
+      "article": "la",
+      "aliases": [
+        "caña",
+        "cerveza"
+      ],
+      "compare": [
+        "tinto-de-verano",
+        "zumo-de-naranja-natural",
+        "cafe-con-leche"
+      ],
+      "blog": [
+        "common-calorie-counting-mistakes",
+        "hydration-and-weight"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>Una caña de 200 ml de cerveza rubia normal, la de barril de bar: la ración de Fotocal. El doble, de 400 ml, es el doble de todo; el tercio de botella son 330 ml; la lata, igual. La cerveza sin alcohol tiene cerca de la mitad de calorías y la tostada o la de abadía, bastante más, porque llevan más alcohol.</p>",
+      "drivers": "<p>El alcohol. Una cerveza rubia tiene pocos hidratos y nada de grasa ni apenas proteína; la mayor parte de sus calorías son el alcohol, que aporta 7 kcal por gramo y no sale en la tabla de macros porque no es ninguno de los tres. Por eso una bebida con tan pocos hidratos tiene las calorías de medio bocadillo pequeño.</p>",
+      "lighter": "<p>La caña en vez del doble, y la sin alcohol cuando la cuenta importa, que quita la mayor parte. Lo que de verdad decide es el número: tres cañas son una comida ligera, y nadie las apunta.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene una caña?",
+          "a": "{kcal} kcal una caña de 200 ml de cerveza rubia normal; {per100} por cada 100 ml. Un tercio de 330 ml, unas {per100*3.3}; un doble de 400 ml, {kcal*2}."
+        },
+        {
+          "q": "¿La cerveza engorda?",
+          "a": "Engorda lo que suma al día: tres cañas son {kcal*3} kcal que no sacian nada, más la tapa. La barriga cervecera es de las tapas y de las cañas juntas, no de una caña con la comida."
+        },
+        {
+          "q": "¿Caña o tinto de verano, qué tiene menos calorías?",
+          "a": "Parecidos por vaso: {kcal} kcal la caña de 200 ml y {kcal:tinto-de-verano} el tinto de verano de 250 ml con gaseosa. El tinto de verano con refresco de limón azucarado en lugar de gaseosa sube bastante."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "tinto-de-verano",
+      "app_id": "tinto-de-verano",
+      "name": "tinto de verano",
+      "article": "el",
+      "aliases": [
+        "tinto con gaseosa"
+      ],
+      "compare": [
+        "cana-de-cerveza",
+        "zumo-de-naranja-natural",
+        "cafe-con-leche"
+      ],
+      "blog": [
+        "common-calorie-counting-mistakes",
+        "hydration-and-weight"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>Un vaso de 250 ml, mitad vino tinto y mitad gaseosa, con hielo y una rodaja de limón: la ración de Fotocal y el tinto de verano de bar hecho a mano. Con gaseosa de las de siempre, que lleva edulcorante y no azúcar, la mitad del vaso no cuenta. Con refresco de limón azucarado, sí.</p>",
+      "drivers": "<p>El vino, es decir, el alcohol. Medio vaso de tinto pone casi todas las calorías; la gaseosa no pone ninguna y el limón, nada. Un tinto de verano embotellado o hecho con refresco de limón lleva azúcar añadido y puede doblar la cuenta: la etiqueta por 100 ml manda.</p>",
+      "lighter": "<p>Ya es de lo más ligero de la barra, si es con gaseosa. Más gaseosa y menos vino lo baja en proporción, y con vino sin alcohol se queda casi en nada. Lo que lo sube es el refresco azucarado y el tamaño de jarra.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un tinto de verano?",
+          "a": "{kcal} kcal el vaso de 250 ml con gaseosa, {per100} por cada 100 ml. Hecho con refresco de limón azucarado, o de botella, bastante más: mira la etiqueta."
+        },
+        {
+          "q": "¿Tinto de verano o cerveza, qué engorda menos?",
+          "a": "Casi lo mismo por vaso: {kcal} kcal el tinto de verano de 250 ml frente a {kcal:cana-de-cerveza} la caña de 200 ml. La diferencia la hace la cantidad y lo que se come al lado, no la bebida."
+        },
+        {
+          "q": "¿Tiene azúcar el tinto de verano?",
+          "a": "Con gaseosa, prácticamente no: la gaseosa va con edulcorante y el vino tinto seco tiene poco azúcar. Con refresco de limón, cada 100 ml añaden unos 10 g de azúcar, y el vaso se convierte en otra bebida."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "pimientos-de-padron",
+      "app_id": "pimientos-de-padron",
+      "name": "pimientos de Padrón",
+      "article": "los",
+      "aliases": [
+        "pimientos del padrón",
+        "pimientos de herbón"
+      ],
+      "compare": [
+        "champinones-al-ajillo",
+        "berenjenas-a-la-plancha",
+        "gambas-a-la-plancha"
+      ],
+      "blog": [
+        "healthy-snacks-that-satisfy"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>Una ración de 120 g, unos doce o quince pimientos fritos con sal gorda: la tapa de Fotocal y la de un bar. La ración grande para compartir dobla. El pimiento pesa poco: la báscula la mueve el aceite que se queda pegado, que la base de datos de Fotocal cuenta como una línea aparte, visible y editable.</p>",
+      "drivers": "<p>El aceite, y solo el aceite. Un pimiento de Padrón crudo tiene las calorías de cualquier pimiento verde, casi nada; frito, absorbe aceite y lo suelta en el plato. Con 10 g de aceite en la ración, el aceite es tres cuartas partes de las calorías. Bien escurridos sobre papel, la ración baja; nadando en aceite, sube.</p>",
+      "lighter": "<p>Ya es la tapa más ligera de la carta después de la ensalada. Escurridos sobre papel, o a la plancha con un hilo de aceite, se quedan en casi nada. Lo que suma en una ración de pimientos es el pan para mojar.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tienen los pimientos de Padrón?",
+          "a": "{kcal} kcal la ración frita de 120 g, {per100} por cada 100 g, de las que casi todas son del aceite. Crudos o a la plancha sin aceite, unas {per100/4} kcal por 100 g."
+        },
+        {
+          "q": "¿Engordan los pimientos de Padrón?",
+          "a": "No, en ninguna cantidad normal: {kcal} kcal una ración entera, menos que una tostada con aceite. Es de las pocas tapas que se pueden repetir."
+        },
+        {
+          "q": "¿Unos pican y otros no?",
+          "a": "Sí, y no cambia nada en la cuenta: el picante es capsaicina, sin calorías. Lo único que cambia de un pimiento a otro, para la báscula, es cuánto aceite se queda."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "tarta-de-santiago",
+      "app_id": "tarta-de-santiago",
+      "name": "tarta de Santiago",
+      "article": "la",
+      "aliases": [
+        "tarta de almendra"
+      ],
+      "compare": [
+        "torrija",
+        "arroz-con-leche",
+        "croissant"
+      ],
+      "blog": [
+        "added-sugar-vs-natural-sugar"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>Una porción de 80 g, la cuña normal de una tarta de 20 centímetros cortada en ocho: la ración de Fotocal. La de pastelería o restaurante suele ser mayor, de 100 a 120 g. La tarta de Santiago no lleva masa debajo: es almendra, azúcar y huevo, y pesa poco para lo que alimenta.</p>",
+      "drivers": "<p>La almendra molida y el azúcar, a partes casi iguales. La almendra pone la grasa, que es la buena, y la proteína; el azúcar, la mitad de los hidratos. El huevo liga y apenas cuenta. Es un dulce denso: por 100 g tiene más calorías que un cruasán, aunque una porción pequeña sea razonable.</p>",
+      "lighter": "<p>Porción pequeña, que es como se come en Galicia: una cuña fina con el café. Menos azúcar en la receta funciona hasta cierto punto, porque la almendra ya es dulce. Es un postre para días de fiesta, no de tarrina diaria.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un trozo de tarta de Santiago?",
+          "a": "{kcal} kcal una cuña de 80 g; {per100} por cada 100 g, así que una porción de restaurante de 120 g ronda las {per100*1.2}."
+        },
+        {
+          "q": "¿Es sana la tarta de Santiago?",
+          "a": "Es el dulce más honesto de la repostería española: almendra, huevo y azúcar, sin harina, sin mantequilla y sin nada frito. Eso no la hace ligera: casi un tercio de la porción es azúcar. Un buen postre de domingo, no una merienda de diario."
+        },
+        {
+          "q": "¿Lleva gluten la tarta de Santiago?",
+          "a": "La receta tradicional, no: es almendra en lugar de harina. Las de pastelería a veces llevan una base de masa quebrada, que sí la lleva. Si importa, preguntar."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "gambas-al-ajillo",
+      "app_id": "gambas-al-ajillo",
+      "name": "gambas al ajillo",
+      "article": "las",
+      "aliases": [
+        "gambas al ajillo cazuela"
+      ],
+      "compare": [
+        "gambas-a-la-plancha",
+        "champinones-al-ajillo",
+        "pulpo-a-la-gallega"
+      ],
+      "blog": [
+        "how-much-protein-per-day",
+        "dietary-fat-how-much-and-which-kinds"
+      ],
+      "calc": "macros",
+      "portion": "<p>Una cazuela de barro de 150 g: unas doce gambas peladas en aceite con ajo y guindilla, la tapa de Fotocal y la de un bar. Sin el pan. La ración para compartir dobla, y el pan que se moja en el aceite es la mitad de la historia y no está en esta cifra.</p>",
+      "drivers": "<p>El aceite. Las gambas son proteína casi pura; el ajo y la guindilla no cuentan. Lo que llena la cazuela es el aceite de oliva, y en la de Fotocal hay 22 g, más de dos cucharadas, que son dos tercios de las calorías. Una cazuela generosa de bar lleva más, y el pan se lo bebe.</p>",
+      "lighter": "<p>Menos aceite en la cazuela y no mojar pan, que es por donde entra el aceite que sobra. Las gambas a la plancha son el mismo plato con una fracción de las calorías: {kcal:gambas-a-la-plancha} kcal la ración.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tienen las gambas al ajillo?",
+          "a": "{kcal} kcal la cazuela de 150 g con su aceite, {per100} por cada 100 g, sin pan. Cada rebanada de pan que se moja añade unas 80 kcal de pan y lo que se lleve de aceite."
+        },
+        {
+          "q": "¿Gambas al ajillo o a la plancha?",
+          "a": "Las mismas gambas, {protein} g de proteína, por {kcal} kcal en cazuela o {kcal:gambas-a-la-plancha} a la plancha. El aceite es la diferencia entera."
+        },
+        {
+          "q": "¿Engordan las gambas?",
+          "a": "Las gambas no: son de los alimentos con más proteína por caloría. Engorda la cazuela de aceite y el pan. Pedirlas a la plancha, o escurrirlas bien, cambia el plato sin cambiar la gamba."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "bocadillo-de-calamares",
+      "app_id": "bocadillo-de-calamares",
+      "name": "bocadillo de calamares",
+      "article": "el",
+      "aliases": [
+        "bocata de calamares"
+      ],
+      "compare": [
+        "calamares-a-la-romana",
+        "bocadillo-de-tortilla",
+        "bocadillo-de-jamon-serrano"
+      ],
+      "blog": [
+        "eating-out-without-wrecking-your-diet"
+      ],
+      "calc": "deficit-calorico",
+      "portion": "<p>Un bocadillo de 180 g: unos 110 g de pan de barra y 65 g de anillas de calamar rebozadas y fritas, con limón. Es la ración de Fotocal y el bocadillo de la plaza Mayor de tamaño normal. Los hay de media barra de panadería, que pasan de 250 g, y con alioli o mayonesa, que suman aparte.</p>",
+      "drivers": "<p>El pan y el rebozado. El pan es más de la mitad del peso y de las calorías; el calamar frito pone la proteína y la grasa del aceite que absorbió la harina. Sin salsa, es un bocadillo más bien ligero para lo que parece; con alioli, dos cucharadas añaden más que todo el calamar.</p>",
+      "lighter": "<p>Sin salsa y con el pan justo. Los calamares a la plancha en vez de rebozados cambian el bocadillo, y no es el mismo plato. Lo razonable es tomarlo como comida y no como tapa previa a otra comida.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene un bocadillo de calamares?",
+          "a": "{kcal} kcal el bocadillo de 180 g sin salsa, {per100} por cada 100 g. Uno de media barra de panadería, de 250 g, se acerca a las {per100*2.5}; con alioli, más."
+        },
+        {
+          "q": "¿Engorda el bocadillo de calamares?",
+          "a": "Es una comida de {kcal} kcal, con {protein} g de proteína: como almuerzo de un día normal está en su sitio. Lo que lo descoloca es la caña, la ración de bravas y el segundo bocadillo que suelen acompañarlo."
+        },
+        {
+          "q": "¿Bocadillo de calamares o de tortilla?",
+          "a": "Casi iguales: {kcal} kcal frente a {kcal:bocadillo-de-tortilla} el de tortilla de 200 g. El de calamares tiene más proteína y menos grasa; el de tortilla llena algo más. Elige por gusto."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
+    },
+    {
+      "slug": "sopa-castellana",
+      "app_id": "sopa-castellana",
+      "name": "sopa castellana",
+      "article": "la",
+      "aliases": [
+        "sopa de ajo",
+        "sopas de ajo"
+      ],
+      "compare": [
+        "sopa-de-fideos",
+        "caldo-gallego",
+        "crema-de-verduras"
+      ],
+      "blog": [
+        "how-to-eat-healthy-on-a-budget"
+      ],
+      "calc": "calorias-diarias",
+      "portion": "<p>Un plato hondo de 300 g con su pan, su huevo escalfado dentro y unos tacos de jamón: la sopa castellana de Fotocal y la de un mesón de invierno. Como primero de menú suele ser algo menos; como plato único de cena, con dos huevos, más. La base es agua, no caldo: la sopa de ajo es un plato de pobres que se hacía con pan duro, ajo, pimentón y aceite.</p>",
+      "drivers": "<p>El aceite y el huevo. El pan empapado pone los hidratos; el aceite en el que se sofríe el ajo, la grasa, y es lo que más cambia de una cocina a otra; el huevo y el jamón, la proteína. El pimentón y el ajo no cuentan. Es un plato más graso de lo que su fama de sopa sugiere: más de la mitad de las calorías son grasa.</p>",
+      "lighter": "<p>Menos aceite en el sofrito, que el pan no pide tanto, y un solo huevo. El jamón se puede reducir sin perder el plato. Es una cena caliente de {kcal} kcal con proteína: ya está en su sitio.</p>",
+      "faq": [
+        {
+          "q": "¿Cuántas calorías tiene la sopa castellana?",
+          "a": "{kcal} kcal el plato de 300 g con huevo y jamón, {per100} por cada 100 g. Con dos huevos, unas 70 kcal más; sin jamón, unas 50 menos."
+        },
+        {
+          "q": "¿Sopa castellana o sopa de fideos?",
+          "a": "La castellana tiene bastante más: {kcal} kcal frente a {kcal:sopa-de-fideos} el plato de sopa de fideos de 300 g. El aceite del sofrito y el huevo lo explican; a cambio, la castellana es una cena entera y la de fideos, un primero."
+        },
+        {
+          "q": "¿Es una cena ligera?",
+          "a": "Es una cena completa, no ligera: pan, huevo, jamón y aceite. Con {protein} g de proteína y {kcal} kcal, sustituye a un segundo plato. Como primero antes de un segundo fuerte es demasiado."
+        }
+      ],
+      "status": "ready",
+      "published": "2026-10-15"
     }
   ]
 }

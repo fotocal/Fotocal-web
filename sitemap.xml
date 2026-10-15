@@ -1228,12 +1228,52 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/arroz-con-leche/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/bocadillo-de-calamares/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/bocadillo-de-calamares/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/bocadillo-de-calamares/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/bocadillo-de-jamon-serrano/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/bocadillo-de-jamon-serrano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/bocadillo-de-jamon-serrano/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/cafe-con-leche/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/cafe-con-leche/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/cafe-con-leche/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/calamares-a-la-romana/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/calamares-a-la-romana/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/calamares-a-la-romana/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/callos-a-la-madrilena/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/callos-a-la-madrilena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/callos-a-la-madrilena/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/cana-de-cerveza/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/cana-de-cerveza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/cana-de-cerveza/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/churros-con-chocolate/</loc>
@@ -1284,6 +1324,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/fabada-asturiana/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/gambas-al-ajillo/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/gambas-al-ajillo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/gambas-al-ajillo/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/gazpacho/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1306,6 +1354,14 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/jamon-serrano/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/jamon-serrano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/jamon-serrano/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/lentejas-estofadas/</loc>
@@ -1332,6 +1388,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/paella-valenciana/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/patatas-bravas/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/patatas-bravas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/patatas-bravas/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/pimientos-de-padron/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/pimientos-de-padron/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/pimientos-de-padron/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/pincho-de-tortilla/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1354,6 +1426,30 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/salmorejo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/salmorejo/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/sopa-castellana/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/sopa-castellana/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/sopa-castellana/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/tarta-de-santiago/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/tarta-de-santiago/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/tarta-de-santiago/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/tinto-de-verano/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/tinto-de-verano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/tinto-de-verano/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/torrijas/</loc>

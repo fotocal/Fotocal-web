@@ -121,10 +121,17 @@ def figures(app_id):
     out["per100_p"] = r1(out["protein"] / g * 100)
     out["per100_c"] = r1(out["carbs"] / g * 100)
     out["per100_f"] = r1(out["fat"] / g * 100)
-    # energy split, 4/4/9, normalised so the bar always sums to 100
+    # energy split, 4/4/9, normalised so the bar always sums to 100. A drink
+    # with alcohol carries 7 kcal/g the macros do not show (the app's own
+    # sanity check names this case): the gap between the row's energy and
+    # 4/4/9 is shown as alcohol, never hidden inside "hidratos".
     e = {"p": out["protein"] * 4, "c": out["carbs"] * 4, "f": out["fat"] * 9}
+    alc = bool(rec) and any(w in FOODS[l["foodId"]]["src"]["desc"].lower() for l in rec for w in ("beer", "wine", "alcohol"))
+    if alc and out["kcal"] > sum(e.values()):
+        e["a"] = out["kcal"] - sum(e.values())
     tot = sum(e.values()) or 1
     out["split"] = {k: round(v / tot * 100) for k, v in e.items()}
+    out["split"].setdefault("a", 0)
     assert 0 <= out["kcal"] / g <= 9.01, app_id
     return out
 
@@ -385,106 +392,16 @@ def dish_page(d, ready_by_app):
     # drivers
     sp = fig["split"]
     o('      <h2 id="origen">De dónde salen las calorías</h2>')
-    o('      <p>De cada 100 kcal de %s, unas %d vienen de la grasa, %d de los hidratos y %d de la proteína.</p>' % (esc(name), sp["f"], sp["c"], sp["p"]))
-    o('      <div class="dp-bar" role="img" aria-label="Reparto de la energía: %d%% proteína, %d%% hidratos, %d%% grasa">'
-      '<span class="p" style="width:%d%%"></span><span class="c" style="width:%d%%"></span><span class="f" style="width:%d%%"></span></div>' % (sp["p"], sp["c"], sp["f"], sp["p"], sp["c"], sp["f"]))
-    o('      <div class="dp-legend"><span class="p"><i></i>Proteína %d%%</span><span class="c"><i></i>Hidratos %d%%</span><span class="f"><i></i>Grasa %d%%</span></div>' % (sp["p"], sp["c"], sp["f"]))
-    o('      ' + fill(d["drivers"], d, fig))
-
-    # comparison
-    o('      <h2 id="comparacion">Comparación con platos parecidos</h2>')
-    o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Plato</th><th scope="col">Ración</th><th scope="col">kcal / ración</th><th scope="col">kcal / 100 g</th><th scope="col">Proteínas</th></tr></thead><tbody>')
-    for label, f2, is_this in rows:
-        slug2 = ready_by_app.get(next((k for k, v in HAND.items() if v["name_es"] == label), None))
-        cell = ('<a href="../%s/">%s</a>' % (slug2, esc(label))) if (slug2 and not is_this) else esc(label)
-        o('        <tr%s><td>%s</td><td>%s g</td><td class="hl">%s</td><td>%s</td><td>%s g</td></tr>'
-          % (' class="is-this"' if is_this else "", cell, n(f2["serving_g"]), n(f2["kcal"]), n(f2["per100"]), n(f2["protein"])))
-    o('      </tbody></table></div>')
-    o('      <p class="dp-table-note">Todas las cifras salen de la misma base de datos, así que se pueden comparar entre sí; con cifras de webs distintas no se podría.</p>')
-
-    # lighter
-    if d.get("lighter"):
-        adj = {"la": "la más ligera", "el": "lo más ligero", "las": "las más ligeras", "los": "los más ligeros"}[art]
-        o('      <h2 id="ligera">Cómo hacer%s</h2>' % adj)
-        o('      ' + fill(d["lighter"], d, fig))
-
-    # FAQ, with the numbers filled from the figures
-    faq = [{"q": q["q"], "a": fill(q["a"], d, fig)} for q in d.get("faq", [])]
-
-    # comparison rows: the dish first, then the named ones
-    rows = [(cap(name), fig, True)]
-    for cid in d.get("compare", []):
-        if cid not in HAND:
-            sys.exit("%s compares with an unknown app dish: %s" % (d["slug"], cid))
-        rows.append((HAND[cid]["name_es"], figures(cid), False))
-
-    crumbs = [("Inicio", SITE), ("Calorías de platos", SITE + "calorias/"), (cap(name), url)]
-    ld = [
-        ld_block({"@context": "https://schema.org", "@type": "Article", "headline": title.replace(" — Fotocal", ""),
-                  "description": desc, "inLanguage": "es", "mainEntityOfPage": url, "url": url,
-                  "datePublished": pub, "dateModified": upd, "author": ORG, "publisher": ORG,
-                  "image": SITE + "assets/og-image.png",
-                  "about": {"@type": "Thing", "name": cap(name)}}),
-        ld_block({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "name": c[0], "item": c[1]} for i, c in enumerate(crumbs)]}),
-    ]
-    if faq:
-        ld.append(ld_block({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", f["a"])}} for f in faq]}))
-
-    extra = '\n  <meta property="article:published_time" content="%s">\n  <meta property="article:modified_time" content="%s">' % (pub, upd)
-    out = [head(2, title, desc, path, "\n".join(ld), "article", extra)]
-    o = out.append
-
-    o('\n<main id="main">\n  <article class="post dp">\n    <header class="post-head">\n      <div class="container-narrow">')
-    o('        <nav class="post-crumbs reveal" aria-label="Migas de pan">'
-      '<a href="../../">Inicio</a><span class="sep" aria-hidden="true">/</span>'
-      '<a href="../">Calorías de platos</a><span class="sep" aria-hidden="true">/</span>'
-      '<a href="./" aria-current="page">%s</a></nav>' % esc(cap(name)))
-    o('        <h1 class="post-title reveal">Calorías %s %s</h1>' % (de(art), esc(name)))
-    o('        <p class="post-lead reveal">%s</p>' % esc(lead))
-    o('        <div class="post-meta reveal"><span>Actualizado <time datetime="%s">%s</time></span>'
-      '<span class="dot" aria-hidden="true">&middot;</span><span>Cifras de la base de datos de Fotocal</span></div>' % (upd, fecha(upd)))
-    o('      </div>\n    </header>\n    <div class="container-narrow">')
-
-    # figure cards
-    o('      <div class="dp-kpis reveal">')
-    o('        <div class="dp-kpi dp-kpi-main"><b>%s<small>kcal</small></b><span>por ración (%s, %s g)</span></div>' % (n(fig["kcal"]), esc(fig["serving_label"]), n(g)))
-    o('        <div class="dp-kpi"><b>%s<small>kcal</small></b><span>por cada 100 g</span></div>' % n(fig["per100"]))
-    o('        <div class="dp-kpi"><b>%s<small>g</small></b><span>proteínas por ración</span></div>' % n(fig["protein"]))
-    o('        <div class="dp-kpi"><b>%s<small>g</small></b><span>grasas por ración</span></div>' % n(fig["fat"]))
-    o('      </div>')
-
-    # nutrition table
-    o('      <div class="post-body reveal">')
-    o('      <h2 id="valores">Valores nutricionales %s %s</h2>' % (de(art), esc(name)))
-    o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">&nbsp;</th><th scope="col">Por ración (%s g)</th><th scope="col">Por 100 g</th></tr></thead><tbody>' % n(g))
-    o('        <tr><th scope="row">Calorías</th><td class="hl">%s kcal</td><td class="hl">%s kcal</td></tr>' % (n(fig["kcal"]), n(fig["per100"])))
-    o('        <tr><th scope="row">Proteínas</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["protein"]), n(fig["per100_p"])))
-    o('        <tr><th scope="row">Hidratos de carbono</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["carbs"]), n(fig["per100_c"])))
-    if fig["sugar"] is not None:
-        o('        <tr><th scope="row">&nbsp;&nbsp;de los cuales azúcares</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["sugar"]), n(r1(fig["sugar"] / fig["grams"] * 100))))
-    o('        <tr><th scope="row">Grasas</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["fat"]), n(fig["per100_f"])))
-    if fig["satfat"] is not None:
-        o('        <tr><th scope="row">&nbsp;&nbsp;de las cuales saturadas</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["satfat"]), n(r1(fig["satfat"] / fig["grams"] * 100))))
-    if fig["fiber"] is not None:
-        o('        <tr><th scope="row">Fibra</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["fiber"]), n(r1(fig["fiber"] / fig["grams"] * 100))))
-    if fig["salt"] is not None:
-        o('        <tr><th scope="row">Sal</th><td>%s g</td><td>%s g</td></tr>' % (n(fig["salt"]), n(r1(fig["salt"] / fig["grams"] * 100))))
-    o('      </tbody></table></div>')
-    o('      <p class="dp-table-note">Valores medios. Tu plato concreto puede estar por encima o por debajo: la receta, el aceite y el tamaño de la ración mueven la cifra más que cualquier tabla. Las fuentes están al final de la página.</p>')
-
-    # portion
-    o('      <h2 id="racion">¿Cuánto es una ración de verdad?</h2>')
-    o('      ' + fill(d["portion"], d, fig))
-
-    # drivers
-    sp = fig["split"]
-    o('      <h2 id="origen">De dónde salen las calorías</h2>')
-    o('      <p>De cada 100 kcal de %s, unas %d vienen de la grasa, %d de los hidratos y %d de la proteína.</p>' % (esc(name), sp["f"], sp["c"], sp["p"]))
-    o('      <div class="dp-bar" role="img" aria-label="Reparto de la energía: %d%% proteína, %d%% hidratos, %d%% grasa">'
-      '<span class="p" style="width:%d%%"></span><span class="c" style="width:%d%%"></span><span class="f" style="width:%d%%"></span></div>' % (sp["p"], sp["c"], sp["f"], sp["p"], sp["c"], sp["f"]))
-    o('      <div class="dp-legend"><span class="p"><i></i>Proteína %d%%</span><span class="c"><i></i>Hidratos %d%%</span><span class="f"><i></i>Grasa %d%%</span></div>' % (sp["p"], sp["c"], sp["f"]))
+    if sp.get("a"):
+        o('      <p>De cada 100 kcal de %s, unas %d vienen del alcohol, %d de los hidratos, %d de la proteína y %d de la grasa. El alcohol aporta 7 kcal por gramo y no aparece en la tabla de arriba porque no es proteína, hidrato ni grasa.</p>' % (esc(name), sp["a"], sp["c"], sp["p"], sp["f"]))
+        o('      <div class="dp-bar" role="img" aria-label="Reparto de la energía: %d%% alcohol, %d%% hidratos, %d%% proteína, %d%% grasa">'
+          '<span class="p" style="width:%d%%"></span><span class="c" style="width:%d%%"></span><span class="f" style="width:%d%%"></span><span class="a" style="width:%d%%"></span></div>' % (sp["a"], sp["c"], sp["p"], sp["f"], sp["p"], sp["c"], sp["f"], sp["a"]))
+        o('      <div class="dp-legend"><span class="p"><i></i>Proteína %d%%</span><span class="c"><i></i>Hidratos %d%%</span><span class="f"><i></i>Grasa %d%%</span><span class="a"><i></i>Alcohol %d%%</span></div>' % (sp["p"], sp["c"], sp["f"], sp["a"]))
+    else:
+        o('      <p>De cada 100 kcal de %s, unas %d vienen de la grasa, %d de los hidratos y %d de la proteína.</p>' % (esc(name), sp["f"], sp["c"], sp["p"]))
+        o('      <div class="dp-bar" role="img" aria-label="Reparto de la energía: %d%% proteína, %d%% hidratos, %d%% grasa">'
+          '<span class="p" style="width:%d%%"></span><span class="c" style="width:%d%%"></span><span class="f" style="width:%d%%"></span></div>' % (sp["p"], sp["c"], sp["f"], sp["p"], sp["c"], sp["f"]))
+        o('      <div class="dp-legend"><span class="p"><i></i>Proteína %d%%</span><span class="c"><i></i>Hidratos %d%%</span><span class="f"><i></i>Grasa %d%%</span></div>' % (sp["p"], sp["c"], sp["f"]))
     o('      ' + fill(d["drivers"], d, fig))
 
     # comparison

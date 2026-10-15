@@ -370,25 +370,32 @@ a:active, button:active, summary:active { -webkit-tap-highlight-color: transpare
    3.9% of the width, ink body. Every app screen on the site sits in one of
    the two — never a bare cropped rectangle. A raw capture goes straight in
    as the <img> of .dev-screen. */
+/* ─── App screenshots (PART 48, 2026-10-15) ───
+   The drawn phone body is gone: the owner's call ("it looks bad and makes
+   the actual screen small"). A screenshot now stands on its own — rounded
+   corners of 22 px, a soft neutral shadow to lift it off the ground, no
+   bezel, no punch-hole, no buttons. The class names stay (.dev-frame /
+   .dev-screen) so no page markup changes; the frame is now only a sizing
+   box, and the width it used to spend on bezel goes to the screen. A cut
+   frame (.is-cut) still rises out of its tile's bottom edge: the crop ends
+   on a quiet row of the app, so the bottom corners stay square and the
+   tile clips it, exactly as before. Nothing is cropped by CSS: the image
+   keeps its own height. */
 .dev-frame {
-  --dev-r: 26px;
-  position: relative; aspect-ratio: 9 / 18.6;
-  background: var(--frame); border-radius: var(--dev-r); padding: 2.4%;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), var(--shadow-lift);   /* literal-ok: the frame's bevel is the same on every ground */
+  --dev-r: 22px;
+  position: relative; aspect-ratio: auto; padding: 0;
+  background: transparent; border-radius: var(--dev-r); box-shadow: none;
 }
-.dev-frame-lg { --dev-r: 48px; }
-.dev-screen { position: relative; height: 100%; overflow: hidden; border-radius: calc(var(--dev-r) - 6px); background: var(--bg-2); }
-.dev-screen img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; display: block; }
-/* A cut frame is sized by its screen crop and has no bottom: whatever
-   holds it (tile, card, the hero's band) clips the last sliver, and the
-   crop already ends on a quiet row of the app. */
-.dev-frame.is-cut { aspect-ratio: auto; padding-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.dev-frame-lg { --dev-r: 24px; }
+.dev-screen {
+  position: relative; height: auto; overflow: hidden; border-radius: var(--dev-r); background: var(--bg-2);
+  box-shadow: 0 1px 0 rgba(var(--ink-rgb),.06), 0 10px 24px -8px rgba(var(--ink-rgb),.22), 0 28px 60px -24px rgba(var(--ink-rgb),.28);
+}
+.dev-screen img { width: 100%; height: auto; display: block; }
+.dev-frame.is-cut { padding-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .dev-frame.is-cut .dev-screen { height: auto; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .dev-frame.is-cut .dev-screen img { height: auto; }
-.dev-frame::after {                          /* punch-hole */
-  content: ""; position: absolute; top: 4.6%; left: 50%; width: 3.9%; aspect-ratio: 1;
-  transform: translateX(-50%); border-radius: 50%; background: var(--ink-2); z-index: 2;
-}
+.dev-frame::after { content: none; }
 
 /* ─── Google Play badge ─── */
 .play-badge {

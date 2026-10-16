@@ -1,166 +1,131 @@
-# Capturas que hay que rehacer — lista única, en español, por orden de importancia
+# Capturas que hay que rehacer — por página del sitio, en el orden de trabajo
 
-Actualizada el 15 de octubre de 2026. Sustituye a la lista de 25 de
-`tools/image-audit/IMAGES.md` y a la de 2026-09-11 de `CAPTURE-BACKLOG.md`.
-Solo español: el sitio enseña capturas en español también en /en/ hasta
-nueva orden (decisión del propietario, PART 46).
+Actualizada el 16 de octubre de 2026. Sustituye a la versión por pantalla.
+Solo español: el sitio enseña capturas en español también en /en/.
 
 ## Reglas, para todas
 
 1. App en **español**, **tema claro**.
-2. **Pantalla completa, con la barra de estado**: no recortes nada; el recorte lo hacemos aquí y queda registrado (tools/captures/, tools/frame_screen.py).
-3. **Sin datos personales** que no quieras públicos: ni nombre, ni correo, ni foto de perfil, ni una cara en una foto de plato. El peso y el objetivo que se ven en Cuerpo cuentan como personales: si no quieres que salgan, usa la cuenta demo (scripts/demo-account en el repo de la app) o avisa y la pantalla se queda fuera.
-4. Envíalas de una en una, como quieras; cada una se cambia en todas las páginas donde se usa y se te dice cuáles.
-5. Una captura sirve para varias imágenes del sitio: cada pantalla se pide **una sola vez**.
+2. **Pantalla completa, con la barra de estado**: sin recortar nada; el recorte lo hacemos aquí y queda registrado (tools/captures/, tools/frame_screen.py).
+3. **Sin datos personales** que no quieras públicos: ni nombre, ni correo, ni foto de perfil, ni una cara. Donde salgan tus pesos (Cuerpo, Progreso), la cuenta demo.
+4. Una sesión por página: todas las capturas de esa página juntas; aquí se sustituyen todas, se publica y se te enseña la página terminada.
+5. **Una captura sirve para varias páginas.** Cada pantalla se pide una sola vez, en la primera página que la necesita; en las siguientes aparece como «ya hecha en la página N».
 
-Cómo leer cada ficha: **dónde** (cómo llegar), **qué tiene que verse**, **estado de la cuenta**, **páginas del sitio** en las que se usa.
+## El orden de las páginas (diez sesiones, ocho con capturas nuevas)
 
-## Las cinco primeras (ya elegidas en PART 46)
+| Sesión | Página | Capturas nuevas | Ya hechas antes |
+|---|---|---|---|
+| 1 | Portada — getfotocal.com/ y /en/ | **10** | — |
+| 2 | Escanear comida — /features/scan-food/ y /en/features/scan-food/ | **3** | 3 |
+| 3 | Funciones (índice) — /features/ y /en/features/ | **1** | 7 |
+| 4 | Código de barras — /features/scan-barcode/ y /en/… | **1** | 1 |
+| 5 | Registro por voz — /features/voice-logging/ y /en/… | **2** | 1 |
+| 6 | Coach Kal — /ai/ y /en/ai/ | **4** | 1 |
+| 7 | Nutrición y dieta — /features/nutrition-diet/ y /en/… | **1** | 7 |
+| 8 | Perder peso — /features/weight-loss/ y /en/… | **1** | 5 |
+| 9 | Hábitos y constancia — /features/lifestyle-mindset/ y /en/… | 0 | 3 |
+| 10 | Suscripción — /subscription/ y /en/subscription/ | 0 | 3 |
 
-### 1 · Inicio, arriba del todo
-- **Dónde**: abre la app; pestaña Inicio, sin desplazar.
-- **Qué tiene que verse**: el anillo de calorías del día con las tres cifras (comidas, restantes, quemadas), los macros del día debajo y la racha arriba.
-- **Estado**: un día con dos o tres comidas ya registradas (que el anillo esté a medias, no vacío ni pasado); racha de varios días si la tienes. Gratis o Premium, da igual.
-- **Páginas**: portada (cabecera, la imagen más vista del sitio), /features/weight-loss/ (cabecera), /features/lifestyle-mindset/ (cabecera y el recorte de la racha).
+Veintitrés pantallas en total. Las sesiones 9 y 10 no necesitan nada nuevo: se publican solas cuando lleguen las anteriores. Una pantalla más, el **escáner de carta**, queda fuera hasta que la app conteste en español en esa pantalla (APP-BUGS, sesión 2, punto 2); la portada y /features/ la enseñan con la captura antigua mientras tanto.
 
-### 2 · Cámara de escaneo encuadrando un plato
-- **Dónde**: Inicio → botón de registrar → pestaña Escanear; apunta a un plato real antes de disparar.
-- **Qué tiene que verse**: el visor con el plato dentro y el botón de disparo; que se entienda qué plato es (uno de verdad, en una mesa, no una foto de pantalla).
-- **Estado**: cualquiera.
-- **Páginas**: portada (cómo funciona, paso 1; y la tarjeta «Foto»), /features/scan-food/ (cómo funciona), /features/weight-loss/ (cómo funciona).
+---
 
-### 3 · Resultado del escaneo, parte superior
-- **Dónde**: después de escanear ese plato, la pantalla de resultado sin desplazar.
-- **Qué tiene que verse**: la foto del plato con la puntuación de salud encima, el nombre del plato, las calorías y los macros.
-- **Estado**: cualquiera. Mejor si el plato es español y reconocible (una tortilla, unas lentejas, un bocadillo).
-- **Páginas**: /features/scan-food/ (cabecera), portada (cómo funciona, paso 2), /features/scan-food/ (cómo funciona, el nombre editable).
+## Sesión 1 · PORTADA — https://getfotocal.com/ y https://getfotocal.com/en/
 
-### 4 · Hoy, justo después de guardar
-- **Dónde**: guarda ese resultado y vuelve a Inicio.
-- **Qué tiene que verse**: las calorías, la proteína, los hidratos y la grasa del día frente a los objetivos, con la comida recién añadida en la lista.
-- **Estado**: la misma cuenta y el mismo día que la captura 1.
-- **Páginas**: portada (cómo funciona, paso 3), /features/scan-food/ (cabecera secundaria y cómo funciona), /features/nutrition-diet/, /features/weight-loss/.
+Es la página que más se ve y la que más capturas lleva. Con estas diez cambia entera. Usa el mismo día de la cuenta para la 1, la 2, la 5 y la 9, para que las cifras cuadren entre ellas.
 
-### 5 · Resultado de un código de barras
-- **Dónde**: registrar → pestaña Código de barras → escanea un producto envasado; la pantalla de resultado.
-- **Qué tiene que verse**: la puntuación sobre 100, las razones debajo (lo bueno y lo malo) y la fila de nutrientes. Un producto con algo que señalar (un refresco, unas galletas) enseña más que uno perfecto.
-- **Estado**: si en Mi salud tienes una alergia activada y el producto choca con ella, sale el aviso «No apto para ti»: esa versión vale para dos imágenes a la vez.
-- **Páginas**: portada (tarjeta «Código de barras»), /features/ (cómo se registra), /features/scan-barcode/ (cómo funciona y la puntuación), /features/nutrition-diet/.
+**Capturas que necesita: 10**
 
-## El resto, por orden
+1. **Inicio, arriba del todo** — abre la app, pestaña Inicio, sin desplazar — tiene que verse el anillo de calorías con las tres cifras (comidas, restantes, quemadas), los macros del día y la racha en la cabecera — un día con dos o tres comidas ya registradas, para que el anillo esté a medias; gratis o Premium, da igual. *También la usan después: Perder peso (sesión 8) y Hábitos (sesión 9).*
 
-### 6 · Resultado del registro por voz
-- **Dónde**: registrar → pestaña Voz → di una frase con dos o tres alimentos («dos huevos y una tostada con aguacate») → la hoja de resultado.
-- **Qué tiene que verse**: la frase entendida arriba y cada alimento con calorías y macros, antes de guardar.
-- **Estado**: cualquiera. Cuidado: la lista de fondo puede dejar ver registros anteriores; si hay algo raro, mejor otra frase.
-- **Páginas**: portada (tarjeta «Voz»), /features/ (cómo se registra), /features/voice-logging/ (cabecera).
+2. **Inicio, la tarjeta de actividad** — la misma pantalla de Inicio, desplazada hasta que la tarjeta de actividad (pasos, vasos de agua, comidas del día) quede entera en pantalla — la tarjeta completa, con algún paso y algún vaso registrados — el mismo día que la 1. *También la usan: Funciones (3), Nutrición y dieta (7), Hábitos (9).*
 
-### 7 · Progreso, vista Dieta
-- **Dónde**: pestaña Progreso → Dieta.
-- **Qué tiene que verse**: el anillo de calorías y macros del día y, debajo, las tarjetas de la semana.
-- **Estado**: en una cuenta gratis dos tarjetas salen bloqueadas: también vale, porque la página de suscripción enseña justo eso. Si puedes, una de cada (gratis y Premium).
-- **Páginas**: /features/ (seguimiento), portada (progreso), /features/nutrition-diet/ (cabecera), /subscription/.
+3. **Cámara de escaneo encuadrando un plato** — Inicio → botón de registrar → pestaña Escanear; apunta a un plato de verdad antes de disparar — el visor con el plato dentro y el botón de disparo; un plato reconocible (tortilla, lentejas, un bocadillo) — cualquiera. *También la usan: Escanear comida (2), Funciones (3), Perder peso (8).*
 
-### 8 · Detalle de un alimento guardado
-- **Dónde**: Inicio → toca una comida de la lista → la ficha.
-- **Qué tiene que verse**: calorías y macros arriba y, debajo, fibra, azúcar, grasa saturada y las filas de vitaminas y minerales.
-- **Estado**: Premium, para que el panel de nutrientes salga completo. Si solo tienes gratis, también sirve (dos filas y el resto bajo el candado) y lo decimos así.
-- **Páginas**: /features/ (nutrición), /features/weight-loss/ (registro), portada (nutrición).
+4. **Resultado del escaneo, arriba** — dispara a ese plato y espera el resultado, sin desplazar — la foto del plato con la puntuación de salud encima, el nombre, las calorías y los macros — cualquiera. *También la usa: Escanear comida (2).*
 
-### 9 · Hoja de ingredientes detectados
-- **Dónde**: desde el resultado del escaneo (captura 3) → editar ingredientes.
-- **Qué tiene que verse**: cada ingrediente con sus gramos y sus calorías, y que se vea que se pueden cambiar.
-- **Estado**: cualquiera.
-- **Páginas**: /features/scan-food/ (cómo funciona).
+5. **Hoy, justo después de guardar** — guarda ese resultado y vuelve a Inicio — las calorías, la proteína, los hidratos y la grasa del día frente a los objetivos, con la comida recién añadida — el mismo día que la 1. *También la usan: Escanear comida (2), Nutrición y dieta (7), Perder peso (8).*
 
-### 10 · Resultado del escaneo, secciones de análisis
-- **Dónde**: el mismo resultado de la captura 3, desplazado hasta el desglose.
-- **Qué tiene que verse**: desglose nutricional, impacto en la salud y recomendaciones.
-- **Estado**: **Premium** (en gratis están bajo el candado).
-- **Páginas**: /features/scan-food/ (qué obtienes), /features/nutrition-diet/ (registro), /subscription/ (Premium).
+6. **Resultado de un código de barras** — registrar → pestaña Código de barras → escanea un producto envasado — la puntuación sobre 100, las razones debajo y la fila de nutrientes; mejor un producto con algo que señalar (refresco, galletas) — **antes, en Perfil → Mi salud, activa una alergia que el producto incumpla** (gluten con unas galletas, lactosa con un yogur): así sale el aviso «No apto para ti» y la misma captura sirve también para la página de código de barras. *También la usan: Funciones (3), Código de barras (4), Nutrición y dieta (7).*
 
-### 11 · Resultado del escaneo, final
-- **Dónde**: el mismo resultado, desplazado hasta abajo del todo.
-- **Qué tiene que verse**: la confianza de la IA y la recomendación final del plato.
-- **Estado**: cualquiera.
-- **Páginas**: /features/scan-food/ (consejo).
+7. **Resultado del registro por voz** — registrar → pestaña Voz → di una frase con dos o tres alimentos («dos huevos y una tostada con aguacate») → la hoja de resultado — la frase entendida arriba y cada alimento con calorías y macros, antes de guardar — cualquiera; si en la lista de fondo asoma algo raro, otra frase. *También la usan: Funciones (3), Registro por voz (5).*
 
-### 12 · Informe semanal, parte superior
-- **Dónde**: pestaña Progreso → Informe semanal (o desde la tarjeta de la semana).
-- **Qué tiene que verse**: la media de calorías por día frente al objetivo y las barras de la semana.
-- **Estado**: una semana con varios días registrados, para que las barras digan algo. Gratis sirve (abre gratis con dos tarjetas Premium).
-- **Páginas**: /features/ (seguimiento), /features/lifestyle-mindset/ (la semana).
+8. **Detalle de un alimento guardado** — Inicio → toca una comida de la lista — calorías y macros arriba y, debajo, fibra, azúcar, grasa saturada y las filas de vitaminas y minerales — Premium para que el panel salga completo (en gratis también vale: dos filas y el candado, y lo decimos así). *También la usan: Funciones (3), Perder peso (8).*
 
-### 13 · Coach Kal, una pregunta sobre una comida escaneada
-- **Dónde**: desde el resultado de un escaneo → preguntar a Coach Kal («¿me encaja hoy?»), o pestaña Coach Kal escribiendo la pregunta.
-- **Qué tiene que verse**: tu pregunta y la respuesta entera en pantalla, con las calorías que quedan.
-- **Estado**: un día con comidas registradas, para que la respuesta tenga cifras.
-- **Páginas**: /ai/ (cabecera), /features/ (entender), /features/nutrition-diet/ (preguntar), /features/weight-loss/ (constancia), portada (coach), /subscription/ (gratis).
+9. **Coach Kal con una pregunta sobre una comida escaneada** — desde el resultado de un escaneo → preguntar a Coach Kal «¿me encaja hoy?» (o escribirlo en la pestaña Coach Kal) — tu pregunta y la respuesta entera, con las calorías que quedan — el mismo día que la 1, con comidas registradas. *También la usan: Funciones (3), Coach Kal (6), Nutrición y dieta (7), Perder peso (8), Suscripción (10).*
 
-### 14 · Coach Kal, cena que encaje en el día
-- **Dónde**: Coach Kal → «proponme una cena que encaje en lo que me queda hoy».
-- **Qué tiene que verse**: la respuesta con los alimentos, sus calorías y el total.
-- **Estado**: igual que la 13.
-- **Páginas**: /features/nutrition-diet/ (preguntar).
+10. **Progreso, vista Dieta** — pestaña Progreso → Dieta — el anillo de calorías y macros del día y, debajo, las tarjetas de la semana — **cuenta demo** (aquí salen datos de la cuenta); en gratis dos tarjetas salen bloqueadas y también vale. *También la usan: Funciones (3), Nutrición y dieta (7), Suscripción (10).*
 
-### 15 · Coach Kal recién abierto
-- **Dónde**: pestaña Coach Kal, sin haber escrito nada en esa sesión.
-- **Qué tiene que verse**: las preguntas de inicio que propone, construidas con lo que te queda del día.
-- **Estado**: un día con algo registrado.
-- **Páginas**: /ai/ (cómo se usa).
+Cuando lleguen las diez: se recortan, se sustituyen las 12 imágenes de la portada (11 pantallas más el recorte de la tarjeta de actividad), se publica, y se te enseña la portada terminada con la lista de archivos cambiados.
 
-### 16 · Coach Kal y una alergia
-- **Dónde**: Mi salud → activa una alergia (gluten, por ejemplo) → Coach Kal → «¿puedo comer pan?».
-- **Qué tiene que verse**: la respuesta diciendo que no, por la alergia.
-- **Estado**: la alergia activada en Mi salud.
-- **Páginas**: /ai/ (alergias).
+---
 
-### 17 · Coach Kal, el aviso de contenido generado
-- **Dónde**: el final de cualquier respuesta de Coach Kal.
-- **Qué tiene que verse**: la línea «Contenido generado por IA» debajo de la respuesta.
-- **Estado**: cualquiera.
-- **Páginas**: /ai/ (límites).
+## Sesión 2 · ESCANEAR COMIDA — /features/scan-food/
 
-### 18 · Escáner de código de barras, encuadrando
-- **Dónde**: registrar → Código de barras, antes de que lea el código.
-- **Qué tiene que verse**: el visor con el código de un producto real dentro.
-- **Estado**: cualquiera.
-- **Páginas**: /features/scan-barcode/ (cabecera).
+Ya hechas en la sesión 1: cámara (3), resultado arriba (4), Hoy tras guardar (5).
 
-### 19 · Voz, pantalla de escucha
-- **Dónde**: registrar → Voz → pulsa el micrófono.
-- **Qué tiene que verse**: «Ya puedes hablar», el micrófono activo y la frase de ejemplo.
-- **Estado**: cualquiera. Cuidado con los registros anteriores que se ven atenuados detrás de la hoja.
-- **Páginas**: /features/voice-logging/ (cómo funciona).
+**Capturas nuevas: 3**, las tres desde el mismo resultado de la sesión 1 si la comida sigue guardada:
 
-### 20 · Pantalla de registro con las tres pestañas
-- **Dónde**: registrar, con Voz seleccionada.
-- **Qué tiene que verse**: Escanear, Código de barras y Voz, con Voz marcada, y los últimos registros por voz debajo.
-- **Estado**: cualquiera.
-- **Páginas**: /features/voice-logging/ (cómo funciona).
+1. **Hoja de ingredientes detectados** — desde el resultado → editar ingredientes — cada ingrediente con sus gramos y calorías — cualquiera.
+2. **Resultado, secciones de análisis** — el resultado desplazado hasta el desglose — desglose nutricional, impacto en la salud y recomendaciones — **Premium** (en gratis están bajo el candado). *También la usan: Nutrición y dieta (7), Suscripción (10).*
+3. **Resultado, final** — el mismo resultado, abajo del todo — la confianza de la IA y la recomendación final — cualquiera.
 
-### 21 · Mi salud
-- **Dónde**: Perfil → Mi salud.
-- **Qué tiene que verse**: la lista de alergias y, debajo, las formas de comer, con dos o tres activadas.
-- **Estado**: las que quieras activadas; no hace falta que sean las tuyas.
-- **Páginas**: /ai/ (tus datos), /features/nutrition-diet/ (dietas).
+## Sesión 3 · FUNCIONES — /features/
 
-### 22 · Cuerpo, la tarjeta del objetivo
-- **Dónde**: pestaña Progreso → Cuerpo.
-- **Qué tiene que verse**: peso inicial, peso actual, meta y lo que llevas.
-- **Estado**: aquí salen tus cifras: decide si quieres que se publiquen o usa la cuenta demo.
-- **Páginas**: /features/weight-loss/ (cómo funciona).
+Ya hechas: tarjeta de actividad (1.2), cámara (1.3), código de barras (1.6), voz (1.7), detalle (1.8), Coach Kal (1.9), Progreso (1.10).
 
-### 23 · Resultado del escáner de carta
-- **Dónde**: registrar → carta de restaurante (Premium) → fotografía una carta real.
-- **Qué tiene que verse**: la lista de platos leídos con calorías y macros y el plato recomendado resaltado.
-- **Estado**: **Premium**. Bloqueada hasta que la app responda en español en esta pantalla (APP-BUGS, sesión 2, punto 2): la captura actual tiene el texto de la IA en inglés dentro de la interfaz española. Pídela la última.
-- **Páginas**: /features/ (cómo se registra), portada (tarjeta «Carta»).
+**Captura nueva: 1**
 
-## Lo que no hace falta volver a capturar
-- El escáner de barras con el **kéfir** y el aviso de alergia: lo cubre la captura 5 si la haces con una alergia activada.
-- La **racha** como pantalla aparte: la portada y /features/lifestyle-mindset/ recortan el contador de la captura 1.
-- La **tarjeta de actividad** (pasos, agua, comidas) de Inicio: sale en la captura 1 o, si queda abajo, en la 4; se recorta de ahí.
-- Fotos de platos y de botellas: no son pantallas de la app y no caducan.
+1. **Informe semanal, arriba** — pestaña Progreso → Informe semanal — la media de calorías por día frente al objetivo y las barras de la semana — **cuenta demo**, con varios días registrados para que las barras digan algo; en gratis abre con dos tarjetas Premium y vale. *También la usa: Hábitos (9).*
 
-Veintitrés pantallas; con cinco bien hechas (1 a 5) cambian la portada entera y las dos páginas más visitadas.
+## Sesión 4 · CÓDIGO DE BARRAS — /features/scan-barcode/
+
+Ya hecha: resultado con el aviso de alergia (1.6).
+
+**Captura nueva: 1**
+
+1. **Escáner de barras encuadrando** — registrar → Código de barras, antes de que lea — el visor con el código de un producto real dentro — cualquiera.
+
+## Sesión 5 · REGISTRO POR VOZ — /features/voice-logging/
+
+Ya hecha: resultado por voz (1.7).
+
+**Capturas nuevas: 2**
+
+1. **Pantalla de escucha** — registrar → Voz → pulsa el micrófono — «Ya puedes hablar», el micrófono activo y la frase de ejemplo — cualquiera; ojo a los registros anteriores atenuados detrás.
+2. **Pantalla de registro con las tres pestañas** — registrar, con Voz seleccionada — Escanear, Código de barras y Voz, Voz marcada, y los últimos registros por voz debajo — cualquiera.
+
+## Sesión 6 · COACH KAL — /ai/
+
+Ya hecha: Coach Kal con la comida escaneada (1.9).
+
+**Capturas nuevas: 4**
+
+1. **Coach Kal recién abierto** — pestaña Coach Kal sin haber escrito nada en esa sesión — las preguntas de inicio que propone — un día con algo registrado.
+2. **Coach Kal y una alergia** — Mi salud → alergia activada (gluten) → Coach Kal → «¿puedo comer pan?» — la respuesta diciendo que no, por la alergia — la alergia activada.
+3. **El aviso de contenido generado** — el final de cualquier respuesta — la línea «Contenido generado por IA» — cualquiera.
+4. **Mi salud** — Perfil → Mi salud — la lista de alergias y, debajo, las formas de comer, con dos o tres activadas — las que quieras, no hace falta que sean las tuyas. *También la usa: Nutrición y dieta (7).*
+
+## Sesión 7 · NUTRICIÓN Y DIETA — /features/nutrition-diet/
+
+Ya hechas: Progreso (1.10), código de barras (1.6), Coach Kal (1.9), análisis Premium (2.2), Hoy (1.5), tarjeta de actividad (1.2), Mi salud (6.4).
+
+**Captura nueva: 1**
+
+1. **Coach Kal, cena que encaje** — Coach Kal → «proponme una cena que encaje en lo que me queda hoy» — la respuesta con los alimentos, sus calorías y el total — un día con comidas registradas.
+
+## Sesión 8 · PERDER PESO — /features/weight-loss/
+
+Ya hechas: Inicio arriba (1.1), Coach Kal (1.9), detalle (1.8), cámara (1.3), Hoy (1.5).
+
+**Captura nueva: 1**
+
+1. **Cuerpo, la tarjeta del objetivo** — pestaña Progreso → Cuerpo — peso inicial, peso actual, meta y lo que llevas — **cuenta demo**.
+
+## Sesión 9 · HÁBITOS Y CONSTANCIA — /features/lifestyle-mindset/
+
+Nada nuevo: Inicio arriba (1.1, también el recorte de la racha), tarjeta de actividad (1.2), informe semanal (3.1). Se publica sola.
+
+## Sesión 10 · SUSCRIPCIÓN — /subscription/
+
+Nada nuevo: Progreso (1.10), Coach Kal (1.9), análisis Premium (2.2). Se publica sola.

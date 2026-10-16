@@ -1,7 +1,15 @@
 # Sitting 7 — 2026-10-16, three batches, 54 files (owner wrote "ESO ES TODO" after batch 3)
 
-Raw, as received, renamed by what each shows. Nothing cropped, nothing framed yet.
-Names are our reading of the capture; confirmed with the owner before any is used.
+Raw, as received, renamed by what each shows. The crops the site uses are `assets/img/screens/s7-*`,
+made by the sitting-7 cut script (full width, status bar kept, bottom cut at the first run of ground
+rows after a target row). Confirmed with the owner on 2026-10-16 before use.
+
+Used on the site (es + en): home-calories, home-activity-week, home-macros, calendar, add-food,
+scan-result-top, food-detail-nutrients, food-detail-micros, barcode-aquarius, barcode-swaps,
+voice-result, coach-plan, progress-top, weight-monthly, weekly-top, streak.
+Not used: paywall (the app's trial line is wrong, owner fixing it), water (English retake pending with
+status bar), barcode-cocacola-zero (English only), active-energy (English only), steps, macros, energy,
+progress-scrolled, home-activity-day, weekly-habits / macros-compare / plates (no slot on the site).
 
 | file | what it shows | notes |
 |---|---|---|
@@ -66,3 +74,4 @@ Names are our reading of the capture; confirmed with the owner before any is use
 | home-calories-es.jpg | Inicio, Calorías | |
 | home-activity-week-es.jpg | Inicio, Registro de actividad, Semana | |
 | home-activity-day-es.jpg | Inicio, Registro de actividad, Día | |
+| water-daily-en.jpg | Water, Daily tab, 12–16 Oct (sent with the corrections message) | no status bar, 1080×2279; the Spanish pair has one |

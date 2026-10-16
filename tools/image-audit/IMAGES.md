@@ -1,5 +1,12 @@
 # Image audit — 2026-10-13 (branch part46-images-seo)
 
+**Update 2026-10-16, sitting 7:** families 1–8 (ai-chat), 33–68 except log-menu, 73–76, 81–84, 89–92,
+99–102, 107–110, 115–122, 139–158 except wl-goal, bc-scan 700/940 and bc-kefir were replaced by the
+`s7-*` families (one Spanish and one English capture each, status bar kept) and their files deleted.
+Still on the site from this table: ai-allergy, ai-cold, ai-note, bc-bottle (photo), bc-read, bc-scan
+440/660, log-menu, nd-ask, nd-water, profile, scan-plate (photo), sf-advice, sf-camera, sf-edit,
+step-camera, vl-listen, wl-goal. See tools/CAPTURAS-PENDIENTES.md for what each one is waiting for.
+
 Every image file in the repository, grouped by family (one screen = several widths × two languages).
 Numbers are the thumbnails in `tools/image-audit/contact-sheet-1.png` (app screens) and `contact-sheet-2.png` (icons, share card, blog covers).
 

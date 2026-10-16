@@ -1,11 +1,42 @@
 # Capturas que hay que rehacer — por página del sitio, en el orden de trabajo
 
-Actualizada el 16 de octubre de 2026. Sustituye a la versión por pantalla.
-Solo español: el sitio enseña capturas en español también en /en/.
+Actualizada el 16 de octubre de 2026 (tarde), tras la sesión 7. Sustituye a la versión por pantalla.
+**Cada pantalla dos veces: app en español para las páginas en español y app en inglés para /en/.**
+Nunca una pantalla en español en /en/ ni al revés.
+
+## Estado tras la sesión 7 (54 capturas recibidas, 17 pantallas publicadas en los dos idiomas)
+
+Publicadas (familia `assets/img/screens/s7-*`): inicio (calorías), inicio tras guardar, actividad semana,
+nutrición avanzada, calendario, barra de búsqueda de una comida, resultado del escaneo, detalle
+«¿Qué lleva que no ves?», lista completa de nutrientes, código de barras (Aquarius), «Prueba estos en
+su lugar», resultado por voz, Coach Kal (plan), Mi progreso, peso mensual, informe semanal, racha.
+
+**Siguen con la captura antigua** (en los dos idiomas) hasta que lleguen estas pantallas, cada una en
+español y en inglés, pantalla completa con barra de estado:
+
+1. Cámara de escaneo encuadrando un plato (portada paso 1, escanear comida «cómo», perder peso «cómo»).
+2. Editar la ración / los ingredientes del resultado (escanear comida «cómo»).
+3. Final del resultado con el consejo Premium (escanear comida «consejo»).
+4. Voz escuchando, con el micrófono activo (registro por voz «cómo»).
+5. Leer la etiqueta: paso de código de barras (código de barras «cómo», nutrición y dieta «comida»).
+6. Coach Kal: una cena que encaje con los macros (nutrición y dieta «pregunta»).
+7. Mi salud / perfil con dietas y alergias (Coach Kal «datos», nutrición y dieta «dietas»).
+8. Coach Kal recién abierto, respuesta sobre una alergia y la nota «es IA» (página Coach Kal).
+9. Meta de peso en Cuerpo (perder peso «cómo»).
+10. Agua: la pestaña Día en inglés con barra de estado (la española ya está); nutrición y dieta «comida».
+11. Paywall, cuando la app diga que la prueba de 5 días está en los dos planes (suscripción).
+12. Escáner de carta: fuera hasta que la IA responda en español.
+13. Escáner de código de barras encuadrando el código (código de barras, paso 1).
+
+Opcional: repetir el resultado por voz con una frase clara (la actual lee «Un banana, dos plátano, dos
+canarias, dos manzana»). Lo publicado hoy usa esa captura tal cual.
+
+---
+
 
 ## Reglas, para todas
 
-1. App en **español**, **tema claro**.
+1. App en **español** para las páginas en español y en **inglés** para /en/; **tema claro**. Cada pantalla, dos capturas.
 2. **Pantalla completa, con la barra de estado**: sin recortar nada; el recorte lo hacemos aquí y queda registrado (tools/captures/, tools/frame_screen.py).
 3. **Sin datos personales** que no quieras públicos: ni nombre, ni correo, ni foto de perfil, ni una cara. Donde salgan tus pesos (Cuerpo, Progreso), la cuenta demo.
 4. Una sesión por página: todas las capturas de esa página juntas; aquí se sustituyen todas, se publica y se te enseña la página terminada.

@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="../../assets/css/site.css">
   <link rel="stylesheet" href="../../assets/css/home.css">
   <link rel="stylesheet" href="../../assets/css/features.css">
-  <link rel="preload" as="image" href="../../assets/img/screens/bc-scan-es.webp" data-i18n-src="fp.scan-barcode.heroImg" data-srcset="700,940" imagesizes="(min-width: 900px) 400px, min(300px, 74vw)">
+  <link rel="preload" as="image" href="../../assets/img/screens/s7-barcode-es.webp" data-i18n-src="fp.scan-barcode.heroImg" data-srcset="700,1080" imagesizes="(min-width: 900px) 400px, min(300px, 74vw)">
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"{{i18n:fp.scan-barcode.q1}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:fp.scan-barcode.a1}}"}},{"@type":"Question","name":"{{i18n:fp.scan-barcode.q2}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:fp.scan-barcode.a2}}"}},{"@type":"Question","name":"{{i18n:fp.scan-barcode.q3}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:fp.scan-barcode.a3}}"}},{"@type":"Question","name":"{{i18n:fp.scan-barcode.q4}}","acceptedAnswer":{"@type":"Answer","text":"{{i18n:fp.scan-barcode.a4}}"}}]}</script>
 </head>
@@ -64,7 +64,7 @@
             <div class="hero-glow" aria-hidden="true"></div>
             <div class="hero-stage-x">
               <div class="hero-device">
-                <div class="dev-frame is-cut dev-frame-lg"><div class="dev-screen"><img src="../../assets/img/screens/bc-scan-es.webp" data-srcset="700,940" sizes="(min-width: 900px) 400px, min(300px, 74vw)" width="700" height="1317" fetchpriority="high" decoding="async" alt="Real app screen: the barcode scanner, the scan line across the code on a kéfir bottle" data-i18n-alt="fp.scan-barcode.heroAlt" data-i18n-src="fp.scan-barcode.heroImg"></div></div>
+                <div class="dev-frame is-cut dev-frame-lg"><div class="dev-screen"><img src="../../assets/img/screens/s7-barcode-es.webp" data-srcset="700,1080" sizes="(min-width: 900px) 400px, min(300px, 74vw)" width="700" height="1201" fetchpriority="high" decoding="async" alt="Real app screen: a scanned orange isotonic drink, 63 kcal for 330 g, Fotocal score 24 out of 100, poor" data-i18n-alt="fp.scan-barcode.heroAlt" data-i18n-src="fp.scan-barcode.heroImg"></div></div>
               </div>
             </div>
           </div>
@@ -199,22 +199,7 @@
       <div class="container">
         <div class="split">
           <div class="split-visual reveal">
-            <div class="tile tile-dark"><div class="dev-frame is-cut" data-lang-block="es"><div class="dev-screen"><img src="../../assets/img/screens/bc-kefir-es.webp" data-srcset="600,900" sizes="300px" width="600" height="1029" loading="lazy" decoding="async" alt="Real app screen: a scanned kéfir, 74 out of 100, with the warning that it contains a thing the user asked to avoid, and its negatives — no additives, low calories, low sugar, low salt" data-i18n-alt="fp.scan-barcode.scoreAlt" data-i18n-src="fp.scan-barcode.scoreImg"></div></div><!--# ═══ THE ENGLISH SCORED RESULT DROPS IN HERE ═════════════════════
-                 A good-score result in English has not been captured. The
-                 Activia kéfir result that exists in English must NOT be used:
-                 its Sugar and Salt rows read "No data" and it still scores 74
-                 (tools/APP-BUGS.md item 0). When an English result with filled
-                 rows arrives, commit it under tools/captures/s5/ and cut it:
-                   for w in 600 900; do python3 tools/screen_crop.py \
-                     tools/captures/s5/barcode-good-en.jpg assets/img/screens/bc-kefir-$w-en.webp \
-                     trim=72 ratio=1.632 width=$w; done
-                 then set the English fp.scan-barcode.scoreImg/scoreAlt, delete the
-                 data-lang-block="es" above and delete the figure below. ═══ -->
-              <figure class="bc-say bc-say-dark" data-lang-block="en" aria-hidden="true">
-                <span class="habit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-                <p class="bc-say-q" data-i18n="fp.scan-barcode.scoreFig">Out of 100, with the reasons underneath it</p>
-                <span class="bc-scale"><b>0</b><i></i><b>100</b></span>
-              </figure></div>
+            <div class="tile tile-dark"><div class="dev-frame is-cut"><div class="dev-screen"><img src="../../assets/img/screens/s7-swaps-es.webp" data-srcset="600,900" sizes="300px" width="600" height="1018" loading="lazy" decoding="async" alt="Real app screen: 'Try these instead', the scanned drink at 24 out of 100 and four alternatives scored 73 to 74" data-i18n-alt="fp.scan-barcode.scoreAlt" data-i18n-src="fp.scan-barcode.scoreImg"></div></div></div>
           </div>
           <div class="split-copy">
             <span class="kicker reveal" data-i18n="fp.scan-barcode.scoreKicker">The score</span>

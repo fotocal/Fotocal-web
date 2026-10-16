@@ -1197,7 +1197,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/calculadoras/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/"/>
@@ -1210,6 +1210,14 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/macros/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/macros/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/aceite-de-oliva/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/aceite-de-oliva/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/aceite-de-oliva/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/albondigas-en-salsa/</loc>
@@ -1226,6 +1234,14 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/arroz-con-leche/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/arroz-con-leche/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/barra-de-pan/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/barra-de-pan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/barra-de-pan/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/bocadillo-de-calamares/</loc>
@@ -1284,12 +1300,28 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/churros-con-chocolate/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/coca-cola-zero/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/coca-cola-zero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/coca-cola-zero/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/cocido-madrileno/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/cocido-madrileno/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/cocido-madrileno/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/copa-de-vino-tinto/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/copa-de-vino-tinto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/copa-de-vino-tinto/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/croquetas-de-jamon/</loc>
@@ -1340,6 +1372,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/gazpacho/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/huevo-cocido/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/huevo-cocido/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/huevo-cocido/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/huevos-fritos-con-patatas/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1349,7 +1389,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/"/>
@@ -1458,6 +1498,14 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/tarta-de-santiago/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/tarta-de-santiago/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/tercio-de-cerveza/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/tercio-de-cerveza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/tercio-de-cerveza/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/tinto-de-verano/</loc>

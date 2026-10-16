@@ -1,8 +1,8 @@
 {
  "_source": {
   "repo": "fotocal/Fotocal",
-  "commit": "d2594a0",
-  "commit_date": "2026-10-15",
+  "commit": "4e8f041",
+  "commit_date": "2026-10-16",
   "files": [
    "src/data/spanishFoods.ts",
    "src/data/spanishFoodRecipes.json",
@@ -3321,6 +3321,107 @@
    "carbs_g": 24.3,
    "protein_g": 15.6,
    "fat_g": 20.8
+  },
+  {
+   "id": "huevo-cocido",
+   "name_es": "Huevo cocido",
+   "name_en": "hard-boiled egg",
+   "primarySlot": "desayuno",
+   "secondarySlots": [
+    "cena",
+    "merienda"
+   ],
+   "servingLabel": "1 huevo",
+   "servingGrams": 55.0,
+   "region": "General",
+   "kcal": 85.0,
+   "carbs_g": 0.6,
+   "protein_g": 6.9,
+   "fat_g": 5.8
+  },
+  {
+   "id": "barra-de-pan",
+   "name_es": "Barra de pan",
+   "name_en": "Spanish bread loaf (barra), one piece",
+   "primarySlot": "comida",
+   "secondarySlots": [
+    "desayuno",
+    "cena"
+   ],
+   "servingLabel": "1 trozo",
+   "servingGrams": 50.0,
+   "region": "General",
+   "kcal": 133.0,
+   "carbs_g": 24.7,
+   "protein_g": 4.4,
+   "fat_g": 1.7
+  },
+  {
+   "id": "aceite-de-oliva",
+   "name_es": "Aceite de oliva",
+   "name_en": "olive oil, one tablespoon",
+   "primarySlot": "comida",
+   "secondarySlots": [
+    "desayuno",
+    "cena"
+   ],
+   "servingLabel": "1 cucharada (10 ml)",
+   "servingGrams": 9.0,
+   "region": "General",
+   "kcal": 80.0,
+   "carbs_g": 0.0,
+   "protein_g": 0.0,
+   "fat_g": 9.0
+  },
+  {
+   "id": "coca-cola-zero",
+   "name_es": "Coca-Cola Zero",
+   "name_en": "Coca-Cola Zero, one can",
+   "primarySlot": "comida",
+   "secondarySlots": [
+    "merienda",
+    "cena"
+   ],
+   "servingLabel": "1 lata (330 ml)",
+   "servingGrams": 330.0,
+   "region": "General",
+   "kcal": 7.0,
+   "carbs_g": 1.0,
+   "protein_g": 0.4,
+   "fat_g": 0.1
+  },
+  {
+   "id": "copa-de-vino-tinto",
+   "name_es": "Copa de vino tinto",
+   "name_en": "glass of red wine",
+   "primarySlot": "cena",
+   "secondarySlots": [
+    "comida"
+   ],
+   "servingLabel": "1 copa (150 ml)",
+   "servingGrams": 150.0,
+   "region": "General",
+   "kcal": 128.0,
+   "carbs_g": 3.9,
+   "protein_g": 0.1,
+   "fat_g": 0.0
+  },
+  {
+   "id": "tercio-de-cerveza",
+   "name_es": "Tercio de cerveza",
+   "name_en": "tercio, 33 cl bottle of beer",
+   "primarySlot": "merienda",
+   "secondarySlots": [
+    "comida",
+    "cena"
+   ],
+   "servingLabel": "1 tercio (330 ml)",
+   "servingGrams": 330.0,
+   "region": "General",
+   "kcal": 142.0,
+   "carbs_g": 11.7,
+   "protein_g": 1.5,
+   "fat_g": 0.0
   }
  ],
  "recipes": {
@@ -6290,6 +6391,42 @@
    {
     "foodId": "jamon_serrano",
     "grams": 20
+   }
+  ],
+  "huevo-cocido": [
+   {
+    "foodId": "huevo_cocido",
+    "grams": 55
+   }
+  ],
+  "barra-de-pan": [
+   {
+    "foodId": "pan_blanco",
+    "grams": 50
+   }
+  ],
+  "aceite-de-oliva": [
+   {
+    "foodId": "aceite_oliva",
+    "grams": 9
+   }
+  ],
+  "coca-cola-zero": [
+   {
+    "foodId": "refresco_cola_zero",
+    "grams": 330
+   }
+  ],
+  "copa-de-vino-tinto": [
+   {
+    "foodId": "vino_tinto",
+    "grams": 150
+   }
+  ],
+  "tercio-de-cerveza": [
+   {
+    "foodId": "cerveza",
+    "grams": 330
    }
   ]
  },
@@ -13677,6 +13814,64 @@
      "label": "1 taza",
      "g": 185,
      "sr": "1 cup"
+    }
+   ]
+  },
+  "refresco_cola_zero": {
+   "id": "refresco_cola_zero",
+   "es": "Refresco de cola sin azúcar",
+   "aliases": [
+    "coca-cola zero",
+    "cola light"
+   ],
+   "group": "drink",
+   "src": {
+    "db": "USDA FoodData Central — SR Legacy",
+    "ref": "fdc:175099",
+    "desc": "Beverages, carbonated, low calorie, cola or pepper-type, with aspartame, contains caffeine",
+    "ndb": "14416",
+    "fdcId": "175099"
+   },
+   "per100": {
+    "kcal": 2,
+    "protein": 0.11,
+    "carbs": 0.29,
+    "fat": 0.03,
+    "fiberG": 0,
+    "sugarG": 0,
+    "satFatG": 0,
+    "monoFatG": 0,
+    "polyFatG": 0,
+    "cholesterolMg": 0,
+    "sodiumMg": 8,
+    "potassiumMg": 8,
+    "calciumMg": 3,
+    "ironMg": 0.11,
+    "magnesiumMg": 1,
+    "phosphorusMg": 9,
+    "zincMg": 0.01,
+    "copperMg": 0.002,
+    "manganeseMg": 0.107,
+    "seleniumMcg": 0,
+    "vitAMcg": 0,
+    "vitB1Mg": 0.005,
+    "vitB2Mg": 0.023,
+    "vitB3Mg": 0,
+    "vitB5Mg": 0,
+    "vitB6Mg": 0,
+    "vitB9Mcg": 0,
+    "vitB12Mcg": 0,
+    "vitCMg": 0,
+    "vitDMcg": 0,
+    "vitEMg": 0,
+    "vitKMcg": 0,
+    "cholineMg": 0
+   },
+   "measures": [
+    {
+     "label": "1 onza",
+     "g": 29.6,
+     "sr": "1 fl oz"
     }
    ]
   },

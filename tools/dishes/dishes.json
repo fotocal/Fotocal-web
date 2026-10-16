@@ -1390,6 +1390,262 @@
      "a": "La app usa una sola fila, la de plátano genérico, así que no distingue. Entre variedades la diferencia por 100 g es pequeña; la que importa es el tamaño de la pieza, y el plátano de Canarias suele ser más pequeño que una banana de importación."
     }
    ]
+  },
+  {
+   "slug": "huevo-cocido",
+   "app_id": "huevo-cocido",
+   "name": "huevo cocido",
+   "article": "el",
+   "aliases": [
+    "huevo duro"
+   ],
+   "status": "ready",
+   "published": "2026-10-16",
+   "compare": [
+    "huevos-revueltos",
+    "tortilla-francesa",
+    "flan-de-huevo",
+    "yogur-natural"
+   ],
+   "blog": [
+    "how-much-protein-per-day",
+    "high-protein-breakfast-ideas",
+    "healthy-snacks-that-satisfy"
+   ],
+   "calc": "macros",
+   "portion": "<p>La unidad de Fotocal es un huevo mediano, 55 g ya pelado: {kcal} kcal con {protein} g de proteína. Uno pequeño (talla S, unos 45 g) son {per100*0.45} kcal; uno grande (L, 65 g), {per100*0.65}; dos medianos, {kcal*2}. La cáscara pesa unos 6 g, así que si pesas el huevo entero, réstala.</p><p>Cocido o duro no cambia la cuenta: el huevo no absorbe nada al hervir. El frito sí suma el aceite que se queda pegado, y el revuelto, la mantequilla o el aceite de la sartén.</p>",
+   "drivers": "<p>La yema concentra casi toda la grasa y la mitad de la proteína; la clara es casi solo proteína y agua. Según las filas de la app, la clara de un huevo mediano, unos 33 g, son 17 kcal y casi 4 g de proteína; la yema se queda con el resto, unas 68 kcal. Los hidratos son prácticamente cero. Por eso el huevo cocido es de los alimentos con más proteína por caloría que existen.</p>",
+   "lighter": "<p>Ya es de lo más ligero que hay con esa proteína. Si quieres aún menos grasa, dos claras y una yema dan casi la misma proteína con bastantes menos calorías. Y lo que acompaña al huevo pesa más en la cuenta que el propio huevo: la mayonesa de la ensaladilla, el pan o las patatas.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un huevo cocido?",
+     "a": "{kcal} kcal uno mediano de 55 g pelado, con {protein} g de proteína y casi ningún hidrato. Dos huevos, {kcal*2}; por 100 g, {per100}. Uno grande ronda las {per100*0.65}."
+    },
+    {
+     "q": "¿Cuántas calorías tienen la clara y la yema?",
+     "a": "La clara de un huevo mediano, unos 33 g, son 17 kcal y casi 4 g de proteína (fila de clara de huevo de la app); la yema, unos 17 g, se lleva el resto, unas 68 kcal, con toda la grasa y la otra mitad de la proteína."
+    },
+    {
+     "q": "¿El huevo cocido engorda?",
+     "a": "{kcal} kcal con {protein} g de proteína es de los alimentos que más sacian por caloría; no engorda por sí solo. La cuenta se dispara con lo que lo rodea: mayonesa, pan, patatas fritas."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un huevo frito frente a uno cocido?",
+     "a": "Por 100 g, el huevo frito de la base de datos de la app tiene 196 kcal y el cocido 155: la diferencia es el aceite que se queda en el huevo. Un huevo frito mediano se va a unas 100 kcal frente a las {kcal} del cocido."
+    }
+   ]
+  },
+  {
+   "slug": "barra-de-pan",
+   "app_id": "barra-de-pan",
+   "name": "barra de pan",
+   "article": "la",
+   "aliases": [
+    "pan blanco",
+    "pistola",
+    "barra entera"
+   ],
+   "status": "ready",
+   "published": "2026-10-16",
+   "compare": [
+    "pan-con-tomate-cena",
+    "tostada-con-aceite-de-oliva",
+    "pan-integral-con-tomate",
+    "bocadillo-de-jamon-serrano"
+   ],
+   "blog": [
+    "carbs-are-not-the-enemy",
+    "track-calories-without-weighing",
+    "how-to-read-nutrition-labels"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La unidad de Fotocal es un trozo de 50 g, el que acompaña a una comida: {kcal} kcal. Una barra entera de 250 g son {per100*2.5} kcal; media barra, la de un bocadillo, {per100*1.25}; una pistola de 125 g, lo mismo. Por 100 g, {per100}. El pan de molde va aparte: una rebanada de 25 g ronda las 70 kcal con la fila de pan de molde de la app.</p><p>Las barras de panadería pesan entre 200 y 300 g según la casa, así que la cifra de la barra entera conviene ajustarla pesándola una vez.</p>",
+   "drivers": "<p>Casi todo son hidratos del almidón de la harina, con algo de proteína del gluten y muy poca grasa. La corteza concentra más calorías por gramo que la miga porque tiene menos agua; por eso el pan del día anterior, más seco, da más calorías por el mismo volumen aunque las mismas por gramo de harina. Lo que convierte el pan en un problema no suele ser el pan: es el aceite, el embutido o la mantequilla que lleva encima.</p>",
+   "lighter": "<p>El integral no quita calorías (252 frente a {per100} kcal por 100 g en las filas de la app), pero añade fibra y sacia más. Lo que de verdad cambia la cuenta es pesar el trozo una vez: 50 g es menos de lo que parece. Y en el bocadillo, media barra en vez de una entera ahorra más que cualquier otra decisión.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una barra de pan entera?",
+     "a": "{per100*2.5} kcal una barra de 250 g, a {per100} kcal por cada 100 g. Las barras pesan entre 200 y 300 g: pésala una vez y multiplica."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un trozo de pan?",
+     "a": "{kcal} kcal el trozo de 50 g que usa Fotocal; una rebanada fina de barra, de unos 30 g, {per100*0.3}; una rebanada de pan de molde de 25 g, unas 70."
+    },
+    {
+     "q": "¿El pan engorda?",
+     "a": "Engorda comer más de lo que gastas, y el pan es fácil de comer de más porque acompaña sin que se cuente. Un trozo de 50 g son {kcal} kcal: dentro de una comida normal cabe; lo que suele sobrar es el segundo y el tercero, y lo que lleva encima."
+    }
+   ]
+  },
+  {
+   "slug": "aceite-de-oliva",
+   "app_id": "aceite-de-oliva",
+   "name": "aceite de oliva",
+   "article": "el",
+   "title": "Calorías de una cucharada de aceite de oliva — Fotocal",
+   "aliases": [
+    "cucharada de aceite de oliva",
+    "aceite de oliva virgen extra"
+   ],
+   "status": "ready",
+   "published": "2026-10-16",
+   "compare": [
+    "tostada-con-aceite-de-oliva",
+    "tostada-con-tomate-y-aceite",
+    "pan-con-tomate-cena",
+    "ensalada-de-aguacate-y-tomate"
+   ],
+   "blog": [
+    "dietary-fat-how-much-and-which-kinds",
+    "common-calorie-counting-mistakes",
+    "how-to-count-calories-accurately"
+   ],
+   "calc": "macros",
+   "portion": "<p>La unidad de Fotocal es una cucharada sopera de 10 ml, que pesa 9 g: {kcal} kcal, todas de grasa. Una cucharadita de postre, de 5 ml, son {kcal/2}; un chorro «a ojo» en la sartén suele ser de dos a tres cucharadas, {kcal*2} a {kcal*3} kcal; y 100 ml, que pesan 91 g, {per100*0.91}.</p><p>Es la cantidad que más se escapa de las cuentas, porque no se ve en el plato: va dentro de la patata frita, en el fondo de la ensalada y en la tostada.</p>",
+   "drivers": "<p>Es grasa pura, 9 kcal por gramo, sin proteína ni hidratos: por eso es el alimento más denso en calorías de la cocina. Virgen extra, virgen o refinado tienen las mismas calorías; cambian el sabor y los compuestos menores, no la energía. Lo que absorbe la comida al freírse, de una a tres cucharadas por ración según el alimento y el escurrido, es la parte que casi nadie apunta.</p>",
+   "lighter": "<p>No es cuestión de quitarlo: una o dos cucharadas al día entran en cualquier dieta razonable y son la grasa que recomiendan las guías. Es cuestión de medirlo: la cuchara en vez del chorro, el pulverizador para la plancha y escurrir bien lo frito. Medir el aceite durante una semana suele explicar 200 o 300 kcal diarias que no cuadraban.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una cucharada de aceite de oliva?",
+     "a": "{kcal} kcal la cucharada sopera de 10 ml (9 g); la cucharadita de postre, {kcal/2}. Es la cifra más útil de memorizar de toda la cocina."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 ml de aceite de oliva?",
+     "a": "Unas {per100*0.91} kcal: 100 ml pesan 91 g y el aceite tiene {per100} kcal por cada 100 g. Un vaso de aceite para una fritura son todas esas, aunque solo una parte acabe en la comida."
+    },
+    {
+     "q": "¿El aceite de oliva engorda?",
+     "a": "Engorda lo mismo que cualquier grasa, 9 kcal por gramo, y a la vez es la grasa que las guías recomiendan priorizar. Las dos cosas son ciertas: la clave está en la cantidad, no en el tipo."
+    },
+    {
+     "q": "¿Cuánto aceite absorbe la comida al freír?",
+     "a": "Depende del alimento y del escurrido: la patata y los rebozados absorben más que una pechuga a la plancha. Fotocal lo tiene en cuenta cuando marcas «frito» en un plato, con un reparto de aceite por tipo de cocción, y te deja cambiar los gramos antes de guardar."
+    }
+   ]
+  },
+  {
+   "slug": "coca-cola-zero",
+   "app_id": "coca-cola-zero",
+   "name": "Coca-Cola Zero",
+   "article": "la",
+   "aliases": [
+    "coca cola zero",
+    "cola zero"
+   ],
+   "status": "ready",
+   "published": "2026-10-16",
+   "compare": [
+    "cana-de-cerveza",
+    "zumo-de-naranja-natural",
+    "tinto-de-verano",
+    "cafe-con-leche"
+   ],
+   "blog": [
+    "added-sugar-vs-natural-sugar",
+    "hydration-and-weight",
+    "do-calories-matter-or-food-quality"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La unidad de Fotocal es la lata de 330 ml: {kcal} kcal, que a efectos de la cuenta diaria es cero. Un vaso de 200 ml son {per100*2}; una botella de medio litro, {per100*5}. La fila de la app es la de refresco de cola sin azúcar, la misma para Zero y Light.</p>",
+   "drivers": "<p>No lleva azúcar: el dulzor viene de edulcorantes sin calorías y las pocas que quedan son restos de ácidos y aromas. No tiene grasa ni proteína. Lo que sí tiene es cafeína, como la cola normal, y una lista de aditivos: por eso en Fotocal, al escanear su código de barras, la puntuación no la decide el azúcar sino los aditivos. Pocas calorías no es lo mismo que buena nota.</p>",
+   "lighter": "<p>No hay versión más ligera, ya está en cero. La pregunta útil es otra: si sustituye a una cola con azúcar, el ahorro es real; si se suma a lo que ya bebías, no ahorra nada. Y el agua con gas con limón hace el mismo papel sin aditivos.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una lata de Coca-Cola Zero?",
+     "a": "{kcal} kcal la lata de 330 ml, {per100} por cada 100 ml: a efectos prácticos, cero. Sin azúcar, sin grasa y sin proteína."
+    },
+    {
+     "q": "¿Coca-Cola Zero o Coca-Cola Light, cuál tiene menos calorías?",
+     "a": "Las dos son refrescos de cola sin azúcar con edulcorantes y la diferencia es de receta y sabor, no de calorías: en la base de datos de la app son la misma fila. Si escaneas el código de barras, la app muestra la etiqueta de cada una."
+    },
+    {
+     "q": "¿La Coca-Cola Zero engorda?",
+     "a": "Con {kcal} kcal por lata, no por las calorías. Lo que se discute es si los edulcorantes cambian el apetito o los hábitos, y ahí la evidencia no es concluyente y varía por persona. Para la cuenta de calorías es cero."
+    }
+   ]
+  },
+  {
+   "slug": "copa-de-vino-tinto",
+   "app_id": "copa-de-vino-tinto",
+   "name": "copa de vino tinto",
+   "article": "la",
+   "aliases": [
+    "copa de vino",
+    "vino tinto"
+   ],
+   "status": "ready",
+   "published": "2026-10-16",
+   "compare": [
+    "tinto-de-verano",
+    "cana-de-cerveza",
+    "tercio-de-cerveza",
+    "coca-cola-zero"
+   ],
+   "blog": [
+    "eating-out-without-wrecking-your-diet",
+    "common-calorie-counting-mistakes",
+    "how-to-stop-overeating-at-night"
+   ],
+   "calc": "deficit-calorico",
+   "portion": "<p>La copa de Fotocal es de 150 ml, la medida estándar de bar y restaurante: {kcal} kcal. Una copa generosa de 200 ml son {per100*2}; un chato de 100 ml, {per100}; una botella de 750 ml, {per100*7.5}. El vino blanco tiene prácticamente lo mismo: 82 kcal por 100 ml en la fila de la app, frente a {per100} el tinto.</p>",
+   "drivers": "<p>Casi todo es alcohol, a 7 kcal por gramo: una copa de tinto lleva unos 15 g. Los hidratos son los pocos azúcares que quedan tras la fermentación y la proteína es nula. Por eso lo que decide las calorías de un vino es el grado alcohólico, no el color ni la denominación: un tinto de 14,5º tiene bastante más que uno de 11º, y «vino bajo en calorías» es casi siempre «vino con menos grado».</p>",
+   "lighter": "<p>Menos grado y menos copa: la copa de 100 ml frente a la de 200 es la mitad de la cuenta. El tinto de verano, con gaseosa, se queda en {kcal:tinto-de-verano} kcal por vaso de 250 ml porque es medio vino. Lo que no funciona es compensarlo saltándose la cena: el alcohol no sacia y el cuerpo lo quema antes que la grasa.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una copa de vino tinto?",
+     "a": "{kcal} kcal la copa de 150 ml, casi todas del alcohol; una botella entera, unas {per100*7.5}. Una copa de blanco, prácticamente lo mismo."
+    },
+    {
+     "q": "¿Tiene más calorías el vino tinto o el blanco?",
+     "a": "Casi las mismas: 85 frente a 82 kcal por 100 ml en las filas de la app. Lo que las separa de verdad es el grado alcohólico de cada botella, no el color."
+    },
+    {
+     "q": "¿Una copa de vino al día engorda?",
+     "a": "{kcal} kcal que no sacian y que el cuerpo quema antes que la grasa: una copa al día son unas {kcal*7} kcal a la semana. Dentro de una dieta se cuenta como cualquier otra cosa; lo que no se puede es dejarla fuera de la cuenta."
+    }
+   ]
+  },
+  {
+   "slug": "tercio-de-cerveza",
+   "app_id": "tercio-de-cerveza",
+   "name": "tercio de cerveza",
+   "article": "el",
+   "aliases": [
+    "tercio de Mahou",
+    "botellín de 33 cl",
+    "cerveza de 33 cl"
+   ],
+   "status": "ready",
+   "published": "2026-10-16",
+   "compare": [
+    "cana-de-cerveza",
+    "tinto-de-verano",
+    "copa-de-vino-tinto",
+    "coca-cola-zero"
+   ],
+   "blog": [
+    "eating-out-without-wrecking-your-diet",
+    "how-many-calories-does-exercise-burn",
+    "common-calorie-counting-mistakes"
+   ],
+   "calc": "deficit-calorico",
+   "portion": "<p>El tercio es la botella o lata de 33 cl: {kcal} kcal con la fila de cerveza de la app. Una caña de 200 ml son {kcal:cana-de-cerveza}; un quinto o botellín de 20 cl, lo mismo; una jarra de medio litro, {per100*5}. Es la misma cerveza en distinto envase, así que todo es proporcional al volumen.</p><p>La fila es la de una lager genérica de unos 5º. Una tostada o una doble malta sube; una sin alcohol se queda alrededor de la mitad, por el azúcar que conserva. Si escaneas el código de barras de la botella, la app muestra la etiqueta de esa marca en lugar de la fila genérica.</p>",
+   "drivers": "<p>Casi dos tercios de la energía vienen del alcohol y el resto de los hidratos de la malta que no fermentaron; la proteína es mínima y la grasa, cero. Por eso el grado manda: cada grado de alcohol más son unas 7 kcal más por cada 100 ml. La espuma no cuenta, pero el segundo tercio sí.</p>",
+   "lighter": "<p>Caña en vez de tercio, que es la mitad de la cuenta; alternar con agua; o una sin alcohol, que es donde de verdad baja. Las versiones «light» recortan hidratos y a veces grado, pero no tanto como parece. Y las tapas que acompañan suelen pesar más que la cerveza.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un tercio de cerveza?",
+     "a": "{kcal} kcal la botella o lata de 33 cl, {per100} por cada 100 ml, casi dos tercios del alcohol. Una caña de 200 ml, {kcal:cana-de-cerveza}; una jarra de medio litro, {per100*5}."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un tercio de Mahou?",
+     "a": "Las de cualquier lager de unos 5º: unas {kcal} kcal por 33 cl con la fila genérica de cerveza de la app. Fotocal no tiene una fila por marca; si escaneas el código de barras, muestra la etiqueta del fabricante."
+    },
+    {
+     "q": "¿Engorda la cerveza?",
+     "a": "Engorda como cualquier caloría que sobra, con dos agravantes: no sacia y suele venir acompañada. Dos tercios son {kcal*2} kcal, lo que una cena ligera. Si la cuentas, cabe; si no la cuentas, es de lo primero que explica una báscula parada."
+    }
+   ]
   }
  ]
 }

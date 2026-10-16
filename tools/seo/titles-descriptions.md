@@ -354,6 +354,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (160): Reparte tus calorías en proteínas, grasas e hidratos según tu peso y tu objetivo: perder grasa, mantener o ganar músculo. Gramos al día, con la regla explicada.
 - **H1**: Calculadora de macros
 
+### `/calorias/aceite-de-oliva/`
+- **Title** (54): Calorías de una cucharada de aceite de oliva — Fotocal
+- **Description** (155): Una ración de aceite de oliva (9 g) tiene 80 kcal, 889 por 100 g: 0 g de proteínas, 0 g de hidratos y 9 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías del aceite de oliva
+
 ### `/calorias/albondigas-en-salsa/`
 - **Title** (51): Calorías de las albóndigas en salsa: ración y 100 g
 - **Description** (160): Una ración de albóndigas en salsa (250 g) tiene 394 kcal, 163 por 100 g: 29,3 g de proteínas, 12,8 g de hidratos y 23,9 g de grasas. Y qué pesa una ración real.
@@ -363,6 +368,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (54): Calorías del arroz con leche: ración y 100 g — Fotocal
 - **Description** (157): Una ración de arroz con leche (150 g) tiene 182 kcal, 121 por 100 g: 4,5 g de proteínas, 28,4 g de hidratos y 5,1 g de grasas. Qué pesa una ración de verdad.
 - **H1**: Calorías del arroz con leche
+
+### `/calorias/barra-de-pan/`
+- **Title** (53): Calorías de la barra de pan: ración y 100 g — Fotocal
+- **Description** (153): Una ración de barra de pan (50 g) tiene 133 kcal, 266 por 100 g: 4,4 g de proteínas, 24,7 g de hidratos y 1,7 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de la barra de pan
 
 ### `/calorias/bocadillo-de-calamares/`
 - **Title** (51): Calorías del bocadillo de calamares: ración y 100 g
@@ -399,10 +409,20 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (157): Una ración de churros con chocolate (200 g) tiene 531 kcal, 266 por 100 g: 10,7 g de proteínas, 47,6 g de hidratos y 32,7 g de grasas. Y la ración de verdad.
 - **H1**: Calorías de los churros con chocolate
 
+### `/calorias/coca-cola-zero/`
+- **Title** (55): Calorías de la Coca-Cola Zero: ración y 100 g — Fotocal
+- **Description** (157): Una ración de Coca-Cola Zero (330 g) tiene 7 kcal, 2 por 100 g: 0,4 g de proteínas, 1 g de hidratos y 0,1 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías de la Coca-Cola Zero
+
 ### `/calorias/cocido-madrileno/`
 - **Title** (55): Calorías del cocido madrileño: ración y 100 g — Fotocal
 - **Description** (160): Una ración de cocido madrileño (400 g) tiene 594 kcal, 149 por 100 g: 44,5 g de proteínas, 49,7 g de hidratos y 24,2 g de grasas. Qué pesa una ración de verdad.
 - **H1**: Calorías del cocido madrileño
+
+### `/calorias/copa-de-vino-tinto/`
+- **Title** (59): Calorías de la copa de vino tinto: ración y 100 g — Fotocal
+- **Description** (156): Una ración de copa de vino tinto (150 g) tiene 128 kcal, 85 por 100 g: 0,1 g de proteínas, 3,9 g de hidratos y 0 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de la copa de vino tinto
 
 ### `/calorias/croquetas-de-jamon/`
 - **Title** (60): Calorías de las croquetas de jamón: ración y 100 g — Fotocal
@@ -433,6 +453,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (47): Calorías del gazpacho: ración y 100 g — Fotocal
 - **Description** (159): Una ración de gazpacho (250 g) tiene 90 kcal, 36 por 100 g: 2 g de proteínas, 10 g de hidratos y 5 g de grasas. Ración real y comparación con platos parecidos.
 - **H1**: Calorías del gazpacho
+
+### `/calorias/huevo-cocido/`
+- **Title** (51): Calorías del huevo cocido: ración y 100 g — Fotocal
+- **Description** (159): Una ración de huevo cocido (55 g) tiene 85 kcal, 155 por 100 g: 6,9 g de proteínas, 0,6 g de hidratos y 5,8 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías del huevo cocido
 
 ### `/calorias/huevos-fritos-con-patatas/`
 - **Title** (57): Calorías de los huevos fritos con patatas: ración y 100 g
@@ -508,6 +533,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (58): Calorías de la tarta de Santiago: ración y 100 g — Fotocal
 - **Description** (157): Una ración de tarta de Santiago (80 g) tiene 330 kcal, 413 por 100 g: 9,3 g de proteínas, 37 g de hidratos y 17,9 g de grasas. Qué pesa una ración de verdad.
 - **H1**: Calorías de la tarta de Santiago
+
+### `/calorias/tercio-de-cerveza/`
+- **Title** (56): Calorías del tercio de cerveza: ración y 100 g — Fotocal
+- **Description** (156): Una ración de tercio de cerveza (330 g) tiene 142 kcal, 43 por 100 g: 1,5 g de proteínas, 11,7 g de hidratos y 0 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías del tercio de cerveza
 
 ### `/calorias/tinto-de-verano/`
 - **Title** (54): Calorías del tinto de verano: ración y 100 g — Fotocal

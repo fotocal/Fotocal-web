@@ -34,8 +34,10 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 ## /calorias/
 
+- `/calorias/aceite-de-oliva/` — Calorías de una cucharada de aceite de oliva — Fotocal  _solo ES_
 - `/calorias/albondigas-en-salsa/` — Calorías de las albóndigas en salsa: ración y 100 g  _solo ES_
 - `/calorias/arroz-con-leche/` — Calorías del arroz con leche: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/barra-de-pan/` — Calorías de la barra de pan: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/bocadillo-de-calamares/` — Calorías del bocadillo de calamares: ración y 100 g  _solo ES_
 - `/calorias/bocadillo-de-jamon-serrano/` — Calorías del bocadillo de jamón serrano: ración y 100 g  _solo ES_
 - `/calorias/cafe-con-leche/` — Calorías del café con leche: ración y 100 g — Fotocal  _solo ES_
@@ -43,13 +45,16 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/callos-a-la-madrilena/` — Calorías de los callos a la madrileña: ración y 100 g  _solo ES_
 - `/calorias/cana-de-cerveza/` — Calorías de la caña de cerveza: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/churros-con-chocolate/` — Calorías de los churros con chocolate: ración y 100 g  _solo ES_
+- `/calorias/coca-cola-zero/` — Calorías de la Coca-Cola Zero: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/cocido-madrileno/` — Calorías del cocido madrileño: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/copa-de-vino-tinto/` — Calorías de la copa de vino tinto: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/croquetas-de-jamon/` — Calorías de las croquetas de jamón: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/empanada-gallega/` — Calorías de la empanada gallega: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/ensaladilla-rusa/` — Calorías de la ensaladilla rusa: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/fabada-asturiana/` — Calorías de la fabada asturiana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/gambas-al-ajillo/` — Calorías de las gambas al ajillo: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/gazpacho/` — Calorías del gazpacho: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/huevo-cocido/` — Calorías del huevo cocido: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/huevos-fritos-con-patatas/` — Calorías de los huevos fritos con patatas: ración y 100 g  _solo ES_
 - `/calorias/` — Calorías de platos españoles: tabla por ración y 100 g  _solo ES_
 - `/calorias/jamon-serrano/` — Calorías del jamón serrano: ración y 100 g — Fotocal  _solo ES_
@@ -65,6 +70,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/sandwich-mixto/` — Calorías del sándwich mixto (jamón y queso) — Fotocal  _solo ES_
 - `/calorias/sopa-castellana/` — Calorías de la sopa castellana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tarta-de-santiago/` — Calorías de la tarta de Santiago: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/tercio-de-cerveza/` — Calorías del tercio de cerveza: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tinto-de-verano/` — Calorías del tinto de verano: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/torrijas/` — Calorías de las torrijas: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tortilla-de-patatas/` — Calorías de la tortilla de patatas: ración y 100 g — Fotocal  _solo ES_
@@ -169,4 +175,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 123 páginas en español, 82 con copia inglesa (205 URLs servidas).
+Total: 129 páginas en español, 82 con copia inglesa (211 URLs servidas).

@@ -49,6 +49,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (158): ¿Hacer cardio o levantar pesas para perder grasa? Qué aporta cada uno, por qué la respuesta honesta es «los dos» y cómo combinarlos para que el déficit trabaj
 - **H1**: Cardio o pesas para perder grasa
 
+### `/blog/choose-photo-calorie-counter/`
+- **Title** (84): Cómo elegir una app para contar calorías con foto, y qué debería significar «gratis»
+- **Description** (158): Seis preguntas que hacerle a cualquier app que cuenta calorías con una foto antes de que te convenza el vídeo de la demo. Y, en los mismos términos llanos, qu
+- **H1**: Cómo elegir una app para contar calorías con foto, y qué debería significar «gratis»
+
 ### `/blog/common-calorie-counting-mistakes/`
 - **Title** (51): 7 errores al contar calorías que frenan tu progreso
 - **Description** (152): ¿Cuentas calorías y no bajas de peso? Estos siete errores explican la mayoría de los progresos estancados, y todos se pueden corregir esta misma semana.
@@ -223,6 +228,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (60): NEAT: el gasto calórico oculto que estás ignorando — Fotocal
 - **Description** (156): El NEAT —las calorías que quemas con el movimiento cotidiano— puede superar de largo a tus entrenamientos. Qué es y cómo usarlo para perder grasa más fácil.
 - **H1**: NEAT: el gasto calórico oculto que estás ignorando
+
+### `/blog/photo-calorie-apps-accuracy/`
+- **Title** (91): ¿Son fiables las apps que cuentan calorías con foto? Lo que una foto puede y no puede saber
+- **Description** (158): Una foto identifica bien el plato y adivina peor la cantidad. Aquí está de dónde sale el error de verdad, por qué nadie puede darte un porcentaje honesto y la
+- **H1**: ¿Son fiables las apps que cuentan calorías con foto? Lo que una foto puede y no puede saber
 
 ### `/blog/plan-a-week-of-meals-in-30-minutes/`
 - **Title** (51): Cómo planificar una semana de comidas en 30 minutos
@@ -529,6 +539,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (159): Una ración de sopa castellana (300 g) tiene 347 kcal, 116 por 100 g: 15,6 g de proteínas, 24,3 g de hidratos y 20,8 g de grasas. Qué pesa una ración de verdad.
 - **H1**: Calorías de la sopa castellana
 
+### `/calorias/tabla-de-calorias/`
+- **Title** (59): Tabla de calorías de alimentos y platos españoles — Fotocal
+- **Description** (158): Tabla de calorías para imprimir con los 218 alimentos y platos españoles de la app Fotocal: ración, kcal por ración y por 100 g, proteínas, hidratos y grasas.
+- **H1**: Tabla de calorías de los alimentos y platos españoles
+
 ### `/calorias/tarta-de-santiago/`
 - **Title** (58): Calorías de la tarta de Santiago: ración y 100 g — Fotocal
 - **Description** (157): Una ración de tarta de Santiago (80 g) tiene 330 kcal, 413 por 100 g: 9,3 g de proteínas, 37 g de hidratos y 17,9 g de grasas. Qué pesa una ración de verdad.
@@ -675,6 +690,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (50): Cardio vs Strength Training for Fat Loss — Fotocal
 - **Description** (156): Should you do cardio or lift weights to lose fat? What each one does, why the honest answer is “both”, and how to combine them so the deficit does the work.
 - **H1**: Cardio vs Strength Training for Fat Loss
+
+### `/en/blog/choose-photo-calorie-counter/`
+- **Title** (66): How to choose a photo calorie counter, and what “free” should mean
+- **Description** (162): Six questions to ask any app that counts calories from a photo before the demo video convinces you. And, in the same plain terms, what Fotocal&amp;#x27;s free pla
+- **H1**: How to choose a photo calorie counter, and what “free” should mean
 
 ### `/en/blog/common-calorie-counting-mistakes/`
 - **Title** (54): 7 Common Calorie Counting Mistakes That Stall Progress
@@ -850,6 +870,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (55): NEAT: The Hidden Calorie Burn You’re Ignoring — Fotocal
 - **Description** (158): NEAT, the calories you burn through everyday movement, can dwarf your workouts. What it is, why it drops when you diet, and how to use it for easier fat loss.
 - **H1**: NEAT: The Hidden Calorie Burn You’re Ignoring
+
+### `/en/blog/photo-calorie-apps-accuracy/`
+- **Title** (78): Are photo calorie-counting apps accurate? What a photo can and cannot tell you
+- **Description** (158): A photo identifies the dish well and guesses the amount less well. Here is where the error really comes from, why nobody can honestly give you one percentage,
+- **H1**: Are photo calorie-counting apps accurate? What a photo can and cannot tell you
 
 ### `/en/blog/plan-a-week-of-meals-in-30-minutes/`
 - **Title** (51): How to Plan a Week of Meals in 30 Minutes — Fotocal

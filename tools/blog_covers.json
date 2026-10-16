@@ -268,5 +268,15 @@
   "category": "Diet tips",
   "glyph": "clock",
   "pal": 6
+ },
+ "photo-calorie-apps-accuracy": {
+  "category": "Calorie counting",
+  "glyph": "camera",
+  "pal": 3
+ },
+ "choose-photo-calorie-counter": {
+  "category": "Calorie counting",
+  "glyph": "list",
+  "pal": 5
  }
 }

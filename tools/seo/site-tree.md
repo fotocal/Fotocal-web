@@ -69,6 +69,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/salmorejo/` — Calorías del salmorejo: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/sandwich-mixto/` — Calorías del sándwich mixto (jamón y queso) — Fotocal  _solo ES_
 - `/calorias/sopa-castellana/` — Calorías de la sopa castellana: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/tabla-de-calorias/` — Tabla de calorías de alimentos y platos españoles — Fotocal  _solo ES_
 - `/calorias/tarta-de-santiago/` — Calorías de la tarta de Santiago: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tercio-de-cerveza/` — Calorías del tercio de cerveza: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tinto-de-verano/` — Calorías del tinto de verano: ración y 100 g — Fotocal  _solo ES_
@@ -95,6 +96,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/calorie-deficit-for-fat-loss/` — Déficit calórico: la regla detrás de toda pérdida de grasa  _ES+EN_
 - `/blog/carbs-are-not-the-enemy/` — Los carbohidratos no son el enemigo: una mirada equilibrada  _ES+EN_
 - `/blog/cardio-vs-strength-training-for-fat-loss/` — Cardio o pesas para perder grasa — Fotocal  _ES+EN_
+- `/blog/choose-photo-calorie-counter/` — Cómo elegir una app para contar calorías con foto, y qué debería significar «gratis»  _ES+EN_
 - `/blog/common-calorie-counting-mistakes/` — 7 errores al contar calorías que frenan tu progreso  _ES+EN_
 - `/blog/dietary-fat-how-much-and-which-kinds/` — Grasa en la dieta: cuánta necesitas y de qué tipo — Fotocal  _ES+EN_
 - `/blog/do-calories-matter-or-food-quality/` — ¿Importan las calorías o solo la calidad de la comida?  _ES+EN_
@@ -130,6 +132,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/meal-prep-for-beginners/` — Meal prep para principiantes: un sistema sencillo — Fotocal  _ES+EN_
 - `/blog/mindful-eating-beginners-guide/` — Alimentación consciente: guía para principiantes — Fotocal  _ES+EN_
 - `/blog/neat-the-hidden-calorie-burn/` — NEAT: el gasto calórico oculto que estás ignorando — Fotocal  _ES+EN_
+- `/blog/photo-calorie-apps-accuracy/` — ¿Son fiables las apps que cuentan calorías con foto? Lo que una foto puede y no puede saber  _ES+EN_
 - `/blog/plan-a-week-of-meals-in-30-minutes/` — Cómo planificar una semana de comidas en 30 minutos  _ES+EN_
 - `/blog/portion-control-simple-tricks/` — Control de raciones: trucos sencillos que sí funcionan  _ES+EN_
 - `/blog/tdee-how-many-calories-you-need/` — TDEE explicado: cuántas calorías necesitas de verdad  _ES+EN_
@@ -175,4 +178,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 129 páginas en español, 82 con copia inglesa (211 URLs servidas).
+Total: 132 páginas en español, 84 con copia inglesa (216 URLs servidas).

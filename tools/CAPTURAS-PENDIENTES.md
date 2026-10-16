@@ -4,32 +4,30 @@ Actualizada el 16 de octubre de 2026 (tarde), tras la sesión 7. Sustituye a la 
 **Cada pantalla dos veces: app en español para las páginas en español y app en inglés para /en/.**
 Nunca una pantalla en español en /en/ ni al revés.
 
-## Estado tras la sesión 7 (54 capturas recibidas, 17 pantallas publicadas en los dos idiomas)
+## Estado tras las sesiones 7 y 8 (16 de octubre)
 
-Publicadas (familia `assets/img/screens/s7-*`): inicio (calorías), inicio tras guardar, actividad semana,
-nutrición avanzada, calendario, barra de búsqueda de una comida, resultado del escaneo, detalle
-«¿Qué lleva que no ves?», lista completa de nutrientes, código de barras (Aquarius), «Prueba estos en
-su lugar», resultado por voz, Coach Kal (plan), Mi progreso, peso mensual, informe semanal, racha.
+Publicadas en los dos idiomas (familias `assets/img/screens/s7-*` y `s8-*`): inicio (calorías), inicio
+tras guardar, actividad semana, nutrición avanzada, calendario, barra de búsqueda de una comida,
+resultado del escaneo, detalle «¿Qué lleva que no ves?», lista completa de nutrientes, código de barras
+(Aquarius), «Prueba estos en su lugar», resultado por voz, Coach Kal (plan, final de la respuesta,
+alergia, recién abierto), Mi progreso (también como tarjeta de la meta en Perder peso), peso mensual,
+informe semanal, racha, Salud y dieta, final del resultado (comparación e ingredientes), hoja de porción,
+Voz escuchando, Agua (día).
 
-**Siguen con la captura antigua** (en los dos idiomas) hasta que lleguen estas pantallas, cada una en
-español y en inglés, pantalla completa con barra de estado:
+**Siguen pendientes**, cada una en español y en inglés, pantalla completa con barra de estado, en tu móvil:
 
 1. Cámara de escaneo encuadrando un plato (portada paso 1, escanear comida «cómo», perder peso «cómo»).
-2. Editar la ración / los ingredientes del resultado (escanear comida «cómo»).
-3. Final del resultado con el consejo Premium (escanear comida «consejo»).
-4. Voz escuchando, con el micrófono activo (registro por voz «cómo»).
-5. Leer la etiqueta: paso de código de barras (código de barras «cómo», nutrición y dieta «comida»).
-6. Coach Kal: una cena que encaje con los macros (nutrición y dieta «pregunta»).
-7. Mi salud / perfil con dietas y alergias (Coach Kal «datos», nutrición y dieta «dietas»).
-8. Coach Kal recién abierto, respuesta sobre una alergia y la nota «es IA» (página Coach Kal).
-9. Meta de peso en Cuerpo (perder peso «cómo»).
-10. Agua: la pestaña Día en inglés con barra de estado (la española ya está); nutrición y dieta «comida».
-11. Paywall, cuando la app diga que la prueba de 5 días está en los dos planes (suscripción).
-12. Escáner de carta: fuera hasta que la IA responda en español.
-13. Escáner de código de barras encuadrando el código (código de barras, paso 1).
+   Los archivos enviados el 16 por la tarde eran los de septiembre (941×1672, otro dispositivo).
+2. Escáner de código de barras encuadrando el código (código de barras, paso 1). Ídem.
+3. Resultado por voz **en español** con la app en español: el enviado («Banana, Café, Barra de pan»)
+   tiene la interfaz en inglés (Calories, Confirm). La parte inglesa ya está publicada con
+   «Banana, Coffee, Bread»; la española sigue con «Un banana, dos plátano…».
+4. Leer la etiqueta: paso de código de barras (código de barras «cómo», nutrición y dieta «comida»).
+5. Paywall, cuando la app diga que la prueba de 5 días está en los dos planes (suscripción).
+6. Escáner de carta: fuera hasta que la IA responda en español.
 
-Opcional: repetir el resultado por voz con una frase clara (la actual lee «Un banana, dos plátano, dos
-canarias, dos manzana»). Lo publicado hoy usa esa captura tal cual.
+Sin hueco en el sitio (guardadas en tools/captures/s8, no publicadas): Peso, pestaña Día, en los dos
+idiomas. La tarjeta de la meta de Perder peso usa ahora la captura de Mi progreso (Mi meta).
 
 ---
 

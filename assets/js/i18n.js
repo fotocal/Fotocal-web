@@ -153,7 +153,7 @@ window.FOTOCAL_I18N = {
     "log.v.tag": "Voice",
     "log.v.t": "Just say it",
     "log.v.b": "\"Two eggs and toast with avocado\" — say it out loud and it's logged. Perfect for busy mornings, messy hands and walking out the door.",
-    "log.v.alt": "Real app screen: the voice result, the sentence as heard and the foods it recognised, with calories, carbs, protein and fat, ready to confirm",
+    "log.v.alt": "Voice logging: banana, coffee and bread recognised from speech, each with calories and macros",
     "log.m.tag": "Menu",
     "log.premium": "Premium",
     "log.m.t": "Scan the menu",

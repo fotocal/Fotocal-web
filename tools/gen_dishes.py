@@ -421,6 +421,11 @@ def dish_page(d, ready_by_app):
         out[-1] = out[-1].rstrip("ligera") + ("ligera" if art in ("la",) else "ligero" if art == "el" else "ligeras" if art == "las" else "ligeros") + "</h2>"
         o('      ' + fill(d["lighter"], d, fig))
 
+    # long-tail sections (editorial, numbers filled from the figures)
+    for sec in d.get("sections", []):
+        o('      <h2 id="%s">%s</h2>' % (sec["id"], esc(sec["h2"])))
+        o('      ' + fill(sec["html"], d, fig))
+
     # FAQ
     if faq:
         o('      <h2 id="preguntas">Preguntas frecuentes</h2>')

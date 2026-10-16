@@ -335,9 +335,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calculadora de calorías diarias
 
 ### `/calculadoras/deficit-calorico/`
-- **Title** (59): Calculadora de déficit calórico para perder grasa — Fotocal
-- **Description** (148): Calcula tu déficit calórico: tu mantenimiento, cuánto recortar para perder del 0,5 % al 1 % de tu peso a la semana y cuánto tardarías. Sin registro.
-- **H1**: Calculadora de déficit calórico
+- **Title** (58): Calculadora de déficit calórico para perder peso — Fotocal
+- **Description** (160): Calcula tu déficit calórico para perder peso: mantenimiento, cuánto recortar (mujer y hombre) y cuánto tardarías. Qué es, cómo se calcula y los 500 kcal al día.
+- **H1**: Calculadora de déficit calórico: mujer y hombre
 
 ### `/calculadoras/imc/`
 - **Title** (54): Calculadora de IMC (índice de masa corporal) — Fotocal
@@ -479,6 +479,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (159): Una ración de pincho de tortilla (120 g) tiene 198 kcal, 165 por 100 g: 6,7 g de proteínas, 14 g de hidratos y 11,9 g de grasas. Qué pesa una ración de verdad.
 - **H1**: Calorías del pincho de tortilla
 
+### `/calorias/platano/`
+- **Title** (46): Calorías del plátano: ración y 100 g — Fotocal
+- **Description** (156): Una ración de plátano (120 g) tiene 107 kcal, 89 por 100 g: 1,3 g de proteínas, 27,4 g de hidratos y 0,4 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías del plátano
+
 ### `/calorias/pulpo-a-la-gallega/`
 - **Title** (57): Calorías del pulpo a la gallega: ración y 100 g — Fotocal
 - **Description** (156): Una ración de pulpo a la gallega (200 g) tiene 250 kcal, 125 por 100 g: 24 g de proteínas, 14 g de hidratos y 11 g de grasas. Qué pesa una ración de verdad.
@@ -488,6 +493,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (48): Calorías del salmorejo: ración y 100 g — Fotocal
 - **Description** (153): Una ración de salmorejo (250 g) tiene 210 kcal, 84 por 100 g: 4 g de proteínas, 18 g de hidratos y 13 g de grasas. Con la ración real y platos parecidos.
 - **H1**: Calorías del salmorejo
+
+### `/calorias/sandwich-mixto/`
+- **Title** (53): Calorías del sándwich mixto (jamón y queso) — Fotocal
+- **Description** (160): Una ración de sándwich mixto de jamón y queso (150 g) tiene 417 kcal, 288 por 100 g: 17,2 g de proteínas, 42,4 g de hidratos y 19 g de grasas. Y la ración real.
+- **H1**: Calorías del sándwich mixto de jamón y queso
 
 ### `/calorias/sopa-castellana/`
 - **Title** (56): Calorías de la sopa castellana: ración y 100 g — Fotocal
@@ -514,6 +524,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (159): Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g: 8,3 g de proteínas, 17,6 g de hidratos y 14,9 g de grasas. Y qué pesa una ración real.
 - **H1**: Calorías de la tortilla de patatas
 
+### `/calorias/tortilla-francesa/`
+- **Title** (58): Calorías de la tortilla francesa: ración y 100 g — Fotocal
+- **Description** (160): Una ración de tortilla francesa (100 g) tiene 190 kcal, 196 por 100 g: 12,8 g de proteínas, 0,7 g de hidratos y 14,7 g de grasas. Qué pesa una ración de verdad.
+- **H1**: Calorías de la tortilla francesa
+
 ### `/calorias/tostada-con-tomate-y-aceite/`
 - **Title** (58): Calorías de la tostada con tomate y aceite: ración y 100 g
 - **Description** (156): Una ración de tostada con tomate y aceite (90 g) tiene 235 kcal, 267 por 100 g: 5,2 g de proteínas, 30,9 g de hidratos y 10,3 g de grasas. Y la ración real.
@@ -530,9 +545,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Lo que más se pregunta sobre el contador de calorías Fotocal.
 
 ### `/features/`
-- **Title** (50): Funciones de Fotocal: escáner de comida, voz y más
-- **Description** (155): Las nueve funciones del contador de calorías Fotocal: escaneo de comida con foto, código de barras, voz, carta de restaurante, Coach Kal e informe semanal.
-- **H1**: Nueve formas de contar calorías. Una sola app.
+- **Title** (54): Funciones de Fotocal: contar calorías con foto, gratis
+- **Description** (148): Nueve funciones: foto, código de barras, voz, carta, Coach Kal e informe semanal. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite.
+- **H1**: Nueve formas de contar calorías. Una sola app, gratis.
 
 ### `/features/lifestyle-mindset/`
 - **Title** (51): Hábitos para comer mejor sin obsesionarte — Fotocal
@@ -545,19 +560,19 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Nutrición y macros: entiende lo que comes, no solo cuánto.
 
 ### `/features/scan-barcode/`
-- **Title** (50): Escáner de código de barras de alimentos — Fotocal
+- **Title** (58): Escáner de código de barras de alimentos, gratis — Fotocal
 - **Description** (155): Escanea el código de barras de cualquier producto y mira sus calorías, su puntuación sobre 100 y si choca con tus alergias. Sin límite y gratis en Fotocal.
-- **H1**: Escáner de código de barras: los envasados, ya resueltos.
+- **H1**: Escáner de código de barras gratis: los envasados, ya resueltos.
 
 ### `/features/scan-food/`
-- **Title** (53): Calorías con foto: escáner de comida con IA — Fotocal
-- **Description** (157): Apunta la cámara a tu plato y obtén calorías, macros, ingredientes y puntuación de salud. Así funciona el escáner de comida de Fotocal, con pantallas reales.
-- **H1**: Calorías con foto: apunta con la cámara y llévate el plato entero.
+- **Title** (60): Calorías con foto gratis: escáner de comida con IA — Fotocal
+- **Description** (155): Apunta la cámara a tu plato y obtén calorías, macros, ingredientes y puntuación. Gratis sin tarjeta: 2 escaneos con IA al día; Premium los deja sin límite.
+- **H1**: Calorías con foto, gratis: apunta con la cámara y llévate el plato entero.
 
 ### `/features/voice-logging/`
-- **Title** (55): Contar calorías por voz: di lo que has comido — Fotocal
-- **Description** (159): Di «dos huevos y una tostada» y Fotocal lo registra con calorías y macros, en cualquier idioma. Cómo funciona el registro por voz, qué entiende y qué corregir.
-- **H1**: Cuenta calorías por voz: solo di lo que has comido, en cualquier idioma.
+- **Title** (55): Calorías por voz gratis: di lo que has comido — Fotocal
+- **Description** (145): Di «dos huevos y una tostada» y Fotocal lo registra con calorías y macros. Gratis: 1 registro por voz al día, sin tarjeta; sin límite en Premium.
+- **H1**: Cuenta calorías por voz, gratis: solo di lo que has comido, en cualquier idioma.
 
 ### `/features/weight-loss/`
 - **Title** (52): Perder peso contando calorías con una foto — Fotocal
@@ -565,9 +580,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Pierde peso sin convertir la comida en un segundo trabajo.
 
 ### `/`
-- **Title** (46): Contador de calorías con IA por foto — Fotocal
-- **Description** (153): Fotografía tu plato y Fotocal cuenta calorías, macros y una puntuación de salud en segundos. Gratis, sin tarjeta, en Android. Con voz y código de barras.
-- **H1**: El contador de calorías que funciona con una foto.
+- **Title** (53): Contador de calorías gratis con IA por foto — Fotocal
+- **Description** (157): Haz una foto y Fotocal cuenta calorías y macros al momento. Gratis y sin tarjeta: 2 escaneos con IA al día; código de barras y Coach Kal sin límite. Android.
+- **H1**: El contador de calorías gratis que funciona con una foto.
 
 ### `/privacy-policy/`
 - **Title** (33): Política de privacidad de Fotocal
@@ -922,9 +937,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: What people ask most about the Fotocal calorie counter.
 
 ### `/en/features/`
-- **Title** (46): Fotocal Features: Food Scanner, Voice, Barcode
-- **Description** (149): The nine features of the Fotocal calorie counter: photo food scanning, barcode scanner, voice logging, menu scanner, Coach Kal and the weekly report.
-- **H1**: Nine ways to count calories. One app.
+- **Title** (51): Fotocal Features: Count Calories from a Photo, Free
+- **Description** (146): The nine Fotocal features: photo, barcode, voice, menu, Coach Kal and the weekly report. Free, no card: 2 AI scans a day, the rest without limits.
+- **H1**: Nine ways to count calories. One app, free.
 
 ### `/en/features/lifestyle-mindset/`
 - **Title** (48): Habits to Eat Better Without Obsessing — Fotocal
@@ -937,19 +952,19 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Nutrition and macros: understand what you eat, not just how much.
 
 ### `/en/features/scan-barcode/`
-- **Title** (48): Food Barcode Scanner with Health Score — Fotocal
+- **Title** (53): Free Food Barcode Scanner with Health Score — Fotocal
 - **Description** (157): Scan any product’s barcode and see its calories, a score out of 100 and whether it clashes with your allergies. Unlimited and free in Fotocal, on every plan.
-- **H1**: Barcode scanner: packaged food, already solved.
+- **H1**: Free barcode scanner: packaged food, already solved.
 
 ### `/en/features/scan-food/`
-- **Title** (48): Calories from a Photo: AI Food Scanner — Fotocal
-- **Description** (159): Point the camera at your plate and get calories, macros, ingredients and a health score. How Fotocal’s food scanner works, step by step, shown on real screens.
-- **H1**: Calories from a photo: point the camera, get the whole plate.
+- **Title** (54): Calories from a Photo, Free: AI Food Scanner — Fotocal
+- **Description** (151): Point the camera at your plate and get calories, macros, ingredients and a health score. Free, no card: 2 AI scans a day; Premium makes them unlimited.
+- **H1**: Calories from a photo, free: point the camera, get the whole plate.
 
 ### `/en/features/voice-logging/`
-- **Title** (51): Count Calories by Voice: Say What You Ate — Fotocal
-- **Description** (158): Say “two eggs and toast” and Fotocal logs it with calories and macros, in any language. How voice logging works, what it understands and what you can correct.
-- **H1**: Count calories by voice: just say what you ate, in any language.
+- **Title** (57): Count Calories by Voice, Free: Say What You Ate — Fotocal
+- **Description** (147): Say “two eggs and toast” and Fotocal logs it with calories and macros. Free: 1 voice log a day, no card, unlimited on Premium. What it understands.
+- **H1**: Count calories by voice, free: just say what you ate, in any language.
 
 ### `/en/features/weight-loss/`
 - **Title** (52): Lose Weight Counting Calories from a Photo — Fotocal
@@ -957,9 +972,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Lose weight without turning eating into a second job.
 
 ### `/en/`
-- **Title** (41): AI Calorie Counter from a Photo — Fotocal
-- **Description** (157): Photograph your plate and Fotocal counts calories, macros and a health score in seconds. Free, no card, on Android, with voice logging and a barcode scanner.
-- **H1**: The calorie counter that works from a photo.
+- **Title** (46): Free AI Calorie Counter from a Photo — Fotocal
+- **Description** (155): Photograph your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Android.
+- **H1**: The free calorie counter that works from a photo.
 
 ### `/en/privacy-policy/`
 - **Title** (22): Fotocal Privacy Policy

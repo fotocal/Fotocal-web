@@ -7,17 +7,17 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 ## /
 
 - `/404.html` — Página no encontrada — Fotocal  _noindex · ES+EN_
-- `/` — Contador de calorías con IA por foto — Fotocal  _ES+EN_
+- `/` — Contador de calorías gratis con IA por foto — Fotocal  _ES+EN_
 
 ## /features/
 
-- `/features/` — Funciones de Fotocal: escáner de comida, voz y más  _ES+EN_
+- `/features/` — Funciones de Fotocal: contar calorías con foto, gratis  _ES+EN_
 - `/features/lifestyle-mindset/` — Hábitos para comer mejor sin obsesionarte — Fotocal  _ES+EN_
 - `/features/nutrition-diet/` — Contador de macros y panel de nutrición — Fotocal  _ES+EN_
 - `/features/recipe/` — Redirigiendo — Fotocal  _noindex · → redirección · ES+EN_
-- `/features/scan-barcode/` — Escáner de código de barras de alimentos — Fotocal  _ES+EN_
-- `/features/scan-food/` — Calorías con foto: escáner de comida con IA — Fotocal  _ES+EN_
-- `/features/voice-logging/` — Contar calorías por voz: di lo que has comido — Fotocal  _ES+EN_
+- `/features/scan-barcode/` — Escáner de código de barras de alimentos, gratis — Fotocal  _ES+EN_
+- `/features/scan-food/` — Calorías con foto gratis: escáner de comida con IA — Fotocal  _ES+EN_
+- `/features/voice-logging/` — Calorías por voz gratis: di lo que has comido — Fotocal  _ES+EN_
 - `/features/weight-loss/` — Perder peso contando calorías con una foto — Fotocal  _ES+EN_
 
 ## /ai/
@@ -59,19 +59,22 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/patatas-bravas/` — Calorías de las patatas bravas: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/pimientos-de-padron/` — Calorías de los pimientos de Padrón: ración y 100 g  _solo ES_
 - `/calorias/pincho-de-tortilla/` — Calorías del pincho de tortilla: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/platano/` — Calorías del plátano: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/pulpo-a-la-gallega/` — Calorías del pulpo a la gallega: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/salmorejo/` — Calorías del salmorejo: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/sandwich-mixto/` — Calorías del sándwich mixto (jamón y queso) — Fotocal  _solo ES_
 - `/calorias/sopa-castellana/` — Calorías de la sopa castellana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tarta-de-santiago/` — Calorías de la tarta de Santiago: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tinto-de-verano/` — Calorías del tinto de verano: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/torrijas/` — Calorías de las torrijas: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tortilla-de-patatas/` — Calorías de la tortilla de patatas: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/tortilla-francesa/` — Calorías de la tortilla francesa: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/tostada-con-tomate-y-aceite/` — Calorías de la tostada con tomate y aceite: ración y 100 g  _solo ES_
 
 ## /calculadoras/
 
 - `/calculadoras/calorias-diarias/` — Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal  _solo ES_
-- `/calculadoras/deficit-calorico/` — Calculadora de déficit calórico para perder grasa — Fotocal  _solo ES_
+- `/calculadoras/deficit-calorico/` — Calculadora de déficit calórico para perder peso — Fotocal  _solo ES_
 - `/calculadoras/imc/` — Calculadora de IMC (índice de masa corporal) — Fotocal  _solo ES_
 - `/calculadoras/` — Calculadoras de calorías, déficit, IMC y macros — Fotocal  _solo ES_
 - `/calculadoras/macros/` — Calculadora de macros: proteínas, grasas e hidratos  _solo ES_
@@ -166,4 +169,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 120 páginas en español, 82 con copia inglesa (202 URLs servidas).
+Total: 123 páginas en español, 82 con copia inglesa (205 URLs servidas).

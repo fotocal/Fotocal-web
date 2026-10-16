@@ -10,12 +10,12 @@
   ],
   "index.html": {
     "es": {
-      "title": "Contador de calorías con IA por foto — Fotocal",
-      "desc": "Fotografía tu plato y Fotocal cuenta calorías, macros y una puntuación de salud en segundos. Gratis, sin tarjeta, en Android. Con voz y código de barras."
+      "title": "Contador de calorías gratis con IA por foto — Fotocal",
+      "desc": "Haz una foto y Fotocal cuenta calorías y macros al momento. Gratis y sin tarjeta: 2 escaneos con IA al día; código de barras y Coach Kal sin límite. Android."
     },
     "en": {
-      "title": "AI Calorie Counter from a Photo — Fotocal",
-      "desc": "Photograph your plate and Fotocal counts calories, macros and a health score in seconds. Free, no card, on Android, with voice logging and a barcode scanner."
+      "title": "Free AI Calorie Counter from a Photo — Fotocal",
+      "desc": "Photograph your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Android."
     }
   },
   "ai/index.html": {
@@ -30,42 +30,42 @@
   },
   "features/index.html": {
     "es": {
-      "title": "Funciones de Fotocal: escáner de comida, voz y más",
-      "desc": "Las nueve funciones del contador de calorías Fotocal: escaneo de comida con foto, código de barras, voz, carta de restaurante, Coach Kal e informe semanal."
+      "title": "Funciones de Fotocal: contar calorías con foto, gratis",
+      "desc": "Nueve funciones: foto, código de barras, voz, carta, Coach Kal e informe semanal. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite."
     },
     "en": {
-      "title": "Fotocal Features: Food Scanner, Voice, Barcode",
-      "desc": "The nine features of the Fotocal calorie counter: photo food scanning, barcode scanner, voice logging, menu scanner, Coach Kal and the weekly report."
+      "title": "Fotocal Features: Count Calories from a Photo, Free",
+      "desc": "The nine Fotocal features: photo, barcode, voice, menu, Coach Kal and the weekly report. Free, no card: 2 AI scans a day, the rest without limits."
     }
   },
   "features/scan-food/index.html": {
     "es": {
-      "title": "Calorías con foto: escáner de comida con IA — Fotocal",
-      "desc": "Apunta la cámara a tu plato y obtén calorías, macros, ingredientes y puntuación de salud. Así funciona el escáner de comida de Fotocal, con pantallas reales."
+      "title": "Calorías con foto gratis: escáner de comida con IA — Fotocal",
+      "desc": "Apunta la cámara a tu plato y obtén calorías, macros, ingredientes y puntuación. Gratis sin tarjeta: 2 escaneos con IA al día; Premium los deja sin límite."
     },
     "en": {
-      "title": "Calories from a Photo: AI Food Scanner — Fotocal",
-      "desc": "Point the camera at your plate and get calories, macros, ingredients and a health score. How Fotocal’s food scanner works, step by step, shown on real screens."
+      "title": "Calories from a Photo, Free: AI Food Scanner — Fotocal",
+      "desc": "Point the camera at your plate and get calories, macros, ingredients and a health score. Free, no card: 2 AI scans a day; Premium makes them unlimited."
     }
   },
   "features/scan-barcode/index.html": {
     "es": {
-      "title": "Escáner de código de barras de alimentos — Fotocal",
+      "title": "Escáner de código de barras de alimentos, gratis — Fotocal",
       "desc": "Escanea el código de barras de cualquier producto y mira sus calorías, su puntuación sobre 100 y si choca con tus alergias. Sin límite y gratis en Fotocal."
     },
     "en": {
-      "title": "Food Barcode Scanner with Health Score — Fotocal",
+      "title": "Free Food Barcode Scanner with Health Score — Fotocal",
       "desc": "Scan any product’s barcode and see its calories, a score out of 100 and whether it clashes with your allergies. Unlimited and free in Fotocal, on every plan."
     }
   },
   "features/voice-logging/index.html": {
     "es": {
-      "title": "Contar calorías por voz: di lo que has comido — Fotocal",
-      "desc": "Di «dos huevos y una tostada» y Fotocal lo registra con calorías y macros, en cualquier idioma. Cómo funciona el registro por voz, qué entiende y qué corregir."
+      "title": "Calorías por voz gratis: di lo que has comido — Fotocal",
+      "desc": "Di «dos huevos y una tostada» y Fotocal lo registra con calorías y macros. Gratis: 1 registro por voz al día, sin tarjeta; sin límite en Premium."
     },
     "en": {
-      "title": "Count Calories by Voice: Say What You Ate — Fotocal",
-      "desc": "Say “two eggs and toast” and Fotocal logs it with calories and macros, in any language. How voice logging works, what it understands and what you can correct."
+      "title": "Count Calories by Voice, Free: Say What You Ate — Fotocal",
+      "desc": "Say “two eggs and toast” and Fotocal logs it with calories and macros. Free: 1 voice log a day, no card, unlimited on Premium. What it understands."
     }
   },
   "features/recipe/index.html": {

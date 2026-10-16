@@ -265,3 +265,13 @@ de web, y se deja apuntado.
    páginas lleven cuatro semanas indexadas, la lista de consultas reales
    de Search Console vale más que este archivo entero, y es donde hay
    que mirar para decidir los siguientes 20 platos.
+
+## Datos observados por el propietario en google.es (16 de octubre de 2026)
+
+Búsquedas reales desde un navegador en España. Son observaciones, no volúmenes.
+
+**Autocompletar.** «app para contar calorias»: con foto · con foto gratis · y macros · gratis · y macros gratis · totalmente gratis · gratis iphone · y proteinas gratis · y proteinas · sin pagar. «cuantas calorias tiene»: una tortilla francesa de 2 huevos · un huevo cocido · una barra de pan · un cafe con leche · una cucharada de aceite de oliva · una coca cola zero · una copa de vino · un sandwich de jamon y queso · un platano · un tercio de mahou. «deficit calorico»: mujer · hombre · como calcular · para perder peso · que es · dieta · para bajar de peso · para perder grasa · recomendado para bajar de peso · de 500 calorias por dia.
+
+**Quién posiciona.** «contador de calorías»: dos calculadoras primero (labdeiters, IMSS), luego fichas de Play (MyFitnessPal, Fitatu), tabladecalorias.net, Yazio, calor-ia.com. PAA: ¿Cuál es el mejor contador de calorías? · ¿Cuántas calorías debo quemar para bajar 1 kilo? · ¿Qué contador de calorías es gratuito? · ¿Cómo hacer un conteo de calorías? «contar calorías con foto»: blog de Fitatu, fichas de tiendas, calsy-app, listicle de nutriscan.app («9 probadas»), Xataka, Reddit (dudas de precisión). PAA: ¿Cuál es la mejor aplicación para contar calorías con fotos? · ¿Cuál es la mejor IA para contar calorías? · ¿Cuál es la mejor aplicación gratuita? · ¿Es gratuita SnapCalorie? «calorías tortilla de patatas»: FatSecret, PAA, carrusel de recetas, Directo al Paladar, consumer.es; relacionadas: Mercadona · 100 g · microondas · 4 huevos · con cebolla · cuánto pesa · un trozo.
+
+**Qué se hizo con esto (fase A, 16-10-2026).** «Gratis» con los límites a la vista en portada, funciones, foto, voz y código; PAA respondidas en portada, foto, déficit y calorías diarias; la página de déficit reescrita por variantes; cola larga de la tortilla en secciones; páginas nuevas de tortilla francesa, sándwich mixto y plátano. Fase B: seis entradas nuevas en la app (huevo cocido, barra de pan, cucharada de aceite, Coca-Cola Zero, copa de vino, tercio) y sus páginas. Fase C: blog y tabla imprimible.

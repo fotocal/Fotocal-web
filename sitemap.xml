@@ -1492,6 +1492,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/sopa-castellana/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/tabla-de-calorias/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/tabla-de-calorias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/tabla-de-calorias/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/tarta-de-santiago/</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>

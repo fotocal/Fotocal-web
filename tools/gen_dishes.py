@@ -466,6 +466,69 @@ def dish_page(d, ready_by_app):
     return "\n".join(out), fig
 
 
+
+# ── the printable table of everything the app has ────────────────────
+SLOT_NAMES = [("desayuno", "Desayunos"), ("comida", "Comidas"), ("merienda", "Meriendas y aperitivos"), ("cena", "Cenas")]
+
+def table_page(ready_by_app):
+    title = "Tabla de calorías de alimentos y platos españoles"
+    desc = ("Tabla de calorías para imprimir con los %d alimentos y platos españoles de la app Fotocal: ración, kcal por ración y por 100 g, "
+            "proteínas, hidratos y grasas." % len(HAND))
+    assert len(title) + 10 <= TITLE_MAX and 140 <= len(desc) <= 160, (len(title), len(desc))
+    title += " — Fotocal"
+    path = "calorias/tabla-de-calorias/"
+    url = SITE + path
+    crumbs = [("Inicio", SITE), ("Calorías de platos", SITE + "calorias/"), ("Tabla de calorías", url)]
+    ld = [
+        ld_block({"@context": "https://schema.org", "@type": "WebPage", "name": title.replace(" — Fotocal", ""), "description": desc,
+                  "inLanguage": "es", "url": url, "dateModified": APP["_source"]["commit_date"], "publisher": ORG,
+                  "isPartOf": {"@type": "WebSite", "@id": SITE + "#site"}}),
+        ld_block({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": c[0], "item": c[1]} for i, c in enumerate(crumbs)]}),
+    ]
+    extra = ("\n  <style>@media print{.site-header,#site-header,#site-footer,.dp-aside,.post-nav,.dp-related,.tbl-print,.post-crumbs,.skip{display:none!important}"
+             ".dp-table{font-size:11px}.dp-table td,.dp-table th{padding:3px 6px}body{background:#fff}.post-head{padding-top:0}}"
+             ".tbl-print{margin:1rem 0 0}</style>")
+    out = [head(2, title, desc, path, "\n".join(ld), "website", extra)]
+    o = out.append
+    o('\n<main id="main">\n  <article class="post dp dp-hub">\n    <header class="post-head">\n      <div class="container-narrow">')
+    o('        <nav class="post-crumbs reveal" aria-label="Migas de pan"><a href="../../">Inicio</a><span class="sep" aria-hidden="true">/</span>'
+      '<a href="../">Calorías de platos</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">Tabla de calorías</a></nav>')
+    o('        <h1 class="post-title reveal">Tabla de calorías de los alimentos y platos españoles</h1>')
+    o('        <p class="post-lead reveal">Los %d alimentos y platos de la base de datos de Fotocal en una sola tabla, para consultar o imprimir: la ración tal como se sirve, sus calorías, '
+      'las de 100 g para comparar, y proteínas, hidratos y grasas. Agrupados por el momento del día en que la app los propone.</p>' % len(HAND))
+    o('        <p class="tbl-print reveal"><button type="button" class="btn btn-ghost" onclick="window.print()">Imprimir la tabla</button></p>')
+    o('      </div>\n    </header>\n    <div class="container-narrow">')
+    o('      <div class="post-body reveal">')
+    o('      <p>Cada fila es una entrada de la app, con la ración que la app usa; las que tienen página propia están enlazadas. Las cifras por 100 g se derivan de la ración. Son valores medios: tu plato puede quedar por encima o por debajo según la receta, el aceite y el tamaño.</p>')
+    for slot, label in SLOT_NAMES:
+        rows = sorted([(k, v) for k, v in HAND.items() if v.get("primarySlot") == slot], key=lambda kv: kv[1]["name_es"].lower())
+        if not rows:
+            continue
+        o('      <h2 id="%s">%s <small>(%d)</small></h2>' % (slot, label, len(rows)))
+        o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Alimento o plato</th><th scope="col">Ración</th><th scope="col">kcal / ración</th><th scope="col">kcal / 100 g</th><th scope="col">Prot.</th><th scope="col">Hidr.</th><th scope="col">Grasa</th></tr></thead><tbody>')
+        for k, v in rows:
+            f = figures(k)
+            slug = ready_by_app.get(k)
+            name = ('<a href="../%s/">%s</a>' % (slug, esc(v["name_es"]))) if slug else esc(v["name_es"])
+            o('        <tr><td>%s</td><td>%s, %s g</td><td class="hl">%s</td><td>%s</td><td>%s g</td><td>%s g</td><td>%s g</td></tr>'
+              % (name, esc(f["serving_label"]), n(f["serving_g"]), n(f["kcal"]), n(f["per100"]), n(f["protein"]), n(f["carbs"]), n(f["fat"])))
+        o('      </tbody></table></div>')
+    o('      <h2 id="como-usar">Cómo usar la tabla</h2>')
+    o('      <p>Para el día a día, mira la columna de la ración: es lo que apuntas si te comes el plato. Para comparar dos platos, mira la de 100 g. Y para una ración distinta de la de la tabla, pesa la tuya y multiplica: gramos por kcal de 100 g, entre 100. Las bebidas con alcohol llevan parte de su energía en el alcohol, que no aparece en los tres macros; su página lo desglosa.</p>')
+    o('      <h2 id="fuentes">De dónde salen las cifras</h2>')
+    o('      <p>Son las de la app Fotocal: cada entrada es una ración fijada por la app, compuesta por filas de bases de datos públicas (USDA FoodData Central y CIQUAL 2025) sumadas gramo a gramo, o su cifra de referencia cuando no hay receta. Snapshot de la app: commit %s (%s). Esta página es información general sobre alimentos, no consejo médico ni dietético.</p>' % (APP["_source"]["commit"], APP["_source"]["commit_date"]))
+    o('      </div>')
+    o(APP_ASIDE.replace("{UP}", "../../"))
+    o('      <nav class="dp-related reveal" aria-label="Páginas relacionadas">\n        <h2>Seguir por aquí</h2>\n        <div class="post-nav">')
+    o('          <a class="post-nav-item" href="../"><small>Por plato</small><strong>Calorías de los platos españoles, con su página</strong></a>')
+    o('          <a class="post-nav-item" href="../../calculadoras/calorias-diarias/"><small>Calculadora</small><strong>%s</strong></a>' % CALCS["calorias-diarias"])
+    o('          <a class="post-nav-item" href="../../calculadoras/deficit-calorico/"><small>Calculadora</small><strong>%s</strong></a>' % CALCS["deficit-calorico"])
+    o('        </div>\n      </nav>')
+    o('    </div>\n  </article>\n</main>')
+    o(foot(2))
+    return "\n".join(out)
+
 # ── the hub ──────────────────────────────────────────────────────────
 def hub_page(ready):
     title = "Calorías de platos españoles: tabla por ración y 100 g"
@@ -505,6 +568,7 @@ def hub_page(ready):
     o('      <ul><li>El plato de cuchara no es el problema: lentejas, garbanzos o un cocido razonable quedan en el rango de una comida normal. Lo que dispara la cuenta es el embutido que lleva dentro y el pan de al lado.</li>'
       '<li>Lo frito pesa poco y suma mucho: cuatro croquetas o una ración de churros se acercan a un plato de lentejas.</li>'
       '<li>Las sopas frías son casi gratis: un bol de gazpacho tiene menos calorías que una tostada con aceite.</li></ul>')
+    o('      <p>¿Quieres toda la base de datos de la app en una sola tabla, para consultar o imprimir? Está en la <a href="tabla-de-calorias/">tabla de calorías de alimentos y platos españoles</a>, con las %d entradas agrupadas por momento del día.</p>' % len(HAND))
     o('      <h2>Para seguir</h2>')
     o('      <p>Si la pregunta de fondo es cuánto deberías comer tú, y no cuánto tiene el plato, empieza por la <a href="../calculadoras/calorias-diarias/">calculadora de calorías diarias</a> y la de <a href="../calculadoras/deficit-calorico/">déficit calórico</a>. Y en el blog, <a href="../blog/track-calories-without-weighing/">cómo contar calorías sin pesar cada comida</a>.</p>')
     o('      </div>')
@@ -538,6 +602,8 @@ def main():
         open(os.path.join(p, "index.html"), "w", encoding="utf-8").write(page)
         print("  /calorias/%s/  %s g -> %d kcal (%d/100 g)%s" % (d["slug"], n(fig["serving_g"]), fig["kcal"], fig["per100"], "" if fig["composed"] else ("  [hand figure; recipe rejected >25%]" if fig["rejected"] else "  [hand figure, no recipe]")))
     open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(hub_page(ready))
+    tdir = os.path.join(SRC, "tabla-de-calorias"); os.makedirs(tdir, exist_ok=True)
+    open(os.path.join(tdir, "index.html"), "w", encoding="utf-8").write(table_page(ready_by_app))
     print("%d dish pages + hub -> src/calorias/" % len(ready))
 
 

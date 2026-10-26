@@ -15,18 +15,18 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Eliminación de cuenta y datos
 
 ### `/ai/`
-- **Title** (53): Coach Kal: coach de nutrición con IA gratis — Fotocal
-- **Description** (152): Pregunta a Coach Kal qué comer, si un plato te encaja hoy o cómo ajustar tu dieta. Lee tu diario, responde en tu idioma y es gratis en todos los planes.
+- **Title** (56): Coach de nutrición con IA gratis: pregunta qué comer hoy
+- **Description** (157): Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Gratis y sin límite de mensajes en todos los planes. Android.
 - **H1**: El coach de nutrición con IA que ya ha leído tu diario.
 
 ### `/blog/added-sugar-vs-natural-sugar/`
-- **Title** (57): Azúcar añadido frente a natural: lo que de verdad importa
-- **Description** (152): ¿El azúcar de la fruta es tan malo como el de un refresco? Esta es la diferencia real entre azúcares añadidos y naturales, y cuánto azúcar es demasiado.
+- **Title** (58): Azúcar añadido y azúcar natural: la diferencia que importa
+- **Description** (156): El azúcar de la fruta no es el del refresco: la fibra cambia cómo se absorbe. Qué cuenta como azúcar añadido, cuánto es demasiado al día y dónde se esconde.
 - **H1**: Azúcar añadido frente a natural: lo que de verdad importa
 
 ### `/blog/best-foods-for-weight-loss/`
-- **Title** (49): Alimentos que sacian con menos calorías — Fotocal
-- **Description** (155): Ningún alimento es mágico, pero algunos te llenan con muchas menos calorías. Estos son los alimentos saciantes que hacen que un déficit resulte casi fácil.
+- **Title** (57): Alimentos que sacian con pocas calorías: lista con cifras
+- **Description** (156): Los alimentos que llenan con menos calorías, con cifras y por qué funcionan: proteína, fibra y agua. Monta las comidas con ellos y el déficit deja de doler.
 - **H1**: Alimentos que sacian con menos calorías
 
 ### `/blog/building-muscle-while-losing-fat/`
@@ -50,9 +50,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Cardio o pesas para perder grasa
 
 ### `/blog/choose-photo-calorie-counter/`
-- **Title** (84): Cómo elegir una app para contar calorías con foto, y qué debería significar «gratis»
+- **Title** (58): Cómo elegir una app de calorías con foto (y qué es gratis)
 - **Description** (158): Seis preguntas que hacerle a cualquier app que cuenta calorías con una foto antes de que te convenza el vídeo de la demo. Y, en los mismos términos llanos, qu
-- **H1**: Cómo elegir una app para contar calorías con foto, y qué debería significar «gratis»
+- **H1**: Cómo elegir una app de calorías con foto (y qué es gratis)
 
 ### `/blog/common-calorie-counting-mistakes/`
 - **Title** (51): 7 errores al contar calorías que frenan tu progreso
@@ -65,18 +65,18 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Grasa en la dieta: cuánta necesitas y de qué tipo
 
 ### `/blog/do-calories-matter-or-food-quality/`
-- **Title** (54): ¿Importan las calorías o solo la calidad de la comida?
-- **Description** (145): «Una caloría es una caloría» frente a «céntrate en comida real»: esta guía zanja el debate y muestra por qué cantidad y calidad importan las dos.
+- **Title** (59): Calorías o calidad de la comida: qué importa para adelgazar
+- **Description** (156): Las calorías deciden si pierdes peso; la calidad decide cuánta hambre pasas y cómo llegas. Lo que muestran los ensayos y cómo usar las dos cosas en la mesa.
 - **H1**: ¿Importan las calorías o solo la calidad de la comida?
 
 ### `/blog/do-you-need-to-exercise-to-lose-weight/`
-- **Title** (55): ¿Hace falta hacer ejercicio para perder peso? — Fotocal
-- **Description** (151): ¿Se puede adelgazar sin gimnasio? La respuesta honesta sobre dieta y ejercicio para perder grasa, y por qué aun así no conviene saltarse el movimiento.
+- **Title** (58): ¿Hace falta ejercicio para adelgazar? La respuesta honesta
+- **Description** (152): Se puede adelgazar sin gimnasio: lo que manda es la dieta. Para qué sirve el ejercicio, cuál es el mejor tipo para perder grasa y por qué no saltárselo.
 - **H1**: ¿Hace falta hacer ejercicio para perder peso?
 
 ### `/blog/does-meal-timing-matter-for-weight-loss/`
-- **Title** (52): ¿Importa el horario de las comidas para perder peso?
-- **Description** (145): ¿Cenar tarde engorda? ¿Hace falta desayunar? Esto es lo que dice la evidencia sobre horarios y frecuencia de comidas, y lo que de verdad importa.
+- **Title** (57): ¿Cenar tarde engorda? El horario de las comidas y el peso
+- **Description** (154): Cenar tarde, saltarse el desayuno, comer cinco veces al día: qué dice la evidencia sobre el horario de las comidas y qué manda de verdad para perder peso.
 - **H1**: ¿Importa el horario de las comidas para perder peso?
 
 ### `/blog/does-protein-timing-matter/`
@@ -105,8 +105,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Snacks saludables que de verdad sacian
 
 ### `/blog/high-protein-breakfast-ideas/`
-- **Title** (60): Desayunos con mucha proteína para llegar saciado a la comida
-- **Description** (154): Un desayuno rico en proteína te mantiene saciado toda la mañana. Ideas sencillas y saciantes, desde opciones de cinco minutos hasta preparadas la víspera.
+- **Title** (56): Desayunos con proteína: ideas saciantes para cada mañana
+- **Description** (157): Desayunos con 25 g de proteína o más para llegar sin hambre a la comida: opciones de cinco minutos, otras para dejar hechas la víspera y a qué cifra apuntar.
 - **H1**: Desayunos con mucha proteína para llegar saciado a la comida
 
 ### `/blog/high-protein-diet-benefits-and-how-to-start/`
@@ -115,8 +115,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Dieta alta en proteína: beneficios y cómo empezar
 
 ### `/blog/how-fast-should-you-lose-weight/`
-- **Title** (48): ¿A qué velocidad deberías perder peso? — Fotocal
-- **Description** (158): Más rápido no es mejor. El ritmo de pérdida de peso que protege el músculo, evita el efecto rebote y no se recupera después, con las cifras a las que apuntar.
+- **Title** (56): Cuánto peso perder por semana: el ritmo sano, con cifras
+- **Description** (157): Entre el 0,5 % y el 1 % de tu peso a la semana: por qué ese ritmo conserva músculo y evita el rebote, qué pasa si vas más rápido y cómo calcular el tuyo hoy.
 - **H1**: ¿A qué velocidad deberías perder peso?
 
 ### `/blog/how-many-calories-does-exercise-burn/`
@@ -155,8 +155,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Cómo manejar los antojos sin sentir culpa
 
 ### `/blog/how-to-lose-weight-sustainably/`
-- **Title** (56): Cómo perder peso de forma sostenible (sin dietas exprés)
-- **Description** (157): Las dietas exprés fracasan porque son invivibles. Un enfoque sostenible y basado en la evidencia que sí puedes mantener toda la vida, con los pasos en orden.
+- **Title** (60): Cómo perder peso de forma sostenible: pasos sin dieta exprés
+- **Description** (154): Perder peso y no recuperarlo: un déficit moderado, proteína, hábitos que caben en tu vida y qué mirar cada semana. Los pasos en orden, sin dietas milagro.
 - **H1**: Cómo perder peso de forma sostenible (sin dietas exprés)
 
 ### `/blog/how-to-read-nutrition-labels/`
@@ -175,8 +175,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Cómo mantener la constancia con los hábitos saludables
 
 ### `/blog/how-to-stop-overeating-at-night/`
-- **Title** (49): Cómo dejar de comer de más por la noche — Fotocal
-- **Description** (155): Comer de noche echa a perder muchos días buenos. Por qué ocurre, qué dice del resto del día y estrategias prácticas para que tus noches no se descontrolen.
+- **Title** (58): Cómo dejar de comer por la noche: por qué pasa y qué hacer
+- **Description** (151): Comer de más por la noche suele empezar antes: poco de día, el hábito del sofá, lo que hay al alcance. Por qué ocurre y qué hacer, sin prohibirte nada.
 - **H1**: Cómo dejar de comer de más por la noche
 
 ### `/blog/hydration-and-weight/`
@@ -185,8 +185,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Hidratación y peso: ¿cuánta agua necesitas de verdad?
 
 ### `/blog/`
-- **Title** (38): Blog de nutrición y calorías — Fotocal
-- **Description** (151): 52 guías claras sobre contar calorías, perder peso, macros, dieta y hábitos, escritas sin vender nada y revisadas contra la evidencia. En nueve series.
+- **Title** (59): Blog de nutrición y calorías: guías claras, sin vender nada
+- **Description** (155): 54 guías sobre contar calorías, perder peso, macros, dieta y hábitos, en nueve series en orden de lectura, revisadas contra la evidencia y sin vender nada.
 - **H1**: Notas sobre nutrición y calorías, con honestidad.
 
 ### `/blog/intermittent-fasting-what-the-evidence-says/`
@@ -230,9 +230,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: NEAT: el gasto calórico oculto que estás ignorando
 
 ### `/blog/photo-calorie-apps-accuracy/`
-- **Title** (91): ¿Son fiables las apps que cuentan calorías con foto? Lo que una foto puede y no puede saber
+- **Title** (57): ¿Son fiables las apps de calorías con foto? Lo que no ven
 - **Description** (158): Una foto identifica bien el plato y adivina peor la cantidad. Aquí está de dónde sale el error de verdad, por qué nadie puede darte un porcentaje honesto y la
-- **H1**: ¿Son fiables las apps que cuentan calorías con foto? Lo que una foto puede y no puede saber
+- **H1**: ¿Son fiables las apps de calorías con foto? Lo que no ven
 
 ### `/blog/plan-a-week-of-meals-in-30-minutes/`
 - **Title** (51): Cómo planificar una semana de comidas en 30 minutos
@@ -345,8 +345,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calculadora de calorías diarias
 
 ### `/calculadoras/deficit-calorico/`
-- **Title** (58): Calculadora de déficit calórico para perder peso — Fotocal
-- **Description** (160): Calcula tu déficit calórico para perder peso: mantenimiento, cuánto recortar (mujer y hombre) y cuánto tardarías. Qué es, cómo se calcula y los 500 kcal al día.
+- **Title** (55): Calculadora de déficit calórico: mujer y hombre, gratis
+- **Description** (155): Calcula tu déficit calórico para perder peso: mantenimiento, cuánto recortar según tu sexo y peso, y cuánto tardarías. Gratis, sin registro y con ejemplos.
 - **H1**: Calculadora de déficit calórico: mujer y hombre
 
 ### `/calculadoras/imc/`
@@ -355,8 +355,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calculadora de IMC
 
 ### `/calculadoras/`
-- **Title** (57): Calculadoras de calorías, déficit, IMC y macros — Fotocal
-- **Description** (158): Cuatro calculadoras gratuitas que funcionan en la página, sin registro: calorías diarias, déficit calórico, IMC y reparto de macros. Con la fórmula explicada.
+- **Title** (54): Calculadoras de calorías gratis: déficit, IMC y macros
+- **Description** (150): Cuatro calculadoras en la página, sin registro: calorías diarias, déficit calórico, IMC y macros, con la fórmula explicada y el resultado en segundos.
 - **H1**: Calculadoras de calorías, déficit calórico, IMC y macros
 
 ### `/calculadoras/macros/`
@@ -475,8 +475,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calorías de los huevos fritos con patatas
 
 ### `/calorias/`
-- **Title** (54): Calorías de platos españoles: tabla por ración y 100 g
-- **Description** (159): Tabla de calorías de los platos españoles de cada día, por ración real y por 100 g, con proteínas, hidratos y grasas. Las mismas cifras que usa la app Fotocal.
+- **Title** (56): Calorías de platos españoles por ración real y por 100 g
+- **Description** (160): Tabla de calorías de 41 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra. Sin registro.
 - **H1**: Calorías de los platos españoles, por ración y por 100 g
 
 ### `/calorias/jamon-serrano/`
@@ -565,8 +565,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calorías de las torrijas
 
 ### `/calorias/tortilla-de-patatas/`
-- **Title** (60): Calorías de la tortilla de patatas: ración y 100 g — Fotocal
-- **Description** (159): Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g: 8,3 g de proteínas, 17,6 g de hidratos y 14,9 g de grasas. Y qué pesa una ración real.
+- **Title** (60): Calorías de la tortilla de patatas: ración, 100 g, Mercadona
+- **Description** (159): Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g. Por trozo, con cebolla, de 4 huevos, al microondas y la de Mercadona, con las fuentes.
 - **H1**: Calorías de la tortilla de patatas
 
 ### `/calorias/tortilla-francesa/`
@@ -590,8 +590,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Lo que más se pregunta sobre el contador de calorías Fotocal.
 
 ### `/features/`
-- **Title** (54): Funciones de Fotocal: contar calorías con foto, gratis
-- **Description** (148): Nueve funciones: foto, código de barras, voz, carta, Coach Kal e informe semanal. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite.
+- **Title** (58): Contar calorías con foto, voz y código: 9 funciones gratis
+- **Description** (152): Foto, código de barras, voz, carta, Coach Kal e informe semanal, en pantallas reales. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite.
 - **H1**: Nueve formas de contar calorías. Una sola app, gratis.
 
 ### `/features/lifestyle-mindset/`
@@ -610,8 +610,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Escáner de código de barras gratis: los envasados, ya resueltos.
 
 ### `/features/scan-food/`
-- **Title** (60): Calorías con foto gratis: escáner de comida con IA — Fotocal
-- **Description** (155): Apunta la cámara a tu plato y obtén calorías, macros, ingredientes y puntuación. Gratis sin tarjeta: 2 escaneos con IA al día; Premium los deja sin límite.
+- **Title** (51): Calorías con foto: escáner de comida con IA, gratis
+- **Description** (159): Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Corrige la ración antes de guardar. Gratis: 2 escaneos con IA al día.
 - **H1**: Calorías con foto, gratis: apunta con la cámara y llévate el plato entero.
 
 ### `/features/voice-logging/`
@@ -620,13 +620,13 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Cuenta calorías por voz, gratis: solo di lo que has comido, en cualquier idioma.
 
 ### `/features/weight-loss/`
-- **Title** (52): Perder peso contando calorías con una foto — Fotocal
-- **Description** (153): Cómo perder peso con Fotocal: un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto. Sin dietas milagro ni promesas.
+- **Title** (50): Perder peso contando calorías con una foto, gratis
+- **Description** (159): Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales, gratis.
 - **H1**: Pierde peso sin convertir la comida en un segundo trabajo.
 
 ### `/`
-- **Title** (53): Contador de calorías gratis con IA por foto — Fotocal
-- **Description** (157): Haz una foto y Fotocal cuenta calorías y macros al momento. Gratis y sin tarjeta: 2 escaneos con IA al día; código de barras y Coach Kal sin límite. Android.
+- **Title** (57): Contador de calorías gratis: con una foto, sin pesar nada
+- **Description** (159): Haz una foto a tu plato y Fotocal cuenta calorías y macros en segundos, sin pesar. Gratis y sin tarjeta: 2 escaneos con IA al día, código de barras sin límite.
 - **H1**: El contador de calorías gratis que funciona con una foto.
 
 ### `/privacy-policy/`
@@ -635,8 +635,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Política de Privacidad
 
 ### `/subscription/`
-- **Title** (41): Precios de Fotocal: plan gratis y Premium
-- **Description** (160): Precios de Fotocal: gratis para siempre con 2 escaneos con IA al día y Coach Kal ilimitado. Premium 6,99 €/mes o 34,99 €/año, ambos con 5 días de prueba gratis.
+- **Title** (54): Precios de Fotocal: plan gratis para siempre y Premium
+- **Description** (156): Plan gratis sin tarjeta ni caducidad: 2 escaneos con IA al día, código de barras y Coach Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, 5 días de prueba.
 - **H1**: Dos precios, un solo Premium y un contador de calorías gratis que no es una demo.
 
 ### `/terms/`
@@ -657,8 +657,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Account & data deletion
 
 ### `/en/ai/`
-- **Title** (44): Coach Kal: Free AI Nutrition Coach — Fotocal
-- **Description** (156): Ask Coach Kal what to eat, whether a meal fits your day or how to adjust your diet. It reads your diary, answers in your language and is free on every plan.
+- **Title** (46): Free AI Nutrition Coach: Ask What to Eat Today
+- **Description** (158): Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. Free, in your language, no message limit, any plan.
 - **H1**: The AI nutrition coach that has already read your diary.
 
 ### `/en/blog/added-sugar-vs-natural-sugar/`
@@ -667,8 +667,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Added Sugar vs Natural Sugar: What Actually Matters
 
 ### `/en/blog/best-foods-for-weight-loss/`
-- **Title** (51): Foods That Fill You Up for Fewer Calories — Fotocal
-- **Description** (142): No food is magic, but some keep you full for far fewer calories. Here are the high-satiety foods that make a calorie deficit feel almost easy.
+- **Title** (52): Best Foods for Weight Loss: Filling, Low in Calories
+- **Description** (157): The foods that keep you full for fewest calories, with the numbers and why they work: protein, fibre, water. Build meals on them and a deficit stops hurting.
 - **H1**: Foods That Fill You Up for Fewer Calories
 
 ### `/en/blog/building-muscle-while-losing-fat/`
@@ -677,8 +677,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Building Muscle While Losing Fat: Is It Possible?
 
 ### `/en/blog/calorie-deficit-for-fat-loss/`
-- **Title** (56): Calorie Deficit: The One Rule Behind Every Fat-Loss Diet
-- **Description** (153): Every diet that works, works because it creates a calorie deficit. Here’s what a deficit is, how big it should be, and how to sustain one without misery.
+- **Title** (57): Calorie Deficit for Fat Loss: How Big, and How to Keep It
+- **Description** (154): What a calorie deficit is, how big it should be, why deficits stall, how to protect muscle and how to keep it livable: the rule behind every working diet.
 - **H1**: Calorie Deficit: The One Rule Behind Every Fat-Loss Diet
 
 ### `/en/blog/carbs-are-not-the-enemy/`
@@ -692,9 +692,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Cardio vs Strength Training for Fat Loss
 
 ### `/en/blog/choose-photo-calorie-counter/`
-- **Title** (66): How to choose a photo calorie counter, and what “free” should mean
-- **Description** (162): Six questions to ask any app that counts calories from a photo before the demo video convinces you. And, in the same plain terms, what Fotocal&amp;#x27;s free pla
-- **H1**: How to choose a photo calorie counter, and what “free” should mean
+- **Title** (59): How to choose a photo calorie counter (and what free means)
+- **Description** (158): Six questions to ask any app that counts calories from a photo before the demo convinces you, and what Fotocal&amp;#x27;s free plan does and does not include.
+- **H1**: How to choose a photo calorie counter (and what free means)
 
 ### `/en/blog/common-calorie-counting-mistakes/`
 - **Title** (54): 7 Common Calorie Counting Mistakes That Stall Progress
@@ -707,18 +707,18 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Dietary Fat: How Much You Need and Which Kinds to Choose
 
 ### `/en/blog/do-calories-matter-or-food-quality/`
-- **Title** (59): Do Calories Really Matter, or Is It All About Food Quality?
-- **Description** (147): “A calorie is a calorie” vs “focus on whole foods” — this guide settles the debate and shows why both quantity and quality matter for real results.
+- **Title** (56): Calories vs Food Quality: Which Matters for Weight Loss?
+- **Description** (156): Calories decide whether you lose weight; food quality decides how hungry you are and how healthy you get. What trials show and how to use both at the table.
 - **H1**: Do Calories Really Matter, or Is It All About Food Quality?
 
 ### `/en/blog/do-you-need-to-exercise-to-lose-weight/`
-- **Title** (49): Do You Need to Exercise to Lose Weight? — Fotocal
+- **Title** (39): Do You Need to Exercise to Lose Weight?
 - **Description** (158): Can you lose weight without the gym? The honest answer on diet versus exercise for fat loss, what movement still does for you, and why you should not skip it.
 - **H1**: Do You Need to Exercise to Lose Weight?
 
 ### `/en/blog/does-meal-timing-matter-for-weight-loss/`
-- **Title** (50): Does Meal Timing Matter for Weight Loss? — Fotocal
-- **Description** (158): Is late eating fattening? Do you need breakfast? What the evidence says about meal timing and frequency, where timing helps a little, and what actually matter
+- **Title** (40): Does Meal Timing Matter for Weight Loss?
+- **Description** (160): Is late eating fattening? Do you need breakfast? What the evidence says about meal timing and frequency, where timing helps a little, and what actually matters.
 - **H1**: Does Meal Timing Matter for Weight Loss?
 
 ### `/en/blog/does-protein-timing-matter/`
@@ -757,8 +757,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: High-Protein Diet: Benefits and How to Start
 
 ### `/en/blog/how-fast-should-you-lose-weight/`
-- **Title** (42): How Fast Should You Lose Weight? — Fotocal
-- **Description** (154): Faster is not better. The rate of weight loss that protects your muscle, avoids the rebound and keeps the weight off for good, with the numbers to aim at.
+- **Title** (57): How Fast Should You Lose Weight? The Safe Rate in Numbers
+- **Description** (159): Between 0.5 % and 1 % of your weight a week: why that pace keeps muscle and avoids the rebound, what happens faster than that, and how to work out yours today.
 - **H1**: How Fast Should You Lose Weight?
 
 ### `/en/blog/how-many-calories-does-exercise-burn/`
@@ -797,8 +797,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: How to Handle Cravings Without Guilt
 
 ### `/en/blog/how-to-lose-weight-sustainably/`
-- **Title** (54): How to Lose Weight Sustainably (Without Crash Dieting)
-- **Description** (140): Crash diets fail because they’re unlivable. Here’s a sustainable, evidence-based approach to weight loss you can actually maintain for life.
+- **Title** (53): How to Lose Weight Sustainably: Steps, No Crash Diets
+- **Description** (153): Lose weight and keep it off: a moderate deficit, enough protein, habits that fit your life and what to check each week. The steps in order, with numbers.
 - **H1**: How to Lose Weight Sustainably (Without Crash Dieting)
 
 ### `/en/blog/how-to-read-nutrition-labels/`
@@ -817,7 +817,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: How to Stay Consistent With Healthy Habits
 
 ### `/en/blog/how-to-stop-overeating-at-night/`
-- **Title** (41): How to Stop Overeating at Night — Fotocal
+- **Title** (31): How to Stop Overeating at Night
 - **Description** (157): Nighttime eating derails many good days. Why evening overeating happens, what it says about the rest of the day, and practical ways to keep your nights calm.
 - **H1**: How to Stop Overeating at Night
 
@@ -827,8 +827,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Hydration and Weight: How Much Water Do You Really Need?
 
 ### `/en/blog/`
-- **Title** (36): Nutrition and Calorie Blog — Fotocal
-- **Description** (160): 52 clear guides on counting calories, losing weight, macros, diet and habits, written without selling anything and checked against the evidence. In nine series.
+- **Title** (54): Nutrition and Calorie Blog: Clear Guides, Nothing Sold
+- **Description** (154): 54 guides on counting calories, losing weight, macros, diet and habits, in nine series in reading order, checked against the evidence and selling nothing.
 - **H1**: Notes on nutrition and calories, honestly.
 
 ### `/en/blog/intermittent-fasting-what-the-evidence-says/`
@@ -872,9 +872,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: NEAT: The Hidden Calorie Burn You’re Ignoring
 
 ### `/en/blog/photo-calorie-apps-accuracy/`
-- **Title** (78): Are photo calorie-counting apps accurate? What a photo can and cannot tell you
+- **Title** (56): Are photo calorie apps accurate? What a photo cannot see
 - **Description** (158): A photo identifies the dish well and guesses the amount less well. Here is where the error really comes from, why nobody can honestly give you one percentage,
-- **H1**: Are photo calorie-counting apps accurate? What a photo can and cannot tell you
+- **H1**: Are photo calorie apps accurate? What a photo cannot see
 
 ### `/en/blog/plan-a-week-of-meals-in-30-minutes/`
 - **Title** (51): How to Plan a Week of Meals in 30 Minutes — Fotocal
@@ -992,8 +992,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: What people ask most about the Fotocal calorie counter.
 
 ### `/en/features/`
-- **Title** (51): Fotocal Features: Count Calories from a Photo, Free
-- **Description** (146): The nine Fotocal features: photo, barcode, voice, menu, Coach Kal and the weekly report. Free, no card: 2 AI scans a day, the rest without limits.
+- **Title** (53): Count Calories from a Photo: 9 Fotocal Features, Free
+- **Description** (157): Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, shown on real screens. Free plan with no card: 2 AI scans a day, the rest unlimited.
 - **H1**: Nine ways to count calories. One app, free.
 
 ### `/en/features/lifestyle-mindset/`
@@ -1007,8 +1007,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Nutrition and macros: understand what you eat, not just how much.
 
 ### `/en/features/scan-barcode/`
-- **Title** (53): Free Food Barcode Scanner with Health Score — Fotocal
-- **Description** (157): Scan any product’s barcode and see its calories, a score out of 100 and whether it clashes with your allergies. Unlimited and free in Fotocal, on every plan.
+- **Title** (57): Food Barcode Scanner, Free: Calories, Score and Allergens
+- **Description** (151): Scan any product's barcode and see its calories, macros, a score out of 100 and whether it clashes with your allergies. Free and unlimited on any plan.
 - **H1**: Free barcode scanner: packaged food, already solved.
 
 ### `/en/features/scan-food/`
@@ -1017,18 +1017,18 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Calories from a photo, free: point the camera, get the whole plate.
 
 ### `/en/features/voice-logging/`
-- **Title** (57): Count Calories by Voice, Free: Say What You Ate — Fotocal
-- **Description** (147): Say “two eggs and toast” and Fotocal logs it with calories and macros. Free: 1 voice log a day, no card, unlimited on Premium. What it understands.
+- **Title** (50): Log Calories by Voice, Free: Just Say What You Ate
+- **Description** (154): Say “two eggs and toast” and Fotocal logs each food with its calories and macros, in any language. Free: 1 voice log a day, no card; unlimited on Premium.
 - **H1**: Count calories by voice, free: just say what you ate, in any language.
 
 ### `/en/features/weight-loss/`
-- **Title** (52): Lose Weight Counting Calories from a Photo — Fotocal
-- **Description** (160): How to lose weight with Fotocal: a realistic goal, a deficit you can keep and every meal logged with a photo. No miracle diets, shown on the app’s real screens.
+- **Title** (51): Lose Weight by Counting Calories from a Photo, Free
+- **Description** (157): A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, free, no card to start.
 - **H1**: Lose weight without turning eating into a second job.
 
 ### `/en/`
-- **Title** (46): Free AI Calorie Counter from a Photo — Fotocal
-- **Description** (155): Photograph your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Android.
+- **Title** (55): Free Calorie Counter from a Photo: No Weighing, No Card
+- **Description** (157): Photograph your plate and Fotocal counts calories and macros in seconds, no scales. Free with no card: 2 AI scans a day, unlimited barcode scanner and coach.
 - **H1**: The free calorie counter that works from a photo.
 
 ### `/en/privacy-policy/`
@@ -1037,8 +1037,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Privacy Policy
 
 ### `/en/subscription/`
-- **Title** (38): Fotocal Pricing: Free Plan and Premium
-- **Description** (142): Fotocal pricing: free forever with 2 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, each with a 5-day free trial.
+- **Title** (55): Fotocal Pricing: Free Plan Forever, Premium €6.99/month
+- **Description** (157): Free plan with no card and no expiry: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both.
 - **H1**: Two prices, one Premium, and a free calorie counter that is not a demo.
 
 ### `/en/terms/`

@@ -1,0 +1,9 @@
+# Keeps the four GitHub Actions used by deploy.yml on their latest release.
+# The site has no npm or pip dependencies; the workflow actions are the only
+# third-party code in the build path.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

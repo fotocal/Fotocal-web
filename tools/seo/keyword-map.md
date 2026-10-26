@@ -275,3 +275,66 @@ Búsquedas reales desde un navegador en España. Son observaciones, no volúmene
 **Quién posiciona.** «contador de calorías»: dos calculadoras primero (labdeiters, IMSS), luego fichas de Play (MyFitnessPal, Fitatu), tabladecalorias.net, Yazio, calor-ia.com. PAA: ¿Cuál es el mejor contador de calorías? · ¿Cuántas calorías debo quemar para bajar 1 kilo? · ¿Qué contador de calorías es gratuito? · ¿Cómo hacer un conteo de calorías? «contar calorías con foto»: blog de Fitatu, fichas de tiendas, calsy-app, listicle de nutriscan.app («9 probadas»), Xataka, Reddit (dudas de precisión). PAA: ¿Cuál es la mejor aplicación para contar calorías con fotos? · ¿Cuál es la mejor IA para contar calorías? · ¿Cuál es la mejor aplicación gratuita? · ¿Es gratuita SnapCalorie? «calorías tortilla de patatas»: FatSecret, PAA, carrusel de recetas, Directo al Paladar, consumer.es; relacionadas: Mercadona · 100 g · microondas · 4 huevos · con cebolla · cuánto pesa · un trozo.
 
 **Qué se hizo con esto (fase A, 16-10-2026).** «Gratis» con los límites a la vista en portada, funciones, foto, voz y código; PAA respondidas en portada, foto, déficit y calorías diarias; la página de déficit reescrita por variantes; cola larga de la tortilla en secciones; páginas nuevas de tortilla francesa, sándwich mixto y plátano. Fase B: seis entradas nuevas en la app (huevo cocido, barra de pan, cucharada de aceite, Coca-Cola Zero, copa de vino, tercio) y sus páginas. Fase C: blog y tabla imprimible.
+
+## 7 · Mapa por página: las 20 páginas con más impresiones, y las 8 siguientes (26 de octubre de 2026)
+
+**Método.** La frase objetivo de cada página sale de tres fuentes: lo que el
+propietario observó en google.es el 16-10 (autocompletar y «Otras
+preguntas»), las 62 consultas del 13-10 (§2–§5) y 13 consultas nuevas
+lanzadas hoy desde este entorno (índice de Brave, sin geolocalización en
+España; sirven para ver *quién* escribe sobre el tema, no para medir nada).
+**Sigue sin haber volúmenes**: ninguna cifra de búsquedas al mes, porque
+no hay fuente consultable. La columna «Dificultad» es el mismo juicio
+que en §1 (quién ocupa la primera página). La columna «On-page» es el
+resultado de un script sobre el HTML publicado: cuántas de las palabras
+de la frase (sin artículos ni preposiciones) aparecen en el `<title>`,
+en el H1 y en el primer párrafo.
+
+Páginas sin twin inglés se marcan ES. Las frases en inglés marcadas
+«sin comprobar» no se buscaron hoy: no se puede decir quién posiciona.
+
+| # | Página | Frase objetivo (variantes) | Intención | Preguntas que debe responder | Quién posiciona (fecha) | Dificultad | On-page title/H1/1.er párrafo |
+|---|---|---|---|---|---|---|---|
+| 1 | `/` | app para contar calorías gratis (contador de calorías gratis; con foto gratis; sin pagar; totalmente gratis) | Buscar app | ¿Qué contador de calorías es gratuito? · ¿Cuál es el mejor contador de calorías? · ¿Cómo hacer un conteo de calorías? (PAA 16-10) | labdeiters e IMSS (calculadoras), fichas de Play (MyFitnessPal, Fitatu), tabladecalorias.net, Yazio, calor-ia.com (16-10); tuapppara, Yazio, Marie Claire (26-10) | Alta | 3/3 · 3/3 · 2/3 |
+| 2 | `/en/` | free calorie counter app (calorie counter with photo) | Buscar app | Is it really free? · What does the free plan include? | sin comprobar hoy | Alta | 3/3 · 3/3 · 2/3 |
+| 3 | `/features/` | app para contar calorías y macros gratis (y proteínas gratis) | Buscar/comparar app | ¿Cuál es la mejor aplicación gratuita? (PAA 16-10) | tuapppara, Yazio, calorie-trackers.com, nutrola (13-10) | Alta | 2/2 · 2/2 · **0/2** |
+| 4 | `/en/features/` | calorie tracker with photo, voice and barcode | Buscar app | What can it do free? | sin comprobar | Alta | 2/2 · 2/2 · 0/2 |
+| 5 | `/subscription/` | fotocal premium precio (fotocal gratis) | Marca | ¿Qué incluye el plan gratis? · ¿Cuándo cobra Google Play? | nadie (marca) | Baja | 2/2 · 2/2 · 1/2 |
+| 6 | `/en/subscription/` | fotocal premium price | Marca | idem | nadie (marca) | Baja | 1/2 · 2/2 · 1/2 |
+| 7 | `/ai/` | coach de nutrición con IA (asistente nutricional IA) | Buscar app | ¿Cuál es la mejor IA para contar calorías? (PAA 16-10) → **pertenece a `/features/scan-food/`**, no a esta página | wwwhatsnew (crítico con la precisión), fichas App Store (Cal AI…), mwm.ai (26-10) | Media | **0/3 · 0/3 · 0/3** para «calorías inteligencia artificial»; la página habla del coach, no del escáner |
+| 8 | `/en/ai/` | ai nutrition coach app | Buscar app | Does it read my diary? | sin comprobar | Media | 1/3 · 1/3 · 1/3 |
+| 9 | `/features/scan-food/` ES | app para contar calorías con foto gratis ★ (escáner de comida; con foto) | Buscar app | ¿Cuál es la mejor aplicación para contar calorías con fotos? · ¿Cuál es la mejor IA para contar calorías? · ¿Cuál es la mejor aplicación gratuita? · ¿Es gratuita SnapCalorie? (PAA 16-10) | blog de Fitatu, fichas de tiendas, calsy-app, listicle de nutriscan.app, Xataka, Reddit (16-10); sólo fichas App Store y mwm.ai el 13-10 | Media (sin web española con contenido propio) | 2/3 · 2/3 · 2/3 (falta «contar» literal) |
+| 10 | `/features/weight-loss/` | app para perder peso gratis (app para adelgazar contando calorías) | Buscar app | ¿Cuántas calorías debo quemar para bajar 1 kilo? (PAA 16-10) | tuapppara, Yazio, wwwhatsnew (26-10) | Alta | 2/2 · 1/2 · 2/2 (H1 «Pierde peso…», no «perder peso») |
+| 11 | `/en/features/weight-loss/` | weight loss app with calorie counting | Buscar app | How much deficit? | sin comprobar | Alta | 1/2 · 1/2 · 1/2 |
+| 12 | `/blog/` | blog de nutrición y calorías | Navegación | — | — | Baja | 2/2 · 1/2 · 1/2 |
+| 13 | `/en/blog/` | nutrition and calories blog | Navegación | — | — | Baja | 2/2 · 1/2 · 1/2 |
+| 14 | `/calorias/` ES | calorías de los platos españoles ★ (tabla de calorías de alimentos españoles) | Lista | ¿Cuántas calorías tiene un menú del día? · ¿Qué plato español engorda más? | vitonica (ranking de Chicote), inhispania, guiainfantil, arise-app; FatSecret suelto (13-10) | Baja-media | 3/3 · 3/3 · 3/3 |
+| 15 | `/calorias/tortilla-de-patatas/` ES | calorías tortilla de patatas (Mercadona · 100 g · microondas · 4 huevos · con cebolla · cuánto pesa · un trozo) | Pregunta | las siete relacionadas, ya en secciones | FatSecret, PAA, carrusel de recetas, Directo al Paladar, consumer.es (16-10) | Media-alta | 3/3 · 3/3 · 3/3 |
+| 16 | `/calculadoras/` ES | calculadora de calorías ★ (calculadora calorías diarias) | Herramienta | ¿Cuántas calorías debo comer al día? | omnicalculator, hacecuentas, calculoseguro, Yazio, cardioteca (13-10) | Media | 2/2 · 2/2 · **0/2** |
+| 17 | `/calculadoras/deficit-calorico/` ES | calculadora de déficit calórico ★ (mujer · hombre · cómo calcular · para perder grasa · de 500 calorías por día · qué es · dieta) | Herramienta + pregunta | ¿Qué es? · ¿Cómo se calcula? · ¿Cuánto déficit es recomendable? · ¿500 kcal al día es mucho? | zavamed, fitnessvolt, fitgeneration.es, omnicalculator, miniwebtool, coachway, hacecuentas, enfaf; para «qué es»: universidadeuropea, eltiempo, tuasaude (13-10) | Media | 3/3 · 3/3 · 3/3 |
+| 18 | `/blog/best-foods-for-weight-loss/` | mejores alimentos para adelgazar (alimentos saciantes bajos en calorías) | Pregunta/lista | ¿Qué comer para adelgazar sin pasar hambre? · ¿Qué alimentos sacian más? | univision, vitonica (2 URLs), vozpopuli (4 URLs), dietdoctor/es, psicologiaymente (26-10) | Alta | **1/3 · 1/3 · 1/3** (la página dice «alimentos que sacian con menos calorías», no «para adelgazar») |
+| 19 | `/en/blog/best-foods-for-weight-loss/` | best foods for weight loss (high satiety foods) | Lista | idem | sin comprobar | Alta | 4/4 · 1/4 · 1/4 |
+| 20 | `/blog/how-fast-should-you-lose-weight/` | cuánto peso se puede perder en una semana (ritmo saludable; cuántos kilos al mes) | Pregunta | ¿Cuánto se puede perder en una semana? · ¿Y en un mes? · ¿Perder 1 kg a la semana es sano? | semana.com (2), vitonica (3), diariopanorama, expreso.ec, eluniverso, occidente.co (26-10; casi todo Latinoamérica) | Media-alta | 4/4 · **2/4** · 1/4 (H1 «¿A qué velocidad deberías perder peso?») |
+| 21 | `/en/blog/how-fast-should-you-lose-weight/` | how fast should you lose weight | Pregunta | idem | sin comprobar | Alta | 4/4 · 4/4 · 2/4 |
+| 22 | `/blog/how-to-lose-weight-sustainably/` | perder peso de forma sostenible (sin efecto rebote) | Pregunta | ¿Cómo evitar el efecto rebote? | teletica, vistazo, noticiasdenavarra, diariodecuyo, semana, fitgeneration.es, eldiariony (26-10) | Media | 3/3 · 3/3 · 1/3 |
+| 23 | `/en/blog/how-to-lose-weight-sustainably/` | lose weight sustainably | Pregunta | idem | sin comprobar | Alta | 3/3 · 3/3 · 2/3 |
+| 24 | `/blog/do-calories-matter-or-food-quality/` | calorías o calidad de la comida (sirve contar calorías para adelgazar) | Pregunta | ¿Sirve de algo contar calorías? · ¿Es mejor contar calorías o macros? | vitonica (2), hola.com, hsnstore, ondavasca (26-10) | Media-alta | 2/2 · 2/2 · 2/2 |
+| 25 | `/en/blog/do-calories-matter-or-food-quality/` | calories vs food quality | Pregunta | idem | sin comprobar | Alta | 3/3 · 3/3 · 3/3 |
+
+**Las ocho siguientes** (títulos y descripciones reescritos hoy, commit 53a5696):
+
+| # | Página | Frase objetivo | Intención | Preguntas | Quién posiciona (26-10) | Dificultad | On-page |
+|---|---|---|---|---|---|---|---|
+| 26 | `/blog/added-sugar-vs-natural-sugar/` | azúcar añadido y azúcar natural (diferencia; azúcar de la fruta) | Pregunta | ¿El azúcar de la fruta engorda igual? · ¿Cuánto azúcar añadido al día? | fisiologiadelejercicio, baptisthealth, muyinteresante, quironsalud, fatsecret | Media | 3/3 · 3/3 · 3/3 |
+| 27 | `/blog/does-meal-timing-matter-for-weight-loss/` | cenar tarde engorda (horario de las comidas) | Pregunta | ¿A qué hora hay que cenar? · ¿Saltarse el desayuno adelgaza? | deia, noticiasdenavarra, laopinion, emisorasunidas (15-10-2026), vozpopuli; casi todo notas de prensa de 2020 | Media | 4/4 · **2/4** · 4/4 (H1 no dice «cenar tarde») |
+| 28 | `/en/blog/calorie-deficit-for-fat-loss/` | calorie deficit for fat loss (how much) | Pregunta | How big? · Why does it stall? | fitatu, active.com, jcdfitness, baye.com, caloriesburnedhq | Alta (global) | 4/4 · 4/4 · 2/4 |
+| 29 | `/en/features/scan-barcode/` | food barcode scanner calories free | Buscar app | Is it free? · Does it show allergens? | fichas App Store; en español: Yuka y MyRealFood vía elyex | Media | 2/2 · 2/2 · 1/2 |
+| 30 | `/blog/do-you-need-to-exercise-to-lose-weight/` | se puede adelgazar sin hacer ejercicio (sólo con dieta) | Pregunta | ¿Dieta o ejercicio? · ¿Qué pasa si no hago ejercicio? | lagaceta, vozpopuli, consumer.es, vitonica, ocu.org, colombia.com | Alta (OCU, Consumer) | 2/2 · 1/2 · 2/2 |
+| 31 | `/blog/how-to-stop-overeating-at-night/` | cómo dejar de comer por la noche (ansiedad por comer de noche) | Pregunta | ¿Por qué me entra hambre de noche? · ¿Qué picar? | elpais.com.co, crehana (4 URLs), merca2, laverdadnoticias, udes.edu.co; **sólo merca2 es de España** | Baja-media | 3/3 · 3/3 · 3/3 |
+| 32 | `/en/features/voice-logging/` | log calories by voice | Buscar app | Which languages? · Is it free? | sin comprobar (nicho) | Baja | 1/1 · 1/1 · 1/1 |
+| 33 | `/blog/high-protein-breakfast-ideas/` | desayunos ricos en proteína para adelgazar | Lista | ¿Cuánta proteína en el desayuno? · ¿Qué desayunar para no tener hambre? | univision, vozpopuli (3), dietdoctor/es, directoalpaladar («37 desayunos»), consumer.es | Alta | 2/2 · 2/2 · 2/2 |
+
+**Lectura.** Cinco páginas tienen un hueco real entre lo que se busca y lo
+que dicen (filas 3, 7, 16, 18, 20): se detallan en la auditoría
+(`tools/seo/auditoria-on-page-2026-10.md`, §4). El resto tiene la frase en
+los tres sitios o le falta una sola palabra.

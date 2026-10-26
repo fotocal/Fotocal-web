@@ -59,7 +59,11 @@
     }
     var p = location.pathname;
     var bare = p.indexOf("/en/") === 0 ? p.slice(3) : (p === "/en" ? "/" : p);
-    return (lang === "en" ? "/en" + bare : bare) + location.search + location.hash;
+    /* The browser already percent-encodes quotes and angle brackets in
+       search and hash; this keeps that true even if a future browser
+       does not, because the result lands inside an href attribute. */
+    var tail = (location.search + location.hash).replace(/["'<>`]/g, encodeURIComponent);
+    return (lang === "en" ? "/en" + bare : bare) + tail;
   }
 
   function remember(lang) {

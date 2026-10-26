@@ -6,8 +6,7 @@ el mismo día: D1 `/blog/calorias-menu-del-dia/` y D2
 copia inglesa: los artículos con `"langs": ["es"]` se publican sólo en el
 árbol español, con hreflang `es` + `x-default`, y el árbol inglés no los
 enlaza). Decisión del propietario: español primero en todos; twin inglés
-sólo donde sirva a una consulta inglesa (B1, C2, E1). Siguiente par:
-C1 y C2 (semana 2).
+sólo donde sirva a una consulta inglesa (B1, C2, E1). Desde el 26-10 el ritmo es **un artículo cada lunes, sin fecha de fin**, publicado por una tarea programada que sigue `tools/seo/RUNBOOK-weekly-post.md` (primera ejecución: lunes 2 de noviembre de 2026, 08:38 hora de Madrid). Siguiente: C1 (2-11), luego C2, B1, A1, D3, C3, E1, E2, A2, B2 en ese orden, uno por semana; después, temas nuevos de investigación propia añadidos al mapa.
 
 Reglas que se aplican a todo lo de abajo: cifras reales (las del código
 de la app o de etiquetas fotografiadas con fecha; nada inventado);

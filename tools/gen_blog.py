@@ -63,6 +63,18 @@ def kwset(p):
 
 # ── load ──────────────────────────────────────────────────────────────
 posts = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(POSTS, "*.json")))]
+
+# A post with "langs": ["es"] exists in the Spanish tree only (written for
+# Spain: menús, tapas, prices in euros). The templates still read p["en"],
+# so the Spanish copy stands in, the rendered page carries the es-only
+# marker that tools/build_site.py reads to skip the English copy, and every
+# card, hub item and prev/next link to it is wrapped in a Spanish-only
+# block so the English tree never links to a page that is not there.
+def es_only_post(p): return p.get("langs") == ["es"]
+def lb_attr(p): return ' data-lang-block="es"' if es_only_post(p) else ""
+for _p in posts:
+    if es_only_post(_p) and "en" not in _p:
+        _p["en"] = dict(_p["es"])
 by_slug = {p["slug"]: p for p in posts}
 by_date = sorted(posts, key=lambda p: (p["date"], p["slug"]))
 for p in posts:
@@ -292,7 +304,7 @@ REDIRECT = """<!DOCTYPE html>
 </html>
 """
 
-CARD = """        <a class="habit-card sf-read post-card reveal" href="{href}"{delay}>
+CARD = """        <a class="habit-card sf-read post-card reveal" href="{href}"{delay}{lb}>
           <span class="log-tag" data-i18n="blog.cat.{cat}">{cat_en}</span>
           <h3 data-lang-block="en">{title_en}</h3>
           <h3 data-lang-block="es">{title_es}</h3>
@@ -302,7 +314,7 @@ CARD = """        <a class="habit-card sf-read post-card reveal" href="{href}"{d
           <span class="fx-link" data-i18n="feat.read">Read →</span>
         </a>"""
 
-NAVITEM = """<a class="post-nav-item{cls}" href="{href}"><small data-i18n="blog.{which}">{label}</small><strong data-lang-block="en">{title_en}</strong><strong data-lang-block="es">{title_es}</strong></a>"""
+NAVITEM = """<a class="post-nav-item{cls}" href="{href}"{lb}><small data-i18n="blog.{which}">{label}</small><strong data-lang-block="en">{title_en}</strong><strong data-lang-block="es">{title_es}</strong></a>"""
 
 # The strip under the article meta: which series this is, and where in it.
 STRIP = """        <p class="post-series reveal">
@@ -316,13 +328,13 @@ CAT_EN = {"calories": "Calorie counting", "weightloss": "Weight loss", "nutritio
           "mindset": "Mindset", "movement": "Movement and sleep"}
 
 def card(q, href, i=0):
-    return CARD.format(href=href, delay=(' style="--rd:%.2fs"' % (0.06 * i)) if i else "", cat=q["category"], cat_en=CAT_EN[q["category"]],
+    return CARD.format(href=href, lb=lb_attr(q), delay=(' style="--rd:%.2fs"' % (0.06 * i)) if i else "", cat=q["category"], cat_en=CAT_EN[q["category"]],
                        title_en=q["en"]["title"], title_es=q["es"]["title"], lead_en=q["en"]["lead"], lead_es=q["es"]["lead"],
                        date_en=fmt_date(q["date"], "en"), date_es=fmt_date(q["date"], "es"), min_en=minutes(q["en"]["body"]), min_es=minutes(q["es"]["body"]))
 
 def hub_nav(sid, cls):
     sr = SERIES[sid]
-    return NAVITEM.format(cls=cls, href="../series/%s/" % sid, which="series.all", label="All articles in this series", title_en=sr["en"]["title"], title_es=sr["es"]["title"])
+    return NAVITEM.format(cls=cls, lb="", href="../series/%s/" % sid, which="series.all", label="All articles in this series", title_en=sr["en"]["title"], title_es=sr["es"]["title"])
 
 def seo_meta(p):
     """Optional per-language <title>/description override ("seo" in the post JSON), carried
@@ -395,12 +407,12 @@ def render_post(p, idx):
         {"@type": "ListItem", "position": 2, "name": "{{i18n:nav.blog}}", "item": "https://getfotocal.com/blog/"},
         {"@type": "ListItem", "position": 3, "name": strip_tags(p["en"]["title"]), "item": "https://getfotocal.com/blog/%s/" % p["slug"]}]}, ensure_ascii=False)
     # the first and last post of a series point back at the hub instead of at nothing
-    prev_html = NAVITEM.format(cls="", href="../%s/" % prev_p["slug"], which="prev", label="Previous in the series", title_en=prev_p["en"]["title"], title_es=prev_p["es"]["title"]) if prev_p else hub_nav(sid, "")
-    next_html = NAVITEM.format(cls=" post-nav-next", href="../%s/" % next_p["slug"], which="next", label="Next in the series", title_en=next_p["en"]["title"], title_es=next_p["es"]["title"]) if next_p else hub_nav(sid, " post-nav-next")
+    prev_html = NAVITEM.format(cls="", lb=lb_attr(prev_p), href="../%s/" % prev_p["slug"], which="prev", label="Previous in the series", title_en=prev_p["en"]["title"], title_es=prev_p["es"]["title"]) if prev_p else hub_nav(sid, "")
+    next_html = NAVITEM.format(cls=" post-nav-next", lb=lb_attr(next_p), href="../%s/" % next_p["slug"], which="next", label="Next in the series", title_en=next_p["en"]["title"], title_es=next_p["es"]["title"]) if next_p else hub_nav(sid, " post-nav-next")
     strip = STRIP.format(sid=sid, n=n + 1, total=len(order), title_en=SERIES[sid]["en"]["title"], title_es=SERIES[sid]["es"]["title"])
     rel = "\n".join(card(by_slug[s], "../%s/" % s, i) for i, s in enumerate(related[p["slug"]]))
     care = CARE if p.get("caution") else ""
-    return HEAD.format(meta=seo_meta(p), care="", care_top=care, faq=faq_html(p), ld_faq=faq_ld(p), slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
+    return HEAD.format(meta=seo_meta(p) + ("  <!--# es-only -->\n" if es_only_post(p) else ""), care="", care_top=care, faq=faq_html(p), ld_faq=faq_ld(p), slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
                        lead_en=esc(strip_tags(p["en"]["lead"])), lead_es=esc(strip_tags(p["es"]["lead"])), keywords=esc(p.get("keywords") or ""),
                        date=p["date"], modified=modified, date_en=fmt_date(p["date"], "en"), date_es=fmt_date(p["date"], "es"),
                        updated_en=upd_en, updated_es=upd_es, min_en=minutes(p["en"]["body"]), min_es=minutes(p["es"]["body"]),
@@ -487,7 +499,7 @@ HUB = """<!DOCTYPE html>
 </html>
 """
 
-HUB_ITEM = """        <li class="hub-item">
+HUB_ITEM = """        <li class="hub-item"{lb}>
           <a class="hub-link" href="../../{slug}/">
             <span class="hub-num" aria-hidden="true">{n}</span>
             <span class="hub-text">
@@ -506,7 +518,7 @@ def render_hub(sid):
         n = notes.get(q["slug"])
         if not n: return ""
         return '              <em class="hub-why" data-lang-block="en">%s</em><em class="hub-why" data-lang-block="es">%s</em>\n' % (n["en"], n["es"])
-    items = "\n".join(HUB_ITEM.format(slug=q["slug"], n=i + 1, title_en=q["en"]["title"], title_es=q["es"]["title"], lead_en=q["en"]["lead"], lead_es=q["es"]["lead"],
+    items = "\n".join(HUB_ITEM.format(slug=q["slug"], lb=lb_attr(q), n=i + 1, title_en=q["en"]["title"], title_es=q["es"]["title"], lead_en=q["en"]["lead"], lead_es=q["es"]["lead"],
                                       min_en=minutes(q["en"]["body"]), min_es=minutes(q["es"]["body"]), notes=note(q)) for i, q in enumerate(ps))
     # "index": false in series.json keeps a hub as navigation only: noindex,
     # follow, and tools/build_site.py then leaves it out of the sitemap.
@@ -516,7 +528,7 @@ def render_hub(sid):
         body = '      <div class="post-body hub-body reveal" data-lang-block="en">\n%s\n      </div>\n      <div class="post-body hub-body reveal" data-lang-block="es">\n%s\n      </div>\n' % (sr["body"]["en"], sr["body"]["es"])
     def ld_for(lang): return json.dumps({"@context": "https://schema.org", "@type": "Collection", "name": sr[lang]["title"], "description": sr[lang]["intro"],
                      "url": "https://getfotocal.com/blog/series/%s/" % sid,
-                     "hasPart": [{"@type": "BlogPosting", "position": i + 1, "headline": strip_tags(q[lang]["title"]), "url": "https://getfotocal.com/blog/%s/" % q["slug"]} for i, q in enumerate(ps)]}, ensure_ascii=False)
+                     "hasPart": [{"@type": "BlogPosting", "position": i + 1, "headline": strip_tags(q[lang]["title"]), "url": "https://getfotocal.com/blog/%s/" % q["slug"]} for i, q in enumerate(ps) if lang == "es" or not es_only_post(q)]}, ensure_ascii=False)
     ld_crumbs = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "{{i18n:nav.home}}", "item": "https://getfotocal.com/"},
         {"@type": "ListItem", "position": 2, "name": "{{i18n:nav.blog}}", "item": "https://getfotocal.com/blog/"},
@@ -661,8 +673,9 @@ INDEX = """<!DOCTYPE html>
 CHIP = """        <button class="bl-chip" type="button" data-filter="{cat}" aria-pressed="false"><span data-i18n="blog.cat.{cat}">{cat_en}</span><span class="n">{n}</span></button>"""
 
 def render_index():
-    newest = by_date[-1]
-    rest = list(reversed(by_date))[1:]
+    # the hero slot is shared by both trees, so it takes the newest bilingual post
+    newest = [q for q in by_date if not es_only_post(q)][-1]
+    rest = [q for q in reversed(by_date) if q is not newest]
     counts = {}
     for p in posts:
         counts[p["category"]] = counts.get(p["category"], 0) + 1
@@ -670,7 +683,7 @@ def render_index():
     cards = "\n".join(card(q, "%s/" % q["slug"]).replace('class="habit-card sf-read post-card reveal"', 'class="habit-card sf-read post-card bl-card reveal" data-cat="%s"' % q["category"]) for q in rest)
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "name": "Fotocal Blog", "url": "https://getfotocal.com/blog/",
                      "publisher": {"@type": "Organization", "name": "Fotocal"},
-                     "blogPost": [{"@type": "BlogPosting", "headline": strip_tags(q["en"]["title"]), "url": "https://getfotocal.com/blog/%s/" % q["slug"], "datePublished": q["date"]} for q in reversed(by_date)]}, ensure_ascii=False)
+                     "blogPost": [{"@type": "BlogPosting", "headline": strip_tags(q["en"]["title"]), "url": "https://getfotocal.com/blog/%s/" % q["slug"], "datePublished": q["date"]} for q in reversed(by_date) if not es_only_post(q)]}, ensure_ascii=False)
     ld_crumbs = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "{{i18n:nav.home}}", "item": "https://getfotocal.com/"},
         {"@type": "ListItem", "position": 2, "name": "{{i18n:nav.blog}}", "item": "https://getfotocal.com/blog/"}]}, ensure_ascii=False)

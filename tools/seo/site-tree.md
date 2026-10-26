@@ -93,6 +93,8 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/batch-cooking-save-time-eat-better/` — Meal prep para principiantes: un sistema sencillo — Fotocal  _noindex · → redirección · ES+EN_
 - `/blog/best-foods-for-weight-loss/` — Alimentos que sacian con pocas calorías: lista con cifras  _ES+EN_
 - `/blog/building-muscle-while-losing-fat/` — Ganar músculo mientras pierdes grasa: ¿es posible? — Fotocal  _ES+EN_
+- `/blog/calorias-de-las-tapas/` — Calorías de las tapas: caña, bravas, croquetas y pincho  _solo ES_
+- `/blog/calorias-menu-del-dia/` — Calorías de un menú del día: tres combinaciones reales  _solo ES_
 - `/blog/calorie-deficit-for-fat-loss/` — Déficit calórico: la regla detrás de toda pérdida de grasa  _ES+EN_
 - `/blog/carbs-are-not-the-enemy/` — Los carbohidratos no son el enemigo: una mirada equilibrada  _ES+EN_
 - `/blog/cardio-vs-strength-training-for-fat-loss/` — Cardio o pesas para perder grasa — Fotocal  _ES+EN_
@@ -148,15 +150,15 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 ## /blog/series/
 
-- `/blog/series/beyond-macros/` — Más allá de los macros — Fotocal  _ES+EN_
+- `/blog/series/beyond-macros/` — Más allá de los macros — Fotocal  _noindex · ES+EN_
 - `/blog/series/calories/` — Las calorías, desde cero — Fotocal  _ES+EN_
 - `/blog/series/everyday-eating/` — Comer bien un día normal — Fotocal  _ES+EN_
 - `/blog/series/keeping-it-off/` — Perder peso que no vuelve — Fotocal  _ES+EN_
-- `/blog/series/macros/` — Macros: proteína, carbohidratos y grasa — Fotocal  _ES+EN_
-- `/blog/series/mind-and-appetite/` — Apetito, ánimo y hábito — Fotocal  _ES+EN_
-- `/blog/series/movement-and-sleep/` — Movimiento, sueño y agua — Fotocal  _ES+EN_
-- `/blog/series/planning-the-week/` — Planificar la semana — Fotocal  _ES+EN_
-- `/blog/series/popular-diets/` — Las dietas de moda, examinadas — Fotocal  _ES+EN_
+- `/blog/series/macros/` — Macros: proteína, carbohidratos y grasa — Fotocal  _noindex · ES+EN_
+- `/blog/series/mind-and-appetite/` — Apetito, ánimo y hábito — Fotocal  _noindex · ES+EN_
+- `/blog/series/movement-and-sleep/` — Movimiento, sueño y agua — Fotocal  _noindex · ES+EN_
+- `/blog/series/planning-the-week/` — Planificar la semana — Fotocal  _noindex · ES+EN_
+- `/blog/series/popular-diets/` — Las dietas de moda, examinadas — Fotocal  _noindex · ES+EN_
 
 ## /about/
 
@@ -178,4 +180,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 132 páginas en español, 84 con copia inglesa (216 URLs servidas).
+Total: 134 páginas en español, 84 con copia inglesa (218 URLs servidas).

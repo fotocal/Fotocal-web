@@ -278,5 +278,15 @@
   "category": "Calorie counting",
   "glyph": "list",
   "pal": 5
+ },
+ "calorias-menu-del-dia": {
+  "category": "Healthy eating",
+  "glyph": "plate",
+  "pal": 2
+ },
+ "calorias-de-las-tapas": {
+  "category": "Healthy eating",
+  "glyph": "cup",
+  "pal": 4
  }
 }

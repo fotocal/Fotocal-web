@@ -175,7 +175,7 @@
   },
   "es": {
    "title": "Comer bien un día normal",
-   "intro": "El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes y el presupuesto. Sin reglas que no puedas cumplir un martes."
+   "intro": "El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes, el presupuesto, y dos artículos sólo en español sobre el menú del día y las tapas. Sin reglas que no puedas cumplir un martes."
   },
   "posts": [
    "what-a-balanced-plate-looks-like",
@@ -184,7 +184,9 @@
    "healthy-snacks-that-satisfy",
    "high-protein-breakfast-ideas",
    "eating-out-without-wrecking-your-diet",
-   "how-to-eat-healthy-on-a-budget"
+   "how-to-eat-healthy-on-a-budget",
+   "calorias-menu-del-dia",
+   "calorias-de-las-tapas"
   ],
   "body": {
    "en": "<p>Seven articles about the plate in front of you on a weekday, not the ideal one. What a balanced meal looks like without weighing it, which foods fill you up for the fewest calories, how to judge a portion by eye, what to snack on, what to have for breakfast, how to eat out without undoing the week and how to do all of it on a normal food budget.</p>\n<p>They are in the order you would meet the problems: the plate first, then the foods that go on it, then the portions, and only then the situations (snacks, mornings, restaurants, money) where good intentions usually go. Spanish readers have the <a href=\"https://getfotocal.com/calorias/\">calorie pages for Spanish dishes</a> alongside: the per-serving figures there are the ones these articles assume.</p>",
@@ -218,6 +220,14 @@
    "how-to-eat-healthy-on-a-budget": {
     "en": "Legumes, eggs, frozen vegetables and the rest of the cheap shelf. Eating well is not the expensive option.",
     "es": "Legumbres, huevos, verdura congelada y el resto de la estantería barata. Comer bien no es la opción cara."
+   },
+   "calorias-menu-del-dia": {
+    "en": "Spanish only: three real set-lunch menus added up piece by piece, from 518 to 1,073 kcal, and the swaps that separate them.",
+    "es": "Tres menús del día reales sumados pieza a pieza, de 518 a 1.073 kcal, y los cambios que separan uno de otro."
+   },
+   "calorias-de-las-tapas": {
+    "en": "Spanish only: what an evening of tapas adds up to, drink by drink and plate by plate.",
+    "es": "Lo que suma una tarde de tapas, caña a caña y tapa a tapa, con dos tardes reales."
    }
   }
  },

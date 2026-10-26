@@ -24,5 +24,35 @@
    "title": "Desayunos con proteína: ideas saciantes para cada mañana",
    "desc": "Desayunos con 25 g de proteína o más para llegar sin hambre a la comida: opciones de cinco minutos, otras para dejar hechas la víspera y a qué cifra apuntar."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Cuánta proteína debe tener un desayuno?",
+    "a": "Entre 25 y 40 g. La mayoría de los desayunos españoles se quedan en 5 a 10: una tostada con tomate y aceite son 5,2 g y un café con leche 4,5, según las cifras de la app."
+   },
+   {
+    "q": "¿Qué desayuno típico español tiene más proteína?",
+    "a": "Con las cifras de la app: <a href=\"../../calorias/tortilla-francesa/\">una tortilla francesa de dos huevos</a>, 12,8 g por 190 kcal; una tostada con jamón serrano, 13,1 g por 231 kcal; un yogur proteico, 15 g por 100 kcal. Dos huevos, tostada con tomate y café con leche suman unas 516 kcal y 22,5 g de proteína: cerca del objetivo."
+   },
+   {
+    "q": "¿Tostada con tomate y café con leche es un buen desayuno para adelgazar?",
+    "a": "Son unas 326 kcal, que está bien, pero sólo 9,7 g de proteína, y por eso a media mañana vuelve el hambre. <a href=\"../../calorias/huevo-cocido/\">Un huevo cocido</a> (85 kcal, 6,9 g) o jamón encima de la tostada lo arreglan por muy poco."
+   }
+  ],
+  "en": [
+   {
+    "q": "How much protein should a breakfast have?",
+    "a": "Between 25 and 40 g. Most typical breakfasts stop at 5 to 10: a slice of toast with tomato and olive oil is about 5 g and a milky coffee about 4.5 g, by the app's figures."
+   },
+   {
+    "q": "Which everyday breakfast has the most protein?",
+    "a": "By the app's figures: a two-egg omelette, 12.8 g for 190 kcal; toast with cured ham, 13.1 g for 231 kcal; a high-protein yogurt, 15 g for 100 kcal. Two eggs, toast with tomato and a milky coffee add up to about 516 kcal and 22.5 g of protein: close to the target."
+   },
+   {
+    "q": "Is toast with tomato and a milky coffee a good breakfast for losing weight?",
+    "a": "It is about 326 kcal, which is fine, but only about 10 g of protein, which is why hunger comes back mid-morning. A boiled egg (85 kcal, 6.9 g) or ham on the toast fixes it for very little."
+   }
+  ]
  }
 }

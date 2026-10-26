@@ -1,10 +1,13 @@
 # Plan de clusters de contenido — propuesta para aprobar (26 de octubre de 2026)
 
-**Estado: PROPUESTA. No se ha escrito ningún artículo.** El propietario
-pidió ver el plan antes. Lo que sigue es qué páginas de dinero se
-refuerzan, con qué artículos, en qué idioma y en qué orden. Cuando diga
-«adelante», se escriben en ese orden, dos por semana, y cada uno se
-publica con su bloque FAQ, sus enlaces y, si procede, su twin inglés.
+**Estado: APROBADO el 26 de octubre de 2026 («GO»).** Semana 1 publicada
+el mismo día: D1 `/blog/calorias-menu-del-dia/` y D2
+`/blog/calorias-de-las-tapas/`, sólo en español (slug en español, sin
+copia inglesa: los artículos con `"langs": ["es"]` se publican sólo en el
+árbol español, con hreflang `es` + `x-default`, y el árbol inglés no los
+enlaza). Decisión del propietario: español primero en todos; twin inglés
+sólo donde sirva a una consulta inglesa (B1, C2, E1). Siguiente par:
+C1 y C2 (semana 2).
 
 Reglas que se aplican a todo lo de abajo: cifras reales (las del código
 de la app o de etiquetas fotografiadas con fecha; nada inventado);

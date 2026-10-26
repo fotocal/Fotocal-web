@@ -77,8 +77,24 @@ ES_ONLY = ("calorias/", "calculadoras/")
 PAGE_META = re.compile(r'<!--#\s*meta\s*(\{.*?\})\s*-->', re.S)
 
 
+ES_ONLY_MARK = "<!--# es-only -->"
+_es_only_marked = {}
+
+
 def es_only(rel):
-    return rel.startswith(ES_ONLY)
+    """Spanish-only: under an ES_ONLY prefix, or a page carrying the
+    ES_ONLY_MARK comment (blog posts written for Spain with no English twin;
+    tools/gen_blog.py emits it for posts whose JSON says "langs": ["es"])."""
+    if rel.startswith(ES_ONLY):
+        return True
+    v = _es_only_marked.get(rel)
+    if v is None:
+        try:
+            v = ES_ONLY_MARK in open(os.path.join(SRC, rel), encoding="utf-8").read()
+        except OSError:
+            v = False
+        _es_only_marked[rel] = v
+    return v
 
 
 def langs_for(rel):

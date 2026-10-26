@@ -27,12 +27,22 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 ### `/blog/best-foods-for-weight-loss/`
 - **Title** (57): Alimentos que sacian con pocas calorías: lista con cifras
 - **Description** (156): Los alimentos que llenan con menos calorías, con cifras y por qué funcionan: proteína, fibra y agua. Monta las comidas con ellos y el déficit deja de doler.
-- **H1**: Alimentos que sacian con menos calorías
+- **H1**: Los mejores alimentos para adelgazar: los que sacian con menos calorías
 
 ### `/blog/building-muscle-while-losing-fat/`
 - **Title** (60): Ganar músculo mientras pierdes grasa: ¿es posible? — Fotocal
 - **Description** (155): La recomposición corporal —perder grasa y ganar músculo a la vez— es real, pero tiene matices. Quién puede lograrla, cómo, y qué esperar de forma realista.
 - **H1**: Ganar músculo mientras pierdes grasa: ¿es posible?
+
+### `/blog/calorias-de-las-tapas/`
+- **Title** (55): Calorías de las tapas: caña, bravas, croquetas y pincho
+- **Description** (160): Lo que suma una tarde de tapas, tapa por tapa y caña por caña, con cifras por ración: una salida corta, un sábado largo y los cambios que nadie nota en la mesa.
+- **H1**: Cuántas calorías tienen las tapas: caña, bravas, croquetas, pincho de tortilla y jamón
+
+### `/blog/calorias-menu-del-dia/`
+- **Title** (54): Calorías de un menú del día: tres combinaciones reales
+- **Description** (158): Cuántas calorías suma un menú del día: tres combinaciones reales con cifras por ración, qué parte se llevan el pan y la bebida, y los cambios que más ahorran.
+- **H1**: Calorías de un menú del día: primero, segundo, pan, bebida y postre
 
 ### `/blog/calorie-deficit-for-fat-loss/`
 - **Title** (58): Déficit calórico: la regla detrás de toda pérdida de grasa
@@ -77,7 +87,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 ### `/blog/does-meal-timing-matter-for-weight-loss/`
 - **Title** (57): ¿Cenar tarde engorda? El horario de las comidas y el peso
 - **Description** (154): Cenar tarde, saltarse el desayuno, comer cinco veces al día: qué dice la evidencia sobre el horario de las comidas y qué manda de verdad para perder peso.
-- **H1**: ¿Importa el horario de las comidas para perder peso?
+- **H1**: ¿Cenar tarde engorda? Lo que de verdad importa del horario de las comidas
 
 ### `/blog/does-protein-timing-matter/`
 - **Title** (56): El momento de la proteína: ¿importa de verdad? — Fotocal
@@ -117,7 +127,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 ### `/blog/how-fast-should-you-lose-weight/`
 - **Title** (56): Cuánto peso perder por semana: el ritmo sano, con cifras
 - **Description** (157): Entre el 0,5 % y el 1 % de tu peso a la semana: por qué ese ritmo conserva músculo y evita el rebote, qué pasa si vas más rápido y cómo calcular el tuyo hoy.
-- **H1**: ¿A qué velocidad deberías perder peso?
+- **H1**: ¿Cuánto peso se puede perder en una semana? El ritmo que no vuelve
 
 ### `/blog/how-many-calories-does-exercise-burn/`
 - **Title** (57): ¿Cuántas calorías quema realmente el ejercicio? — Fotocal
@@ -244,11 +254,6 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (158): Las raciones han crecido en silencio durante décadas. Trucos prácticos para comer la cantidad adecuada en casa y fuera, sin pesar nada y sin sentir privación.
 - **H1**: Control de raciones: trucos sencillos que sí funcionan
 
-### `/blog/series/beyond-macros/`
-- **Title** (32): Más allá de los macros — Fotocal
-- **Description** (157): Fibra, vitaminas y minerales, azúcar, calidad de la comida y la etiqueta de atrás del envase: lo que un recuento de calorías no te enseña, y por qué importa.
-- **H1**: Más allá de los macros
-
 ### `/blog/series/calories/`
 - **Title** (34): Las calorías, desde cero — Fotocal
 - **Description** (158): Qué gasta tu cuerpo, qué es un déficit, a qué ritmo perder y cómo contar sin que sea un segundo trabajo. Siete artículos, en el orden en que llegan las dudas.
@@ -256,38 +261,13 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/series/everyday-eating/`
 - **Title** (34): Comer bien un día normal — Fotocal
-- **Description** (153): El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes y el presupuesto. Sin reglas que no puedas cumplir un martes.
+- **Description** (158): El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes, el presupuesto, y dos artículos sólo en español sobre el menú del
 - **H1**: Comer bien un día normal
 
 ### `/blog/series/keeping-it-off/`
 - **Title** (35): Perder peso que no vuelve — Fotocal
 - **Description** (141): Lo que viene después del primer mes: estancamientos, la báscula, el cuento del «modo supervivencia» y qué te pide de verdad el mantenimiento.
 - **H1**: Perder peso que no vuelve
-
-### `/blog/series/macros/`
-- **Title** (49): Macros: proteína, carbohidratos y grasa — Fotocal
-- **Description** (147): Qué hace cada macronutriente, cuánto necesitas de cada uno y cómo fijar objetivos para perder peso sin hoja de cálculo ni obsesión con la proteína.
-- **H1**: Macros: proteína, carbohidratos y grasa
-
-### `/blog/series/mind-and-appetite/`
-- **Title** (33): Apetito, ánimo y hábito — Fotocal
-- **Description** (158): Atención en la mesa, antojos, comer por motivos que no son el hambre, las noches y la constancia cuando no hay motivación. Más suave que el resto, a propósito
-- **H1**: Apetito, ánimo y hábito
-
-### `/blog/series/movement-and-sleep/`
-- **Title** (34): Movimiento, sueño y agua — Fotocal
-- **Description** (156): Qué hace y qué no el ejercicio por tu peso, el movimiento que no cuentas, pesas frente a cardio y los dos hábitos que deciden el resto: dormir y beber agua.
-- **H1**: Movimiento, sueño y agua
-
-### `/blog/series/planning-the-week/`
-- **Title** (30): Planificar la semana — Fotocal
-- **Description** (155): Treinta minutos de planificación, una lista escrita a partir del plan y una sesión de cocina por adelantado. Tres artículos, en el orden en que los harías.
-- **H1**: Planificar la semana
-
-### `/blog/series/popular-diets/`
-- **Title** (40): Las dietas de moda, examinadas — Fotocal
-- **Description** (158): Dietas exprés, ayuno, baja en carbohidratos o en grasa, horarios y détox, cada una contrastada con la evidencia y no con el marketing, y qué hacer en su lugar
-- **H1**: Las dietas de moda, examinadas
 
 ### `/blog/tdee-how-many-calories-you-need/`
 - **Title** (52): TDEE explicado: cuántas calorías necesitas de verdad
@@ -886,11 +866,6 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (142): Portion sizes have quietly ballooned. Here are practical, no-weighing portion-control tricks to eat the right amount without feeling deprived.
 - **H1**: Portion Control: Simple Tricks That Actually Work
 
-### `/en/blog/series/beyond-macros/`
-- **Title** (27): Beyond the macros — Fotocal
-- **Description** (157): Fibre, vitamins and minerals, sugar, food quality and the label on the back of the packet: the things a calorie count does not show you, and why they matter.
-- **H1**: Beyond the macros
-
 ### `/en/blog/series/calories/`
 - **Title** (38): Calories, from the ground up — Fotocal
 - **Description** (158): What your body burns, what a deficit is, how fast to lose and how to count without turning it into a second job. Seven articles in the order the questions com
@@ -905,31 +880,6 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (38): Losing weight that stays off — Fotocal
 - **Description** (152): The part after the first month: stalls, the scale, the “starvation mode” story, and what maintenance actually asks of you once the novelty has worn off.
 - **H1**: Losing weight that stays off
-
-### `/en/blog/series/macros/`
-- **Title** (40): Macros: protein, carbs and fat — Fotocal
-- **Description** (154): What the three macronutrients do, how much of each you actually need, and how to set targets for weight loss without a spreadsheet or a protein obsession.
-- **H1**: Macros: protein, carbs and fat
-
-### `/en/blog/series/mind-and-appetite/`
-- **Title** (34): Appetite, mood and habit — Fotocal
-- **Description** (153): Attention at the table, cravings, eating for reasons other than hunger, the evening, and staying consistent when motivation is gone. Gentler, on purpose.
-- **H1**: Appetite, mood and habit
-
-### `/en/blog/series/movement-and-sleep/`
-- **Title** (35): Movement, sleep and water — Fotocal
-- **Description** (157): What exercise really does for weight, the movement you never count, lifting against cardio, and the two habits that quietly decide the rest: sleep and water.
-- **H1**: Movement, sleep and water
-
-### `/en/blog/series/planning-the-week/`
-- **Title** (27): Planning the week — Fotocal
-- **Description** (148): Thirty minutes of planning, a list written from the plan, and one session of cooking ahead. Three articles, in the order you would actually do them.
-- **H1**: Planning the week
-
-### `/en/blog/series/popular-diets/`
-- **Title** (33): Popular diets, examined — Fotocal
-- **Description** (157): Crash diets, fasting, low-carb against low-fat, meal timing and detoxes, each held up against the evidence rather than the marketing, and what to do instead.
-- **H1**: Popular diets, examined
 
 ### `/en/blog/tdee-how-many-calories-you-need/`
 - **Title** (59): TDEE Explained: How Many Calories You Really Need — Fotocal

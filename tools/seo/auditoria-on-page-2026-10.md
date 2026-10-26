@@ -233,3 +233,82 @@ Lo que mueve el calendario más que nada de lo de arriba: enlaces desde
 fuera (una reseña honesta en un medio español, un foro, una
 nutricionista que enlace la tabla) y las búsquedas de marca. Ninguna de
 las dos se puede fabricar desde el código.
+
+
+## 9 · Actualización del 26 de octubre (tarde): decisiones del propietario y lo hecho
+
+**Datos nuevos de Search Console (del propietario).** España es el primer
+país con diferencia: 276 de 655 impresiones y 3 de 6 clics; los países de
+habla hispana suman cerca del 56 %. Las impresiones inglesas son sobre todo
+Estados Unidos (94) y Reino Unido (19): no son clientes. Decisión: español
+primero, inglés sólo donde sirva. Se cumple en todo lo de abajo.
+
+**No indexadas: 99, no 73.** 80 «Descubierta: actualmente sin indexar»,
+7 «Rastreada: actualmente sin indexar», 10 «Página alternativa con
+etiqueta canónica adecuada», 2 «Página con redirección». No hay ninguna
+fila de «Google eligió otra canónica»: lo que preocupaba en §5 no ocurre.
+Las 10 «alternativa con canónica adecuada» son normales (son las dos
+versiones de idioma que Google agrupa); las 2 redirecciones también.
+El problema real son las 80 descubiertas y no rastreadas.
+
+### Qué sube de verdad la prioridad de rastreo (y qué no)
+
+Google rastrea antes lo que más enlaces recibe de páginas que ya rastrea
+a menudo, y deja para después lo que sólo cuelga de un sitemap. Lo que
+funciona, en orden de efecto, y su estado:
+
+1. **Enlaces desde las páginas más fuertes.** La portada enlaza ahora
+   directamente a los 12 platos más buscados con su cifra (tira «Los más
+   buscados», commit 1839b58); el pie ya enlazaba a `/calorias/` y
+   `/calculadoras/` desde las 132 páginas españolas; los 54 artículos
+   llevan la línea de herramientas. Los dos artículos nuevos enlazan a 20
+   páginas de plato en el cuerpo del texto. **Hecho.**
+2. **Menos URL compitiendo por el mismo presupuesto.** Los 6 índices de
+   serie finos pasan a `noindex` y salen del sitemap (de 208 a 198 URL).
+   **Hecho.**
+3. **Contenido nuevo que enlaza al antiguo, publicado con regularidad.**
+   Dos artículos por semana del plan de clusters, cada uno con 10–20
+   enlaces a platos, calculadoras y artículos. **Empezado** (semana 1
+   publicada).
+4. **`lastmod` real en el sitemap.** Ya lo era (fecha del último cambio de
+   contenido de cada página, no la de hoy en todas).
+5. **Enlaces desde fuera.** Lo único que no se puede hacer desde el código,
+   y lo que más pesa.
+
+Lo que **no** funciona y por eso no se ha hecho: `<priority>` y
+`<changefreq>` en el sitemap (Google los ignora desde hace años; se dejan
+porque no molestan), reenviar el sitemap cada día, IndexNow (sólo Bing),
+enlaces internos escondidos o un bloque de 200 enlaces en el pie.
+
+Lo que sí acelera y es tuyo: Inspección de URL → «Solicitar indexación»
+para `/calorias/`, `/calculadoras/`, `/calorias/tortilla-de-patatas/` y
+`/calculadoras/deficit-calorico/`, una vez. Opcional; no lo pido.
+
+### Lo hecho hoy sobre esta auditoría
+
+| Punto | Estado |
+|---|---|
+| Los cinco huecos de H1 / primer párrafo (§2) | **Hechos** (commit 1839b58): `/features/` y `/calculadoras/` primer párrafo; H1 de `best-foods`, `how-fast` y `meal-timing`; `/ai/` con la FAQ que manda la consulta de «IA que cuenta calorías» a la página de foto. |
+| FAQ en el blog (§3) | **10 artículos** del top-28 con 3 preguntas reales cada uno, en los dos idiomas, con FAQPage: best-foods, how-fast, sustainably, calories-or-quality, added-sugar, meal-timing, calorie-deficit, exercise, night-eating, protein-breakfast. Ninguna pregunta inventada para rellenar: todas salen de «Otras preguntas», del autocompletar o de Search Console. |
+| Índices de serie (§3) | Decidido hub por hub, ver abajo. |
+| Tira de platos en portada | Hecha. |
+| http→https | El propietario activó «Enforce HTTPS» y comprobó el 301; la red de seguridad de `main.js` se retiró. |
+
+### Índices de serie: qué se hizo con cada uno y por qué
+
+Con contenido propio (intro de 150 palabras y una línea por artículo que
+dice por qué va en ese orden; siguen indexados):
+
+- **Las calorías, desde cero** (9 artículos): es la serie que sostiene el
+  cluster del déficit (C) y enlaza a las dos calculadoras.
+- **Perder peso que no vuelve** (5): sostiene el cluster de perder peso (E).
+- **Comer bien un día normal** (7 + los dos artículos nuevos): sostiene
+  el cluster de los platos (D) y enlaza a `/calorias/`.
+
+Sólo navegación (`noindex, follow`, fuera del sitemap; siguen enlazados y
+accesibles): **Las dietas de moda**, **Macros**, **Más allá de los macros**,
+**Planificar la semana**, **Apetito, ánimo y hábito**, **Movimiento, sueño
+y agua**. Motivo: ninguna apoya una página de dinero, y cada una era una
+lista de 160–335 palabras compitiendo por rastreo con los 41 platos. Si
+alguna de esas series gana un cluster más adelante, se le da contenido y
+se vuelve a indexar: es una línea en `series.json`.

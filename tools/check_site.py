@@ -312,7 +312,7 @@ def main():
                 "en": SITE + "en/" + public(bare),
                 "x-default": SITE + public(bare),
             }
-            if bare.startswith(ES_ONLY):
+            if bare.startswith(ES_ONLY) or "<!--# es-only -->" in html:
                 del want["en"]
             if alts != want:
                 fail(rel, "hreflang set is %r" % (alts,))

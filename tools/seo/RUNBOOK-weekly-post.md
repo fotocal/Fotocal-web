@@ -1,7 +1,12 @@
 # Runbook: one new Spanish blog post every Monday
 
-Set up on 26 October 2026 at the owner's request. A scheduled task opens a
-fresh session every Monday morning (Europe/Madrid) and follows this file.
+Set up on 26 October 2026 at the owner's request. A scheduled task wakes
+the standing Claude Code cloud session that already holds push access to
+this repository every Monday at 08:38 (Europe/Madrid) and follows this
+file. (A fresh-session variant was tried twice the same day and could not
+push: a new session starts with no repository credentials. Do not switch
+back to it without re-testing.) A second task on Tuesday at 09:41 checks
+that Monday's post landed and runs the procedure if it did not.
 It has no end date. One post per week, not two. No approval needed per
 post; the owner gets one line when it is live, or the reason it is not.
 

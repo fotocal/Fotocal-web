@@ -40,10 +40,12 @@ git checkout main && git pull origin main
 ```
 If the clone is missing and cannot be made, stop and report that.
 
-Before writing anything, prove you can publish: create a throwaway branch,
-push it, delete it.
+Before writing anything, prove you can publish: force-push `main` to the
+standing test branch `test/weekly-push-check` (branch deletion is not
+possible through the session's git proxy, so the same branch is reused
+every week; force pushes are only blocked on `main`).
 ```
-git checkout -b test/weekly-$(date +%F) && git push -u origin HEAD && git push origin --delete HEAD:refs/heads/test/weekly-$(date +%F); git checkout main
+git push -f origin main:refs/heads/test/weekly-push-check
 ```
 If the push is refused for credentials, call the `add_repo` tool
 (claude-code-remote) with owner `fotocal`, repo `Fotocal-web`,

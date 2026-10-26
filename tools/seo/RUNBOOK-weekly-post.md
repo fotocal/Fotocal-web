@@ -40,6 +40,18 @@ git checkout main && git pull origin main
 ```
 If the clone is missing and cannot be made, stop and report that.
 
+Before writing anything, prove you can publish: create a throwaway branch,
+push it, delete it.
+```
+git checkout -b test/weekly-$(date +%F) && git push -u origin HEAD && git push origin --delete HEAD:refs/heads/test/weekly-$(date +%F); git checkout main
+```
+If the push is refused for credentials, call the `add_repo` tool
+(claude-code-remote) with owner `fotocal`, repo `Fotocal-web`,
+access `push`, then retry once. If it is still refused, stop and report
+exactly that: do not write the post into a repository you cannot push to.
+`main` has a ruleset that blocks force pushes and deletions; the runbook
+never does either, so it does not affect you.
+
 ## 2 · Choose the post (10 minutes)
 
 1. Open `tools/seo/plan-clusters.md`. Take the **first article in "Orden y

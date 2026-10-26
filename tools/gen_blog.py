@@ -129,7 +129,7 @@ HEAD = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title_en} — Fotocal</title>
+{meta}  <title>{title_en} — Fotocal</title>
   <meta name="description" content="{lead_en}">
   <meta name="keywords" content="{keywords}">
   <link rel="canonical" href="https://getfotocal.com/blog/{slug}/">
@@ -324,6 +324,19 @@ def hub_nav(sid, cls):
     sr = SERIES[sid]
     return NAVITEM.format(cls=cls, href="../series/%s/" % sid, which="series.all", label="All articles in this series", title_en=sr["en"]["title"], title_es=sr["es"]["title"])
 
+def seo_meta(p):
+    """Optional per-language <title>/description override ("seo" in the post JSON), carried
+    as the build's inline meta comment. The headline and the lead on the page do not change."""
+    seo = p.get("seo")
+    if not seo:
+        return ""
+    m = {}
+    for lang in ("en", "es"):
+        s = seo.get(lang) or {}
+        m[lang] = {"title": s.get("title") or strip_tags(p[lang]["title"]), "desc": s.get("desc") or strip_tags(p[lang]["lead"])}
+    return "  <!--# meta %s -->\n" % json.dumps(m, ensure_ascii=False)
+
+
 def render_post(p, idx):
     sid, n = series_of[p["slug"]]
     order = SERIES[sid]["posts"]
@@ -355,7 +368,7 @@ def render_post(p, idx):
     strip = STRIP.format(sid=sid, n=n + 1, total=len(order), title_en=SERIES[sid]["en"]["title"], title_es=SERIES[sid]["es"]["title"])
     rel = "\n".join(card(by_slug[s], "../%s/" % s, i) for i, s in enumerate(related[p["slug"]]))
     care = CARE if p.get("caution") else ""
-    return HEAD.format(care="", care_top=care, slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
+    return HEAD.format(meta=seo_meta(p), care="", care_top=care, slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
                        lead_en=esc(strip_tags(p["en"]["lead"])), lead_es=esc(strip_tags(p["es"]["lead"])), keywords=esc(p.get("keywords") or ""),
                        date=p["date"], modified=modified, date_en=fmt_date(p["date"], "en"), date_es=fmt_date(p["date"], "es"),
                        updated_en=upd_en, updated_es=upd_es, min_en=minutes(p["en"]["body"]), min_es=minutes(p["es"]["body"]),

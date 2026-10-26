@@ -32,8 +32,8 @@ CALCS = [
          ("¿Por qué me sale distinto que en otra calculadora?", "Porque usan otra fórmula (Harris-Benedict suele dar más) u otros factores de actividad. Ninguna acierta tu cifra exacta: el error típico a nivel individual ronda el 10 %. Toma el resultado como punto de partida y ajústalo con la báscula a las dos o tres semanas."),
      ]},
     {"slug": "deficit-calorico", "kind": "deficit", "short": "Déficit calórico",
-     "title": "Calculadora de déficit calórico para perder peso",
-     "desc": "Calcula tu déficit calórico para perder peso: mantenimiento, cuánto recortar (mujer y hombre) y cuánto tardarías. Qué es, cómo se calcula y los 500 kcal al día.",
+     "title": "Calculadora de déficit calórico: mujer y hombre, gratis",
+     "desc": "Calcula tu déficit calórico para perder peso: mantenimiento, cuánto recortar según tu sexo y peso, y cuánto tardarías. Gratis, sin registro y con ejemplos.",
      "h1": "Calculadora de déficit calórico: mujer y hombre",
      "lead": "El déficit calórico es comer menos de lo que gastas, y es lo único que hay detrás de toda pérdida de peso que dura. Esta calculadora te da tu mantenimiento según tu sexo, edad, altura, peso y actividad, cuánto recortar para perder entre el 0,5 % y el 1 % de tu peso a la semana y cuánto tardarías con los kilos que te has propuesto. Debajo: cómo se calcula a mano, qué cambia entre mujer y hombre, qué significa un déficit de 500 calorías al día y qué comer mientras tanto.",
      "blog": ["calorie-deficit-for-fat-loss", "how-fast-should-you-lose-weight", "the-truth-about-starvation-mode"],
@@ -284,8 +284,8 @@ def page(c):
 
 
 def hub():
-    title = "Calculadoras de calorías, déficit, IMC y macros"
-    desc = "Cuatro calculadoras gratuitas que funcionan en la página, sin registro: calorías diarias, déficit calórico, IMC y reparto de macros. Con la fórmula explicada."
+    title = "Calculadoras de calorías gratis: déficit, IMC y macros"
+    desc = "Cuatro calculadoras en la página, sin registro: calorías diarias, déficit calórico, IMC y macros, con la fórmula explicada y el resultado en segundos."
     if len(title) + len(" — Fotocal") <= TITLE_MAX:
         title += " — Fotocal"
     assert len(title) <= TITLE_MAX and 140 <= len(desc) <= 160, (len(title), len(desc))

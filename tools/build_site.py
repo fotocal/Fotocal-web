@@ -701,6 +701,12 @@ def main():
             article = None
             if inline_meta:
                 m = inline_meta[lang]
+                # A blog post carrying an inline meta override still keeps its own
+                # headline and lead in the Article structured data, per language.
+                if rel.startswith("blog/"):
+                    t, d = blog_meta(raw, lang)
+                    if t and d:
+                        article = (t, d)
             elif rel in meta_all:
                 m = meta_all[rel][lang]
             else:

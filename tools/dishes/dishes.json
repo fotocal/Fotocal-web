@@ -96,7 +96,9 @@
      "h2": "Un trozo, un pincho, una ración",
      "html": "<p>Un pincho de bar de 120 g son {kcal:pincho-de-tortilla} kcal; la ración de plato de 150 g que usa la app, {kcal}; un octavo de una tortilla de un kilo, 125 g, unas {per100*1.25}. Si el trozo lleva pan debajo, suma unas 80 kcal por cada 30 g de pan. Y si es la tortilla de Mercadona u otra envasada, usa la cifra de su etiqueta, no esta.</p>"
     }
-   ]
+   ],
+   "title": "Calorías de la tortilla de patatas: ración, 100 g, Mercadona",
+   "desc": "Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g. Por trozo, con cebolla, de 4 huevos, al microondas y la de Mercadona, con las fuentes."
   },
   {
    "slug": "paella-valenciana",

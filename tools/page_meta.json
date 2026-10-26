@@ -10,38 +10,38 @@
   ],
   "index.html": {
     "es": {
-      "title": "Contador de calorías gratis con IA por foto — Fotocal",
-      "desc": "Haz una foto y Fotocal cuenta calorías y macros al momento. Gratis y sin tarjeta: 2 escaneos con IA al día; código de barras y Coach Kal sin límite. Android."
+      "title": "Contador de calorías gratis: con una foto, sin pesar nada",
+      "desc": "Haz una foto a tu plato y Fotocal cuenta calorías y macros en segundos, sin pesar. Gratis y sin tarjeta: 2 escaneos con IA al día, código de barras sin límite."
     },
     "en": {
-      "title": "Free AI Calorie Counter from a Photo — Fotocal",
-      "desc": "Photograph your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Android."
+      "title": "Free Calorie Counter from a Photo: No Weighing, No Card",
+      "desc": "Photograph your plate and Fotocal counts calories and macros in seconds, no scales. Free with no card: 2 AI scans a day, unlimited barcode scanner and coach."
     }
   },
   "ai/index.html": {
     "es": {
-      "title": "Coach Kal: coach de nutrición con IA gratis — Fotocal",
-      "desc": "Pregunta a Coach Kal qué comer, si un plato te encaja hoy o cómo ajustar tu dieta. Lee tu diario, responde en tu idioma y es gratis en todos los planes."
+      "title": "Coach de nutrición con IA gratis: pregunta qué comer hoy",
+      "desc": "Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Gratis y sin límite de mensajes en todos los planes. Android."
     },
     "en": {
-      "title": "Coach Kal: Free AI Nutrition Coach — Fotocal",
-      "desc": "Ask Coach Kal what to eat, whether a meal fits your day or how to adjust your diet. It reads your diary, answers in your language and is free on every plan."
+      "title": "Free AI Nutrition Coach: Ask What to Eat Today",
+      "desc": "Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. Free, in your language, no message limit, any plan."
     }
   },
   "features/index.html": {
     "es": {
-      "title": "Funciones de Fotocal: contar calorías con foto, gratis",
-      "desc": "Nueve funciones: foto, código de barras, voz, carta, Coach Kal e informe semanal. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite."
+      "title": "Contar calorías con foto, voz y código: 9 funciones gratis",
+      "desc": "Foto, código de barras, voz, carta, Coach Kal e informe semanal, en pantallas reales. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite."
     },
     "en": {
-      "title": "Fotocal Features: Count Calories from a Photo, Free",
-      "desc": "The nine Fotocal features: photo, barcode, voice, menu, Coach Kal and the weekly report. Free, no card: 2 AI scans a day, the rest without limits."
+      "title": "Count Calories from a Photo: 9 Fotocal Features, Free",
+      "desc": "Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, shown on real screens. Free plan with no card: 2 AI scans a day, the rest unlimited."
     }
   },
   "features/scan-food/index.html": {
     "es": {
-      "title": "Calorías con foto gratis: escáner de comida con IA — Fotocal",
-      "desc": "Apunta la cámara a tu plato y obtén calorías, macros, ingredientes y puntuación. Gratis sin tarjeta: 2 escaneos con IA al día; Premium los deja sin límite."
+      "title": "Calorías con foto: escáner de comida con IA, gratis",
+      "desc": "Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Corrige la ración antes de guardar. Gratis: 2 escaneos con IA al día."
     },
     "en": {
       "title": "Calories from a Photo, Free: AI Food Scanner — Fotocal",
@@ -80,12 +80,12 @@
   },
   "features/weight-loss/index.html": {
     "es": {
-      "title": "Perder peso contando calorías con una foto — Fotocal",
-      "desc": "Cómo perder peso con Fotocal: un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto. Sin dietas milagro ni promesas."
+      "title": "Perder peso contando calorías con una foto, gratis",
+      "desc": "Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales, gratis."
     },
     "en": {
-      "title": "Lose Weight Counting Calories from a Photo — Fotocal",
-      "desc": "How to lose weight with Fotocal: a realistic goal, a deficit you can keep and every meal logged with a photo. No miracle diets, shown on the app’s real screens."
+      "title": "Lose Weight by Counting Calories from a Photo, Free",
+      "desc": "A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, free, no card to start."
     }
   },
   "features/nutrition-diet/index.html": {
@@ -110,22 +110,22 @@
   },
   "subscription/index.html": {
     "es": {
-      "title": "Precios de Fotocal: plan gratis y Premium",
-      "desc": "Precios de Fotocal: gratis para siempre con 2 escaneos con IA al día y Coach Kal ilimitado. Premium 6,99 €/mes o 34,99 €/año, ambos con 5 días de prueba gratis."
+      "title": "Precios de Fotocal: plan gratis para siempre y Premium",
+      "desc": "Plan gratis sin tarjeta ni caducidad: 2 escaneos con IA al día, código de barras y Coach Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, 5 días de prueba."
     },
     "en": {
-      "title": "Fotocal Pricing: Free Plan and Premium",
-      "desc": "Fotocal pricing: free forever with 2 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, each with a 5-day free trial."
+      "title": "Fotocal Pricing: Free Plan Forever, Premium €6.99/month",
+      "desc": "Free plan with no card and no expiry: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both."
     }
   },
   "blog/index.html": {
     "es": {
-      "title": "Blog de nutrición y calorías — Fotocal",
-      "desc": "52 guías claras sobre contar calorías, perder peso, macros, dieta y hábitos, escritas sin vender nada y revisadas contra la evidencia. En nueve series."
+      "title": "Blog de nutrición y calorías: guías claras, sin vender nada",
+      "desc": "54 guías sobre contar calorías, perder peso, macros, dieta y hábitos, en nueve series en orden de lectura, revisadas contra la evidencia y sin vender nada."
     },
     "en": {
-      "title": "Nutrition and Calorie Blog — Fotocal",
-      "desc": "52 clear guides on counting calories, losing weight, macros, diet and habits, written without selling anything and checked against the evidence. In nine series."
+      "title": "Nutrition and Calorie Blog: Clear Guides, Nothing Sold",
+      "desc": "54 guides on counting calories, losing weight, macros, diet and habits, in nine series in reading order, checked against the evidence and selling nothing."
     }
   },
   "about/index.html": {

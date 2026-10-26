@@ -531,9 +531,8 @@ def table_page(ready_by_app):
 
 # ── the hub ──────────────────────────────────────────────────────────
 def hub_page(ready):
-    title = "Calorías de platos españoles: tabla por ración y 100 g"
-    desc = ("Tabla de calorías de los platos españoles de cada día, por ración real y por 100 g, con proteínas, "
-            "hidratos y grasas. Las mismas cifras que usa la app Fotocal.")
+    title = "Calorías de platos españoles por ración real y por 100 g"
+    desc = "Tabla de calorías de 41 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra. Sin registro."
     assert len(title) <= TITLE_MAX and 140 <= len(desc) <= 160, (len(title), len(desc))
     path = "calorias/"
     url = SITE + path

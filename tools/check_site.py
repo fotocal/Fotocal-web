@@ -255,6 +255,11 @@ def main():
     for missing in sorted(es - en):
         if missing.startswith(ES_ONLY):
             continue
+        # A blog post written for Spain only ("langs": ["es"] in its JSON)
+        # has no English copy by design; its source says so.
+        src = os.path.join(ROOT, "src", missing)
+        if os.path.exists(src) and "<!--# es-only -->" in open(src, encoding="utf-8").read():
+            continue
         fail("en/" + missing, "no English counterpart")
     for missing in sorted(en - es):
         fail(missing, "no Spanish counterpart")
@@ -312,7 +317,11 @@ def main():
                 "en": SITE + "en/" + public(bare),
                 "x-default": SITE + public(bare),
             }
-            if bare.startswith(ES_ONLY) or "<!--# es-only -->" in html:
+            # Spanish-only pages: the ES_ONLY sections, and any Spanish page
+            # whose English twin was not rendered (blog posts with
+            # "langs": ["es"]; the build drops the <!--# es-only --> marker
+            # from the output, so the absence of the /en/ file is the test).
+            if bare.startswith(ES_ONLY) or (not rel.startswith("en/") and not os.path.exists(os.path.join(ROOT, "en", rel))):
                 del want["en"]
             if alts != want:
                 fail(rel, "hreflang set is %r" % (alts,))

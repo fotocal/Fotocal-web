@@ -28,9 +28,10 @@ post; the owner gets one line when it is live, or the reason it is not.
 - Never leave the site broken. `tools/check_site.py` must end with
   `0 warning(s)`. Never delete or stub working code. Do not touch the app
   repository, its version or build number.
-- Commit footer on every commit, exactly:
-  `Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>` and
-  `Claude-Session: <the URL of the session doing the work>`.
+- Commit footer on every commit, two lines: `Co-Authored-By: <the Claude
+  model actually serving this session, e.g. Claude Fable 5.1 or Claude
+  Sonnet 5.5> <noreply@anthropic.com>` and `Claude-Session: <the URL of
+  the session doing the work>`. Name the real model, never assume one.
 
 ## 1 · Set up (5 minutes)
 

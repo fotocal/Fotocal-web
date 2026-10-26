@@ -302,7 +302,7 @@ def hub():
     o('\n<main id="main">\n  <article class="post dp dp-hub">\n    <header class="post-head">\n      <div class="container-narrow">')
     o('        <nav class="post-crumbs reveal" aria-label="Migas de pan"><a href="../">Inicio</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">Calculadoras</a></nav>')
     o('        <h1 class="post-title reveal">Calculadoras de calorías, déficit calórico, IMC y macros</h1>')
-    o('        <p class="post-lead reveal">Cuatro herramientas que responden a las cuatro preguntas que llegan antes de cualquier dieta: cuánto gasto, cuánto recortar, dónde estoy y cómo repartirlo. Funcionan aquí, en la página, sin registro y sin enviar tus datos a ningún sitio; cada una explica su fórmula y lo que no puede saber de ti.</p>')
+    o('        <p class="post-lead reveal">Cuatro calculadoras de calorías que responden a las cuatro preguntas que llegan antes de cualquier dieta: cuánto gasto, cuánto recortar, dónde estoy y cómo repartirlo. Funcionan aquí, en la página, sin registro y sin enviar tus datos a ningún sitio; cada una explica su fórmula y lo que no puede saber de ti.</p>')
     o('      </div>\n    </header>\n    <div class="container-narrow">')
     o('      <div class="post-nav reveal" style="margin-top:0">')
     blurb = {"calorias-diarias": "Tu mantenimiento con Mifflin-St Jeor y tu actividad, y las cifras para perder o ganar despacio.",

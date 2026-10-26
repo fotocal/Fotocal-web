@@ -25,6 +25,7 @@
      <html lang> is the answer and a saved preference is not: it would let
      an English banner appear on a Spanish page. */
   var LANG = (document.documentElement.lang === "en") ? "en" : "es";
+  var LOADED_AT = Date.now();
 
   function t(key, fallback) {
     var D = window.FOTOCAL_I18N || {};
@@ -58,7 +59,14 @@
     /* A filled honeypot means a bot. Show the normal success message
        rather than an error — telling a bot it failed just invites a
        retry, and a human will never see this branch. */
-    if (form.botcheck && form.botcheck.value) {
+    /* Three signs of a bot, each handled the same quiet way: the Web3Forms
+       honeypot checkbox is ticked, the decoy text field is filled, or the
+       form was submitted less than four seconds after the page loaded
+       (nobody reads the page and writes a message in four seconds). */
+    var hpChecked = form.botcheck && form.botcheck.checked;
+    var hpFilled  = form.botcheck_text && form.botcheck_text.value;
+    var tooFast   = (Date.now() - LOADED_AT) < 4000;
+    if (hpChecked || hpFilled || tooFast) {
       show(ok, t("cf.ok", "Thanks! We'll reply as soon as we can — please check your email."));
       form.reset();
       form.classList.remove("was-validated");
@@ -67,6 +75,7 @@
 
     var data = Object.fromEntries(new FormData(form).entries());
     delete data.botcheck;
+    delete data.botcheck_text;
 
     btn.disabled = true;
     var label = btn.textContent;

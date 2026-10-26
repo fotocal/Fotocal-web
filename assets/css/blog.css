@@ -120,3 +120,11 @@
 .hub-back a:hover { text-decoration: underline; }
 .series-grid { margin-top: .4rem; }
 .series-card h3 { font-size: 1.05rem; }
+
+/* Series hubs with real content: an intro body above the list and a line
+   under each entry saying why it sits where it sits. */
+.hub-body { margin-bottom: 2rem; }
+.hub-why { display: block; margin-top: .35rem; font-style: normal; color: var(--text-soft); font-size: .95rem; }
+/* Post FAQ: the home-page accordion, inside the article column. */
+.post-faq { margin: 2.5rem 0 1.5rem; }
+.post-faq h2 { margin-bottom: 1rem; }

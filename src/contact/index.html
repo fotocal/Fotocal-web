@@ -120,7 +120,11 @@
             <input type="hidden" name="subject" value="New message from the Fotocal website">
             <input type="hidden" name="from_name" value="Fotocal website">
             <div class="cf-hp" aria-hidden="true">
-              <label>Do not fill this in <input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
+              <!--# Web3Forms honeypot: their server drops any submission where
+                   "botcheck" carries a value. Hidden from people (CSS and
+                   tabindex), filled by form-filling bots. -->
+              <input type="checkbox" name="botcheck" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <label>Do not fill this in <input type="text" name="botcheck_text" tabindex="-1" autocomplete="off"></label>
             </div>
             <div class="cf-field">
               <label for="cfName" data-i18n="cf.name">Your name</label>

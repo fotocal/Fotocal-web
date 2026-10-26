@@ -153,7 +153,7 @@ HEAD = """<!DOCTYPE html>
   <script type="application/ld+json" data-lang-block="en">{ld_post}</script>
   <script type="application/ld+json" data-lang-block="es">{ld_post_es}</script>
   <script type="application/ld+json">{ld_crumbs}</script>
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png?v=3">
+{ld_faq}  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png?v=3">
   <link rel="icon" href="../../assets/favicon.ico?v=3" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
@@ -203,7 +203,7 @@ HEAD = """<!DOCTYPE html>
 {body_es}
       </div>
 
-{care}      <p class="post-disclaimer reveal" data-i18n="blog.disclaimer">This article is general information, not medical advice.</p>
+{faq}{care}      <p class="post-disclaimer reveal" data-i18n="blog.disclaimer">This article is general information, not medical advice.</p>
 
       <!--# One route into the app, after the article, stated as a fact
            the reader can act on. Free plan figures come from the app's
@@ -337,6 +337,38 @@ def seo_meta(p):
     return "  <!--# meta %s -->\n" % json.dumps(m, ensure_ascii=False)
 
 
+FAQ_BLOCK = """      <!--# "faq" in the post's JSON: only questions people actually ask
+           (Search Console, "Otras preguntas", the owner's google.es notes),
+           never filler for the schema. Rendered per language with a
+           matching FAQPage in <head>. -->
+      <section class="post-faq reveal" data-lang-block="{lang}">
+        <h2>{heading}</h2>
+{items}
+      </section>
+"""
+FAQ_ITEM = """        <details class="faq-item">
+          <summary><span>{q}</span><i class="faq-plus" aria-hidden="true"></i></summary>
+          <p>{a}</p>
+        </details>"""
+FAQ_HEADING = {"en": "Questions people ask", "es": "Preguntas que hace la gente"}
+
+def faq_html(p):
+    out = ""
+    for lang in ("en", "es"):
+        qs = (p.get("faq") or {}).get(lang) or []
+        if not qs: continue
+        out += FAQ_BLOCK.format(lang=lang, heading=FAQ_HEADING[lang], items="\n".join(FAQ_ITEM.format(q=q["q"], a=q["a"]) for q in qs))
+    return out
+
+def faq_ld(p):
+    out = ""
+    for lang in ("en", "es"):
+        qs = (p.get("faq") or {}).get(lang) or []
+        if not qs: continue
+        out += '  <script type="application/ld+json" data-lang-block="%s">%s</script>\n' % (lang, json.dumps({"@context": "https://schema.org", "@type": "FAQPage",
+               "mainEntity": [{"@type": "Question", "name": strip_tags(q["q"]), "acceptedAnswer": {"@type": "Answer", "text": strip_tags(q["a"])}} for q in qs]}, ensure_ascii=False))
+    return out
+
 def render_post(p, idx):
     sid, n = series_of[p["slug"]]
     order = SERIES[sid]["posts"]
@@ -368,7 +400,7 @@ def render_post(p, idx):
     strip = STRIP.format(sid=sid, n=n + 1, total=len(order), title_en=SERIES[sid]["en"]["title"], title_es=SERIES[sid]["es"]["title"])
     rel = "\n".join(card(by_slug[s], "../%s/" % s, i) for i, s in enumerate(related[p["slug"]]))
     care = CARE if p.get("caution") else ""
-    return HEAD.format(meta=seo_meta(p), care="", care_top=care, slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
+    return HEAD.format(meta=seo_meta(p), care="", care_top=care, faq=faq_html(p), ld_faq=faq_ld(p), slug=p["slug"], title_en=esc(strip_tags(p["en"]["title"])), title_es=esc(strip_tags(p["es"]["title"])),
                        lead_en=esc(strip_tags(p["en"]["lead"])), lead_es=esc(strip_tags(p["es"]["lead"])), keywords=esc(p.get("keywords") or ""),
                        date=p["date"], modified=modified, date_en=fmt_date(p["date"], "en"), date_es=fmt_date(p["date"], "es"),
                        updated_en=upd_en, updated_es=upd_es, min_en=minutes(p["en"]["body"]), min_es=minutes(p["es"]["body"]),
@@ -385,7 +417,7 @@ HUB = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title_en} — Fotocal</title>
   <meta name="description" content="{intro_en}">
-  <link rel="canonical" href="https://getfotocal.com/blog/series/{sid}/">
+{robots}  <link rel="canonical" href="https://getfotocal.com/blog/series/{sid}/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/blog/series/{sid}/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/{sid}/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/series/{sid}/">
@@ -439,7 +471,7 @@ HUB = """<!DOCTYPE html>
     </header>
 
     <div class="container-narrow">
-      <ol class="hub-list reveal">
+{body}      <ol class="hub-list reveal">
 {items}
       </ol>
       <p class="hub-back reveal"><a href="../../" data-i18n="blog.series.back">← All articles</a></p>
@@ -461,7 +493,7 @@ HUB_ITEM = """        <li class="hub-item">
             <span class="hub-text">
               <strong data-lang-block="en">{title_en}</strong><strong data-lang-block="es">{title_es}</strong>
               <span data-lang-block="en">{lead_en}</span><span data-lang-block="es">{lead_es}</span>
-              <small><span data-lang-block="en">{min_en} <span data-i18n="blog.min">min read</span></span><span data-lang-block="es">{min_es} <span data-i18n="blog.min">min de lectura</span></span></small>
+{notes}              <small><span data-lang-block="en">{min_en} <span data-i18n="blog.min">min read</span></span><span data-lang-block="es">{min_es} <span data-i18n="blog.min">min de lectura</span></span></small>
             </span>
           </a>
         </li>"""
@@ -469,8 +501,19 @@ HUB_ITEM = """        <li class="hub-item">
 def render_hub(sid):
     sr = SERIES[sid]
     ps = [by_slug[s] for s in sr["posts"]]
+    notes = sr.get("notes") or {}
+    def note(q):
+        n = notes.get(q["slug"])
+        if not n: return ""
+        return '              <em class="hub-why" data-lang-block="en">%s</em><em class="hub-why" data-lang-block="es">%s</em>\n' % (n["en"], n["es"])
     items = "\n".join(HUB_ITEM.format(slug=q["slug"], n=i + 1, title_en=q["en"]["title"], title_es=q["es"]["title"], lead_en=q["en"]["lead"], lead_es=q["es"]["lead"],
-                                      min_en=minutes(q["en"]["body"]), min_es=minutes(q["es"]["body"])) for i, q in enumerate(ps))
+                                      min_en=minutes(q["en"]["body"]), min_es=minutes(q["es"]["body"]), notes=note(q)) for i, q in enumerate(ps))
+    # "index": false in series.json keeps a hub as navigation only: noindex,
+    # follow, and tools/build_site.py then leaves it out of the sitemap.
+    robots = "" if sr.get("index", True) else '  <meta name="robots" content="noindex, follow">\n'
+    body = ""
+    if sr.get("body"):
+        body = '      <div class="post-body hub-body reveal" data-lang-block="en">\n%s\n      </div>\n      <div class="post-body hub-body reveal" data-lang-block="es">\n%s\n      </div>\n' % (sr["body"]["en"], sr["body"]["es"])
     def ld_for(lang): return json.dumps({"@context": "https://schema.org", "@type": "Collection", "name": sr[lang]["title"], "description": sr[lang]["intro"],
                      "url": "https://getfotocal.com/blog/series/%s/" % sid,
                      "hasPart": [{"@type": "BlogPosting", "position": i + 1, "headline": strip_tags(q[lang]["title"]), "url": "https://getfotocal.com/blog/%s/" % q["slug"]} for i, q in enumerate(ps)]}, ensure_ascii=False)
@@ -481,7 +524,7 @@ def render_hub(sid):
     return HUB.format(ld_es=ld_for("es"), sid=sid, cat=sr["category"], cat_en=CAT_EN[sr["category"]], title_en=sr["en"]["title"], title_es=sr["es"]["title"],
                       intro_en=esc(sr["en"]["intro"]), intro_es=esc(sr["es"]["intro"]), count=len(ps),
                       min_en=sum(minutes(q["en"]["body"]) for q in ps), min_es=sum(minutes(q["es"]["body"]) for q in ps),
-                      items=items, ld=ld_for("en"), ld_crumbs=ld_crumbs)
+                      items=items, ld=ld_for("en"), ld_crumbs=ld_crumbs, robots=robots, body=body)
 
 SERIES_CARD = """        <a class="habit-card sf-read series-card reveal" href="series/{sid}/"{delay}>
           <span class="log-tag" data-i18n="blog.cat.{cat}">{cat_en}</span>

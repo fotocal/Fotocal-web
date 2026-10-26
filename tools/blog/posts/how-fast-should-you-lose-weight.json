@@ -29,5 +29,35 @@
    "title": "Cuánto peso perder por semana: el ritmo sano, con cifras",
    "desc": "Entre el 0,5 % y el 1 % de tu peso a la semana: por qué ese ritmo conserva músculo y evita el rebote, qué pasa si vas más rápido y cómo calcular el tuyo hoy."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Cuánto peso se puede perder en una semana de forma sana?",
+    "a": "Entre el 0,5 % y el 1 % del peso corporal: para alguien de 80 kg, de 0,4 a 0,8 kg a la semana. Más despacio también vale; más rápido suele costar músculo y volver."
+   },
+   {
+    "q": "¿Y en un mes?",
+    "a": "A ese ritmo, para la misma persona de 80 kg, entre 1,5 y 3,5 kg. La primera semana casi siempre marca más, y buena parte es agua y no grasa, así que no sirve de medida."
+   },
+   {
+    "q": "¿Perder un kilo a la semana es demasiado?",
+    "a": "Depende de cuánto pesas. Para 100 kg es el 1 %, el límite alto del rango. Para 60 kg es casi el 1,7 %: un ritmo que cuesta músculo, dispara el hambre y rara vez se mantiene. <a href=\"../../calculadoras/deficit-calorico/\">La calculadora de déficit</a> traduce el ritmo a calorías."
+   }
+  ],
+  "en": [
+   {
+    "q": "How much weight can you lose in a week, safely?",
+    "a": "Between 0.5 % and 1 % of your body weight: for someone of 80 kg, 0.4 to 0.8 kg a week. Slower is fine too; faster usually costs muscle and comes back."
+   },
+   {
+    "q": "And in a month?",
+    "a": "At that pace, for the same 80 kg person, between 1.5 and 3.5 kg. The first week almost always shows more, and much of that is water rather than fat, so it is not the measure to use."
+   },
+   {
+    "q": "Is a kilo a week too fast?",
+    "a": "It depends on what you weigh. At 100 kg it is 1 %, the top of the range. At 60 kg it is nearly 1.7 %: a pace that costs muscle, drives up hunger and rarely lasts."
+   }
+  ]
  }
 }

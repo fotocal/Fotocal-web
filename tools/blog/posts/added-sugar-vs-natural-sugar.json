@@ -24,5 +24,35 @@
    "title": "Azúcar añadido y azúcar natural: la diferencia que importa",
    "desc": "El azúcar de la fruta no es el del refresco: la fibra cambia cómo se absorbe. Qué cuenta como azúcar añadido, cuánto es demasiado al día y dónde se esconde."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿El azúcar de la fruta engorda igual que el azúcar añadido?",
+    "a": "Es la misma molécula con distinto envoltorio. En la fruta entera llega con fibra, agua y volumen, se absorbe despacio y llena: es muy difícil pasarse. <a href=\"../../calorias/platano/\">Un plátano son 107 kcal</a>; un refresco de lata, más del doble, y no quita el hambre."
+   },
+   {
+    "q": "¿Cuánto azúcar añadido al día es demasiado?",
+    "a": "Las guías ponen el techo en el 10 % de las calorías: unos 50 g para 2.000 kcal al día, y cuanto menos, mejor. El azúcar natural de la fruta entera no entra en ese límite."
+   },
+   {
+    "q": "¿El zumo cuenta como azúcar natural?",
+    "a": "Al exprimir se queda la fibra en el exprimidor y el azúcar pasa a comportarse como azúcar libre: la Organización Mundial de la Salud lo cuenta junto a los añadidos. Un vaso de zumo tiene el azúcar de dos o tres naranjas y la saciedad de ninguna."
+   }
+  ],
+  "en": [
+   {
+    "q": "Does the sugar in fruit count the same as added sugar?",
+    "a": "Same molecule, different wrapping. In whole fruit it comes with fibre, water and volume, is absorbed slowly and fills you up: overdoing it is very hard. A banana is about 107 kcal; a can of soda is more than double, and leaves you hungry."
+   },
+   {
+    "q": "How much added sugar a day is too much?",
+    "a": "Guidelines put the ceiling at 10 % of calories: about 50 g on 2,000 kcal a day, and less is better. The natural sugar in whole fruit does not count toward that limit."
+   },
+   {
+    "q": "Does juice count as natural sugar?",
+    "a": "Juicing leaves the fibre behind and the sugar then behaves like free sugar: the World Health Organization counts it with added sugars. A glass of juice carries the sugar of two or three oranges and the fullness of none."
+   }
+  ]
  }
 }

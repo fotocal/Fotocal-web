@@ -24,5 +24,35 @@
    "title": "¿Cenar tarde engorda? El horario de las comidas y el peso",
    "desc": "Cenar tarde, saltarse el desayuno, comer cinco veces al día: qué dice la evidencia sobre el horario de las comidas y qué manda de verdad para perder peso."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Cenar tarde engorda?",
+    "a": "No por el reloj. Lo que decide el peso es el total del día. Algunos estudios pequeños apuntan a algo más de hambre y algo menos de gasto cuando se come muy tarde, pero el efecto grande es otro: la cena tardía suele ser comida extra que no estaba en el plan."
+   },
+   {
+    "q": "¿A qué hora es mejor cenar?",
+    "a": "A la que te deje dormir bien y no te haga llegar con un hambre extrema. A quien una cena copiosa le altera el sueño, cenar dos o tres horas antes de acostarse le funciona; a quien no, le da igual."
+   },
+   {
+    "q": "¿Saltarse el desayuno adelgaza?",
+    "a": "Ni adelgaza ni engorda por sí mismo. Sirve si por la mañana no tienes hambre y no te lleva a comer de más después; perjudica a quien llega voraz a media mañana. Es preferencia, no regla."
+   }
+  ],
+  "en": [
+   {
+    "q": "Does eating late make you gain weight?",
+    "a": "Not because of the clock. What decides your weight is the day's total. A few small studies point to slightly more hunger and slightly less energy burned when meals are very late, but the big effect is different: the late dinner is usually extra food that was not in the plan."
+   },
+   {
+    "q": "What is the best time to have dinner?",
+    "a": "Whatever time lets you sleep well and keeps you from arriving ravenous. If a big dinner disturbs your sleep, eating two or three hours before bed works; if it does not, it makes no difference."
+   },
+   {
+    "q": "Does skipping breakfast help you lose weight?",
+    "a": "It neither helps nor hurts on its own. It works if you are not hungry in the morning and it does not lead to overeating later; it backfires for people who arrive starving mid-morning. Preference, not rule."
+   }
+  ]
  }
 }

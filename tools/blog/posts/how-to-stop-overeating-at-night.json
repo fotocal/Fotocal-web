@@ -25,5 +25,35 @@
    "title": "Cómo dejar de comer por la noche: por qué pasa y qué hacer",
    "desc": "Comer de más por la noche suele empezar antes: poco de día, el hábito del sofá, lo que hay al alcance. Por qué ocurre y qué hacer, sin prohibirte nada."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Por qué me entra hambre por la noche?",
+    "a": "Casi siempre por algo que pasó antes: comer poco de día, comidas sin proteína ni fibra que no sacian, el cansancio y el estrés que llegan a esa hora, y el hábito de comer delante de la tele, que no tiene final natural."
+   },
+   {
+    "q": "¿Qué puedo picar por la noche sin pasarme?",
+    "a": "Si lo planificas, algo con proteína o fruta: un yogur, <a href=\"../../calorias/huevo-cocido/\">un huevo cocido (85 kcal)</a>, <a href=\"../../calorias/platano/\">un plátano (107 kcal)</a>. Lo que desaparece a las nueve, mejor que no esté en casa."
+   },
+   {
+    "q": "¿Es malo comer después de las ocho?",
+    "a": "No por la hora. El problema de la noche es que lo que se come suele ser extra y sin pensar, encima de las comidas del día. <a href=\"../does-meal-timing-matter-for-weight-loss/\">El artículo sobre el horario de las comidas</a> explica qué cuenta y qué no."
+   }
+  ],
+  "en": [
+   {
+    "q": "Why do I get hungry at night?",
+    "a": "Almost always because of something earlier: too little during the day, meals without protein or fibre that did not fill you, the tiredness and stress that land at that hour, and the habit of eating in front of the TV, which has no natural end."
+   },
+   {
+    "q": "What can I snack on at night without overdoing it?",
+    "a": "If you plan it, something with protein or fruit: a yogurt, a boiled egg (about 85 kcal), a banana (about 107 kcal). Whatever disappears by nine o'clock is better kept out of the house."
+   },
+   {
+    "q": "Is it bad to eat after eight?",
+    "a": "Not because of the hour. The trouble with the evening is that what gets eaten is usually extra and unplanned, on top of the day's meals."
+   }
+  ]
  }
 }

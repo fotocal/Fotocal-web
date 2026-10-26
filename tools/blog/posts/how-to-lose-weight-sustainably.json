@@ -29,5 +29,35 @@
    "title": "Cómo perder peso de forma sostenible: pasos sin dieta exprés",
    "desc": "Perder peso y no recuperarlo: un déficit moderado, proteína, hábitos que caben en tu vida y qué mirar cada semana. Los pasos en orden, sin dietas milagro."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Cómo se evita el efecto rebote?",
+    "a": "Perdiendo despacio con un déficit moderado, montando las comidas sobre proteína y fibra, dejando un 10–20 % de las calorías para lo que te gusta y decidiendo desde el primer día cómo vas a comer cuando llegues al objetivo. El rebote suele empezar en la forma de perder, no en la de mantener."
+   },
+   {
+    "q": "¿Cuánto déficit es sostenible?",
+    "a": "El que te hace perder alrededor del 0,5–1 % de tu peso a la semana o menos. Para la mayoría son entre 300 y 500 kcal al día por debajo de lo que gastas; <a href=\"../../calculadoras/deficit-calorico/\">la calculadora de déficit</a> da tu cifra."
+   },
+   {
+    "q": "¿Hay que contar calorías para siempre?",
+    "a": "No. Registrar durante unas semanas te enseña lo que pesan tus raciones y cuánto suman, y esa intuición se queda cuando lo dejas. Se vuelve a registrar una semana cuando la báscula se mueve sin explicación."
+   }
+  ],
+  "en": [
+   {
+    "q": "How do you avoid regaining the weight?",
+    "a": "Lose it slowly with a moderate deficit, build meals on protein and fibre, keep 10–20 % of your calories for the foods you like, and decide on day one how you will eat when you reach the goal. The rebound usually starts in how the weight was lost, not in how it was kept."
+   },
+   {
+    "q": "How big a deficit is sustainable?",
+    "a": "One that loses around 0.5–1 % of your weight a week or less. For most people that is 300 to 500 kcal a day below what they burn."
+   },
+   {
+    "q": "Do you have to count calories forever?",
+    "a": "No. Logging for a few weeks teaches you what your portions weigh and what they add up to, and that intuition stays when you stop. Log for a week again whenever the scale moves without explanation."
+   }
+  ]
  }
 }

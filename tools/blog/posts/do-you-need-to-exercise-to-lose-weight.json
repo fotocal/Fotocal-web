@@ -24,5 +24,35 @@
    "title": "¿Hace falta ejercicio para adelgazar? La respuesta honesta",
    "desc": "Se puede adelgazar sin gimnasio: lo que manda es la dieta. Para qué sirve el ejercicio, cuál es el mejor tipo para perder grasa y por qué no saltárselo."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Se puede adelgazar sin hacer ejercicio?",
+    "a": "Sí. El déficit lo crea sobre todo lo que comes, y se puede perder peso sólo con la dieta. Lo que pierdes sin entrenar fuerza es, en parte, músculo; con ella, es sobre todo grasa."
+   },
+   {
+    "q": "¿Cuánto ejercicio hace falta para perder peso?",
+    "a": "Ninguna cantidad compensa comer de más: un snack de 300 kcal se come en un minuto y cuesta más de media hora de carrera. El ejercicio útil es el que puedes mantener: entrenamiento de fuerza regular y caminar a diario."
+   },
+   {
+    "q": "¿Qué es mejor para perder grasa, cardio o pesas?",
+    "a": "Las pesas conservan el músculo mientras pierdes grasa, y caminar suma gasto sin cansarte para el día siguiente. El cardio formal es un extra, no un requisito. <a href=\"../cardio-vs-strength-training-for-fat-loss/\">El artículo sobre cardio y fuerza</a> lo compara con detalle."
+   }
+  ],
+  "en": [
+   {
+    "q": "Can you lose weight without exercising?",
+    "a": "Yes. The deficit comes mostly from what you eat, and weight can be lost on diet alone. What you lose without strength training is partly muscle; with it, it is mostly fat."
+   },
+   {
+    "q": "How much exercise do you need to lose weight?",
+    "a": "No amount makes up for overeating: a 300 kcal snack takes a minute to eat and more than half an hour of running to burn. The useful exercise is the kind you can keep up: regular strength training and a daily walk."
+   },
+   {
+    "q": "Which is better for fat loss, cardio or weights?",
+    "a": "Weights keep your muscle while you lose fat, and walking adds burn without wrecking the next day. Formal cardio is an extra, not a requirement."
+   }
+  ]
  }
 }

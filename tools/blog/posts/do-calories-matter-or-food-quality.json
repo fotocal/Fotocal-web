@@ -28,5 +28,35 @@
    "title": "Calorías o calidad de la comida: qué importa para adelgazar",
    "desc": "Las calorías deciden si pierdes peso; la calidad decide cuánta hambre pasas y cómo llegas. Lo que muestran los ensayos y cómo usar las dos cosas en la mesa."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Sirve de algo contar calorías para adelgazar?",
+    "a": "Sí, para una cosa concreta: saber que la cantidad es la correcta. Hace falta un tiempo, no para siempre; una vez sabes lo que suman tus platos de siempre, la cuenta se lleva de cabeza."
+   },
+   {
+    "q": "¿Es mejor contar calorías o contar macros?",
+    "a": "Las calorías deciden el peso; de los macros, la proteína y la fibra deciden el hambre y el músculo. Contar calorías con la proteína alta cubre casi todo lo que cubriría contar macros, con la mitad del trabajo."
+   },
+   {
+    "q": "¿500 calorías de refresco engordan igual que 500 de pollo?",
+    "a": "Sobre el balance energético, sí: son la misma energía. Sobre el día, no: el refresco te deja con hambre en una hora y el pollo con patata y verdura te mantiene saciado horas. Por eso la calidad hace fácil el déficit aunque no lo sustituya."
+   }
+  ],
+  "en": [
+   {
+    "q": "Does counting calories actually help you lose weight?",
+    "a": "Yes, for one specific thing: knowing the amount is right. It takes a while, not forever; once you know what your usual plates add up to, the count runs in your head."
+   },
+   {
+    "q": "Is it better to count calories or macros?",
+    "a": "Calories decide your weight; of the macros, protein and fibre decide hunger and muscle. Counting calories with protein kept high covers almost everything counting macros would, with half the work."
+   },
+   {
+    "q": "Do 500 calories of soda count the same as 500 of chicken?",
+    "a": "For energy balance, yes: it is the same energy. For your day, no: the soda leaves you hungry in an hour and the chicken with potato and vegetables keeps you full for hours. That is why quality makes a deficit easy without replacing it."
+   }
+  ]
  }
 }

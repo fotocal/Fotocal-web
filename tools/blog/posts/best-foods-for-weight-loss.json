@@ -28,5 +28,35 @@
    "title": "Alimentos que sacian con pocas calorías: lista con cifras",
    "desc": "Los alimentos que llenan con menos calorías, con cifras y por qué funcionan: proteína, fibra y agua. Monta las comidas con ellos y el déficit deja de doler."
   }
+ },
+ "faq": {
+  "es": [
+   {
+    "q": "¿Qué alimentos sacian más con menos calorías?",
+    "a": "Los que llevan mucha agua, fibra o proteína por caloría: pollo, pescado, huevos, yogur griego y legumbres; casi cualquier verdura; fruta entera; la patata cocida; la avena y el arroz integral; las sopas de caldo. Llenan el plato y el estómago sin llenar la cuenta."
+   },
+   {
+    "q": "¿Hay alimentos que quemen grasa o tengan «calorías negativas»?",
+    "a": "No. Ningún alimento quema grasa ni resta calorías. Lo que cambia de uno a otro es cuánto te llena cada caloría; el déficit lo hace el conjunto del día, no un ingrediente."
+   },
+   {
+    "q": "¿Qué alimentos conviene racionar aunque sean sanos?",
+    "a": "Los que concentran muchas calorías en poco volumen: aceite, mantequilla, frutos secos, queso y fruta desecada. <a href=\"../../calorias/aceite-de-oliva/\">Una cucharada de aceite de oliva son 80 kcal</a>, y en una sartén caben tres sin que se vean."
+   }
+  ],
+  "en": [
+   {
+    "q": "Which foods fill you up for the fewest calories?",
+    "a": "The ones with the most water, fibre or protein per calorie: chicken, fish, eggs, Greek yogurt and pulses; almost any vegetable; whole fruit; boiled potatoes; oats and brown rice; broth-based soups. They fill the plate and the stomach without filling the count."
+   },
+   {
+    "q": "Are there foods that burn fat or have “negative calories”?",
+    "a": "No. No food burns fat or subtracts calories. What changes from one to another is how full each calorie leaves you; the deficit is made by the whole day, not by an ingredient."
+   },
+   {
+    "q": "Which healthy foods are worth rationing?",
+    "a": "The ones that pack many calories into little volume: oil, butter, nuts, cheese and dried fruit. A tablespoon of olive oil is about 80 kcal, and a pan takes three without anyone noticing."
+   }
+  ]
  }
 }

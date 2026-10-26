@@ -20,7 +20,49 @@
    "common-calorie-counting-mistakes",
    "photo-calorie-apps-accuracy",
    "choose-photo-calorie-counter"
-  ]
+  ],
+  "body": {
+   "en": "<p>Nine articles, written to be read in this order, for someone who has decided to lose weight and wants to understand the one mechanism every diet relies on before choosing one. It takes about forty minutes end to end. You do not need to count anything to follow it; by the end you will know what your body burns, how much less to eat, how fast the scale should move and how to keep track without turning meals into a spreadsheet.</p>\n<p>The order matters. The first two articles explain where your daily number comes from (<a href=\"https://getfotocal.com/calculadoras/calorias-diarias/\">the calculator</a> does the sum for you). The third and fourth turn that into a deficit and a safe pace. The middle three are the practical craft of counting: accurately, without a scale, and without the usual mistakes. The last two are about photo apps, because that is how most people end up counting in 2026, and they deserve the same honesty as everything else here.</p>",
+   "es": "<p>Nueve artículos pensados para leerse en este orden, para quien ha decidido perder peso y quiere entender el único mecanismo en el que se apoya cualquier dieta antes de elegir una. Son unos cuarenta minutos de principio a fin. No hace falta contar nada para seguirlos; al terminar sabrás qué gasta tu cuerpo, cuánto menos comer, a qué ritmo debería moverse la báscula y cómo llevar la cuenta sin convertir las comidas en una hoja de cálculo.</p>\n<p>El orden importa. Los dos primeros explican de dónde sale tu cifra diaria (<a href=\"../../../calculadoras/calorias-diarias/\">la calculadora</a> hace la cuenta por ti). El tercero y el cuarto la convierten en un déficit y en un ritmo seguro (<a href=\"../../../calculadoras/deficit-calorico/\">calculadora de déficit</a>). Los tres del medio son el oficio de contar: con precisión, sin báscula y sin los errores de siempre. Los dos últimos van de las apps de foto, porque así es como acaba contando casi todo el mundo en 2026, y merecen la misma honestidad que el resto.</p>"
+  },
+  "notes": {
+   "understanding-your-basal-metabolic-rate": {
+    "en": "Start here: the energy you burn doing nothing is most of your daily total, and every other number is built on it.",
+    "es": "Empieza aquí: lo que gastas sin hacer nada es la mayor parte de tu total diario, y todas las demás cifras se construyen sobre esa."
+   },
+   "tdee-how-many-calories-you-need": {
+    "en": "Adds movement to the base figure. This is the number a deficit is measured against.",
+    "es": "Suma el movimiento a la cifra base. Es el número contra el que se mide un déficit."
+   },
+   "calorie-deficit-for-fat-loss": {
+    "en": "The mechanism itself: how big a deficit should be, why it stalls and how to protect muscle while you are in one.",
+    "es": "El mecanismo en sí: cómo de grande debe ser el déficit, por qué se estanca y cómo proteger el músculo mientras estás en él."
+   },
+   "how-fast-should-you-lose-weight": {
+    "en": "Turns the deficit into a pace on the scale, and explains why faster usually ends in regaining it.",
+    "es": "Convierte el déficit en un ritmo en la báscula, y explica por qué ir más rápido suele acabar en recuperarlo."
+   },
+   "how-to-count-calories-accurately": {
+    "en": "The craft: where the errors hide, from the cooking oil to the “small” portion that was not.",
+    "es": "El oficio: dónde se esconden los errores, desde el aceite de la sartén hasta la ración «pequeña» que no lo era."
+   },
+   "track-calories-without-weighing": {
+    "en": "For everyone who will not use a kitchen scale: estimates that are close enough, and when they are not.",
+    "es": "Para quien no va a usar báscula de cocina: estimaciones que se acercan lo suficiente, y cuándo no."
+   },
+   "common-calorie-counting-mistakes": {
+    "en": "The seven ways a count goes wrong in practice. Read it before you decide counting “does not work for you”.",
+    "es": "Las siete formas en que una cuenta sale mal en la práctica. Léelo antes de decidir que contar «no te funciona»."
+   },
+   "photo-calorie-apps-accuracy": {
+    "en": "What a photo can and cannot tell about a plate, with real captures from the app rather than a demo salad.",
+    "es": "Qué puede y qué no puede saber una foto de un plato, con capturas reales de la app y no con la ensalada de la demo."
+   },
+   "choose-photo-calorie-counter": {
+    "en": "Six questions to ask any photo calorie counter, ours included, and what the free plan does and does not include.",
+    "es": "Seis preguntas que hacerle a cualquier contador de calorías por foto, el nuestro incluido, y qué incluye y qué no el plan gratis."
+   }
+  }
  },
  "keeping-it-off": {
   "category": "weightloss",
@@ -38,7 +80,33 @@
    "the-truth-about-starvation-mode",
    "why-the-scale-is-not-the-whole-story",
    "maintaining-weight-loss"
-  ]
+  ],
+  "body": {
+   "en": "<p>Most weight-loss advice stops at the moment the scale reaches the number. These five articles are about everything after the first month: the week the scale refuses to move, the story about “starvation mode”, the morning the number jumps for no reason, and what maintenance asks of you once nobody is watching. They are written for someone who has lost weight before and put it back on, which is most people who have ever dieted.</p>\n<p>Read them in order. The first sets the pace that makes the rest possible; the second and third deal with the two stalls that make people quit; the fourth is about reading the scale without being ruled by it; the last is the plan for the day you reach your goal, which is the day most plans end and the weight starts coming back.</p>",
+   "es": "<p>Casi todos los consejos para adelgazar se acaban en el momento en que la báscula llega a la cifra. Estos cinco artículos van de todo lo que viene después del primer mes: la semana en que la báscula no se mueve, el cuento del «modo supervivencia», la mañana en que el número sube sin motivo y lo que te pide el mantenimiento cuando ya nadie mira. Están escritos para quien ha perdido peso antes y lo ha recuperado, que es casi todo el que ha hecho dieta alguna vez.</p>\n<p>Léelos en orden. El primero fija el ritmo que hace posible el resto; el segundo y el tercero tratan los dos estancamientos que hacen abandonar; el cuarto es leer la báscula sin que te gobierne; el último es el plan para el día en que llegues a tu objetivo, que es el día en que casi todos los planes terminan y el peso empieza a volver.</p>"
+  },
+  "notes": {
+   "how-to-lose-weight-sustainably": {
+    "en": "The pace and the habits that make a loss stick: moderate deficit, protein and fibre, and keeping the foods you like.",
+    "es": "El ritmo y los hábitos que hacen que una pérdida se quede: déficit moderado, proteína y fibra, y conservar lo que te gusta."
+   },
+   "weight-loss-plateaus": {
+    "en": "Why the scale stops after a few weeks, how to tell a real stall from a water shift, and what to change first.",
+    "es": "Por qué la báscula se para a las pocas semanas, cómo distinguir un estancamiento real de un cambio de agua, y qué tocar primero."
+   },
+   "the-truth-about-starvation-mode": {
+    "en": "Your metabolism does adapt, but not the way the forums say. What the slowdown really is and how much it matters.",
+    "es": "El metabolismo sí se adapta, pero no como dicen los foros. Qué es de verdad esa bajada y cuánto importa."
+   },
+   "why-the-scale-is-not-the-whole-story": {
+    "en": "Daily weight swings two kilos for reasons that have nothing to do with fat. How to read a trend instead of a morning.",
+    "es": "El peso diario oscila dos kilos por motivos que nada tienen que ver con la grasa. Cómo leer una tendencia y no una mañana."
+   },
+   "maintaining-weight-loss": {
+    "en": "What the people who keep it off actually do, and how to move from a deficit to maintenance without the rebound.",
+    "es": "Qué hace de verdad la gente que no lo recupera, y cómo pasar del déficit al mantenimiento sin el rebote."
+   }
+  }
  },
  "popular-diets": {
   "category": "weightloss",
@@ -56,7 +124,8 @@
    "low-carb-vs-low-fat",
    "does-meal-timing-matter-for-weight-loss",
    "the-truth-about-detox-diets-and-cleanses"
-  ]
+  ],
+  "index": false
  },
  "macros": {
   "category": "nutrition",
@@ -76,7 +145,8 @@
    "carbs-are-not-the-enemy",
    "dietary-fat-how-much-and-which-kinds",
    "how-to-set-your-macros-for-weight-loss"
-  ]
+  ],
+  "index": false
  },
  "beyond-macros": {
   "category": "nutrition",
@@ -94,7 +164,8 @@
    "added-sugar-vs-natural-sugar",
    "do-calories-matter-or-food-quality",
    "how-to-read-nutrition-labels"
-  ]
+  ],
+  "index": false
  },
  "everyday-eating": {
   "category": "eating",
@@ -114,7 +185,41 @@
    "high-protein-breakfast-ideas",
    "eating-out-without-wrecking-your-diet",
    "how-to-eat-healthy-on-a-budget"
-  ]
+  ],
+  "body": {
+   "en": "<p>Seven articles about the plate in front of you on a weekday, not the ideal one. What a balanced meal looks like without weighing it, which foods fill you up for the fewest calories, how to judge a portion by eye, what to snack on, what to have for breakfast, how to eat out without undoing the week and how to do all of it on a normal food budget.</p>\n<p>They are in the order you would meet the problems: the plate first, then the foods that go on it, then the portions, and only then the situations (snacks, mornings, restaurants, money) where good intentions usually go. Spanish readers have the <a href=\"https://getfotocal.com/calorias/\">calorie pages for Spanish dishes</a> alongside: the per-serving figures there are the ones these articles assume.</p>",
+   "es": "<p>Siete artículos sobre el plato que tienes delante un día entre semana, no sobre el ideal. Cómo es una comida equilibrada sin pesarla, qué alimentos sacian con menos calorías, cómo calcular una ración a ojo, qué picar, qué desayunar, cómo comer fuera sin deshacer la semana y cómo hacer todo eso con un presupuesto normal.</p>\n<p>Van en el orden en que te encuentras los problemas: primero el plato, luego lo que va en él, luego las raciones y sólo después las situaciones (snacks, mañanas, restaurantes, dinero) donde suelen irse las buenas intenciones. Al lado están las <a href=\"../../../calorias/\">páginas de calorías de los platos españoles</a>: las cifras por ración de allí son las que estos artículos dan por supuestas.</p>"
+  },
+  "notes": {
+   "what-a-balanced-plate-looks-like": {
+    "en": "The one picture to remember: half vegetables, a quarter protein, a quarter carbohydrate, and the fat measured.",
+    "es": "El único dibujo que hay que recordar: media de verdura, un cuarto de proteína, un cuarto de hidratos y la grasa medida."
+   },
+   "best-foods-for-weight-loss": {
+    "en": "The foods that fill you up for the fewest calories, and the “healthy” ones that are easy to overdo.",
+    "es": "Los alimentos que llenan con menos calorías, y los «sanos» con los que es fácil pasarse."
+   },
+   "portion-control-simple-tricks": {
+    "en": "Hands, plates and glasses as measuring tools, for the meals you will never weigh.",
+    "es": "Manos, platos y vasos como medidas, para las comidas que nunca vas a pesar."
+   },
+   "healthy-snacks-that-satisfy": {
+    "en": "Snacks that hold you until the next meal rather than the next snack.",
+    "es": "Snacks que aguantan hasta la siguiente comida y no hasta el siguiente snack."
+   },
+   "high-protein-breakfast-ideas": {
+    "en": "Why the first meal decides the mid-morning hunger, and breakfasts with 25 g of protein or more.",
+    "es": "Por qué la primera comida decide el hambre de media mañana, y desayunos con 25 g de proteína o más."
+   },
+   "eating-out-without-wrecking-your-diet": {
+    "en": "Menus, bread baskets and the second glass: how to eat out and still have a normal week.",
+    "es": "Cartas, cestas de pan y la segunda copa: cómo comer fuera y seguir teniendo una semana normal."
+   },
+   "how-to-eat-healthy-on-a-budget": {
+    "en": "Legumes, eggs, frozen vegetables and the rest of the cheap shelf. Eating well is not the expensive option.",
+    "es": "Legumbres, huevos, verdura congelada y el resto de la estantería barata. Comer bien no es la opción cara."
+   }
+  }
  },
  "planning-the-week": {
   "category": "eating",
@@ -130,7 +235,8 @@
    "plan-a-week-of-meals-in-30-minutes",
    "how-to-build-a-healthy-grocery-list",
    "meal-prep-for-beginners"
-  ]
+  ],
+  "index": false
  },
  "mind-and-appetite": {
   "category": "mindset",
@@ -149,7 +255,8 @@
    "emotional-eating",
    "how-to-stop-overeating-at-night",
    "how-to-stay-consistent-with-healthy-habits"
-  ]
+  ],
+  "index": false
  },
  "movement-and-sleep": {
   "category": "movement",
@@ -169,6 +276,7 @@
    "building-muscle-while-losing-fat",
    "how-sleep-affects-your-weight",
    "hydration-and-weight"
-  ]
+  ],
+  "index": false
  }
 }

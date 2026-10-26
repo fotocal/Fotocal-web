@@ -46,7 +46,7 @@ jobs:
       # the later of the two wins. Settings → Pages → Source → GitHub
       # Actions ends that.)
       - name: Drop build-only files from the artifact
-        run: rm -rf src tools .github README.md deploy-trigger.txt .gitignore
+        run: rm -rf src tools docs .github README.md deploy-trigger.txt .gitignore
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

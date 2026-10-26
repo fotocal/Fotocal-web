@@ -9,6 +9,12 @@
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
+  /* Belt and braces for the http-to-https rule: Pages redirects at the edge when
+     "Enforce HTTPS" is on; this catches a page that still loaded over http. */
+  if (location.protocol === "http:" && /(^|\.)getfotocal\.com$/.test(location.hostname)) {
+    location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    return;
+  }
 
   /* Inline flag artwork — SVG, not emoji, so flags render identically on
      every OS (Windows in particular does not draw flag emoji). */

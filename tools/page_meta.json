@@ -54,8 +54,8 @@
       "desc": "Escanea el código de barras de cualquier producto y mira sus calorías, su puntuación sobre 100 y si choca con tus alergias. Sin límite y gratis en Fotocal."
     },
     "en": {
-      "title": "Free Food Barcode Scanner with Health Score — Fotocal",
-      "desc": "Scan any product’s barcode and see its calories, a score out of 100 and whether it clashes with your allergies. Unlimited and free in Fotocal, on every plan."
+      "title": "Food Barcode Scanner, Free: Calories, Score and Allergens",
+      "desc": "Scan any product's barcode and see its calories, macros, a score out of 100 and whether it clashes with your allergies. Free and unlimited on any plan."
     }
   },
   "features/voice-logging/index.html": {
@@ -64,8 +64,8 @@
       "desc": "Di «dos huevos y una tostada» y Fotocal lo registra con calorías y macros. Gratis: 1 registro por voz al día, sin tarjeta; sin límite en Premium."
     },
     "en": {
-      "title": "Count Calories by Voice, Free: Say What You Ate — Fotocal",
-      "desc": "Say “two eggs and toast” and Fotocal logs it with calories and macros. Free: 1 voice log a day, no card, unlimited on Premium. What it understands."
+      "title": "Log Calories by Voice, Free: Just Say What You Ate",
+      "desc": "Say “two eggs and toast” and Fotocal logs each food with its calories and macros, in any language. Free: 1 voice log a day, no card; unlimited on Premium."
     }
   },
   "features/recipe/index.html": {

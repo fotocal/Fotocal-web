@@ -412,7 +412,15 @@ def inject_chrome(src, lang):
     c = _CHROME[lang]
     if not c:
         return src
-    src = src.replace('<div id="site-nav"></div>', '<div id="site-nav">%s</div>' % c[0], 1)
+    nav = c[0]
+    # The switcher was captured on the home page; point it at THIS page's
+    # counterparts, read from the hreflang alternates already in the head
+    # (a Spanish-only page has no English alternate and goes to /en/).
+    alts = dict(re.findall(r'<link rel="alternate" hreflang="(es|en)" href="%s([^"]*)">' % re.escape(SITE), src))
+    for l in ("es", "en"):
+        target = "/" + alts[l] if l in alts else ("/en/" if l == "en" else "/")
+        nav = re.sub(r'(class="lang-item" role="option" href=")[^"]*(" hreflang="%s")' % l, r'\g<1>%s\2' % target, nav, count=1)
+    src = src.replace('<div id="site-nav"></div>', '<div id="site-nav">%s</div>' % nav, 1)
     src = src.replace('<div id="site-footer"></div>', '<div id="site-footer">%s</div>' % c[1], 1)
     return src
 

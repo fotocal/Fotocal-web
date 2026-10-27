@@ -142,7 +142,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/the-truth-about-starvation-mode/` — La verdad sobre el «modo supervivencia» — Fotocal  _ES+EN_
 - `/blog/track-calories-without-weighing/` — Cómo contar calorías sin pesar cada comida — Fotocal  _ES+EN_
 - `/blog/understanding-your-basal-metabolic-rate/` — Entender tu tasa metabólica basal (TMB) — Fotocal  _ES+EN_
-- `/blog/weight-loss-plateaus/` — Estancamientos al perder peso: por qué pasan y qué hacer  _ES+EN_
+- `/blog/weight-loss-plateaus/` — Estancamiento al perder peso: por qué se para y qué hacer  _ES+EN_
 - `/blog/what-a-balanced-plate-looks-like/` — ¿Cómo es realmente un plato equilibrado? — Fotocal  _ES+EN_
 - `/blog/why-crash-diets-fail/` — Por qué fracasan las dietas exprés (y qué hacer en su lugar)  _ES+EN_
 - `/blog/why-micronutrients-matter/` — Micronutrientes: por qué importan al contar calorías  _ES+EN_

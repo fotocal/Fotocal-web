@@ -8,6 +8,14 @@ import { writeFileSync } from 'node:fs';
 const base = process.env.SITE_BASE || 'http://127.0.0.1:8765';
 const browser = await chromium.launch();
 const page = await browser.newPage();
+// The built pages already carry a pre-rendered nav, and layout.js keeps one
+// it finds, so serve the page with that nav emptied: what gets captured is
+// always a fresh render from the current layout.js and dictionaries.
+await page.route(url => url.pathname.endsWith('/') , async route => {
+  const res = await route.fetch(); let body = await res.text();
+  body = body.replace(/<div id="site-nav">[\s\S]*?(?=\s*<main\b)/, '<div id="site-nav"></div>');
+  await route.fulfill({ response: res, body, headers: { ...res.headers(), 'content-type': 'text/html; charset=utf-8' } });
+});
 for (const [lang, path] of [['es', '/'], ['en', '/en/']]) {
   await page.goto(base + path, { waitUntil: 'load' });
   await page.waitForSelector('#site-nav .nav');

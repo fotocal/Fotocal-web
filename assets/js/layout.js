@@ -243,7 +243,7 @@
             '</div>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5>' + t("footer.product") + '</h5>' +
+            '<p class="footer-h">' + t("footer.product") + '</p>' +
             '<a href="' + u("") + '">' + t("nav.home") + '</a>' +
             '<a href="' + u("subscription/") + '">' + t("nav.subscription") + '</a>' +
             '<a href="' + u("blog/") + '">' + t("nav.blog") + '</a>' +
@@ -256,7 +256,7 @@
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5>' + t("nav.features") + '</h5>' +
+            '<p class="footer-h">' + t("nav.features") + '</p>' +
             '<a href="' + u("features/") + '">' + t("nav.allFeatures") + '</a>' +
             '<a href="' + u("features/scan-food/") + '">' + t("nav.scanFood") + '</a>' +
             '<a href="' + u("features/scan-barcode/") + '">' + t("nav.scanBarcode") + '</a>' +
@@ -264,7 +264,7 @@
             '<a href="' + u("ai/") + '">' + t("nav.coach") + '</a>' +
           '</div>' +
           '<div class="footer-col">' +
-            '<h5>' + t("footer.company") + '</h5>' +
+            '<p class="footer-h">' + t("footer.company") + '</p>' +
             '<a href="' + u("about/") + '">' + t("nav.aboutUs") + '</a>' +
             '<a href="' + u("contact/") + '">' + t("nav.contactUs") + '</a>' +
             '<a href="' + u("faq/") + '">' + t("nav.faq") + '</a>' +

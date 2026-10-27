@@ -231,7 +231,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/mindful-eating-beginners-guide/`
 - **Title** (58): Alimentación consciente: guía para principiantes — Fotocal
-- **Description** (156): Comer con atención plena puede ayudarte a disfrutar más de la comida y a comer de más con menos frecuencia. Qué es, por qué funciona y cómo practicarlo hoy.
+- **Description** (158): Alimentación consciente con poco tiempo: comer con atención plena puede ayudarte a disfrutar más de la comida y a comer de más con menos frecuencia. Qué es, p
 - **H1**: Alimentación consciente: guía para principiantes
 
 ### `/blog/neat-the-hidden-calorie-burn/`
@@ -251,7 +251,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/portion-control-simple-tricks/`
 - **Title** (54): Control de raciones: trucos sencillos que sí funcionan
-- **Description** (158): Las raciones han crecido en silencio durante décadas. Trucos prácticos para comer la cantidad adecuada en casa y fuera, sin pesar nada y sin sentir privación.
+- **Description** (158): Cálculo de raciones sin báscula: las raciones han crecido en silencio durante décadas. Trucos prácticos para calcular cuánto es una ración y comer la cantidad
 - **H1**: Control de raciones: trucos sencillos que sí funcionan
 
 ### `/blog/series/calories/`
@@ -295,9 +295,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Entender tu tasa metabólica basal (TMB)
 
 ### `/blog/weight-loss-plateaus/`
-- **Title** (56): Estancamientos al perder peso: por qué pasan y qué hacer
-- **Description** (153): ¿Progreso parado? Los estancamientos son normales y tienen arreglo. Las razones reales por las que se frena la pérdida y formas prácticas de reactivarla.
-- **H1**: Estancamientos al perder peso: por qué pasan y qué hacer
+- **Title** (57): Estancamiento al perder peso: por qué se para y qué hacer
+- **Description** (156): Por qué se estanca la pérdida de peso, cómo distinguir un estancamiento real del ruido del agua, el patrón de estancamiento y bajada de golpe y qué cambiar.
+- **H1**: Estancamiento en la pérdida de peso: por qué se para y cómo romperlo
 
 ### `/blog/what-a-balanced-plate-looks-like/`
 - **Title** (50): ¿Cómo es realmente un plato equilibrado? — Fotocal
@@ -643,13 +643,13 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/added-sugar-vs-natural-sugar/`
 - **Title** (51): Added Sugar vs Natural Sugar: What Actually Matters
-- **Description** (141): Is the sugar in fruit as bad as the sugar in soda? Learn the real difference between added and natural sugars and how much sugar is too much.
+- **Description** (155): Natural sugar vs added sugar: is the sugar in fruit as bad as the sugar in soda? The real difference, how much added sugar is too much, and where it hides.
 - **H1**: Added Sugar vs Natural Sugar: What Actually Matters
 
 ### `/en/blog/best-foods-for-weight-loss/`
-- **Title** (52): Best Foods for Weight Loss: Filling, Low in Calories
-- **Description** (157): The foods that keep you full for fewest calories, with the numbers and why they work: protein, fibre, water. Build meals on them and a deficit stops hurting.
-- **H1**: Foods That Fill You Up for Fewer Calories
+- **Title** (48): Low-Calorie, High-Satiety Foods That Fill You Up
+- **Description** (155): Low calorie satiating foods: the high-satiety foods that fill you up for the fewest calories, why they work, and the healthy-looking ones that are easy to.
+- **H1**: Low-Calorie, High-Satiety Foods: What Fills You Up for Fewer Calories
 
 ### `/en/blog/building-muscle-while-losing-fat/`
 - **Title** (59): Building Muscle While Losing Fat: Is It Possible? — Fotocal
@@ -733,17 +733,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/high-protein-diet-benefits-and-how-to-start/`
 - **Title** (54): High-Protein Diet: Benefits and How to Start — Fotocal
-- **Description** (144): A higher-protein diet supports fat loss, muscle and satiety. Here are the real benefits, how much to aim for, and easy ways to eat more protein.
+- **Description** (158): The benefits of a high-protein diet are real: fat loss that keeps muscle, less hunger, easier adherence. What the evidence supports, how much protein to aim f
 - **H1**: High-Protein Diet: Benefits and How to Start
 
 ### `/en/blog/how-fast-should-you-lose-weight/`
-- **Title** (57): How Fast Should You Lose Weight? The Safe Rate in Numbers
-- **Description** (159): Between 0.5 % and 1 % of your weight a week: why that pace keeps muscle and avoids the rebound, what happens faster than that, and how to work out yours today.
-- **H1**: How Fast Should You Lose Weight?
+- **Title** (54): How Fast Can You Lose Weight? The Safe Rate in Numbers
+- **Description** (157): How fast can you lose weight safely? 0.5 to 1 % of your weight a week: why that pace keeps muscle and avoids the rebound, what happens if you go faster, and.
+- **H1**: How Fast Can You Lose Weight? The Safe Rate in Numbers
 
 ### `/en/blog/how-many-calories-does-exercise-burn/`
 - **Title** (56): How Many Calories Does Exercise Actually Burn? — Fotocal
-- **Description** (145): Fitness trackers and cardio machines often overestimate calorie burn. A realistic look at exercise calories and why “eating them back” backfires.
+- **Description** (158): Does exercise burn calories? Yes, fewer than the machine says. A realistic look at how many calories exercise actually burns, why trackers overestimate, and w
 - **H1**: How Many Calories Does Exercise Actually Burn?
 
 ### `/en/blog/how-much-protein-per-day/`
@@ -763,8 +763,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/how-to-count-calories-accurately/`
 - **Title** (52): How to Count Calories Accurately: A Beginner’s Guide
-- **Description** (153): Learn how to count calories accurately without burning out. A practical, no-nonsense beginner guide to portions, labels, and building a habit that lasts.
-- **H1**: How to Count Calories Accurately: A Beginner’s Guide
+- **Description** (157): How to count calories accurately without burning out: the portion errors that matter, how to read a label, what to do in restaurants, and a habit that lasts.
+- **H1**: How to Count Calories: Accurately, Without Burning Out
 
 ### `/en/blog/how-to-eat-healthy-on-a-budget/`
 - **Title** (40): How to Eat Healthy on a Budget — Fotocal
@@ -797,9 +797,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: How to Stay Consistent With Healthy Habits
 
 ### `/en/blog/how-to-stop-overeating-at-night/`
-- **Title** (31): How to Stop Overeating at Night
-- **Description** (157): Nighttime eating derails many good days. Why evening overeating happens, what it says about the rest of the day, and practical ways to keep your nights calm.
-- **H1**: How to Stop Overeating at Night
+- **Title** (55): How to Stop Eating at Night: Why It Happens, What Works
+- **Description** (152): How to stop eating at night: why evening overeating happens (too little during the day, habit, what is within reach) and the changes that actually keep.
+- **H1**: How to Stop Eating at Night: Why It Happens and What Works
 
 ### `/en/blog/hydration-and-weight/`
 - **Title** (56): Hydration and Weight: How Much Water Do You Really Need?
@@ -828,7 +828,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/macronutrients-101/`
 - **Title** (52): Macronutrients 101: Protein, Carbs and Fat Explained
-- **Description** (142): A clear beginner’s guide to the three macronutrients — what each does, how many calories they provide, and how to balance them for your goals.
+- **Description** (158): What are the three macronutrients? Protein, carbohydrates and fat: what each does, how many calories each provides, and how to balance them for your goals, wi
 - **H1**: Macronutrients 101: Protein, Carbs and Fat Explained
 
 ### `/en/blog/maintaining-weight-loss/`
@@ -883,7 +883,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/tdee-how-many-calories-you-need/`
 - **Title** (59): TDEE Explained: How Many Calories You Really Need — Fotocal
-- **Description** (149): Your TDEE is the number of calories you burn in a day. Here’s how to estimate it, why it changes, and how to use it to lose, gain or maintain weight.
+- **Description** (158): TDEE meaning, in one line: Total Daily Energy Expenditure, the number of calories you burn in a day. How to estimate it, why it changes, and how to use it to 
 - **H1**: TDEE Explained: How Many Calories You Really Need
 
 ### `/en/blog/the-truth-about-detox-diets-and-cleanses/`
@@ -893,7 +893,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/the-truth-about-starvation-mode/`
 - **Title** (43): The Truth About “Starvation Mode” — Fotocal
-- **Description** (143): Does eating too little stop weight loss? The real science of metabolic adaptation, debunked myths, and what actually happens when you undereat.
+- **Description** (158): Is starvation mode real? Eating too little does change your metabolism, but not the way the forums say. What metabolic adaptation actually is, how big it is, 
 - **H1**: The Truth About “Starvation Mode”
 
 ### `/en/blog/track-calories-without-weighing/`
@@ -907,9 +907,9 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Understanding Your Basal Metabolic Rate (BMR)
 
 ### `/en/blog/weight-loss-plateaus/`
-- **Title** (59): Weight Loss Plateaus: Why They Happen and How to Break Them
-- **Description** (156): Progress stalled? Plateaus are normal and fixable. The real reasons weight loss stalls, how to tell a plateau from water noise, and how to get moving again.
-- **H1**: Weight Loss Plateaus: Why They Happen and How to Break Them
+- **Title** (55): Weight Loss Plateau: Why Weight Loss Stalls, What to Do
+- **Description** (158): Why weight loss stalls, how to tell a real plateau from water noise, the plateau-then-sudden-drop pattern, how long to wait, and the one change to make first.
+- **H1**: Weight Loss Plateau: Why Weight Loss Stalls and How to Break It
 
 ### `/en/blog/what-a-balanced-plate-looks-like/`
 - **Title** (56): What Does a Balanced Plate Actually Look Like? — Fotocal

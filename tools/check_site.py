@@ -357,6 +357,10 @@ def main():
     check_compare_table()
     check_premium_list()
 
+    # ── pinned defects (tools/check_pins.py): things found live once ──
+    import check_pins
+    check_pins.run(fail, warn)
+
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     tree = ET.parse(os.path.join(ROOT, "sitemap.xml"))

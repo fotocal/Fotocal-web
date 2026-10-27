@@ -422,3 +422,47 @@ Lo que no va a pasar por mucho on-page que se haga: adelantar a las
 tiendas de aplicaciones y a los sitios con miles de enlaces en consultas
 de app genéricas. Esa es la parte que necesita enlaces de fuera, y es
 honesto decirlo ahora y no en tres meses.
+
+## 11 · Ronda completa de auditoría (28 de octubre de 2026)
+
+Motivo: el propietario encontró en la web publicada un enlace «FAQ» sin
+texto, en el desplegable «Nosotros» y en el pie «Empresa», en los dos
+idiomas. Tercera vez que un defecto lo encuentra él. Esta ronda busca el
+resto, los arregla y **fija cada uno con una comprobación que falla si
+vuelve** (`tools/check_pins.py`, ejecutado por `tools/check_site.py`;
+`tools/check_mobile.mjs`, `tools/check_calcs.mjs` y
+`tools/check_contact.mjs` para lo que necesita navegador).
+
+### Defectos encontrados, gravedad y estado
+
+| # | Defecto | Gravedad | Causa | Estado | Pin |
+|---|---|---|---|---|---|
+| 1 | Enlace «FAQ» vacío en navegación y pie, 630 enlaces vacíos en 217 páginas | **Alta** (enlace sin texto en todas las páginas, para Google y para lectores de pantalla) | La clave `nav.faq` no existía en el diccionario `i18n.js`; `t()` devuelve «» para una clave que falta. El menú llevaba así desde que se añadió FAQ; el pre-render del 27-10 lo fijó en el HTML en vez de dejarlo sólo en el JS. Además, el script de captura volvió a capturar el nav vacío porque `layout.js` conserva un nav ya pre-renderizado. | Arreglado: clave añadida en los dos idiomas; `render_chrome.mjs` sirve la página sin nav para capturar siempre un render fresco. | Pin 1 (ningún `<a>` sin texto, aria-label o imagen con alt) y pin 9 (toda clave que pida el JS existe en los dos diccionarios). |
+| 2 | Selector de idioma pre-renderizado apuntaba a la portada en todas las páginas (capturado desde `/`) | Media (para rastreadores; el JS lo corregía al cargar) | El nav capturado es el de la portada. | Arreglado: el build reescribe los dos `href` con los `hreflang` de cada página; las páginas sólo en español mandan a `/en/`. | Pin 10. |
+| 3 | Salto de nivel de encabezado en todas las páginas: `h2` → `h5` | Media | Los títulos de columna del pie eran `<h5>`; antes sólo existían en el DOM renderizado por JS, ahora en el HTML. | Arreglado: son `<p class="footer-h">`. | Pin 5 (un H1, sin saltos). |
+| 4 | FAQPage de `/features/voice-logging/` declaraba dos preguntas que no están en la página («¿Qué idiomas entiende?» y otra) | Media (schema que no coincide con el contenido) | Dos de los cuatro acordeones muestran una frase de ejemplo, no la pregunta. | Arreglado: el schema lista sólo las dos preguntas visibles. | Pin 8 (cada pregunta del FAQPage aparece en el texto de la página). |
+| 5 | Migas de pan de 22 px de alto en móvil (blog, platos, calculadoras) | Baja (WCAG pide 24 px) | Enlace en línea sin caja. | Arreglado: `inline-block` con relleno. | `check_mobile.mjs`. |
+| 6 | Enlaces «Leer →» y «Ver los planes →» de 23 px | Baja | Idem. | Arreglado. | `check_mobile.mjs`. |
+| 7 | `pages.css` (7,5 KB) no lo cargaba ninguna página | Baja (archivo muerto; una regla del honeypot que creí activa vivía ahí) | Hoja antigua. | Borrada. La regla real del honeypot está en `features.css` y oculta el señuelo. | Pin 13 (ningún CSS/JS sin cargar). |
+| 8 | Páginas huérfanas `/features/` y `/faq/` (ya arreglado el 27-10) | — | — | — | Comprobación de entrantes en el barrido. |
+
+Lo que se buscó y **no** apareció (y queda fijado para que no aparezca):
+texto de marcador («TODO», «lorem», `{{`, `undefined`, `NaN`); anchors
+«aquí»/«click here»; enlaces del cuerpo a redirecciones; imágenes sin
+`alt`, sin dimensiones o sin archivo; `og:image` compartida o ausente;
+precios distintos de 6,99 €, 34,99 € y su equivalente 2,92 €/mes; límites
+del plan gratis distintos de 2 escaneos y 1 voz al día; otra cifra que no
+sea 7.700 kcal por kilo; recuento de platos distinto del de la app
+(218); inglés en páginas españolas o al revés (heurística, aviso);
+desbordamiento horizontal a 360 px en 25 plantillas. Las cuatro
+calculadoras dan la respuesta correcta en 16 valores comprobados contra
+Mifflin-St Jeor, 7.700 kcal/kg y 4/4/9 kcal/g; el formulario de contacto
+envía el payload correcto a Web3Forms (interceptado, no enviado) en los
+dos idiomas y el honeypot bloquea sin enviar.
+
+### Lo que no se puede comprobar desde aquí
+
+El HTML publicado no se puede descargar desde este entorno (el dominio
+no resuelve), así que «leer la página desplegada» se hace sobre el HTML
+que sube el workflow, que es byte a byte el mismo. La prueba final sigue
+siendo el móvil del propietario.

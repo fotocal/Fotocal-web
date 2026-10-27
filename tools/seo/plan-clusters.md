@@ -119,3 +119,65 @@ que menos se diferencian de lo que ya hay.
 - Decisión sobre los índices de serie (a/b).
 - Las cuatro capturas de B2, en español, cuando pueda (sin prisa: va en la semana 6).
 - El export de Search Console con la columna Motivo (auditoría §5).
+
+## ¿Sigue siendo correcta la estrategia «español primero»? (28 de octubre de 2026, con 90 días de Search Console delante)
+
+Los datos: 1.790 impresiones, 10 clics, 266 consultas. Marca 19 %.
+Inglés 78 %. **Español 2,3 %** (41 impresiones en 90 días, nueve
+consultas). Y, del 26-10: España es el primer país por impresiones
+(276 de 655 en 28 días), es decir, muchas impresiones «españolas» son de
+consultas en inglés hechas desde España, no de contenido en español.
+
+**Diagnóstico honesto de por qué el español no aparece.** Las tres
+causas, y cuánto pesa cada una:
+
+1. **Edad e indexación (la mayor).** Las páginas españolas que pueden
+   ganar algo (`/calorias/`, 41 platos, 4 calculadoras, los dos artículos
+   de octubre) tienen entre 12 y 15 días y 80 de ellas siguen
+   «descubiertas, sin rastrear». El blog inglés tiene desde septiembre.
+   Un periodo de 90 días que termina hoy casi no contiene español
+   indexado. Este dato no dice que el español no funcione; dice que aún
+   no ha empezado.
+2. **El blog español es una traducción (la segunda).** Los 54 artículos
+   se escribieron en inglés con sus frases de búsqueda inglesas; la
+   versión española lleva slug inglés y H1 traducidos, no las frases que
+   se teclean en España. Por eso la única consulta española con volumen
+   («pérdida de grasa sostenible», 24) cae en un artículo cuyo H1 no la
+   decía. Hoy se han puesto las nueve consultas españolas reales en sus
+   páginas, palabra por palabra.
+3. **Tiendas y autoridad (la tercera, y la única sin arreglo interno).**
+   Para «contador de calorías por foto» la primera página son fichas de
+   App Store; para «app contar calorías» Yazio y las tiendas. Ahí el
+   español compite contra dominios con años de enlaces, y la web tiene
+   cero enlaces externos.
+
+**La respuesta incómoda.** El inglés es donde Google ya confía en el
+sitio: tres grupos (contar calorías, alimentos saciantes, estancamiento)
+suman más de 150 impresiones con páginas que ni siquiera llevaban la
+frase. Costó un día ponerla. El español no ha dado nada todavía y no lo
+dará hasta enero por puro calendario. Si la pregunta es «¿dónde está el
+tráfico barato ahora?», la respuesta es el inglés, y negarlo sería
+contarte lo que quieres oír.
+
+**Lo que haría, en este orden:**
+
+1. **Mantener el español primero en el contenido nuevo**, porque el
+   negocio está en España y porque las páginas españolas aún no han
+   tenido su oportunidad. Cambiar de rumbo con 15 días de datos sería un
+   error mayor que esperar.
+2. **No dejar morir el inglés que ya funciona**: lo hecho hoy (frases
+   exactas en 14 artículos, el del estancamiento reescrito con FAQ) es
+   casi toda la inversión inglesa que hace falta. Una hora al mes para
+   revisar qué consultas inglesas nuevas aparecen y ponerlas en su
+   página. Nada de artículos nuevos en inglés mientras los españoles no
+   estén indexados.
+3. **Juzgar el español el 15 de enero de 2027**, no antes: para entonces
+   las páginas de octubre llevarán tres meses indexadas y el artículo
+   semanal habrá añadido doce. Si en esa fecha «cuántas calorías tiene un
+   plato», «calorías tortilla» o «calculadora déficit» no muestran
+   impresiones, el problema será de autoridad y la palanca serán los
+   enlaces externos, no más contenido.
+4. **Lo que no cambia con ninguna estrategia:** las consultas de app
+   genéricas las ganan las tiendas. La web gana en preguntas, platos y
+   calculadoras, y de ahí manda a la ficha de Play. Ese es el papel de la
+   web y conviene asumirlo.

@@ -1051,7 +1051,7 @@ body.nav-locked { overflow: hidden; }
   .footer-social a { width: 44px; height: 44px; }
   .footer-social svg { width: 20px; height: 20px; }
 }
-.footer-col h5 {
+.footer-col .footer-h {
   font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
   color: var(--brand-text); margin-bottom: .8rem;
 }

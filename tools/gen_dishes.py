@@ -550,7 +550,7 @@ def hub_page(ready):
     o('\n<main id="main">\n  <article class="post dp dp-hub">\n    <header class="post-head">\n      <div class="container-narrow">')
     o('        <nav class="post-crumbs reveal" aria-label="Migas de pan"><a href="../">Inicio</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">Calorías de platos</a></nav>')
     o('        <h1 class="post-title reveal">Calorías de los platos españoles, por ración y por 100 g</h1>')
-    o('        <p class="post-lead reveal">Una tabla con lo que de verdad se come en España: la ración tal como se sirve, sus calorías, y las de 100 g para poder comparar. Cada plato tiene su página, con el reparto entre proteínas, hidratos y grasas, qué pesa una ración y con qué se parece.</p>')
+    o('        <p class="post-lead reveal">¿Cuántas calorías tiene un plato? Una tabla con lo que de verdad se come en España: la ración tal como se sirve, sus calorías, y las de 100 g para poder comparar. Cada plato tiene su página, con el reparto entre proteínas, hidratos y grasas, qué pesa una ración y con qué se parece.</p>')
     o('      </div>\n    </header>\n    <div class="container-narrow">')
     o('      <div class="post-body reveal">')
     o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Plato</th><th scope="col">Ración</th><th scope="col">kcal / ración</th><th scope="col">kcal / 100 g</th><th scope="col">Prot.</th><th scope="col">Hidr.</th><th scope="col">Grasas</th></tr></thead><tbody>')

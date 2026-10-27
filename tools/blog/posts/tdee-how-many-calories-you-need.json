@@ -2,7 +2,7 @@
  "slug": "tdee-how-many-calories-you-need",
  "category": "calories",
  "date": "2026-07-15",
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "keywords": "TDEE, total daily energy expenditure, how many calories do I need, maintenance calories, BMR, calorie needs",
  "cover": {
   "category": "Calorie counting",
@@ -11,7 +11,7 @@
  },
  "en": {
   "title": "TDEE Explained: How Many Calories You Really Need",
-  "lead": "Your TDEE is the number of calories you burn in a day. Here’s how to estimate it, why it changes, and how to use it to lose, gain or maintain weight.",
+  "lead": "TDEE meaning, in one line: Total Daily Energy Expenditure, the number of calories you burn in a day. How to estimate it, why it changes, and how to use it to lose, gain or maintain weight.",
   "body": "<p>If you’ve ever wondered “how many calories should I eat?”, the honest answer is: it depends on your TDEE. Total Daily Energy Expenditure is the total number of calories your body burns in 24 hours. Eat below it and you lose weight; eat above it and you gain. Everything else is detail.</p>\n<h2>The four parts of your TDEE</h2>\n<ul>\n<li><strong>BMR (Basal Metabolic Rate):</strong> the energy to keep you alive at rest — usually 60–70% of the total.</li>\n<li><strong>TEF (Thermic Effect of Food):</strong> the calories used to digest food, around 10%. Protein costs the most to digest.</li>\n<li><strong>NEAT:</strong> walking, fidgeting, chores. Hugely variable between people.</li>\n<li><strong>Exercise:</strong> deliberate workouts — often smaller than people assume.</li>\n</ul>\n<h2>How to estimate your TDEE</h2>\n<p>Start with a <a href=\"../understanding-your-basal-metabolic-rate/\">BMR formula</a> like Mifflin-St Jeor, then multiply by an activity factor: 1.2 for sedentary, up to around 1.7 for very active. This gives a ballpark. But formulas are averages, and your real number can differ by 200–300 calories in either direction.</p>\n<h2>The better way: measure it</h2>\n<p>The most accurate TDEE is your own data. Log your intake consistently for two to three weeks and track your weight. If your weight holds steady, your average daily intake <em>is</em> your maintenance TDEE. This beats any calculator because it reflects your unique metabolism and activity.</p>\n<blockquote>A calculator gives you a starting guess. Your bathroom scale, over time, gives you the truth.</blockquote>\n<h2>Why your TDEE changes</h2>\n<p>TDEE isn’t fixed. It drops as you lose weight (a smaller body burns fewer calories), rises with muscle mass, and shifts with activity, stress and sleep. This is why a deficit that worked at first may stall later — your target needs updating.</p>\n<h2>Putting it to use</h2>\n<p>For fat loss, subtract 15–20% from your TDEE (the <a href=\"../calorie-deficit-for-fat-loss/\">deficit post</a> covers why not more). To gain muscle, add roughly 10%. To maintain, eat at it. Recalculate every four to six weeks or after a noticeable weight change. Logging your meals for those few weeks is the only part that takes effort, and it is what turns a calculator’s guess into your own number.</p>\n<div class=\"key-takeaways\"><h2>Key takeaways</h2><ul>\n<li>TDEE = BMR + digestion + daily movement + exercise.</li>\n<li>Calculators estimate; your own tracked data confirms.</li>\n<li>Your TDEE falls as you lose weight — adjust as you go.</li>\n<li>Deficit of 15–20% for steady, sustainable fat loss.</li>\n</ul></div>"
  },
  "es": {

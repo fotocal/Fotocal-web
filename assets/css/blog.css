@@ -14,7 +14,7 @@
 /* ─── head ─── */
 .post-head { padding: 1.6rem 0 1.2rem; }
 .post-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; font-size: .82rem; color: var(--muted); margin-bottom: 1.1rem; }
-.post-crumbs a { color: var(--muted); text-decoration: none; }
+.post-crumbs a { color: var(--muted); text-decoration: none; display: inline-block; padding: .3rem 0; } /* 22 px tall at 360 px on 28-10-2026: now a box a thumb can hit */
 .post-crumbs a:hover { color: var(--brand-text); text-decoration: underline; }
 .post-crumbs a:last-child { color: var(--brand-text); font-weight: 700; }
 .post-crumbs .sep { opacity: .5; }

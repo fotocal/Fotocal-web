@@ -338,3 +338,53 @@ Páginas sin twin inglés se marcan ES. Las frases en inglés marcadas
 que dicen (filas 3, 7, 16, 18, 20): se detallan en la auditoría
 (`tools/seo/auditoria-on-page-2026-10.md`, §4). El resto tiene la frase en
 los tres sitios o le falta una sola palabra.
+
+## 8 · Lo que Google enseña de verdad: 90 días de Search Console (28 de octubre de 2026)
+
+Datos del propietario, no estimaciones: 1.790 impresiones, 10 clics,
+posición media 28,1, 266 consultas. Es la primera vez que hay consultas
+reales en este archivo; valen más que todo lo anterior.
+
+**Marca** (336 impresiones, 19 %): fotocal 241, foto cal 65, photo cal 11,
+photcal 6, fotokal 5, photocale 3, cal foto 3, fotcal 2. Todas las grafías
+deben caer en la portada; ya lo hacen por el nombre en title, H1 y
+Organization. «fotokal» (5) es la otra app de iPhone (§4): vigilar.
+
+**Inglés** (≈1.400 impresiones, 78 %): tres grupos que ya funcionan y uno
+largo de sueltas.
+
+| Grupo | Consultas (impresiones) | Página que debe ganarlo | Qué se cambió el 28-10 |
+|---|---|---|---|
+| Contar calorías | how to count calories 54 · how to track calories 7 · how to count calories in food 5 · best way to count calories 4 · how to calorie count 3 · how do you count calories 3 · how to accurately count calories 2 · how to count your calories 2 · calorie counting tips 2 · estimating calories 2 | `/en/blog/how-to-count-calories-accurately/` | H1 «How to Count Calories: Accurately, Without Burning Out»; primer párrafo con «how to count calories accurately» y «how to track calories». |
+| Alimentos saciantes | low calorie satiating foods 25 · low calorie high satiety foods 7 · high satiety low calorie foods 6 · high satiety foods with low calories 1 | `/en/blog/best-foods-for-weight-loss/` | H1 «Low-Calorie, High-Satiety Foods: What Fills You Up for Fewer Calories»; title y lead con «low calorie satiating foods». |
+| Estancamiento | plateaued 6 · stall in weight loss 4 · why is my weight loss stalling 4 · weight loss plateau then sudden drop 3 · why does weight loss stall 3 · weight plateau definition 3 · weight loss stalling 3 · weight loss stall causes 3 · weight loss stalled 2 · what causes a plateau 2 · weight loss and plateaus 2 · weight loss plateau causes 2 · plateauing during weight loss 2 · weight plateau 2 · what to do when weight loss stalls 1 (≈ 42) | `/en/blog/weight-loss-plateaus/` | La página tenía 331 palabras y ninguna de las quince frases. Ahora: definición («weight plateau definition»), «why weight loss stalls», el patrón «plateau then sudden drop» con su explicación, cuarta causa (agua), «how long» y «what to do», FAQ con las cuatro preguntas. En los dos idiomas. |
+| Proteína | high protein diet 4 · benefits of (a) high(-)protein diet 11 · how to start a high protein diet 3 · advantages 2 | `/en/blog/high-protein-diet-benefits-and-how-to-start/` | Lead con «benefits of a high-protein diet» y «how to start a high-protein diet». |
+| Sueltas | starvation mode 8 + is starvation mode real 2 → `the-truth-about-starvation-mode` · do calories actually matter 7 → `do-calories-matter-or-food-quality` · how to stop eating at night 7 → `how-to-stop-overeating-at-night` (H1 nuevo «How to Stop Eating at Night») · tdee meaning 6 → `tdee-how-many-calories-you-need` · how fast/quickly can you lose weight 8 → `how-fast-should-you-lose-weight` (H1 «How Fast Can You Lose Weight?») · what are the three macronutrients 4 → `macronutrients-101` · how to eat healthy on a budget 4 → ya exacto · calorie deficit for weight loss 3 → `calorie-deficit-for-fat-loss` · does exercise burn calories 3 → `how-many-calories-does-exercise-burn` · natural sugar vs added sugar 3 → `added-sugar-vs-natural-sugar` · low carb vs low fat 2 → ya exacto | | Cada una tiene ahora la frase tal cual en el primer párrafo. |
+
+**Español** (41 impresiones, 2,3 %): pérdida de grasa sostenible 24 →
+`/blog/how-to-lose-weight-sustainably/` (lead nuevo empieza por la frase) ·
+cuántas calorías tiene un plato 3 + cuántas calorías tiene un plato de 1 +
+calorias platos 3 → `/calorias/` (primer párrafo empieza por «¿Cuántas
+calorías tiene un plato?») · contador de calorias por foto 3 + app gratis
+para contar calorias con foto 1 → `/features/scan-food/` (lead empieza por
+«Un contador de calorías por foto») · codigo de barras alimentos 3 →
+`/features/scan-barcode/` (lead «El escáner de código de barras de
+alimentos») · calculo de raciones 2 → `/blog/portion-control-simple-tricks/`
+(lead «Cálculo de raciones sin báscula») · alimentación consciente con poco
+tiempo 1 → `/blog/mindful-eating-beginners-guide/` (lead con la frase).
+Ninguna consulta española queda sin página. No hace falta ninguna nueva
+por este dato.
+
+### Quién posiciona hoy para los términos españoles (búsquedas del 28-10, índice Brave, sin geolocalización)
+
+| Consulta | Primera página | Lectura |
+|---|---|---|
+| cuántas calorías tiene un plato de comida | prensalibre (BBC), semana.com, elmostrador, vitonica, fatsecret, páginas en inglés | Respuestas genéricas y latinoamericanas; nadie responde con platos españoles por ración. `/calorias/` encaja. |
+| pérdida de grasa sostenible | vozpopuli, fitgeneration.es, vanguardia.com, teletica, consumer.es | Medios; ninguno con cifras de déficit ni calculadora. |
+| contador de calorías por foto app | sólo fichas de App Store (CalPix, Cal AI, Calorica…) y moge.ai | Sin web española con contenido. La más abierta de todas. |
+| estancamiento pérdida de peso qué hacer | zavamed, CDC (pdf en español), vitonica, withings (3 URLs), noom, eurekahealth | Blogs de marcas; el artículo reescrito tiene más que cualquiera de ellos. |
+| cálculo de raciones | NIH (pdf), sitios de preguntas de baja calidad, studysmarter | Primera página floja; «cuánto es una ración» es la variante que la gente teclea. |
+| app código de barras alimentos calorías | fichas App Store, Yuka, MyRealFood, Open Food Facts | Tiendas y dos apps de calidad; contenido propio con «leer la etiqueta» tiene hueco. |
+
+Autocompletar y «Otras preguntas» de google.es siguen sin poder leerse
+desde este entorno; lo que hay es lo que el propietario anotó el 16-10 (§7).

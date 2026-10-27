@@ -117,12 +117,16 @@ python3 tools/regen_covers.py
 python3 tools/gen_blog.py
 python3 tools/gen_dishes.py      # only if dishes.json changed
 python3 tools/bundle_assets.py   # only if anything in assets/css or assets/js changed
+node tools/render_chrome.mjs     # only if layout.js or a nav/footer label changed (needs the local server)
 python3 tools/gen_avif.py        # only if a new WebP screenshot was added
 python3 tools/build_site.py
 python3 -m http.server 8765 &    # the share cards render through a local server
 node tools/gen_og.mjs            # one share card per page; new post = new card
 python3 tools/build_site.py      # second pass picks up the new card
-python3 tools/check_site.py      # must print "OK — … 0 warning(s)"
+python3 tools/check_site.py      # must print "OK — … 0 warning(s)"; it runs tools/check_pins.py
+node tools/check_mobile.mjs      # 360 px layout: no overflow, no tap target under 24 px
+node tools/check_calcs.mjs       # the four calculators still give the right answers
+node tools/check_contact.mjs     # the contact form still submits (intercepted, nothing sent)
 python3 tools/seo/site_tree.py
 python3 tools/seo/titles.py
 ```

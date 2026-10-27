@@ -49,7 +49,7 @@
 }
 .fx-perks { margin-top: .9rem; }
 .fx-perks li { font-size: .9rem; margin-bottom: .35rem; }
-.fx-link { display: inline-block; margin-top: .6rem; font-size: .9rem; font-weight: 700; }
+.fx-link { display: inline-block; margin-top: .6rem; padding: .2rem 0; font-size: .9rem; font-weight: 700; } /* 23 px tall at 360 px (28-10-2026) */
 .fx-tile .tile-media { margin-top: 1.4rem; }
 /* chapter 1 holds the 440/660 bento crops: the frame stays at or under
    220 CSS px so it never asks for more pixels than the capture has */

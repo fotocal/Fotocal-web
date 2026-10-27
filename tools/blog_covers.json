@@ -164,11 +164,6 @@
   "glyph": "list",
   "pal": 4
  },
- "batch-cooking-save-time-eat-better": {
-  "category": "Meal planning",
-  "glyph": "bowl",
-  "pal": 3
- },
  "mindful-eating-beginners-guide": {
   "category": "Mindset",
   "glyph": "brain",
@@ -238,11 +233,6 @@
   "category": "Diet tips",
   "glyph": "leaf",
   "pal": 1
- },
- "are-cheat-meals-helpful-or-harmful": {
-  "category": "Diet tips",
-  "glyph": "star",
-  "pal": 3
  },
  "why-crash-diets-fail": {
   "category": "Diet tips",

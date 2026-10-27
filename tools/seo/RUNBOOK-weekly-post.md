@@ -116,11 +116,18 @@ never does either, so it does not affect you.
 python3 tools/regen_covers.py
 python3 tools/gen_blog.py
 python3 tools/gen_dishes.py      # only if dishes.json changed
+python3 tools/bundle_assets.py   # only if anything in assets/css or assets/js changed
+python3 tools/gen_avif.py        # only if a new WebP screenshot was added
 python3 tools/build_site.py
+python3 -m http.server 8765 &    # the share cards render through a local server
+node tools/gen_og.mjs            # one share card per page; new post = new card
+python3 tools/build_site.py      # second pass picks up the new card
 python3 tools/check_site.py      # must print "OK — … 0 warning(s)"
 python3 tools/seo/site_tree.py
 python3 tools/seo/titles.py
 ```
+(If `node tools/gen_og.mjs` cannot run, the post still publishes with the
+shared card; say so in the report.)
 Then check: `blog/<slug>/index.html` exists; for a Spanish-only post,
 `en/blog/<slug>/` does not exist and `grep -r "<slug>" en/ --include=index.html`
 finds no `href` to it; the `<title>` and description are the seo ones;

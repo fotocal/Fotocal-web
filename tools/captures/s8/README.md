@@ -17,9 +17,9 @@ site already shows for those slots, taken on another device at 941×1672, before
 | portion-sheet-es.jpg / portion-sheet-en.jpg | Porción personalizada / Custom portion sheet over the result photo: multiplier, quick ×, grams, kcal, macros, persons, cooking | es + en |
 | voice-listening-es.jpg / voice-listening-en.jpg | Voz tab with the listening sheet: "Dime qué has comido", mic button, "Toca para hablar" | es + en |
 | water-daily-es.jpg / water-daily-en.jpg | Agua / Water, Día tab, 12–16 Oct, with status bar | es + en (supersedes s7/water-daily-en.jpg) |
-| voice-result-en.jpg | voice result, English UI: Banana, Coffee, Bread, 186 kcal, details open | en only — used for the English side of s7-voice |
+| voice-result-en.jpg | voice result, English UI: Banana, Coffee, Bread, 186 kcal, details open | en only — used for the English side of app-voice |
 | voice-result-es-ui-en.jpg | the same result spoken in Spanish (Banana, Café, Barra de pan) but with the app UI in English | NOT usable on the Spanish pages; Spanish-UI retake pending |
 | weight-daily-en.jpg / weight-daily-es.jpg | Weight / Peso, Día tab, 65.3 kg vs 61 kg goal, history, log buttons | es + en, no slot; the goal slot shows Mi progreso instead |
 
 Used on the site (2026-10-16 evening): all eight pairs above as `s8-*`, plus voice-result-en for
-`s7-voice-*-en`. Not used: voice-result-es-ui-en, weight-daily-*.
+`app-voice-*-en`. Not used: voice-result-es-ui-en, weight-daily-*.

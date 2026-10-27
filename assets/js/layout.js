@@ -38,7 +38,7 @@
      Works on GitHub Pages (/Fotocal-web/) and at a domain root. */
   var me = document.currentScript ||
            (function () { var s = document.getElementsByTagName("script"); return s[s.length - 1]; })();
-  var BASE = me.src.replace(/assets\/js\/layout\.js.*$/, "");
+  var BASE = me.src.replace(/assets\/(?:js|dist)\/[^\/]*$/, "");
   var PAGE = me.getAttribute("data-page") || "";
 
   var PLAY_URL = "https://play.google.com/store/apps/details?id=com.fotokal.app";
@@ -397,7 +397,12 @@
   /* ── Inject ── */
   var navMount = document.getElementById("site-nav");
   var footMount = document.getElementById("site-footer");
-  if (navMount) navMount.innerHTML = navHTML();
+  /* The build inlines the navigation (tools/chrome/nav-<lang>.html, rendered
+     by tools/render_chrome.mjs from this very function), so when it is
+     already there it is kept: same markup, no second render, no reflow on
+     the critical path. markCurrent() below still marks the page. The footer
+     is re-rendered because it carries the year. */
+  if (navMount && !navMount.firstElementChild) navMount.innerHTML = navHTML();
   if (footMount) footMount.innerHTML = footerHTML();
 
   /* The bar is appended rather than mounted in a placeholder, so pages do

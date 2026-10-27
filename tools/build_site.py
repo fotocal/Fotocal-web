@@ -337,6 +337,138 @@ def stamp_for(asset_rel):
     return _STAMPS[asset_rel]
 
 
+# ── bundles, inlined font CSS, pre-rendered chrome, AVIF pictures ──────
+# (PART 48, 27-10-2026: Lighthouse measured 3–6 render-blocking stylesheets
+# and 3 scripts per page, nav and footer built only by JS, and WebP-only
+# screenshots. Each of these is fixed here, at build time, so the source
+# pages and the generators stay as they are.)
+DIST_DIR = os.path.join(ROOT, "assets", "dist")
+FONTS_CSS = open(os.path.join(ROOT, "assets", "css", "fonts.css"), encoding="utf-8").read()
+FONTS_CSS = re.sub(r"/\*.*?\*/", "", FONTS_CSS, flags=re.S)
+FONTS_CSS = re.sub(r"\s+", " ", FONTS_CSS).strip()
+PRELOAD_FONTS = ("fraunces-normal-latin.woff2", "instrument-sans-normal-latin.woff2")
+CSS_LINK = re.compile(r'[ \t]*<link rel="stylesheet" href="((?:\.\./)*|/)assets/css/([a-z-]+)\.css">[ \t]*\n?')
+JS_TAG = re.compile(r'[ \t]*<script src="((?:\.\./)*|/)assets/js/([a-z0-9-]+)\.js"((?:\s+[a-z-]+="[^"]*")*)></script>[ \t]*\n?')
+JS_CORE = ("i18n", "layout", "main")
+
+
+def bundle_html(src):
+    """One minified stylesheet and one minified script per page, when the
+    bundle exists in assets/dist/; fonts.css inlined; the two above-the-fold
+    fonts preloaded; every external script deferred."""
+    links = list(CSS_LINK.finditer(src))
+    if links:
+        prefix = links[0].group(1)
+        names = [m.group(2) for m in links]
+        combo = tuple(n for n in names if n != "fonts")
+        bundle = "css-" + "-".join(combo) + ".css"
+        head = ""
+        if "fonts" in names:
+            head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % (prefix, PRELOAD_FONTS[0])
+            head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % (prefix, PRELOAD_FONTS[1])
+            head += "  <style>%s</style>\n" % FONTS_CSS.replace("url(../fonts/", "url(%sassets/fonts/" % prefix)
+        if combo and os.path.isfile(os.path.join(DIST_DIR, bundle)):
+            head += '  <link rel="stylesheet" href="%sassets/dist/%s">\n' % (prefix, bundle)
+        else:
+            head += "".join('  <link rel="stylesheet" href="%sassets/css/%s.css">\n' % (prefix, n) for n in combo)
+        first = links[0].start()
+        src = src[:first] + head + CSS_LINK.sub("", src[first:])
+    tags = list(JS_TAG.finditer(src))
+    if tags:
+        prefix = tags[0].group(1)
+        names = [m.group(2) for m in tags]
+        core_ok = all(n in names for n in JS_CORE) and os.path.isfile(os.path.join(DIST_DIR, "js-core.js"))
+        out, done_core = [], False
+        for m in tags:
+            n, attrs = m.group(2), m.group(3) or ""
+            if core_ok and n in JS_CORE:
+                if n == "layout":
+                    out.append('<script src="%sassets/dist/js-core.js"%s defer></script>\n' % (prefix, attrs))
+                continue
+            if os.path.isfile(os.path.join(DIST_DIR, "js-%s.js" % n)):
+                out.append('<script src="%sassets/dist/js-%s.js"%s defer></script>\n' % (prefix, n, attrs))
+            else:
+                out.append('<script src="%sassets/js/%s.js"%s defer></script>\n' % (prefix, n, attrs))
+        first = tags[0].start()
+        src = src[:first] + "".join(out) + JS_TAG.sub("", src[first:])
+    return src
+
+
+_CHROME = {}
+
+
+def inject_chrome(src, lang):
+    """Navigation and footer rendered into the HTML (tools/chrome/*.html, made
+    by tools/render_chrome.mjs from the JS build). layout.js re-renders the
+    same markup on load, so nothing moves; crawlers and no-JS visitors get the
+    links without running anything."""
+    if lang not in _CHROME:
+        d = os.path.join(ROOT, "tools", "chrome")
+        try:
+            _CHROME[lang] = (open(os.path.join(d, "nav-%s.html" % lang), encoding="utf-8").read(),
+                             open(os.path.join(d, "footer-%s.html" % lang), encoding="utf-8").read())
+        except OSError:
+            _CHROME[lang] = None
+    c = _CHROME[lang]
+    if not c:
+        return src
+    src = src.replace('<div id="site-nav"></div>', '<div id="site-nav">%s</div>' % c[0], 1)
+    src = src.replace('<div id="site-footer"></div>', '<div id="site-footer">%s</div>' % c[1], 1)
+    return src
+
+
+IMG_TAG = re.compile(r"<img\b[^>]*>")
+PRELOAD_IMG = re.compile(r'<link rel="preload" as="image"[^>]*>')
+
+
+def wrap_pictures(src, lang, rel_path):
+    """<picture> with an AVIF <source> around every WebP screenshot whose AVIF
+    siblings all exist (tools/gen_avif.py); the hero preload switches to the
+    AVIF set with type="image/avif" so a browser without AVIF ignores it."""
+    page_dir = os.path.dirname(os.path.join(PREFIX[lang], rel_path))
+
+    def fs(url):
+        return os.path.join(ROOT, url.lstrip("/") if url.startswith("/") else os.path.normpath(os.path.join(page_dir, url)))
+
+    def avif_set(srcset):
+        parts = []
+        for cand in srcset.split(","):
+            cand = cand.strip()
+            if not cand:
+                continue
+            u, _, d = cand.partition(" ")
+            if not u.endswith(".webp") or not os.path.isfile(fs(u[:-5] + ".avif")):
+                return None
+            parts.append(u[:-5] + ".avif" + (" " + d if d else ""))
+        return ", ".join(parts)
+
+    def img(m):
+        tag = m.group(0)
+        a = dict(re.findall(r'([a-zA-Z-]+)="([^"]*)"', tag))
+        srcv = a.get("src", "")
+        if not srcv.endswith(".webp"):
+            return tag
+        aset = avif_set(a.get("srcset") or srcv)
+        if aset is None:
+            return tag
+        sizes = ' sizes="%s"' % a["sizes"] if a.get("sizes") else ""
+        return '<picture><source type="image/avif" srcset="%s"%s>%s</picture>' % (aset, sizes, tag)
+
+    def pre(m):
+        tag = m.group(0)
+        a = dict(re.findall(r'([a-zA-Z-]+)="([^"]*)"', tag))
+        aset = avif_set(a.get("imagesrcset") or a.get("href", ""))
+        if aset is None or not a.get("href", "").endswith(".webp"):
+            return tag
+        tag = tag.replace('href="%s"' % a["href"], 'href="%s"' % (a["href"][:-5] + ".avif"), 1)
+        if a.get("imagesrcset"):
+            tag = tag.replace('imagesrcset="%s"' % a["imagesrcset"], 'imagesrcset="%s"' % aset, 1)
+        return tag.replace('<link rel="preload" as="image"', '<link rel="preload" as="image" type="image/avif"', 1)
+
+    src = IMG_TAG.sub(img, src)
+    return PRELOAD_IMG.sub(pre, src)
+
+
 def stamp_assets(src, lang, rel_path):
     """Stamp every .js/.css reference the rendered page makes, wherever the
     file lives (assets/…, the legal pages' css/ and js/, …). Runs after
@@ -494,6 +626,16 @@ def render_head(src, lang, rel_path, meta):
     if lang != DEFAULT:
         src = src.replace(SITE + "assets/og-image.png",
                           SITE + "assets/og-image-%s.png" % lang)
+    # Per-page share card (tools/gen_og.mjs renders one per page and language
+    # into assets/og/). Only the shared card is replaced; a page that points
+    # at its own artwork keeps it.
+    og_id = ("home" if rel_path == "index.html" else rel_path[:-len("/index.html")].replace("/", "-")) + "-" + lang
+    og_file = "assets/og/%s.jpg" % og_id
+    if os.path.isfile(os.path.join(ROOT, og_file)) and re.search(r'<meta property="og:image" content="%sassets/og-image(?:-%s)?\.png">' % (re.escape(SITE), lang), src):
+        og_url = SITE + og_file
+        src = re.sub(r'<meta property="og:image" content="[^"]*">',
+                     '<meta property="og:image" content="%s">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n  <meta property="og:image:type" content="image/jpeg">' % og_url, src, count=1)
+        src = re.sub(r'<meta name="twitter:image" content="[^"]*">', '<meta name="twitter:image" content="%s">' % og_url, src, count=1)
     return src
 
 
@@ -740,8 +882,11 @@ def main():
                      "desc": d[:158]}
             s = render_head(s, lang, rel, m)
             s = render_jsonld(s, lang, rel, dic[lang], missing, article)
+            s = bundle_html(s)
             s = rewrite_links(s, lang, rel)
             s = stamp_assets(s, lang, rel)
+            s = inject_chrome(s, lang)
+            s = wrap_pictures(s, lang, rel)
 
             out = os.path.join(ROOT, PREFIX[lang], rel)
             os.makedirs(os.path.dirname(out) or ".", exist_ok=True)

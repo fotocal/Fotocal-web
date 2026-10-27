@@ -98,7 +98,7 @@ Lo que carga una página (portada en español, cifras del repositorio;
 | `site.css` + `home.css` + `fonts.css` | 77 + 23 + 3,5 KB | ~27 KB |
 | `i18n.js` + `layout.js` + `main.js` | 47 + 42 + 20 KB | ~36 KB |
 | Fuentes (self-hosted, woff2, `font-display: swap`) | 8 archivos, 354 KB en total; una página normal carga 2–4 (de 28 a 78 KB cada uno) | — |
-| Imagen principal (LCP) | `s7-home-hero-700-es.webp`, precargada con `fetchpriority="high"`, con `srcset` y tamaño declarado | — |
+| Imagen principal (LCP) | `app-home-hero-700-es.webp`, precargada con `fetchpriority="high"`, con `srcset` y tamaño declarado | — |
 | Resto de capturas | `loading="lazy"`, `decoding="async"`, anchura y altura declaradas | — |
 | Terceros | **0** scripts, 0 fuentes externas, 0 iframes | — |
 
@@ -312,3 +312,113 @@ y agua**. Motivo: ninguna apoya una página de dinero, y cada una era una
 lista de 160–335 palabras compitiendo por rastreo con los 41 platos. Si
 alguna de esas series gana un cluster más adelante, se le da contenido y
 se vuelve a indexar: es una línea en `series.json`.
+
+## 10 · Barrido final on-page (27 de octubre de 2026)
+
+Todo lo de abajo está medido, no supuesto. Velocidad: Lighthouse 12.8 en
+móvil (4G lenta simulada, CPU ×4) y un segundo paso con Chromium
+emulando un Pixel 7 que recorre la página entera para contar lo que de
+verdad se descarga. Las dos medidas se hicieron contra el sitio servido en
+local **sin compresión**; en GitHub Pages el texto viaja comprimido, así
+que los pesos reales son menores en los dos casos y la comparación
+antes/después es la que vale.
+
+### Velocidad, antes → después
+
+| Página | Lighthouse | FCP | LCP | TBT | CLS | Peso (LH) | Peticiones |
+|---|---|---|---|---|---|---|---|
+| `/` | 82 → **88** | 3,0 → 2,5 s | 3,9 → 3,4 s | 96 → 34 ms | 0,005 → 0,001 | 553 → 459 KB | 17 → 13 |
+| `/calorias/` | 87 → **95** | 3,2 → 1,8 s | 3,2 → 2,7 s | 0 → 32 ms | 0,001 → 0 | 395 → 301 KB | 15 → 8 |
+| `/calculadoras/` | 89 → **95** | 3,0 → 1,8 s | 3,0 → 2,7 s | 0 → 6 ms | 0,019 → 0 | 381 → 288 KB | 15 → 8 |
+| `/blog/how-fast-should-you-lose-weight/` | 88 → **96** | 2,7 → 1,7 s | 3,3 → 2,7 s | 6 → 0 ms | 0 → 0 | 411 → 320 KB | 16 → 10 |
+
+Página completa recorrida hasta el final (todas las imágenes perezosas
+cargadas), Pixel 7: `/` 1.164 KB y 25 peticiones → **889 KB y 21**;
+`/calorias/` 402 KB y 14 → **308 KB y 7**; `/calculadoras/` 388 y 14 →
+**294 y 7**; el artículo 418 y 15 → **326 y 9**. INP de laboratorio (un
+toque y dos desplazamientos): portada 64–72 ms, el resto 16–32 ms.
+
+Qué se cambió para eso (todo en el build, `tools/build_site.py`):
+
+- **Una hoja de estilos por página en vez de 3 a 6**, minificada
+  (`tools/bundle_assets.py` → `assets/dist/`). Un script por página en vez
+  de tres, minificado y `defer`. Recursos que bloqueaban el pintado: de 3–9
+  a 1.
+- **Fuentes:** el `@font-face` va incrustado en el HTML y las dos fuentes
+  del primer pantallazo se precargan. Las ocho se quedan: la cursiva se
+  usa en los titulares (`<em class="accent">`) y cada archivo solo baja si
+  la página usa ese rango.
+- **AVIF con WebP de respaldo** (`tools/gen_avif.py`, `<picture>` añadido
+  por el build) en las 152 capturas: a calidad 60 el AVIF pesa entre el
+  55 % y el 70 % del WebP. Recomprimir el WebP en sí solo ahorraba un
+  4–9 % y no se hizo: no compensa el riesgo de perder nitidez en capturas
+  que ya costó conseguir.
+- **Portada:** el héroe estaba dentro de una animación de aparición que el
+  JS primero ocultaba y luego mostraba; Chrome contaba la segunda pintura
+  como LCP (1,1 s de retraso medidos). Ahora lo que ya está en pantalla se
+  muestra en la misma tarea en que arranca el JS; la animación sigue para
+  lo que está por debajo.
+- **Navegación y pie pre-renderizados en el HTML** (`tools/render_chrome.mjs`
+  → `tools/chrome/`): 47–49 enlaces por página que antes solo existían
+  cuando se ejecutaba el JS. El JS ya no vuelve a pintar la navegación.
+- Lo que no se puede tocar: GitHub Pages sirve con `max-age=600` y no
+  admite cabeceras propias; la versión en la URL (`?v=hash`) es lo único
+  que hay.
+
+### Imágenes (236 etiquetas en 217 páginas, los dos idiomas)
+
+| Comprobación | Resultado |
+|---|---|
+| `alt` ausente | 0 |
+| `alt=""` deliberado | 112, todas ilustraciones de portada de artículo (SVG decorativo) |
+| `alt` en idioma distinto al de la página | 0 (heurística de palabras) |
+| `width` y `height` | 236 de 236 |
+| Carga | la imagen superior de cada página `fetchpriority="high"` (128), el resto `loading="lazy"` (108) |
+| Nombres de archivo | las 256 capturas con código de sesión (`s7-scan-690-es`) renombradas a palabras (`app-scan-690-es`); el resto ya lo eran |
+| Imagen servida mayor que la mostrada | 0 (ningún archivo supera el mayor candidato de su `srcset`) |
+| Formato moderno | AVIF + WebP en las 20 páginas con capturas; portadas del blog en SVG; `logo.png` de 250 a 41 KB |
+| Archivos sin usar | 2 portadas de artículos retirados, borradas |
+| `og:image` | antes **2 tarjetas para 198 páginas** (una por idioma); ahora **198 tarjetas, una por página y por idioma** (`tools/gen_og.mjs`, 1.200×630 JPEG, ~41 KB, con el H1 real y, en los platos, las kcal por ración). Solo comparten tarjeta las 6 redirecciones `noindex`. |
+
+### Barrido de las 198 páginas indexables
+
+| Comprobación | Resultado |
+|---|---|
+| Sitemap | 198 URL, ninguna `noindex` dentro, ninguna indexable fuera, todas construidas |
+| Páginas sin ningún enlace HTML entrante | **4 antes** (`/features/` y `/faq/` en los dos idiomas: solo las enlazaba la navegación por JS) → **0** |
+| Enlaces internos rotos | 0 |
+| Cadenas de redirección | 0 (las 6 redirecciones apuntan a página final) |
+| Salto de nivel en encabezados (h2 → h4) | 0 |
+| Más o menos de un H1 | 0 |
+| Contenido fino (< 350 palabras en `<main>`) | 0 indexables (los 12 índices finos ya son `noindex`) |
+| JSON-LD | los 500+ bloques parsean; Article con headline, fecha, imagen y autor; FAQPage con pregunta y respuesta; sin marcadores sin resolver |
+| Idioma mezclado | 0 páginas con señal de inglés en español o al revés; `<html lang>` correcto en 218 |
+| Canonical / hreflang | sin cambios: correctos (apartado 1) |
+
+### Qué queda, dicho sin adornos
+
+Dentro del sitio queda poco que mueva posiciones. Lo que puede moverlas,
+por orden de peso real:
+
+1. **Enlaces desde otras webs.** Es el factor que falta y no se puede
+   fabricar desde el código. Dos competidores de «contador de calorías»
+   llevan años acumulándolos; Fotocal tiene cero. Sin ellos, lo
+   razonable es primera página en cola larga (platos, tapas, menú del día,
+   variantes del déficit) y nada garantizado en «app para contar
+   calorías gratis». Dónde se consiguen de verdad: dietistas y blogs de
+   nutrición españoles que enlacen la tabla o un artículo con cifras
+   (hay que pedirlo uno a uno), una reseña honesta en un medio de apps,
+   directorios de apps, la ficha de Play (enlace sin autoridad pero con
+   tráfico), y que alguien cite el artículo del menú del día en un foro.
+2. **Búsquedas de marca y tráfico directo.** Crecen con la app, no con la
+   web. Cada usuario que busca «fotocal» enseña a Google que la marca existe.
+3. **Tiempo.** Las 52 páginas de octubre tardan de 2 a 8 semanas en
+   indexarse y de 2 a 4 meses en asentarse. Nada de lo publicado en
+   octubre se puede juzgar antes de enero.
+4. **Constancia.** El artículo semanal ya está programado; es lo único
+   on-page que sigue sumando solo.
+
+Lo que no va a pasar por mucho on-page que se haga: adelantar a las
+tiendas de aplicaciones y a los sitios con miles de enlaces en consultas
+de app genéricas. Esa es la parte que necesita enlaces de fuera, y es
+honesto decirlo ahora y no en tres meses.

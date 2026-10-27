@@ -137,6 +137,17 @@
     while ((n = n.previousElementSibling)) { if (n.classList.contains("reveal")) i++; }
     if (i) el.style.setProperty("--rd", Math.min(i * 90, 450) + "ms");
   });
+  /* Whatever is already on screen is shown NOW, in this same task, before
+     the browser can paint a frame with it hidden. layout.js has just taken
+     .no-js off <html>, which is what hides un-revealed elements; without
+     this pass the hero paints, disappears, and reappears when the observer
+     fires, and Chrome records that last paint as the LCP (measured
+     27-10-2026: 1.1 s of render delay on the home page). The entrance
+     animation is kept for everything below the first screen. */
+  var vh = window.innerHeight || 800;
+  revealEls.forEach(function (el) {
+    if (el.getBoundingClientRect().top < vh) el.classList.add("in");
+  });
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -146,7 +157,7 @@
         }
       });
     }, { threshold: 0.08, rootMargin: "0px 0px -5% 0px" });
-    revealEls.forEach(function (el) { io.observe(el); });
+    revealEls.forEach(function (el) { if (!el.classList.contains("in")) io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }

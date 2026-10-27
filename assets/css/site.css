@@ -781,7 +781,7 @@ body.nav-locked { overflow: hidden; }
   box-shadow: var(--shadow-lift), 0 0 0 1px var(--border-soft);
   transition: transform .55s cubic-bezier(.2,.8,.3,1), box-shadow .55s ease;
 }
-.shot-card > img { display: block; width: 100%; height: auto; }
+.shot-card > img, .shot-card > picture > img { display: block; width: 100%; height: auto; }
 
 /* Subtle tilt. Alternate the direction down a page so a column of
    cards reads as hand-placed rather than as one block repeated. */
@@ -799,7 +799,7 @@ body.nav-locked { overflow: hidden; }
 /* Cover-cropped variant, for when a fixed aspect matters more than
    showing the whole frame (the meal photo in "Three steps"). */
 .shot-cover { aspect-ratio: 4 / 5; }
-.shot-cover > img { height: 100%; object-fit: cover; }
+.shot-cover > img, .shot-cover > picture > img { height: 100%; object-fit: cover; }
 
 /* Landscape artwork sitting in a half-width column. Capped so a 1400px
    source is not stretched past the resolution it actually has. */
@@ -1574,3 +1574,6 @@ body.fc-appbar-on { padding-bottom: var(--fc-appbar-h, 78px); }
   border-radius: 999px; padding: .26rem .6rem; line-height: 1;
   margin-left: .45rem; vertical-align: middle;
 }
+
+/* <picture> is only an AVIF/WebP switch added by the build; it must not become a box. */
+picture { display: contents; }

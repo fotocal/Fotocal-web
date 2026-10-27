@@ -4,7 +4,7 @@
 99–102, 107–110, 115–122, 139–158 except wl-goal, bc-scan 700/940 and bc-kefir were replaced by the
 `s7-*` families (one Spanish and one English capture each, status bar kept) and their files deleted.
 Sitting 8 (same evening) replaced ai-allergy, ai-cold, ai-note, nd-ask, nd-water, profile, sf-advice,
-sf-edit, vl-listen and wl-goal with `s8-*` (wl-goal now shows the s7-progress capture).
+sf-edit, vl-listen and wl-goal with `s8-*` (wl-goal now shows the app-progress capture).
 Still on the site from this table: bc-bottle (photo), bc-read, bc-scan 440/660, log-menu, scan-plate
 (photo), sf-camera, step-camera. See tools/CAPTURAS-PENDIENTES.md for what each one is waiting for.
 

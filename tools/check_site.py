@@ -344,6 +344,11 @@ def main():
             if not m:
                 continue
             p = os.path.relpath(os.path.join(base, f), ROOT).replace(os.sep, "/")
+            # an .avif is the sibling tools/gen_avif.py makes for a .webp and is
+            # referenced through the <picture> the build adds: it inherits the
+            # WebP's verdict rather than being judged on its own
+            if p.endswith(".avif") and p[:-5] + ".webp" in variant_refs[m.group(1)]:
+                continue
             if p not in variant_refs[m.group(1)]:
                 fail(p, "%s-language asset exists on disk but no page of its "
                         "tree references it" % m.group(1))

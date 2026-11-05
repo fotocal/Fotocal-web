@@ -77,7 +77,7 @@
     sel.id = "langSelect";
     sel.innerHTML =
       '<button class="lang-current" id="langCurrent" type="button" aria-haspopup="listbox" ' +
-        'aria-expanded="false" aria-label="Change language / Cambiar idioma">' +
+        'aria-expanded="false" aria-label="' + (LANG_CODES[PAGE_LANG] || PAGE_LANG.toUpperCase()) + ' · Change language / Cambiar idioma">' +
         '<span class="lang-flag">' + (FOTOCAL_FLAGS[PAGE_LANG] || "") + '</span>' +
         '<span class="lang-code">' + (LANG_CODES[PAGE_LANG] || PAGE_LANG.toUpperCase()) + '</span>' +
         '<svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +

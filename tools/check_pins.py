@@ -214,4 +214,16 @@ def run(fail, warn):
         name = os.path.basename(f)
         if name not in srcs and '"%s"' % name[:-4] not in bundler and name not in ("fonts.css", "i18n-pages.js"):
             fail("assets", "%s is loaded by no page and no bundle (dead file)" % name)
+    # ── 14. url(...) inside an inline <style> must resolve from the page
+    #      (fonts 404ed on every /en/ page, found 05-11-2026) ──
+    for rel, h in pages.items():
+        d = posixpath.dirname(rel)
+        for st in re.findall(r"<style\b[^>]*>(.*?)</style>", h, re.S):
+            for u in re.findall(r"url\(\s*['\"]?([^)'\"]+)", st):
+                if u.startswith(("data:", "http", "#")):
+                    continue
+                p2 = u.lstrip("/") if u.startswith("/") else posixpath.normpath(posixpath.join(d, u))
+                if not os.path.isfile(os.path.join(ROOT, p2.split("?")[0])):
+                    fail(rel, "inline <style> url() does not resolve: %s" % u)
+                    break
     return len(rels)

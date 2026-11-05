@@ -50,6 +50,7 @@ reason; the only legitimate reason so far is a mask-image, where #000 is
 alpha, not a colour.
 """
 
+import html as H
 import json
 import datetime
 import os
@@ -330,12 +331,12 @@ def main():
         desc = one(r'<meta name="description" content="([^"]*)"', html)
         if not title:
             fail(rel, "no <title>")
-        elif len(title) > 62:
-            warn(rel, "title %d chars, will truncate: %s" % (len(title), title))
+        elif len(H.unescape(title)) > 60:
+            fail(rel, "title %d chars (max 60): %s" % (len(H.unescape(title)), title))
         if not desc:
             fail(rel, "no meta description")
-        elif len(desc) > 160:
-            warn(rel, "description %d chars, will truncate" % len(desc))
+        elif len(H.unescape(desc)) > 155:
+            fail(rel, "description %d chars (max 155)" % len(H.unescape(desc)))
 
     # ── language-variant assets: none may be orphaned ──
     for base, dirs, files in os.walk(os.path.join(ROOT, "assets")):

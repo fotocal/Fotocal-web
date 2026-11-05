@@ -3,13 +3,14 @@
 // Needs the built site served locally: python3 -m http.server 8765
 import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
 const base = process.env.SITE_BASE || 'http://127.0.0.1:8765';
-const SAMPLE = ['/', '/en/', '/features/', '/features/scan-food/', '/en/features/weight-loss/', '/subscription/', '/ai/', '/faq/', '/contact/', '/about/', '/privacy-policy/', '/terms/', '/account-deletion/',
+const SAMPLE = ['/', '/en/', '/en/blog/how-fast-should-you-lose-weight/', '/en/faq/', '/features/', '/features/scan-food/', '/en/features/weight-loss/', '/subscription/', '/ai/', '/faq/', '/contact/', '/about/', '/privacy-policy/', '/terms/', '/account-deletion/',
   '/blog/', '/en/blog/', '/blog/how-fast-should-you-lose-weight/', '/blog/calorias-menu-del-dia/', '/blog/series/calories/', '/calorias/', '/calorias/tortilla-de-patatas/', '/calorias/tabla-de-calorias/', '/calculadoras/', '/calculadoras/deficit-calorico/', '/calculadoras/imc/', '/404.html'];
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 360, height: 740 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
 let fails = 0;
 for (const path of SAMPLE) {
-  const page = await ctx.newPage();
+  const page = await ctx.newPage(); const http = [];
+  page.on('response', r => { if (r.status() >= 400 && r.url().startsWith(base)) http.push(r.status() + ' ' + r.url().replace(base, '')); });
   await page.goto(base + path, { waitUntil: 'load' }); await page.waitForTimeout(400);
   const r = await page.evaluate(() => {
     const vw = document.documentElement.clientWidth;
@@ -31,6 +32,7 @@ for (const path of SAMPLE) {
     return out;
   });
   const bad = [];
+  if (http.length) bad.push('requests failing: ' + [...new Set(http)].slice(0, 5).join(', '));
   if (r.scrollW > r.vw + 1) bad.push(`horizontal scroll: page ${r.scrollW}px wide in a ${r.vw}px viewport`);
   if (r.scrollW > r.vw + 1 && r.wide.length) bad.push('overflowing: ' + [...new Set(r.wide)].slice(0, 5).join(', '));
   if (r.small.length) bad.push('tap targets under 24px: ' + [...new Set(r.small)].slice(0, 6).join(' | '));

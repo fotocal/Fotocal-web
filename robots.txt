@@ -1,4 +1,29 @@
+# getfotocal.com — every page may be crawled.
 User-agent: *
+Allow: /
+
+# AI assistants and AI search crawlers are allowed on purpose, so Fotocal can
+# be read and cited in ChatGPT, Gemini / Google AI Overviews, Perplexity and
+# Claude answers. To opt out of one, change its "Allow: /" to "Disallow: /".
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://getfotocal.com/sitemap.xml

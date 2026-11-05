@@ -94,26 +94,28 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/best-foods-for-weight-loss/` — Alimentos que sacian con pocas calorías: lista con cifras  _ES+EN_
 - `/blog/building-muscle-while-losing-fat/` — Ganar músculo mientras pierdes grasa: ¿es posible? — Fotocal  _ES+EN_
 - `/blog/calorias-de-las-tapas/` — Calorías de las tapas: caña, bravas, croquetas y pincho  _solo ES_
+- `/blog/calorias-desayuno-espanol/` — Calorías del desayuno español: café, tostada y churros  _solo ES_
 - `/blog/calorias-menu-del-dia/` — Calorías de un menú del día: tres combinaciones reales  _solo ES_
+- `/blog/calorias-para-perder-un-kilo/` — ¿Cuántas calorías hay que quemar para perder un kilo?  _solo ES_
 - `/blog/calorie-deficit-for-fat-loss/` — Déficit calórico: la regla detrás de toda pérdida de grasa  _ES+EN_
 - `/blog/carbs-are-not-the-enemy/` — Los carbohidratos no son el enemigo: una mirada equilibrada  _ES+EN_
-- `/blog/cardio-vs-strength-training-for-fat-loss/` — Cardio o pesas para perder grasa — Fotocal  _ES+EN_
+- `/blog/cardio-vs-strength-training-for-fat-loss/` — Cardio o pesas para perder grasa  _ES+EN_
 - `/blog/choose-photo-calorie-counter/` — Cómo elegir una app de calorías con foto (y qué es gratis)  _ES+EN_
 - `/blog/common-calorie-counting-mistakes/` — 7 errores al contar calorías que frenan tu progreso  _ES+EN_
 - `/blog/deficit-500-calorias-dia/` — Déficit de 500 calorías al día: un día de comidas real  _solo ES_
-- `/blog/dietary-fat-how-much-and-which-kinds/` — Grasa en la dieta: cuánta necesitas y de qué tipo — Fotocal  _ES+EN_
+- `/blog/dietary-fat-how-much-and-which-kinds/` — Grasa en la dieta: cuánta necesitas y de qué tipo  _ES+EN_
 - `/blog/do-calories-matter-or-food-quality/` — Calorías o calidad de la comida: qué importa para adelgazar  _ES+EN_
 - `/blog/do-you-need-to-exercise-to-lose-weight/` — ¿Hace falta ejercicio para adelgazar? La respuesta honesta  _ES+EN_
 - `/blog/does-meal-timing-matter-for-weight-loss/` — ¿Cenar tarde engorda? El horario de las comidas y el peso  _ES+EN_
 - `/blog/does-protein-timing-matter/` — El momento de la proteína: ¿importa de verdad? — Fotocal  _ES+EN_
-- `/blog/eating-out-without-wrecking-your-diet/` — Comer fuera sin perder el hilo — Fotocal  _ES+EN_
+- `/blog/eating-out-without-wrecking-your-diet/` — Comer fuera sin perder el hilo  _ES+EN_
 - `/blog/emotional-eating/` — Comer por emociones: cómo reconocerlo y manejarlo — Fotocal  _ES+EN_
 - `/blog/fiber-the-underrated-nutrient/` — La fibra: el nutriente infravalorado para controlar el peso  _ES+EN_
 - `/blog/healthy-snacks-that-satisfy/` — Snacks saludables que de verdad sacian — Fotocal  _ES+EN_
 - `/blog/high-protein-breakfast-ideas/` — Desayunos con proteína: ideas saciantes para cada mañana  _ES+EN_
 - `/blog/high-protein-diet-benefits-and-how-to-start/` — Dieta alta en proteína: beneficios y cómo empezar — Fotocal  _ES+EN_
 - `/blog/how-fast-should-you-lose-weight/` — Cuánto peso perder por semana: el ritmo sano, con cifras  _ES+EN_
-- `/blog/how-many-calories-does-exercise-burn/` — ¿Cuántas calorías quema realmente el ejercicio? — Fotocal  _ES+EN_
+- `/blog/how-many-calories-does-exercise-burn/` — ¿Cuántas calorías quema realmente el ejercicio?  _ES+EN_
 - `/blog/how-much-protein-per-day/` — ¿Cuánta proteína necesitas realmente al día? — Fotocal  _ES+EN_
 - `/blog/how-sleep-affects-your-weight/` — Cómo afecta el sueño a tu peso (más de lo que crees)  _ES+EN_
 - `/blog/how-to-build-a-healthy-grocery-list/` — Cómo hacer una lista de la compra saludable — Fotocal  _ES+EN_
@@ -134,7 +136,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/maintaining-weight-loss/` — Mantener el peso perdido: la parte de la que nadie habla  _ES+EN_
 - `/blog/meal-prep-for-beginners/` — Meal prep para principiantes: un sistema sencillo — Fotocal  _ES+EN_
 - `/blog/mindful-eating-beginners-guide/` — Alimentación consciente: guía para principiantes — Fotocal  _ES+EN_
-- `/blog/neat-the-hidden-calorie-burn/` — NEAT: el gasto calórico oculto que estás ignorando — Fotocal  _ES+EN_
+- `/blog/neat-the-hidden-calorie-burn/` — NEAT: el gasto calórico oculto que estás ignorando  _ES+EN_
 - `/blog/photo-calorie-apps-accuracy/` — ¿Son fiables las apps de calorías con foto? Lo que no ven  _ES+EN_
 - `/blog/plan-a-week-of-meals-in-30-minutes/` — Cómo planificar una semana de comidas en 30 minutos  _ES+EN_
 - `/blog/portion-control-simple-tricks/` — Control de raciones: trucos sencillos que sí funcionan  _ES+EN_
@@ -144,10 +146,10 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/track-calories-without-weighing/` — Cómo contar calorías sin pesar cada comida — Fotocal  _ES+EN_
 - `/blog/understanding-your-basal-metabolic-rate/` — Entender tu tasa metabólica basal (TMB) — Fotocal  _ES+EN_
 - `/blog/weight-loss-plateaus/` — Estancamiento al perder peso: por qué se para y qué hacer  _ES+EN_
-- `/blog/what-a-balanced-plate-looks-like/` — ¿Cómo es realmente un plato equilibrado? — Fotocal  _ES+EN_
+- `/blog/what-a-balanced-plate-looks-like/` — ¿Cómo es realmente un plato equilibrado?  _ES+EN_
 - `/blog/why-crash-diets-fail/` — Por qué fracasan las dietas exprés (y qué hacer en su lugar)  _ES+EN_
 - `/blog/why-micronutrients-matter/` — Micronutrientes: por qué importan al contar calorías  _ES+EN_
-- `/blog/why-the-scale-is-not-the-whole-story/` — Por qué la báscula no cuenta toda la historia — Fotocal  _ES+EN_
+- `/blog/why-the-scale-is-not-the-whole-story/` — Por qué la báscula no cuenta toda la historia  _ES+EN_
 
 ## /blog/series/
 
@@ -181,4 +183,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 135 páginas en español, 84 con copia inglesa (219 URLs servidas).
+Total: 137 páginas en español, 84 con copia inglesa (221 URLs servidas).

@@ -118,12 +118,28 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-de-las-tapas/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/blog/calorias-desayuno-espanol/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorias-desayuno-espanol/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-desayuno-espanol/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/blog/calorias-menu-del-dia/</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorias-menu-del-dia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-menu-del-dia/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/calorias-para-perder-un-kilo/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorias-para-perder-un-kilo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-para-perder-un-kilo/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/blog/calorie-deficit-for-fat-loss/</loc>
@@ -675,7 +691,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/blog/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/"/>
@@ -684,7 +700,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/blog/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/"/>
@@ -891,7 +907,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/blog/series/calories/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/calories/"/>
@@ -900,7 +916,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/blog/series/calories/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/calories/"/>

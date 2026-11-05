@@ -283,5 +283,15 @@
   "category": "Calorie counting",
   "glyph": "target",
   "pal": 1
+ },
+ "calorias-desayuno-espanol": {
+  "category": "Healthy eating",
+  "glyph": "cup",
+  "pal": 3
+ },
+ "calorias-para-perder-un-kilo": {
+  "category": "Calorie counting",
+  "glyph": "scale",
+  "pal": 2
  }
 }

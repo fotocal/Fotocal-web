@@ -16,17 +16,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/ai/`
 - **Title** (56): Coach de nutrición con IA gratis: pregunta qué comer hoy
-- **Description** (157): Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Gratis y sin límite de mensajes en todos los planes. Android.
+- **Description** (153): Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Mensajes sin límite en todos los planes, gratis incluido.
 - **H1**: El coach de nutrición con IA que ya ha leído tu diario.
 
 ### `/blog/added-sugar-vs-natural-sugar/`
 - **Title** (58): Azúcar añadido y azúcar natural: la diferencia que importa
-- **Description** (156): El azúcar de la fruta no es el del refresco: la fibra cambia cómo se absorbe. Qué cuenta como azúcar añadido, cuánto es demasiado al día y dónde se esconde.
+- **Description** (149): El azúcar de la fruta no es el del refresco: la fibra cambia cómo se absorbe. Qué cuenta como azúcar añadido, cuánto es demasiado y dónde se esconde.
 - **H1**: Azúcar añadido frente a natural: lo que de verdad importa
 
 ### `/blog/best-foods-for-weight-loss/`
 - **Title** (57): Alimentos que sacian con pocas calorías: lista con cifras
-- **Description** (156): Los alimentos que llenan con menos calorías, con cifras y por qué funcionan: proteína, fibra y agua. Monta las comidas con ellos y el déficit deja de doler.
+- **Description** (153): Los alimentos que llenan con menos calorías, con cifras y por qué funcionan: proteína, fibra y agua. Monta las comidas con ellos y el déficit pesa menos.
 - **H1**: Los mejores alimentos para adelgazar: los que sacian con menos calorías
 
 ### `/blog/building-muscle-while-losing-fat/`
@@ -36,13 +36,23 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/calorias-de-las-tapas/`
 - **Title** (55): Calorías de las tapas: caña, bravas, croquetas y pincho
-- **Description** (160): Lo que suma una tarde de tapas, tapa por tapa y caña por caña, con cifras por ración: una salida corta, un sábado largo y los cambios que nadie nota en la mesa.
+- **Description** (145): Lo que suma una tarde de tapas, tapa a tapa y caña a caña, con cifras por ración: una salida corta, un sábado largo y los cambios que nadie nota.
 - **H1**: Cuántas calorías tienen las tapas: caña, bravas, croquetas, pincho de tortilla y jamón
+
+### `/blog/calorias-desayuno-espanol/`
+- **Title** (54): Calorías del desayuno español: café, tostada y churros
+- **Description** (140): Calorías de un café con leche, una tostada con tomate o unos churros: seis desayunos de aquí, de 167 a 531 kcal, y el cambio que más ahorra.
+- **H1**: Calorías del desayuno español: café con leche, tostada con tomate, churros y zumo
 
 ### `/blog/calorias-menu-del-dia/`
 - **Title** (54): Calorías de un menú del día: tres combinaciones reales
-- **Description** (158): Cuántas calorías suma un menú del día: tres combinaciones reales con cifras por ración, qué parte se llevan el pan y la bebida, y los cambios que más ahorran.
+- **Description** (127): Cuántas calorías suma un menú del día: tres combinaciones reales con cifras por ración, qué parte se llevan el pan y la bebida.
 - **H1**: Calorías de un menú del día: primero, segundo, pan, bebida y postre
+
+### `/blog/calorias-para-perder-un-kilo/`
+- **Title** (53): ¿Cuántas calorías hay que quemar para perder un kilo?
+- **Description** (155): Un kilo de grasa son unas 7.700 kcal: de dónde sale la cifra, por qué no es exacta y cuánto tarda en bajar un kilo con un déficit de 300, 500 o 750 al día.
+- **H1**: ¿Cuántas calorías hay que quemar para perder un kilo? Las 7.700 y lo que significan
 
 ### `/blog/calorie-deficit-for-fat-loss/`
 - **Title** (58): Déficit calórico: la regla detrás de toda pérdida de grasa
@@ -51,17 +61,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/carbs-are-not-the-enemy/`
 - **Title** (59): Los carbohidratos no son el enemigo: una mirada equilibrada
-- **Description** (158): Llevamos décadas culpando a los carbohidratos del aumento de peso. Esto es lo que hacen en realidad, cuáles conviene priorizar y por qué no merecen tanto mied
+- **Description** (154): Llevamos décadas culpando a los carbohidratos del aumento de peso. Lo que hacen en realidad, cuáles conviene priorizar y por qué no merecen tan mala fama.
 - **H1**: Los carbohidratos no son el enemigo: una mirada equilibrada
 
 ### `/blog/cardio-vs-strength-training-for-fat-loss/`
-- **Title** (42): Cardio o pesas para perder grasa — Fotocal
-- **Description** (158): ¿Hacer cardio o levantar pesas para perder grasa? Qué aporta cada uno, por qué la respuesta honesta es «los dos» y cómo combinarlos para que el déficit trabaj
+- **Title** (32): Cardio o pesas para perder grasa
+- **Description** (153): ¿Cardio o pesas para perder grasa? Qué aporta cada uno, por qué la respuesta honesta es «los dos» y cómo combinarlos para que el déficit haga su trabajo.
 - **H1**: Cardio o pesas para perder grasa
 
 ### `/blog/choose-photo-calorie-counter/`
 - **Title** (58): Cómo elegir una app de calorías con foto (y qué es gratis)
-- **Description** (158): Seis preguntas que hacerle a cualquier app que cuenta calorías con una foto antes de que te convenza el vídeo de la demo. Y, en los mismos términos llanos, qu
+- **Description** (121): Seis preguntas que hacerle a cualquier app que cuenta calorías con una foto antes de que te convenza el vídeo de la demo.
 - **H1**: Cómo elegir una app de calorías con foto (y qué es gratis)
 
 ### `/blog/common-calorie-counting-mistakes/`
@@ -75,13 +85,13 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Déficit calórico de 500 calorías al día: qué comer, plato por plato
 
 ### `/blog/dietary-fat-how-much-and-which-kinds/`
-- **Title** (59): Grasa en la dieta: cuánta necesitas y de qué tipo — Fotocal
-- **Description** (158): La grasa no engorda por defecto: es esencial. Cuánta grasa necesitas al día, en qué se diferencian los tipos y cómo elegir con criterio sin temerle al aceite.
+- **Title** (49): Grasa en la dieta: cuánta necesitas y de qué tipo
+- **Description** (152): La grasa no engorda por defecto: es esencial. Cuánta necesitas al día, en qué se diferencian los tipos y cómo elegir con criterio sin temerle al aceite.
 - **H1**: Grasa en la dieta: cuánta necesitas y de qué tipo
 
 ### `/blog/do-calories-matter-or-food-quality/`
 - **Title** (59): Calorías o calidad de la comida: qué importa para adelgazar
-- **Description** (156): Las calorías deciden si pierdes peso; la calidad decide cuánta hambre pasas y cómo llegas. Lo que muestran los ensayos y cómo usar las dos cosas en la mesa.
+- **Description** (145): Las calorías deciden si pierdes peso; la calidad decide cuánta hambre pasas y cómo llegas. Lo que muestran los ensayos y cómo usar las dos cosas.
 - **H1**: ¿Importan las calorías o solo la calidad de la comida?
 
 ### `/blog/do-you-need-to-exercise-to-lose-weight/`
@@ -100,8 +110,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: El momento de la proteína: ¿importa de verdad?
 
 ### `/blog/eating-out-without-wrecking-your-diet/`
-- **Title** (40): Comer fuera sin perder el hilo — Fotocal
-- **Description** (158): Los restaurantes caben en tus objetivos. Hábitos sencillos para pedir, para las raciones y para el pan que te dejan disfrutar fuera sin salirte de tus caloría
+- **Title** (30): Comer fuera sin perder el hilo
+- **Description** (143): Los restaurantes caben en tus objetivos. Hábitos sencillos para pedir, para las raciones y para el pan, y disfrutar fuera sin salirte del plan.
 - **H1**: Comer fuera sin perder el hilo
 
 ### `/blog/emotional-eating/`
@@ -111,17 +121,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/fiber-the-underrated-nutrient/`
 - **Title** (59): La fibra: el nutriente infravalorado para controlar el peso
-- **Description** (156): La fibra te sacia, estabiliza el azúcar en sangre y cuida tu intestino, y aun así casi nadie llega. Cuánta necesitas al día y cómo conseguirla sin esfuerzo.
+- **Description** (149): La fibra te sacia, estabiliza el azúcar en sangre y cuida tu intestino, y aun así casi nadie llega. Cuánta necesitas al día y cómo conseguirla fácil.
 - **H1**: La fibra: el nutriente infravalorado para controlar el peso
 
 ### `/blog/healthy-snacks-that-satisfy/`
 - **Title** (48): Snacks saludables que de verdad sacian — Fotocal
-- **Description** (158): Picar entre horas está bien cuando el snack cumple. Ideas saciantes, con proteína y fibra, que quitan el hambre entre comidas, y las que solo dan ganas de más
+- **Description** (126): Picar entre horas está bien cuando el snack cumple. Ideas saciantes, con proteína y fibra, que quitan el hambre entre comidas.
 - **H1**: Snacks saludables que de verdad sacian
 
 ### `/blog/high-protein-breakfast-ideas/`
 - **Title** (56): Desayunos con proteína: ideas saciantes para cada mañana
-- **Description** (157): Desayunos con 25 g de proteína o más para llegar sin hambre a la comida: opciones de cinco minutos, otras para dejar hechas la víspera y a qué cifra apuntar.
+- **Description** (155): Desayunos con 25 g de proteína o más para llegar sin hambre a la comida: opciones de cinco minutos, otras para dejar hechas la víspera y la cifra a buscar.
 - **H1**: Desayunos con mucha proteína para llegar saciado a la comida
 
 ### `/blog/high-protein-diet-benefits-and-how-to-start/`
@@ -131,12 +141,12 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/how-fast-should-you-lose-weight/`
 - **Title** (56): Cuánto peso perder por semana: el ritmo sano, con cifras
-- **Description** (157): Entre el 0,5 % y el 1 % de tu peso a la semana: por qué ese ritmo conserva músculo y evita el rebote, qué pasa si vas más rápido y cómo calcular el tuyo hoy.
+- **Description** (153): Entre el 0,5 % y el 1 % de tu peso a la semana: por qué ese ritmo conserva músculo y evita el rebote, qué pasa si vas más rápido y cómo calcular el tuyo.
 - **H1**: ¿Cuánto peso se puede perder en una semana? El ritmo que no vuelve
 
 ### `/blog/how-many-calories-does-exercise-burn/`
-- **Title** (57): ¿Cuántas calorías quema realmente el ejercicio? — Fotocal
-- **Description** (156): Las pulseras y las máquinas de cardio suelen exagerar el gasto. Una mirada realista a las calorías del ejercicio y por qué «recuperarlas» comiendo sale mal.
+- **Title** (47): ¿Cuántas calorías quema realmente el ejercicio?
+- **Description** (153): Las pulseras y las máquinas de cardio suelen exagerar el gasto. Una mirada realista a las calorías del ejercicio y por qué «recuperarlas» comiendo falla.
 - **H1**: ¿Cuántas calorías quema realmente el ejercicio?
 
 ### `/blog/how-much-protein-per-day/`
@@ -146,7 +156,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/how-sleep-affects-your-weight/`
 - **Title** (52): Cómo afecta el sueño a tu peso (más de lo que crees)
-- **Description** (156): Dormir poco hace más difícil perder peso: más hambre, antojos más fuertes, menos movimiento. Lo que muestra la evidencia y formas sencillas de dormir mejor.
+- **Description** (141): Dormir poco hace más difícil perder peso: más hambre, antojos más fuertes, menos movimiento. Lo que muestra la evidencia y cómo dormir mejor.
 - **H1**: Cómo afecta el sueño a tu peso (más de lo que crees)
 
 ### `/blog/how-to-build-a-healthy-grocery-list/`
@@ -166,7 +176,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/how-to-handle-cravings-without-guilt/`
 - **Title** (51): Cómo manejar los antojos sin sentir culpa — Fotocal
-- **Description** (157): Los antojos son normales, no un fallo moral. Por qué aparecen, qué les hace la restricción y cómo satisfacerlos de forma que encajen en tus metas, sin culpa.
+- **Description** (146): Los antojos son normales, no un fallo moral. Por qué aparecen, qué les hace la restricción y cómo satisfacerlos de forma que encajen en tus metas.
 - **H1**: Cómo manejar los antojos sin sentir culpa
 
 ### `/blog/how-to-lose-weight-sustainably/`
@@ -186,7 +196,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/how-to-stay-consistent-with-healthy-habits/`
 - **Title** (54): Cómo mantener la constancia con los hábitos saludables
-- **Description** (156): La constancia gana siempre a la intensidad. Estrategias prácticas, sacadas de cómo se forman los hábitos de verdad, para que comer bien y moverte se queden.
+- **Description** (115): La constancia gana siempre a la intensidad. Estrategias prácticas, sacadas de cómo se forman los hábitos de verdad.
 - **H1**: Cómo mantener la constancia con los hábitos saludables
 
 ### `/blog/how-to-stop-overeating-at-night/`
@@ -231,22 +241,22 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/meal-prep-for-beginners/`
 - **Title** (59): Meal prep para principiantes: un sistema sencillo — Fotocal
-- **Description** (157): Preparar comidas ahorra tiempo, dinero y decisiones a última hora. Un sistema para principiantes, con cómo cocinar en tandas, que no te roba todo el domingo.
+- **Description** (125): Preparar comidas ahorra tiempo, dinero y decisiones a última hora. Un sistema para principiantes, con cómo cocinar en tandas.
 - **H1**: Meal prep para principiantes: un sistema sencillo
 
 ### `/blog/mindful-eating-beginners-guide/`
 - **Title** (58): Alimentación consciente: guía para principiantes — Fotocal
-- **Description** (158): Alimentación consciente con poco tiempo: comer con atención plena puede ayudarte a disfrutar más de la comida y a comer de más con menos frecuencia. Qué es, p
+- **Description** (148): Alimentación consciente con poco tiempo: comer con atención plena puede ayudarte a disfrutar más de la comida y a comer de más con menos frecuencia.
 - **H1**: Alimentación consciente: guía para principiantes
 
 ### `/blog/neat-the-hidden-calorie-burn/`
-- **Title** (60): NEAT: el gasto calórico oculto que estás ignorando — Fotocal
-- **Description** (156): El NEAT —las calorías que quemas con el movimiento cotidiano— puede superar de largo a tus entrenamientos. Qué es y cómo usarlo para perder grasa más fácil.
+- **Title** (50): NEAT: el gasto calórico oculto que estás ignorando
+- **Description** (146): El NEAT, las calorías que quemas con el movimiento cotidiano, puede superar de largo a tus entrenamientos. Qué es y cómo usarlo para perder grasa.
 - **H1**: NEAT: el gasto calórico oculto que estás ignorando
 
 ### `/blog/photo-calorie-apps-accuracy/`
 - **Title** (57): ¿Son fiables las apps de calorías con foto? Lo que no ven
-- **Description** (158): Una foto identifica bien el plato y adivina peor la cantidad. Aquí está de dónde sale el error de verdad, por qué nadie puede darte un porcentaje honesto y la
+- **Description** (143): Una foto identifica bien el plato y adivina peor la cantidad. De dónde sale el error de verdad y las tres correcciones que lo quitan casi todo.
 - **H1**: ¿Son fiables las apps de calorías con foto? Lo que no ven
 
 ### `/blog/plan-a-week-of-meals-in-30-minutes/`
@@ -256,17 +266,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/portion-control-simple-tricks/`
 - **Title** (54): Control de raciones: trucos sencillos que sí funcionan
-- **Description** (158): Cálculo de raciones sin báscula: las raciones han crecido en silencio durante décadas. Trucos prácticos para calcular cuánto es una ración y comer la cantidad
+- **Description** (149): Cálculo de raciones sin báscula: trucos para saber cuánto es una ración y comer la cantidad adecuada en casa y fuera, sin pesar nada ni pasar hambre.
 - **H1**: Control de raciones: trucos sencillos que sí funcionan
 
 ### `/blog/series/calories/`
 - **Title** (34): Las calorías, desde cero — Fotocal
-- **Description** (158): Qué gasta tu cuerpo, qué es un déficit, a qué ritmo perder y cómo contar sin que sea un segundo trabajo. Siete artículos, en el orden en que llegan las dudas.
+- **Description** (121): Qué gasta tu cuerpo, qué es un déficit, a qué ritmo perder y cómo contar sin que sea un segundo trabajo. Siete artículos.
 - **H1**: Las calorías, desde cero
 
 ### `/blog/series/everyday-eating/`
 - **Title** (34): Comer bien un día normal — Fotocal
-- **Description** (158): El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes, el presupuesto, y dos artículos sólo en español sobre el menú del
+- **Description** (153): El plato, los alimentos que sacian, las raciones, el desayuno, comer fuera, el presupuesto, el menú del día y las tapas. Sin reglas imposibles un martes.
 - **H1**: Comer bien un día normal
 
 ### `/blog/series/keeping-it-off/`
@@ -291,7 +301,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/track-calories-without-weighing/`
 - **Title** (52): Cómo contar calorías sin pesar cada comida — Fotocal
-- **Description** (156): ¿Sin báscula de cocina? Aún puedes registrar bien usando porciones de la mano, referencias visuales y el registro por foto. Guía práctica para estimar bien.
+- **Description** (123): ¿Sin báscula de cocina? Aún puedes registrar bien usando porciones de la mano, referencias visuales y el registro por foto.
 - **H1**: Cómo contar calorías sin pesar cada comida
 
 ### `/blog/understanding-your-basal-metabolic-rate/`
@@ -301,12 +311,12 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/blog/weight-loss-plateaus/`
 - **Title** (57): Estancamiento al perder peso: por qué se para y qué hacer
-- **Description** (156): Por qué se estanca la pérdida de peso, cómo distinguir un estancamiento real del ruido del agua, el patrón de estancamiento y bajada de golpe y qué cambiar.
+- **Description** (146): Por qué se estanca la pérdida de peso, cómo distinguir un estancamiento real del ruido del agua, la bajada de golpe después y qué cambiar primero.
 - **H1**: Estancamiento en la pérdida de peso: por qué se para y cómo romperlo
 
 ### `/blog/what-a-balanced-plate-looks-like/`
-- **Title** (50): ¿Cómo es realmente un plato equilibrado? — Fotocal
-- **Description** (158): Olvídate de los planes de comida complicados. El método del plato equilibrado es un sistema visual sencillo para montar comidas satisfactorias sin contar nada
+- **Title** (40): ¿Cómo es realmente un plato equilibrado?
+- **Description** (144): Olvídate de los planes de comida complicados. El plato equilibrado es un sistema visual sencillo para montar comidas que sacian sin contar nada.
 - **H1**: ¿Cómo es realmente un plato equilibrado?
 
 ### `/blog/why-crash-diets-fail/`
@@ -320,8 +330,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Micronutrientes: por qué importan al contar calorías
 
 ### `/blog/why-the-scale-is-not-the-whole-story/`
-- **Title** (55): Por qué la báscula no cuenta toda la historia — Fotocal
-- **Description** (157): El número de la báscula oscila por decenas de razones que no tienen nada que ver con la grasa. Qué mide de verdad y cómo medir tu progreso sin volverte loco.
+- **Title** (45): Por qué la báscula no cuenta toda la historia
+- **Description** (151): El número de la báscula oscila por decenas de razones que nada tienen que ver con la grasa. Qué mide de verdad y cómo seguir tu progreso sin agobiarte.
 - **H1**: Por qué la báscula no cuenta toda la historia
 
 ### `/calculadoras/calorias-diarias/`
@@ -336,7 +346,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calculadoras/imc/`
 - **Title** (54): Calculadora de IMC (índice de masa corporal) — Fotocal
-- **Description** (156): Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso corresponde a un IMC normal. Y lo que el IMC no te dice.
+- **Description** (128): Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso corresponde a un IMC normal.
 - **H1**: Calculadora de IMC
 
 ### `/calculadoras/`
@@ -346,7 +356,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calculadoras/macros/`
 - **Title** (51): Calculadora de macros: proteínas, grasas e hidratos
-- **Description** (160): Reparte tus calorías en proteínas, grasas e hidratos según tu peso y tu objetivo: perder grasa, mantener o ganar músculo. Gramos al día, con la regla explicada.
+- **Description** (121): Reparte tus calorías en proteínas, grasas e hidratos según tu peso y tu objetivo: perder grasa, mantener o ganar músculo.
 - **H1**: Calculadora de macros
 
 ### `/calorias/aceite-de-oliva/`
@@ -356,12 +366,12 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/albondigas-en-salsa/`
 - **Title** (51): Calorías de las albóndigas en salsa: ración y 100 g
-- **Description** (160): Una ración de albóndigas en salsa (250 g) tiene 394 kcal, 163 por 100 g: 29,3 g de proteínas, 12,8 g de hidratos y 23,9 g de grasas. Y qué pesa una ración real.
+- **Description** (132): Una ración de albóndigas en salsa (250 g) tiene 394 kcal, 163 por 100 g: 29,3 g de proteínas, 12,8 g de hidratos y 23,9 g de grasas.
 - **H1**: Calorías de las albóndigas en salsa
 
 ### `/calorias/arroz-con-leche/`
 - **Title** (54): Calorías del arroz con leche: ración y 100 g — Fotocal
-- **Description** (157): Una ración de arroz con leche (150 g) tiene 182 kcal, 121 por 100 g: 4,5 g de proteínas, 28,4 g de hidratos y 5,1 g de grasas. Qué pesa una ración de verdad.
+- **Description** (126): Una ración de arroz con leche (150 g) tiene 182 kcal, 121 por 100 g: 4,5 g de proteínas, 28,4 g de hidratos y 5,1 g de grasas.
 - **H1**: Calorías del arroz con leche
 
 ### `/calorias/barra-de-pan/`
@@ -371,12 +381,12 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/bocadillo-de-calamares/`
 - **Title** (51): Calorías del bocadillo de calamares: ración y 100 g
-- **Description** (157): Una ración de bocadillo de calamares (180 g) tiene 408 kcal, 227 por 100 g: 21,5 g de proteínas, 59,9 g de hidratos y 8,5 g de grasas. Y la ración de verdad.
+- **Description** (134): Una ración de bocadillo de calamares (180 g) tiene 408 kcal, 227 por 100 g: 21,5 g de proteínas, 59,9 g de hidratos y 8,5 g de grasas.
 - **H1**: Calorías del bocadillo de calamares
 
 ### `/calorias/bocadillo-de-jamon-serrano/`
 - **Title** (55): Calorías del bocadillo de jamón serrano: ración y 100 g
-- **Description** (157): Una ración de bocadillo de jamón serrano (180 g) tiene 495 kcal, 275 por 100 g: 24,9 g de proteínas, 61,7 g de hidratos y 16,3 g de grasas. Y la ración real.
+- **Description** (139): Una ración de bocadillo de jamón serrano (180 g) tiene 495 kcal, 275 por 100 g: 24,9 g de proteínas, 61,7 g de hidratos y 16,3 g de grasas.
 - **H1**: Calorías del bocadillo de jamón serrano
 
 ### `/calorias/cafe-con-leche/`
@@ -386,42 +396,42 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/calamares-a-la-romana/`
 - **Title** (53): Calorías de los calamares a la romana: ración y 100 g
-- **Description** (157): Una ración de calamares a la romana (150 g) tiene 255 kcal, 170 por 100 g: 26,1 g de proteínas, 11,8 g de hidratos y 10,9 g de grasas. Y la ración de verdad.
+- **Description** (134): Una ración de calamares a la romana (150 g) tiene 255 kcal, 170 por 100 g: 26,1 g de proteínas, 11,8 g de hidratos y 10,9 g de grasas.
 - **H1**: Calorías de los calamares a la romana
 
 ### `/calorias/callos-a-la-madrilena/`
 - **Title** (53): Calorías de los callos a la madrileña: ración y 100 g
-- **Description** (157): Una ración de callos a la madrileña (300 g) tiene 516 kcal, 172 por 100 g: 42,6 g de proteínas, 15,4 g de hidratos y 31,7 g de grasas. Y la ración de verdad.
+- **Description** (134): Una ración de callos a la madrileña (300 g) tiene 516 kcal, 172 por 100 g: 42,6 g de proteínas, 15,4 g de hidratos y 31,7 g de grasas.
 - **H1**: Calorías de los callos a la madrileña
 
 ### `/calorias/cana-de-cerveza/`
 - **Title** (56): Calorías de la caña de cerveza: ración y 100 g — Fotocal
-- **Description** (160): Una ración de caña de cerveza (200 g) tiene 86 kcal, 43 por 100 g: 0,9 g de proteínas, 7,1 g de hidratos y 0 g de grasas. Con la ración real y platos parecidos.
+- **Description** (121): Una ración de caña de cerveza (200 g) tiene 86 kcal, 43 por 100 g: 0,9 g de proteínas, 7,1 g de hidratos y 0 g de grasas.
 - **H1**: Calorías de la caña de cerveza
 
 ### `/calorias/churros-con-chocolate/`
 - **Title** (53): Calorías de los churros con chocolate: ración y 100 g
-- **Description** (157): Una ración de churros con chocolate (200 g) tiene 531 kcal, 266 por 100 g: 10,7 g de proteínas, 47,6 g de hidratos y 32,7 g de grasas. Y la ración de verdad.
+- **Description** (134): Una ración de churros con chocolate (200 g) tiene 531 kcal, 266 por 100 g: 10,7 g de proteínas, 47,6 g de hidratos y 32,7 g de grasas.
 - **H1**: Calorías de los churros con chocolate
 
 ### `/calorias/coca-cola-zero/`
 - **Title** (55): Calorías de la Coca-Cola Zero: ración y 100 g — Fotocal
-- **Description** (157): Una ración de Coca-Cola Zero (330 g) tiene 7 kcal, 2 por 100 g: 0,4 g de proteínas, 1 g de hidratos y 0,1 g de grasas. Con la ración real y platos parecidos.
+- **Description** (118): Una ración de Coca-Cola Zero (330 g) tiene 7 kcal, 2 por 100 g: 0,4 g de proteínas, 1 g de hidratos y 0,1 g de grasas.
 - **H1**: Calorías de la Coca-Cola Zero
 
 ### `/calorias/cocido-madrileno/`
 - **Title** (55): Calorías del cocido madrileño: ración y 100 g — Fotocal
-- **Description** (160): Una ración de cocido madrileño (400 g) tiene 594 kcal, 149 por 100 g: 44,5 g de proteínas, 49,7 g de hidratos y 24,2 g de grasas. Qué pesa una ración de verdad.
+- **Description** (129): Una ración de cocido madrileño (400 g) tiene 594 kcal, 149 por 100 g: 44,5 g de proteínas, 49,7 g de hidratos y 24,2 g de grasas.
 - **H1**: Calorías del cocido madrileño
 
 ### `/calorias/copa-de-vino-tinto/`
 - **Title** (59): Calorías de la copa de vino tinto: ración y 100 g — Fotocal
-- **Description** (156): Una ración de copa de vino tinto (150 g) tiene 128 kcal, 85 por 100 g: 0,1 g de proteínas, 3,9 g de hidratos y 0 g de grasas. Qué pesa una ración de verdad.
+- **Description** (125): Una ración de copa de vino tinto (150 g) tiene 128 kcal, 85 por 100 g: 0,1 g de proteínas, 3,9 g de hidratos y 0 g de grasas.
 - **H1**: Calorías de la copa de vino tinto
 
 ### `/calorias/croquetas-de-jamon/`
 - **Title** (60): Calorías de las croquetas de jamón: ración y 100 g — Fotocal
-- **Description** (156): Una ración de croquetas de jamón (120 g) tiene 290 kcal, 242 por 100 g: 10 g de proteínas, 24 g de hidratos y 17 g de grasas. Qué pesa una ración de verdad.
+- **Description** (125): Una ración de croquetas de jamón (120 g) tiene 290 kcal, 242 por 100 g: 10 g de proteínas, 24 g de hidratos y 17 g de grasas.
 - **H1**: Calorías de las croquetas de jamón
 
 ### `/calorias/empanada-gallega/`
@@ -431,82 +441,82 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/ensaladilla-rusa/`
 - **Title** (57): Calorías de la ensaladilla rusa: ración y 100 g — Fotocal
-- **Description** (159): Una ración de ensaladilla rusa (200 g) tiene 375 kcal, 183 por 100 g: 9,9 g de proteínas, 24,5 g de hidratos y 26,5 g de grasas. Qué pesa una ración de verdad.
+- **Description** (128): Una ración de ensaladilla rusa (200 g) tiene 375 kcal, 183 por 100 g: 9,9 g de proteínas, 24,5 g de hidratos y 26,5 g de grasas.
 - **H1**: Calorías de la ensaladilla rusa
 
 ### `/calorias/fabada-asturiana/`
 - **Title** (57): Calorías de la fabada asturiana: ración y 100 g — Fotocal
-- **Description** (160): Una ración de fabada asturiana (300 g) tiene 546 kcal, 182 por 100 g: 31,8 g de proteínas, 48,6 g de hidratos y 25,4 g de grasas. Qué pesa una ración de verdad.
+- **Description** (129): Una ración de fabada asturiana (300 g) tiene 546 kcal, 182 por 100 g: 31,8 g de proteínas, 48,6 g de hidratos y 25,4 g de grasas.
 - **H1**: Calorías de la fabada asturiana
 
 ### `/calorias/gambas-al-ajillo/`
 - **Title** (58): Calorías de las gambas al ajillo: ración y 100 g — Fotocal
-- **Description** (159): Una ración de gambas al ajillo (150 g) tiene 325 kcal, 217 por 100 g: 28,3 g de proteínas, 3,8 g de hidratos y 22,4 g de grasas. Qué pesa una ración de verdad.
+- **Description** (128): Una ración de gambas al ajillo (150 g) tiene 325 kcal, 217 por 100 g: 28,3 g de proteínas, 3,8 g de hidratos y 22,4 g de grasas.
 - **H1**: Calorías de las gambas al ajillo
 
 ### `/calorias/gazpacho/`
 - **Title** (47): Calorías del gazpacho: ración y 100 g — Fotocal
-- **Description** (159): Una ración de gazpacho (250 g) tiene 90 kcal, 36 por 100 g: 2 g de proteínas, 10 g de hidratos y 5 g de grasas. Ración real y comparación con platos parecidos.
+- **Description** (111): Una ración de gazpacho (250 g) tiene 90 kcal, 36 por 100 g: 2 g de proteínas, 10 g de hidratos y 5 g de grasas.
 - **H1**: Calorías del gazpacho
 
 ### `/calorias/huevo-cocido/`
 - **Title** (51): Calorías del huevo cocido: ración y 100 g — Fotocal
-- **Description** (159): Una ración de huevo cocido (55 g) tiene 85 kcal, 155 por 100 g: 6,9 g de proteínas, 0,6 g de hidratos y 5,8 g de grasas. Con la ración real y platos parecidos.
+- **Description** (120): Una ración de huevo cocido (55 g) tiene 85 kcal, 155 por 100 g: 6,9 g de proteínas, 0,6 g de hidratos y 5,8 g de grasas.
 - **H1**: Calorías del huevo cocido
 
 ### `/calorias/huevos-fritos-con-patatas/`
 - **Title** (57): Calorías de los huevos fritos con patatas: ración y 100 g
-- **Description** (156): Una ración de huevos fritos con patatas (250 g) tiene 497 kcal, 207 por 100 g: 17,2 g de proteínas, 33,8 g de hidratos y 32,9 g de grasas. Y la ración real.
+- **Description** (138): Una ración de huevos fritos con patatas (250 g) tiene 497 kcal, 207 por 100 g: 17,2 g de proteínas, 33,8 g de hidratos y 32,9 g de grasas.
 - **H1**: Calorías de los huevos fritos con patatas
 
 ### `/calorias/`
 - **Title** (56): Calorías de platos españoles por ración real y por 100 g
-- **Description** (160): Tabla de calorías de 41 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra. Sin registro.
+- **Description** (146): Tabla de calorías de 41 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra.
 - **H1**: Calorías de los platos españoles, por ración y por 100 g
 
 ### `/calorias/jamon-serrano/`
 - **Title** (52): Calorías del jamón serrano: ración y 100 g — Fotocal
-- **Description** (160): Una ración de jamón serrano (50 g) tiene 120 kcal, 240 por 100 g: 13 g de proteínas, 2,1 g de hidratos y 6,6 g de grasas. Con la ración real y platos parecidos.
+- **Description** (121): Una ración de jamón serrano (50 g) tiene 120 kcal, 240 por 100 g: 13 g de proteínas, 2,1 g de hidratos y 6,6 g de grasas.
 - **H1**: Calorías del jamón serrano
 
 ### `/calorias/lentejas-estofadas/`
 - **Title** (60): Calorías de las lentejas estofadas: ración y 100 g — Fotocal
-- **Description** (159): Una ración de lentejas estofadas (320 g) tiene 373 kcal, 117 por 100 g: 18,1 g de proteínas, 53,8 g de hidratos y 10,9 g de grasas. Y qué pesa una ración real.
+- **Description** (131): Una ración de lentejas estofadas (320 g) tiene 373 kcal, 117 por 100 g: 18,1 g de proteínas, 53,8 g de hidratos y 10,9 g de grasas.
 - **H1**: Calorías de las lentejas estofadas
 
 ### `/calorias/migas/`
 - **Title** (47): Calorías de las migas: ración y 100 g — Fotocal
-- **Description** (160): Una ración de migas (250 g) tiene 500 kcal, 200 por 100 g: 14 g de proteínas, 55 g de hidratos y 25 g de grasas. Ración real y comparación con platos parecidos.
+- **Description** (112): Una ración de migas (250 g) tiene 500 kcal, 200 por 100 g: 14 g de proteínas, 55 g de hidratos y 25 g de grasas.
 - **H1**: Calorías de las migas
 
 ### `/calorias/paella-valenciana/`
 - **Title** (58): Calorías de la paella valenciana: ración y 100 g — Fotocal
-- **Description** (158): Una ración de paella valenciana (300 g) tiene 515 kcal, 168 por 100 g: 31,9 g de proteínas, 47,5 g de hidratos y 20,8 g de grasas. Y qué pesa una ración real.
+- **Description** (130): Una ración de paella valenciana (300 g) tiene 515 kcal, 168 por 100 g: 31,9 g de proteínas, 47,5 g de hidratos y 20,8 g de grasas.
 - **H1**: Calorías de la paella valenciana
 
 ### `/calorias/patatas-bravas/`
 - **Title** (56): Calorías de las patatas bravas: ración y 100 g — Fotocal
-- **Description** (157): Una ración de patatas bravas (200 g) tiene 380 kcal, 190 por 100 g: 4,7 g de proteínas, 41,5 g de hidratos y 22,8 g de grasas. Qué pesa una ración de verdad.
+- **Description** (126): Una ración de patatas bravas (200 g) tiene 380 kcal, 190 por 100 g: 4,7 g de proteínas, 41,5 g de hidratos y 22,8 g de grasas.
 - **H1**: Calorías de las patatas bravas
 
 ### `/calorias/pimientos-de-padron/`
 - **Title** (51): Calorías de los pimientos de Padrón: ración y 100 g
-- **Description** (158): Una ración de pimientos de Padrón (120 g) tiene 120 kcal, 100 por 100 g: 1,4 g de proteínas, 7,3 g de hidratos y 10,3 g de grasas. Y qué pesa una ración real.
+- **Description** (130): Una ración de pimientos de Padrón (120 g) tiene 120 kcal, 100 por 100 g: 1,4 g de proteínas, 7,3 g de hidratos y 10,3 g de grasas.
 - **H1**: Calorías de los pimientos de Padrón
 
 ### `/calorias/pincho-de-tortilla/`
 - **Title** (57): Calorías del pincho de tortilla: ración y 100 g — Fotocal
-- **Description** (159): Una ración de pincho de tortilla (120 g) tiene 198 kcal, 165 por 100 g: 6,7 g de proteínas, 14 g de hidratos y 11,9 g de grasas. Qué pesa una ración de verdad.
+- **Description** (128): Una ración de pincho de tortilla (120 g) tiene 198 kcal, 165 por 100 g: 6,7 g de proteínas, 14 g de hidratos y 11,9 g de grasas.
 - **H1**: Calorías del pincho de tortilla
 
 ### `/calorias/platano/`
 - **Title** (46): Calorías del plátano: ración y 100 g — Fotocal
-- **Description** (156): Una ración de plátano (120 g) tiene 107 kcal, 89 por 100 g: 1,3 g de proteínas, 27,4 g de hidratos y 0,4 g de grasas. Con la ración real y platos parecidos.
+- **Description** (117): Una ración de plátano (120 g) tiene 107 kcal, 89 por 100 g: 1,3 g de proteínas, 27,4 g de hidratos y 0,4 g de grasas.
 - **H1**: Calorías del plátano
 
 ### `/calorias/pulpo-a-la-gallega/`
 - **Title** (57): Calorías del pulpo a la gallega: ración y 100 g — Fotocal
-- **Description** (156): Una ración de pulpo a la gallega (200 g) tiene 250 kcal, 125 por 100 g: 24 g de proteínas, 14 g de hidratos y 11 g de grasas. Qué pesa una ración de verdad.
+- **Description** (125): Una ración de pulpo a la gallega (200 g) tiene 250 kcal, 125 por 100 g: 24 g de proteínas, 14 g de hidratos y 11 g de grasas.
 - **H1**: Calorías del pulpo a la gallega
 
 ### `/calorias/salmorejo/`
@@ -516,27 +526,27 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/sandwich-mixto/`
 - **Title** (53): Calorías del sándwich mixto (jamón y queso) — Fotocal
-- **Description** (160): Una ración de sándwich mixto de jamón y queso (150 g) tiene 417 kcal, 288 por 100 g: 17,2 g de proteínas, 42,4 g de hidratos y 19 g de grasas. Y la ración real.
+- **Description** (142): Una ración de sándwich mixto de jamón y queso (150 g) tiene 417 kcal, 288 por 100 g: 17,2 g de proteínas, 42,4 g de hidratos y 19 g de grasas.
 - **H1**: Calorías del sándwich mixto de jamón y queso
 
 ### `/calorias/sopa-castellana/`
 - **Title** (56): Calorías de la sopa castellana: ración y 100 g — Fotocal
-- **Description** (159): Una ración de sopa castellana (300 g) tiene 347 kcal, 116 por 100 g: 15,6 g de proteínas, 24,3 g de hidratos y 20,8 g de grasas. Qué pesa una ración de verdad.
+- **Description** (128): Una ración de sopa castellana (300 g) tiene 347 kcal, 116 por 100 g: 15,6 g de proteínas, 24,3 g de hidratos y 20,8 g de grasas.
 - **H1**: Calorías de la sopa castellana
 
 ### `/calorias/tabla-de-calorias/`
 - **Title** (59): Tabla de calorías de alimentos y platos españoles — Fotocal
-- **Description** (158): Tabla de calorías para imprimir con los 218 alimentos y platos españoles de la app Fotocal: ración, kcal por ración y por 100 g, proteínas, hidratos y grasas.
+- **Description** (139): Tabla de calorías para imprimir con los 218 alimentos y platos españoles de la app Fotocal: ración, kcal por ración y por 100 g, proteínas.
 - **H1**: Tabla de calorías de los alimentos y platos españoles
 
 ### `/calorias/tarta-de-santiago/`
 - **Title** (58): Calorías de la tarta de Santiago: ración y 100 g — Fotocal
-- **Description** (157): Una ración de tarta de Santiago (80 g) tiene 330 kcal, 413 por 100 g: 9,3 g de proteínas, 37 g de hidratos y 17,9 g de grasas. Qué pesa una ración de verdad.
+- **Description** (126): Una ración de tarta de Santiago (80 g) tiene 330 kcal, 413 por 100 g: 9,3 g de proteínas, 37 g de hidratos y 17,9 g de grasas.
 - **H1**: Calorías de la tarta de Santiago
 
 ### `/calorias/tercio-de-cerveza/`
 - **Title** (56): Calorías del tercio de cerveza: ración y 100 g — Fotocal
-- **Description** (156): Una ración de tercio de cerveza (330 g) tiene 142 kcal, 43 por 100 g: 1,5 g de proteínas, 11,7 g de hidratos y 0 g de grasas. Qué pesa una ración de verdad.
+- **Description** (125): Una ración de tercio de cerveza (330 g) tiene 142 kcal, 43 por 100 g: 1,5 g de proteínas, 11,7 g de hidratos y 0 g de grasas.
 - **H1**: Calorías del tercio de cerveza
 
 ### `/calorias/tinto-de-verano/`
@@ -546,22 +556,22 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/torrijas/`
 - **Title** (50): Calorías de las torrijas: ración y 100 g — Fotocal
-- **Description** (156): Una ración de torrijas (80 g) tiene 228 kcal, 271 por 100 g: 5,6 g de proteínas, 26,8 g de hidratos y 11 g de grasas. Con la ración real y platos parecidos.
+- **Description** (117): Una ración de torrijas (80 g) tiene 228 kcal, 271 por 100 g: 5,6 g de proteínas, 26,8 g de hidratos y 11 g de grasas.
 - **H1**: Calorías de las torrijas
 
 ### `/calorias/tortilla-de-patatas/`
 - **Title** (60): Calorías de la tortilla de patatas: ración, 100 g, Mercadona
-- **Description** (159): Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g. Por trozo, con cebolla, de 4 huevos, al microondas y la de Mercadona, con las fuentes.
+- **Description** (142): Una ración de tortilla de patatas (150 g) tiene 248 kcal, 165 por 100 g. Por trozo, con cebolla, de 4 huevos, al microondas y la de Mercadona.
 - **H1**: Calorías de la tortilla de patatas
 
 ### `/calorias/tortilla-francesa/`
 - **Title** (58): Calorías de la tortilla francesa: ración y 100 g — Fotocal
-- **Description** (160): Una ración de tortilla francesa (100 g) tiene 190 kcal, 196 por 100 g: 12,8 g de proteínas, 0,7 g de hidratos y 14,7 g de grasas. Qué pesa una ración de verdad.
+- **Description** (129): Una ración de tortilla francesa (100 g) tiene 190 kcal, 196 por 100 g: 12,8 g de proteínas, 0,7 g de hidratos y 14,7 g de grasas.
 - **H1**: Calorías de la tortilla francesa
 
 ### `/calorias/tostada-con-tomate-y-aceite/`
 - **Title** (58): Calorías de la tostada con tomate y aceite: ración y 100 g
-- **Description** (156): Una ración de tostada con tomate y aceite (90 g) tiene 235 kcal, 267 por 100 g: 5,2 g de proteínas, 30,9 g de hidratos y 10,3 g de grasas. Y la ración real.
+- **Description** (138): Una ración de tostada con tomate y aceite (90 g) tiene 235 kcal, 267 por 100 g: 5,2 g de proteínas, 30,9 g de hidratos y 10,3 g de grasas.
 - **H1**: Calorías de la tostada con tomate y aceite
 
 ### `/contact/`
@@ -571,7 +581,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/faq/`
 - **Title** (53): Preguntas frecuentes del contador de calorías Fotocal
-- **Description** (157): ¿Es gratis? ¿Funciona sin internet? ¿Qué precisión tiene? ¿Sirve en iPhone? Las respuestas honestas a lo que más preguntan los usuarios de Fotocal en España.
+- **Description** (153): ¿Es gratis? ¿Funciona sin internet? ¿Qué precisión tiene? ¿Sirve en iPhone? Respuestas honestas a lo que más preguntan los usuarios de Fotocal en España.
 - **H1**: Lo que más se pregunta sobre el contador de calorías Fotocal.
 
 ### `/features/`
@@ -586,7 +596,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/features/nutrition-diet/`
 - **Title** (49): Contador de macros y panel de nutrición — Fotocal
-- **Description** (160): Macros, fibra, azúcar, vitaminas y minerales de cada comida, con alternativas más sanas y Coach Kal para dudas. La calidad de lo que comes, no solo la cantidad.
+- **Description** (155): Macros, fibra, azúcar, vitaminas y minerales de cada comida, con alternativas más sanas y Coach Kal para dudas. La calidad de lo que comes, no solo cuánto.
 - **H1**: Nutrición y macros: entiende lo que comes, no solo cuánto.
 
 ### `/features/scan-barcode/`
@@ -596,7 +606,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/features/scan-food/`
 - **Title** (51): Calorías con foto: escáner de comida con IA, gratis
-- **Description** (159): Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Corrige la ración antes de guardar. Gratis: 2 escaneos con IA al día.
+- **Description** (148): Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA y 1 por voz al día.
 - **H1**: Calorías con foto, gratis: apunta con la cámara y llévate el plato entero.
 
 ### `/features/voice-logging/`
@@ -606,12 +616,12 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/features/weight-loss/`
 - **Title** (50): Perder peso contando calorías con una foto, gratis
-- **Description** (159): Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales, gratis.
+- **Description** (151): Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales.
 - **H1**: Pierde peso sin convertir la comida en un segundo trabajo.
 
 ### `/`
 - **Title** (57): Contador de calorías gratis: con una foto, sin pesar nada
-- **Description** (159): Haz una foto a tu plato y Fotocal cuenta calorías y macros en segundos, sin pesar. Gratis y sin tarjeta: 2 escaneos con IA al día, código de barras sin límite.
+- **Description** (155): Haz una foto al plato y Fotocal cuenta calorías y macros en segundos. Gratis, sin tarjeta: 2 escaneos con IA, 1 por voz al día; código de barras ilimitado.
 - **H1**: El contador de calorías gratis que funciona con una foto.
 
 ### `/privacy-policy/`
@@ -621,12 +631,12 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/subscription/`
 - **Title** (54): Precios de Fotocal: plan gratis para siempre y Premium
-- **Description** (156): Plan gratis sin tarjeta ni caducidad: 2 escaneos con IA al día, código de barras y Coach Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, 5 días de prueba.
+- **Description** (153): Plan gratis sin tarjeta: 2 escaneos con IA y 1 por voz al día, código de barras y Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, con 5 días de prueba.
 - **H1**: Dos precios, un solo Premium y un contador de calorías gratis que no es una demo.
 
 ### `/terms/`
 - **Title** (31): Términos de servicio de Fotocal
-- **Description** (158): Condiciones de uso de Fotocal: la suscripción Premium, la prueba gratis de 5 días, la renovación y cancelación en Google Play, reembolsos y responsabilidades.
+- **Description** (154): Condiciones de uso de Fotocal: la suscripción Premium, la prueba de 5 días, la renovación y la cancelación en Google Play, reembolsos y responsabilidades.
 - **H1**: Términos de Servicio
 
 ## English (/en/)
@@ -643,7 +653,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/ai/`
 - **Title** (46): Free AI Nutrition Coach: Ask What to Eat Today
-- **Description** (158): Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. Free, in your language, no message limit, any plan.
+- **Description** (152): Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. In your language, no message limit, any plan.
 - **H1**: The AI nutrition coach that has already read your diary.
 
 ### `/en/blog/added-sugar-vs-natural-sugar/`
@@ -672,8 +682,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Carbs Aren’t the Enemy: A Balanced Look at Carbohydrates
 
 ### `/en/blog/cardio-vs-strength-training-for-fat-loss/`
-- **Title** (50): Cardio vs Strength Training for Fat Loss — Fotocal
-- **Description** (156): Should you do cardio or lift weights to lose fat? What each one does, why the honest answer is “both”, and how to combine them so the deficit does the work.
+- **Title** (40): Cardio vs Strength Training for Fat Loss
+- **Description** (147): Should you do cardio or lift weights to lose fat? What each one does, why the honest answer is “both”, and how to combine them around your deficit.
 - **H1**: Cardio vs Strength Training for Fat Loss
 
 ### `/en/blog/choose-photo-calorie-counter/`
@@ -683,7 +693,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/common-calorie-counting-mistakes/`
 - **Title** (54): 7 Common Calorie Counting Mistakes That Stall Progress
-- **Description** (156): Counting calories but not losing weight? These seven common tracking mistakes explain most stalled progress, and every one of them is easy to fix this week.
+- **Description** (150): Counting calories but not losing weight? Seven common tracking mistakes explain most stalled progress, and every one of them is easy to fix this week.
 - **H1**: 7 Common Calorie Counting Mistakes That Stall Progress
 
 ### `/en/blog/dietary-fat-how-much-and-which-kinds/`
@@ -693,17 +703,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/do-calories-matter-or-food-quality/`
 - **Title** (56): Calories vs Food Quality: Which Matters for Weight Loss?
-- **Description** (156): Calories decide whether you lose weight; food quality decides how hungry you are and how healthy you get. What trials show and how to use both at the table.
+- **Description** (143): Calories decide whether you lose weight; food quality decides how hungry you are and how healthy you get. What trials show and how to use both.
 - **H1**: Do Calories Really Matter, or Is It All About Food Quality?
 
 ### `/en/blog/do-you-need-to-exercise-to-lose-weight/`
 - **Title** (39): Do You Need to Exercise to Lose Weight?
-- **Description** (158): Can you lose weight without the gym? The honest answer on diet versus exercise for fat loss, what movement still does for you, and why you should not skip it.
+- **Description** (126): Can you lose weight without the gym? The honest answer on diet versus exercise for fat loss, what movement still does for you.
 - **H1**: Do You Need to Exercise to Lose Weight?
 
 ### `/en/blog/does-meal-timing-matter-for-weight-loss/`
 - **Title** (40): Does Meal Timing Matter for Weight Loss?
-- **Description** (160): Is late eating fattening? Do you need breakfast? What the evidence says about meal timing and frequency, where timing helps a little, and what actually matters.
+- **Description** (133): Is late eating fattening? Do you need breakfast? What the evidence says about meal timing and frequency, where timing helps a little.
 - **H1**: Does Meal Timing Matter for Weight Loss?
 
 ### `/en/blog/does-protein-timing-matter/`
@@ -712,7 +722,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Protein Timing: Does It Actually Matter?
 
 ### `/en/blog/eating-out-without-wrecking-your-diet/`
-- **Title** (41): Eating Out Without Losing Track — Fotocal
+- **Title** (31): Eating Out Without Losing Track
 - **Description** (146): Restaurants can fit your goals. Simple habits for ordering, portions and the bread basket that let you enjoy eating out and stay roughly on track.
 - **H1**: Eating Out Without Losing Track
 
@@ -722,7 +732,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Emotional Eating: How to Recognize and Manage It
 
 ### `/en/blog/fiber-the-underrated-nutrient/`
-- **Title** (59): Fiber: The Underrated Nutrient for Weight Control — Fotocal
+- **Title** (49): Fiber: The Underrated Nutrient for Weight Control
 - **Description** (140): Fiber keeps you full, steadies blood sugar and supports gut health — yet most people fall short. Here’s how much you need and how to get it.
 - **H1**: Fiber: The Underrated Nutrient for Weight Control
 
@@ -733,27 +743,27 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/high-protein-breakfast-ideas/`
 - **Title** (56): High-Protein Breakfast Ideas to Keep You Full Till Lunch
-- **Description** (157): A high-protein breakfast keeps you fuller through the morning and banks protein early. Simple, satisfying ideas, from five-minute options to make-ahead ones.
+- **Description** (112): A high-protein breakfast keeps you fuller through the morning and banks protein early. Simple, satisfying ideas.
 - **H1**: High-Protein Breakfast Ideas to Keep You Full Till Lunch
 
 ### `/en/blog/high-protein-diet-benefits-and-how-to-start/`
 - **Title** (54): High-Protein Diet: Benefits and How to Start — Fotocal
-- **Description** (158): The benefits of a high-protein diet are real: fat loss that keeps muscle, less hunger, easier adherence. What the evidence supports, how much protein to aim f
+- **Description** (132): The benefits of a high-protein diet are real: fat loss that keeps muscle, less hunger, easier adherence. What the evidence supports.
 - **H1**: High-Protein Diet: Benefits and How to Start
 
 ### `/en/blog/how-fast-should-you-lose-weight/`
 - **Title** (54): How Fast Can You Lose Weight? The Safe Rate in Numbers
-- **Description** (157): How fast can you lose weight safely? 0.5 to 1 % of your weight a week: why that pace keeps muscle and avoids the rebound, what happens if you go faster, and.
+- **Description** (152): How fast can you lose weight safely? 0.5 to 1 % of your weight a week: why that pace keeps muscle and avoids the rebound, what happens if you go faster.
 - **H1**: How Fast Can You Lose Weight? The Safe Rate in Numbers
 
 ### `/en/blog/how-many-calories-does-exercise-burn/`
-- **Title** (56): How Many Calories Does Exercise Actually Burn? — Fotocal
-- **Description** (158): Does exercise burn calories? Yes, fewer than the machine says. A realistic look at how many calories exercise actually burns, why trackers overestimate, and w
+- **Title** (46): How Many Calories Does Exercise Actually Burn?
+- **Description** (152): Does exercise burn calories? Yes, fewer than the machine says. A realistic look at how many calories exercise actually burns, why trackers overestimate.
 - **H1**: How Many Calories Does Exercise Actually Burn?
 
 ### `/en/blog/how-much-protein-per-day/`
 - **Title** (54): How Much Protein Do You Really Need Per Day? — Fotocal
-- **Description** (157): The RDA is a floor, not a target. How much protein you actually need for muscle, fat loss and satiety, in grams per kilo by goal, with simple ways to hit it.
+- **Description** (129): The RDA is a floor, not a target. How much protein you actually need for muscle, fat loss and satiety, in grams per kilo by goal.
 - **H1**: How Much Protein Do You Really Need Per Day?
 
 ### `/en/blog/how-sleep-affects-your-weight/`
@@ -768,7 +778,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/how-to-count-calories-accurately/`
 - **Title** (52): How to Count Calories Accurately: A Beginner’s Guide
-- **Description** (157): How to count calories accurately without burning out: the portion errors that matter, how to read a label, what to do in restaurants, and a habit that lasts.
+- **Description** (133): How to count calories accurately without burning out: the portion errors that matter, how to read a label, what to do in restaurants.
 - **H1**: How to Count Calories: Accurately, Without Burning Out
 
 ### `/en/blog/how-to-eat-healthy-on-a-budget/`
@@ -778,7 +788,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/how-to-handle-cravings-without-guilt/`
 - **Title** (46): How to Handle Cravings Without Guilt — Fotocal
-- **Description** (158): Cravings are normal, not a moral failing. Why they happen, what restriction does to them, and how to satisfy them in a way that fits your goals, without guilt
+- **Description** (144): Cravings are normal, not a moral failing. Why they happen, what restriction does to them, and how to satisfy them in a way that fits your goals.
 - **H1**: How to Handle Cravings Without Guilt
 
 ### `/en/blog/how-to-lose-weight-sustainably/`
@@ -793,7 +803,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/how-to-set-your-macros-for-weight-loss/`
 - **Title** (53): How to Set Your Macros for Weight Loss (Step by Step)
-- **Description** (158): A simple, no-nonsense method to calculate your calories and macros for fat loss: protein first, then fats and carbs, with a worked example you can copy today.
+- **Description** (116): A simple, no-nonsense method to calculate your calories and macros for fat loss: protein first, then fats and carbs.
 - **H1**: How to Set Your Macros for Weight Loss (Step by Step)
 
 ### `/en/blog/how-to-stay-consistent-with-healthy-habits/`
@@ -833,7 +843,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/macronutrients-101/`
 - **Title** (52): Macronutrients 101: Protein, Carbs and Fat Explained
-- **Description** (158): What are the three macronutrients? Protein, carbohydrates and fat: what each does, how many calories each provides, and how to balance them for your goals, wi
+- **Description** (115): What are the three macronutrients? Protein, carbohydrates and fat: what each does, how many calories each provides.
 - **H1**: Macronutrients 101: Protein, Carbs and Fat Explained
 
 ### `/en/blog/maintaining-weight-loss/`
@@ -843,7 +853,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/meal-prep-for-beginners/`
 - **Title** (50): Meal Prep for Beginners: A Simple System — Fotocal
-- **Description** (158): Meal prep saves time, money and last-minute decisions. A beginner-friendly system, plus how to cook in batches, that won’t eat your whole Sunday in the kitche
+- **Description** (111): Meal prep saves time, money and last-minute decisions. A beginner-friendly system, plus how to cook in batches.
 - **H1**: Meal Prep for Beginners: A Simple System
 
 ### `/en/blog/mindful-eating-beginners-guide/`
@@ -852,13 +862,13 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: Mindful Eating: A Beginner’s Guide
 
 ### `/en/blog/neat-the-hidden-calorie-burn/`
-- **Title** (55): NEAT: The Hidden Calorie Burn You’re Ignoring — Fotocal
-- **Description** (158): NEAT, the calories you burn through everyday movement, can dwarf your workouts. What it is, why it drops when you diet, and how to use it for easier fat loss.
+- **Title** (45): NEAT: The Hidden Calorie Burn You’re Ignoring
+- **Description** (119): NEAT, the calories you burn through everyday movement, can dwarf your workouts. What it is, why it drops when you diet.
 - **H1**: NEAT: The Hidden Calorie Burn You’re Ignoring
 
 ### `/en/blog/photo-calorie-apps-accuracy/`
 - **Title** (56): Are photo calorie apps accurate? What a photo cannot see
-- **Description** (158): A photo identifies the dish well and guesses the amount less well. Here is where the error really comes from, why nobody can honestly give you one percentage,
+- **Description** (151): A photo identifies the dish well and guesses the amount less well. Where the error really comes from, and the three corrections that remove most of it.
 - **H1**: Are photo calorie apps accurate? What a photo cannot see
 
 ### `/en/blog/plan-a-week-of-meals-in-30-minutes/`
@@ -867,13 +877,13 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **H1**: How to Plan a Week of Meals in 30 Minutes
 
 ### `/en/blog/portion-control-simple-tricks/`
-- **Title** (59): Portion Control: Simple Tricks That Actually Work — Fotocal
+- **Title** (49): Portion Control: Simple Tricks That Actually Work
 - **Description** (142): Portion sizes have quietly ballooned. Here are practical, no-weighing portion-control tricks to eat the right amount without feeling deprived.
 - **H1**: Portion Control: Simple Tricks That Actually Work
 
 ### `/en/blog/series/calories/`
 - **Title** (38): Calories, from the ground up — Fotocal
-- **Description** (158): What your body burns, what a deficit is, how fast to lose and how to count without turning it into a second job. Seven articles in the order the questions com
+- **Description** (112): What your body burns, what a deficit is, how fast to lose and how to count without turning it into a second job.
 - **H1**: Calories, from the ground up
 
 ### `/en/blog/series/everyday-eating/`
@@ -888,7 +898,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/tdee-how-many-calories-you-need/`
 - **Title** (59): TDEE Explained: How Many Calories You Really Need — Fotocal
-- **Description** (158): TDEE meaning, in one line: Total Daily Energy Expenditure, the number of calories you burn in a day. How to estimate it, why it changes, and how to use it to 
+- **Description** (136): TDEE meaning, in one line: Total Daily Energy Expenditure, the number of calories you burn in a day. How to estimate it, why it changes.
 - **H1**: TDEE Explained: How Many Calories You Really Need
 
 ### `/en/blog/the-truth-about-detox-diets-and-cleanses/`
@@ -898,7 +908,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/the-truth-about-starvation-mode/`
 - **Title** (43): The Truth About “Starvation Mode” — Fotocal
-- **Description** (158): Is starvation mode real? Eating too little does change your metabolism, but not the way the forums say. What metabolic adaptation actually is, how big it is, 
+- **Description** (142): Is starvation mode real? Eating too little does change your metabolism, but not the way the forums say. What metabolic adaptation actually is.
 - **H1**: The Truth About “Starvation Mode”
 
 ### `/en/blog/track-calories-without-weighing/`
@@ -913,11 +923,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/weight-loss-plateaus/`
 - **Title** (55): Weight Loss Plateau: Why Weight Loss Stalls, What to Do
-- **Description** (158): Why weight loss stalls, how to tell a real plateau from water noise, the plateau-then-sudden-drop pattern, how long to wait, and the one change to make first.
+- **Description** (124): Why weight loss stalls, how to tell a real plateau from water noise, the plateau-then-sudden-drop pattern, how long to wait.
 - **H1**: Weight Loss Plateau: Why Weight Loss Stalls and How to Break It
 
 ### `/en/blog/what-a-balanced-plate-looks-like/`
-- **Title** (56): What Does a Balanced Plate Actually Look Like? — Fotocal
+- **Title** (46): What Does a Balanced Plate Actually Look Like?
 - **Description** (145): Forget complicated meal plans. The balanced-plate method is a simple visual system for building satisfying, goal-friendly meals without counting.
 - **H1**: What Does a Balanced Plate Actually Look Like?
 
@@ -928,17 +938,17 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/blog/why-micronutrients-matter/`
 - **Title** (54): Micronutrients: Why Vitamins and Minerals Still Matter
-- **Description** (157): You can hit your calorie and macro targets and still eat poorly. Why vitamins and minerals matter, what running low feels like, and how to cover them calmly.
+- **Description** (127): You can hit your calorie and macro targets and still eat poorly. Why vitamins and minerals matter, what running low feels like.
 - **H1**: Micronutrients: Why Vitamins and Minerals Still Matter
 
 ### `/en/blog/why-the-scale-is-not-the-whole-story/`
-- **Title** (45): Why the Scale Isn’t the Whole Story — Fotocal
+- **Title** (35): Why the Scale Isn’t the Whole Story
 - **Description** (143): The number on the scale swings for dozens of reasons that have nothing to do with fat. Here’s how to measure progress without losing your mind.
 - **H1**: Why the Scale Isn’t the Whole Story
 
 ### `/en/contact/`
 - **Title** (46): Contact Fotocal: Support, Deletion and Refunds
-- **Description** (158): Write to Fotocal about a question, a misread scan, a refund or deleting your account. One person reads the inbox and answers, usually within a couple of days.
+- **Description** (150): Write to Fotocal about a question, a misread scan, a refund or deleting your account. One person reads the inbox and answers, usually within two days.
 - **H1**: One inbox, one person reading it.
 
 ### `/en/faq/`
@@ -948,7 +958,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/features/`
 - **Title** (53): Count Calories from a Photo: 9 Fotocal Features, Free
-- **Description** (157): Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, shown on real screens. Free plan with no card: 2 AI scans a day, the rest unlimited.
+- **Description** (155): Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, on real screens. Free, no card: 2 AI scans, 1 voice log a day, the rest unlimited.
 - **H1**: Nine ways to count calories. One app, free.
 
 ### `/en/features/lifestyle-mindset/`
@@ -958,7 +968,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/features/nutrition-diet/`
 - **Title** (43): Macro Counter and Nutrition Panel — Fotocal
-- **Description** (159): Macros, fibre, sugar, vitamins and minerals for every meal, with healthier swaps and Coach Kal for questions. The quality of what you eat, not just the amount.
+- **Description** (150): Macros, fibre, sugar, vitamins and minerals for every meal, with healthier swaps and Coach Kal for questions. What you eat matters, not just how much.
 - **H1**: Nutrition and macros: understand what you eat, not just how much.
 
 ### `/en/features/scan-barcode/`
@@ -978,22 +988,22 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/features/weight-loss/`
 - **Title** (51): Lose Weight by Counting Calories from a Photo, Free
-- **Description** (157): A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, free, no card to start.
+- **Description** (147): A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, step by step.
 - **H1**: Lose weight without turning eating into a second job.
 
 ### `/en/`
 - **Title** (55): Free Calorie Counter from a Photo: No Weighing, No Card
-- **Description** (157): Photograph your plate and Fotocal counts calories and macros in seconds, no scales. Free with no card: 2 AI scans a day, unlimited barcode scanner and coach.
+- **Description** (152): Snap your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans and 1 voice log a day; unlimited barcode scanner and coach.
 - **H1**: The free calorie counter that works from a photo.
 
 ### `/en/privacy-policy/`
 - **Title** (22): Fotocal Privacy Policy
-- **Description** (159): What data Fotocal collects (photos, diary, health), what it is used for, who processes it (OpenAI, Supabase, Google), how long it is kept and your GDPR rights.
+- **Description** (143): What data Fotocal collects (photos, diary, health), why, who processes it (OpenAI, Supabase, Google), how long it is kept and your GDPR rights.
 - **H1**: Privacy Policy
 
 ### `/en/subscription/`
 - **Title** (55): Fotocal Pricing: Free Plan Forever, Premium €6.99/month
-- **Description** (157): Free plan with no card and no expiry: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both.
+- **Description** (152): Free plan, no card, no expiry: 2 AI scans and 1 voice log a day, unlimited barcode and Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both.
 - **H1**: Two prices, one Premium, and a free calorie counter that is not a demo.
 
 ### `/en/terms/`

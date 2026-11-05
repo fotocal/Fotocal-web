@@ -15,6 +15,7 @@
    "tdee-how-many-calories-you-need",
    "calorie-deficit-for-fat-loss",
    "deficit-500-calorias-dia",
+   "calorias-para-perder-un-kilo",
    "how-fast-should-you-lose-weight",
    "how-to-count-calories-accurately",
    "track-calories-without-weighing",
@@ -66,6 +67,10 @@
    "deficit-500-calorias-dia": {
     "en": "Spanish only: two real days of meals with a 500-calorie deficit, for a woman and a man, plate by plate.",
     "es": "El déficit en la mesa: dos días reales con 500 kcal menos, para una mujer y un hombre, plato por plato."
+   },
+   "calorias-para-perder-un-kilo": {
+    "en": "Spanish only.",
+    "es": "Las 7.700 kcal por kilo: de dónde salen, cuántos días son y por qué dejan de cuadrar."
    }
   }
  },
@@ -180,7 +185,7 @@
   },
   "es": {
    "title": "Comer bien un día normal",
-   "intro": "El plato, los alimentos que sacian, las raciones, los snacks, el desayuno, los restaurantes, el presupuesto, y dos artículos sólo en español sobre el menú del día y las tapas. Sin reglas que no puedas cumplir un martes."
+   "intro": "El plato, los alimentos que sacian, las raciones, el desayuno, comer fuera, el presupuesto, el menú del día y las tapas. Sin reglas imposibles un martes."
   },
   "posts": [
    "what-a-balanced-plate-looks-like",
@@ -188,6 +193,7 @@
    "portion-control-simple-tricks",
    "healthy-snacks-that-satisfy",
    "high-protein-breakfast-ideas",
+   "calorias-desayuno-espanol",
    "eating-out-without-wrecking-your-diet",
    "how-to-eat-healthy-on-a-budget",
    "calorias-menu-del-dia",
@@ -233,6 +239,10 @@
    "calorias-de-las-tapas": {
     "en": "Spanish only: what an evening of tapas adds up to, drink by drink and plate by plate.",
     "es": "Lo que suma una tarde de tapas, caña a caña y tapa a tapa, con dos tardes reales."
+   },
+   "calorias-desayuno-espanol": {
+    "en": "Spanish only.",
+    "es": "Seis desayunos de bar y de casa, de 167 a 531 kcal, y los cambios que más ahorran."
    }
   }
  },

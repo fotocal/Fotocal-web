@@ -11,21 +11,21 @@
   "index.html": {
     "es": {
       "title": "Contador de calorías gratis: con una foto, sin pesar nada",
-      "desc": "Haz una foto a tu plato y Fotocal cuenta calorías y macros en segundos, sin pesar. Gratis y sin tarjeta: 2 escaneos con IA al día, código de barras sin límite."
+      "desc": "Haz una foto al plato y Fotocal cuenta calorías y macros en segundos. Gratis, sin tarjeta: 2 escaneos con IA, 1 por voz al día; código de barras ilimitado."
     },
     "en": {
       "title": "Free Calorie Counter from a Photo: No Weighing, No Card",
-      "desc": "Photograph your plate and Fotocal counts calories and macros in seconds, no scales. Free with no card: 2 AI scans a day, unlimited barcode scanner and coach."
+      "desc": "Snap your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans and 1 voice log a day; unlimited barcode scanner and coach."
     }
   },
   "ai/index.html": {
     "es": {
       "title": "Coach de nutrición con IA gratis: pregunta qué comer hoy",
-      "desc": "Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Gratis y sin límite de mensajes en todos los planes. Android."
+      "desc": "Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Mensajes sin límite en todos los planes, gratis incluido."
     },
     "en": {
       "title": "Free AI Nutrition Coach: Ask What to Eat Today",
-      "desc": "Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. Free, in your language, no message limit, any plan."
+      "desc": "Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. In your language, no message limit, any plan."
     }
   },
   "features/index.html": {
@@ -35,13 +35,13 @@
     },
     "en": {
       "title": "Count Calories from a Photo: 9 Fotocal Features, Free",
-      "desc": "Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, shown on real screens. Free plan with no card: 2 AI scans a day, the rest unlimited."
+      "desc": "Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, on real screens. Free, no card: 2 AI scans, 1 voice log a day, the rest unlimited."
     }
   },
   "features/scan-food/index.html": {
     "es": {
       "title": "Calorías con foto: escáner de comida con IA, gratis",
-      "desc": "Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Corrige la ración antes de guardar. Gratis: 2 escaneos con IA al día."
+      "desc": "Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA y 1 por voz al día."
     },
     "en": {
       "title": "Calories from a Photo, Free: AI Food Scanner — Fotocal",
@@ -81,21 +81,21 @@
   "features/weight-loss/index.html": {
     "es": {
       "title": "Perder peso contando calorías con una foto, gratis",
-      "desc": "Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales, gratis."
+      "desc": "Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales."
     },
     "en": {
       "title": "Lose Weight by Counting Calories from a Photo, Free",
-      "desc": "A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, free, no card to start."
+      "desc": "A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, step by step."
     }
   },
   "features/nutrition-diet/index.html": {
     "es": {
       "title": "Contador de macros y panel de nutrición — Fotocal",
-      "desc": "Macros, fibra, azúcar, vitaminas y minerales de cada comida, con alternativas más sanas y Coach Kal para dudas. La calidad de lo que comes, no solo la cantidad."
+      "desc": "Macros, fibra, azúcar, vitaminas y minerales de cada comida, con alternativas más sanas y Coach Kal para dudas. La calidad de lo que comes, no solo cuánto."
     },
     "en": {
       "title": "Macro Counter and Nutrition Panel — Fotocal",
-      "desc": "Macros, fibre, sugar, vitamins and minerals for every meal, with healthier swaps and Coach Kal for questions. The quality of what you eat, not just the amount."
+      "desc": "Macros, fibre, sugar, vitamins and minerals for every meal, with healthier swaps and Coach Kal for questions. What you eat matters, not just how much."
     }
   },
   "features/lifestyle-mindset/index.html": {
@@ -111,11 +111,11 @@
   "subscription/index.html": {
     "es": {
       "title": "Precios de Fotocal: plan gratis para siempre y Premium",
-      "desc": "Plan gratis sin tarjeta ni caducidad: 2 escaneos con IA al día, código de barras y Coach Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, 5 días de prueba."
+      "desc": "Plan gratis sin tarjeta: 2 escaneos con IA y 1 por voz al día, código de barras y Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, con 5 días de prueba."
     },
     "en": {
       "title": "Fotocal Pricing: Free Plan Forever, Premium €6.99/month",
-      "desc": "Free plan with no card and no expiry: 2 AI scans a day, unlimited barcode scanner and Coach Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both."
+      "desc": "Free plan, no card, no expiry: 2 AI scans and 1 voice log a day, unlimited barcode and Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both."
     }
   },
   "blog/index.html": {
@@ -145,7 +145,7 @@
     },
     "en": {
       "title": "Contact Fotocal: Support, Deletion and Refunds",
-      "desc": "Write to Fotocal about a question, a misread scan, a refund or deleting your account. One person reads the inbox and answers, usually within a couple of days."
+      "desc": "Write to Fotocal about a question, a misread scan, a refund or deleting your account. One person reads the inbox and answers, usually within two days."
     }
   },
   "privacy-policy/index.html": {
@@ -155,13 +155,13 @@
     },
     "en": {
       "title": "Fotocal Privacy Policy",
-      "desc": "What data Fotocal collects (photos, diary, health), what it is used for, who processes it (OpenAI, Supabase, Google), how long it is kept and your GDPR rights."
+      "desc": "What data Fotocal collects (photos, diary, health), why, who processes it (OpenAI, Supabase, Google), how long it is kept and your GDPR rights."
     }
   },
   "terms/index.html": {
     "es": {
       "title": "Términos de servicio de Fotocal",
-      "desc": "Condiciones de uso de Fotocal: la suscripción Premium, la prueba gratis de 5 días, la renovación y cancelación en Google Play, reembolsos y responsabilidades."
+      "desc": "Condiciones de uso de Fotocal: la suscripción Premium, la prueba de 5 días, la renovación y la cancelación en Google Play, reembolsos y responsabilidades."
     },
     "en": {
       "title": "Fotocal Terms of Service",
@@ -191,7 +191,7 @@
   "faq/index.html": {
     "es": {
       "title": "Preguntas frecuentes del contador de calorías Fotocal",
-      "desc": "¿Es gratis? ¿Funciona sin internet? ¿Qué precisión tiene? ¿Sirve en iPhone? Las respuestas honestas a lo que más preguntan los usuarios de Fotocal en España."
+      "desc": "¿Es gratis? ¿Funciona sin internet? ¿Qué precisión tiene? ¿Sirve en iPhone? Respuestas honestas a lo que más preguntan los usuarios de Fotocal en España."
     },
     "en": {
       "title": "Fotocal FAQ: Is It Free? How Accurate Is It?",

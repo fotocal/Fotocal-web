@@ -27,6 +27,7 @@
   /* ── Surfaces ── */
   --bg:           #FFFFFF;   /* page ground */
   --bg-2:         #F5F6F8;   /* tiles, media wells, hover fills (the app's light ground) */
+  --footer-h:     #C8174F;   /* footer column titles: 5.1:1 on --bg-2 (was 4.39 with --brand-text) */
   --bg-3:         #EBEDF2;   /* tracks, deeper tile */
   --band:         #F2F3F6;   /* the neutral full-width band */
   --surface:      #FFFFFF;   /* cards */
@@ -143,6 +144,7 @@
 
   --bg:           #121212;
   --bg-2:         #1E1E1E;
+  --footer-h:     var(--brand-text);
   --bg-3:         #2A2A2A;
   --band:         #181818;
   --surface:      #1E1E1E;
@@ -1053,7 +1055,7 @@ body.nav-locked { overflow: hidden; }
 }
 .footer-col .footer-h {
   font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--brand-text); margin-bottom: .8rem;
+  color: var(--footer-h); margin-bottom: .8rem;
 }
 .footer-col a {
   display: block; font-size: .91rem; color: var(--muted); margin-bottom: .55rem;

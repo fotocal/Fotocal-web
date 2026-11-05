@@ -364,9 +364,9 @@ def bundle_html(src):
         bundle = "css-" + "-".join(combo) + ".css"
         head = ""
         if "fonts" in names:
-            head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % (prefix, PRELOAD_FONTS[0])
-            head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % (prefix, PRELOAD_FONTS[1])
-            head += "  <style>%s</style>\n" % FONTS_CSS.replace("url(../fonts/", "url(%sassets/fonts/" % prefix)
+            head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % ("/", PRELOAD_FONTS[0])
+            head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % ("/", PRELOAD_FONTS[1])
+            head += "  <style>%s</style>\n" % FONTS_CSS.replace("url(../fonts/", "url(/assets/fonts/")  # absolute: an inline <style> is not rewritten for /en/ (404s found 05-11-2026)
         if combo and os.path.isfile(os.path.join(DIST_DIR, bundle)):
             head += '  <link rel="stylesheet" href="%sassets/dist/%s">\n' % (prefix, bundle)
         else:
@@ -570,7 +570,36 @@ HEAD_PATTERNS = [
 ]
 
 
+DESC_MAX = 155
+TRIMMED = {}
+
+
+def fit_desc(d, rel=None):
+    """A meta description of at most DESC_MAX characters, cut where a reader
+    would stop: at a sentence end, else at a clause (comma, semicolon,
+    colon) closed with a full stop, else at a word with an ellipsis. Never
+    mid-word (the old fallback was d[:158], which cut words in half)."""
+    d = " ".join(d.split())
+    if len(d) <= DESC_MAX:
+        return d
+    floor = 110
+    cut = max(d.rfind(". ", 0, DESC_MAX), d.rfind("? ", 0, DESC_MAX), d.rfind("! ", 0, DESC_MAX))
+    if cut >= floor:
+        out = d[:cut + 1]
+    else:
+        cut = max(d.rfind(", ", 0, DESC_MAX - 1), d.rfind("; ", 0, DESC_MAX - 1), d.rfind(": ", 0, DESC_MAX - 1))
+        if cut >= floor:
+            out = d[:cut].rstrip(" ,;:") + "."
+        else:
+            cut = d.rfind(" ", 0, DESC_MAX - 1)
+            out = d[:cut].rstrip(" ,;:.") + "…"
+    if rel:
+        TRIMMED[rel] = (d, out)
+    return out
+
+
 def render_head(src, lang, rel_path, meta):
+    meta = dict(meta, desc=fit_desc(meta["desc"], "%s:%s" % (lang, rel_path)))
     t, d = esc_attr(meta["title"]), esc_attr(meta["desc"])
     # <title> takes text, not an attribute value
     src = HEAD_PATTERNS[0][0].sub(lambda _: "<title>%s</title>" % esc_text(meta["title"]), src, count=1)
@@ -887,7 +916,7 @@ def main():
                 # fixed suffix truncated a third of the articles.
                 suffix = " — Fotocal"
                 m = {"title": t + suffix if len(t) + len(suffix) <= TITLE_MAX else t,
-                     "desc": d[:158]}
+                     "desc": d}  # fit_desc() in render_head trims at a clause, never mid-word
             s = render_head(s, lang, rel, m)
             s = render_jsonld(s, lang, rel, dic[lang], missing, article)
             s = bundle_html(s)
@@ -910,6 +939,7 @@ def main():
     urls = write_sitemap(srcs)
 
     print("%d source pages -> %d rendered (%s)" % (len(srcs), written, " + ".join(LANGS)))
+    json.dump({k: v[1] for k, v in TRIMMED.items()}, open(os.path.join(ROOT, "tools", "seo", "trimmed-descriptions.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("sitemap.xml -> %d URLs" % urls)
     return srcs
 

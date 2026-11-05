@@ -278,5 +278,10 @@
   "category": "Healthy eating",
   "glyph": "cup",
   "pal": 4
+ },
+ "deficit-500-calorias-dia": {
+  "category": "Calorie counting",
+  "glyph": "target",
+  "pal": 1
  }
 }

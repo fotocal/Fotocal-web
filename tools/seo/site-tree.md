@@ -100,6 +100,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/cardio-vs-strength-training-for-fat-loss/` — Cardio o pesas para perder grasa — Fotocal  _ES+EN_
 - `/blog/choose-photo-calorie-counter/` — Cómo elegir una app de calorías con foto (y qué es gratis)  _ES+EN_
 - `/blog/common-calorie-counting-mistakes/` — 7 errores al contar calorías que frenan tu progreso  _ES+EN_
+- `/blog/deficit-500-calorias-dia/` — Déficit de 500 calorías al día: un día de comidas real  _solo ES_
 - `/blog/dietary-fat-how-much-and-which-kinds/` — Grasa en la dieta: cuánta necesitas y de qué tipo — Fotocal  _ES+EN_
 - `/blog/do-calories-matter-or-food-quality/` — Calorías o calidad de la comida: qué importa para adelgazar  _ES+EN_
 - `/blog/do-you-need-to-exercise-to-lose-weight/` — ¿Hace falta ejercicio para adelgazar? La respuesta honesta  _ES+EN_
@@ -180,4 +181,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 134 páginas en español, 84 con copia inglesa (218 URLs servidas).
+Total: 135 páginas en español, 84 con copia inglesa (219 URLs servidas).

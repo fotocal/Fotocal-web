@@ -69,6 +69,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (152): ¿Cuentas calorías y no bajas de peso? Estos siete errores explican la mayoría de los progresos estancados, y todos se pueden corregir esta misma semana.
 - **H1**: 7 errores al contar calorías que frenan tu progreso
 
+### `/blog/deficit-500-calorias-dia/`
+- **Title** (54): Déficit de 500 calorías al día: un día de comidas real
+- **Description** (155): Qué comer con un déficit de 500 calorías al día: dos días reales, para una mujer y un hombre, plato por plato con sus cifras, y cuánto peso pierdes con él.
+- **H1**: Déficit calórico de 500 calorías al día: qué comer, plato por plato
+
 ### `/blog/dietary-fat-how-much-and-which-kinds/`
 - **Title** (59): Grasa en la dieta: cuánta necesitas y de qué tipo — Fotocal
 - **Description** (158): La grasa no engorda por defecto: es esencial. Cuánta grasa necesitas al día, en qué se diferencian los tipos y cómo elegir con criterio sin temerle al aceite.

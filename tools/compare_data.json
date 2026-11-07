@@ -57,16 +57,6 @@
       "why": "Cal AI lists barcode scanning. MFP: barcode scanner Premium-only since Oct 2022. Yazio: barcode is in the free tier (Pro adds AI scanner, analyses, ratings, activity, recipes)."
     },
     {
-      "key": "cmp.r3",
-      "fotocal": "premium",
-      "cells": {
-        "Cal AI": null,
-        "MyFitnessPal": null,
-        "Yazio": null
-      },
-      "why": "Restaurant menu scanning: none of the three states it."
-    },
-    {
       "key": "cmp.r4",
       "fotocal": "free1day",
       "cells": {

@@ -112,7 +112,7 @@ window.FOTOCAL_I18N = {
     "mq.2": "AI photo food scan",
     "mq.3": "Barcode scan + health score",
     "mq.4": "Voice food logging",
-    "mq.5": "Restaurant menu scan",
+    "mq.5": "Weekly nutrition report",
     "mq.6": "Coach Kal, AI coach",
     "mq.7": "5-day free trial",
     "mq.8": "English & Español",
@@ -142,7 +142,7 @@ window.FOTOCAL_I18N = {
     /* ── Log it your way ── */
     "log.kicker": "Four ways to log",
     "log.title": "Log it <em class=\"accent\">your way</em>.",
-    "log.sub": "Photo, barcode, menu or voice — Fotocal meets you where you are. Whichever is fastest right now, that's the right one.",
+    "log.sub": "Photo, barcode or voice — Fotocal meets you where you are. Whichever is fastest right now, that's the right one.",
     "log.p.tag": "Photo",
     "log.p.t": "Snap your plate",
     "log.p.b": "One photo and the AI returns calories, macros and a health score. Adjust the portion or ingredients before saving — you're always in control.",
@@ -227,7 +227,7 @@ window.FOTOCAL_I18N = {
     /* ── Pricing ── */
     "price.kicker": "Premium",
     "price.title": "Start with a <em class=\"accent\">5-day free trial</em>.",
-    "price.sub": "One subscription: unlimited AI photo scans, unlimited voice logging, the restaurant menu scanner and the full nutrition detail behind every meal. Coach Kal stays free on every plan. Two plans, zero games.",
+    "price.sub": "One subscription: unlimited AI photo scans, unlimited voice logging and the full nutrition detail behind every meal. Coach Kal stays free on every plan. Two plans, zero games.",
     "price.m.name": "Monthly",
     "price.m.amt": "€6.99",
     "price.m.per": "/month",
@@ -282,9 +282,9 @@ window.FOTOCAL_I18N = {
     "faq.q2": "Do I have to weigh my food?",
     "faq.a2": "No. Estimating the portion from the photo is the whole point. If you want to be precise on a particular meal you can enter the weight by hand, but nothing requires it.",
     "faq.q3": "What else can I scan besides my plate?",
-    "faq.a3": "Plenty. Scan a product's barcode to get its full nutrition and a clear health score before you buy it, point the camera at a restaurant menu to see estimated calories per dish, or simply say what you ate out loud and Fotocal logs it. Photo, barcode, menu or voice — whichever is fastest right then.",
+    "faq.a3": "Plenty. Scan a product's barcode to get its full nutrition and a clear health score before you buy it, or simply say what you ate out loud and Fotocal logs it. Photo, barcode or voice — whichever is fastest right then.",
     "faq.q4": "Is Fotocal free?",
-    "faq.a4": "Downloading Fotocal is free, and you can stay on the free plan for good. Premium starts with a 5-day free trial and removes the daily scan and voice counters, adds the menu scanner, the full nutrient panel, the rest of the weekly report and a daily plan. Coach Kal is free on every plan. Cancel before the trial ends and you pay nothing. After that, Premium is €6.99 a month or €34.99 a year.",
+    "faq.a4": "Downloading Fotocal is free, and you can stay on the free plan for good. Premium starts with a 5-day free trial and removes the daily scan and voice counters, adds the full nutrient panel, the rest of the weekly report and a daily plan. Coach Kal is free on every plan. Cancel before the trial ends and you pay nothing. After that, Premium is €6.99 a month or €34.99 a year.",
     "faq.q5": "How do I cancel?",
     "faq.a5": "Subscriptions are handled by Google Play, so you cancel there: Play Store → your profile → Payments and subscriptions → Subscriptions. Cancel before the 5-day trial ends and you are not charged.",
     "faq.q6": "What happens to my data?",
@@ -318,9 +318,9 @@ window.FOTOCAL_I18N = {
        dictionary as the visible copy, so the Spanish tree describes itself
        in Spanish rather than shipping an English machine-readable claim
        about a Spanish page. */
-    "ld.app.desc": "AI nutrition app: photograph your meal and get calories, macros, micronutrients and a health score instantly. Includes barcode and menu scanning, voice logging and an AI nutrition coach.",
+    "ld.app.desc": "AI nutrition app: photograph your meal and get calories, macros, micronutrients and a health score instantly. Includes barcode scanning, voice logging and an AI nutrition coach.",
     "ld.app.sub": "Calorie counter",
-    "ld.app.features": "Calorie and macro estimate from a food photo; barcode scanner; voice logging; menu scanner; AI nutrition coach (Coach Kal); weight, water and step tracking; weekly report",
+    "ld.app.features": "Calorie and macro estimate from a food photo; barcode scanner; voice logging; AI nutrition coach (Coach Kal); weight, water and step tracking; weekly report",
     "ld.app.offerFree": "Free plan",
     "ld.app.offerFreeDesc": "No card, no expiry: 2 AI photo scans and 1 voice log a day; barcode scanner and Coach Kal unlimited.",
     "ld.app.offerMonth": "Premium, monthly",
@@ -332,7 +332,7 @@ window.FOTOCAL_I18N = {
     "ld.blog.desc": "Practical guides on nutrition, calorie counting, weight loss and healthy habits.",
     "ld.contact.name": "Contact Fotocal",
     "sub.ld.name": "Fotocal Premium: plans and prices",
-    "ld.product.desc": "Premium removes the daily limits on photo and voice logging and adds the restaurant menu scanner, the full nutrient panel, the full weekly reports and a daily meal plan. Coach Kal is free on every plan.",
+    "ld.product.desc": "Premium removes the daily limits on photo and voice logging and adds the full nutrient panel, the full weekly reports and a daily meal plan. Coach Kal is free on every plan.",
     "ld.features.name": "Fotocal features",
 
     /* ── Footer ── */
@@ -442,7 +442,7 @@ window.FOTOCAL_I18N = {
     "mq.2": "Escaneo de comida con IA",
     "mq.3": "Código de barras + puntuación",
     "mq.4": "Registro por voz",
-    "mq.5": "Escaneo de cartas y menús",
+    "mq.5": "Informe semanal de nutrición",
     "mq.6": "Coach Kal, tu coach con IA",
     "mq.7": "Prueba gratis de 5 días",
     "mq.8": "Español e inglés",
@@ -472,7 +472,7 @@ window.FOTOCAL_I18N = {
     /* ── Log it your way ── */
     "log.kicker": "Cuatro formas de registrar",
     "log.title": "Regístralo <em class=\"accent\">a tu manera</em>.",
-    "log.sub": "Foto, código de barras, carta o voz: Fotocal se adapta a ti. La forma más rápida en ese momento es siempre la correcta.",
+    "log.sub": "Foto, código de barras o voz: Fotocal se adapta a ti. La forma más rápida en ese momento es siempre la correcta.",
     "log.p.tag": "Foto",
     "log.p.t": "Fotografía tu plato",
     "log.p.b": "Una foto y la IA te devuelve calorías, macros y una puntuación de salud. Ajusta la ración o los ingredientes antes de guardar: tú siempre tienes el control.",
@@ -557,7 +557,7 @@ window.FOTOCAL_I18N = {
     /* ── Pricing ── */
     "price.kicker": "Premium",
     "price.title": "Empieza con una <em class=\"accent\">prueba gratis de 5 días</em>.",
-    "price.sub": "Una suscripción: escaneos con IA ilimitados, registro por voz ilimitado, el escáner de cartas y el detalle nutricional completo de cada comida. Coach Kal sigue siendo gratis en todos los planes. Dos planes, cero trampas.",
+    "price.sub": "Una suscripción: escaneos con IA ilimitados, registro por voz ilimitado y el detalle nutricional completo de cada comida. Coach Kal sigue siendo gratis en todos los planes. Dos planes, cero trampas.",
     "price.m.name": "Mensual",
     "price.m.amt": "6,99 €",
     "price.m.per": "/mes",
@@ -610,9 +610,9 @@ window.FOTOCAL_I18N = {
     "faq.q2": "¿Tengo que pesar la comida?",
     "faq.a2": "No. Estimar la ración desde la foto es justamente el objetivo. Si en una comida concreta quieres ser preciso puedes meter el peso a mano, pero nada te obliga.",
     "faq.q3": "¿Qué más puedo escanear además de mi plato?",
-    "faq.a3": "Mucho más. Escanea el código de barras de un producto para ver su nutrición completa y una puntuación de salud clara antes de comprarlo, apunta con la cámara a la carta de un restaurante para ver las calorías estimadas de cada plato, o simplemente di en voz alta lo que has comido y Fotocal lo registra. Foto, código de barras, carta o voz: la que sea más rápida en ese momento.",
+    "faq.a3": "Mucho más. Escanea el código de barras de un producto para ver su nutrición completa y una puntuación de salud clara antes de comprarlo, o simplemente di en voz alta lo que has comido y Fotocal lo registra. Foto, código de barras o voz: la que sea más rápida en ese momento.",
     "faq.q4": "¿Fotocal es gratis?",
-    "faq.a4": "Descargar Fotocal es gratis, y puedes quedarte en el plan gratis para siempre. Premium empieza con una prueba gratis de 5 días y quita los contadores diarios de escaneo y de voz, añade el escáner de cartas, el panel completo de nutrientes, el resto del informe semanal y un plan diario. Coach Kal es gratis en todos los planes. Si cancelas antes de que termine la prueba, no pagas nada. Después, Premium cuesta 6,99 € al mes o 34,99 € al año.",
+    "faq.a4": "Descargar Fotocal es gratis, y puedes quedarte en el plan gratis para siempre. Premium empieza con una prueba gratis de 5 días y quita los contadores diarios de escaneo y de voz, añade el panel completo de nutrientes, el resto del informe semanal y un plan diario. Coach Kal es gratis en todos los planes. Si cancelas antes de que termine la prueba, no pagas nada. Después, Premium cuesta 6,99 € al mes o 34,99 € al año.",
     "faq.q5": "¿Cómo cancelo?",
     "faq.a5": "Las suscripciones las gestiona Google Play, así que se cancelan ahí: Play Store → tu perfil → Pagos y suscripciones → Suscripciones. Si cancelas antes de que terminen los 5 días de prueba, no se te cobra nada.",
     "faq.q6": "¿Qué pasa con mis datos?",
@@ -644,9 +644,9 @@ window.FOTOCAL_I18N = {
        Textos que solo existen en el JSON-LD. Están aquí, en el mismo
        diccionario que el contenido visible, para que el árbol en español se
        describa en español. */
-    "ld.app.desc": "App de nutrición con IA: fotografía tu comida y obtén calorías, macros, micronutrientes y una puntuación de salud al instante. Incluye escaneo de códigos de barras y de cartas, registro por voz y un coach nutricional con IA.",
+    "ld.app.desc": "App de nutrición con IA: fotografía tu comida y obtén calorías, macros, micronutrientes y una puntuación de salud al instante. Incluye escáner de códigos de barras, registro por voz y un coach nutricional con IA.",
     "ld.app.sub": "Contador de calorías",
-    "ld.app.features": "Calorías y macros a partir de una foto de la comida; escáner de código de barras; registro por voz; escáner de cartas; coach nutricional con IA (Coach Kal); seguimiento de peso, agua y pasos; informe semanal",
+    "ld.app.features": "Calorías y macros a partir de una foto de la comida; escáner de código de barras; registro por voz; coach nutricional con IA (Coach Kal); seguimiento de peso, agua y pasos; informe semanal",
     "ld.app.offerFree": "Plan gratis",
     "ld.app.offerFreeDesc": "Sin tarjeta ni caducidad: 2 escaneos con IA y 1 registro por voz al día; código de barras y Coach Kal sin límite.",
     "ld.app.offerMonth": "Premium mensual",
@@ -658,7 +658,7 @@ window.FOTOCAL_I18N = {
     "ld.blog.desc": "Guías prácticas sobre nutrición, conteo de calorías, pérdida de peso y hábitos saludables.",
     "ld.contact.name": "Contacto de Fotocal",
     "sub.ld.name": "Fotocal Premium: planes y precios",
-    "ld.product.desc": "Premium quita los límites diarios del registro por foto y por voz y añade el escáner de cartas, el panel de nutrientes completo, los informes semanales completos y un plan de comidas diario. Coach Kal es gratis en todos los planes.",
+    "ld.product.desc": "Premium quita los límites diarios del registro por foto y por voz y añade el panel de nutrientes completo, los informes semanales completos y un plan de comidas diario. Coach Kal es gratis en todos los planes.",
     "ld.features.name": "Funciones de Fotocal",
 
     /* ── Footer ── */

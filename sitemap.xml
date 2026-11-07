@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://getfotocal.com/about/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/about/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
@@ -925,7 +925,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/blog/series/everyday-eating/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/everyday-eating/"/>
@@ -934,7 +934,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/blog/series/everyday-eating/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/everyday-eating/"/>
@@ -1543,7 +1543,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/faq/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/faq/"/>
@@ -1552,7 +1552,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/faq/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/faq/"/>
@@ -1687,7 +1687,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/"/>
@@ -1696,7 +1696,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/"/>

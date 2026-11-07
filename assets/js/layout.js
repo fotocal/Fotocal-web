@@ -109,6 +109,7 @@
         { key: "nav.coach",        href: u("ai/") }
       ] },
     { id: "blog",         key: "nav.blog",         href: u("blog/") },
+    { id: "calculadoras", key: "nav.calcs",        href: u("calculadoras/") },
     { id: "subscription", key: "nav.subscription", href: u("subscription/") },
     { id: "about",        key: "nav.about",        children: [
         { key: "nav.aboutUs",   href: u("about/") },
@@ -247,12 +248,13 @@
             '<a href="' + u("") + '">' + t("nav.home") + '</a>' +
             '<a href="' + u("subscription/") + '">' + t("nav.subscription") + '</a>' +
             '<a href="' + u("blog/") + '">' + t("nav.blog") + '</a>' +
-            /* Spanish-only sections (PART 47): no /en/ copy exists, so the
-               English footer does not point at them. */
+            /* The dish pages are Spanish-only (PART 47): no /en/ copy
+               exists, so the English footer does not point at them. The
+               calculators are in both languages since the tools-seo round. */
             (LANG === "es"
-              ? '<a href="' + u("calorias/") + '">' + t("nav.dishes") + '</a>' +
-                '<a href="' + u("calculadoras/") + '">' + t("nav.calcs") + '</a>'
+              ? '<a href="' + u("calorias/") + '">' + t("nav.dishes") + '</a>'
               : "") +
+            '<a href="' + u("calculadoras/") + '">' + t("nav.calcs") + '</a>' +
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +
           '<div class="footer-col">' +

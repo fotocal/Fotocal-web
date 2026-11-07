@@ -36,7 +36,7 @@ WHAT IT DOES PER PAGE
   · internal links rewritten so an English page links to English pages
 
 SPANISH-ONLY PAGES (PART 47)
-Pages under the prefixes in ES_ONLY (calorias/, calculadoras/) are written
+Pages under the prefixes in ES_ONLY (calorias/) are written
 for the Spanish market and have no English counterpart: they are rendered
 into the Spanish tree only, declare hreflang es + x-default (no en), and
 appear once in the sitemap. Their title/description travel inside the
@@ -72,7 +72,7 @@ OWNED = ["about", "account-deletion", "ai", "blog", "calculadoras", "calorias",
 OWNED_FILES = ["index.html", "404.html"]
 
 # Spanish-only sections: rendered once, hreflang es + x-default, no /en/ copy.
-ES_ONLY = ("calorias/", "calculadoras/")
+ES_ONLY = ("calorias/",)   # calculadoras/ became bilingual in the tools-seo round (2026-11)
 # Per-page head meta carried inside the source: <!--# meta {"es": {"title": …, "desc": …}} -->
 PAGE_META = re.compile(r'<!--#\s*meta\s*(\{.*?\})\s*-->', re.S)
 
@@ -536,6 +536,10 @@ def rewrite_links(src, lang, rel_path):
             root += "/"                          # normpath eats the trailing slash
         if root.startswith(SHARED_ROOTS) or root in SHARED_ROOTS:
             return "/%s%s" % (root, tail)
+        # A Spanish-only page has no /en/ copy: link to the Spanish one
+        # rather than to a 404.
+        if root and es_only(root.rstrip("/") + "/index.html"):
+            return "/%s%s" % (root, tail)
         return "/%s%s%s" % (PREFIX[lang], root, tail)
 
     src = re.sub(r'\b(href|src)="([^"]*)"',
@@ -717,7 +721,8 @@ def render_jsonld(src, lang, rel_path, dic, missing, article=None):
     def retarget(s):
         if lang == DEFAULT:
             return s
-        return SITE_URL.sub(lambda m: SITE + PREFIX[lang] + m.group(1), s)
+        return SITE_URL.sub(lambda m: m.group(0) if (m.group(1) and es_only(m.group(1).split("?")[0].split("#")[0].rstrip("/") + "/index.html"))
+                            else SITE + PREFIX[lang] + m.group(1), s)
 
     def walk(node):
         if isinstance(node, str):

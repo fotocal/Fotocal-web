@@ -250,7 +250,7 @@ def main():
         sys.exit("no rendered pages found — run tools/build_site.py first")
 
     # Spanish-only sections (PART 47) have no English copy by design.
-    ES_ONLY = ("calorias/", "calculadoras/")
+    ES_ONLY = ("calorias/",)
     es = {r for r in rels if not r.startswith("en/")}
     en = {r[3:] for r in rels if r.startswith("en/")}
     for missing in sorted(es - en):

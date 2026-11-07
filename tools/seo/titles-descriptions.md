@@ -334,9 +334,14 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (151): El número de la báscula oscila por decenas de razones que nada tienen que ver con la grasa. Qué mide de verdad y cómo seguir tu progreso sin agobiarte.
 - **H1**: Por qué la báscula no cuenta toda la historia
 
+### `/calculadoras/agua/`
+- **Title** (55): Calculadora de agua: cuánta agua beber al día — Fotocal
+- **Description** (153): Calcula cuánta agua beber al día según tus calorías y tu actividad, con el mínimo de la EFSA y la misma fórmula que la app Fotocal. En litros y en vasos.
+- **H1**: Calculadora de agua
+
 ### `/calculadoras/calorias-diarias/`
 - **Title** (59): Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal
-- **Description** (154): Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso con la fórmula de Mifflin-St Jeor y tu actividad. En la página, sin registro.
+- **Description** (149): Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso, con la fórmula de Mifflin-St Jeor y la misma cuenta que la app Fotocal.
 - **H1**: Calculadora de calorías diarias
 
 ### `/calculadoras/deficit-calorico/`
@@ -346,18 +351,33 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calculadoras/imc/`
 - **Title** (54): Calculadora de IMC (índice de masa corporal) — Fotocal
-- **Description** (128): Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso corresponde a un IMC normal.
+- **Description** (145): Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso da un IMC normal. Y lo que el IMC no te dice.
 - **H1**: Calculadora de IMC
 
 ### `/calculadoras/`
-- **Title** (54): Calculadoras de calorías gratis: déficit, IMC y macros
-- **Description** (150): Cuatro calculadoras en la página, sin registro: calorías diarias, déficit calórico, IMC y macros, con la fórmula explicada y el resultado en segundos.
-- **H1**: Calculadoras de calorías, déficit calórico, IMC y macros
+- **Title** (54): Calculadoras de calorías, IMC, macros y agua — Fotocal
+- **Description** (155): Ocho calculadoras sin registro: calorías diarias, déficit calórico, IMC, proteínas, macros, agua, TMB y peso saludable, con las mismas fórmulas que la app.
+- **H1**: Calculadoras de calorías, IMC, macros y más
 
 ### `/calculadoras/macros/`
 - **Title** (51): Calculadora de macros: proteínas, grasas e hidratos
-- **Description** (121): Reparte tus calorías en proteínas, grasas e hidratos según tu peso y tu objetivo: perder grasa, mantener o ganar músculo.
+- **Description** (154): Calcula tus macros: gramos de proteínas, grasas e hidratos al día según tu objetivo y tus calorías, con el mismo reparto que la app Fotocal. Sin registro.
 - **H1**: Calculadora de macros
+
+### `/calculadoras/peso-saludable/`
+- **Title** (55): Calculadora de peso saludable según tu altura — Fotocal
+- **Description** (150): Calcula tu rango de peso saludable según tu altura: el que da un IMC de 18,5 a 24,9 (OMS). Un rango, no un único peso ideal, y lo que te separa de él.
+- **H1**: Calculadora de peso saludable
+
+### `/calculadoras/proteinas/`
+- **Title** (58): Calculadora de proteínas: cuánta proteína al día — Fotocal
+- **Description** (150): Calcula cuántos gramos de proteína necesitas al día según tu peso y objetivo, de 1,2 a 2,0 g por kilo, con el mínimo de la EFSA y la cuenta de la app.
+- **H1**: Calculadora de proteínas
+
+### `/calculadoras/tmb/`
+- **Title** (50): Calculadora de TMB: tu metabolismo basal — Fotocal
+- **Description** (146): Calcula tu tasa metabólica basal (TMB) con Mifflin-St Jeor, o Katch-McArdle si sabes tu porcentaje de grasa, y tu gasto diario según tu actividad.
+- **H1**: Calculadora de TMB (metabolismo basal)
 
 ### `/calorias/aceite-de-oliva/`
 - **Title** (54): Calorías de una cucharada de aceite de oliva — Fotocal
@@ -368,6 +388,16 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (51): Calorías de las albóndigas en salsa: ración y 100 g
 - **Description** (132): Una ración de albóndigas en salsa (250 g) tiene 394 kcal, 163 por 100 g: 29,3 g de proteínas, 12,8 g de hidratos y 23,9 g de grasas.
 - **H1**: Calorías de las albóndigas en salsa
+
+### `/calorias/almendras/`
+- **Title** (51): Calorías de las almendras: ración y 100 g — Fotocal
+- **Description** (117): Una ración de almendras (30 g) tiene 174 kcal, 580 por 100 g: 6,3 g de proteínas, 6,5 g de hidratos y 15 g de grasas.
+- **H1**: Calorías de las almendras
+
+### `/calorias/arroz-a-la-cubana/`
+- **Title** (56): Calorías del arroz a la cubana: ración y 100 g — Fotocal
+- **Description** (130): Una ración de arroz a la cubana (300 g) tiene 411 kcal, 135 por 100 g: 12,2 g de proteínas, 58,3 g de hidratos y 13,8 g de grasas.
+- **H1**: Calorías del arroz a la cubana
 
 ### `/calorias/arroz-con-leche/`
 - **Title** (54): Calorías del arroz con leche: ración y 100 g — Fotocal
@@ -429,6 +459,11 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (125): Una ración de copa de vino tinto (150 g) tiene 128 kcal, 85 por 100 g: 0,1 g de proteínas, 3,9 g de hidratos y 0 g de grasas.
 - **H1**: Calorías de la copa de vino tinto
 
+### `/calorias/croissant/`
+- **Title** (46): Calorías del cruasán: ración y 100 g — Fotocal
+- **Description** (155): Una ración de cruasán (60 g) tiene 252 kcal, 420 por 100 g: 4 g de proteínas, 27,4 g de hidratos y 13,6 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías del cruasán
+
 ### `/calorias/croquetas-de-jamon/`
 - **Title** (60): Calorías de las croquetas de jamón: ración y 100 g — Fotocal
 - **Description** (125): Una ración de croquetas de jamón (120 g) tiene 290 kcal, 242 por 100 g: 10 g de proteínas, 24 g de hidratos y 17 g de grasas.
@@ -439,10 +474,20 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (154): Una ración de empanada gallega (150 g) tiene 400 kcal, 267 por 100 g: 12 g de proteínas, 42 g de hidratos y 20 g de grasas. Qué pesa una ración de verdad.
 - **H1**: Calorías de la empanada gallega
 
+### `/calorias/ensalada-mixta/`
+- **Title** (55): Calorías de la ensalada mixta: ración y 100 g — Fotocal
+- **Description** (125): Una ración de ensalada mixta (250 g) tiene 210 kcal, 83 por 100 g: 12,4 g de proteínas, 9,1 g de hidratos y 14,2 g de grasas.
+- **H1**: Calorías de la ensalada mixta
+
 ### `/calorias/ensaladilla-rusa/`
 - **Title** (57): Calorías de la ensaladilla rusa: ración y 100 g — Fotocal
 - **Description** (128): Una ración de ensaladilla rusa (200 g) tiene 375 kcal, 183 por 100 g: 9,9 g de proteínas, 24,5 g de hidratos y 26,5 g de grasas.
 - **H1**: Calorías de la ensaladilla rusa
+
+### `/calorias/espaguetis-bolonesa/`
+- **Title** (56): Calorías de los espaguetis a la boloñesa: ración y 100 g
+- **Description** (135): Una ración de espaguetis a la boloñesa (300 g) tiene 489 kcal, 163 por 100 g: 25,2 g de proteínas, 61 g de hidratos y 15,1 g de grasas.
+- **H1**: Calorías de los espaguetis a la boloñesa
 
 ### `/calorias/fabada-asturiana/`
 - **Title** (57): Calorías de la fabada asturiana: ración y 100 g — Fotocal
@@ -471,7 +516,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/calorias/`
 - **Title** (56): Calorías de platos españoles por ración real y por 100 g
-- **Description** (146): Tabla de calorías de 41 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra.
+- **Description** (146): Tabla de calorías de 53 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra.
 - **H1**: Calorías de los platos españoles, por ración y por 100 g
 
 ### `/calorias/jamon-serrano/`
@@ -483,6 +528,21 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Title** (60): Calorías de las lentejas estofadas: ración y 100 g — Fotocal
 - **Description** (131): Una ración de lentejas estofadas (320 g) tiene 373 kcal, 117 por 100 g: 18,1 g de proteínas, 53,8 g de hidratos y 10,9 g de grasas.
 - **H1**: Calorías de las lentejas estofadas
+
+### `/calorias/macarrones-con-tomate/`
+- **Title** (53): Calorías de los macarrones con tomate: ración y 100 g
+- **Description** (131): Una ración de macarrones con tomate (300 g) tiene 435 kcal, 145 por 100 g: 17 g de proteínas, 76,8 g de hidratos y 5,9 g de grasas.
+- **H1**: Calorías de los macarrones con tomate
+
+### `/calorias/magdalena/`
+- **Title** (50): Calorías de la magdalena: ración y 100 g — Fotocal
+- **Description** (119): Una ración de magdalena (35 g) tiene 154 kcal, 440 por 100 g: 1,9 g de proteínas, 19,4 g de hidratos y 7,6 g de grasas.
+- **H1**: Calorías de la magdalena
+
+### `/calorias/manzana/`
+- **Title** (48): Calorías de la manzana: ración y 100 g — Fotocal
+- **Description** (155): Una ración de manzana (150 g) tiene 78 kcal, 52 por 100 g: 0,4 g de proteínas, 20,7 g de hidratos y 0,3 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías de la manzana
 
 ### `/calorias/migas/`
 - **Title** (47): Calorías de las migas: ración y 100 g — Fotocal
@@ -509,15 +569,35 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (128): Una ración de pincho de tortilla (120 g) tiene 198 kcal, 165 por 100 g: 6,7 g de proteínas, 14 g de hidratos y 11,9 g de grasas.
 - **H1**: Calorías del pincho de tortilla
 
+### `/calorias/pizza/`
+- **Title** (46): Calorías de la pizza: ración y 100 g — Fotocal
+- **Description** (155): Una ración de pizza (200 g) tiene 536 kcal, 268 por 100 g: 20,7 g de proteínas, 58 g de hidratos y 24,6 g de grasas. Con la ración real y platos parecidos.
+- **H1**: Calorías de la pizza
+
 ### `/calorias/platano/`
 - **Title** (46): Calorías del plátano: ración y 100 g — Fotocal
 - **Description** (117): Una ración de plátano (120 g) tiene 107 kcal, 89 por 100 g: 1,3 g de proteínas, 27,4 g de hidratos y 0,4 g de grasas.
 - **H1**: Calorías del plátano
 
+### `/calorias/pollo-asado/`
+- **Title** (50): Calorías del pollo asado: ración y 100 g — Fotocal
+- **Description** (121): Una ración de pollo asado (200 g) tiene 344 kcal, 172 por 100 g: 55,8 g de proteínas, 0 g de hidratos y 11,7 g de grasas.
+- **H1**: Calorías del pollo asado
+
+### `/calorias/potaje-de-garbanzos/`
+- **Title** (58): Calorías del potaje de garbanzos: ración y 100 g — Fotocal
+- **Description** (130): Una ración de potaje de garbanzos (350 g) tiene 477 kcal, 136 por 100 g: 26 g de proteínas, 57,3 g de hidratos y 17,3 g de grasas.
+- **H1**: Calorías del potaje de garbanzos
+
 ### `/calorias/pulpo-a-la-gallega/`
 - **Title** (57): Calorías del pulpo a la gallega: ración y 100 g — Fotocal
 - **Description** (125): Una ración de pulpo a la gallega (200 g) tiene 250 kcal, 125 por 100 g: 24 g de proteínas, 14 g de hidratos y 11 g de grasas.
 - **H1**: Calorías del pulpo a la gallega
+
+### `/calorias/salmon-a-la-plancha/`
+- **Title** (58): Calorías del salmón a la plancha: ración y 100 g — Fotocal
+- **Description** (129): Una ración de salmón a la plancha (150 g) tiene 329 kcal, 219 por 100 g: 32,5 g de proteínas, 0 g de hidratos y 21,2 g de grasas.
+- **H1**: Calorías del salmón a la plancha
 
 ### `/calorias/salmorejo/`
 - **Title** (48): Calorías del salmorejo: ración y 100 g — Fotocal
@@ -587,7 +667,7 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 ### `/features/`
 - **Title** (58): Contar calorías con foto, voz y código: 9 funciones gratis
 - **Description** (152): Foto, código de barras, voz, carta, Coach Kal e informe semanal, en pantallas reales. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite.
-- **H1**: Nueve formas de contar calorías. Una sola app, gratis.
+- **H1**: Ocho formas de contar calorías. Una sola app, gratis.
 
 ### `/features/lifestyle-mindset/`
 - **Title** (51): Hábitos para comer mejor sin obsesionarte — Fotocal
@@ -946,6 +1026,51 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 - **Description** (143): The number on the scale swings for dozens of reasons that have nothing to do with fat. Here’s how to measure progress without losing your mind.
 - **H1**: Why the Scale Isn’t the Whole Story
 
+### `/en/calculadoras/agua/`
+- **Title** (55): Water intake calculator: how much water a day — Fotocal
+- **Description** (147): Work out how much water to drink a day from your calories and activity, with the EFSA minimum and the Fotocal app's formula. In litres and glasses.
+- **H1**: Water intake calculator
+
+### `/en/calculadoras/calorias-diarias/`
+- **Title** (52): Daily calorie calculator (Mifflin-St Jeor) — Fotocal
+- **Description** (148): Work out how many calories you need a day to maintain, lose or gain weight, with the Mifflin-St Jeor equation and the same maths as the Fotocal app.
+- **H1**: Daily calorie calculator
+
+### `/en/calculadoras/deficit-calorico/`
+- **Title** (54): Calorie deficit calculator for women and men — Fotocal
+- **Description** (155): Work out your calorie deficit to lose weight: maintenance, how much to cut for your sex and weight, and how long it takes. Free, no sign-up, with examples.
+- **H1**: Calorie deficit calculator for women and men
+
+### `/en/calculadoras/imc/`
+- **Title** (42): BMI calculator (body mass index) — Fotocal
+- **Description** (155): Work out your body mass index from your weight and height, see which WHO band it falls in and what weight gives a normal BMI. And what BMI cannot tell you.
+- **H1**: BMI calculator
+
+### `/en/calculadoras/`
+- **Title** (51): Calorie, BMI, macro and water calculators — Fotocal
+- **Description** (151): Eight calculators, no sign-up: daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight, with the same formulas as the app.
+- **H1**: Calorie, BMI and macro calculators
+
+### `/en/calculadoras/macros/`
+- **Title** (50): Macro calculator: protein, fat and carbs — Fotocal
+- **Description** (145): Work out your macros: grams of protein, fat and carbs a day for your goal and calories, with the same split as the Fotocal app. Free, no sign-up.
+- **H1**: Macro calculator
+
+### `/en/calculadoras/peso-saludable/`
+- **Title** (51): Healthy weight calculator for your height — Fotocal
+- **Description** (138): Your healthy weight range for your height: a BMI of 18.5 to 24.9 by WHO bands. A range, not one ideal weight, and how far you are from it.
+- **H1**: Healthy weight calculator
+
+### `/en/calculadoras/proteinas/`
+- **Title** (52): Protein calculator: how much protein a day — Fotocal
+- **Description** (146): Work out how many grams of protein you need a day for your weight and goal, from 1.2 to 2.0 g per kilo, with the EFSA minimum and the app's maths.
+- **H1**: Protein calculator
+
+### `/en/calculadoras/tmb/`
+- **Title** (51): BMR calculator: your basal metabolic rate — Fotocal
+- **Description** (151): Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.
+- **H1**: BMR calculator (basal metabolic rate)
+
 ### `/en/contact/`
 - **Title** (46): Contact Fotocal: Support, Deletion and Refunds
 - **Description** (150): Write to Fotocal about a question, a misread scan, a refund or deleting your account. One person reads the inbox and answers, usually within two days.
@@ -958,8 +1083,8 @@ Límites: título ≤ 60 caracteres (con el sufijo « — Fotocal» solo cuando 
 
 ### `/en/features/`
 - **Title** (53): Count Calories from a Photo: 9 Fotocal Features, Free
-- **Description** (155): Photo scan, barcode, voice, menu scanner, Coach Kal and a weekly report, on real screens. Free, no card: 2 AI scans, 1 voice log a day, the rest unlimited.
-- **H1**: Nine ways to count calories. One app, free.
+- **Description** (152): Photo scan, barcode, voice logging, Coach Kal and a weekly report, on real screens. Free, no card: 2 AI scans and 1 voice log a day, the rest unlimited.
+- **H1**: Eight ways to count calories. One app, free.
 
 ### `/en/features/lifestyle-mindset/`
 - **Title** (48): Habits to Eat Better Without Obsessing — Fotocal

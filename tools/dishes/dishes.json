@@ -1648,6 +1648,493 @@
      "a": "Engorda como cualquier caloría que sobra, con dos agravantes: no sacia y suele venir acompañada. Dos tercios son {kcal*2} kcal, lo que una cena ligera. Si la cuentas, cabe; si no la cuentas, es de lo primero que explica una báscula parada."
     }
    ]
+  },
+  {
+   "slug": "croissant",
+   "app_id": "croissant",
+   "name": "cruasán",
+   "article": "el",
+   "aliases": [
+    "croissant",
+    "cruasán de mantequilla"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "magdalena",
+    "napolitana-de-chocolate",
+    "tostada-con-mantequilla-y-mermelada",
+    "ensaimada"
+   ],
+   "blog": [
+    "calorias-desayuno-espanol",
+    "high-protein-breakfast-ideas",
+    "added-sugar-vs-natural-sugar"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La unidad de Fotocal es un cruasán de mantequilla mediano de {g} g, el de cafetería o panadería: {kcal} kcal. Los de bollería industrial pequeños pesan unos 40 g, {per100*0.4} kcal; los grandes de obrador pasan de 80 g, {per100*0.8} kcal o más. Si lleva relleno o va a la plancha con mantequilla, súmalo aparte.</p>",
+   "drivers": "<p>Es masa hojaldrada con mantequilla: {fat} g de grasa por unidad, que aportan casi la mitad de las calorías, y {carbs} g de hidratos de la harina y el azúcar. La proteína es poca, {protein} g, así que llena menos de lo que pesa en calorías.</p>",
+   "lighter": "<p>Medio cruasán con el café ya es otro desayuno. Si es a diario, una tostada con tomate y aceite da algo menos y sacia más; y si el cruasán es el capricho, mejor solo que relleno de crema o chocolate.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un cruasán?",
+     "a": "Uno de mantequilla mediano, de {g} g, tiene {kcal} kcal: {fat} g de grasa, {carbs} g de hidratos y {protein} g de proteína. Por 100 g son {per100} kcal."
+    },
+    {
+     "q": "¿Engorda más un cruasán o una magdalena?",
+     "a": "Por unidad, el cruasán: {kcal} kcal frente a {kcal:magdalena} de una magdalena. Por 100 g están cerca ({per100} el cruasán), porque las dos son harina, azúcar y grasa."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un cruasán a la plancha?",
+     "a": "El cruasán de {g} g son {kcal} kcal; a la plancha suele llevar mantequilla, y cada 10 g de mantequilla son unas 75 kcal más. Pídelo sin mantequilla y se queda en lo mismo."
+    }
+   ]
+  },
+  {
+   "slug": "magdalena",
+   "app_id": "magdalena",
+   "name": "magdalena",
+   "article": "la",
+   "aliases": [
+    "magdalenas"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "croissant",
+    "galletas-maria",
+    "bizcocho-casero",
+    "napolitana-de-chocolate"
+   ],
+   "blog": [
+    "calorias-desayuno-espanol",
+    "added-sugar-vs-natural-sugar",
+    "healthy-snacks-that-satisfy"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La unidad de Fotocal es una magdalena de {g} g, la típica de paquete: {kcal} kcal. Las grandes de horno pesan 50 o 60 g, {per100*0.5} a {per100*0.6} kcal. Con el café con leche del desayuno, la cuenta sube lo que lleve la leche.</p>",
+   "drivers": "<p>Harina, azúcar, huevo y aceite: {carbs} g de hidratos y {fat} g de grasa por unidad, con solo {protein} g de proteína. Por 100 g son {per100} kcal, de lo más denso del desayuno español.</p>",
+   "lighter": "<p>Una en lugar de dos ya es un recorte real. Si quieres algo dulce con más proteína, un yogur con fruta sacia más por menos; y si la magdalena es la costumbre, que sea con el café y no a media mañana además.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una magdalena?",
+     "a": "Una de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {fat} g de grasa y {protein} g de proteína. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tienen dos magdalenas con café con leche?",
+     "a": "Dos magdalenas son {kcal*2} kcal, y un café con leche de la app, {kcal:cafe-con-leche}: en total unas {kcal*2} más el café."
+    },
+    {
+     "q": "¿Es mejor la magdalena o las galletas María?",
+     "a": "Depende de la cantidad. Una magdalena son {kcal} kcal; una ración de galletas María de la app, {kcal:galletas-maria}. Por 100 g son parecidas: las dos son harina y azúcar."
+    }
+   ]
+  },
+  {
+   "slug": "salmon-a-la-plancha",
+   "app_id": "salmon-a-la-plancha",
+   "name": "salmón a la plancha",
+   "article": "el",
+   "aliases": [
+    "salmón",
+    "salmón plancha"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "merluza-a-la-plancha",
+    "dorada-al-horno",
+    "pechuga-de-pollo-a-la-plancha",
+    "lomo-de-cerdo-a-la-plancha"
+   ],
+   "blog": [
+    "how-much-protein-per-day",
+    "dietary-fat-how-much-and-which-kinds",
+    "high-protein-diet-benefits-and-how-to-start"
+   ],
+   "calc": "proteinas",
+   "portion": "<p>La ración de Fotocal son {g} g: un lomo de salmón de unos 147 g hecho a la plancha y un chorrito de aceite. Son {kcal} kcal con {protein} g de proteína. Un lomo pequeño de 100 g ronda las {per100*1} kcal; uno de 200 g, {per100*2}.</p>",
+   "drivers": "<p>Es pescado azul: {fat} g de grasa por ración, la mayoría insaturada, y {protein} g de proteína, sin hidratos. Por eso tiene bastantes más calorías que un pescado blanco: la merluza a la plancha de la app son {kcal:merluza-a-la-plancha} kcal la ración.</p>",
+   "lighter": "<p>No hace falta aligerarlo: es grasa de la buena y mucha proteína. Lo que cambia la cuenta es lo de alrededor: la guarnición de patatas fritas o una salsa con nata. Con verdura o ensalada se queda en un plato completo y razonable.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene el salmón a la plancha?",
+     "a": "Una ración de {g} g tiene {kcal} kcal, {protein} g de proteína y {fat} g de grasa, sin hidratos. Por 100 g son {per100} kcal."
+    },
+    {
+     "q": "¿Engorda el salmón?",
+     "a": "Tiene más calorías que un pescado blanco por su grasa, pero {protein} g de proteína por ración sacian mucho. Dentro de tus calorías, no engorda más que otra proteína."
+    },
+    {
+     "q": "¿Cuánta proteína tiene el salmón?",
+     "a": "{protein} g por ración de {g} g. Para saber cuánta necesitas al día, usa la <a href=\"../../calculadoras/proteinas/\">calculadora de proteínas</a>."
+    }
+   ]
+  },
+  {
+   "slug": "macarrones-con-tomate",
+   "app_id": "macarrones-con-tomate",
+   "name": "macarrones con tomate",
+   "article": "los",
+   "aliases": [
+    "macarrones",
+    "pasta con tomate"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "espaguetis-bolonesa",
+    "arroz-a-la-cubana",
+    "ensalada-de-pasta",
+    "lentejas-con-chorizo"
+   ],
+   "blog": [
+    "carbs-are-not-the-enemy",
+    "portion-control-simple-tricks",
+    "what-a-balanced-plate-looks-like"
+   ],
+   "calc": "macros",
+   "portion": "<p>El plato de Fotocal son {g} g: 230 g de pasta cocida (unos 80 g en seco), 60 g de tomate frito y 10 g de queso parmesano. Son {kcal} kcal. Un plato grande, de los que se sirven en casa, llega fácilmente a 400 g: {per100*4} kcal.</p>",
+   "drivers": "<p>Casi todo es la pasta: {carbs} g de hidratos por plato. El tomate frito aporta azúcar y algo de aceite, y el queso parte de los {fat} g de grasa y de los {protein} g de proteína.</p>",
+   "lighter": "<p>Controla la pasta en seco: 70 u 80 g por persona es una ración normal; más allá de 100 g, ya son dos. Con tomate natural triturado en lugar de frito ahorras azúcar y aceite, y una lata de atún o un huevo añaden la proteína que le falta.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un plato de macarrones con tomate?",
+     "a": "Uno de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {protein} g de proteína y {fat} g de grasa. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuántos gramos de pasta en seco son una ración?",
+     "a": "Unos 80 g en seco, que cocidos pesan unos 230 g, como el plato de la app. Si echas 100 g en seco, la ración sube en proporción."
+    },
+    {
+     "q": "¿Engordan los macarrones?",
+     "a": "No más que otro plato de {kcal} kcal. Lo que hace que engorden es la cantidad: un plato hondo lleno puede doblarla."
+    }
+   ]
+  },
+  {
+   "slug": "espaguetis-bolonesa",
+   "app_id": "espaguetis-bolonesa",
+   "name": "espaguetis a la boloñesa",
+   "article": "los",
+   "aliases": [
+    "espaguetis boloñesa",
+    "pasta boloñesa"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "macarrones-con-tomate",
+    "arroz-a-la-cubana",
+    "pizza-2-porciones",
+    "hamburguesa-casera-con-patatas"
+   ],
+   "blog": [
+    "carbs-are-not-the-enemy",
+    "portion-control-simple-tricks",
+    "how-to-set-your-macros-for-weight-loss"
+   ],
+   "calc": "macros",
+   "portion": "<p>El plato de Fotocal son {g} g: 180 g de espaguetis cocidos, 50 g de carne picada de vacuno, 50 g de tomate frito, cebolla y 5 g de aceite. Son {kcal} kcal. Con más carne o más pasta, cuenta unas {per100} kcal por cada 100 g de plato.</p>",
+   "drivers": "<p>La pasta pone la mayor parte de los {carbs} g de hidratos; la carne, buena parte de los {protein} g de proteína y de los {fat} g de grasa. Es más equilibrado que unos macarrones con tomate, y tiene más calorías por la carne.</p>",
+   "lighter": "<p>Carne picada más magra (o mitad carne, mitad verdura picada) y menos aceite en el sofrito bajan la grasa. Y la ración de pasta manda: 70 g en seco por persona.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tienen unos espaguetis a la boloñesa?",
+     "a": "Un plato de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {protein} g de proteína y {fat} g de grasa. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, los espaguetis boloñesa o los macarrones con tomate?",
+     "a": "Los espaguetis a la boloñesa: {kcal} kcal el plato frente a {kcal:macarrones-con-tomate} de los macarrones con tomate, por la carne y el aceite."
+    },
+    {
+     "q": "¿Son buenos para perder peso?",
+     "a": "Caben en un déficit si la ración es razonable. Tienen {protein} g de proteína, que ayuda a saciar; calcula cuántas calorías te tocan con la <a href=\"../../calculadoras/calorias-diarias/\">calculadora de calorías diarias</a>."
+    }
+   ]
+  },
+  {
+   "slug": "pollo-asado",
+   "app_id": "pollo-asado",
+   "name": "pollo asado",
+   "article": "el",
+   "aliases": [
+    "pollo al horno"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "pechuga-de-pollo-a-la-plancha",
+    "lomo-de-cerdo-a-la-plancha",
+    "salmon-a-la-plancha",
+    "chuletas-de-cordero"
+   ],
+   "blog": [
+    "how-much-protein-per-day",
+    "high-protein-diet-benefits-and-how-to-start",
+    "what-a-balanced-plate-looks-like"
+   ],
+   "calc": "proteinas",
+   "portion": "<p>La ración de Fotocal son {g} g de carne sin hueso, mitad muslo y mitad pechuga: {kcal} kcal. Un cuarto de pollo de asador con hueso da unos 200 g de carne; si te comes la piel, suma bastante más grasa.</p>",
+   "drivers": "<p>Casi todo es proteína: {protein} g por ración, sin hidratos. La grasa, {fat} g, viene sobre todo del muslo; la pechuga es mucho más magra.</p>",
+   "lighter": "<p>Quita la piel y elige pechuga: es la forma más sencilla de quedarte con la proteína y dejar la grasa. Y ojo a las patatas del asador, que suelen ir fritas o bañadas en el jugo.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene el pollo asado?",
+     "a": "Una ración de {g} g de carne, mitad muslo y mitad pechuga, tiene {kcal} kcal, {protein} g de proteína y {fat} g de grasa. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un cuarto de pollo asado?",
+     "a": "Un cuarto da unos 200 g de carne: {kcal} kcal sin contar la piel, que añade grasa."
+    },
+    {
+     "q": "¿Engorda el pollo asado?",
+     "a": "Con {protein} g de proteína por ración es de lo que más sacia. Lo que lo engorda es la piel y las patatas fritas que lo acompañan."
+    }
+   ]
+  },
+  {
+   "slug": "potaje-de-garbanzos",
+   "app_id": "potaje-de-garbanzos",
+   "name": "potaje de garbanzos",
+   "article": "el",
+   "aliases": [
+    "potaje de vigilia",
+    "garbanzos con espinacas y bacalao"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "lentejas-estofadas",
+    "cocido-madrileno",
+    "fabada-asturiana",
+    "garbanzos-con-espinacas"
+   ],
+   "blog": [
+    "fiber-the-underrated-nutrient",
+    "what-a-balanced-plate-looks-like",
+    "high-protein-diet-benefits-and-how-to-start"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>El plato de Fotocal es el potaje de vigilia: {g} g con 160 g de garbanzos cocidos, espinacas, patata, huevo cocido, bacalao y sofrito. Son {kcal} kcal. Un plato hondo bien servido pasa de 400 g: unas {per100*4} kcal.</p>",
+   "drivers": "<p>Los garbanzos ponen casi todos los {carbs} g de hidratos y buena parte de los {protein} g de proteína, con mucha fibra; el bacalao y el huevo completan la proteína, y el aceite del sofrito, la mayor parte de los {fat} g de grasa.</p>",
+   "lighter": "<p>Ya es un plato completo y saciante. Mide el aceite del sofrito, que es donde se van las calorías, y sírvelo como plato único en lugar de primero de un menú.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un plato de potaje de garbanzos?",
+     "a": "Uno de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {protein} g de proteína y {fat} g de grasa. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Engordan los garbanzos?",
+     "a": "No por sí solos: {protein} g de proteína y mucha fibra por plato sacian mucho. Engorda lo que se les añade, como chorizo o tocino, que este potaje no lleva."
+    },
+    {
+     "q": "¿Qué tiene más calorías, el potaje o el cocido?",
+     "a": "El cocido madrileño de la app tiene {kcal:cocido-madrileno} kcal por ración, frente a {kcal} del potaje: lleva carnes y embutidos."
+    }
+   ]
+  },
+  {
+   "slug": "ensalada-mixta",
+   "app_id": "ensalada-mixta",
+   "name": "ensalada mixta",
+   "article": "la",
+   "aliases": [
+    "ensalada"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "ensalada-de-tomate",
+    "ensalada-cesar",
+    "ensaladilla-rusa",
+    "gazpacho"
+   ],
+   "blog": [
+    "best-foods-for-weight-loss",
+    "what-a-balanced-plate-looks-like",
+    "dietary-fat-how-much-and-which-kinds"
+   ],
+   "calc": "deficit-calorico",
+   "portion": "<p>El plato de Fotocal son {g} g: lechuga, tomate, cebolla, zanahoria, 25 g de atún en aceite y medio huevo cocido, aliñada. Son {kcal} kcal. Lo que más cambia la cuenta es el aceite del aliño: cada cucharada de 10 ml son {kcal:aceite-de-oliva} kcal.</p>",
+   "drivers": "<p>La verdura apenas suma; la mayor parte de las calorías está en los {fat} g de grasa del aceite y del atún. Los {protein} g de proteína vienen del atún y el huevo.</p>",
+   "lighter": "<p>Mide el aceite con cuchara en vez de a chorro y escurre el atún. Si es tu comida principal, añade legumbre, pollo o más huevo para que te sacie hasta la cena.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una ensalada mixta?",
+     "a": "Un plato de {g} g con atún y huevo tiene {kcal} kcal: {fat} g de grasa, {protein} g de proteína y {carbs} g de hidratos. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuánto aceite lleva una ensalada?",
+     "a": "La cuenta de la app incluye un aliño moderado. Cada cucharada más de aceite de oliva, de 10 ml, suma {kcal:aceite-de-oliva} kcal."
+    },
+    {
+     "q": "¿La ensalada mixta adelgaza?",
+     "a": "Es de lo que menos calorías tiene por plato. Pero si es la comida entera, con {protein} g de proteína puede quedarse corta: complétala."
+    }
+   ]
+  },
+  {
+   "slug": "manzana",
+   "app_id": "manzana",
+   "name": "manzana",
+   "article": "la",
+   "aliases": [
+    "manzanas"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "platano",
+    "naranja",
+    "fresas",
+    "uvas"
+   ],
+   "blog": [
+    "healthy-snacks-that-satisfy",
+    "fiber-the-underrated-nutrient",
+    "added-sugar-vs-natural-sugar"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La pieza de Fotocal es una manzana mediana de {g} g sin corazón: {kcal} kcal. Una pequeña, de 120 g, son {per100*1.2}; una grande de 200 g, {per100*2}. Con piel o sin ella cambia muy poco la cuenta.</p>",
+   "drivers": "<p>Es casi todo agua e hidratos: {carbs} g por pieza, en buena parte azúcares de la fruta con su fibra. Grasa y proteína, prácticamente cero.</p>",
+   "lighter": "<p>Ya es de las frutas más ligeras. Mejor entera que en zumo: la fibra hace que sacie y el zumo se bebe en un momento.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una manzana?",
+     "a": "Una mediana de {g} g tiene {kcal} kcal y {carbs} g de hidratos. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, una manzana o un plátano?",
+     "a": "El plátano: {kcal:platano} kcal frente a {kcal} de la manzana."
+    },
+    {
+     "q": "¿Engorda la manzana por la noche?",
+     "a": "No más que a otra hora: {kcal} kcal son las mismas. Lo que cuenta es el total del día."
+    }
+   ]
+  },
+  {
+   "slug": "almendras",
+   "app_id": "almendras",
+   "name": "almendras",
+   "article": "las",
+   "aliases": [
+    "almendra",
+    "puñado de almendras"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "queso-fresco",
+    "yogur-natural",
+    "barrita-de-cereales",
+    "platano"
+   ],
+   "blog": [
+    "healthy-snacks-that-satisfy",
+    "dietary-fat-how-much-and-which-kinds",
+    "portion-control-simple-tricks"
+   ],
+   "calc": "macros",
+   "portion": "<p>La ración de Fotocal es un puñado de {g} g, unas 25 almendras: {kcal} kcal. Un puñado generoso de 50 g ya son {per100*0.5}. Fritas y saladas suman algo de aceite y sal.</p>",
+   "drivers": "<p>Son grasa sobre todo: {fat} g por puñado, insaturada, con {protein} g de proteína y algo de fibra. Por 100 g son {per100} kcal, de lo más denso que se come.</p>",
+   "lighter": "<p>No hay que dejarlas: hay que contarlas. Sírvete el puñado en un cuenco en lugar de comer de la bolsa, y elígelas naturales o tostadas sin sal.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tienen las almendras?",
+     "a": "Un puñado de {g} g, unas 25 almendras, tiene {kcal} kcal: {fat} g de grasa, {protein} g de proteína y {carbs} g de hidratos. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuántas almendras al día se pueden comer?",
+     "a": "Un puñado de {g} g es una ración razonable. Más, sin contarlo, sube las calorías rápido."
+    },
+    {
+     "q": "¿Engordan las almendras?",
+     "a": "Tienen muchas calorías por gramo, {per100} por 100 g, pero sacian. Engordan si se comen sin medida."
+    }
+   ]
+  },
+  {
+   "slug": "pizza",
+   "app_id": "pizza-2-porciones",
+   "name": "pizza",
+   "article": "la",
+   "aliases": [
+    "pizza de queso",
+    "porción de pizza"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "hamburguesa-casera-con-patatas",
+    "espaguetis-bolonesa",
+    "bocadillo-de-calamares",
+    "salchichas-con-patatas"
+   ],
+   "blog": [
+    "eating-out-without-wrecking-your-diet",
+    "portion-control-simple-tricks",
+    "common-calorie-counting-mistakes"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La ración de Fotocal son dos porciones de pizza de queso, {g} g: {kcal} kcal. Una porción son unas {kcal/2}. Una pizza mediana entera pesa unos 500 g, {per100*5} kcal; con embutidos o doble queso, más.</p>",
+   "drivers": "<p>Masa, queso y aceite: {carbs} g de hidratos y {fat} g de grasa en dos porciones, con {protein} g de proteína del queso.</p>",
+   "lighter": "<p>Masa fina en vez de gruesa, verduras en lugar de embutido y una ensalada antes para comer menos porciones. Compartida, la pizza cabe en casi cualquier día.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una pizza?",
+     "a": "Dos porciones de pizza de queso, {g} g, tienen {kcal} kcal. Una porción, unas {kcal/2}. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una pizza mediana entera?",
+     "a": "Unos 500 g de pizza de queso son {per100*5} kcal. Con jamón, pepperoni o doble queso, más."
+    },
+    {
+     "q": "¿Qué engorda más, una pizza o una hamburguesa?",
+     "a": "Por ración, la hamburguesa casera con patatas de la app tiene {kcal:hamburguesa-casera-con-patatas} kcal, frente a {kcal} de dos porciones de pizza."
+    }
+   ]
+  },
+  {
+   "slug": "arroz-a-la-cubana",
+   "app_id": "arroz-a-la-cubana",
+   "name": "arroz a la cubana",
+   "article": "el",
+   "aliases": [
+    "arroz con tomate y huevo"
+   ],
+   "status": "ready",
+   "published": "2026-11-07",
+   "compare": [
+    "paella-valenciana",
+    "macarrones-con-tomate",
+    "huevos-fritos-con-patatas",
+    "arroz-con-pollo"
+   ],
+   "blog": [
+    "carbs-are-not-the-enemy",
+    "what-a-balanced-plate-looks-like",
+    "portion-control-simple-tricks"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>El plato de Fotocal son {g} g: 160 g de arroz blanco cocido, 50 g de tomate frito, un huevo frito, medio plátano frito y aceite. Son {kcal} kcal. Con dos huevos o un plátano entero, cuenta unas {per100} kcal por cada 100 g más.</p>",
+   "drivers": "<p>El arroz pone casi todos los {carbs} g de hidratos; el huevo frito y el aceite, la mayor parte de los {fat} g de grasa. La proteína, {protein} g, se queda corta para un plato principal.</p>",
+   "lighter": "<p>Huevo a la plancha en vez de frito y el plátano sin freír bajan la grasa. Para que sacie más, añade un segundo huevo o una ensalada con atún.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene el arroz a la cubana?",
+     "a": "Un plato de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {fat} g de grasa y {protein} g de proteína. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, el arroz a la cubana o la paella?",
+     "a": "La paella valenciana de la app tiene {kcal:paella-valenciana} kcal por ración, frente a {kcal} del arroz a la cubana."
+    },
+    {
+     "q": "¿Cómo hacerlo más ligero?",
+     "a": "El huevo a la plancha y el plátano sin freír. El arroz, en ración de 70 u 80 g en crudo por persona."
+    }
+   ]
   }
  ]
 }

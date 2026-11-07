@@ -46,6 +46,10 @@ CALCS = {
     "deficit-calorico": "Calculadora de déficit calórico",
     "imc": "Calculadora de IMC",
     "macros": "Calculadora de macros",
+    "proteinas": "Calculadora de proteínas",
+    "agua": "Calculadora de agua",
+    "tmb": "Calculadora de TMB (metabolismo basal)",
+    "peso-saludable": "Calculadora de peso saludable",
 }
 
 
@@ -268,10 +272,40 @@ APP_ASIDE = """
         <div class="ai-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
         <div>
           <h3>Si quieres las calorías de tu plato, no las de la media</h3>
-          <p>Fotocal estima la ración a partir de una foto, con los mismos datos de esta página, y te deja corregir cada ingrediente y sus gramos antes de guardar. El plan gratis no caduca ni pide tarjeta: 2 fotos al día, el escáner de códigos de barras y Coach Kal sin límite. Solo en Android.</p>
+          <p>Fotocal estima la ración a partir de una foto, con los mismos datos de esta página, y te deja corregir cada ingrediente y sus gramos antes de guardar. El plan gratis no caduca ni pide tarjeta: 2 escaneos con IA al día, 1 registro por voz al día, y el escáner de códigos de barras y Coach Kal sin límite. Solo en Android.</p>
           <p><a href="%s" target="_blank" rel="noopener">Descárgala gratis</a> · <a href="{UP}features/scan-food/">Cómo funciona el escáner de comida</a></p>
         </div>
       </aside>""" % PLAY
+
+
+def dish_aside(d):
+    """The app card on a dish page: 'Haz una foto de tu <plato> y Fotocal lo
+    calcula' (tools-seo brief, 2026-11), same free-plan limits as APP_ASIDE."""
+    tu = "tus" if d["article"] in ("las", "los") else "tu"
+    link = PLAY + "&utm_source=web&utm_medium=dish&utm_campaign=" + d["slug"]
+    return (APP_ASIDE.replace("{UP}", "../../")
+            .replace("<h3>Si quieres las calorías de tu plato, no las de la media</h3>",
+                     "<h3>Haz una foto de %s %s y Fotocal lo calcula</h3>" % (tu, esc(d["name"])))
+            .replace('<a href="%s" target="_blank"' % PLAY, '<a href="%s" target="_blank"' % esc(link)))
+
+
+def nutrition_ld(d, fig, url):
+    """MenuItem + NutritionInformation for one serving, the app's figures."""
+    dot = lambda x: ("%.1f" % x).rstrip("0").rstrip(".")   # machine-readable: a decimal point, no thousands separator
+    g = lambda x: "%s g" % dot(x)
+    nut = {"@type": "NutritionInformation", "servingSize": "%s (%s g)" % (fig["serving_label"], dot(fig["serving_g"])),
+           "calories": "%s kcal" % dot(fig["kcal"]), "proteinContent": g(fig["protein"]),
+           "carbohydrateContent": g(fig["carbs"]), "fatContent": g(fig["fat"])}
+    if fig["satfat"] is not None:
+        nut["saturatedFatContent"] = g(fig["satfat"])
+    if fig["sugar"] is not None:
+        nut["sugarContent"] = g(fig["sugar"])
+    if fig["fiber"] is not None:
+        nut["fiberContent"] = g(fig["fiber"])
+    if fig.get("salt") is not None:
+        nut["sodiumContent"] = "%d mg" % round(fig["salt"] / 2.5 * 1000)
+    return ld_block({"@context": "https://schema.org", "@type": "MenuItem", "name": cap(d["name"]), "url": url,
+                     "inLanguage": "es", "nutrition": nut})
 
 
 # ── one dish page ────────────────────────────────────────────────────
@@ -339,6 +373,7 @@ def dish_page(d, ready_by_app):
         ld_block({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": c[0], "item": c[1]} for i, c in enumerate(crumbs)]}),
     ]
+    ld.append(nutrition_ld(d, fig, url))
     if faq:
         ld.append(ld_block({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", f["a"])}} for f in faq]}))
@@ -435,7 +470,7 @@ def dish_page(d, ready_by_app):
         o('      </div>')
     o('      </div>')  # post-body
 
-    o(APP_ASIDE.replace("{UP}", "../../"))
+    o(dish_aside(d))
 
     # sources
     o('      <section class="dp-src reveal" id="fuentes">\n        <h2>De dónde salen estas cifras</h2>')
@@ -456,8 +491,9 @@ def dish_page(d, ready_by_app):
     for x in others:
         o('          <a class="post-nav-item" href="../%s/"><small>Otro plato</small><strong>Calorías %s %s</strong></a>' % (x["slug"], de(x["article"]), esc(x["name"])))
     o('          <a class="post-nav-item" href="../"><small>Tabla</small><strong>Calorías de los platos españoles, por ración y por 100 g</strong></a>')
-    c = d.get("calc", "deficit-calorico")
-    o('          <a class="post-nav-item" href="../../calculadoras/%s/"><small>Calculadora</small><strong>%s</strong></a>' % (c, CALCS[c]))
+    # every dish page links the daily-calories calculator (tools-seo, 2026-11), plus its own pick
+    for c in dict.fromkeys(["calorias-diarias", d.get("calc", "deficit-calorico")]):
+        o('          <a class="post-nav-item" href="../../calculadoras/%s/"><small>Calculadora</small><strong>%s</strong></a>' % (c, CALCS[c]))
     for b in d.get("blog", [])[:3]:
         o('          <a class="post-nav-item" href="../../blog/%s/"><small>Del blog</small><strong>%s</strong></a>' % (b, esc(blog_title(b))))
     o('        </div>\n      </nav>')
@@ -532,7 +568,7 @@ def table_page(ready_by_app):
 # ── the hub ──────────────────────────────────────────────────────────
 def hub_page(ready):
     title = "Calorías de platos españoles por ración real y por 100 g"
-    desc = "Tabla de calorías de 41 platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra. Sin registro."
+    desc = "Tabla de calorías de %d platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra. Sin registro." % len(ready)
     assert len(title) <= TITLE_MAX and 140 <= len(desc) <= 160, (len(title), len(desc))
     path = "calorias/"
     url = SITE + path

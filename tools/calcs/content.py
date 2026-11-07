@@ -225,7 +225,7 @@ CALCS = [
 # ───────────────────────────────────────────────────────────── proteínas
 {"slug": "proteinas", "kind": "protein", "icon": "egg",
  "dishes": ["huevo-cocido", "pulpo-a-la-gallega", "jamon-serrano", "lentejas-estofadas", "gambas-al-ajillo"],
- "blog": ["macronutrients-101", "building-muscle-while-losing-fat", "calorie-deficit-for-fat-loss"],
+ "blog": ["how-much-protein-per-day", "macronutrients-101", "building-muscle-while-losing-fat"],
  "sources": ["efsa_protein", "issn_protein"],
  "es": {
   "short": "Proteínas", "card": "Los gramos de proteína al día para tu peso y tu objetivo.",
@@ -323,7 +323,7 @@ CALCS = [
 # ───────────────────────────────────────────────────────────── agua
 {"slug": "agua", "kind": "water", "icon": "drop",
  "dishes": ["gazpacho", "cafe-con-leche", "cana-de-cerveza", "coca-cola-zero"],
- "blog": ["tdee-how-many-calories-you-need", "how-many-calories-does-exercise-burn", "how-to-lose-weight-sustainably"],
+ "blog": ["hydration-and-weight", "tdee-how-many-calories-you-need", "how-many-calories-does-exercise-burn"],
  "sources": ["efsa_water", "iom_water", "mifflin"],
  "es": {
   "short": "Agua", "card": "Cuánta agua beber al día según tu gasto y tu actividad.",

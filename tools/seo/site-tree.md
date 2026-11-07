@@ -36,6 +36,8 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/calorias/aceite-de-oliva/` — Calorías de una cucharada de aceite de oliva — Fotocal  _solo ES_
 - `/calorias/albondigas-en-salsa/` — Calorías de las albóndigas en salsa: ración y 100 g  _solo ES_
+- `/calorias/almendras/` — Calorías de las almendras: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/arroz-a-la-cubana/` — Calorías del arroz a la cubana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/arroz-con-leche/` — Calorías del arroz con leche: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/barra-de-pan/` — Calorías de la barra de pan: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/bocadillo-de-calamares/` — Calorías del bocadillo de calamares: ración y 100 g  _solo ES_
@@ -48,9 +50,12 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/coca-cola-zero/` — Calorías de la Coca-Cola Zero: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/cocido-madrileno/` — Calorías del cocido madrileño: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/copa-de-vino-tinto/` — Calorías de la copa de vino tinto: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/croissant/` — Calorías del cruasán: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/croquetas-de-jamon/` — Calorías de las croquetas de jamón: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/empanada-gallega/` — Calorías de la empanada gallega: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/ensalada-mixta/` — Calorías de la ensalada mixta: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/ensaladilla-rusa/` — Calorías de la ensaladilla rusa: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/espaguetis-bolonesa/` — Calorías de los espaguetis a la boloñesa: ración y 100 g  _solo ES_
 - `/calorias/fabada-asturiana/` — Calorías de la fabada asturiana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/gambas-al-ajillo/` — Calorías de las gambas al ajillo: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/gazpacho/` — Calorías del gazpacho: ración y 100 g — Fotocal  _solo ES_
@@ -59,13 +64,20 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/` — Calorías de platos españoles por ración real y por 100 g  _solo ES_
 - `/calorias/jamon-serrano/` — Calorías del jamón serrano: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/lentejas-estofadas/` — Calorías de las lentejas estofadas: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/macarrones-con-tomate/` — Calorías de los macarrones con tomate: ración y 100 g  _solo ES_
+- `/calorias/magdalena/` — Calorías de la magdalena: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/manzana/` — Calorías de la manzana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/migas/` — Calorías de las migas: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/paella-valenciana/` — Calorías de la paella valenciana: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/patatas-bravas/` — Calorías de las patatas bravas: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/pimientos-de-padron/` — Calorías de los pimientos de Padrón: ración y 100 g  _solo ES_
 - `/calorias/pincho-de-tortilla/` — Calorías del pincho de tortilla: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/pizza/` — Calorías de la pizza: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/platano/` — Calorías del plátano: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/pollo-asado/` — Calorías del pollo asado: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/potaje-de-garbanzos/` — Calorías del potaje de garbanzos: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/pulpo-a-la-gallega/` — Calorías del pulpo a la gallega: ración y 100 g — Fotocal  _solo ES_
+- `/calorias/salmon-a-la-plancha/` — Calorías del salmón a la plancha: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/salmorejo/` — Calorías del salmorejo: ración y 100 g — Fotocal  _solo ES_
 - `/calorias/sandwich-mixto/` — Calorías del sándwich mixto (jamón y queso) — Fotocal  _solo ES_
 - `/calorias/sopa-castellana/` — Calorías de la sopa castellana: ración y 100 g — Fotocal  _solo ES_
@@ -80,11 +92,15 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 ## /calculadoras/
 
-- `/calculadoras/calorias-diarias/` — Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal  _solo ES_
-- `/calculadoras/deficit-calorico/` — Calculadora de déficit calórico: mujer y hombre, gratis  _solo ES_
-- `/calculadoras/imc/` — Calculadora de IMC (índice de masa corporal) — Fotocal  _solo ES_
-- `/calculadoras/` — Calculadoras de calorías gratis: déficit, IMC y macros  _solo ES_
-- `/calculadoras/macros/` — Calculadora de macros: proteínas, grasas e hidratos  _solo ES_
+- `/calculadoras/agua/` — Calculadora de agua: cuánta agua beber al día — Fotocal  _ES+EN_
+- `/calculadoras/calorias-diarias/` — Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal  _ES+EN_
+- `/calculadoras/deficit-calorico/` — Calculadora de déficit calórico: mujer y hombre, gratis  _ES+EN_
+- `/calculadoras/imc/` — Calculadora de IMC (índice de masa corporal) — Fotocal  _ES+EN_
+- `/calculadoras/` — Calculadoras de calorías, IMC, macros y agua — Fotocal  _ES+EN_
+- `/calculadoras/macros/` — Calculadora de macros: proteínas, grasas e hidratos  _ES+EN_
+- `/calculadoras/peso-saludable/` — Calculadora de peso saludable según tu altura — Fotocal  _ES+EN_
+- `/calculadoras/proteinas/` — Calculadora de proteínas: cuánta proteína al día — Fotocal  _ES+EN_
+- `/calculadoras/tmb/` — Calculadora de TMB: tu metabolismo basal — Fotocal  _ES+EN_
 
 ## /blog/
 
@@ -183,4 +199,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
-Total: 137 páginas en español, 84 con copia inglesa (221 URLs servidas).
+Total: 153 páginas en español, 93 con copia inglesa (246 URLs servidas).

@@ -72,7 +72,7 @@ OWNED = ["about", "account-deletion", "ai", "blog", "calculadoras", "calorias",
 OWNED_FILES = ["index.html", "404.html"]
 
 # Spanish-only sections: rendered once, hreflang es + x-default, no /en/ copy.
-ES_ONLY = ("calorias/",)   # calculadoras/ became bilingual in the tools-seo round (2026-11)
+ES_ONLY = ()   # calculadoras/ (tools-seo) and calorias/ (lang-ux, 2026-11) are bilingual now; es-only blog posts still use ES_ONLY_MARK
 # Per-page head meta carried inside the source: <!--# meta {"es": {"title": …, "desc": …}} -->
 PAGE_META = re.compile(r'<!--#\s*meta\s*(\{.*?\})\s*-->', re.S)
 
@@ -85,7 +85,7 @@ def es_only(rel):
     """Spanish-only: under an ES_ONLY prefix, or a page carrying the
     ES_ONLY_MARK comment (blog posts written for Spain with no English twin;
     tools/gen_blog.py emits it for posts whose JSON says "langs": ["es"])."""
-    if rel.startswith(ES_ONLY):
+    if ES_ONLY and rel.startswith(ES_ONLY):
         return True
     v = _es_only_marked.get(rel)
     if v is None:
@@ -420,6 +420,8 @@ def inject_chrome(src, lang):
     for l in ("es", "en"):
         target = "/" + alts[l] if l in alts else ("/en/" if l == "en" else "/")
         nav = re.sub(r'(class="lang-item" role="option" href=")[^"]*(" hreflang="%s")' % l, r'\g<1>%s\2' % target, nav, count=1)
+        # the ES / EN pair in the phone menu (added 07-11-2026)
+        nav = re.sub(r'(class="m-lang-item[^"]*"(?: aria-current="true")? href=")[^"]*(" hreflang="%s")' % l, r'\g<1>%s\2' % target, nav, count=1)
     src = src.replace('<div id="site-nav"></div>', '<div id="site-nav">%s</div>' % nav, 1)
     src = src.replace('<div id="site-footer"></div>', '<div id="site-footer">%s</div>' % c[1], 1)
     return src
@@ -602,8 +604,31 @@ def fit_desc(d, rel=None):
     return out
 
 
+# First visit only: open the visitor's language (lang-ux, 2026-11). Inline and
+# first in <head>, so the browser never paints the wrong language first.
+#   · runs once: any stored choice (the switcher, an earlier visit, ?lang=)
+#     wins, and main.js stores the language of every page read after this
+#   · never for crawlers (Googlebot must see both trees, through hreflang),
+#     Lighthouse or headless browsers, and never for a visitor arriving
+#     from a search engine (it already chose the language by hreflang)
+#   · ?lang=es|en is an explicit choice: stored, no redirect
+#   · both trees mirror each other path for path, so the twin is computed
+LANG_GATE = """<script>(function(){try{var d=document.documentElement,L=d.lang==="en"?"en":"es",K="fotocal-lang",s=localStorage,q=/[?&]lang=(es|en)\\b/.exec(location.search);
+if(q){s.setItem(K,q[1]);return}if(s.getItem(K))return;
+if(/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit|embedly/i.test(navigator.userAgent))return;
+if(/\\/\\/([^/]*\\.)?(google|bing|duckduckgo|yahoo|ecosia|yandex|baidu|qwant)\\./i.test(document.referrer))return;
+var w=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase(),T=w.indexOf("en")===0?"en":w.indexOf("es")===0?"es":"";
+s.setItem(K,T||L);if(!T||T===L)return;
+var p=location.pathname,b=p.indexOf("/en/")===0?p.slice(3):(p==="/en"?"/":p);
+location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}})();</script>"""
+
+
 def render_head(src, lang, rel_path, meta):
     meta = dict(meta, desc=fit_desc(meta["desc"], "%s:%s" % (lang, rel_path)))
+    # the twin must exist for the first-visit redirect; a page without one
+    # (an es-only blog post) never carries the script
+    if "noindex" not in src and not es_only(rel_path):
+        src = src.replace('<meta charset="UTF-8">', '<meta charset="UTF-8">\n  ' + LANG_GATE, 1)
     t, d = esc_attr(meta["title"]), esc_attr(meta["desc"])
     # <title> takes text, not an attribute value
     src = HEAD_PATTERNS[0][0].sub(lambda _: "<title>%s</title>" % esc_text(meta["title"]), src, count=1)

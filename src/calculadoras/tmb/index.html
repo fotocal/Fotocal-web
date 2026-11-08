@@ -47,41 +47,51 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="bmr" novalidate aria-label="Calculadora">
+      <form class="calc" data-calc="bmr" data-out="out-es" novalidate aria-label="Calculadora">
         <div class="calc-grid">
-          <fieldset class="calc-field wide"><legend>Sexo</legend><div class="calc-seg">
-            <input type="radio" name="sex" id="tmb-sex-es-f" value="f" checked><label for="tmb-sex-es-f">Mujer</label>
+          <fieldset class="calc-field wide" aria-describedby="tmb-sex-es-err"><legend>Sexo</legend><div class="calc-seg">
+            <input type="radio" name="sex" id="tmb-sex-es-f" value="f"><label for="tmb-sex-es-f">Mujer</label>
             <input type="radio" name="sex" id="tmb-sex-es-m" value="m"><label for="tmb-sex-es-m">Hombre</label>
-          </div></fieldset>
-          <div class="calc-field"><label for="tmb-age-es">Edad (años)</label><input id="tmb-age-es" name="age" type="text" inputmode="decimal" autocomplete="off" value="35" data-dec=","></div>
-          <div class="calc-field"><label for="tmb-height-es">Altura (cm)</label><input id="tmb-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" value="165" data-dec=","></div>
-          <div class="calc-field"><label for="tmb-weight-es">Peso (kg)</label><input id="tmb-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70" data-dec=","></div>
-          <div class="calc-field"><label for="tmb-bf-es">Grasa corporal (%, opcional)</label><input id="tmb-bf-es" name="bf" type="text" inputmode="decimal" autocomplete="off" value="" placeholder="Vacío = Mifflin-St Jeor" data-dec=","></div>
+          </div><p class="calc-err" id="tmb-sex-es-err" data-err-for="sex" hidden>Elige mujer u hombre.</p></fieldset>
+          <div class="calc-field third"><label for="tmb-age-es">Edad (años)</label><input id="tmb-age-es" name="age" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 35" aria-describedby="tmb-age-es-err" data-dec=","><p class="calc-err" id="tmb-age-es-err" data-err-for="age" hidden>Introduce una edad entre 18 y 90 años.</p></div>
+          <div class="calc-field third"><label for="tmb-height-es">Altura (cm)</label><input id="tmb-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 170" aria-describedby="tmb-height-es-err" data-dec=","><p class="calc-err" id="tmb-height-es-err" data-err-for="height" hidden>Introduce una altura entre 130 y 230 cm.</p></div>
+          <div class="calc-field third"><label for="tmb-weight-es">Peso (kg)</label><input id="tmb-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 70" aria-describedby="tmb-weight-es-err" data-dec=","><p class="calc-err" id="tmb-weight-es-err" data-err-for="weight" hidden>Introduce un peso entre 35 y 250 kg.</p></div>
+          <div class="calc-field"><label for="tmb-bf-es">% de grasa corporal (opcional)</label><input id="tmb-bf-es" name="bf" type="text" inputmode="decimal" autocomplete="off" placeholder="Si lo sabes" aria-describedby="tmb-bf-es-err" data-dec=","><p class="calc-err" id="tmb-bf-es-err" data-err-for="bf" hidden>Introduce un porcentaje entre 3 y 60, o déjalo vacío.</p></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calcular</button>
+        <details class="calc-how"><summary>¿Cómo se calcula?</summary><p>El detalle de la fórmula y un ejemplo resuelto están debajo de la calculadora.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="bmr" aria-labelledby="res-es">
-        <h2 class="calc-out-h" id="res-es">Tu resultado</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">1.395</b> <span>kcal al día en reposo</span></p>
+      <section class="calc-out" id="out-es" data-state="empty" tabindex="-1" aria-labelledby="out-es-h">
+        <h2 class="calc-out-h" id="out-es-h">Tu resultado</h2>
+        <p class="calc-empty">Rellena tus datos y pulsa <b>Calcular</b>. El resultado aparecerá aquí.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>kcal al día en reposo</span></p>
         <div class="calc-rows">
-          <div class="calc-row"><span>Mifflin-St Jeor</span><b><span data-out="mifflin">1.395</span> kcal</b></div>
-          <div class="calc-row"><span>Katch-McArdle (con tu grasa)</span><b><span data-out="katch">—</span> kcal</b></div>
-          <div class="calc-row"><span>Casi siempre sentado (×1,2)</span><b><span data-out="t_sedentary">1.674</span> kcal</b></div>
-          <div class="calc-row is-hl"><span>De pie a ratos (×1,375)</span><b><span data-out="t_light">1.918</span> kcal</b></div>
-          <div class="calc-row"><span>Casi siempre de pie (×1,465)</span><b><span data-out="t_standing">2.044</span> kcal</b></div>
-          <div class="calc-row"><span>En movimiento todo el día (×1,55)</span><b><span data-out="t_active">2.163</span> kcal</b></div>
-          <div class="calc-row"><span>Trabajo físico duro (×1,725)</span><b><span data-out="t_hard">2.407</span> kcal</b></div>
+          <div class="calc-row"><span>Según tu edad, altura y peso</span><b><span data-out="mifflin">—</span> kcal</b></div>
+          <div class="calc-row" data-warn="katch" hidden><span>Con tu % de grasa corporal</span><b><span data-out="katch">—</span> kcal</b></div>
+          <p class="calc-rows-h">Con tu actividad, gastas al día:</p>
+          <div class="calc-row"><span>Sedentario</span><b><span data-out="t_sedentary">—</span> kcal</b></div>
+          <div class="calc-row is-hl"><span>Ligero</span><b><span data-out="t_light">—</span> kcal</b></div>
+          <div class="calc-row"><span>Moderado</span><b><span data-out="t_standing">—</span> kcal</b></div>
+          <div class="calc-row"><span>Activo</span><b><span data-out="t_active">—</span> kcal</b></div>
+          <div class="calc-row"><span>Muy activo</span><b><span data-out="t_hard">—</span> kcal</b></div>
         </div>
-        <p class="calc-warn" data-warn="katch" hidden>Has puesto tu grasa corporal: el resultado usa Katch-McArdle, como la app.</p>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copiar enlace con estos datos</span><span class="calc-share-b">Enlace copiado</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">¿Quieres comer según tu gasto sin pesar comida?</p>
-          <p>Haz una foto de cada plato y Fotocal cuenta las calorías por ti.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb" target="_blank" rel="noopener">Descárgala gratis en Google Play</a>
-          <p class="calc-bridge-note">Plan gratis, sin tarjeta: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite. Solo Android.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">¿Quieres comer según tu gasto sin pesar la comida?</p>
+          <p class="dl-sub">Haz una foto de cada plato y Fotocal cuenta las calorías por ti.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb" target="_blank" rel="noopener" aria-label="Descárgala gratis en Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Descárgala gratis</span></a>
+          <p class="dl-trust">Gratis · sin tarjeta · Android</p>
+          <p class="dl-limits">Plan gratis: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      </div>
+     <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      <div class="calc-text post-body">
 
       <h2 id="como">Cómo se calcula</h2>
@@ -96,14 +106,14 @@
       <p>No comas tu TMB: es lo que gastarías tumbado todo el día. El número para planificar es tu gasto diario (la TMB por tu actividad), que te da la <a href="../calorias-diarias/">calculadora de calorías diarias</a>, con las cifras para perder o ganar. Para hacerte una idea de la escala: una ración de <a href="../../calorias/churros-con-chocolate/">churros con chocolate</a>, unas <a href="../../calorias/croquetas-de-jamon/">croquetas de jamón</a> o una <a href="../../calorias/torrijas/">torrija</a> pueden ser una parte grande de una TMB.</p>
       <h2 id="faq">Preguntas frecuentes</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>¿Qué es la TMB?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>La tasa metabólica basal: las calorías que tu cuerpo gasta en reposo completo para mantenerse vivo. No incluye la digestión ni el movimiento; por eso tu gasto diario es mayor.</p></details>
+        <details class="faq-item"><summary><span>¿Qué es la TMB?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>La tasa metabólica basal: las calorías que tu cuerpo gasta en reposo completo para mantenerse vivo. No incluye la digestión ni el movimiento; por eso tu gasto diario es mayor.</p></details>
         <details class="faq-item"><summary><span>¿Qué fórmula es más fiable?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Para adultos sanos, Mifflin-St Jeor, según las revisiones de dietética. Si conoces tu porcentaje de grasa con una medición fiable, Katch-McArdle puede acertar más porque parte de la masa magra.</p></details>
         <details class="faq-item"><summary><span>¿Debo comer menos que mi TMB para adelgazar?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No. Comer por debajo de la TMB de forma mantenida no es buena idea sin supervisión. Para perder peso, el recorte se hace sobre el gasto diario, y nunca por debajo de 1.200 kcal en mujeres ni 1.500 en hombres.</p></details>
         <details class="faq-item"><summary><span>¿Se puede subir la TMB?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Un poco, ganando masa muscular: el músculo gasta más que la grasa en reposo. La edad la baja despacio. Las diferencias reales entre personas del mismo tamaño son pequeñas.</p></details>
       </div>
       <section class="dp-src" id="fuentes"><h2>Fuentes</h2><ul><li>Mifflin MD, St Jeor ST y cols. «A new predictive equation for resting energy expenditure in healthy individuals». <em>Am J Clin Nutr</em> 1990; 51(2): 241-247.</li><li>Katch-McArdle: TMB = 370 + 21,6 × masa magra (kg). McArdle WD, Katch FI, Katch VL. <em>Exercise Physiology</em>.</li></ul></section>
-      <nav class="dp-related" aria-label="Seguir por aquí">
-        <h2>Seguir por aquí</h2>
+      <nav class="dp-related" aria-label="Más calculadoras y tablas">
+        <h2>Más calculadoras y tablas</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculadora</small><strong>Calculadora de calorías diarias</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculadora</small><strong>Calculadora de déficit calórico: mujer y hombre</strong></a>
@@ -120,7 +130,7 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de TMB (metabolismo basal)", "url": "https://getfotocal.com/calculadoras/tmb/", "description": "Calcula tu tasa metabólica basal (TMB) con Mifflin-St Jeor, o Katch-McArdle si sabes tu porcentaje de grasa, y tu gasto diario según tu actividad.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de TMB (metabolismo basal)", "url": "https://getfotocal.com/calculadoras/tmb/", "description": "Calcula tu tasa metabólica basal (TMB) con Mifflin-St Jeor, o Katch-McArdle si sabes tu porcentaje de grasa, y tu gasto diario según tu actividad.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculadoras", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "Calculadora de TMB (metabolismo basal)", "item": "https://getfotocal.com/calculadoras/tmb/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Qué es la TMB?", "acceptedAnswer": {"@type": "Answer", "text": "La tasa metabólica basal: las calorías que tu cuerpo gasta en reposo completo para mantenerse vivo. No incluye la digestión ni el movimiento; por eso tu gasto diario es mayor."}}, {"@type": "Question", "name": "¿Qué fórmula es más fiable?", "acceptedAnswer": {"@type": "Answer", "text": "Para adultos sanos, Mifflin-St Jeor, según las revisiones de dietética. Si conoces tu porcentaje de grasa con una medición fiable, Katch-McArdle puede acertar más porque parte de la masa magra."}}, {"@type": "Question", "name": "¿Debo comer menos que mi TMB para adelgazar?", "acceptedAnswer": {"@type": "Answer", "text": "No. Comer por debajo de la TMB de forma mantenida no es buena idea sin supervisión. Para perder peso, el recorte se hace sobre el gasto diario, y nunca por debajo de 1.200 kcal en mujeres ni 1.500 en hombres."}}, {"@type": "Question", "name": "¿Se puede subir la TMB?", "acceptedAnswer": {"@type": "Answer", "text": "Un poco, ganando masa muscular: el músculo gasta más que la grasa en reposo. La edad la baja despacio. Las diferencias reales entre personas del mismo tamaño son pequeñas."}}]}</script>
   </div>
@@ -132,41 +142,51 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="bmr" novalidate aria-label="Calculator">
+      <form class="calc" data-calc="bmr" data-out="out-en" novalidate aria-label="Calculator">
         <div class="calc-grid">
-          <fieldset class="calc-field wide"><legend>Sex</legend><div class="calc-seg">
-            <input type="radio" name="sex" id="tmb-sex-en-f" value="f" checked><label for="tmb-sex-en-f">Woman</label>
+          <fieldset class="calc-field wide" aria-describedby="tmb-sex-en-err"><legend>Sex</legend><div class="calc-seg">
+            <input type="radio" name="sex" id="tmb-sex-en-f" value="f"><label for="tmb-sex-en-f">Woman</label>
             <input type="radio" name="sex" id="tmb-sex-en-m" value="m"><label for="tmb-sex-en-m">Man</label>
-          </div></fieldset>
-          <div class="calc-field"><label for="tmb-age-en">Age (years)</label><input id="tmb-age-en" name="age" type="text" inputmode="decimal" autocomplete="off" value="35"></div>
-          <div class="calc-field"><label for="tmb-height-en">Height (cm)</label><input id="tmb-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" value="165"></div>
-          <div class="calc-field"><label for="tmb-weight-en">Weight (kg)</label><input id="tmb-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70"></div>
-          <div class="calc-field"><label for="tmb-bf-en">Body fat (%, optional)</label><input id="tmb-bf-en" name="bf" type="text" inputmode="decimal" autocomplete="off" value="" placeholder="Empty = Mifflin-St Jeor"></div>
+          </div><p class="calc-err" id="tmb-sex-en-err" data-err-for="sex" hidden>Choose woman or man.</p></fieldset>
+          <div class="calc-field third"><label for="tmb-age-en">Age (years)</label><input id="tmb-age-en" name="age" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 35" aria-describedby="tmb-age-en-err"><p class="calc-err" id="tmb-age-en-err" data-err-for="age" hidden>Enter an age between 18 and 90.</p></div>
+          <div class="calc-field third"><label for="tmb-height-en">Height (cm)</label><input id="tmb-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 170" aria-describedby="tmb-height-en-err"><p class="calc-err" id="tmb-height-en-err" data-err-for="height" hidden>Enter a height between 130 and 230 cm.</p></div>
+          <div class="calc-field third"><label for="tmb-weight-en">Weight (kg)</label><input id="tmb-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 70" aria-describedby="tmb-weight-en-err"><p class="calc-err" id="tmb-weight-en-err" data-err-for="weight" hidden>Enter a weight between 35 and 250 kg.</p></div>
+          <div class="calc-field"><label for="tmb-bf-en">Body fat % (optional)</label><input id="tmb-bf-en" name="bf" type="text" inputmode="decimal" autocomplete="off" placeholder="If you know it" aria-describedby="tmb-bf-en-err"><p class="calc-err" id="tmb-bf-en-err" data-err-for="bf" hidden>Enter a percentage between 3 and 60, or leave it empty.</p></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calculate</button>
+        <details class="calc-how"><summary>How is it worked out?</summary><p>The formula and a worked example are below the calculator.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="bmr" aria-labelledby="res-en">
-        <h2 class="calc-out-h" id="res-en">Your result</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">1,395</b> <span>kcal a day at rest</span></p>
+      <section class="calc-out" id="out-en" data-state="empty" tabindex="-1" aria-labelledby="out-en-h">
+        <h2 class="calc-out-h" id="out-en-h">Your result</h2>
+        <p class="calc-empty">Fill in your details and tap <b>Calculate</b>. Your result appears here.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>kcal a day at rest</span></p>
         <div class="calc-rows">
-          <div class="calc-row"><span>Mifflin-St Jeor</span><b><span data-out="mifflin">1,395</span> kcal</b></div>
-          <div class="calc-row"><span>Katch-McArdle (with your body fat)</span><b><span data-out="katch">—</span> kcal</b></div>
-          <div class="calc-row"><span>Mostly sitting (×1.2)</span><b><span data-out="t_sedentary">1,674</span> kcal</b></div>
-          <div class="calc-row is-hl"><span>On my feet sometimes (×1.375)</span><b><span data-out="t_light">1,918</span> kcal</b></div>
-          <div class="calc-row"><span>Mostly standing (×1.465)</span><b><span data-out="t_standing">2,044</span> kcal</b></div>
-          <div class="calc-row"><span>Moving all day (×1.55)</span><b><span data-out="t_active">2,163</span> kcal</b></div>
-          <div class="calc-row"><span>Hard physical work (×1.725)</span><b><span data-out="t_hard">2,407</span> kcal</b></div>
+          <div class="calc-row"><span>From your age, height and weight</span><b><span data-out="mifflin">—</span> kcal</b></div>
+          <div class="calc-row" data-warn="katch" hidden><span>With your body fat %</span><b><span data-out="katch">—</span> kcal</b></div>
+          <p class="calc-rows-h">With your activity, you burn a day:</p>
+          <div class="calc-row"><span>Sedentary</span><b><span data-out="t_sedentary">—</span> kcal</b></div>
+          <div class="calc-row is-hl"><span>Light</span><b><span data-out="t_light">—</span> kcal</b></div>
+          <div class="calc-row"><span>Moderate</span><b><span data-out="t_standing">—</span> kcal</b></div>
+          <div class="calc-row"><span>Active</span><b><span data-out="t_active">—</span> kcal</b></div>
+          <div class="calc-row"><span>Very active</span><b><span data-out="t_hard">—</span> kcal</b></div>
         </div>
-        <p class="calc-warn" data-warn="katch" hidden>You entered your body fat: the result uses Katch-McArdle, as the app does.</p>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copy a link with these numbers</span><span class="calc-share-b">Link copied</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">Want to eat to what you burn without weighing food?</p>
-          <p>Snap a photo of each dish and Fotocal counts the calories for you.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb" target="_blank" rel="noopener">Get it free on Google Play</a>
-          <p class="calc-bridge-note">Free plan, no card: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal. Android only.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">Want to eat to what you burn without weighing food?</p>
+          <p class="dl-sub">Snap a photo of each dish and Fotocal counts the calories for you.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb" target="_blank" rel="noopener" aria-label="Get it free on Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Get it free</span></a>
+          <p class="dl-trust">Free · no card · Android</p>
+          <p class="dl-limits">Free plan: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      </div>
+     <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      <div class="calc-text post-body">
 
       <h2 id="how">How it is calculated</h2>
@@ -181,14 +201,14 @@
       <p>Do not eat your BMR: it is what you would burn lying down all day. The number to plan with is your daily energy use (BMR times activity), which the <a href="../calorias-diarias/">daily calorie calculator</a> gives you, with the numbers to lose or gain. For a sense of scale: a serving of <a href="../../calorias/churros-con-chocolate/">churros with chocolate</a>, <a href="../../calorias/croquetas-de-jamon/">ham croquettes</a> or a <a href="../../calorias/torrijas/">torrija</a> can be a big share of a BMR (pages in Spanish).</p>
       <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>What is BMR?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Basal metabolic rate: the calories your body burns at complete rest just to stay alive. It does not include digestion or movement, which is why your daily energy use is higher.</p></details>
+        <details class="faq-item"><summary><span>What is BMR?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Basal metabolic rate: the calories your body burns at complete rest just to stay alive. It does not include digestion or movement, which is why your daily energy use is higher.</p></details>
         <details class="faq-item"><summary><span>Which equation is most reliable?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>For healthy adults, Mifflin-St Jeor, according to dietetics reviews. If you know your body fat from a reliable measurement, Katch-McArdle can be closer because it starts from lean mass.</p></details>
         <details class="faq-item"><summary><span>Should I eat less than my BMR to lose weight?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No. Eating below your BMR for a long time is not a good idea without supervision. To lose weight the cut is made on your daily energy use, and never below 1,200 kcal for women or 1,500 for men.</p></details>
         <details class="faq-item"><summary><span>Can I raise my BMR?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>A little, by gaining muscle: muscle burns more than fat at rest. Age lowers it slowly. Real differences between people of the same size are small.</p></details>
       </div>
       <section class="dp-src" id="sources"><h2>Sources</h2><ul><li>Mifflin MD, St Jeor ST et al. "A new predictive equation for resting energy expenditure in healthy individuals". <em>Am J Clin Nutr</em> 1990; 51(2): 241-247.</li><li>Katch-McArdle: BMR = 370 + 21.6 × lean mass (kg). McArdle WD, Katch FI, Katch VL. <em>Exercise Physiology</em>.</li></ul></section>
-      <nav class="dp-related" aria-label="Keep going">
-        <h2>Keep going</h2>
+      <nav class="dp-related" aria-label="More calculators and tables">
+        <h2>More calculators and tables</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculator</small><strong>Daily calorie calculator</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculator</small><strong>Calorie deficit calculator for women and men</strong></a>
@@ -197,7 +217,7 @@
           <a class="post-nav-item" href="../macros/"><small>Calculator</small><strong>Macro calculator</strong></a>
           <a class="post-nav-item" href="../agua/"><small>Calculator</small><strong>Water intake calculator</strong></a>
           <a class="post-nav-item" href="../peso-saludable/"><small>Calculator</small><strong>Healthy weight calculator</strong></a>
-          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g (in Spanish)</strong></a>
+          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g</strong></a>
           <a class="post-nav-item" href="../../blog/understanding-your-basal-metabolic-rate/"><small>From the blog</small><strong>Understanding Your Basal Metabolic Rate (BMR)</strong></a>
           <a class="post-nav-item" href="../../blog/tdee-how-many-calories-you-need/"><small>From the blog</small><strong>TDEE Explained: How Many Calories You Really Need</strong></a>
           <a class="post-nav-item" href="../../blog/the-truth-about-starvation-mode/"><small>From the blog</small><strong>The Truth About “Starvation Mode”</strong></a>
@@ -205,13 +225,13 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "BMR calculator (basal metabolic rate)", "url": "https://getfotocal.com/calculadoras/tmb/", "description": "Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "BMR calculator (basal metabolic rate)", "url": "https://getfotocal.com/calculadoras/tmb/", "description": "Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "BMR calculator (basal metabolic rate)", "item": "https://getfotocal.com/calculadoras/tmb/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is BMR?", "acceptedAnswer": {"@type": "Answer", "text": "Basal metabolic rate: the calories your body burns at complete rest just to stay alive. It does not include digestion or movement, which is why your daily energy use is higher."}}, {"@type": "Question", "name": "Which equation is most reliable?", "acceptedAnswer": {"@type": "Answer", "text": "For healthy adults, Mifflin-St Jeor, according to dietetics reviews. If you know your body fat from a reliable measurement, Katch-McArdle can be closer because it starts from lean mass."}}, {"@type": "Question", "name": "Should I eat less than my BMR to lose weight?", "acceptedAnswer": {"@type": "Answer", "text": "No. Eating below your BMR for a long time is not a good idea without supervision. To lose weight the cut is made on your daily energy use, and never below 1,200 kcal for women or 1,500 for men."}}, {"@type": "Question", "name": "Can I raise my BMR?", "acceptedAnswer": {"@type": "Answer", "text": "A little, by gaining muscle: muscle burns more than fat at rest. Age lowers it slowly. Real differences between people of the same size are small."}}]}</script>
   </div>
 </main>
-<div class="calc-sticky" data-lang-block="es"><span>Fotocal: haz una foto y cuenta las calorías</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb-sticky" target="_blank" rel="noopener">Descargar</a></div>
-<div class="calc-sticky" data-lang-block="en"><span>Fotocal: snap a photo, get the calories</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb-sticky" target="_blank" rel="noopener">Download</a></div>
+<div class="calc-sticky" data-lang-block="es"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal cuenta tus calorías con una foto</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb-sticky" target="_blank" rel="noopener">Descargar</a></div>
+<div class="calc-sticky" data-lang-block="en"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal counts your calories from a photo</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=tmb-sticky" target="_blank" rel="noopener">Download</a></div>
 
 <div id="site-footer"></div>
 <script src="../../assets/js/i18n.js"></script>

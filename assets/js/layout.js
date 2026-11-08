@@ -67,6 +67,14 @@
   var u = function (p) { return BASE + LPREFIX + p; };
   var asset = function (p) { return BASE + p; };
 
+  /* This page in the other language, from the hreflang alternates in the
+     head; the home page of that language if there is no twin. */
+  function twin(l) {
+    var a = document.querySelector('link[rel="alternate"][hreflang="' + l + '"]');
+    if (a) { try { return new URL(a.href).pathname; } catch (e) { /* old browser */ } }
+    return l === "en" ? "/en/" : "/";
+  }
+
   function esc(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
@@ -209,6 +217,13 @@
       '</div>' +
       '<div class="nav-mobile" id="navMobile">' +
         '<ul>' + mobile + '</ul>' +
+        /* ES / EN in the phone menu too (07-11-2026: only the header pill
+           had it, and it is easy to miss on a phone). The build points
+           these at this page's twin, as it does the header switcher. */
+        '<div class="m-lang" role="group" aria-label="Idioma / Language">' +
+          '<a class="m-lang-item' + (LANG === "es" ? ' is-current" aria-current="true' : '') + '" href="' + twin("es") + '" hreflang="es" lang="es" data-lang="es">Español</a>' +
+          '<a class="m-lang-item' + (LANG === "en" ? ' is-current" aria-current="true' : '') + '" href="' + twin("en") + '" hreflang="en" lang="en" data-lang="en">English</a>' +
+        '</div>' +
         '<a class="play-badge" href="' + PLAY_URL + '" target="_blank" rel="noopener">' +
           PLAY_SVG +
           '<span class="play-badge-text"><small>' + t("cta.badgeTop") + '</small><strong>Google Play</strong></span>' +
@@ -248,12 +263,8 @@
             '<a href="' + u("") + '">' + t("nav.home") + '</a>' +
             '<a href="' + u("subscription/") + '">' + t("nav.subscription") + '</a>' +
             '<a href="' + u("blog/") + '">' + t("nav.blog") + '</a>' +
-            /* The dish pages are Spanish-only (PART 47): no /en/ copy
-               exists, so the English footer does not point at them. The
-               calculators are in both languages since the tools-seo round. */
-            (LANG === "es"
-              ? '<a href="' + u("calorias/") + '">' + t("nav.dishes") + '</a>'
-              : "") +
+            /* Dish pages and calculators: both languages since 2026-11. */
+            '<a href="' + u("calorias/") + '">' + t("nav.dishes") + '</a>' +
             '<a href="' + u("calculadoras/") + '">' + t("nav.calcs") + '</a>' +
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +

@@ -650,6 +650,10 @@ body.fc-cta-on .btn-nav { display: inline-flex; }
   transition: transform .32s cubic-bezier(.4,0,.2,1), visibility .32s;
 }
 .nav-mobile.open { transform: translateX(0); visibility: visible; }
+.m-lang { display: flex; gap: .5rem; margin: 1rem 0 .4rem; }
+.m-lang-item { flex: 1; display: grid; place-items: center; min-height: 48px; border: 1px solid var(--border); border-radius: var(--r-md); font-weight: 700; color: var(--text-soft); text-decoration: none; }
+.m-lang-item.is-current { background: var(--grad-wash); border-color: var(--border-pink); color: var(--brand-text); }
+.m-lang-item:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
 body.nav-locked { overflow: hidden; }
 
 .m-item { border-bottom: 1px solid var(--border-soft); }

@@ -47,40 +47,50 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="protein" novalidate aria-label="Calculadora">
+      <form class="calc" data-calc="protein" data-out="out-es" novalidate aria-label="Calculadora">
         <div class="calc-grid">
-          <div class="calc-field"><label for="pro-height-es">Altura (cm)</label><input id="pro-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" value="165" data-dec=","></div>
-          <div class="calc-field"><label for="pro-weight-es">Peso (kg)</label><input id="pro-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70" data-dec=","></div>
-          <div class="calc-field"><label for="pro-goal-es">Objetivo</label><select id="pro-goal-es" name="goal">
+          <div class="calc-field"><label for="pro-height-es">Altura (cm)</label><input id="pro-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 170" aria-describedby="pro-height-es-err" data-dec=","><p class="calc-err" id="pro-height-es-err" data-err-for="height" hidden>Introduce una altura entre 130 y 230 cm.</p></div>
+          <div class="calc-field"><label for="pro-weight-es">Peso (kg)</label><input id="pro-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 70" aria-describedby="pro-weight-es-err" data-dec=","><p class="calc-err" id="pro-weight-es-err" data-err-for="weight" hidden>Introduce un peso entre 35 y 250 kg.</p></div>
+          <div class="calc-field wide"><label for="pro-goal-es">Tu objetivo</label><select id="pro-goal-es" name="goal">
             <option value="lose">Perder peso</option>
             <option value="maintain" selected>Mantener mi peso</option>
             <option value="gain">Ganar peso</option>
             <option value="build_muscle">Ganar músculo</option>
           </select></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calcular</button>
+        <details class="calc-how"><summary>¿Cómo se calcula?</summary><p>El detalle de la fórmula y un ejemplo resuelto están debajo de la calculadora.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="protein" aria-labelledby="res-es">
-        <h2 class="calc-out-h" id="res-es">Tu resultado</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">109</b> <span>g de proteína al día</span></p>
+      <section class="calc-out" id="out-es" data-state="empty" tabindex="-1" aria-labelledby="out-es-h">
+        <h2 class="calc-out-h" id="out-es-h">Tu resultado</h2>
+        <p class="calc-empty">Rellena tus datos y pulsa <b>Calcular</b>. El resultado aparecerá aquí.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>g de proteína al día</span></p>
         <div class="calc-rows">
-          <div class="calc-row"><span>Gramos por kilo de referencia</span><b><span data-out="gkg">1,6</span> g/kg</b></div>
-          <div class="calc-row"><span>Peso de referencia</span><b><span data-out="ref">68,1</span> kg</b></div>
-          <div class="calc-row"><span>Rango de 1,2 a 2,0 g/kg</span><b><span data-out="lo">82</span>–<span data-out="hi">136</span> g</b></div>
-          <div class="calc-row"><span>Mínimo EFSA (0,83 g/kg)</span><b><span data-out="efsa">58</span> g</b></div>
-          <div class="calc-row is-hl"><span>Por comida, en tres comidas</span><b><span data-out="meal3">36</span> g</b></div>
-          <div class="calc-row"><span>Por comida, en cuatro comidas</span><b><span data-out="meal4">27</span> g</b></div>
+          <div class="calc-row is-hl"><span>En cada comida, si haces tres</span><b><span data-out="meal3">—</span> g</b></div>
+          <div class="calc-row"><span>En cada comida, si haces cuatro</span><b><span data-out="meal4">—</span> g</b></div>
+          <div class="calc-row"><span>Rango para gente activa</span><b><span data-out="lo">—</span>–<span data-out="hi">—</span> g</b></div>
+          <div class="calc-row"><span>Mínimo diario recomendado</span><b><span data-out="efsa">—</span> g</b></div>
+          <div class="calc-row"><span>Gramos por kilo</span><b><span data-out="gkg">—</span> g/kg</b></div>
+          <div class="calc-row"><span>Peso usado para la cuenta</span><b><span data-out="ref">—</span> kg</b></div>
         </div>
-        <p class="calc-warn" data-warn="ref">Tu IMC pasa de 25, así que la proteína se calcula sobre el peso que tendrías con un IMC de 25: la necesidad sigue a la masa magra, no a la grasa. Es la regla de la app.</p>
+        <p class="calc-warn" data-warn="ref" hidden>Como tu IMC pasa de 25, la cuenta usa el peso que tendrías con un IMC de 25. La proteína que necesitas depende del músculo, no de la grasa. Así lo hace también la app.</p>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copiar enlace con estos datos</span><span class="calc-share-b">Enlace copiado</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">¿Quieres llegar a tus <b data-out="bridge">109</b> g de proteína sin pesar comida?</p>
-          <p>Haz una foto y Fotocal cuenta la proteína de cada plato por ti.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas" target="_blank" rel="noopener">Descárgala gratis en Google Play</a>
-          <p class="calc-bridge-note">Plan gratis, sin tarjeta: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite. Solo Android.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">¿Quieres llegar a tus <b data-out="bridge">—</b> g de proteína sin pesar la comida?</p>
+          <p class="dl-sub">Haz una foto y Fotocal cuenta la proteína de cada plato por ti.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas" target="_blank" rel="noopener" aria-label="Descárgala gratis en Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Descárgala gratis</span></a>
+          <p class="dl-trust">Gratis · sin tarjeta · Android</p>
+          <p class="dl-limits">Plan gratis: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      </div>
+     <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      <div class="calc-text post-body">
 
       <h2 id="como">Cómo se calcula</h2>
@@ -93,14 +103,14 @@
       <p>Repártelo en tres o cuatro comidas: llegar a 25 o 40 g por comida es más fácil que concentrarlo en la cena. Un <a href="../../calorias/huevo-cocido/">huevo cocido</a> aporta unos 7 g; una ración de <a href="../../calorias/pulpo-a-la-gallega/">pulpo a la gallega</a>, de <a href="../../calorias/gambas-al-ajillo/">gambas al ajillo</a> o de <a href="../../calorias/jamon-serrano/">jamón serrano</a> bastante más, y las <a href="../../calorias/lentejas-estofadas/">lentejas</a> suman proteína vegetal con fibra. Si estás en déficit, encaja estos gramos dentro de tus calorías con la <a href="../macros/">calculadora de macros</a>.</p>
       <h2 id="faq">Preguntas frecuentes</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>¿Cuánta proteína necesito al día?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>El mínimo para un adulto sano es 0,83 g por kilo de peso (EFSA). Para conservar músculo mientras pierdes peso o si entrenas fuerza, entre 1,6 y 2,0 g por kilo. La calculadora usa 2,0 g/kg para perder peso o ganar músculo y 1,6 g/kg para mantener, como la app.</p></details>
+        <details class="faq-item"><summary><span>¿Cuánta proteína necesito al día?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>El mínimo para un adulto sano es 0,83 g por kilo de peso (EFSA). Para conservar músculo mientras pierdes peso o si entrenas fuerza, entre 1,6 y 2,0 g por kilo. La calculadora usa 2,0 g/kg para perder peso o ganar músculo y 1,6 g/kg para mantener, como la app.</p></details>
         <details class="faq-item"><summary><span>¿Por qué no usa mi peso total si tengo sobrepeso?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Porque la proteína se necesita sobre todo para la masa magra. Con un IMC por encima de 25 se calcula sobre el peso que tendrías con IMC 25 a tu altura; así la cifra no se infla con kilos que son grasa.</p></details>
         <details class="faq-item"><summary><span>¿Es malo comer mucha proteína?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>En personas sanas, hasta unos 2 g/kg al día no hay pruebas de daño. Si tienes una enfermedad renal o te han pedido limitar la proteína, sigue lo que te diga tu médico, no esta calculadora.</p></details>
         <details class="faq-item"><summary><span>¿Cuánta proteína por comida?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Entre 25 y 40 g por comida es una referencia práctica; repartirla en tres o cuatro tomas ayuda más que acumularla. La calculadora te da la cifra dividida entre tres y entre cuatro comidas.</p></details>
       </div>
       <section class="dp-src" id="fuentes"><h2>Fuentes</h2><ul><li>EFSA, Panel NDA. «Scientific Opinion on Dietary Reference Values for protein». <em>EFSA Journal</em> 2012; 10(2): 2557 (0,83 g/kg al día para adultos).</li><li>Jäger R y cols. «International Society of Sports Nutrition Position Stand: protein and exercise». <em>J Int Soc Sports Nutr</em> 2017; 14: 20 (1,4-2,0 g/kg en personas que entrenan).</li></ul></section>
-      <nav class="dp-related" aria-label="Seguir por aquí">
-        <h2>Seguir por aquí</h2>
+      <nav class="dp-related" aria-label="Más calculadoras y tablas">
+        <h2>Más calculadoras y tablas</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculadora</small><strong>Calculadora de calorías diarias</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculadora</small><strong>Calculadora de déficit calórico: mujer y hombre</strong></a>
@@ -117,7 +127,7 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de proteínas", "url": "https://getfotocal.com/calculadoras/proteinas/", "description": "Calcula cuántos gramos de proteína necesitas al día según tu peso y objetivo, de 1,2 a 2,0 g por kilo, con el mínimo de la EFSA y la cuenta de la app.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de proteínas", "url": "https://getfotocal.com/calculadoras/proteinas/", "description": "Calcula cuántos gramos de proteína necesitas al día según tu peso y objetivo, de 1,2 a 2,0 g por kilo, con el mínimo de la EFSA y la cuenta de la app.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculadoras", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "Calculadora de proteínas", "item": "https://getfotocal.com/calculadoras/proteinas/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Cuánta proteína necesito al día?", "acceptedAnswer": {"@type": "Answer", "text": "El mínimo para un adulto sano es 0,83 g por kilo de peso (EFSA). Para conservar músculo mientras pierdes peso o si entrenas fuerza, entre 1,6 y 2,0 g por kilo. La calculadora usa 2,0 g/kg para perder peso o ganar músculo y 1,6 g/kg para mantener, como la app."}}, {"@type": "Question", "name": "¿Por qué no usa mi peso total si tengo sobrepeso?", "acceptedAnswer": {"@type": "Answer", "text": "Porque la proteína se necesita sobre todo para la masa magra. Con un IMC por encima de 25 se calcula sobre el peso que tendrías con IMC 25 a tu altura; así la cifra no se infla con kilos que son grasa."}}, {"@type": "Question", "name": "¿Es malo comer mucha proteína?", "acceptedAnswer": {"@type": "Answer", "text": "En personas sanas, hasta unos 2 g/kg al día no hay pruebas de daño. Si tienes una enfermedad renal o te han pedido limitar la proteína, sigue lo que te diga tu médico, no esta calculadora."}}, {"@type": "Question", "name": "¿Cuánta proteína por comida?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 25 y 40 g por comida es una referencia práctica; repartirla en tres o cuatro tomas ayuda más que acumularla. La calculadora te da la cifra dividida entre tres y entre cuatro comidas."}}]}</script>
   </div>
@@ -129,40 +139,50 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="protein" novalidate aria-label="Calculator">
+      <form class="calc" data-calc="protein" data-out="out-en" novalidate aria-label="Calculator">
         <div class="calc-grid">
-          <div class="calc-field"><label for="pro-height-en">Height (cm)</label><input id="pro-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" value="165"></div>
-          <div class="calc-field"><label for="pro-weight-en">Weight (kg)</label><input id="pro-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70"></div>
-          <div class="calc-field"><label for="pro-goal-en">Goal</label><select id="pro-goal-en" name="goal">
+          <div class="calc-field"><label for="pro-height-en">Height (cm)</label><input id="pro-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 170" aria-describedby="pro-height-en-err"><p class="calc-err" id="pro-height-en-err" data-err-for="height" hidden>Enter a height between 130 and 230 cm.</p></div>
+          <div class="calc-field"><label for="pro-weight-en">Weight (kg)</label><input id="pro-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 70" aria-describedby="pro-weight-en-err"><p class="calc-err" id="pro-weight-en-err" data-err-for="weight" hidden>Enter a weight between 35 and 250 kg.</p></div>
+          <div class="calc-field wide"><label for="pro-goal-en">Your goal</label><select id="pro-goal-en" name="goal">
             <option value="lose">Lose weight</option>
             <option value="maintain" selected>Keep my weight</option>
             <option value="gain">Gain weight</option>
             <option value="build_muscle">Build muscle</option>
           </select></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calculate</button>
+        <details class="calc-how"><summary>How is it worked out?</summary><p>The formula and a worked example are below the calculator.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="protein" aria-labelledby="res-en">
-        <h2 class="calc-out-h" id="res-en">Your result</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">109</b> <span>g of protein a day</span></p>
+      <section class="calc-out" id="out-en" data-state="empty" tabindex="-1" aria-labelledby="out-en-h">
+        <h2 class="calc-out-h" id="out-en-h">Your result</h2>
+        <p class="calc-empty">Fill in your details and tap <b>Calculate</b>. Your result appears here.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>g of protein a day</span></p>
         <div class="calc-rows">
-          <div class="calc-row"><span>Grams per reference kilo</span><b><span data-out="gkg">1.6</span> g/kg</b></div>
-          <div class="calc-row"><span>Reference weight</span><b><span data-out="ref">68.1</span> kg</b></div>
-          <div class="calc-row"><span>Range from 1.2 to 2.0 g/kg</span><b><span data-out="lo">82</span>–<span data-out="hi">136</span> g</b></div>
-          <div class="calc-row"><span>EFSA minimum (0.83 g/kg)</span><b><span data-out="efsa">58</span> g</b></div>
-          <div class="calc-row is-hl"><span>Per meal, over three meals</span><b><span data-out="meal3">36</span> g</b></div>
-          <div class="calc-row"><span>Per meal, over four meals</span><b><span data-out="meal4">27</span> g</b></div>
+          <div class="calc-row is-hl"><span>At each meal, over three meals</span><b><span data-out="meal3">—</span> g</b></div>
+          <div class="calc-row"><span>At each meal, over four meals</span><b><span data-out="meal4">—</span> g</b></div>
+          <div class="calc-row"><span>Range for active people</span><b><span data-out="lo">—</span>–<span data-out="hi">—</span> g</b></div>
+          <div class="calc-row"><span>Recommended daily minimum</span><b><span data-out="efsa">—</span> g</b></div>
+          <div class="calc-row"><span>Grams per kilo</span><b><span data-out="gkg">—</span> g/kg</b></div>
+          <div class="calc-row"><span>Weight used for the sum</span><b><span data-out="ref">—</span> kg</b></div>
         </div>
-        <p class="calc-warn" data-warn="ref">Your BMI is above 25, so protein is worked out on the weight you would have at a BMI of 25: needs follow lean mass, not fat. That is the app's rule.</p>
+        <p class="calc-warn" data-warn="ref" hidden>Your BMI is above 25, so the sum uses the weight you would have at a BMI of 25. The protein you need follows muscle, not fat. The app does the same.</p>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copy a link with these numbers</span><span class="calc-share-b">Link copied</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">Want to hit your <b data-out="bridge">109</b> g of protein without weighing food?</p>
-          <p>Snap a photo and Fotocal counts the protein in each dish for you.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas" target="_blank" rel="noopener">Get it free on Google Play</a>
-          <p class="calc-bridge-note">Free plan, no card: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal. Android only.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">Want to hit your <b data-out="bridge">—</b> g of protein without weighing food?</p>
+          <p class="dl-sub">Snap a photo and Fotocal counts the protein in each dish for you.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas" target="_blank" rel="noopener" aria-label="Get it free on Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Get it free</span></a>
+          <p class="dl-trust">Free · no card · Android</p>
+          <p class="dl-limits">Free plan: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      </div>
+     <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      <div class="calc-text post-body">
 
       <h2 id="how">How it is calculated</h2>
@@ -175,14 +195,14 @@
       <p>Split it over three or four meals: 25 to 40 g a meal is easier than loading it all into dinner. A <a href="../../calorias/huevo-cocido/">boiled egg</a> gives about 7 g; a serving of <a href="../../calorias/pulpo-a-la-gallega/">Galician-style octopus</a>, <a href="../../calorias/gambas-al-ajillo/">garlic prawns</a> or <a href="../../calorias/jamon-serrano/">serrano ham</a> a good deal more, and <a href="../../calorias/lentejas-estofadas/">lentils</a> add plant protein with fibre (pages in Spanish). If you are in a deficit, fit these grams inside your calories with the <a href="../macros/">macro calculator</a>.</p>
       <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>How much protein do I need a day?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>The minimum for a healthy adult is 0.83 g per kilo of body weight (EFSA). To keep muscle while losing weight or if you lift, 1.6 to 2.0 g per kilo. The calculator uses 2.0 g/kg to lose weight or build muscle and 1.6 g/kg to maintain, like the app.</p></details>
+        <details class="faq-item"><summary><span>How much protein do I need a day?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>The minimum for a healthy adult is 0.83 g per kilo of body weight (EFSA). To keep muscle while losing weight or if you lift, 1.6 to 2.0 g per kilo. The calculator uses 2.0 g/kg to lose weight or build muscle and 1.6 g/kg to maintain, like the app.</p></details>
         <details class="faq-item"><summary><span>Why does it not use my full weight if I am overweight?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Because protein is needed mostly for lean mass. With a BMI above 25 it is worked out on the weight you would have at BMI 25 for your height, so the number is not inflated by kilos of fat.</p></details>
         <details class="faq-item"><summary><span>Is a lot of protein bad for you?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>In healthy people there is no evidence of harm up to about 2 g/kg a day. If you have kidney disease or have been told to limit protein, follow your doctor, not this calculator.</p></details>
         <details class="faq-item"><summary><span>How much protein per meal?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>25 to 40 g a meal is a practical guide; spreading it over three or four meals helps more than piling it up. The calculator shows the number divided over three and over four meals.</p></details>
       </div>
       <section class="dp-src" id="sources"><h2>Sources</h2><ul><li>EFSA NDA Panel. "Scientific Opinion on Dietary Reference Values for protein". <em>EFSA Journal</em> 2012; 10(2): 2557 (0.83 g/kg a day for adults).</li><li>Jäger R et al. "International Society of Sports Nutrition Position Stand: protein and exercise". <em>J Int Soc Sports Nutr</em> 2017; 14: 20 (1.4-2.0 g/kg for people who train).</li></ul></section>
-      <nav class="dp-related" aria-label="Keep going">
-        <h2>Keep going</h2>
+      <nav class="dp-related" aria-label="More calculators and tables">
+        <h2>More calculators and tables</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculator</small><strong>Daily calorie calculator</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculator</small><strong>Calorie deficit calculator for women and men</strong></a>
@@ -191,7 +211,7 @@
           <a class="post-nav-item" href="../agua/"><small>Calculator</small><strong>Water intake calculator</strong></a>
           <a class="post-nav-item" href="../tmb/"><small>Calculator</small><strong>BMR calculator (basal metabolic rate)</strong></a>
           <a class="post-nav-item" href="../peso-saludable/"><small>Calculator</small><strong>Healthy weight calculator</strong></a>
-          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g (in Spanish)</strong></a>
+          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g</strong></a>
           <a class="post-nav-item" href="../../blog/how-much-protein-per-day/"><small>From the blog</small><strong>How Much Protein Do You Really Need Per Day?</strong></a>
           <a class="post-nav-item" href="../../blog/macronutrients-101/"><small>From the blog</small><strong>Macronutrients 101: Protein, Carbs and Fat Explained</strong></a>
           <a class="post-nav-item" href="../../blog/building-muscle-while-losing-fat/"><small>From the blog</small><strong>Building Muscle While Losing Fat: Is It Possible?</strong></a>
@@ -199,13 +219,13 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Protein calculator", "url": "https://getfotocal.com/calculadoras/proteinas/", "description": "Work out how many grams of protein you need a day for your weight and goal, from 1.2 to 2.0 g per kilo, with the EFSA minimum and the app's maths.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Protein calculator", "url": "https://getfotocal.com/calculadoras/proteinas/", "description": "Work out how many grams of protein you need a day for your weight and goal, from 1.2 to 2.0 g per kilo, with the EFSA minimum and the app's maths.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "Protein calculator", "item": "https://getfotocal.com/calculadoras/proteinas/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "How much protein do I need a day?", "acceptedAnswer": {"@type": "Answer", "text": "The minimum for a healthy adult is 0.83 g per kilo of body weight (EFSA). To keep muscle while losing weight or if you lift, 1.6 to 2.0 g per kilo. The calculator uses 2.0 g/kg to lose weight or build muscle and 1.6 g/kg to maintain, like the app."}}, {"@type": "Question", "name": "Why does it not use my full weight if I am overweight?", "acceptedAnswer": {"@type": "Answer", "text": "Because protein is needed mostly for lean mass. With a BMI above 25 it is worked out on the weight you would have at BMI 25 for your height, so the number is not inflated by kilos of fat."}}, {"@type": "Question", "name": "Is a lot of protein bad for you?", "acceptedAnswer": {"@type": "Answer", "text": "In healthy people there is no evidence of harm up to about 2 g/kg a day. If you have kidney disease or have been told to limit protein, follow your doctor, not this calculator."}}, {"@type": "Question", "name": "How much protein per meal?", "acceptedAnswer": {"@type": "Answer", "text": "25 to 40 g a meal is a practical guide; spreading it over three or four meals helps more than piling it up. The calculator shows the number divided over three and over four meals."}}]}</script>
   </div>
 </main>
-<div class="calc-sticky" data-lang-block="es"><span>Fotocal: haz una foto y cuenta las calorías</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas-sticky" target="_blank" rel="noopener">Descargar</a></div>
-<div class="calc-sticky" data-lang-block="en"><span>Fotocal: snap a photo, get the calories</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas-sticky" target="_blank" rel="noopener">Download</a></div>
+<div class="calc-sticky" data-lang-block="es"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal cuenta tus calorías con una foto</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas-sticky" target="_blank" rel="noopener">Descargar</a></div>
+<div class="calc-sticky" data-lang-block="en"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal counts your calories from a photo</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=proteinas-sticky" target="_blank" rel="noopener">Download</a></div>
 
 <div id="site-footer"></div>
 <script src="../../assets/js/i18n.js"></script>

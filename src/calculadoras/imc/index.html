@@ -47,29 +47,39 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="bmi" novalidate aria-label="Calculadora">
+      <form class="calc" data-calc="bmi" data-out="out-es" novalidate aria-label="Calculadora">
         <div class="calc-grid">
-          <div class="calc-field"><label for="imc-height-es">Altura (cm)</label><input id="imc-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" value="165" data-dec=","></div>
-          <div class="calc-field"><label for="imc-weight-es">Peso (kg)</label><input id="imc-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70" data-dec=","></div>
+          <div class="calc-field"><label for="imc-height-es">Altura (cm)</label><input id="imc-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 170" aria-describedby="imc-height-es-err" data-dec=","><p class="calc-err" id="imc-height-es-err" data-err-for="height" hidden>Introduce una altura entre 130 y 230 cm.</p></div>
+          <div class="calc-field"><label for="imc-weight-es">Peso (kg)</label><input id="imc-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 70" aria-describedby="imc-weight-es-err" data-dec=","><p class="calc-err" id="imc-weight-es-err" data-err-for="weight" hidden>Introduce un peso entre 35 y 250 kg.</p></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calcular</button>
+        <details class="calc-how"><summary>¿Cómo se calcula?</summary><p>El detalle de la fórmula y un ejemplo resuelto están debajo de la calculadora.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="bmi" aria-labelledby="res-es">
-        <h2 class="calc-out-h" id="res-es">Tu resultado</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">25,7</b> <span>de IMC</span></p>
-        <p class="calc-cat"><span data-cat="0" hidden>Bajo peso</span><span data-cat="1" hidden>Peso normal</span><span data-cat="2">Sobrepeso</span><span data-cat="3" hidden>Obesidad grado I</span><span data-cat="4" hidden>Obesidad grado II</span><span data-cat="5" hidden>Obesidad grado III</span></p>
+      <section class="calc-out" id="out-es" data-state="empty" tabindex="-1" aria-labelledby="out-es-h">
+        <h2 class="calc-out-h" id="out-es-h">Tu resultado</h2>
+        <p class="calc-empty">Rellena tus datos y pulsa <b>Calcular</b>. El resultado aparecerá aquí.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>de IMC</span></p>
+        <p class="calc-cat"><span data-cat="0" hidden>Bajo peso</span><span data-cat="1" hidden>Peso normal</span><span data-cat="2" hidden>Sobrepeso</span><span data-cat="3" hidden>Obesidad grado I</span><span data-cat="4" hidden>Obesidad grado II</span><span data-cat="5" hidden>Obesidad grado III</span></p>
         <div class="calc-rows">
-          <div class="calc-row is-hl"><span>Peso normal para tu altura</span><b><span data-out="lo">50</span>–<span data-out="hi">68</span> kg</b></div>
+          <div class="calc-row is-hl"><span>Peso saludable para tu altura</span><b><span data-out="lo">—</span>–<span data-out="hi">—</span> kg</b></div>
         </div>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copiar enlace con estos datos</span><span class="calc-share-b">Enlace copiado</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">¿Quieres llegar a tu rango sin pesar la comida?</p>
-          <p>Haz una foto de cada plato y Fotocal cuenta las calorías por ti.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc" target="_blank" rel="noopener">Descárgala gratis en Google Play</a>
-          <p class="calc-bridge-note">Plan gratis, sin tarjeta: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite. Solo Android.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">¿Quieres llegar a tu rango sin pesar la comida?</p>
+          <p class="dl-sub">Haz una foto de cada plato y Fotocal cuenta las calorías por ti.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc" target="_blank" rel="noopener" aria-label="Descárgala gratis en Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Descárgala gratis</span></a>
+          <p class="dl-trust">Gratis · sin tarjeta · Android</p>
+          <p class="dl-limits">Plan gratis: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      </div>
+     <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      <div class="calc-text post-body">
 
       <h2 id="como">Cómo se calcula</h2>
@@ -92,14 +102,14 @@
       <p>Úsalo para situarte, no para fijarte un objetivo exacto: la <a href="../peso-saludable/">calculadora de peso saludable</a> te da el rango completo para tu altura. Si quieres moverte hacia él, el número útil es el de calorías: tu <a href="../calorias-diarias/">mantenimiento</a> y el <a href="../deficit-calorico/">déficit</a> que te toca. Los platos de cuchara como el <a href="../../calorias/cocido-madrileno/">cocido madrileño</a> o la <a href="../../calorias/fabada-asturiana/">fabada</a> caben, sabiendo lo que tienen; el <a href="../../calorias/salmorejo/">salmorejo</a> lleva más aceite del que parece.</p>
       <h2 id="faq">Preguntas frecuentes</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>¿Qué IMC es normal?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Entre 18,5 y 24,9 según la OMS para adultos. Por debajo de 18,5 es bajo peso; de 25 a 29,9, sobrepeso; a partir de 30, obesidad, en tres grados. La calculadora te dice en qué rango estás y qué peso te dejaría dentro del normal con tu altura.</p></details>
+        <details class="faq-item"><summary><span>¿Qué IMC es normal?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Entre 18,5 y 24,9 según la OMS para adultos. Por debajo de 18,5 es bajo peso; de 25 a 29,9, sobrepeso; a partir de 30, obesidad, en tres grados. La calculadora te dice en qué rango estás y qué peso te dejaría dentro del normal con tu altura.</p></details>
         <details class="faq-item"><summary><span>¿Sirve el IMC si hago mucho deporte?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Peor que para la media. El IMC no distingue músculo de grasa: una persona musculada puede dar sobrepeso con poca grasa corporal. En ese caso dicen más el perímetro de cintura, cómo te queda la ropa o una medición de composición corporal.</p></details>
         <details class="faq-item"><summary><span>¿Vale para niños, embarazadas o mayores de 65?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No con estos rangos. En menores de 18 se usan percentiles por edad y sexo; en el embarazo no aplica; y a partir de los 65 años los puntos de corte se discuten. En esos casos, el pediatra o el médico.</p></details>
         <details class="faq-item"><summary><span>¿Es lo mismo IMC que porcentaje de grasa?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No. El IMC solo mira peso y altura. El porcentaje de grasa mide qué parte del peso es grasa y necesita otra medición (bioimpedancia, pliegues o DEXA). Si lo conoces, la <a href="../tmb/">calculadora de TMB</a> lo usa para afinar tu gasto.</p></details>
       </div>
       <section class="dp-src" id="fuentes"><h2>Fuentes</h2><ul><li>Organización Mundial de la Salud. <em>Obesidad y sobrepeso</em>, nota descriptiva, y clasificación del IMC para adultos.</li></ul></section>
-      <nav class="dp-related" aria-label="Seguir por aquí">
-        <h2>Seguir por aquí</h2>
+      <nav class="dp-related" aria-label="Más calculadoras y tablas">
+        <h2>Más calculadoras y tablas</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculadora</small><strong>Calculadora de calorías diarias</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculadora</small><strong>Calculadora de déficit calórico: mujer y hombre</strong></a>
@@ -116,7 +126,7 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de IMC", "url": "https://getfotocal.com/calculadoras/imc/", "description": "Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso da un IMC normal. Y lo que el IMC no te dice.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de IMC", "url": "https://getfotocal.com/calculadoras/imc/", "description": "Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso da un IMC normal. Y lo que el IMC no te dice.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculadoras", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "Calculadora de IMC", "item": "https://getfotocal.com/calculadoras/imc/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Qué IMC es normal?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 18,5 y 24,9 según la OMS para adultos. Por debajo de 18,5 es bajo peso; de 25 a 29,9, sobrepeso; a partir de 30, obesidad, en tres grados. La calculadora te dice en qué rango estás y qué peso te dejaría dentro del normal con tu altura."}}, {"@type": "Question", "name": "¿Sirve el IMC si hago mucho deporte?", "acceptedAnswer": {"@type": "Answer", "text": "Peor que para la media. El IMC no distingue músculo de grasa: una persona musculada puede dar sobrepeso con poca grasa corporal. En ese caso dicen más el perímetro de cintura, cómo te queda la ropa o una medición de composición corporal."}}, {"@type": "Question", "name": "¿Vale para niños, embarazadas o mayores de 65?", "acceptedAnswer": {"@type": "Answer", "text": "No con estos rangos. En menores de 18 se usan percentiles por edad y sexo; en el embarazo no aplica; y a partir de los 65 años los puntos de corte se discuten. En esos casos, el pediatra o el médico."}}, {"@type": "Question", "name": "¿Es lo mismo IMC que porcentaje de grasa?", "acceptedAnswer": {"@type": "Answer", "text": "No. El IMC solo mira peso y altura. El porcentaje de grasa mide qué parte del peso es grasa y necesita otra medición (bioimpedancia, pliegues o DEXA). Si lo conoces, la calculadora de TMB lo usa para afinar tu gasto."}}]}</script>
   </div>
@@ -128,29 +138,39 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="bmi" novalidate aria-label="Calculator">
+      <form class="calc" data-calc="bmi" data-out="out-en" novalidate aria-label="Calculator">
         <div class="calc-grid">
-          <div class="calc-field"><label for="imc-height-en">Height (cm)</label><input id="imc-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" value="165"></div>
-          <div class="calc-field"><label for="imc-weight-en">Weight (kg)</label><input id="imc-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70"></div>
+          <div class="calc-field"><label for="imc-height-en">Height (cm)</label><input id="imc-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 170" aria-describedby="imc-height-en-err"><p class="calc-err" id="imc-height-en-err" data-err-for="height" hidden>Enter a height between 130 and 230 cm.</p></div>
+          <div class="calc-field"><label for="imc-weight-en">Weight (kg)</label><input id="imc-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 70" aria-describedby="imc-weight-en-err"><p class="calc-err" id="imc-weight-en-err" data-err-for="weight" hidden>Enter a weight between 35 and 250 kg.</p></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calculate</button>
+        <details class="calc-how"><summary>How is it worked out?</summary><p>The formula and a worked example are below the calculator.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="bmi" aria-labelledby="res-en">
-        <h2 class="calc-out-h" id="res-en">Your result</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">25.7</b> <span>BMI</span></p>
-        <p class="calc-cat"><span data-cat="0" hidden>Underweight</span><span data-cat="1" hidden>Normal weight</span><span data-cat="2">Overweight</span><span data-cat="3" hidden>Obesity class I</span><span data-cat="4" hidden>Obesity class II</span><span data-cat="5" hidden>Obesity class III</span></p>
+      <section class="calc-out" id="out-en" data-state="empty" tabindex="-1" aria-labelledby="out-en-h">
+        <h2 class="calc-out-h" id="out-en-h">Your result</h2>
+        <p class="calc-empty">Fill in your details and tap <b>Calculate</b>. Your result appears here.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>BMI</span></p>
+        <p class="calc-cat"><span data-cat="0" hidden>Underweight</span><span data-cat="1" hidden>Normal weight</span><span data-cat="2" hidden>Overweight</span><span data-cat="3" hidden>Obesity class I</span><span data-cat="4" hidden>Obesity class II</span><span data-cat="5" hidden>Obesity class III</span></p>
         <div class="calc-rows">
-          <div class="calc-row is-hl"><span>Normal weight for your height</span><b><span data-out="lo">50</span>–<span data-out="hi">68</span> kg</b></div>
+          <div class="calc-row is-hl"><span>Healthy weight for your height</span><b><span data-out="lo">—</span>–<span data-out="hi">—</span> kg</b></div>
         </div>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copy a link with these numbers</span><span class="calc-share-b">Link copied</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">Want to reach your range without weighing food?</p>
-          <p>Snap a photo of each dish and Fotocal counts the calories for you.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc" target="_blank" rel="noopener">Get it free on Google Play</a>
-          <p class="calc-bridge-note">Free plan, no card: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal. Android only.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">Want to reach your range without weighing food?</p>
+          <p class="dl-sub">Snap a photo of each dish and Fotocal counts the calories for you.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc" target="_blank" rel="noopener" aria-label="Get it free on Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Get it free</span></a>
+          <p class="dl-trust">Free · no card · Android</p>
+          <p class="dl-limits">Free plan: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      </div>
+     <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      <div class="calc-text post-body">
 
       <h2 id="how">How it is calculated</h2>
@@ -173,14 +193,14 @@
       <p>Use it to see where you stand, not to set an exact goal: the <a href="../peso-saludable/">healthy weight calculator</a> gives you the full range for your height. If you want to move towards it, the useful number is calories: your <a href="../calorias-diarias/">maintenance</a> and the <a href="../deficit-calorico/">deficit</a> that suits you. Hearty Spanish stews like <a href="../../calorias/cocido-madrileno/">cocido madrileño</a> or <a href="../../calorias/fabada-asturiana/">fabada</a> fit, once you know what is in them; <a href="../../calorias/salmorejo/">salmorejo</a> carries more olive oil than it looks (pages in Spanish).</p>
       <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>What BMI is normal?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Between 18.5 and 24.9 by the WHO adult bands. Under 18.5 is underweight; 25 to 29.9, overweight; from 30, obesity, in three classes. The calculator tells you which band you are in and what weight would put you in the normal range for your height.</p></details>
+        <details class="faq-item"><summary><span>What BMI is normal?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Between 18.5 and 24.9 by the WHO adult bands. Under 18.5 is underweight; 25 to 29.9, overweight; from 30, obesity, in three classes. The calculator tells you which band you are in and what weight would put you in the normal range for your height.</p></details>
         <details class="faq-item"><summary><span>Is BMI useful if I do a lot of sport?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Less than for most people. BMI cannot tell muscle from fat: a muscular person can read as overweight with little body fat. Waist size, how your clothes fit or a body composition measurement say more.</p></details>
         <details class="faq-item"><summary><span>Does it work for children, pregnancy or over 65?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Not with these bands. Under 18, percentiles by age and sex are used; in pregnancy it does not apply; and above 65 the cut-offs are debated. In those cases, ask a paediatrician or doctor.</p></details>
         <details class="faq-item"><summary><span>Is BMI the same as body fat percentage?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No. BMI only looks at weight and height. Body fat percentage measures how much of your weight is fat and needs another measurement (bioimpedance, skinfolds or DEXA). If you know it, the <a href="../tmb/">BMR calculator</a> uses it to refine your energy use.</p></details>
       </div>
       <section class="dp-src" id="sources"><h2>Sources</h2><ul><li>World Health Organization. <em>Obesity and overweight</em>, fact sheet, and the adult BMI classification.</li></ul></section>
-      <nav class="dp-related" aria-label="Keep going">
-        <h2>Keep going</h2>
+      <nav class="dp-related" aria-label="More calculators and tables">
+        <h2>More calculators and tables</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculator</small><strong>Daily calorie calculator</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculator</small><strong>Calorie deficit calculator for women and men</strong></a>
@@ -189,7 +209,7 @@
           <a class="post-nav-item" href="../agua/"><small>Calculator</small><strong>Water intake calculator</strong></a>
           <a class="post-nav-item" href="../tmb/"><small>Calculator</small><strong>BMR calculator (basal metabolic rate)</strong></a>
           <a class="post-nav-item" href="../peso-saludable/"><small>Calculator</small><strong>Healthy weight calculator</strong></a>
-          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g (in Spanish)</strong></a>
+          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g</strong></a>
           <a class="post-nav-item" href="../../blog/why-the-scale-is-not-the-whole-story/"><small>From the blog</small><strong>Why the Scale Isn’t the Whole Story</strong></a>
           <a class="post-nav-item" href="../../blog/how-to-lose-weight-sustainably/"><small>From the blog</small><strong>How to Lose Weight Sustainably (Without Crash Dieting)</strong></a>
           <a class="post-nav-item" href="../../blog/building-muscle-while-losing-fat/"><small>From the blog</small><strong>Building Muscle While Losing Fat: Is It Possible?</strong></a>
@@ -197,13 +217,13 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "BMI calculator", "url": "https://getfotocal.com/calculadoras/imc/", "description": "Work out your body mass index from your weight and height, see which WHO band it falls in and what weight gives a normal BMI. And what BMI cannot tell you.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "BMI calculator", "url": "https://getfotocal.com/calculadoras/imc/", "description": "Work out your body mass index from your weight and height, see which WHO band it falls in and what weight gives a normal BMI. And what BMI cannot tell you.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "BMI calculator", "item": "https://getfotocal.com/calculadoras/imc/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What BMI is normal?", "acceptedAnswer": {"@type": "Answer", "text": "Between 18.5 and 24.9 by the WHO adult bands. Under 18.5 is underweight; 25 to 29.9, overweight; from 30, obesity, in three classes. The calculator tells you which band you are in and what weight would put you in the normal range for your height."}}, {"@type": "Question", "name": "Is BMI useful if I do a lot of sport?", "acceptedAnswer": {"@type": "Answer", "text": "Less than for most people. BMI cannot tell muscle from fat: a muscular person can read as overweight with little body fat. Waist size, how your clothes fit or a body composition measurement say more."}}, {"@type": "Question", "name": "Does it work for children, pregnancy or over 65?", "acceptedAnswer": {"@type": "Answer", "text": "Not with these bands. Under 18, percentiles by age and sex are used; in pregnancy it does not apply; and above 65 the cut-offs are debated. In those cases, ask a paediatrician or doctor."}}, {"@type": "Question", "name": "Is BMI the same as body fat percentage?", "acceptedAnswer": {"@type": "Answer", "text": "No. BMI only looks at weight and height. Body fat percentage measures how much of your weight is fat and needs another measurement (bioimpedance, skinfolds or DEXA). If you know it, the BMR calculator uses it to refine your energy use."}}]}</script>
   </div>
 </main>
-<div class="calc-sticky" data-lang-block="es"><span>Fotocal: haz una foto y cuenta las calorías</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc-sticky" target="_blank" rel="noopener">Descargar</a></div>
-<div class="calc-sticky" data-lang-block="en"><span>Fotocal: snap a photo, get the calories</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc-sticky" target="_blank" rel="noopener">Download</a></div>
+<div class="calc-sticky" data-lang-block="es"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal cuenta tus calorías con una foto</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc-sticky" target="_blank" rel="noopener">Descargar</a></div>
+<div class="calc-sticky" data-lang-block="en"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal counts your calories from a photo</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=imc-sticky" target="_blank" rel="noopener">Download</a></div>
 
 <div id="site-footer"></div>
 <script src="../../assets/js/i18n.js"></script>

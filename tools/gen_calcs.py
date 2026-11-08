@@ -7,23 +7,29 @@
 
 The arithmetic lives in assets/js/calc.js and runs in the visitor's browser:
 no account, nothing sent. It is the app's arithmetic (plan.ts, water.ts),
-checked against the app's code. This script runs the same file under Node to
-pre-render each page's default result, so the first paint already shows the
-right numbers and nothing moves when the script arrives.
+checked against the app's code.
 
 The copy is in tools/calcs/content.py. Each source page holds both
 languages as data-lang-block="es|en" blocks; tools/build_site.py keeps one per
-tree. (Spanish-only until the tools-seo round, 2026-11; the old Spanish copy
-is kept in tools/calcs/legacy-es.json.)"""
+tree.
+
+Lang-ux round (2026-11): the owner, as a first-time visitor, did not see
+that the hub cards open tools and found the pages text-heavy. So: the tool
+is a card right under the H1 with EMPTY inputs (an example in the
+placeholder), a big "Calcular" button, a short message under any wrong
+field, plain-word labels (the technical names stay in the explanation), the
+result card with the app download card inside it, and the long text below
+the tool. The hub opens with a quick BMI tool and cards that say "Usar
+calculadora"."""
 import json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_dishes import ld_block, ORG, esc, TITLE_MAX, SITE, ROOT, PLAY  # noqa: E402
-from calcs.content import CALCS, SOURCES, ACT_ROWS  # noqa: E402
+from gen_dishes import ld_block, ORG, esc, TITLE_MAX, SITE, ROOT, PLAY, download_card  # noqa: E402
+from calcs.content import CALCS, SOURCES  # noqa: E402
 
 SRC = os.path.join(ROOT, "src", "calculadoras")
 PUB = "2026-10-13"
-MOD = "2026-11-07"
+MOD = "2026-11-08"
 DESC_MAX = 155
 LANGS = ("es", "en")
 
@@ -31,162 +37,185 @@ LANGS = ("es", "en")
 UI = {
     "es": {
         "home": "Inicio", "calcs": "Calculadoras", "crumbs": "Migas de pan", "result": "Tu resultado",
+        "empty": "Rellena tus datos y pulsa <b>Calcular</b>. El resultado aparecerá aquí.",
         "share": "Copiar enlace con estos datos", "copied": "Enlace copiado",
-        "faq": "Preguntas frecuentes", "sources": "Fuentes", "related": "Seguir por aquí", "calc": "Calculadora",
+        "faq": "Preguntas frecuentes", "sources": "Fuentes", "related": "Más calculadoras y tablas", "calc": "Calculadora",
         "table": "Tabla", "table_t": "Calorías de los platos españoles, por ración y por 100 g", "blog": "Del blog",
         "disclaimer": "Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.",
-        "cta": "Descárgala gratis en Google Play",
-        "free": "Plan gratis, sin tarjeta: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite. Solo Android.",
-        "sticky": "Fotocal: haz una foto y cuenta las calorías", "sticky_btn": "Descargar",
-        "go": "Calcular",
-        "sex": "Sexo", "f": "Mujer", "m": "Hombre", "age": "Edad (años)", "height": "Altura (cm)", "weight": "Peso (kg)",
-        "weight_opt": "Tu peso (kg, opcional)", "activity": "Tu día a día (sin contar el ejercicio)", "goal": "Objetivo",
-        "pace": "Ritmo", "target": "Peso objetivo (kg)", "bf": "Grasa corporal (%, opcional)", "split": "Reparto",
-        "kcal": "Calorías propias (opcional)",
+        "sticky": "Fotocal cuenta tus calorías con una foto", "sticky_btn": "Descargar",
+        "go": "Calcular", "how": "¿Cómo se calcula?", "eg": "ej.", "pick": "Elige una opción",
+        "sex": "Sexo", "f": "Mujer", "m": "Hombre", "age": "Edad", "height": "Altura", "weight": "Peso",
+        "weight_opt": "Tu peso (opcional)", "activity": "¿Cómo es tu día a día?", "goal": "Tu objetivo",
+        "pace": "¿A qué ritmo?", "target": "Peso que quieres alcanzar", "bf": "% de grasa corporal (opcional)", "split": "Tipo de dieta",
+        "kcal": "Tus propias calorías (opcional)",
+        "units": {"age": "años", "height": "cm", "weight": "kg", "target": "kg", "bf": "%", "kcal": "kcal"},
+        "ph": {"age": "35", "height": "170", "weight": "70", "target": "65", "bf": "25", "kcal": "2000"},
+        "err": {"sex": "Elige mujer u hombre.", "age": "Introduce una edad entre 18 y 90 años.", "height": "Introduce una altura entre 130 y 230 cm.",
+                "weight": "Introduce un peso entre 35 y 250 kg.", "target": "Introduce un peso objetivo entre 35 y 250 kg.",
+                "activity": "Elige cómo es tu día a día.", "bf": "Introduce un porcentaje entre 3 y 60, o déjalo vacío.",
+                "kcal": "Introduce entre 1.000 y 6.000 kcal, o déjalo vacío."},
         "goals": [("lose", "Perder peso"), ("maintain", "Mantener mi peso"), ("gain", "Ganar peso"), ("build_muscle", "Ganar músculo")],
-        "paces": [("0.25", "0,25 kg/semana · suave"), ("0.5", "0,5 kg/semana · recomendado"), ("0.75", "0,75 kg/semana · intenso")],
-        "splits": [("balanced", "Equilibrado"), ("high_protein", "Alto en proteína"), ("low_carb", "Bajo en hidratos"), ("keto", "Cetogénico")],
-        "hint_kcal": "Vacío = las calculadas", "hint_bf": "Vacío = Mifflin-St Jeor",
+        "paces": [("0.25", "Suave: 0,25 kg por semana"), ("0.5", "Recomendado: 0,5 kg por semana"), ("0.75", "Rápido: 0,75 kg por semana")],
+        "splits": [("balanced", "Equilibrada"), ("high_protein", "Alta en proteína"), ("low_carb", "Baja en hidratos"), ("keto", "Cetogénica")],
+        "hint_kcal": "Vacío = las calculadas", "hint_bf": "Si lo sabes",
+        "acts": [("sedentary", "Sedentario: trabajo sentado, poco movimiento"), ("light", "Ligero: de pie a ratos, algún paseo"),
+                 ("standing", "Moderado: casi todo el día de pie"), ("active", "Activo: en movimiento todo el día"),
+                 ("hard", "Muy activo: trabajo físico duro")],
+        "how_act": "Tu gasto diario es tu metabolismo basal (fórmula de Mifflin-St Jeor) multiplicado por tu actividad: ×1,2 sedentario, ×1,375 ligero, ×1,465 moderado, ×1,55 activo y ×1,725 muy activo. El ejercicio no se cuenta aquí: se suma aparte el día que lo haces. El detalle, debajo.",
+        "how_plain": "El detalle de la fórmula y un ejemplo resuelto están debajo de la calculadora.",
+        "use": "Usar calculadora",
     },
     "en": {
         "home": "Home", "calcs": "Calculators", "crumbs": "Breadcrumb", "result": "Your result",
+        "empty": "Fill in your details and tap <b>Calculate</b>. Your result appears here.",
         "share": "Copy a link with these numbers", "copied": "Link copied",
-        "faq": "Frequently asked questions", "sources": "Sources", "related": "Keep going", "calc": "Calculator",
-        "table": "Table", "table_t": "Calories in Spanish dishes, per serving and per 100 g (in Spanish)", "blog": "From the blog",
+        "faq": "Frequently asked questions", "sources": "Sources", "related": "More calculators and tables", "calc": "Calculator",
+        "table": "Table", "table_t": "Calories in Spanish dishes, per serving and per 100 g", "blog": "From the blog",
         "disclaimer": "For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.",
-        "cta": "Get it free on Google Play",
-        "free": "Free plan, no card: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal. Android only.",
-        "sticky": "Fotocal: snap a photo, get the calories", "sticky_btn": "Download",
-        "go": "Calculate",
-        "sex": "Sex", "f": "Woman", "m": "Man", "age": "Age (years)", "height": "Height (cm)", "weight": "Weight (kg)",
-        "weight_opt": "Your weight (kg, optional)", "activity": "Your day-to-day (not counting workouts)", "goal": "Goal",
-        "pace": "Pace", "target": "Target weight (kg)", "bf": "Body fat (%, optional)", "split": "Split",
+        "sticky": "Fotocal counts your calories from a photo", "sticky_btn": "Download",
+        "go": "Calculate", "how": "How is it worked out?", "eg": "e.g.", "pick": "Choose one",
+        "sex": "Sex", "f": "Woman", "m": "Man", "age": "Age", "height": "Height", "weight": "Weight",
+        "weight_opt": "Your weight (optional)", "activity": "What is your day like?", "goal": "Your goal",
+        "pace": "How fast?", "target": "Weight you want to reach", "bf": "Body fat % (optional)", "split": "Type of diet",
         "kcal": "Your own calories (optional)",
+        "units": {"age": "years", "height": "cm", "weight": "kg", "target": "kg", "bf": "%", "kcal": "kcal"},
+        "ph": {"age": "35", "height": "170", "weight": "70", "target": "65", "bf": "25", "kcal": "2000"},
+        "err": {"sex": "Choose woman or man.", "age": "Enter an age between 18 and 90.", "height": "Enter a height between 130 and 230 cm.",
+                "weight": "Enter a weight between 35 and 250 kg.", "target": "Enter a target weight between 35 and 250 kg.",
+                "activity": "Choose what your day is like.", "bf": "Enter a percentage between 3 and 60, or leave it empty.",
+                "kcal": "Enter between 1,000 and 6,000 kcal, or leave it empty."},
         "goals": [("lose", "Lose weight"), ("maintain", "Keep my weight"), ("gain", "Gain weight"), ("build_muscle", "Build muscle")],
-        "paces": [("0.25", "0.25 kg/week · gentle"), ("0.5", "0.5 kg/week · recommended"), ("0.75", "0.75 kg/week · intense")],
+        "paces": [("0.25", "Gentle: 0.25 kg a week"), ("0.5", "Recommended: 0.5 kg a week"), ("0.75", "Fast: 0.75 kg a week")],
         "splits": [("balanced", "Balanced"), ("high_protein", "High protein"), ("low_carb", "Low carb"), ("keto", "Keto")],
-        "hint_kcal": "Empty = the calculated ones", "hint_bf": "Empty = Mifflin-St Jeor",
+        "hint_kcal": "Empty = the calculated ones", "hint_bf": "If you know it",
+        "acts": [("sedentary", "Sedentary: desk job, little movement"), ("light", "Light: on your feet sometimes, some walking"),
+                 ("standing", "Moderate: on your feet most of the day"), ("active", "Active: moving all day"),
+                 ("hard", "Very active: hard physical work")],
+        "how_act": "Your daily burn is your basal metabolism (Mifflin-St Jeor equation) times your activity: ×1.2 sedentary, ×1.375 light, ×1.465 moderate, ×1.55 active and ×1.725 very active. Workouts are not counted here: add them on the days you do them. The details are below.",
+        "how_plain": "The formula and a worked example are below the calculator.",
+        "use": "Use the calculator",
     },
 }
 
 # ── the result card of each calculator: main line, rows, warnings ─────
-# rows: (key, label, unit, highlighted)
+# rows: (key, label, unit, highlighted); a row may carry a warn key, shown
+# only when that warning is on (the BMR "with your body fat" row)
 OUT = {
  "tdee": {
   "es": {"main": "kcal al día para mantener tu peso", "rows": [
-          ("bmr", "Metabolismo basal (TMB)", "kcal", False),
+          ("bmr", "En reposo (metabolismo basal)", "kcal", False),
           ("lose25", "Para perder 0,25 kg por semana", "kcal", False),
           ("lose50", "Para perder 0,5 kg por semana", "kcal", True),
           ("gain25", "Para ganar 0,25 kg por semana", "kcal", False)],
-         "warn": {"floor": 'Para perder medio kilo bajarías del suelo de <b data-out="floor">1.200</b> kcal al día: la cifra se queda en ese suelo, como en la app. Elige un ritmo más suave y, si quieres bajar más, hazlo con un profesional sanitario.'}},
+         "warn": {"floor": 'Para perder medio kilo bajarías de <b data-out="floor">1.200</b> kcal al día, el mínimo que usamos, así que la cifra se queda ahí, igual que en la app. Elige un ritmo más suave. Para bajar de ese mínimo, hazlo con un profesional sanitario.'}},
   "en": {"main": "kcal a day to keep your weight", "rows": [
-          ("bmr", "Basal metabolic rate (BMR)", "kcal", False),
+          ("bmr", "At rest (basal metabolism)", "kcal", False),
           ("lose25", "To lose 0.25 kg a week", "kcal", False),
           ("lose50", "To lose 0.5 kg a week", "kcal", True),
           ("gain25", "To gain 0.25 kg a week", "kcal", False)],
-         "warn": {"floor": 'Losing half a kilo would take you below the floor of <b data-out="floor">1,200</b> kcal a day: the number stays at that floor, as in the app. Pick a gentler pace and, to go lower, do it with a health professional.'}}},
+         "warn": {"floor": 'Losing half a kilo would take you below <b data-out="floor">1,200</b> kcal a day, the minimum we use, so the number stays there, as in the app. Pick a gentler pace. To go lower, do it with a health professional.'}}},
  "deficit": {
   "es": {"main": "kcal al día para perder peso", "rows": [
-          ("tdee", "Tu mantenimiento", "kcal", False),
-          ("deficit", "Déficit diario", "kcal", False),
-          ("kgweek", "Pérdida estimada", "kg/semana", True),
+          ("tdee", "Lo que gastas al día", "kcal", False),
+          ("deficit", "Lo que recortas al día", "kcal", False),
+          ("kgweek", "Lo que perderías por semana", "kg", True),
           ("pct", "De tu peso cada semana", "%", False),
           ("weeks", "Semanas hasta tu objetivo", "", False),
-          ("months", "Meses, aproximadamente", "", False)],
-         "warn": {"floor": 'Tu objetivo quedaría por debajo de <b data-out="floor">1.200</b> kcal al día, el mínimo que usa la app: se queda en ese suelo. No bajes de ahí sin un médico o dietista; elige un ritmo más suave.',
-                  "fast": "Vas a más del 1 % de tu peso por semana: es más de lo que recomiendan las guías para conservar músculo. Elige un ritmo más suave.",
-                  "capped": "El ritmo que pides pasa del 25 % de tu gasto, así que el recorte se queda en ese 25 %, como en la app: perderás algo más despacio.",
-                  "lowbmi": 'Tu peso objetivo daría un IMC por debajo de 18,5. Para tu altura, el rango saludable empieza en <b data-out="hmin">50</b> kg: consúltalo con un profesional sanitario.',
-                  "notlose": "Pon un peso objetivo menor que tu peso actual para calcular un déficit."}},
+          ("months", "Meses, más o menos", "", False)],
+         "warn": {"floor": 'Tu objetivo quedaría por debajo de <b data-out="floor">1.200</b> kcal al día, el mínimo que usamos, así que se queda ahí, igual que en la app. Elige un ritmo más suave. No bajes de ese mínimo sin un médico o dietista.',
+                  "fast": "Perderías más del 1 % de tu peso por semana. Es más rápido de lo que recomiendan las guías para no perder músculo. Elige un ritmo más suave.",
+                  "capped": "Ese ritmo pedía recortar más de la cuarta parte de lo que gastas. El recorte se queda en esa cuarta parte, como en la app, y perderás algo más despacio.",
+                  "lowbmi": 'Ese peso objetivo es bajo para tu altura. El rango saludable empieza en <b data-out="hmin">50</b> kg. Coméntalo con un profesional sanitario.',
+                  "notlose": "Pon un peso objetivo menor que tu peso actual para calcular el déficit."}},
   "en": {"main": "kcal a day to lose weight", "rows": [
-          ("tdee", "Your maintenance", "kcal", False),
-          ("deficit", "Daily deficit", "kcal", False),
-          ("kgweek", "Estimated loss", "kg/week", True),
+          ("tdee", "What you burn a day", "kcal", False),
+          ("deficit", "What you cut a day", "kcal", False),
+          ("kgweek", "What you would lose a week", "kg", True),
           ("pct", "Of your weight each week", "%", False),
           ("weeks", "Weeks to your goal", "", False),
           ("months", "Months, roughly", "", False)],
-         "warn": {"floor": 'Your target would fall below <b data-out="floor">1,200</b> kcal a day, the minimum the app uses: it stays at that floor. Do not go lower without a doctor or dietitian; pick a gentler pace.',
-                  "fast": "You are going faster than 1% of your weight a week: more than guidelines advise to keep muscle. Pick a gentler pace.",
-                  "capped": "The pace you asked for is more than 25% of what you burn, so the cut stays at that 25%, as in the app: you will lose a bit more slowly.",
-                  "lowbmi": 'Your target weight would give a BMI under 18.5. For your height the healthy range starts at <b data-out="hmin">50</b> kg: check it with a health professional.',
+         "warn": {"floor": 'Your target would fall below <b data-out="floor">1,200</b> kcal a day, the minimum we use, so it stays there, as in the app. Pick a gentler pace. Do not go below that minimum without a doctor or dietitian.',
+                  "fast": "You would lose more than 1% of your weight a week. That is faster than guidelines advise to keep muscle. Pick a gentler pace.",
+                  "capped": "That pace needed a cut of more than a quarter of what you burn. The cut stays at that quarter, as in the app, so you will lose a bit more slowly.",
+                  "lowbmi": 'That target weight is low for your height. The healthy range starts at <b data-out="hmin">50</b> kg. Talk it over with a health professional.',
                   "notlose": "Enter a target weight below your current weight to work out a deficit."}}},
  "bmi": {
   "es": {"main": "de IMC", "cats": ["Bajo peso", "Peso normal", "Sobrepeso", "Obesidad grado I", "Obesidad grado II", "Obesidad grado III"],
-         "rows": [("range", "Peso normal para tu altura", "kg", True)], "warn": {}},
+         "rows": [("range", "Peso saludable para tu altura", "kg", True)], "warn": {}},
   "en": {"main": "BMI", "cats": ["Underweight", "Normal weight", "Overweight", "Obesity class I", "Obesity class II", "Obesity class III"],
-         "rows": [("range", "Normal weight for your height", "kg", True)], "warn": {}}},
+         "rows": [("range", "Healthy weight for your height", "kg", True)], "warn": {}}},
  "protein": {
   "es": {"main": "g de proteína al día", "rows": [
-          ("gkg", "Gramos por kilo de referencia", "g/kg", False),
-          ("ref", "Peso de referencia", "kg", False),
-          ("prange", "Rango de 1,2 a 2,0 g/kg", "g", False),
-          ("efsa", "Mínimo EFSA (0,83 g/kg)", "g", False),
-          ("meal3", "Por comida, en tres comidas", "g", True),
-          ("meal4", "Por comida, en cuatro comidas", "g", False)],
-         "warn": {"ref": "Tu IMC pasa de 25, así que la proteína se calcula sobre el peso que tendrías con un IMC de 25: la necesidad sigue a la masa magra, no a la grasa. Es la regla de la app."}},
+          ("meal3", "En cada comida, si haces tres", "g", True),
+          ("meal4", "En cada comida, si haces cuatro", "g", False),
+          ("prange", "Rango para gente activa", "g", False),
+          ("efsa", "Mínimo diario recomendado", "g", False),
+          ("gkg", "Gramos por kilo", "g/kg", False),
+          ("ref", "Peso usado para la cuenta", "kg", False)],
+         "warn": {"ref": "Como tu IMC pasa de 25, la cuenta usa el peso que tendrías con un IMC de 25. La proteína que necesitas depende del músculo, no de la grasa. Así lo hace también la app."}},
   "en": {"main": "g of protein a day", "rows": [
-          ("gkg", "Grams per reference kilo", "g/kg", False),
-          ("ref", "Reference weight", "kg", False),
-          ("prange", "Range from 1.2 to 2.0 g/kg", "g", False),
-          ("efsa", "EFSA minimum (0.83 g/kg)", "g", False),
-          ("meal3", "Per meal, over three meals", "g", True),
-          ("meal4", "Per meal, over four meals", "g", False)],
-         "warn": {"ref": "Your BMI is above 25, so protein is worked out on the weight you would have at a BMI of 25: needs follow lean mass, not fat. That is the app's rule."}}},
+          ("meal3", "At each meal, over three meals", "g", True),
+          ("meal4", "At each meal, over four meals", "g", False),
+          ("prange", "Range for active people", "g", False),
+          ("efsa", "Recommended daily minimum", "g", False),
+          ("gkg", "Grams per kilo", "g/kg", False),
+          ("ref", "Weight used for the sum", "kg", False)],
+         "warn": {"ref": "Your BMI is above 25, so the sum uses the weight you would have at a BMI of 25. The protein you need follows muscle, not fat. The app does the same."}}},
  "macros": {
   "es": {"main": "kcal al día", "macros": [("p", "Proteínas"), ("c", "Hidratos"), ("f", "Grasas")],
-         "rows": [("tdee", "Tu mantenimiento", "kcal", False)],
-         "warn": {"floor": 'Tus calorías quedarían por debajo de <b data-out="floor">1.200</b> kcal y se suben a ese suelo, como en la app. No bajes de ahí sin un profesional sanitario.',
-                  "dropped": "Con estas calorías la proteína deja poco sitio: la grasa baja al 20 %, el mínimo, como hace la app."}},
+         "rows": [("tdee", "Lo que gastas al día", "kcal", False)],
+         "warn": {"floor": 'Tus calorías quedarían por debajo de <b data-out="floor">1.200</b> kcal, el mínimo que usamos, así que se quedan ahí, igual que en la app. No bajes de ese mínimo sin un profesional sanitario.',
+                  "dropped": "Con estas calorías, la proteína deja poco sitio. La grasa baja al mínimo, el 20 %, igual que en la app."}},
   "en": {"main": "kcal a day", "macros": [("p", "Protein"), ("c", "Carbs"), ("f", "Fat")],
-         "rows": [("tdee", "Your maintenance", "kcal", False)],
-         "warn": {"floor": 'Your calories would fall below <b data-out="floor">1,200</b> kcal and are raised to that floor, as in the app. Do not go lower without a health professional.',
-                  "dropped": "At these calories protein leaves little room: fat drops to 20%, the minimum, as the app does."}}},
+         "rows": [("tdee", "What you burn a day", "kcal", False)],
+         "warn": {"floor": 'Your calories would fall below <b data-out="floor">1,200</b> kcal, the minimum we use, so they stay there, as in the app. Do not go below that minimum without a health professional.',
+                  "dropped": "At these calories, protein leaves little room. Fat drops to its minimum, 20%, as in the app."}}},
  "water": {
   "es": {"main": "litros de bebida al día", "rows": [
-          ("ml", "En mililitros", "ml", False),
           ("glasses", "Vasos de 250 ml", "", True),
-          ("kcal", "Calculado sobre", "kcal", False),
-          ("ratio", "Agua por kcal", "ml", False)],
-         "warn": {"floor": 'Tu cálculo queda por debajo del mínimo de la EFSA para ti, así que el objetivo se queda en <b data-out="wfloor">1.600</b> ml.',
-                  "cap": "Tu cálculo pasa de 4 litros, así que el objetivo se queda en 4.000 ml, el máximo de la app."}},
+          ("ml", "En mililitros", "ml", False),
+          ("kcal", "Según tus calorías del día", "kcal", False)],
+         "warn": {"floor": 'Tu cálculo sale por debajo del mínimo recomendado para ti, así que el objetivo se queda en <b data-out="wfloor">1.600</b> ml.',
+                  "cap": "Tu cálculo pasa de 4 litros, así que el objetivo se queda en 4 litros, el máximo de la app."}},
   "en": {"main": "litres of drinks a day", "rows": [
-          ("ml", "In millilitres", "ml", False),
           ("glasses", "250 ml glasses", "", True),
-          ("kcal", "Worked out on", "kcal", False),
-          ("ratio", "Water per kcal", "ml", False)],
-         "warn": {"floor": 'Your figure falls below the EFSA minimum for you, so the target stays at <b data-out="wfloor">1,600</b> ml.',
-                  "cap": "Your figure is above 4 litres, so the target stays at 4,000 ml, the app's maximum."}}},
+          ("ml", "In millilitres", "ml", False),
+          ("kcal", "Based on your daily calories", "kcal", False)],
+         "warn": {"floor": 'Your figure is below the recommended minimum for you, so the target stays at <b data-out="wfloor">1,600</b> ml.',
+                  "cap": "Your figure is above 4 litres, so the target stays at 4 litres, the app's maximum."}}},
  "bmr": {
   "es": {"main": "kcal al día en reposo", "rows": [
-          ("mifflin", "Mifflin-St Jeor", "kcal", False),
-          ("katch", "Katch-McArdle (con tu grasa)", "kcal", False)],
-         "warn": {"katch": "Has puesto tu grasa corporal: el resultado usa Katch-McArdle, como la app."}},
+          ("mifflin", "Según tu edad, altura y peso", "kcal", False),
+          ("katch", "Con tu % de grasa corporal", "kcal", False, "katch")],
+         "acts_h": "Con tu actividad, gastas al día:", "warn": {}},
   "en": {"main": "kcal a day at rest", "rows": [
-          ("mifflin", "Mifflin-St Jeor", "kcal", False),
-          ("katch", "Katch-McArdle (with your body fat)", "kcal", False)],
-         "warn": {"katch": "You entered your body fat: the result uses Katch-McArdle, as the app does."}}},
+          ("mifflin", "From your age, height and weight", "kcal", False),
+          ("katch", "With your body fat %", "kcal", False, "katch")],
+         "acts_h": "With your activity, you burn a day:", "warn": {}}},
  "healthy": {
   "es": {"main": "kg, tu rango de peso saludable", "rows": [
-          ("bmi", "Tu IMC actual", "", False),
-          ("mid", "Mitad del rango (IMC 22)", "kg", False)],
+          ("bmi", "Tu IMC", "", False, "inside over under"),
+          ("mid", "Peso en el centro del rango", "kg", False)],
          "warn": {"inside": "Estás dentro del rango saludable para tu altura.",
-                  "over": 'Estás <b data-out="gap">2,0</b> kg por encima del límite alto del rango.',
-                  "under": 'Estás <b data-out="gap">2,0</b> kg por debajo del límite bajo del rango: si no es tu constitución de siempre, habla con un profesional sanitario.'}},
+                  "over": 'Estás <span data-warn="gap-kg">unos <b data-out="gap">3</b> kg</span><span data-warn="gap-small">menos de 1 kg</span> por encima del rango.',
+                  "under": 'Estás <span data-warn="gap-kg">unos <b data-out="gap">3</b> kg</span><span data-warn="gap-small">menos de 1 kg</span> por debajo del rango. Si no es tu constitución de siempre, habla con un profesional sanitario.'}},
   "en": {"main": "kg, your healthy weight range", "rows": [
-          ("bmi", "Your current BMI", "", False),
-          ("mid", "Middle of the range (BMI 22)", "kg", False)],
+          ("bmi", "Your BMI", "", False, "inside over under"),
+          ("mid", "Weight in the middle of the range", "kg", False)],
          "warn": {"inside": "You are inside the healthy range for your height.",
-                  "over": 'You are <b data-out="gap">2.0</b> kg above the top of the range.',
-                  "under": 'You are <b data-out="gap">2.0</b> kg below the bottom of the range: if that is not how you have always been, talk to a health professional.'}}},
+                  "over": 'You are <span data-warn="gap-kg">about <b data-out="gap">3</b> kg</span><span data-warn="gap-small">less than 1 kg</span> above the range.',
+                  "under": 'You are <span data-warn="gap-kg">about <b data-out="gap">3</b> kg</span><span data-warn="gap-small">less than 1 kg</span> below the range. If that is not how you have always been, talk to a health professional.'}}},
 }
 
 BRIDGE_SUB = {
-    "es": {"kcal": "Haz una foto y Fotocal las cuenta por ti.", "protein": "Haz una foto y Fotocal cuenta la proteína de cada plato por ti.",
+    "es": {"kcal": "Haz una foto y Fotocal cuenta las calorías por ti.", "protein": "Haz una foto y Fotocal cuenta la proteína de cada plato por ti.",
            "water": "Fotocal lleva el agua del día junto a tus comidas: un toque por vaso.", "other": "Haz una foto de cada plato y Fotocal cuenta las calorías por ti."},
-    "en": {"kcal": "Snap a photo and Fotocal counts them for you.", "protein": "Snap a photo and Fotocal counts the protein in each dish for you.",
+    "en": {"kcal": "Snap a photo and Fotocal counts the calories for you.", "protein": "Snap a photo and Fotocal counts the protein in each dish for you.",
            "water": "Fotocal tracks your water next to your meals: one tap per glass.", "other": "Snap a photo of each dish and Fotocal counts the calories for you."},
 }
 BRIDGE_KIND = {"tdee": "kcal", "deficit": "kcal", "macros": "kcal", "protein": "protein", "water": "water", "bmi": "other", "bmr": "other", "healthy": "other"}
+# the fields that only matter for some goals: shown when the goal is one of these
+GOAL_ONLY = {("macros", "pace"): "lose gain"}
 
 ICONS = {
     "flame": '<path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.6 1.2 2.6 2.5 3-1-3 0-6.5 0-8z"/>',
@@ -212,93 +241,104 @@ def play(campaign):
     return PLAY + "&utm_source=web&utm_medium=tool&utm_campaign=" + campaign
 
 
-# ── default results, from calc.js itself ─────────────────────────────
-def defaults():
-    js = ("const C=require(process.argv[1]);const o={};"
-          "for(const k of Object.keys(C.NEEDS)){o[k]={};for(const l of ['es','en'])o[k][l]=C.compute(k,{},l);}"
-          "o._d=C.DEFAULTS;o._k=C.KIND_DEFAULTS;o._n=C.NEEDS;process.stdout.write(JSON.stringify(o));")
+def needs():
+    js = "const C=require(process.argv[1]);process.stdout.write(JSON.stringify({n:C.NEEDS,k:C.KIND_DEFAULTS}));"
     out = subprocess.run(["node", "-e", js, os.path.join(ROOT, "assets", "js", "calc.js")], capture_output=True, text=True, check=True).stdout
     return json.loads(out)
 
 
-DEF = None
-NUM_LIMITS = {"age": (18, 90), "height": (130, 230), "weight": (35, 250), "target": (35, 250), "bf": (3, 60), "kcal": (1000, 6000)}
-
-
-def num_str(v, lang):
-    s = ("%g" % v) if v is not None else ""
-    return s.replace(".", ",") if lang == "es" else s
+NEEDS = None
 
 
 # ── the form ─────────────────────────────────────────────────────────
-def form(kind, lang, slug):
-    u, d = UI[lang], dict(DEF["_d"], **DEF["_k"].get(kind, {}))
-    pid = slug[:3]
-    o = ['      <form class="calc" data-calc="%s" novalidate aria-label="%s">' % (kind, esc(u["calc"])), '        <div class="calc-grid">']
-    for k in DEF["_n"][kind]:
+def form(kind, lang, slug, mini=False):
+    u = UI[lang]
+    pid = (slug[:3] + ("-mini" if mini else ""))
+    out_id = "out-%s%s" % (lang, "-mini" if mini else "")
+    goal_default = NEEDS["k"].get(kind, {}).get("goal", "lose")
+    o = ['      <form class="calc%s" data-calc="%s" data-out="%s"%s novalidate aria-label="%s">' % (" calc-mini" if mini else "", kind, out_id, " data-mini" if mini else "", esc(u["calc"])),
+         '        <div class="calc-grid">']
+    for k in NEEDS["n"][kind]:
         fid = "%s-%s-%s" % (pid, k, lang)
+        err = '<p class="calc-err" id="%s-err" data-err-for="%s" hidden>%s</p>' % (fid, k, u["err"].get(k, "")) if k in u["err"] else ""
+        desc = ' aria-describedby="%s-err"' % fid if err else ""
         if k == "sex":
-            o.append('          <fieldset class="calc-field wide"><legend>%s</legend><div class="calc-seg">' % u["sex"])
+            o.append('          <fieldset class="calc-field wide"%s><legend>%s</legend><div class="calc-seg">' % (desc, u["sex"]))
             for v in ("f", "m"):
-                o.append('            <input type="radio" name="sex" id="%s-%s" value="%s"%s><label for="%s-%s">%s</label>' % (fid, v, v, " checked" if d["sex"] == v else "", fid, v, u[v]))
-            o.append('          </div></fieldset>')
+                o.append('            <input type="radio" name="sex" id="%s-%s" value="%s"><label for="%s-%s">%s</label>' % (fid, v, v, fid, v, u[v]))
+            o.append('          </div>%s</fieldset>' % err)
         elif k in ("activity", "goal", "pace", "split"):
-            opts = {"activity": [(a, lab + " (×" + f + ")") for a, lab, f in ACT_ROWS[lang]], "goal": u["goals"], "pace": u["paces"], "split": u["splits"]}[k]
-            cur = str(d[k]) if k != "pace" else ("%g" % d[k])
-            wide = " wide" if k in ("activity", "pace") else ""
-            o.append('          <div class="calc-field%s"><label for="%s">%s</label><select id="%s" name="%s">' % (wide, fid, esc(u[k]), fid, k))
+            only = GOAL_ONLY.get((kind, k))
+            if k == "activity":
+                opts, cur = u["acts"], ""
+            else:
+                opts = {"goal": u["goals"], "pace": u["paces"], "split": u["splits"]}[k]
+                cur = {"goal": goal_default, "pace": "0.5", "split": "balanced"}[k]
+            wide = " wide" if k in ("activity", "pace", "goal") else ""
+            o.append('          <div class="calc-field%s"%s><label for="%s">%s</label><select id="%s" name="%s"%s>' % (wide, (' data-goals="%s"' % only) if only else "", fid, esc(u[k]), fid, k, desc))
+            if k == "activity":
+                o.append('            <option value="" selected disabled>%s</option>' % u["pick"])
             for v, lab in opts:
                 o.append('            <option value="%s"%s>%s</option>' % (v, " selected" if v == cur else "", esc(lab)))
-            o.append('          </select></div>')
+            o.append('          </select>%s</div>' % err)
         else:
             label = u["weight_opt"] if (k == "weight" and kind == "healthy") else u[k]
-            val = d[k] if k not in ("bf", "kcal") else None
-            hint = {"kcal": u["hint_kcal"], "bf": u["hint_bf"]}.get(k)
-            o.append('          <div class="calc-field"><label for="%s">%s</label><input id="%s" name="%s" type="text" inputmode="decimal" autocomplete="off" value="%s"%s%s></div>'
-                     % (fid, esc(label), fid, k, num_str(val, lang), (' placeholder="%s"' % esc(hint)) if hint else "", ' data-dec=","' if lang == "es" else ""))
+            if "(" not in label:
+                label = "%s (%s)" % (label, u["units"][k])
+            ph = {"kcal": u["hint_kcal"], "bf": u["hint_bf"]}.get(k) or "%s %s" % (u["eg"], u["ph"][k])
+            # age, height and weight share one row when all three are asked,
+            # so the button and the result stay near the first screen
+            third = " third" if (k in ("age", "height", "weight") and "age" in NEEDS["n"][kind]) else ""
+            o.append('          <div class="calc-field%s"><label for="%s">%s</label><input id="%s" name="%s" type="text" inputmode="decimal" autocomplete="off" placeholder="%s"%s%s>%s</div>'
+                     % (third, fid, esc(label), fid, k, esc(ph), desc, ' data-dec=","' if lang == "es" else "", err))
     o.append('        </div>')
+    o.append('        <button class="btn btn-cta calc-go" type="submit">%s</button>' % u["go"])
+    if not mini:
+        o.append('        <details class="calc-how"><summary>%s</summary><p>%s</p></details>' % (u["how"], u["how_act"] if "activity" in NEEDS["n"][kind] else u["how_plain"]))
     o.append('      </form>')
     return "\n".join(o)
 
 
-def result(c, lang):
+def result(c, lang, mini=False):
     kind, u, spec = c["kind"], UI[lang], OUT[c["kind"]][lang]
-    r = DEF[kind][lang]
-    v = r["out"]
-    o = ['      <section class="calc-out" data-calc-out="%s" aria-labelledby="res-%s">' % (kind, lang),
-         '        <h2 class="calc-out-h" id="res-%s">%s</h2>' % (lang, u["result"]),
-         '        <p class="calc-main" aria-live="polite"><b data-out="main">%s</b> <span>%s</span></p>' % (v["main"], spec["main"])]
+    out_id = "out-%s%s" % (lang, "-mini" if mini else "")
+    o = ['      <section class="calc-out" id="%s" data-state="empty" tabindex="-1" aria-labelledby="%s-h">' % (out_id, out_id),
+         '        <h2 class="calc-out-h" id="%s-h">%s</h2>' % (out_id, u["result"]),
+         '        <p class="calc-empty">%s</p>' % u["empty"],
+         '        <div class="calc-res">',
+         '        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>%s</span></p>' % spec["main"]]
     if kind == "bmi":
-        o.append('        <p class="calc-cat">%s</p>' % "".join('<span data-cat="%d"%s>%s</span>' % (i, "" if i == r["cat"] else " hidden", esc(t)) for i, t in enumerate(spec["cats"])))
+        o.append('        <p class="calc-cat">%s</p>' % "".join('<span data-cat="%d" hidden>%s</span>' % (i, esc(t)) for i, t in enumerate(spec["cats"])))
     if kind == "macros":
         o.append('        <div class="calc-macros">')
         for k, lab in spec["macros"]:
-            o.append('          <div class="calc-macro m-%s"><b><span data-out="%s">%s</span> g</b><span>%s · <span data-out="%sk">%s</span> kcal · <span data-out="%sp">%s</span> %%</span></div>'
-                     % (k, k, v[k], lab, k, v[k + "k"], k, v[k + "p"]))
+            o.append('          <div class="calc-macro m-%s"><b><span data-out="%s">—</span> g</b><span>%s · <span data-out="%sk">—</span> kcal · <span data-out="%sp">—</span> %%</span></div>' % (k, k, lab, k, k))
         o.append('        </div>')
-        o.append('        <div class="dp-bar" aria-hidden="true">%s</div>' % "".join('<span class="%s" data-bar="%s" style="width:%.1f%%"></span>' % (k, k, r["bars"][k]) for k in ("p", "c", "f")))
-    o.append('        <div class="calc-rows">')
-    for key, lab, unit, hl in spec["rows"]:
-        if key in ("range", "prange"):
-            val = '<span data-out="lo">%s</span>–<span data-out="hi">%s</span>' % (v["lo"], v["hi"])
-        else:
-            val = '<span data-out="%s">%s</span>' % (key, v[key])
-        o.append('          <div class="calc-row%s"><span>%s</span><b>%s%s</b></div>' % (" is-hl" if hl else "", esc(lab), val, (" " + unit) if unit else ""))
-    if kind == "bmr":
-        for a, lab, f in ACT_ROWS[lang]:
-            o.append('          <div class="calc-row%s"><span>%s (×%s)</span><b><span data-out="t_%s">%s</span> kcal</b></div>' % (" is-hl" if a == "light" else "", esc(lab), f, a, v["t_" + a]))
-    o.append('        </div>')
-    for wk, html in spec["warn"].items():
-        html = re.sub(r'(<b data-out="([a-z]+)">)[^<]*(</b>)', lambda m: m.group(1) + v[m.group(2)] + m.group(3), html)
-        o.append('        <p class="calc-warn" data-warn="%s"%s>%s</p>' % (wk, "" if wk in r["warn"] else " hidden", html))
-    o.append('        <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">%s</span><span class="calc-share-b">%s</span></button>' % (u["share"], u["copied"]))
-    # the bridge to the app
-    head = esc(c[lang]["bridge"]).replace("{X}", '<b data-out="bridge">%s</b>' % v.get("bridge", ""))
-    o.append('        <div class="calc-bridge">')
-    o.append('          <p class="calc-bridge-h">%s</p>' % head)
-    o.append('          <p>%s</p>' % BRIDGE_SUB[lang][BRIDGE_KIND[kind]])
-    o.append('          <a class="btn btn-cta" href="%s" target="_blank" rel="noopener">%s</a>' % (esc(play(c["slug"])), u["cta"]))
-    o.append('          <p class="calc-bridge-note">%s</p>' % u["free"])
+        o.append('        <div class="dp-bar" aria-hidden="true">%s</div>' % "".join('<span class="%s" data-bar="%s" style="width:33.3%%"></span>' % (k, k) for k in ("p", "c", "f")))
+    if not mini:
+        o.append('        <div class="calc-rows">')
+        for row in spec["rows"]:
+            key, lab, unit, hl = row[:4]
+            only = row[4] if len(row) > 4 else None
+            if key in ("range", "prange"):
+                val = '<span data-out="lo">—</span>–<span data-out="hi">—</span>'
+            else:
+                val = '<span data-out="%s">—</span>' % key
+            attr = (' data-warn="%s" hidden' % only) if only and " " not in only else ""
+            o.append('          <div class="calc-row%s"%s><span>%s</span><b>%s%s</b></div>' % (" is-hl" if hl else "", attr, esc(lab), val, (" " + unit) if unit else ""))
+        if kind == "bmr":
+            o.append('          <p class="calc-rows-h">%s</p>' % spec["acts_h"])
+            for (a, lab) in u["acts"]:
+                o.append('          <div class="calc-row%s"><span>%s</span><b><span data-out="t_%s">—</span> kcal</b></div>' % (" is-hl" if a == "light" else "", esc(lab.split(":")[0]), a))
+        o.append('        </div>')
+        for wk, html in spec["warn"].items():
+            o.append('        <p class="calc-warn" data-warn="%s" hidden>%s</p>' % (wk, html))
+        o.append('        <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">%s</span><span class="calc-share-b">%s</span></button>' % (u["share"], u["copied"]))
+        head = esc(c[lang]["bridge"]).replace("{X}", '<b data-out="bridge">—</b>')
+        o.append(download_card(lang, head, BRIDGE_SUB[lang][BRIDGE_KIND[kind]], play(c["slug"]), "dl-in-result"))
+    else:
+        o.append('        <div class="calc-rows"><div class="calc-row is-hl"><span>%s</span><b><span data-out="lo">—</span>–<span data-out="hi">—</span> kg</b></div></div>' % esc(spec["rows"][0][1]))
+        o.append('        <p class="calc-mini-more"><a href="%s/">%s →</a></p>' % (c["slug"], "Más detalle en la calculadora de IMC" if lang == "es" else "More detail in the BMI calculator"))
     o.append('        </div>')
     o.append('      </section>')
     return "\n".join(o)
@@ -367,16 +407,17 @@ def head(depth, meta, path):
        esc(es["title"]), esc(es["desc"]), up, up, up, up, up, up, up, up, up, up, up, up)
 
 
-def foot(depth, calc=True):
+def foot(depth):
     up = "../" * depth
     return """
 <div id="site-footer"></div>
 <script src="%sassets/js/i18n.js"></script>
 <script src="%sassets/js/layout.js" data-page="calculadoras"></script>
-<script src="%sassets/js/main.js"></script>%s
+<script src="%sassets/js/main.js"></script>
+<script src="%sassets/js/calc.js"></script>
 </body>
 </html>
-""" % (up, up, up, ('\n<script src="%sassets/js/calc.js"></script>' % up) if calc else "")
+""" % (up, up, up, up)
 
 
 def titled(t):
@@ -415,13 +456,13 @@ def page_lang(c, lang):
     o.append('     <div class="calc-tool">')
     o.append(form(c["kind"], lang, c["slug"]))
     o.append(result(c, lang))
-    o.append('      <p class="calc-disclaimer">%s</p>' % u["disclaimer"])
     o.append('     </div>')
+    o.append('     <p class="calc-disclaimer">%s</p>' % u["disclaimer"])
     o.append('     <div class="calc-text post-body">')
     o.append(L["body"])
     o.append('      <h2 id="faq">%s</h2>\n      <div class="faq-list">' % u["faq"])
-    for i, (q, a) in enumerate(L["faq"]):
-        o.append('        <details class="faq-item"%s><summary><span>%s</span><i class="faq-plus" aria-hidden="true"></i></summary><p>%s</p></details>' % (" open" if i == 0 else "", esc(q), a))
+    for q, a in L["faq"]:
+        o.append('        <details class="faq-item"><summary><span>%s</span><i class="faq-plus" aria-hidden="true"></i></summary><p>%s</p></details>' % (esc(q), a))
     o.append('      </div>')
     o.append('      <section class="dp-src" id="%s"><h2>%s</h2><ul>%s</ul></section>' % ("fuentes" if lang == "es" else "sources", u["sources"], "".join("<li>%s</li>" % SOURCES[s][lang] for s in c["sources"])))
     o.append('      <nav class="dp-related" aria-label="%s">\n        <h2>%s</h2>\n        <div class="post-nav">' % (u["related"], u["related"]))
@@ -441,7 +482,7 @@ def page_lang(c, lang):
 
 
 def sticky(slug):
-    return "\n".join('<div class="calc-sticky" data-lang-block="%s"><span>%s</span><a class="btn btn-cta" href="%s" target="_blank" rel="noopener">%s</a></div>'
+    return "\n".join('<div class="calc-sticky" data-lang-block="%s"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>%s</span><a class="btn btn-cta" href="%s" target="_blank" rel="noopener">%s</a></div>'
                      % (l, UI[l]["sticky"], esc(play(slug + "-sticky")), UI[l]["sticky_btn"]) for l in LANGS)
 
 
@@ -464,31 +505,32 @@ def page(c):
 HUB = {
     "es": {"title": "Calculadoras de calorías, IMC, macros y agua",
            "desc": "Ocho calculadoras sin registro: calorías diarias, déficit calórico, IMC, proteínas, macros, agua, TMB y peso saludable, con las mismas fórmulas que la app.",
-           "h1": "Calculadoras de calorías, IMC, macros y más",
-           "lead": "Ocho calculadoras para las preguntas que llegan antes de cualquier dieta. Funcionan aquí, en la página, sin registro y sin enviar tus datos, y dan los mismos números que la app Fotocal.",
-           "go": "Calcular →",
+           "h1": "Calcula en segundos, gratis y sin registro",
+           "lead": "Ocho calculadoras de calorías, IMC, macros y más. Escribe tus datos y tendrás el resultado al momento. No se envía nada y dan los mismos números que la app Fotocal.",
+           "quick": "Prueba ahora: tu IMC", "all": "Las ocho calculadoras",
            "body": """
       <h2>En qué orden usarlas</h2>
-      <p>Primero las <a href="calorias-diarias/">calorías diarias</a>, la base de todo lo demás. Si quieres perder grasa, después el <a href="deficit-calorico/">déficit calórico</a>, que te dice cuánto recortar y cuánto tardarás. Las <a href="proteinas/">proteínas</a> y los <a href="macros/">macros</a> reparten esas calorías. El <a href="imc/">IMC</a> y el <a href="peso-saludable/">peso saludable</a> te sitúan; la <a href="tmb/">TMB</a> explica de dónde sale tu gasto, y la de <a href="agua/">agua</a> te dice cuánto beber.</p>
+      <p>Empieza por las <a href="calorias-diarias/">calorías diarias</a>: es la base de todo lo demás. Si quieres perder grasa, sigue con el <a href="deficit-calorico/">déficit calórico</a>, que te dice cuánto recortar y cuánto tardarás. Las <a href="proteinas/">proteínas</a> y los <a href="macros/">macros</a> reparten esas calorías. El <a href="imc/">IMC</a> y el <a href="peso-saludable/">peso saludable</a> te dicen dónde estás. La <a href="tmb/">TMB</a> explica de dónde sale tu gasto, y la de <a href="agua/">agua</a>, cuánto beber.</p>
       <h2>De dónde salen estos números</h2>
-      <p>De las mismas fórmulas que usa la app Fotocal: Mifflin-St Jeor (1990) para el metabolismo, los rangos de IMC de la OMS, y las referencias de la EFSA para la proteína y el agua. Cada calculadora explica su fórmula con un ejemplo y cita sus fuentes. Si quieres los datos de lo que comes, la <a href="../calorias/">tabla de calorías de platos españoles</a>.</p>""",
+      <p>De las mismas fórmulas que usa la app Fotocal: Mifflin-St Jeor (1990) para el metabolismo, los rangos de IMC de la OMS y las referencias de la EFSA para la proteína y el agua. Cada calculadora explica su fórmula con un ejemplo y cita sus fuentes. Para saber cuánto tiene lo que comes, está la <a href="../calorias/">tabla de calorías de platos españoles</a>.</p>""",
            "disclaimer": "Orientativo, no sustituye a un profesional sanitario."},
     "en": {"title": "Calorie, BMI, macro and water calculators",
            "desc": "Eight calculators, no sign-up: daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight, with the same formulas as the app.",
-           "h1": "Calorie, BMI and macro calculators",
-           "lead": "Eight calculators for the questions that come before any diet. They work here, in the page, with no sign-up and nothing sent anywhere, and give the same numbers as the Fotocal app.",
-           "go": "Calculate →",
+           "h1": "Work it out in seconds, free and with no sign-up",
+           "lead": "Eight calculators for calories, BMI, macros and more. Type in your details and get the result straight away. Nothing is sent anywhere, and they give the same numbers as the Fotocal app.",
+           "quick": "Try it now: your BMI", "all": "All eight calculators",
            "body": """
       <h2>Which order to use them in</h2>
-      <p>First <a href="calorias-diarias/">daily calories</a>, the base for everything else. To lose fat, then the <a href="deficit-calorico/">calorie deficit</a>, which tells you how much to cut and how long it takes. <a href="proteinas/">Protein</a> and <a href="macros/">macros</a> split those calories. <a href="imc/">BMI</a> and <a href="peso-saludable/">healthy weight</a> show where you stand; <a href="tmb/">BMR</a> explains where your energy use comes from, and <a href="agua/">water</a> tells you how much to drink.</p>
+      <p>Start with <a href="calorias-diarias/">daily calories</a>: it is the base for everything else. To lose fat, go on to the <a href="deficit-calorico/">calorie deficit</a>, which tells you how much to cut and how long it takes. <a href="proteinas/">Protein</a> and <a href="macros/">macros</a> split those calories. <a href="imc/">BMI</a> and <a href="peso-saludable/">healthy weight</a> show where you stand. <a href="tmb/">BMR</a> explains where your energy use comes from, and <a href="agua/">water</a> how much to drink.</p>
       <h2>Where these numbers come from</h2>
-      <p>From the same formulas the Fotocal app uses: Mifflin-St Jeor (1990) for metabolism, the WHO BMI bands, and EFSA references for protein and water. Each calculator explains its formula with a worked example and cites its sources. For the numbers of what you eat, the <a href="../calorias/">table of calories in Spanish dishes</a> (in Spanish).</p>""",
+      <p>From the same formulas the Fotocal app uses: Mifflin-St Jeor (1990) for metabolism, the WHO BMI bands and EFSA references for protein and water. Each calculator explains its formula with a worked example and cites its sources. For what is in your food, see the <a href="../calorias/">table of calories in Spanish dishes</a>.</p>""",
            "disclaimer": "For guidance only; not a substitute for a health professional."},
 }
 
 
 def hub():
     meta, parts = {}, []
+    bmi = next(c for c in CALCS if c["kind"] == "bmi")
     for lang in LANGS:
         H, u = HUB[lang], UI[lang]
         title = titled(H["title"])
@@ -502,11 +544,18 @@ def hub():
         o.append('      <p class="calc-lead">%s</p>' % esc(H["lead"]))
         o.append('    </header>')
         o.append('    <div class="container">')
+        o.append('      <section class="calc-quick" aria-labelledby="quick-%s"><h2 class="calc-quick-h" id="quick-%s">%s</h2><div class="calc-quick-in">' % (lang, lang, H["quick"]))
+        o.append(form("bmi", lang, "imc", mini=True))
+        o.append(result(bmi, lang, mini=True))
+        o.append('      </div></section>')
+        o.append('      <h2 class="calc-cards-h">%s</h2>' % H["all"])
         o.append('      <ul class="calc-cards">')
         for c in CALCS:
-            o.append('        <li><a class="calc-card" href="%s/"><span class="calc-card-ico">%s</span><strong>%s</strong><span class="calc-card-t">%s</span><span class="calc-card-go">%s</span></a></li>'
-                     % (c["slug"], icon(c["icon"]), esc(c[lang]["h1"]), esc(c[lang]["card"]), H["go"]))
+            o.append('        <li><a class="calc-card" href="%s/"><span class="calc-card-ico">%s</span><strong>%s</strong><span class="calc-card-t">%s</span><span class="btn btn-cta calc-card-go">%s</span></a></li>'
+                     % (c["slug"], icon(c["icon"]), esc(c[lang]["h1"]), esc(c[lang]["card"]), u["use"]))
         o.append('      </ul>')
+        o.append(download_card(lang, "¿Quieres saber cuánto comes de verdad, sin pesar la comida?" if lang == "es" else "Want to know what you really eat, without weighing food?",
+                               BRIDGE_SUB[lang]["other"], play("hub")))
         o.append('      <div class="post-body calc-hub-text">%s\n      <p class="calc-disclaimer">%s</p>\n      </div>' % (H["body"], H["disclaimer"]))
         o.append('    </div>')
         o.append(ld_block({"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": H["desc"], "inLanguage": lang, "url": url, "publisher": ORG,
@@ -515,13 +564,13 @@ def hub():
             {"@type": "ListItem", "position": 1, "name": u["home"], "item": SITE}, {"@type": "ListItem", "position": 2, "name": u["calcs"], "item": url}]}))
         o.append('  </div>')
         parts.append("\n".join(o))
-    out = [head(1, meta, "calculadoras/"), '\n<main id="main" class="calc-main-wrap calc-hub">'] + parts + ["</main>", foot(1, calc=False)]
+    out = [head(1, meta, "calculadoras/"), '\n<main id="main" class="calc-main-wrap calc-hub">'] + parts + ["</main>", foot(1)]
     return "\n".join(out)
 
 
 def main():
-    global DEF
-    DEF = defaults()
+    global NEEDS
+    NEEDS = needs()
     if os.path.isdir(SRC):
         for base, dirs, files in os.walk(SRC, topdown=False):
             for f in files:

@@ -1,8 +1,5 @@
 {
  "slug": "calorias-para-perder-un-kilo",
- "langs": [
-  "es"
- ],
  "category": "calories",
  "date": "2026-11-05",
  "updated": "2026-11-05",
@@ -17,7 +14,16 @@
   "es": {
    "title": "¿Cuántas calorías hay que quemar para perder un kilo?",
    "desc": "Un kilo de grasa son unas 7.700 kcal: de dónde sale la cifra, por qué no es exacta y cuánto tarda en bajar un kilo con un déficit de 300, 500 o 750 al día."
+  },
+  "en": {
+   "title": "How Many Calories Must You Burn to Lose a Kilo?",
+   "desc": "A kilo of fat is about 7,700 kcal: where the figure comes from, why it isn't exact and how long a kilo takes with a deficit of 300, 500 or 750 a day."
   }
+ },
+ "en": {
+  "title": "How Many Calories Do You Need to Burn to Lose a Kilo? The 7,700 and What They Mean",
+  "lead": "The short answer: about 7,700 kcal per kilo of fat. The useful one: how many days that is with your deficit, why the first week is misleading and why the figure stops adding up over the months.",
+  "body": "<p>\"How many calories do I need to burn to lose 1 kilo?\" is one of the questions that comes up most when people search Google about counting calories. The figure that does the rounds, 7,700 kcal, is right as an order of magnitude and misleading if you use it as an exact sum. Here's where it comes from, how many days it takes with a normal deficit and what to really expect. For your own figure, <a href=\"../../calculadoras/deficit-calorico/\">the calorie deficit calculator</a> does the maths with your weight and your activity.</p>\n\n<h2>Where the 7,700 kcal comes from</h2>\n<p>The figure comes from a 1958 paper by Max Wishnofsky in the <em>American Journal of Clinical Nutrition</em>, which estimated that half a kilo (a pound) of fatty tissue is equivalent to about 3,500 kcal. Converted to kilos, about 7,700. Fatty tissue isn't pure fat: it contains water and some protein, which is why a kilo of body fat isn't the 9,000 kcal of a kilo of oil.</p>\n<p>It's the figure almost every calculator uses, <a href=\"../../calculadoras/\">Fotocal's</a> included, because it works for planning: it tells you how much of a deficit you need and roughly for how long.</p>\n\n<h2>How many days it takes, with normal deficits</h2>\n<ul>\n<li>A deficit of <strong>300 kcal a day</strong>: about <strong>26 days</strong> per kilo. Five kilos, about 18 weeks.</li>\n<li>A deficit of <strong>500 kcal a day</strong>: about <strong>15 days</strong> per kilo. Five kilos, about 11 weeks.</li>\n<li>A deficit of <strong>750 kcal a day</strong>: about <strong>10 days</strong> per kilo. Five kilos, about 7 weeks.</li>\n</ul>\n<p>What a 500 deficit looks like on the plate is in <a href=\"../deficit-500-calorias-dia/\">two real days of eating with 500 kcal less</a>. For almost everyone, 300 to 500 is the range you can keep up for months; above 25% of your expenditure, <a href=\"../how-fast-should-you-lose-weight/\">the pace stops being sustainable</a>.</p>\n\n<h2>Why the first week is misleading</h2>\n<p>In the first days of a diet the scales drop more than the 7,700 would suggest. It isn't fat: it's water. The body stores glycogen (its carbohydrate reserve) bound to about three times its weight in water, and when you eat less, that reserve is used up first. A kilo or a kilo and a half in the first week is normal and doesn't happen again. Judging your pace by that week leads to disappointment in the third.</p>\n\n<h2>Why the sums stop adding up over the months</h2>\n<p>The 7,700 kcal assume that your expenditure doesn't change. It does. A lighter body burns less, and it also moves a little less without realising. The researcher Kevin Hall and his team measured this in a model published in <em>The Lancet</em> in 2011: every 10 kcal a day less eventually takes off about 0.45 kg, but half of that loss takes around a year and almost all of it, about three. Put simply: the deficit that worked in January is smaller in May, even if you eat the same.</p>\n<p>That's why it's worth <a href=\"../../calculadoras/calorias-diarias/\">recalculating your calories</a> every 4 to 6 kilos lost, and why <a href=\"../weight-loss-plateaus/\">plateaus</a> happen: often the deficit has simply closed.</p>\n\n<h2>And if you burn it off with exercise</h2>\n<p>Burning 7,700 kcal through exercise alone is much harder than not eating them. Thirty minutes of hard running is about 300 to 400 kcal and thirty of brisk walking, 120 to 200, according to <a href=\"../how-many-calories-does-exercise-burn/\">the realistic figures for calories burned by exercise</a>. A kilo would be about twenty half-hour runs without eating a single extra calorie. Exercise helps (it protects muscle and adds some expenditure), but the deficit is mostly made on the plate.</p>\n\n<h2>How to use the figure without obsessing</h2>\n<p>The 7,700 kcal are good for two things: choosing a reasonable deficit and not expecting miracles. Set the deficit with the calculator, log what you eat for a few weeks and look at your weekly average weight, not a single day's. To log without weighing, a photo of the plate gives you the calories and macros instantly; the free plan includes 2 AI scans and 1 voice log a day, with the barcode scanner and Coach Kal unlimited, and no card required.</p>\n\n<h2>Key takeaways</h2>\n<ul>\n<li>A kilo of fat is about 7,700 kcal (Wishnofsky, 1958): useful for planning, not as an exact sum.</li>\n<li>With a daily deficit of 500 kcal, a kilo takes about two weeks; with 300, nearly four.</li>\n<li>The first week drops more because of water; over the months it drops less because your expenditure falls.</li>\n<li>Recalculate every 4 to 6 kilos lost and judge by the weekly average.</li>\n</ul>"
  },
  "es": {
   "title": "¿Cuántas calorías hay que quemar para perder un kilo? Las 7.700 y lo que significan",
@@ -37,6 +43,20 @@
    {
     "q": "¿Por qué la primera semana de dieta se pierde tanto peso?",
     "a": "Porque es sobre todo agua. El cuerpo gasta primero el glucógeno, que va unido a unas tres veces su peso en agua. Un kilo o kilo y medio la primera semana es normal; a partir de ahí el ritmo se acerca al que marca tu déficit."
+   }
+  ],
+  "en": [
+   {
+    "q": "How many calories do you need to burn to lose a kilo?",
+    "a": "About 7,700 kcal of deficit per kilo of fat: the classic figure of 3,500 kcal per pound (Wishnofsky, 1958) converted to kilos. It's useful for planning; in practice, you lose more in the first week because of water, and somewhat less as the months go by."
+   },
+   {
+    "q": "How long does it take to lose a kilo?",
+    "a": "With a deficit of 500 kcal a day, about two weeks (15 days); with 300, about 26 days; with 750, about 10. Going faster usually costs muscle and hunger, and the weight tends to come back."
+   },
+   {
+    "q": "Why do you lose so much weight in the first week of a diet?",
+    "a": "Because it is mostly water. The body uses up glycogen first, and glycogen is bound to about three times its weight in water. A kilo or a kilo and a half in the first week is normal; after that the pace gets closer to what your deficit sets."
    }
   ]
  }

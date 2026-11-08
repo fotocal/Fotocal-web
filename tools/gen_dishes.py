@@ -121,6 +121,10 @@ def figures(app_id):
     if not out["composed"]:
         out.update(grams=h["servingGrams"], kcal=r0(h["kcal"]), protein=h["protein_g"], carbs=h["carbs_g"], fat=h["fat_g"])
     g = out["grams"]
+    # ONE weight for both columns (07-11-2026: paella showed "300 g, 515 kcal"
+    # next to "168 kcal per 100 g", because the 515 kcal are the sum of 307 g
+    # of ingredients). The serving shown is the weight the kcal belong to.
+    out["serving_g"] = g
     out["per100"] = r0(out["kcal"] / g * 100)
     out["per100_p"] = r1(out["protein"] / g * 100)
     out["per100_c"] = r1(out["carbs"] / g * 100)
@@ -278,6 +282,58 @@ APP_ASIDE = """
       </aside>""" % PLAY
 
 
+PLAY_ICON = ('<svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true">'
+             '<path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/>'
+             '<path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/>'
+             '<path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/>'
+             '<path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg>')
+DL = {
+    "es": {"btn": "Descárgala gratis", "trust": "Gratis · sin tarjeta · Android",
+           "limits": "Plan gratis: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite.",
+           "aria": "Descárgala gratis en Google Play"},
+    "en": {"btn": "Get it free", "trust": "Free · no card · Android",
+           "limits": "Free plan: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal.",
+           "aria": "Get it free on Google Play"},
+}
+
+
+def download_card(lang, headline, sub, link, extra_class=""):
+    """The app download card (lang-ux 4b, 2026-11): the app icon, a headline
+    (personalised with the result on the calculators), one line, a big brand
+    button with the Google Play mark, and the trust line. The free plan's
+    limits sit on the same card, as every "gratis" on the site must."""
+    t = DL[lang]
+    return ("\n      <aside class=\"dl-card%s\">"
+            "\n        <img class=\"dl-logo\" src=\"/assets/img/logo-96.png\" width=\"60\" height=\"60\" alt=\"\" decoding=\"async\">"
+            "\n        <div class=\"dl-body\">"
+            "\n          <p class=\"dl-h\">%s</p>"
+            "\n          <p class=\"dl-sub\">%s</p>"
+            "\n          <a class=\"btn btn-cta dl-btn\" href=\"%s\" target=\"_blank\" rel=\"noopener\" aria-label=\"%s\">%s<span>%s</span></a>"
+            "\n          <p class=\"dl-trust\">%s</p>"
+            "\n          <p class=\"dl-limits\">%s</p>"
+            "\n        </div>"
+            "\n      </aside>") % ((" " + extra_class) if extra_class else "", headline, sub, esc(link), t["aria"], PLAY_ICON, t["btn"], t["trust"], t["limits"])
+
+
+def bilingual(es_page, en_title, en_desc, en_ld, en_main):
+    """One source page, two trees: the Spanish page as rendered so far, plus
+    its English twin. The structured data moves from the head into each
+    language's block, so the English tree never carries Spanish schema."""
+    m = re.search(r"<!--# meta (\{.*?\}) -->", es_page)
+    meta = json.loads(m.group(1))
+    meta["en"] = {"title": en_title, "desc": en_desc}
+    es_page = es_page.replace(m.group(0), "<!--# meta %s -->" % json.dumps(meta, ensure_ascii=False), 1)
+    lds = re.findall(r'  <script type="application/ld\+json">.*?</script>\n', es_page, re.S)
+    for x in lds:
+        es_page = es_page.replace(x, "", 1)
+    a = es_page.index('\n<main id="main">')
+    b = es_page.index("</main>", a) + len("</main>")
+    es_main = es_page[a:b]
+    both = ('\n<div class="lang-root" data-lang-block="es">\n%s%s\n</div>\n<div class="lang-root" data-lang-block="en">\n%s\n%s\n</div>'
+            % ("".join(lds), es_main, en_ld, en_main))
+    return es_page[:a] + both + es_page[b:]
+
+
 def dish_aside(d):
     """The app card on a dish page: 'Haz una foto de tu <plato> y Fotocal lo
     calcula' (tools-seo brief, 2026-11), same free-plan limits as APP_ASIDE."""
@@ -289,11 +345,11 @@ def dish_aside(d):
             .replace('<a href="%s" target="_blank"' % PLAY, '<a href="%s" target="_blank"' % esc(link)))
 
 
-def nutrition_ld(d, fig, url):
+def nutrition_ld(d, fig, url, name=None, lang="es", serving=None):
     """MenuItem + NutritionInformation for one serving, the app's figures."""
     dot = lambda x: ("%.1f" % x).rstrip("0").rstrip(".")   # machine-readable: a decimal point, no thousands separator
     g = lambda x: "%s g" % dot(x)
-    nut = {"@type": "NutritionInformation", "servingSize": "%s (%s g)" % (fig["serving_label"], dot(fig["serving_g"])),
+    nut = {"@type": "NutritionInformation", "servingSize": "%s (%s g)" % (serving or fig["serving_label"], dot(fig["serving_g"])),
            "calories": "%s kcal" % dot(fig["kcal"]), "proteinContent": g(fig["protein"]),
            "carbohydrateContent": g(fig["carbs"]), "fatContent": g(fig["fat"])}
     if fig["satfat"] is not None:
@@ -304,8 +360,8 @@ def nutrition_ld(d, fig, url):
         nut["fiberContent"] = g(fig["fiber"])
     if fig.get("salt") is not None:
         nut["sodiumContent"] = "%d mg" % round(fig["salt"] / 2.5 * 1000)
-    return ld_block({"@context": "https://schema.org", "@type": "MenuItem", "name": cap(d["name"]), "url": url,
-                     "inLanguage": "es", "nutrition": nut})
+    return ld_block({"@context": "https://schema.org", "@type": "MenuItem", "name": name or cap(d["name"]), "url": url,
+                     "inLanguage": lang, "nutrition": nut})
 
 
 # ── one dish page ────────────────────────────────────────────────────
@@ -470,7 +526,9 @@ def dish_page(d, ready_by_app):
         o('      </div>')
     o('      </div>')  # post-body
 
-    o(dish_aside(d))
+    o(download_card("es", "Haz una foto de tu%s %s y Fotocal lo calcula" % ("s" if d["article"] in ("las", "los") else "", esc(d["name"])),
+                    "Fotocal estima la ración a partir de una foto, con las cifras de esta página, y te deja corregir cada ingrediente y sus gramos antes de guardar.",
+                    PLAY + "&utm_source=web&utm_medium=dish&utm_campaign=" + d["slug"]))
 
     # sources
     o('      <section class="dp-src reveal" id="fuentes">\n        <h2>De dónde salen estas cifras</h2>')
@@ -589,12 +647,8 @@ def hub_page(ready):
     o('        <p class="post-lead reveal">¿Cuántas calorías tiene un plato? Una tabla con lo que de verdad se come en España: la ración tal como se sirve, sus calorías, y las de 100 g para poder comparar. Cada plato tiene su página, con el reparto entre proteínas, hidratos y grasas, qué pesa una ración y con qué se parece.</p>')
     o('      </div>\n    </header>\n    <div class="container-narrow">')
     o('      <div class="post-body reveal">')
-    o('      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Plato</th><th scope="col">Ración</th><th scope="col">kcal / ración</th><th scope="col">kcal / 100 g</th><th scope="col">Prot.</th><th scope="col">Hidr.</th><th scope="col">Grasas</th></tr></thead><tbody>')
-    for d in sorted(ready, key=lambda x: x["name"]):
-        f = figures(d["app_id"])
-        o('        <tr><td><a href="%s/">%s</a></td><td>%s g</td><td class="hl">%s</td><td>%s</td><td>%s g</td><td>%s g</td><td>%s g</td></tr>'
-          % (d["slug"], esc(cap(d["name"])), n(f["serving_g"]), n(f["kcal"]), n(f["per100"]), n(f["protein"]), n(f["carbs"]), n(f["fat"])))
-    o('      </tbody></table></div>')
+    import dishes_en
+    o(dishes_en.group_tables(ready, "es"))
     o('      <p class="dp-table-note">Por ración: la que fija la app Fotocal para cada plato, en gramos tal como se sirve. Las cifras salen de bases de datos públicas (USDA FoodData Central y CIQUAL 2025) sumadas ingrediente a ingrediente; cada página dice exactamente de qué filas.</p>')
     o('      <h2>Cómo leer la tabla</h2>')
     o('      <p>La columna que importa para el día a día es la de la ración: es lo que apuntas si te comes el plato. La de 100 g sirve para comparar platos entre sí y para calcular una ración distinta: pesa lo que tienes, multiplica por la cifra y divide entre 100.</p>')
@@ -605,10 +659,11 @@ def hub_page(ready):
       '<li>Las sopas frías son casi gratis: un bol de gazpacho tiene menos calorías que una tostada con aceite.</li></ul>')
     o('      <p>¿Quieres toda la base de datos de la app en una sola tabla, para consultar o imprimir? Está en la <a href="tabla-de-calorias/">tabla de calorías de alimentos y platos españoles</a>, con las %d entradas agrupadas por momento del día.</p>' % len(HAND))
     o('      <h2>Para seguir</h2>')
-    o('      <p>Si la pregunta de fondo es cuánto deberías comer tú, y no cuánto tiene el plato, empieza por <a href="../calculadoras/">las cuatro calculadoras</a>: la de <a href="../calculadoras/calorias-diarias/">calorías diarias</a> y la de <a href="../calculadoras/deficit-calorico/">déficit calórico</a> son las dos primeras.</p>')
+    o('      <p>Si la pregunta de fondo es cuánto deberías comer tú, y no cuánto tiene el plato, empieza por <a href="../calculadoras/">las ocho calculadoras</a>: la de <a href="../calculadoras/calorias-diarias/">calorías diarias</a> y la de <a href="../calculadoras/deficit-calorico/">déficit calórico</a> son las dos primeras.</p>')
     o('      <p>Con estas cifras ya sumadas, en el blog: <a href="../blog/calorias-menu-del-dia/">cuánto suma un menú del día, pieza a pieza</a>, <a href="../blog/calorias-de-las-tapas/">lo que cuesta una tarde de tapas</a>, <a href="../blog/best-foods-for-weight-loss/">los alimentos que sacian con menos calorías</a>, <a href="../blog/how-to-count-calories-accurately/">cómo contar calorías con precisión</a>, <a href="../blog/common-calorie-counting-mistakes/">los errores que más se repiten al contar</a> y <a href="../blog/track-calories-without-weighing/">cómo contar sin pesar cada comida</a>.</p>')
     o('      </div>')
-    o(APP_ASIDE.replace("{UP}", "../"))
+    o(download_card("es", "¿Quieres las calorías de tu plato, no las de la media?", "Haz una foto y Fotocal cuenta las calorías por ti, con las cifras de estas páginas.",
+                    PLAY + "&utm_source=web&utm_medium=dish&utm_campaign=hub"))
     o('      <p class="post-disclaimer reveal">Información general sobre alimentos, no consejo médico ni dietético.</p>')
     o('    </div>\n  </article>\n</main>')
     o(foot(1))
@@ -631,16 +686,18 @@ def main():
             for dd in dirs:
                 os.rmdir(os.path.join(base, dd))
     os.makedirs(SRC, exist_ok=True)
+    import dishes_en
     for d in ready:
         page, fig = dish_page(d, ready_by_app)
+        page = bilingual(page, *dishes_en.dish(d, fig, ready_by_app))
         p = os.path.join(SRC, d["slug"])
         os.makedirs(p, exist_ok=True)
         open(os.path.join(p, "index.html"), "w", encoding="utf-8").write(page)
         print("  /calorias/%s/  %s g -> %d kcal (%d/100 g)%s" % (d["slug"], n(fig["serving_g"]), fig["kcal"], fig["per100"], "" if fig["composed"] else ("  [hand figure; recipe rejected >25%]" if fig["rejected"] else "  [hand figure, no recipe]")))
-    open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(hub_page(ready))
+    open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(bilingual(hub_page(ready), *dishes_en.hub(ready)))
     tdir = os.path.join(SRC, "tabla-de-calorias"); os.makedirs(tdir, exist_ok=True)
-    open(os.path.join(tdir, "index.html"), "w", encoding="utf-8").write(table_page(ready_by_app))
-    print("%d dish pages + hub -> src/calorias/" % len(ready))
+    open(os.path.join(tdir, "index.html"), "w", encoding="utf-8").write(bilingual(table_page(ready_by_app), *dishes_en.table(ready_by_app)))
+    print("%d dish pages + hub + table -> src/calorias/ (es + en)" % len(ready))
 
 
 if __name__ == "__main__":

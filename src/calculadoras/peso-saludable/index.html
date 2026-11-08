@@ -47,32 +47,42 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="healthy" novalidate aria-label="Calculadora">
+      <form class="calc" data-calc="healthy" data-out="out-es" novalidate aria-label="Calculadora">
         <div class="calc-grid">
-          <div class="calc-field"><label for="pes-height-es">Altura (cm)</label><input id="pes-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" value="165" data-dec=","></div>
-          <div class="calc-field"><label for="pes-weight-es">Tu peso (kg, opcional)</label><input id="pes-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70" data-dec=","></div>
+          <div class="calc-field"><label for="pes-height-es">Altura (cm)</label><input id="pes-height-es" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 170" aria-describedby="pes-height-es-err" data-dec=","><p class="calc-err" id="pes-height-es-err" data-err-for="height" hidden>Introduce una altura entre 130 y 230 cm.</p></div>
+          <div class="calc-field"><label for="pes-weight-es">Tu peso (opcional)</label><input id="pes-weight-es" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="ej. 70" aria-describedby="pes-weight-es-err" data-dec=","><p class="calc-err" id="pes-weight-es-err" data-err-for="weight" hidden>Introduce un peso entre 35 y 250 kg.</p></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calcular</button>
+        <details class="calc-how"><summary>¿Cómo se calcula?</summary><p>El detalle de la fórmula y un ejemplo resuelto están debajo de la calculadora.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="healthy" aria-labelledby="res-es">
-        <h2 class="calc-out-h" id="res-es">Tu resultado</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">50–68</b> <span>kg, tu rango de peso saludable</span></p>
+      <section class="calc-out" id="out-es" data-state="empty" tabindex="-1" aria-labelledby="out-es-h">
+        <h2 class="calc-out-h" id="out-es-h">Tu resultado</h2>
+        <p class="calc-empty">Rellena tus datos y pulsa <b>Calcular</b>. El resultado aparecerá aquí.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>kg, tu rango de peso saludable</span></p>
         <div class="calc-rows">
-          <div class="calc-row"><span>Tu IMC actual</span><b><span data-out="bmi">25,7</span></b></div>
-          <div class="calc-row"><span>Mitad del rango (IMC 22)</span><b><span data-out="mid">60</span> kg</b></div>
+          <div class="calc-row"><span>Tu IMC</span><b><span data-out="bmi">—</span></b></div>
+          <div class="calc-row"><span>Peso en el centro del rango</span><b><span data-out="mid">—</span> kg</b></div>
         </div>
         <p class="calc-warn" data-warn="inside" hidden>Estás dentro del rango saludable para tu altura.</p>
-        <p class="calc-warn" data-warn="over">Estás <b data-out="gap">2,0</b> kg por encima del límite alto del rango.</p>
-        <p class="calc-warn" data-warn="under" hidden>Estás <b data-out="gap">2,0</b> kg por debajo del límite bajo del rango: si no es tu constitución de siempre, habla con un profesional sanitario.</p>
+        <p class="calc-warn" data-warn="over" hidden>Estás <span data-warn="gap-kg">unos <b data-out="gap">3</b> kg</span><span data-warn="gap-small">menos de 1 kg</span> por encima del rango.</p>
+        <p class="calc-warn" data-warn="under" hidden>Estás <span data-warn="gap-kg">unos <b data-out="gap">3</b> kg</span><span data-warn="gap-small">menos de 1 kg</span> por debajo del rango. Si no es tu constitución de siempre, habla con un profesional sanitario.</p>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copiar enlace con estos datos</span><span class="calc-share-b">Enlace copiado</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">¿Quieres acercarte a tu rango sin pesar comida?</p>
-          <p>Haz una foto de cada plato y Fotocal cuenta las calorías por ti.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable" target="_blank" rel="noopener">Descárgala gratis en Google Play</a>
-          <p class="calc-bridge-note">Plan gratis, sin tarjeta: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite. Solo Android.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">¿Quieres acercarte a tu rango sin pesar la comida?</p>
+          <p class="dl-sub">Haz una foto de cada plato y Fotocal cuenta las calorías por ti.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable" target="_blank" rel="noopener" aria-label="Descárgala gratis en Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Descárgala gratis</span></a>
+          <p class="dl-trust">Gratis · sin tarjeta · Android</p>
+          <p class="dl-limits">Plan gratis: 2 escaneos con IA al día, 1 registro por voz al día, código de barras y Coach Kal sin límite.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      </div>
+     <p class="calc-disclaimer">Orientativo, no sustituye a un profesional sanitario. No vale para menores de 18 años, embarazo o lactancia, ni si has tenido un trastorno de la conducta alimentaria.</p>
      <div class="calc-text post-body">
 
       <h2 id="como">Cómo se calcula</h2>
@@ -87,14 +97,14 @@
       <p>Si estás por encima, el primer objetivo razonable es el límite alto del rango, o perder un 5-10 % de tu peso, que ya mejora la salud. Calcula tu <a href="../deficit-calorico/">déficit</a> con ese objetivo y te dirá cuánto tardarías a un ritmo sensato. Platos que ayudan sin renunciar a comer bien: <a href="../../calorias/pulpo-a-la-gallega/">pulpo a la gallega</a>, <a href="../../calorias/gazpacho/">gazpacho</a>, <a href="../../calorias/lentejas-estofadas/">lentejas</a>. Si estás por debajo, habla con un profesional sanitario antes de cambiar tu dieta.</p>
       <h2 id="faq">Preguntas frecuentes</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>¿Cuál es mi peso ideal según mi altura?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No hay un único peso ideal: hay un rango saludable, el que da un IMC de 18,5 a 24,9. Para 1,65 m va de 50 a 68 kg. Dentro de ese rango, el mejor para ti depende de tu musculatura y complexión.</p></details>
+        <details class="faq-item"><summary><span>¿Cuál es mi peso ideal según mi altura?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No hay un único peso ideal: hay un rango saludable, el que da un IMC de 18,5 a 24,9. Para 1,65 m va de 50 a 68 kg. Dentro de ese rango, el mejor para ti depende de tu musculatura y complexión.</p></details>
         <details class="faq-item"><summary><span>¿Sirve si soy muy musculado?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Menos. Con mucha masa muscular puedes estar por encima del rango con poca grasa. En ese caso, el perímetro de cintura o una medición de composición corporal dicen más.</p></details>
         <details class="faq-item"><summary><span>¿Y para mayores de 65?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Los puntos de corte se discuten: un IMC algo más alto, hasta 27, no va asociado a peor salud en personas mayores. Consulta con tu médico antes de proponerte perder peso.</p></details>
         <details class="faq-item"><summary><span>¿Cuánto tardaría en llegar al rango?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Depende de cuántos kilos y del ritmo: a medio kilo por semana, unos 8 kg son unas 16 semanas. La <a href="../deficit-calorico/">calculadora de déficit calórico</a> lo calcula con tus datos.</p></details>
       </div>
       <section class="dp-src" id="fuentes"><h2>Fuentes</h2><ul><li>Organización Mundial de la Salud. <em>Obesidad y sobrepeso</em>, nota descriptiva, y clasificación del IMC para adultos.</li></ul></section>
-      <nav class="dp-related" aria-label="Seguir por aquí">
-        <h2>Seguir por aquí</h2>
+      <nav class="dp-related" aria-label="Más calculadoras y tablas">
+        <h2>Más calculadoras y tablas</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculadora</small><strong>Calculadora de calorías diarias</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculadora</small><strong>Calculadora de déficit calórico: mujer y hombre</strong></a>
@@ -111,7 +121,7 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de peso saludable", "url": "https://getfotocal.com/calculadoras/peso-saludable/", "description": "Calcula tu rango de peso saludable según tu altura: el que da un IMC de 18,5 a 24,9 (OMS). Un rango, no un único peso ideal, y lo que te separa de él.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de peso saludable", "url": "https://getfotocal.com/calculadoras/peso-saludable/", "description": "Calcula tu rango de peso saludable según tu altura: el que da un IMC de 18,5 a 24,9 (OMS). Un rango, no un único peso ideal, y lo que te separa de él.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "es", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculadoras", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "Calculadora de peso saludable", "item": "https://getfotocal.com/calculadoras/peso-saludable/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Cuál es mi peso ideal según mi altura?", "acceptedAnswer": {"@type": "Answer", "text": "No hay un único peso ideal: hay un rango saludable, el que da un IMC de 18,5 a 24,9. Para 1,65 m va de 50 a 68 kg. Dentro de ese rango, el mejor para ti depende de tu musculatura y complexión."}}, {"@type": "Question", "name": "¿Sirve si soy muy musculado?", "acceptedAnswer": {"@type": "Answer", "text": "Menos. Con mucha masa muscular puedes estar por encima del rango con poca grasa. En ese caso, el perímetro de cintura o una medición de composición corporal dicen más."}}, {"@type": "Question", "name": "¿Y para mayores de 65?", "acceptedAnswer": {"@type": "Answer", "text": "Los puntos de corte se discuten: un IMC algo más alto, hasta 27, no va asociado a peor salud en personas mayores. Consulta con tu médico antes de proponerte perder peso."}}, {"@type": "Question", "name": "¿Cuánto tardaría en llegar al rango?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de cuántos kilos y del ritmo: a medio kilo por semana, unos 8 kg son unas 16 semanas. La calculadora de déficit calórico lo calcula con tus datos."}}]}</script>
   </div>
@@ -123,32 +133,42 @@
     </header>
     <div class="container calc-page">
      <div class="calc-tool">
-      <form class="calc" data-calc="healthy" novalidate aria-label="Calculator">
+      <form class="calc" data-calc="healthy" data-out="out-en" novalidate aria-label="Calculator">
         <div class="calc-grid">
-          <div class="calc-field"><label for="pes-height-en">Height (cm)</label><input id="pes-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" value="165"></div>
-          <div class="calc-field"><label for="pes-weight-en">Your weight (kg, optional)</label><input id="pes-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" value="70"></div>
+          <div class="calc-field"><label for="pes-height-en">Height (cm)</label><input id="pes-height-en" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 170" aria-describedby="pes-height-en-err"><p class="calc-err" id="pes-height-en-err" data-err-for="height" hidden>Enter a height between 130 and 230 cm.</p></div>
+          <div class="calc-field"><label for="pes-weight-en">Your weight (optional)</label><input id="pes-weight-en" name="weight" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 70" aria-describedby="pes-weight-en-err"><p class="calc-err" id="pes-weight-en-err" data-err-for="weight" hidden>Enter a weight between 35 and 250 kg.</p></div>
         </div>
+        <button class="btn btn-cta calc-go" type="submit">Calculate</button>
+        <details class="calc-how"><summary>How is it worked out?</summary><p>The formula and a worked example are below the calculator.</p></details>
       </form>
-      <section class="calc-out" data-calc-out="healthy" aria-labelledby="res-en">
-        <h2 class="calc-out-h" id="res-en">Your result</h2>
-        <p class="calc-main" aria-live="polite"><b data-out="main">50–68</b> <span>kg, your healthy weight range</span></p>
+      <section class="calc-out" id="out-en" data-state="empty" tabindex="-1" aria-labelledby="out-en-h">
+        <h2 class="calc-out-h" id="out-en-h">Your result</h2>
+        <p class="calc-empty">Fill in your details and tap <b>Calculate</b>. Your result appears here.</p>
+        <div class="calc-res">
+        <p class="calc-main" aria-live="polite"><b data-out="main">—</b> <span>kg, your healthy weight range</span></p>
         <div class="calc-rows">
-          <div class="calc-row"><span>Your current BMI</span><b><span data-out="bmi">25.7</span></b></div>
-          <div class="calc-row"><span>Middle of the range (BMI 22)</span><b><span data-out="mid">60</span> kg</b></div>
+          <div class="calc-row"><span>Your BMI</span><b><span data-out="bmi">—</span></b></div>
+          <div class="calc-row"><span>Weight in the middle of the range</span><b><span data-out="mid">—</span> kg</b></div>
         </div>
         <p class="calc-warn" data-warn="inside" hidden>You are inside the healthy range for your height.</p>
-        <p class="calc-warn" data-warn="over">You are <b data-out="gap">2.0</b> kg above the top of the range.</p>
-        <p class="calc-warn" data-warn="under" hidden>You are <b data-out="gap">2.0</b> kg below the bottom of the range: if that is not how you have always been, talk to a health professional.</p>
+        <p class="calc-warn" data-warn="over" hidden>You are <span data-warn="gap-kg">about <b data-out="gap">3</b> kg</span><span data-warn="gap-small">less than 1 kg</span> above the range.</p>
+        <p class="calc-warn" data-warn="under" hidden>You are <span data-warn="gap-kg">about <b data-out="gap">3</b> kg</span><span data-warn="gap-small">less than 1 kg</span> below the range. If that is not how you have always been, talk to a health professional.</p>
         <button class="calc-share" type="button" data-calc-share><span class="calc-share-a">Copy a link with these numbers</span><span class="calc-share-b">Link copied</span></button>
-        <div class="calc-bridge">
-          <p class="calc-bridge-h">Want to move towards your range without weighing food?</p>
-          <p>Snap a photo of each dish and Fotocal counts the calories for you.</p>
-          <a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable" target="_blank" rel="noopener">Get it free on Google Play</a>
-          <p class="calc-bridge-note">Free plan, no card: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal. Android only.</p>
+
+      <aside class="dl-card dl-in-result">
+        <img class="dl-logo" src="/assets/img/logo-96.png" width="60" height="60" alt="" decoding="async">
+        <div class="dl-body">
+          <p class="dl-h">Want to move towards your range without weighing food?</p>
+          <p class="dl-sub">Snap a photo of each dish and Fotocal counts the calories for you.</p>
+          <a class="btn btn-cta dl-btn" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable" target="_blank" rel="noopener" aria-label="Get it free on Google Play"><svg class="dl-play" viewBox="0 0 32 34" aria-hidden="true"><path d="M2.6 1.2C1.9 1.9 1.5 3 1.5 4.4v25.2c0 1.4.4 2.5 1.1 3.2l.2.2 14.1-14.1v-.6L2.8 1l-.2.2z" fill="#00D7FE"/><path d="M21.6 21.6l-4.7-4.7v-.6l4.7-4.7.1.1 5.6 3.2c1.6.9 1.6 2.4 0 3.3l-5.6 3.2-.1.2z" fill="#FFCE00"/><path d="M21.7 21.5L16.9 16.7 2.6 31 2.6 31c.5.6 1.4.6 2.4.1l16.7-9.6" fill="#FF3A44"/><path d="M21.7 12.1L5 2.5C4 1.9 3.1 2 2.6 2.6l14.3 14.1 4.8-4.6z" fill="#00F076"/></svg><span>Get it free</span></a>
+          <p class="dl-trust">Free · no card · Android</p>
+          <p class="dl-limits">Free plan: 2 AI scans a day, 1 voice log a day, unlimited barcode scanner and Coach Kal.</p>
+        </div>
+      </aside>
         </div>
       </section>
-      <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      </div>
+     <p class="calc-disclaimer">For guidance only; not a substitute for a health professional. Not for under-18s, pregnancy or breastfeeding, or if you have had an eating disorder.</p>
      <div class="calc-text post-body">
 
       <h2 id="how">How it is calculated</h2>
@@ -163,14 +183,14 @@
       <p>If you are above it, a reasonable first goal is the top of the range, or losing 5-10% of your weight, which already improves health. Work out your <a href="../deficit-calorico/">deficit</a> with that goal and it will tell you how long it takes at a sensible pace. Spanish dishes that help without giving up good food: <a href="../../calorias/pulpo-a-la-gallega/">Galician-style octopus</a>, <a href="../../calorias/gazpacho/">gazpacho</a>, <a href="../../calorias/lentejas-estofadas/">lentil stew</a> (pages in Spanish). If you are below it, talk to a health professional before changing your diet.</p>
       <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-list">
-        <details class="faq-item" open><summary><span>What is my ideal weight for my height?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>There is no single ideal weight: there is a healthy range, the one that gives a BMI of 18.5 to 24.9. At 1.65 m it runs from 50 to 68 kg. Within it, what is best for you depends on your muscle and build.</p></details>
+        <details class="faq-item"><summary><span>What is my ideal weight for my height?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>There is no single ideal weight: there is a healthy range, the one that gives a BMI of 18.5 to 24.9. At 1.65 m it runs from 50 to 68 kg. Within it, what is best for you depends on your muscle and build.</p></details>
         <details class="faq-item"><summary><span>Does it work if I am very muscular?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Less well. With a lot of muscle you can be above the range with little fat. Waist size or a body composition measurement say more.</p></details>
         <details class="faq-item"><summary><span>What about over 65?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>The cut-offs are debated: a slightly higher BMI, up to 27, is not linked to worse health in older people. Talk to your doctor before setting out to lose weight.</p></details>
         <details class="faq-item"><summary><span>How long would it take to reach the range?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>It depends on how many kilos and the pace: at half a kilo a week, 8 kg is about 16 weeks. The <a href="../deficit-calorico/">calorie deficit calculator</a> works it out with your numbers.</p></details>
       </div>
       <section class="dp-src" id="sources"><h2>Sources</h2><ul><li>World Health Organization. <em>Obesity and overweight</em>, fact sheet, and the adult BMI classification.</li></ul></section>
-      <nav class="dp-related" aria-label="Keep going">
-        <h2>Keep going</h2>
+      <nav class="dp-related" aria-label="More calculators and tables">
+        <h2>More calculators and tables</h2>
         <div class="post-nav">
           <a class="post-nav-item" href="../calorias-diarias/"><small>Calculator</small><strong>Daily calorie calculator</strong></a>
           <a class="post-nav-item" href="../deficit-calorico/"><small>Calculator</small><strong>Calorie deficit calculator for women and men</strong></a>
@@ -179,7 +199,7 @@
           <a class="post-nav-item" href="../macros/"><small>Calculator</small><strong>Macro calculator</strong></a>
           <a class="post-nav-item" href="../agua/"><small>Calculator</small><strong>Water intake calculator</strong></a>
           <a class="post-nav-item" href="../tmb/"><small>Calculator</small><strong>BMR calculator (basal metabolic rate)</strong></a>
-          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g (in Spanish)</strong></a>
+          <a class="post-nav-item" href="../../calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g</strong></a>
           <a class="post-nav-item" href="../../blog/why-the-scale-is-not-the-whole-story/"><small>From the blog</small><strong>Why the Scale Isn’t the Whole Story</strong></a>
           <a class="post-nav-item" href="../../blog/how-to-lose-weight-sustainably/"><small>From the blog</small><strong>How to Lose Weight Sustainably (Without Crash Dieting)</strong></a>
           <a class="post-nav-item" href="../../blog/how-fast-should-you-lose-weight/"><small>From the blog</small><strong>How Fast Can You Lose Weight? The Safe Rate in Numbers</strong></a>
@@ -187,13 +207,13 @@
       </nav>
      </div>
     </div>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Healthy weight calculator", "url": "https://getfotocal.com/calculadoras/peso-saludable/", "description": "Your healthy weight range for your height: a BMI of 18.5 to 24.9 by WHO bands. A range, not one ideal weight, and how far you are from it.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-07", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Healthy weight calculator", "url": "https://getfotocal.com/calculadoras/peso-saludable/", "description": "Your healthy weight range for your height: a BMI of 18.5 to 24.9 by WHO bands. A range, not one ideal weight, and how far you are from it.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "datePublished": "2026-10-13", "dateModified": "2026-11-08", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://getfotocal.com/#org", "name": "Fotocal", "url": "https://getfotocal.com/", "logo": {"@type": "ImageObject", "url": "https://getfotocal.com/assets/img/logo.png"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getfotocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://getfotocal.com/calculadoras/"}, {"@type": "ListItem", "position": 3, "name": "Healthy weight calculator", "item": "https://getfotocal.com/calculadoras/peso-saludable/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is my ideal weight for my height?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single ideal weight: there is a healthy range, the one that gives a BMI of 18.5 to 24.9. At 1.65 m it runs from 50 to 68 kg. Within it, what is best for you depends on your muscle and build."}}, {"@type": "Question", "name": "Does it work if I am very muscular?", "acceptedAnswer": {"@type": "Answer", "text": "Less well. With a lot of muscle you can be above the range with little fat. Waist size or a body composition measurement say more."}}, {"@type": "Question", "name": "What about over 65?", "acceptedAnswer": {"@type": "Answer", "text": "The cut-offs are debated: a slightly higher BMI, up to 27, is not linked to worse health in older people. Talk to your doctor before setting out to lose weight."}}, {"@type": "Question", "name": "How long would it take to reach the range?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on how many kilos and the pace: at half a kilo a week, 8 kg is about 16 weeks. The calorie deficit calculator works it out with your numbers."}}]}</script>
   </div>
 </main>
-<div class="calc-sticky" data-lang-block="es"><span>Fotocal: haz una foto y cuenta las calorías</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable-sticky" target="_blank" rel="noopener">Descargar</a></div>
-<div class="calc-sticky" data-lang-block="en"><span>Fotocal: snap a photo, get the calories</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable-sticky" target="_blank" rel="noopener">Download</a></div>
+<div class="calc-sticky" data-lang-block="es"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal cuenta tus calorías con una foto</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable-sticky" target="_blank" rel="noopener">Descargar</a></div>
+<div class="calc-sticky" data-lang-block="en"><img src="/assets/img/logo-64.png" width="36" height="36" alt="" decoding="async"><span>Fotocal counts your calories from a photo</span><a class="btn btn-cta" href="https://play.google.com/store/apps/details?id=com.fotokal.app&amp;utm_source=web&amp;utm_medium=tool&amp;utm_campaign=peso-saludable-sticky" target="_blank" rel="noopener">Download</a></div>
 
 <div id="site-footer"></div>
 <script src="../../assets/js/i18n.js"></script>

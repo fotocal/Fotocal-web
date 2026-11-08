@@ -58,7 +58,10 @@
     if (goal === "lose") {
       var d = Math.min(paceKcal, tdee * 0.25);
       capped = d < paceKcal;
-      daily = Math.floor(tdee - d);
+      /* The app floors here; the site rounds, like every other number it
+         shows (07-11-2026: maintenance 2.798 next to a target of 2.247 read
+         as a 551 kcal deficit). At most 1 kcal from the app. */
+      daily = tdee - d;
     } else if (goal === "build_muscle") daily = tdee * 1.1;
     else if (goal === "gain") daily = Math.round(tdee + Math.min(paceKcal, 825));
     else daily = tdee;
@@ -142,7 +145,7 @@
       var p = plan(merge(i, { goal: "lose" }));
       var warn = [];
       if (!(i.target > 0) || i.target >= i.weight - 0.4) warn.push("notlose");
-      var deficit = Math.max(0, p.tdee - p.kcal);
+      var deficit = Math.max(0, Math.round(p.tdee) - p.kcal);
       var kgWeek = deficit * 7 / KCAL_PER_KG;
       var pct = kgWeek / i.weight * 100;
       var weeks = kgWeek > 0 && p.kgToGo < Infinity ? p.kgToGo / kgWeek : null;
@@ -198,14 +201,18 @@
     },
     healthy: function (i, L) {
       var hw = healthy(i.height), b = i.weight > 0 ? bmiOf(i.height, i.weight) : null;
+      var h2 = Math.pow(i.height / 100, 2), lo = 18.5 * h2, hi = 24.9 * h2;
       var warn = [], gap = 0;
+      /* against the exact limits, shown in whole kilos (07-11-2026: "2,0 kg
+         por encima" came from the rounded limit) */
       if (b != null) {
-        if (i.weight < hw.min) { warn.push("under"); gap = hw.min - i.weight; }
-        else if (i.weight > hw.max) { warn.push("over"); gap = i.weight - hw.max; }
+        if (i.weight < lo) { warn.push("under"); gap = lo - i.weight; }
+        else if (i.weight > hi) { warn.push("over"); gap = i.weight - hi; }
         else warn.push("inside");
+        if (warn[0] !== "inside") warn.push(gap < 1 ? "gap-small" : "gap-kg");
       }
       return { main: hw.min + "-" + hw.max, out: { main: fmt(hw.min, L) + "–" + fmt(hw.max, L), lo: fmt(hw.min, L), hi: fmt(hw.max, L),
-               bmi: b != null ? fmt(b, L, 1) : "—", gap: fmt(gap, L, 1), mid: fmt(Math.round(22 * Math.pow(i.height / 100, 2)), L) }, warn: warn };
+               bmi: b != null ? fmt(b, L, 1) : "—", gap: fmt(Math.round(gap), L), mid: fmt(Math.round(22 * Math.pow(i.height / 100, 2)), L) }, warn: warn };
     }
   };
 
@@ -273,15 +280,23 @@
   if (typeof module !== "undefined" && module.exports) { module.exports = CALC; return; }
   if (typeof document === "undefined") return;
 
-  /* ─── the page ─────────────────────────────────────────────────────── */
+  /* ─── the page (lang-ux round, 2026-11) ────────────────────────────────
+     Inputs start empty, with an example in the placeholder. "Calcular"
+     checks every field (a short message under each wrong one), shows the
+     result and, on a phone, scrolls it into view. From then on the result
+     follows every change; while a field is wrong the old result is dimmed,
+     never left looking current. A shared link (?peso=80&altura=175) or the
+     visitor's own earlier entries fill the form and show the result at once. */
   var KEY = "fc_calc";
   var SHARED = ["sex", "age", "height", "weight", "activity"];
+  var OPTIONAL = { bf: 1, kcal: 1 };
   function load() { try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { return {}; } }
   function save(d) { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) { /* storage blocked */ } }
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function fromUrl() {
-    var q = {}, s = location.search.replace(/^\?/, "").split("&");
-    s.forEach(function (kv) {
+    var q = {};
+    location.search.replace(/^\?/, "").split("&").forEach(function (kv) {
       if (!kv) return;
       var p = kv.split("="), name = decodeURIComponent(p[0] || "").toLowerCase(), val = decodeURIComponent((p[1] || "").replace(/\+/g, " "));
       ["es", "en"].forEach(function (l) { for (var k in PARAM[l]) if (PARAM[l][k] === name) q[k] = val; });
@@ -289,63 +304,76 @@
     return q;
   }
 
-  function field(form, key) { return form.elements[key]; }
+  function isRadio(el) { return el && el.length && el[0] && el[0].type === "radio"; }
 
   function setField(form, key, v) {
-    var el = field(form, key);
+    var el = form.elements[key];
     if (!el || v == null) return;
-    if (el.length && el[0] && el[0].type === "radio") {
-      for (var j = 0; j < el.length; j++) el[j].checked = el[j].value === String(v);
-    } else if (el.tagName === "SELECT") {
-      var sv = String(v);
-      for (var o = 0; o < el.options.length; o++) if (parseFloat(el.options[o].value) === parseFloat(sv) || el.options[o].value === sv) el.value = el.options[o].value;
-    } else {
-      el.value = String(v).replace(".", el.getAttribute("data-dec") === "," ? "," : ".");
-    }
+    if (isRadio(el)) { for (var j = 0; j < el.length; j++) el[j].checked = el[j].value === String(v); }
+    else if (el.tagName === "SELECT") {
+      for (var o = 0; o < el.options.length; o++) if (el.options[o].value !== "" && (el.options[o].value === String(v) || parseFloat(el.options[o].value) === parseFloat(v))) el.value = el.options[o].value;
+    } else el.value = String(v).replace(".", el.getAttribute("data-dec") === "," ? "," : ".");
   }
 
-  function readField(form, key) {
-    var el = field(form, key);
-    if (!el) return null;
-    var v = (el.length && el[0] && el[0].type === "radio")
-      ? (form.querySelector('input[name="' + key + '"]:checked') || {}).value
-      : el.value;
-    return clean(key, v);
+  function rawOf(form, key) {
+    var el = form.elements[key];
+    if (!el) return "";
+    if (isRadio(el)) { var c = form.querySelector('input[name="' + key + '"]:checked'); return c ? c.value : ""; }
+    return String(el.value).trim();
   }
 
   function init(form) {
     var kind = form.getAttribute("data-calc");
     var lang = document.documentElement.lang === "en" ? "en" : "es";
     var needs = NEEDS[kind];
-    var stored = load(), url = fromUrl();
+    var mini = form.hasAttribute("data-mini");
+    var out = document.getElementById(form.getAttribute("data-out"));
+    var share = out && out.querySelector("[data-calc-share]");
+    var shown = false;
+
+    var url = mini ? {} : fromUrl(), stored = load(), any = false;
     needs.forEach(function (k) {
       var v = url[k] != null ? clean(k, url[k]) : null;
-      if (v == null && SHARED.indexOf(k) >= 0) v = clean(k, stored[k]);
-      if (v != null) setField(form, k, v);
+      if (v == null && SHARED.indexOf(k) >= 0 && !mini) v = clean(k, stored[k]);
+      if (v != null) { setField(form, k, v); any = true; }
     });
-    var out = document.querySelector('[data-calc-out="' + kind + '"]');
-    var share = document.querySelector("[data-calc-share]");
 
-    function run(userChange) {
-      var input = {}, bad = false;
+    /* fields that only matter for some goals (macros: the pace) */
+    function syncVisibility() {
+      var goal = rawOf(form, "goal");
+      var w = form.querySelectorAll("[data-goals]");
+      for (var j = 0; j < w.length; j++) w[j].hidden = w[j].getAttribute("data-goals").split(" ").indexOf(goal) < 0;
+    }
+    function hiddenField(k) {
+      var el = form.elements[k], box = el && (isRadio(el) ? el[0] : el).closest(".calc-field");
+      return !!(box && box.hidden);
+    }
+
+    function check(showErrors) {
+      var input = {}, bad = [];
       needs.forEach(function (k) {
-        var el = field(form, k);
-        var v = readField(form, k);
-        var optional = k === "bf" || k === "kcal" || (k === "weight" && kind === "healthy");
-        var raw = el && !(el.length && el[0] && el[0].type === "radio") ? String(el.value).trim() : "x";
-        if (v == null && !(optional && raw === "")) { bad = true; if (el && el.setAttribute && raw !== "") el.setAttribute("aria-invalid", "true"); }
-        else if (el && el.removeAttribute) el.removeAttribute("aria-invalid");
+        if (hiddenField(k)) { input[k] = null; return; }
+        var raw = rawOf(form, k), v = clean(k, raw);
+        var optional = OPTIONAL[k] || (k === "weight" && kind === "healthy");
+        var ok = v != null || (optional && raw === "");
         input[k] = v;
+        var err = form.querySelector('[data-err-for="' + k + '"]'), el = form.elements[k];
+        if (!ok) bad.push(k);
+        if (showErrors || ok) {
+          if (err) err.hidden = ok;
+          if (el && !isRadio(el)) { if (ok) el.removeAttribute("aria-invalid"); else el.setAttribute("aria-invalid", "true"); }
+        }
       });
       if (kind === "healthy" && input.weight == null) input.weight = 0;
-      if (bad) { out.setAttribute("data-stale", ""); return; }
-      out.removeAttribute("data-stale");
-      var r = compute(kind, input, lang);
+      return { input: input, bad: bad };
+    }
+
+    function render(r) {
       Object.keys(r.out).forEach(function (k) {
         var els = out.querySelectorAll('[data-out="' + k + '"]');
         for (var j = 0; j < els.length; j++) els[j].textContent = r.out[k];
       });
-      var ws = document.querySelectorAll("[data-warn]");
+      var ws = out.querySelectorAll("[data-warn]");
       for (var j = 0; j < ws.length; j++) ws[j].hidden = r.warn.indexOf(ws[j].getAttribute("data-warn")) < 0;
       if (r.bars) ["p", "c", "f"].forEach(function (k) {
         var b = out.querySelector('[data-bar="' + k + '"]'); if (b) b.style.width = r.bars[k].toFixed(1) + "%";
@@ -356,38 +384,60 @@
         var rows = document.querySelectorAll("[data-bmi-band]");
         for (var rr = 0; rr < rows.length; rr++) rows[rr].classList.toggle("is-this", String(r.cat) === rows[rr].getAttribute("data-bmi-band"));
       }
-      if (userChange) {
+    }
+
+    function run(mode) {            /* mode: load | input | submit */
+      syncVisibility();
+      var res = check(mode === "submit" || shown);
+      if (res.bad.length) {
+        if (shown) out.setAttribute("data-state", "invalid");
+        if (mode === "submit") { var f = form.elements[res.bad[0]]; (isRadio(f) ? f[0] : f).focus(); }
+        return;
+      }
+      if (mode === "input" && !shown) return;      /* first result on "Calcular" */
+      render(compute(kind, res.input, lang));
+      out.setAttribute("data-state", "ready");
+      if (!shown) {
+        shown = true;
+        var card = out.querySelector(".dl-card"); if (card && mode !== "load") card.classList.add("is-new");
+        document.body.classList.add("calc-has-result");
+      }
+      if (mode === "submit") {
+        var top = out.getBoundingClientRect().top;
+        if (top > window.innerHeight * 0.55 || top < 0) out.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+        try { out.focus({ preventScroll: true }); } catch (e) { /* old browser */ }
+      }
+      if (mode !== "load" && !mini) {
         var s = load();
-        SHARED.forEach(function (k) { if (input[k] != null) s[k] = input[k]; });
+        SHARED.forEach(function (k) { if (res.input[k] != null) s[k] = res.input[k]; });
         save(s);
         /* a shareable address for exactly these inputs, without a reload */
         var parts = [];
-        needs.forEach(function (k) { if (input[k] != null && !(kind === "healthy" && k === "weight" && !input[k])) parts.push(PARAM[lang][k] + "=" + encodeURIComponent(input[k])); });
+        needs.forEach(function (k) { if (res.input[k] != null && !(kind === "healthy" && k === "weight" && !res.input[k])) parts.push(PARAM[lang][k] + "=" + encodeURIComponent(res.input[k])); });
         try { history.replaceState(null, "", location.pathname + "?" + parts.join("&") + location.hash); } catch (e) { /* file:// */ }
       }
     }
-    form.addEventListener("input", function () { run(true); });
-    form.addEventListener("change", function () { run(true); });
-    form.addEventListener("submit", function (e) { e.preventDefault(); run(true); });
-    run(false);
+    form.addEventListener("input", function () { run("input"); });
+    form.addEventListener("change", function () { run("input"); });
+    form.addEventListener("submit", function (e) { e.preventDefault(); run("submit"); });
+    syncVisibility();
+    if (any) run("load");
 
     if (share) share.addEventListener("click", function () {
-      run(true);
       var done = function () { share.setAttribute("data-copied", ""); setTimeout(function () { share.removeAttribute("data-copied"); }, 2200); };
       try { navigator.clipboard.writeText(location.href).then(done, done); } catch (e) { done(); }
     });
   }
 
-  /* Phones: a slim download bar once the result card has scrolled away, so it
-     never sits over the inputs. Fixed position, so it moves nothing. */
+  /* Phones: a slim download bar once a result exists and the result card
+     has scrolled away, so it never sits over the inputs. Fixed position,
+     so it moves nothing. */
   function stickyBar() {
-    var bar = document.querySelector(".calc-sticky"), card = document.querySelector(".calc-out");
+    var bar = document.querySelector(".calc-sticky"), card = document.querySelector(".calc-page .calc-out");
     if (!bar || !card || !("IntersectionObserver" in window)) return;
-    var seen = false;
     new IntersectionObserver(function (es) {
       es.forEach(function (e) {
-        if (e.isIntersecting) seen = true;
-        bar.classList.toggle("is-on", seen && !e.isIntersecting && e.boundingClientRect.top < 0);
+        bar.classList.toggle("is-on", document.body.classList.contains("calc-has-result") && !e.isIntersecting && e.boundingClientRect.top < 0);
       });
     }).observe(card);
   }

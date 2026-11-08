@@ -50,7 +50,7 @@ CALCS = [
   "desc": "Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso, con la fórmula de Mifflin-St Jeor y la misma cuenta que la app Fotocal.",
   "h1": "Calculadora de calorías diarias",
   "lead": "Cuántas calorías gastas al día y cuántas comer para perder o ganar peso despacio. Gratis, en la página y sin enviar tus datos.",
-  "bridge": "¿Quieres cumplir tus {X} kcal sin pesar comida?",
+  "bridge": "¿Quieres cumplir tus {X} kcal sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
       <p>En dos pasos. Primero la tasa metabólica basal (TMB), lo que gastas en reposo, con la ecuación de Mifflin-St Jeor (1990), la que mejor acierta en adultos sanos según las revisiones de dietética:</p>
@@ -107,7 +107,7 @@ CALCS = [
   "desc": "Calcula tu déficit calórico para perder peso: mantenimiento, cuánto recortar según tu sexo y peso, y cuánto tardarías. Gratis, sin registro y con ejemplos.",
   "h1": "Calculadora de déficit calórico: mujer y hombre",
   "lead": "Cuántas calorías comer para perder peso a un ritmo sensato y cuánto tardarías en llegar a tu objetivo.",
-  "bridge": "¿Quieres cumplir tus {X} kcal sin pesar comida?",
+  "bridge": "¿Quieres cumplir tus {X} kcal sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
       <p>Primero tu mantenimiento: la tasa metabólica basal de Mifflin-St Jeor multiplicada por tu nivel de actividad diaria. Después el recorte:</p>
@@ -233,7 +233,7 @@ CALCS = [
   "desc": "Calcula cuántos gramos de proteína necesitas al día según tu peso y objetivo, de 1,2 a 2,0 g por kilo, con el mínimo de la EFSA y la cuenta de la app.",
   "h1": "Calculadora de proteínas",
   "lead": "Cuántos gramos de proteína comer al día para tu peso y tu objetivo, con el mínimo oficial y el rango para quien entrena.",
-  "bridge": "¿Quieres llegar a tus {X} g de proteína sin pesar comida?",
+  "bridge": "¿Quieres llegar a tus {X} g de proteína sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
       <div class="calc-formula"><code>proteína (g) = g/kg según objetivo × peso de referencia</code><br><code>perder o ganar músculo: 2,0 g/kg &nbsp;·&nbsp; mantener o ganar peso: 1,6 g/kg</code></div>
@@ -282,7 +282,7 @@ CALCS = [
   "desc": "Calcula tus macros: gramos de proteínas, grasas e hidratos al día según tu objetivo y tus calorías, con el mismo reparto que la app Fotocal. Sin registro.",
   "h1": "Calculadora de macros",
   "lead": "Tus calorías repartidas en gramos de proteínas, grasas e hidratos según tu objetivo, con el mismo reparto que la app.",
-  "bridge": "¿Quieres cumplir tus {X} kcal sin pesar comida?",
+  "bridge": "¿Quieres cumplir tus {X} kcal sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
       <p>Primero las calorías, como en la <a href="../calorias-diarias/">calculadora de calorías diarias</a> (o las que escribas tú). Después, en este orden:</p>
@@ -380,7 +380,7 @@ CALCS = [
   "desc": "Calcula tu tasa metabólica basal (TMB) con Mifflin-St Jeor, o Katch-McArdle si sabes tu porcentaje de grasa, y tu gasto diario según tu actividad.",
   "h1": "Calculadora de TMB (metabolismo basal)",
   "lead": "Lo que gasta tu cuerpo en reposo absoluto, y lo que gastas al día según cómo te mueves.",
-  "bridge": "¿Quieres comer según tu gasto sin pesar comida?",
+  "bridge": "¿Quieres comer según tu gasto sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
       <p>La tasa metabólica basal (TMB) es la energía que gasta tu cuerpo en reposo: respirar, mantener la temperatura, el corazón, el cerebro. Para la mayoría de la gente es entre el 60 y el 70 % de lo que gasta en un día. La calculadora usa la ecuación de Mifflin-St Jeor (1990):</p>
@@ -433,7 +433,7 @@ CALCS = [
   "desc": "Calcula tu rango de peso saludable según tu altura: el que da un IMC de 18,5 a 24,9 (OMS). Un rango, no un único peso ideal, y lo que te separa de él.",
   "h1": "Calculadora de peso saludable",
   "lead": "El rango de peso que la OMS considera saludable para tu altura. Un rango, no un número mágico.",
-  "bridge": "¿Quieres acercarte a tu rango sin pesar comida?",
+  "bridge": "¿Quieres acercarte a tu rango sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
       <p>A partir del índice de masa corporal: la Organización Mundial de la Salud considera peso normal en adultos un IMC de 18,5 a 24,9. Despejando el peso:</p>

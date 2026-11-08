@@ -70,6 +70,12 @@
   /* ═══════════ Language switcher ═══════════
      Built as real links, so it works without the click handlers, shows a
      proper URL on hover, and is followable by a crawler. */
+  /* Two ways the switcher reaches the page: pre-rendered by the build
+     (tools/chrome/nav-*.html, the normal case since the chrome is baked
+     into every page) or, as a fallback, built here from layout.js's
+     #langToggle placeholder. Either way the handlers are bound below, on
+     #langSelect. (They used to be bound only in the second case, so the
+     pre-rendered switcher did nothing on click: found 07-11-2026.) */
   var langHost = document.getElementById("langToggle");
   if (langHost) {
     var sel = document.createElement("div");
@@ -95,10 +101,16 @@
           '<span class="lang-name">English</span></a></li>' +
       '</ul>';
     langHost.replaceWith(sel);
+  }
 
-    var current = sel.querySelector("#langCurrent");
-    var menu = sel.querySelector("#langMenu");
-
+  var sel = document.getElementById("langSelect");
+  var current = sel && sel.querySelector("#langCurrent");
+  var menu = sel && sel.querySelector("#langMenu");
+  /* A JS property, not an attribute: tools/render_chrome.mjs captures the
+     nav's HTML after this script has run, so an attribute would be baked
+     into every page and the guard would skip the binding (07-11-2026). */
+  if (sel && current && menu && !sel.__fcBound) {
+    sel.__fcBound = true;
     var closeMenu = function () {
       sel.classList.remove("open");
       current.setAttribute("aria-expanded", "false");
@@ -121,9 +133,15 @@
       });
     });
 
-    document.addEventListener("click", closeMenu);
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+    document.addEventListener("click", function (e) { if (!sel.contains(e.target)) closeMenu(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && sel.classList.contains("open")) { closeMenu(); current.focus(); }
+    });
   }
+  /* The ES / EN pair in the phone menu: plain links, same memory. */
+  document.querySelectorAll(".m-lang a[data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () { remember(a.getAttribute("data-lang")); });
+  });
 
   /* ═══════════ Scroll reveal ═══════════ */
   var revealEls = document.querySelectorAll(".reveal");

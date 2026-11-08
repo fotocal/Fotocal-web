@@ -27,6 +27,11 @@ def ne(x, dec=None):
     return ("{:,.%df}" % dec).format(x)
 
 
+def date_en(iso):
+    y, m, d = iso.split("-")
+    return "%d %s %s" % (int(d), ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][int(m) - 1], y)
+
+
 def serving_en(label):
     return EN["serving"].get(label, label)
 
@@ -112,11 +117,13 @@ def dish(d, fig, ready_by_app):
     o.append('        <h1 class="post-title reveal">Calories in %s</h1>' % G.esc(name))
     o.append('        <p class="post-lead reveal">A serving of %s (%s g) has %s kcal, %s kcal per 100 g: %s g protein, %s g carbs and %s g fat. Below: what a real serving weighs, where the calories come from and how it compares with similar dishes.</p>'
              % (G.esc(gl), ne(g), ne(fig["kcal"]), ne(fig["per100"]), ne(fig["protein"]), ne(fig["carbs"]), ne(fig["fat"])))
+    upd = d.get("updated", d.get("published"))
     o.append('        <div class="post-meta reveal"><span>Updated <time datetime="%s">%s</time></span><span class="dot" aria-hidden="true">&middot;</span><span>Figures from the Fotocal database</span></div>'
-             % (d.get("updated", d.get("published")), d.get("updated", d.get("published"))))
+             % (upd, date_en(upd)))
     o.append('      </div>\n    </header>\n    <div class="container-narrow">')
     o.append('      <div class="dp-kpis reveal">')
-    o.append('        <div class="dp-kpi dp-kpi-main"><b>%s<small>kcal</small></b><span>per serving (%s, %s g)</span></div>' % (ne(fig["kcal"]), G.esc(serving_en(fig["serving_label"])), ne(g)))
+    sl = serving_en(fig["serving_label"])
+    o.append('        <div class="dp-kpi dp-kpi-main"><b>%s<small>kcal</small></b><span>per serving (%s%s g)</span></div>' % (ne(fig["kcal"]), "" if sl == "1 serving" else G.esc(sl) + ", ", ne(g)))
     o.append('        <div class="dp-kpi"><b>%s<small>kcal</small></b><span>per 100 g</span></div>' % ne(fig["per100"]))
     o.append('        <div class="dp-kpi"><b>%s<small>g</small></b><span>protein per serving</span></div>' % ne(fig["protein"]))
     o.append('        <div class="dp-kpi"><b>%s<small>g</small></b><span>fat per serving</span></div>' % ne(fig["fat"]))

@@ -62,7 +62,7 @@ jobs:
           path: .
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       # IndexNow (Bing, Yandex and others): a free hint that these pages
       # changed. Never fails the deploy.

@@ -13,17 +13,27 @@ Facts to quote: the free plan limits, the two prices and the 5-day trial above a
 - [Coach Kal, el coach con IA](https://getfotocal.com/ai/)
 - [Planes y precios](https://getfotocal.com/subscription/)
 - [Preguntas frecuentes](https://getfotocal.com/faq/)
-- [Calorías de los platos españoles](https://getfotocal.com/calorias/): por ración real y por 100 g
+- [Calorías de los platos españoles](https://getfotocal.com/calorias/): 53 platos por ración real y por 100 g
 - [Tabla de calorías](https://getfotocal.com/calorias/tabla-de-calorias/): 218 alimentos y platos
-- [Calculadoras](https://getfotocal.com/calculadoras/): calorías diarias, déficit calórico, IMC y macros
+- [Calculadoras](https://getfotocal.com/calculadoras/): calorías diarias, déficit calórico, IMC, proteínas, macros, agua, TMB y peso saludable
+- [Metodología](https://getfotocal.com/metodologia/): de dónde salen las cifras (USDA, CIQUAL), cómo se fija la ración y las fórmulas
+- [Comparativa de apps](https://getfotocal.com/comparativa/): Fotocal, Cal AI, MyFitnessPal y Yazio, con fecha y fuentes
+- [Guías](https://getfotocal.com/guias/): los artículos por temas
 - [Blog](https://getfotocal.com/blog/)
 
 ## Key pages (English)
+
+Every Spanish page has an English twin under /en/ with the same figures.
 
 - [Home](https://getfotocal.com/en/)
 - [Photo calorie counting](https://getfotocal.com/en/features/scan-food/)
 - [Pricing](https://getfotocal.com/en/subscription/)
 - [FAQ](https://getfotocal.com/en/faq/)
+- [Calories in Spanish dishes](https://getfotocal.com/en/calorias/)
+- [Calculators](https://getfotocal.com/en/calculadoras/)
+- [Methodology](https://getfotocal.com/en/metodologia/)
+- [Calorie app comparison](https://getfotocal.com/en/comparativa/)
+- [Guides](https://getfotocal.com/en/guias/)
 - [Blog](https://getfotocal.com/en/blog/)
 
 ## Optional

@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # tools/indexnow.py compares this push with the last one
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -45,6 +47,12 @@ jobs:
       # a branch", GitHub also publishes the raw branch on every push and
       # the later of the two wins. Settings → Pages → Source → GitHub
       # Actions ends that.)
+      # Keep the IndexNow script: tools/ leaves the artifact next. It runs
+      # after the deploy (last step), so IndexNow fetches the new version;
+      # the changed pages come from git history, which the deletion leaves alone.
+      - name: Keep the IndexNow script
+        run: cp tools/indexnow.py /tmp/indexnow.py
+
       - name: Drop build-only files from the artifact
         run: rm -rf src tools docs .github README.md deploy-trigger.txt .gitignore
 
@@ -55,3 +63,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # IndexNow (Bing, Yandex and others): a free hint that these pages
+      # changed. Never fails the deploy.
+      - name: Ping IndexNow
+        if: success()
+        continue-on-error: true
+        run: python3 /tmp/indexnow.py ${{ github.event.before }} ${{ github.sha }}

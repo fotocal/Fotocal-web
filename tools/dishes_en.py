@@ -118,9 +118,13 @@ def dish(d, fig, ready_by_app):
     o.append('        <p class="post-lead reveal">A serving of %s (%s g) has %s kcal, %s kcal per 100 g: %s g protein, %s g carbs and %s g fat. Below: what a real serving weighs, where the calories come from and how it compares with similar dishes.</p>'
              % (G.esc(gl), ne(g), ne(fig["kcal"]), ne(fig["per100"]), ne(fig["protein"]), ne(fig["carbs"]), ne(fig["fat"])))
     upd = d.get("updated", d.get("published"))
-    o.append('        <div class="post-meta reveal"><span>Updated <time datetime="%s">%s</time></span><span class="dot" aria-hidden="true">&middot;</span><span>Figures from the Fotocal database</span></div>'
+    o.append('        <div class="post-meta reveal"><span>Updated <time datetime="%s">%s</time></span><span class="dot" aria-hidden="true">&middot;</span><span>By Fotocal, Madrid</span><span class="dot" aria-hidden="true">&middot;</span><a href="../../metodologia/">How we calculate</a></div>'
              % (upd, date_en(upd)))
     o.append('      </div>\n    </header>\n    <div class="container-narrow">')
+    o.append('      <div class="answer-box reveal"><p><strong>Quick answer:</strong> %s has %s kcal per serving (%s g) and %s kcal per 100 g. '
+             'A serving gives %s g protein, %s g carbs and %s g fat. Half a serving is about %s kcal; a serving and a half, about %s. '
+             'Figures from the Fotocal database, built from USDA and CIQUAL.</p></div>'
+             % (G.esc(name), ne(fig["kcal"]), ne(g), ne(fig["per100"]), ne(fig["protein"]), ne(fig["carbs"]), ne(fig["fat"]), ne(round(fig["kcal"] / 2)), ne(round(fig["kcal"] * 1.5))))
     o.append('      <div class="dp-kpis reveal">')
     sl = serving_en(fig["serving_label"])
     o.append('        <div class="dp-kpi dp-kpi-main"><b>%s<small>kcal</small></b><span>per serving (%s%s g)</span></div>' % (ne(fig["kcal"]), "" if sl == "1 serving" else G.esc(sl) + ", ", ne(g)))
@@ -187,6 +191,7 @@ def dish(d, fig, ready_by_app):
     o.append(dish_aside_en(d))
     # sources
     o.append('      <section class="dp-src reveal" id="sources">\n        <h2>Where these figures come from</h2>')
+    o.append('        <p>Public databases: <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central</a> and <a href="https://ciqual.anses.fr/" target="_blank" rel="noopener">CIQUAL (ANSES)</a>. How they are added up and how the serving is set: <a href="../../metodologia/">our methodology</a>.</p>')
     if fig["composed"]:
         o.append('        <p>They are the figures the Fotocal app uses for this dish: a standard serving built from rows of public databases, added up gram by gram.</p><ul>')
         for s in fig["sources"]:

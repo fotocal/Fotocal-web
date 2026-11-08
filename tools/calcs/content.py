@@ -476,3 +476,41 @@ CALCS = [
    ("How long would it take to reach the range?", "It depends on how many kilos and the pace: at half a kilo a week, 8 kg is about 16 weeks. The <a href=\"../deficit-calorico/\">calorie deficit calculator</a> works it out with your numbers."),
   ]}},
 ]
+
+
+# The 40–60 word direct answer at the top of each calculator's text (seo-ranking, 2026-11).
+# Numbers are the worked examples above, produced by assets/js/calc.js.
+QUICK = {
+ "calorias-diarias": {
+  "es": "Una mujer de 35 años, 165 cm y 70 kg que está de pie a ratos gasta unas 1.918 kcal al día; para perder medio kilo por semana le tocan unas 1.439 kcal. Tu cifra depende de tu sexo, edad, altura, peso y actividad: escríbelos arriba y la calculadora usa la fórmula de Mifflin-St Jeor, igual que la app.",
+  "en": "A 35-year-old woman of 165 cm and 70 kg who is on her feet sometimes burns about 1,918 kcal a day; to lose half a kilo a week she needs about 1,439 kcal. Your number depends on your sex, age, height, weight and activity: enter them above and the calculator uses the Mifflin-St Jeor equation, like the app."
+ },
+ "deficit-calorico": {
+  "es": "Un déficit sensato hace perder entre el 0,5 % y el 1 % de tu peso a la semana: medio kilo semanal son unas 550 kcal menos al día, sin recortar más de la cuarta parte de lo que gastas ni bajar de 1.200 kcal (mujer) o 1.500 (hombre). La calculadora te da tu cifra y cuántas semanas tardarás.",
+  "en": "A sensible deficit loses 0.5% to 1% of your weight a week: half a kilo a week is about 550 kcal less a day, never cutting more than a quarter of what you burn or going below 1,200 kcal (women) or 1,500 (men). The calculator gives your number and how many weeks it takes."
+ },
+ "imc": {
+  "es": "El IMC es tu peso en kilos dividido entre tu altura en metros al cuadrado. Según la OMS, entre 18,5 y 24,9 es peso normal, de 25 a 29,9 sobrepeso y desde 30 obesidad. Con 1,70 m, el peso normal va de 53 a 72 kg. No distingue músculo de grasa: tómalo como orientación.",
+  "en": "BMI is your weight in kilos divided by your height in metres squared. By WHO bands, 18.5 to 24.9 is normal weight, 25 to 29.9 overweight and 30 or more obesity. At 1.70 m, normal weight runs from 53 to 72 kg. It cannot tell muscle from fat: treat it as a guide."
+ },
+ "proteinas": {
+  "es": "Un adulto sano necesita al menos 0,83 g de proteína por kilo al día (EFSA). Para conservar músculo mientras pierdes peso, entre 1,6 y 2,0 g por kilo. Una persona de 70 kg que quiere mantenerse, unos 112 g al día. Con sobrepeso, la cuenta usa el peso que tendrías con un IMC de 25.",
+  "en": "A healthy adult needs at least 0.83 g of protein per kilo a day (EFSA). To keep muscle while losing weight, 1.6 to 2.0 g per kilo. Someone of 70 kg who wants to maintain needs about 112 g a day. If you are overweight, the sum uses the weight you would have at a BMI of 25."
+ },
+ "macros": {
+  "es": "Los macros se reparten en este orden: proteína por kilo (1,6 a 2,0 g), grasa como porcentaje de las calorías (25 % o 27,5 %) e hidratos con lo que queda. Con 2.000 kcal y 70 kg, para mantener: 112 g de proteína, 61 g de grasa y 251 g de hidratos.",
+  "en": "Macros are split in this order: protein per kilo (1.6 to 2.0 g), fat as a share of calories (25% or 27.5%) and carbs with what is left. On 2,000 kcal at 70 kg, to maintain: 112 g of protein, 61 g of fat and 251 g of carbs."
+ },
+ "agua": {
+  "es": "La mayoría de los adultos necesita beber entre 1,6 y 3 litros al día. La calculadora parte de tus calorías: entre 1 y 1,5 ml de agua por kcal según tu actividad, de lo que unas cuatro quintas partes se beben. Nunca baja del mínimo de la EFSA: 1,6 litros (mujer) o 2 litros (hombre).",
+  "en": "Most adults need to drink 1.6 to 3 litres a day. The calculator starts from your calories: 1 to 1.5 ml of water per kcal depending on activity, of which about four fifths are drunk. It never goes below the EFSA minimum: 1.6 litres (women) or 2 litres (men)."
+ },
+ "tmb": {
+  "es": "La TMB es lo que gasta tu cuerpo en reposo total. Con la fórmula de Mifflin-St Jeor, una mujer de 35 años, 165 cm y 70 kg gasta unas 1.395 kcal y un hombre de 35 años, 178 cm y 85 kg, unas 1.793 kcal. Si sabes tu porcentaje de grasa, la calculadora usa Katch-McArdle.",
+  "en": "BMR is what your body burns at complete rest. With the Mifflin-St Jeor equation, a 35-year-old woman of 165 cm and 70 kg burns about 1,395 kcal and a 35-year-old man of 178 cm and 85 kg about 1,793 kcal. If you know your body fat, the calculator uses Katch-McArdle."
+ },
+ "peso-saludable": {
+  "es": "Tu peso saludable es un rango, no un número: el que da un IMC de 18,5 a 24,9 según la OMS. Con 1,60 m va de 47 a 64 kg; con 1,70 m, de 53 a 72 kg; con 1,80 m, de 60 a 81 kg. Dentro del rango, lo mejor para ti depende de tu músculo y tu complexión.",
+  "en": "Your healthy weight is a range, not a number: the one that gives a BMI of 18.5 to 24.9 by WHO bands. At 1.60 m it runs from 47 to 64 kg; at 1.70 m, from 53 to 72 kg; at 1.80 m, from 60 to 81 kg. Within the range, what is best for you depends on your muscle and build."
+ }
+}

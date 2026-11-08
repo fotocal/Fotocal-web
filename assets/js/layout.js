@@ -75,6 +75,23 @@
     return l === "en" ? "/en/" : "/";
   }
 
+  var POPULAR = [
+    ["calorias/tortilla-de-patatas/", "Calorías tortilla de patatas", "Calories in tortilla de patatas"],
+    ["calorias/paella-valenciana/", "Calorías paella", "Calories in paella"],
+    ["calorias/croquetas-de-jamon/", "Calorías croquetas", "Calories in croquetas"],
+    ["calorias/gazpacho/", "Calorías gazpacho", "Calories in gazpacho"],
+    ["calorias/lentejas-estofadas/", "Calorías lentejas", "Calories in lentils"],
+    ["calorias/cocido-madrileno/", "Calorías cocido madrileño", "Calories in cocido madrileño"],
+    ["calorias/churros-con-chocolate/", "Calorías churros con chocolate", "Calories in churros"],
+    ["calorias/huevo-cocido/", "Calorías huevo cocido", "Calories in a boiled egg"],
+    ["calorias/platano/", "Calorías plátano", "Calories in a banana"],
+    ["calorias/pizza/", "Calorías pizza", "Calories in pizza"],
+    ["calculadoras/calorias-diarias/", "Calculadora de calorías", "Calorie calculator"],
+    ["calculadoras/deficit-calorico/", "Calculadora de déficit calórico", "Calorie deficit calculator"],
+    ["calculadoras/imc/", "Calculadora de IMC", "BMI calculator"],
+    ["calculadoras/proteinas/", "Calculadora de proteínas", "Protein calculator"]
+  ];
+
   function esc(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
@@ -208,6 +225,10 @@
               '<span class="lang-sep">/</span>' +
               '<span class="lang-opt" data-lang="es">ES</span>' +
             '</button>' +
+            /* Phones only: a small Google Play button next to the menu, so
+               the app is one tap away without a banner (seo-ranking, 2026-11). */
+            '<a class="nav-get" href="' + PLAY_URL + '" target="_blank" rel="noopener" aria-label="' + t("cta.free") + ' · Google Play">' +
+              PLAY_SVG.replace('class="play-badge-icon"', 'class="nav-get-icon"') + '<span>App</span></a>' +
             '<button class="nav-burger" id="navBurger" type="button" aria-expanded="false" ' +
               'aria-controls="navMobile" aria-label="Menu">' +
               '<span></span><span></span><span></span>' +
@@ -266,6 +287,9 @@
             /* Dish pages and calculators: both languages since 2026-11. */
             '<a href="' + u("calorias/") + '">' + t("nav.dishes") + '</a>' +
             '<a href="' + u("calculadoras/") + '">' + t("nav.calcs") + '</a>' +
+            '<a href="' + u("guias/") + '">' + t("footer.guides") + '</a>' +
+            '<a href="' + u("comparativa/") + '">' + t("footer.compare") + '</a>' +
+            '<a href="' + u("metodologia/") + '">' + t("footer.method") + '</a>' +
             '<a href="' + PLAY_URL + '" target="_blank" rel="noopener">Google Play</a>' +
           '</div>' +
           '<div class="footer-col">' +
@@ -285,6 +309,14 @@
             '<a href="' + u("terms/") + '">' + t("footer.terms") + '</a>' +
             '<a href="' + u("account-deletion/") + '">' + t("footer.deletion") + '</a>' +
           '</div>' +
+        '</div>' +
+        /* "Popular": the ten most-searched dishes and four calculators, on
+           every page, so each is one click from anywhere (seo-ranking, 2026-11). */
+        '<div class="container footer-popular">' +
+          '<p class="footer-h">' + t("footer.popular") + '</p>' +
+          '<p class="footer-pop-links">' + POPULAR.map(function (x) {
+            return '<a href="' + u(x[0]) + '">' + esc(LANG === "en" ? x[2] : x[1]) + '</a>';
+          }).join("") + '</p>' +
         '</div>' +
         '<div class="container footer-bottom">' +
           '<p>&copy; ' + year + ' Fotocal &middot; <span>' + t("footer.rights") + '</span></p>' +

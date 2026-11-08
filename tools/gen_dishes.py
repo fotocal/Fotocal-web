@@ -446,8 +446,15 @@ def dish_page(d, ready_by_app):
     o('        <h1 class="post-title reveal">Calorías %s %s</h1>' % (de(art), esc(name)))
     o('        <p class="post-lead reveal">%s</p>' % esc(lead))
     o('        <div class="post-meta reveal"><span>Actualizado <time datetime="%s">%s</time></span>'
-      '<span class="dot" aria-hidden="true">&middot;</span><span>Cifras de la base de datos de Fotocal</span></div>' % (upd, fecha(upd)))
+      '<span class="dot" aria-hidden="true">&middot;</span><span>Por Fotocal, Madrid</span>'
+      '<span class="dot" aria-hidden="true">&middot;</span><a href="../../metodologia/">Cómo calculamos</a></div>' % (upd, fecha(upd)))
     o('      </div>\n    </header>\n    <div class="container-narrow">')
+
+    # the direct answer, 40–60 words, for readers and for AI answers (seo-ranking, 2026-11)
+    o('      <div class="answer-box reveal"><p><strong>Respuesta rápida:</strong> %s tiene %s kcal por ración (%s g) y %s kcal por 100 g. '
+      'La ración aporta %s g de proteínas, %s g de hidratos y %s g de grasas. Media ración son unas %s kcal; una ración y media, unas %s. '
+      'Cifras de la base de datos de Fotocal, a partir de USDA y CIQUAL.</p></div>'
+      % (esc(cap(name)), n(fig["kcal"]), n(g), n(fig["per100"]), n(fig["protein"]), n(fig["carbs"]), n(fig["fat"]), n(round(fig["kcal"] / 2)), n(round(fig["kcal"] * 1.5))))
 
     # figure cards
     o('      <div class="dp-kpis reveal">')
@@ -532,6 +539,7 @@ def dish_page(d, ready_by_app):
 
     # sources
     o('      <section class="dp-src reveal" id="fuentes">\n        <h2>De dónde salen estas cifras</h2>')
+    o('        <p>Bases de datos públicas: <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central</a> y <a href="https://ciqual.anses.fr/" target="_blank" rel="noopener">CIQUAL (ANSES)</a>. Cómo se suman y cómo se fija la ración: <a href="../../metodologia/">nuestra metodología</a>.</p>')
     if fig["composed"]:
         o('        <p>Son las que usa la app Fotocal para este plato: una ración estándar compuesta por filas de bases de datos públicas, sumadas gramo a gramo.</p><ul>')
         for s in fig["sources"]:

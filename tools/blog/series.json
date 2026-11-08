@@ -65,11 +65,11 @@
     "es": "Seis preguntas que hacerle a cualquier contador de calorías por foto, el nuestro incluido, y qué incluye y qué no el plan gratis."
    },
    "deficit-500-calorias-dia": {
-    "en": "Spanish only: two real days of meals with a 500-calorie deficit, for a woman and a man, plate by plate.",
+    "en": "The deficit on the plate: two real days with 500 kcal less, for a woman and a man, dish by dish.",
     "es": "El déficit en la mesa: dos días reales con 500 kcal menos, para una mujer y un hombre, plato por plato."
    },
    "calorias-para-perder-un-kilo": {
-    "en": "Spanish only.",
+    "en": "The 7,700 kcal per kilo: where it comes from, how many days it takes and why it stops adding up.",
     "es": "Las 7.700 kcal por kilo: de dónde salen, cuántos días son y por qué dejan de cuadrar."
    }
   }
@@ -197,7 +197,9 @@
    "eating-out-without-wrecking-your-diet",
    "how-to-eat-healthy-on-a-budget",
    "calorias-menu-del-dia",
-   "calorias-de-las-tapas"
+   "calorias-de-las-tapas",
+   "calorias-bocadillo",
+   "cena-ligera-menos-de-500-calorias"
   ],
   "body": {
    "en": "<p>Seven articles about the plate in front of you on a weekday, not the ideal one. What a balanced meal looks like without weighing it, which foods fill you up for the fewest calories, how to judge a portion by eye, what to snack on, what to have for breakfast, how to eat out without undoing the week and how to do all of it on a normal food budget.</p>\n<p>They are in the order you would meet the problems: the plate first, then the foods that go on it, then the portions, and only then the situations (snacks, mornings, restaurants, money) where good intentions usually go. Spanish readers have the <a href=\"https://getfotocal.com/calorias/\">calorie pages for Spanish dishes</a> alongside: the per-serving figures there are the ones these articles assume.</p>",
@@ -233,16 +235,24 @@
     "es": "Legumbres, huevos, verdura congelada y el resto de la estantería barata. Comer bien no es la opción cara."
    },
    "calorias-menu-del-dia": {
-    "en": "Spanish only: three real set-lunch menus added up piece by piece, from 518 to 1,073 kcal, and the swaps that separate them.",
+    "en": "Three real menús del día added up piece by piece, from 518 to 1,073 kcal, and the swaps that separate them.",
     "es": "Tres menús del día reales sumados pieza a pieza, de 518 a 1.073 kcal, y los cambios que separan uno de otro."
    },
    "calorias-de-las-tapas": {
-    "en": "Spanish only: what an evening of tapas adds up to, drink by drink and plate by plate.",
+    "en": "What an afternoon of tapas adds up to, beer by beer and tapa by tapa, with two real afternoons.",
     "es": "Lo que suma una tarde de tapas, caña a caña y tapa a tapa, con dos tardes reales."
    },
    "calorias-desayuno-espanol": {
-    "en": "Spanish only.",
+    "en": "Six café and home breakfasts, from 167 to 531 kcal, and the swaps that save the most.",
     "es": "Seis desayunos de bar y de casa, de 167 a 531 kcal, y los cambios que más ahorran."
+   },
+   "calorias-bocadillo": {
+    "en": "Nine of the most ordered bocadillos, from 249 to 495 kcal each, why the bread is more than half and the swaps that save the most.",
+    "es": "Nueve de los bocadillos más pedidos, de 249 a 495 kcal cada uno, por qué el pan es más de la mitad y los cambios que más ahorran."
+   },
+   "cena-ligera-menos-de-500-calorias": {
+    "en": "Nine home dinners from 392 to 460 kcal, sorted by protein, and the ones that only look light.",
+    "es": "Nueve cenas de casa de 392 a 460 kcal, ordenadas por proteína, y las que solo parecen ligeras."
    }
   }
  },

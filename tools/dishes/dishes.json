@@ -64,7 +64,7 @@
      "a": "Depende del tamaño, así que la cuenta es por peso: {per100} kcal por cada 100 g. Una tortilla de un kilo son unas {per1000} kcal, a repartir entre quienes se la coman."
     }
    ],
-   "updated": "2026-10-16",
+   "updated": "2026-11-08",
    "sections": [
     {
      "id": "cien-gramos",
@@ -136,7 +136,8 @@
      "q": "¿Paella valenciana o de marisco, cuál tiene menos calorías?",
      "a": "En la base de datos de Fotocal, la de marisco queda en {kcal:paella-de-marisco} kcal por ración frente a {kcal} la valenciana: parecidas, porque el arroz y el aceite son los mismos y el marisco es magro. La diferencia está en la proteína, mayor en la valenciana por el pollo y el conejo."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "croquetas-de-jamon",
@@ -173,7 +174,8 @@
      "q": "¿Las croquetas congeladas tienen las mismas calorías?",
      "a": "Por 100 g suelen moverse en un rango parecido, con diferencias entre marcas: la etiqueta manda. Lo que más cambia la cifra final no es si son caseras o congeladas, sino el aceite que absorben al freírlas."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "cocido-madrileno",
@@ -210,7 +212,8 @@
      "q": "¿Cuántas calorías tiene el cocido de restaurante?",
      "a": "Más que estas: la ración suele pasar de 400 g y va con sopa, pan y a veces repetición. Pesar no es posible en un restaurante; lo que sí se puede es dejar embutido en la fuente y comer el segundo como lo que es, el plato principal, no uno más."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "gazpacho",
@@ -247,7 +250,8 @@
      "q": "¿Gazpacho o salmorejo, cuál tiene menos calorías?",
      "a": "El gazpacho, con diferencia: {kcal} kcal el bol frente a {kcal:salmorejo} el de salmorejo, por el pan y el aceite que lleva el salmorejo para espesar."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "salmorejo",
@@ -283,7 +287,8 @@
      "q": "¿El salmorejo tiene muchos hidratos?",
      "a": "Más que el gazpacho por el pan, {carbs} g por bol, pero no es un plato de hidratos: más de la mitad de sus calorías son grasa, la del aceite de oliva, que es también lo que lo hace saciante."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "lentejas-estofadas",
@@ -322,7 +327,8 @@
      "q": "¿Las lentejas tienen proteína suficiente?",
      "a": "{protein} g por plato, una cantidad respetable, aunque la proteína de la legumbre es algo incompleta por sí sola. Con arroz o pan en la misma comida se completa, que es lo que la cocina tradicional ya hacía sin saberlo."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "fabada-asturiana",
@@ -358,7 +364,8 @@
      "q": "¿Es la fabada muy salada?",
      "a": "Bastante: el chorizo y la morcilla son embutidos curados y el plato pasa de los 2 g de sal, casi la mitad de los 5 g diarios que recomienda la OMS. Si la tensión es un tema, es el plato en el que el compango importa dos veces."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "ensaladilla-rusa",
@@ -394,7 +401,8 @@
      "q": "¿Cuánta proteína tiene la ensaladilla?",
      "a": "{protein} g por ración, del huevo y el atún: poca para lo que pesa en calorías. Es un primero, no una fuente de proteína; el segundo tiene que poner el resto."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "churros-con-chocolate",
@@ -432,7 +440,8 @@
      "q": "¿Engordan los churros con chocolate?",
      "a": "Un desayuno de {kcal} kcal es una comida entera. Un domingo al mes no cambia nada; cada fin de semana, suma. Lo que decide no es el churro sino si ese día se come como si no hubiera habido churros."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "pulpo-a-la-gallega",
@@ -468,7 +477,8 @@
      "q": "¿Engorda el pulpo a la gallega?",
      "a": "Difícil: {kcal} kcal una ración que sacia como un segundo plato. Lo que engorda en una mesa gallega es lo que rodea al pulpo, el pan, la empanada y el vino, no el pulpo."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "empanada-gallega",
@@ -504,7 +514,8 @@
      "q": "¿Engorda la empanada?",
      "a": "Una porción son {kcal} kcal, un segundo plato en toda regla. Dos trozos picoteados de pie en una fiesta son {kcal*2}, una comida entera sin haberse sentado. Ese es el único problema de la empanada: no se cuenta."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "migas",
@@ -541,7 +552,8 @@
      "q": "¿Las migas engordan?",
      "a": "Un plato de {kcal} kcal es una comida entera de hidratos y grasa, y era comida de trabajo físico. Un día de campo, nada; como cena habitual delante de la televisión, bastante."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "torrijas",
@@ -578,7 +590,8 @@
      "q": "¿Torrijas al horno o fritas?",
      "a": "Al horno se quita la mayor parte del aceite, que es la grasa del plato; la torrija sigue siendo pan, leche y azúcar, con sus hidratos. Menos calorías, no pocas."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "tostada-con-tomate-y-aceite",
@@ -616,7 +629,8 @@
      "q": "¿Tostada con tomate o con mantequilla y mermelada?",
      "a": "{kcal} kcal frente a {kcal:tostada-con-mantequilla-y-mermelada}: parecidas. La diferencia no está en las calorías sino en el tipo de grasa, de oliva en una y saturada en la otra, y en el azúcar de la mermelada."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "cafe-con-leche",
@@ -658,7 +672,7 @@
      "a": "Una taza, no. El hábito, sí: cuatro al día con azúcar pasan de 400 kcal líquidas que no llenan nada. Es la partida que más gente lleva sin apuntar."
     }
    ],
-   "updated": "2026-10-16"
+   "updated": "2026-11-08"
   },
   {
    "slug": "huevos-fritos-con-patatas",
@@ -696,7 +710,8 @@
      "q": "¿Engordan los huevos?",
      "a": "No más que cualquier alimento: la cuenta del huevo frito la hace la sartén. Dos huevos cocidos o a la plancha son bastante menos que fritos, y la proteína es la misma."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "arroz-con-leche",
@@ -733,7 +748,8 @@
      "q": "¿Engorda el arroz con leche?",
      "a": "Un bol son {kcal} kcal, menos que un cruasán. Como postre de una comida normal entra sin problema; como merienda diaria de tarrina, es azúcar que suma."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "albondigas-en-salsa",
@@ -769,7 +785,8 @@
      "q": "¿Albóndigas o filete a la plancha?",
      "a": "El filete de 150 g son {kcal:filete-de-ternera-a-la-plancha} kcal frente a {kcal} las albóndigas, con proteína parecida: la diferencia es la fritura y la grasa de la carne picada. No es motivo para dejar de hacer albóndigas; es motivo para contar el pan."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "pincho-de-tortilla",
@@ -805,7 +822,8 @@
      "q": "¿Es el pincho de tortilla un buen desayuno?",
      "a": "Es un desayuno de {kcal} kcal con {protein} g de proteína, parecido a un sándwich mixto y mejor que un cruasán. Con el café con leche, un desayuno de bar completo por debajo de 300 kcal."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "patatas-bravas",
@@ -843,7 +861,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "bocadillo-de-jamon-serrano",
@@ -883,7 +902,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "calamares-a-la-romana",
@@ -922,7 +942,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "callos-a-la-madrilena",
@@ -959,7 +980,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "jamon-serrano",
@@ -998,7 +1020,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "cana-de-cerveza",
@@ -1037,7 +1060,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "tinto-de-verano",
@@ -1075,7 +1099,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "pimientos-de-padron",
@@ -1113,7 +1138,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "tarta-de-santiago",
@@ -1150,7 +1176,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "gambas-al-ajillo",
@@ -1188,7 +1215,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "bocadillo-de-calamares",
@@ -1225,7 +1253,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "sopa-castellana",
@@ -1263,7 +1292,8 @@
     }
    ],
    "status": "ready",
-   "published": "2026-10-15"
+   "published": "2026-10-15",
+   "updated": "2026-11-08"
   },
   {
    "slug": "tortilla-francesa",
@@ -1308,7 +1338,8 @@
      "q": "¿La tortilla francesa engorda?",
      "a": "No por sí sola: {kcal} kcal con {protein} g de proteína es una de las cenas con mejor relación entre saciedad y calorías. Lo que engorda es el conjunto del día. Lo que más la cambia es el relleno y el pan de al lado, no el huevo."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "sandwich-mixto",
@@ -1350,7 +1381,8 @@
      "q": "¿El sándwich mixto engorda?",
      "a": "Como cualquier comida, depende del día entero. {kcal} kcal es una merienda o una cena ligera razonable; el problema del mixto es que suele venir con patatas, refresco o un segundo mixto. Mirado solo, cabe sin problema."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "platano",
@@ -1391,7 +1423,8 @@
      "q": "¿Es lo mismo el plátano de Canarias que la banana en calorías?",
      "a": "La app usa una sola fila, la de plátano genérico, así que no distingue. Entre variedades la diferencia por 100 g es pequeña; la que importa es el tamaño de la pieza, y el plátano de Canarias suele ser más pequeño que una banana de importación."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "huevo-cocido",
@@ -1435,7 +1468,8 @@
      "q": "¿Cuántas calorías tiene un huevo frito frente a uno cocido?",
      "a": "Por 100 g, el huevo frito de la base de datos de la app tiene 196 kcal y el cocido 155: la diferencia es el aceite que se queda en el huevo. Un huevo frito mediano se va a unas 100 kcal frente a las {kcal} del cocido."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "barra-de-pan",
@@ -1477,7 +1511,8 @@
      "q": "¿El pan engorda?",
      "a": "Engorda comer más de lo que gastas, y el pan es fácil de comer de más porque acompaña sin que se cuente. Un trozo de 50 g son {kcal} kcal: dentro de una comida normal cabe; lo que suele sobrar es el segundo y el tercero, y lo que lleva encima."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "aceite-de-oliva",
@@ -1523,7 +1558,8 @@
      "q": "¿Cuánto aceite absorbe la comida al freír?",
      "a": "Depende del alimento y del escurrido: la patata y los rebozados absorben más que una pechuga a la plancha. Fotocal lo tiene en cuenta cuando marcas «frito» en un plato, con un reparto de aceite por tipo de cocción, y te deja cambiar los gramos antes de guardar."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "coca-cola-zero",
@@ -1564,7 +1600,8 @@
      "q": "¿La Coca-Cola Zero engorda?",
      "a": "Con {kcal} kcal por lata, no por las calorías. Lo que se discute es si los edulcorantes cambian el apetito o los hábitos, y ahí la evidencia no es concluyente y varía por persona. Para la cuenta de calorías es cero."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "copa-de-vino-tinto",
@@ -1605,7 +1642,8 @@
      "q": "¿Una copa de vino al día engorda?",
      "a": "{kcal} kcal que no sacian y que el cuerpo quema antes que la grasa: una copa al día son unas {kcal*7} kcal a la semana. Dentro de una dieta se cuenta como cualquier otra cosa; lo que no se puede es dejarla fuera de la cuenta."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "tercio-de-cerveza",
@@ -1647,7 +1685,8 @@
      "q": "¿Engorda la cerveza?",
      "a": "Engorda como cualquier caloría que sobra, con dos agravantes: no sacia y suele venir acompañada. Dos tercios son {kcal*2} kcal, lo que una cena ligera. Si la cuentas, cabe; si no la cuentas, es de lo primero que explica una báscula parada."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "croissant",
@@ -1688,7 +1727,8 @@
      "q": "¿Cuántas calorías tiene un cruasán a la plancha?",
      "a": "El cruasán de {g} g son {kcal} kcal; a la plancha suele llevar mantequilla, y cada 10 g de mantequilla son unas 75 kcal más. Pídelo sin mantequilla y se queda en lo mismo."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "magdalena",
@@ -1728,7 +1768,8 @@
      "q": "¿Es mejor la magdalena o las galletas María?",
      "a": "Depende de la cantidad. Una magdalena son {kcal} kcal; una ración de galletas María de la app, {kcal:galletas-maria}. Por 100 g son parecidas: las dos son harina y azúcar."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "salmon-a-la-plancha",
@@ -1769,7 +1810,8 @@
      "q": "¿Cuánta proteína tiene el salmón?",
      "a": "{protein} g por ración de {g} g. Para saber cuánta necesitas al día, usa la <a href=\"../../calculadoras/proteinas/\">calculadora de proteínas</a>."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "macarrones-con-tomate",
@@ -1810,7 +1852,8 @@
      "q": "¿Engordan los macarrones?",
      "a": "No más que otro plato de {kcal} kcal. Lo que hace que engorden es la cantidad: un plato hondo lleno puede doblarla."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "espaguetis-bolonesa",
@@ -1851,7 +1894,8 @@
      "q": "¿Son buenos para perder peso?",
      "a": "Caben en un déficit si la ración es razonable. Tienen {protein} g de proteína, que ayuda a saciar; calcula cuántas calorías te tocan con la <a href=\"../../calculadoras/calorias-diarias/\">calculadora de calorías diarias</a>."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "pollo-asado",
@@ -1891,7 +1935,8 @@
      "q": "¿Engorda el pollo asado?",
      "a": "Con {protein} g de proteína por ración es de lo que más sacia. Lo que lo engorda es la piel y las patatas fritas que lo acompañan."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "potaje-de-garbanzos",
@@ -1932,7 +1977,8 @@
      "q": "¿Qué tiene más calorías, el potaje o el cocido?",
      "a": "El cocido madrileño de la app tiene {kcal:cocido-madrileno} kcal por ración, frente a {kcal} del potaje: lleva carnes y embutidos."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "ensalada-mixta",
@@ -1972,7 +2018,8 @@
      "q": "¿La ensalada mixta adelgaza?",
      "a": "Es de lo que menos calorías tiene por plato. Pero si es la comida entera, con {protein} g de proteína puede quedarse corta: complétala."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "manzana",
@@ -2012,7 +2059,8 @@
      "q": "¿Engorda la manzana por la noche?",
      "a": "No más que a otra hora: {kcal} kcal son las mismas. Lo que cuenta es el total del día."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "almendras",
@@ -2053,7 +2101,8 @@
      "q": "¿Engordan las almendras?",
      "a": "Tienen muchas calorías por gramo, {per100} por 100 g, pero sacian. Engordan si se comen sin medida."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "pizza",
@@ -2094,7 +2143,8 @@
      "q": "¿Qué engorda más, una pizza o una hamburguesa?",
      "a": "Por ración, la hamburguesa casera con patatas de la app tiene {kcal:hamburguesa-casera-con-patatas} kcal, frente a {kcal} de dos porciones de pizza."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   },
   {
    "slug": "arroz-a-la-cubana",
@@ -2134,7 +2184,8 @@
      "q": "¿Cómo hacerlo más ligero?",
      "a": "El huevo a la plancha y el plátano sin freír. El arroz, en ración de 70 u 80 g en crudo por persona."
     }
-   ]
+   ],
+   "updated": "2026-11-08"
   }
  ]
 }

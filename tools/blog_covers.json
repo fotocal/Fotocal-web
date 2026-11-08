@@ -293,5 +293,15 @@
   "category": "Calorie counting",
   "glyph": "scale",
   "pal": 2
+ },
+ "calorias-bocadillo": {
+  "category": "Healthy eating",
+  "glyph": "plate",
+  "pal": 3
+ },
+ "cena-ligera-menos-de-500-calorias": {
+  "category": "Healthy eating",
+  "glyph": "leaf",
+  "pal": 5
  }
 }

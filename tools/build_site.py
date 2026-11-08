@@ -68,6 +68,7 @@ TITLE_MAX = 60                    # beyond this Google truncates the snippet (PA
 # Directories the builder owns and rewrites on every run. Anything else at
 # the repo root (assets, css, js, CNAME, robots.txt …) is left alone.
 OWNED = ["about", "account-deletion", "ai", "blog", "calculadoras", "calorias",
+         "metodologia", "guias", "comparativa", "widget", "embed",            # seo-ranking, 2026-11
          "contact", "features", "privacy-policy", "subscription", "terms", "en"]
 OWNED_FILES = ["index.html", "404.html"]
 
@@ -425,6 +426,21 @@ def inject_chrome(src, lang):
     src = src.replace('<div id="site-nav"></div>', '<div id="site-nav">%s</div>' % nav, 1)
     src = src.replace('<div id="site-footer"></div>', '<div id="site-footer">%s</div>' % c[1], 1)
     return src
+
+
+PLAY_BARE = re.compile(r'href="(https://play\.google\.com/store/apps/details\?id=com\.fotokal\.app)"')
+
+
+def tag_play_links(src, lang, rel):
+    """Every Play Store link without its own UTM tags gets the page's section
+    as utm_medium (home, features, blog, calculadoras, calorias…) and the page
+    as utm_campaign, so Play Console's acquisition report shows which kind of
+    page brings installs (seo-ranking, 2026-11). Links that already carry
+    tags (the calculator and dish cards) keep theirs."""
+    section = rel.split("/")[0] if "/" in rel else "home"
+    page = rel[:-len("/index.html")].replace("/", "-") if rel.endswith("/index.html") else "home"
+    tail = "&amp;utm_source=web&amp;utm_medium=%s&amp;utm_campaign=%s-%s" % (section, page, lang)
+    return PLAY_BARE.sub(lambda m: 'href="%s%s"' % (m.group(1), tail), src)
 
 
 IMG_TAG = re.compile(r"<img\b[^>]*>")
@@ -953,6 +969,7 @@ def main():
             s = rewrite_links(s, lang, rel)
             s = stamp_assets(s, lang, rel)
             s = inject_chrome(s, lang)
+            s = tag_play_links(s, lang, rel)
             s = wrap_pictures(s, lang, rel)
 
             out = os.path.join(ROOT, PREFIX[lang], rel)

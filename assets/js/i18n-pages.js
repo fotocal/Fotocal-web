@@ -158,7 +158,7 @@
       "blog.care.h": "This is not medical advice",
       "blog.care.p": "If you are pregnant, living with diabetes or another condition, taking medication, under eighteen, or have any history of an eating disorder, please speak to a doctor or a registered dietitian before changing how you eat or using a calorie tracker. Their advice comes first, and nothing here overrides it.",
       "blog.app.h": "If you want to see this in your own meals",
-      "blog.app.p": "Fotocal logs a plate from a photo and shows the calories, macros and a health score. The free plan has no card and no time limit: 2 photo scans a day, the barcode scanner and Coach Kal without limits. Android only.",
+      "blog.app.p": "Fotocal logs a plate from a photo and shows the calories, macros and a health score. The free plan has no card and no time limit: 2 AI scans a day, 1 voice log a day, and the barcode scanner and Coach Kal without limits. Android only.",
       /* ── About page ── */
       "about.t01": "About",
       "about.t02": "One person, one app, and <em class=\"accent\">no story to sell you</em>.",
@@ -377,7 +377,7 @@
       "sub.fr6": "<b>Everything you log stays free:</b> the meal diary, weight, water, steps through Health Connect, mood and habit notes, meal recommendations, and the Progress tab with what you ate and what you burned.",
       "sub.fr7": "<b>Sync, and both languages.</b> No plan has ads, because the app has none.",
       "sub.t11": "Premium",
-      "sub.t12": "Nine things switch on. Nothing else changes.",
+      "sub.t12": "Eight things switch on. Nothing else changes.",
       "sub.t13": "Premium does not make the app better behaved or take anything away from the free plan. These nine lines are the paywall's own list, and each one is a place where the code checks for a subscription.",
       "sub.t14": "Not on the list, because they are already free: Coach Kal, the barcode scanner, the health score, sync, and an ad-free app.",
       "sub.t15": "Cancelling and after",
@@ -547,7 +547,7 @@
 
       "fx.g.kicker": "Made for your goal",
       "fx.g.title": "One app, <em class=\"accent\">your reasons</em>.",
-      "fx.g.sub": "Whatever brought you here — losing weight, eating smarter, or finally making habits stick — the same nine features bend to your goal.",
+      "fx.g.sub": "Whatever brought you here — losing weight, eating smarter, or finally making habits stick — the same eight features bend to your goal.",
       "fx.g.cta": "Start free",
       "fx.g.more": "Read more →",
       "fx.g.blog": "Guides →",
@@ -1220,7 +1220,7 @@
       "blog.care.h": "Esto no es consejo médico",
       "blog.care.p": "Si estás embarazada, convives con diabetes u otra condición, tomas medicación, eres menor de dieciocho años o tienes cualquier historial de un trastorno de la conducta alimentaria, habla con un médico o con un dietista-nutricionista antes de cambiar cómo comes o de usar un contador de calorías. Su criterio va por delante, y nada de lo que hay aquí lo sustituye.",
       "blog.app.h": "Si quieres verlo en tus propias comidas",
-      "blog.app.p": "Fotocal registra un plato a partir de una foto y muestra las calorías, los macros y una puntuación de salud. El plan gratis no pide tarjeta ni caduca: 2 escaneos por foto al día, el escáner de código de barras y Coach Kal sin límite. Solo Android.",
+      "blog.app.p": "Fotocal registra un plato a partir de una foto y muestra las calorías, los macros y una puntuación de salud. El plan gratis no pide tarjeta ni caduca: 2 escaneos con IA al día, 1 registro por voz al día, y el escáner de código de barras y Coach Kal sin límite. Solo Android.",
       /* ── Página Sobre Fotocal ── */
       "about.t01": "Sobre Fotocal",
       "about.t02": "Una persona, una app y <em class=\"accent\">ninguna historia que venderte</em>.",
@@ -1439,7 +1439,7 @@
       "sub.fr6": "<b>Todo lo que registras sigue siendo gratis:</b> el diario de comidas, el peso, el agua, los pasos con Health Connect, las notas de ánimo y hábitos, las recomendaciones de comidas y la pestaña Progreso con lo que has comido y lo que has gastado.",
       "sub.fr7": "<b>Sincronización, y los dos idiomas.</b> Ningún plan tiene anuncios, porque la app no los tiene.",
       "sub.t11": "Premium",
-      "sub.t12": "Se activan nueve cosas. Nada más cambia.",
+      "sub.t12": "Se activan ocho cosas. Nada más cambia.",
       "sub.t13": "Premium no hace que la app se porte mejor ni le quita nada al plan gratis. Estas nueve líneas son la lista del propio muro de pago, y cada una es un sitio donde el código comprueba si hay suscripción.",
       "sub.t14": "No están en la lista porque ya son gratis: Coach Kal, el escáner de código de barras, la puntuación de salud, la sincronización y una app sin anuncios.",
       "sub.t15": "Cancelar, y después",
@@ -1608,7 +1608,7 @@
 
       "fx.g.kicker": "Hecha para tu objetivo",
       "fx.g.title": "Una app, <em class=\"accent\">tus motivos</em>.",
-      "fx.g.sub": "Sea lo que sea lo que te trajo aquí — perder peso, comer mejor o conseguir por fin que los hábitos aguanten — las mismas nueve funciones se adaptan a tu objetivo.",
+      "fx.g.sub": "Sea lo que sea lo que te trajo aquí — perder peso, comer mejor o conseguir por fin que los hábitos aguanten — las mismas ocho funciones se adaptan a tu objetivo.",
       "fx.g.cta": "Empieza gratis",
       "fx.g.more": "Saber más →",
       "fx.g.blog": "Guías →",

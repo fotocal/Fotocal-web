@@ -25,7 +25,7 @@ import json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_dishes import ld_block, ORG, esc, TITLE_MAX, SITE, ROOT, PLAY, download_card  # noqa: E402
-from calcs.content import CALCS, SOURCES  # noqa: E402
+from calcs.content import CALCS, SOURCES, QUICK  # noqa: E402
 
 SRC = os.path.join(ROOT, "src", "calculadoras")
 PUB = "2026-10-13"
@@ -214,6 +214,17 @@ BRIDGE_SUB = {
            "water": "Fotocal tracks your water next to your meals: one tap per glass.", "other": "Snap a photo of each dish and Fotocal counts the calories for you."},
 }
 BRIDGE_KIND = {"tdee": "kcal", "deficit": "kcal", "macros": "kcal", "protein": "protein", "water": "water", "bmi": "other", "bmr": "other", "healthy": "other"}
+# where each reference can be read (DOI or the publisher's page)
+SOURCE_URL = {
+    "mifflin": "https://doi.org/10.1093/ajcn/51.2.241",
+    "who_bmi": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+    "efsa_protein": "https://doi.org/10.2903/j.efsa.2012.2557",
+    "issn_protein": "https://doi.org/10.1186/s12970-017-0177-8",
+    "efsa_water": "https://doi.org/10.2903/j.efsa.2010.1459",
+    "iom_water": "https://nap.nationalacademies.org/catalog/10925",
+    "efsa_fat": "https://doi.org/10.2903/j.efsa.2010.1461",
+    "wishnofsky": "https://doi.org/10.1093/ajcn/6.5.542",
+}
 # the fields that only matter for some goals: shown when the goal is one of these
 GOAL_ONLY = {("macros", "pace"): "lose gain"}
 
@@ -420,6 +431,15 @@ def foot(depth):
 """ % (up, up, up, up)
 
 
+MONTHS = {"es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+          "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
+
+
+def fecha(iso, lang):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return ("%d de %s de %d" if lang == "es" else "%d %s %d") % (d, MONTHS[lang][m - 1], y)
+
+
 def titled(t):
     return t + " — Fotocal" if len(t) + len(" — Fotocal") <= TITLE_MAX else t
 
@@ -451,6 +471,9 @@ def page_lang(c, lang):
              % (u["crumbs"], u["home"], u["calcs"], esc(L["short"])))
     o.append('      <h1 class="calc-title">%s</h1>' % esc(L["h1"]))
     o.append('      <p class="calc-lead">%s</p>' % esc(L["lead"]))
+    o.append('      <p class="page-updated">%s</p>' % (("Actualizado: <time datetime=\"%s\">%s</time> · Por Fotocal, Madrid · <a href=\"../../metodologia/\">Cómo calculamos</a>"
+                                                          if lang == "es" else "Updated: <time datetime=\"%s\">%s</time> · By Fotocal, Madrid · <a href=\"../../metodologia/\">How we calculate</a>")
+                                                         % (MOD, fecha(MOD, lang))))
     o.append('    </header>')
     o.append('    <div class="container calc-page">')
     o.append('     <div class="calc-tool">')
@@ -459,12 +482,13 @@ def page_lang(c, lang):
     o.append('     </div>')
     o.append('     <p class="calc-disclaimer">%s</p>' % u["disclaimer"])
     o.append('     <div class="calc-text post-body">')
+    o.append('      <div class="answer-box"><p><strong>%s</strong> %s</p></div>' % ("Respuesta rápida:" if lang == "es" else "Quick answer:", QUICK[c["slug"]][lang]))
     o.append(L["body"])
     o.append('      <h2 id="faq">%s</h2>\n      <div class="faq-list">' % u["faq"])
     for q, a in L["faq"]:
         o.append('        <details class="faq-item"><summary><span>%s</span><i class="faq-plus" aria-hidden="true"></i></summary><p>%s</p></details>' % (esc(q), a))
     o.append('      </div>')
-    o.append('      <section class="dp-src" id="%s"><h2>%s</h2><ul>%s</ul></section>' % ("fuentes" if lang == "es" else "sources", u["sources"], "".join("<li>%s</li>" % SOURCES[s][lang] for s in c["sources"])))
+    o.append('      <section class="dp-src" id="%s"><h2>%s</h2><ul>%s</ul></section>' % ("fuentes" if lang == "es" else "sources", u["sources"], "".join("<li>%s%s</li>" % (SOURCES[s][lang], (' <a href="%s" target="_blank" rel="noopener">%s</a>' % (SOURCE_URL[s], "Ver la fuente" if lang == "es" else "View source")) if s in SOURCE_URL else "") for s in c["sources"])))
     o.append('      <nav class="dp-related" aria-label="%s">\n        <h2>%s</h2>\n        <div class="post-nav">' % (u["related"], u["related"]))
     for x in CALCS:
         if x["slug"] != c["slug"]:
@@ -512,7 +536,9 @@ HUB = {
       <h2>En qué orden usarlas</h2>
       <p>Empieza por las <a href="calorias-diarias/">calorías diarias</a>: es la base de todo lo demás. Si quieres perder grasa, sigue con el <a href="deficit-calorico/">déficit calórico</a>, que te dice cuánto recortar y cuánto tardarás. Las <a href="proteinas/">proteínas</a> y los <a href="macros/">macros</a> reparten esas calorías. El <a href="imc/">IMC</a> y el <a href="peso-saludable/">peso saludable</a> te dicen dónde estás. La <a href="tmb/">TMB</a> explica de dónde sale tu gasto, y la de <a href="agua/">agua</a>, cuánto beber.</p>
       <h2>De dónde salen estos números</h2>
-      <p>De las mismas fórmulas que usa la app Fotocal: Mifflin-St Jeor (1990) para el metabolismo, los rangos de IMC de la OMS y las referencias de la EFSA para la proteína y el agua. Cada calculadora explica su fórmula con un ejemplo y cita sus fuentes. Para saber cuánto tiene lo que comes, está la <a href="../calorias/">tabla de calorías de platos españoles</a>.</p>""",
+      <p>De las mismas fórmulas que usa la app Fotocal: Mifflin-St Jeor (1990) para el metabolismo, los rangos de IMC de la OMS y las referencias de la EFSA para la proteína y el agua. Cada calculadora explica su fórmula con un ejemplo y cita sus fuentes. Para saber cuánto tiene lo que comes, está la <a href="../calorias/">tabla de calorías de platos españoles</a>.</p>
+      <h2>¿Tienes un blog o una consulta?</h2>
+      <p>Puedes poner la calculadora de calorías o la de IMC en tu web, gratis y sin anuncios: está todo en la página del <a href="../widget/">widget de calculadoras</a>.</p>""",
            "disclaimer": "Orientativo, no sustituye a un profesional sanitario."},
     "en": {"title": "Calorie, BMI, macro and water calculators",
            "desc": "Eight calculators, no sign-up: daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight, with the same formulas as the app.",
@@ -523,7 +549,9 @@ HUB = {
       <h2>Which order to use them in</h2>
       <p>Start with <a href="calorias-diarias/">daily calories</a>: it is the base for everything else. To lose fat, go on to the <a href="deficit-calorico/">calorie deficit</a>, which tells you how much to cut and how long it takes. <a href="proteinas/">Protein</a> and <a href="macros/">macros</a> split those calories. <a href="imc/">BMI</a> and <a href="peso-saludable/">healthy weight</a> show where you stand. <a href="tmb/">BMR</a> explains where your energy use comes from, and <a href="agua/">water</a> how much to drink.</p>
       <h2>Where these numbers come from</h2>
-      <p>From the same formulas the Fotocal app uses: Mifflin-St Jeor (1990) for metabolism, the WHO BMI bands and EFSA references for protein and water. Each calculator explains its formula with a worked example and cites its sources. For what is in your food, see the <a href="../calorias/">table of calories in Spanish dishes</a>.</p>""",
+      <p>From the same formulas the Fotocal app uses: Mifflin-St Jeor (1990) for metabolism, the WHO BMI bands and EFSA references for protein and water. Each calculator explains its formula with a worked example and cites its sources. For what is in your food, see the <a href="../calorias/">table of calories in Spanish dishes</a>.</p>
+      <h2>Do you run a blog or a practice?</h2>
+      <p>You can put the calorie or BMI calculator on your site, free and with no ads: everything is on the <a href="../widget/">calculator widget page</a>.</p>""",
            "disclaimer": "For guidance only; not a substitute for a health professional."},
 }
 

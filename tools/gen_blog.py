@@ -97,6 +97,34 @@ missing = [p["slug"] for p in posts if p["slug"] not in series_of]
 assert not missing, ("posts in no series", missing)
 
 # ── related: same category, keyword overlap, then nearest date; balanced ──
+TOPIC_CALC = {"calories": "calorias-diarias", "weightloss": "deficit-calorico", "nutrition": "proteinas", "eating": "calorias-diarias",
+              "movement": "tmb", "mindset": "imc"}
+
+
+def tools_block(p):
+    """Two dish pages + one calculator under every post: the dishes the post
+    mentions most (Spanish body), else the two most searched."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import gen_dishes as GD
+    from calcs.content import CALCS
+    body = re.sub(r"<[^>]+>", " ", p["es"]["body"]).lower()
+    scored = sorted(((body.count(d["name"].lower()), d) for d in GD.DISHES if d.get("status") == "ready"), key=lambda x: -x[0])
+    dishes = [d for c, d in scored if c > 0][:2]
+    for slug in ("tortilla-de-patatas", "paella-valenciana"):
+        if len(dishes) < 2 and all(x["slug"] != slug for x in dishes):
+            dishes.append(next(d for d in GD.DISHES if d["slug"] == slug))
+    calc = next(c for c in CALCS if c["slug"] == TOPIC_CALC.get(p.get("category"), "calorias-diarias"))
+    out = []
+    for lang, lab, cal in (("es", "Herramientas para este tema", "Calorías %s %s"), ("en", "Tools for this topic", "Calories in %s")):
+        links = []
+        for d in dishes:
+            name = (cal % (GD.de(d["article"]), d["name"])) if lang == "es" else cal % GD.cap(d["name"])
+            links.append('<a href="../../calorias/%s/">%s</a>' % (d["slug"], GD.esc(name)))
+        links.append('<a href="../../calculadoras/%s/">%s</a>' % (calc["slug"], GD.esc(calc[lang]["h1"])))
+        out.append('      <p class="post-tools reveal" data-lang-block="%s"><strong>%s:</strong> %s</p>' % (lang, lab, " · ".join(links)))
+    return "\n".join(out)
+
+
 def related_for(p):
     mates = [q for q in posts if q["category"] == p["category"] and q["slug"] != p["slug"]]
     kw = kwset(p)
@@ -192,8 +220,8 @@ HEAD = """<!DOCTYPE html>
         <p class="post-lead reveal" data-lang-block="en">{lead_en}</p>
         <p class="post-lead reveal" data-lang-block="es">{lead_es}</p>
         <div class="post-meta reveal">
-          <span data-lang-block="en"><time datetime="{date}">{date_en}</time>{updated_en}</span>
-          <span data-lang-block="es"><time datetime="{date}">{date_es}</time>{updated_es}</span>
+          <span data-lang-block="en"><time datetime="{date}">{date_en}</time>{updated_en} · By Fotocal, Madrid</span>
+          <span data-lang-block="es"><time datetime="{date}">{date_es}</time>{updated_es} · Por Fotocal, Madrid</span>
           <span class="dot" aria-hidden="true">&middot;</span>
           <span data-lang-block="en">{min_en} <span data-i18n="blog.min">min read</span></span>
           <span data-lang-block="es">{min_es} <span data-i18n="blog.min">min de lectura</span></span>
@@ -228,9 +256,10 @@ HEAD = """<!DOCTYPE html>
           <p><a href="{play}" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a></p>
         </div>
       </aside>
-      <!--# PART 47: the calculators and dish pages exist in Spanish only, so
-           this line is dropped from /en/ by the build. -->
-      <p class="post-tools reveal" data-lang-block="es"><strong>Herramientas:</strong> <a href="../../calculadoras/calorias-diarias/">calorías diarias</a> · <a href="../../calculadoras/deficit-calorico/">déficit calórico</a> · <a href="../../calculadoras/macros/">macros</a> · <a href="../../calculadoras/imc/">IMC</a> · <a href="../../calorias/">calorías de platos españoles</a></p>
+      <!--# Per post (seo-ranking, 2026-11): two dish pages the post talks
+           about (or the most searched ones) and the calculator for its topic,
+           in both languages; tools/gen_blog.py tools_block(). -->
+{tools}
 
       <nav class="post-nav reveal" aria-label="Previous and next article">
         {prev}
@@ -417,7 +446,7 @@ def render_post(p, idx):
                        date=p["date"], modified=modified, date_en=fmt_date(p["date"], "en"), date_es=fmt_date(p["date"], "es"),
                        updated_en=upd_en, updated_es=upd_es, min_en=minutes(p["en"]["body"]), min_es=minutes(p["es"]["body"]),
                        cat=p["category"], cat_en=CAT_EN[p["category"]], body_en=p["en"]["body"], body_es=p["es"]["body"],
-                       ld_post=ld_post, ld_post_es=ld_post_es, ld_crumbs=ld_crumbs, play=PLAY, prev=prev_html, next=next_html, related=rel, strip=strip)
+                       ld_post=ld_post, ld_post_es=ld_post_es, ld_crumbs=ld_crumbs, play=PLAY, prev=prev_html, next=next_html, related=rel, strip=strip, tools=tools_block(p))
 
 
 # ── series hub: /blog/series/<id>/ ─────────────────────────────────────

@@ -207,3 +207,21 @@
 @keyframes dl-in { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: none; } }
 .dl-card.is-new { animation: dl-in .45s cubic-bezier(.2,.8,.2,1) both; }
 @media (prefers-reduced-motion: reduce) { .dl-card.is-new { animation: none; } }
+
+/* ─── seo-ranking round (2026-11) ─── */
+.page-updated { margin: .6rem 0 0; font-size: .86rem; color: var(--muted); }
+.page-updated a { color: var(--brand-text); font-weight: 600; }
+.guide-list { list-style: none; margin: .4rem 0 .8rem; padding: 0; display: grid; gap: .7rem; }
+.guide-list li { padding: .8rem 1rem; border-radius: var(--r-md); background: var(--surface); border: 1px solid var(--border-soft); }
+.guide-list a { display: block; font-weight: 700; color: var(--text); text-decoration: none; line-height: 1.35; }
+.guide-list a:hover { color: var(--brand-text); text-decoration: underline; }
+.guide-list span { display: block; margin-top: .25rem; font-size: .92rem; line-height: 1.5; color: var(--text-soft); }
+.guide-tools { font-size: .95rem; }
+.embed-code { white-space: pre-wrap; word-break: break-all; font-size: .82rem; background: var(--bg-2); border-radius: var(--r-md); padding: .9rem 1rem; }
+.page-embed { background: transparent; }
+.page-embed .embed { padding: .6rem; max-width: 560px; }
+.embed-h { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin: .2rem 0 0; color: var(--text); }
+.page-embed .calc-how { display: none; }
+.embed-credit { margin: .8rem 0 0; font-size: .9rem; font-weight: 700; }
+.embed-credit a { color: var(--brand-text); }
+.post-body .compare-wrap { margin: 1rem 0 .6rem; }

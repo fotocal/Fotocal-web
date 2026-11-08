@@ -30,11 +30,11 @@
   },
   "features/index.html": {
     "es": {
-      "title": "Contar calorías con foto, voz y código: 9 funciones gratis",
+      "title": "Contar calorías con foto, voz y código: 8 funciones gratis",
       "desc": "Foto, código de barras, voz, carta, Coach Kal e informe semanal, en pantallas reales. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite."
     },
     "en": {
-      "title": "Count Calories from a Photo: 9 Fotocal Features, Free",
+      "title": "Count Calories from a Photo: 8 Fotocal Features, Free",
       "desc": "Photo scan, barcode, voice logging, Coach Kal and a weekly report, on real screens. Free, no card: 2 AI scans and 1 voice log a day, the rest unlimited."
     }
   },

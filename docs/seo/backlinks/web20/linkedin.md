@@ -12,7 +12,7 @@ Copy everything between `ARTICLE START` and `ARTICLE END` (not those lines).
 
 ---
 
-<!-- ARTICLE START -->
+**▼ ARTICLE START — copy from the next line ▼**
 
 Si trabajas fuera de casa en España, es muy probable que comas de menú. Primero, segundo, postre, pan y bebida. Por un precio cerrado y en una hora.
 
@@ -123,7 +123,7 @@ Haz la foto antes del primer plato. Tu "yo" de las 16:00 te lo agradecerá.
 
 #nutrición #menúdeldía #salud #bienestarlaboral #calorías
 
-<!-- ARTICLE END -->
+**▲ ARTICLE END — copy down to the line above ▲**
 
 ---
 

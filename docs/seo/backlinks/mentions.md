@@ -62,7 +62,7 @@ URL: https://elreferente.es/ · Contact: contact form on site (no editorial emai
 >
 > Lo que creo que puede interesar a vuestros lectores:
 > - Es un proyecto de una sola persona, sin inversión externa [quita esta frase si no es así].
-> - Además de la app, he publicado recursos gratuitos: 8 calculadoras y una tabla de calorías de 53 platos españoles y 218 alimentos (https://getfotocal.com/calorias/).
+> - Además de la app, he publicado recursos gratuitos: 8 calculadoras y una tabla de calorías de más de 50 platos españoles y 218 alimentos (https://getfotocal.com/calorias/).
 > - Modelo freemium honesto: plan gratis sin tarjeta ni caducidad; Premium a 6,99 €/mes o 34,99 €/año.
 >
 > Si os encaja para una pieza sobre startups madrileñas o apps de salud con IA, os mando capturas, datos o me presto a una entrevista. Si no, gracias por vuestro tiempo.
@@ -144,7 +144,7 @@ URL: https://www.instagram.com/getfotocal
 ### 18. Pinterest: Spanish-dish pins
 URL: https://www.pinterest.com/ (create a business account; profile not created yet)
 
-Claim getfotocal.com, then make one pin per dish page (53 pages) linking to that page.
+Claim getfotocal.com, then make one pin per dish page (every page under /calorias/) linking to that page.
 
 > **Título del pin:** Calorías de la [tortilla de patatas] por ración
 > **Descripción:** Calorías y macros orientativos de la [tortilla de patatas] por ración. Tabla gratuita de platos españoles en Fotocal.
@@ -164,7 +164,7 @@ URL: https://www.facebook.com/share/1HbMUZSBJ6/
 
 > **Información (Acerca de):** Fotocal: app Android para contar calorías con una foto. Escáner de códigos de barras, registro por voz y coach con IA. Calculadoras y tabla de calorías de platos españoles gratis. Hecha en Madrid. https://getfotocal.com/
 >
-> **Publicación fijada:** ¿Sabes cuántas calorías tiene tu plato favorito? Hemos reunido 53 platos españoles y 218 alimentos en una tabla gratuita https://getfotocal.com/calorias/
+> **Publicación fijada:** ¿Sabes cuántas calorías tiene tu plato favorito? Hemos reunido más de 50 platos españoles y 218 alimentos en una tabla gratuita https://getfotocal.com/calorias/
 
 ---
 

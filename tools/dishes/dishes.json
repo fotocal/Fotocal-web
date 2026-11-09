@@ -317,7 +317,7 @@
    "faq": [
     {
      "q": "¿Cuántas calorías tiene un plato de lentejas con chorizo?",
-     "a": "{kcal:lentejas-con-chorizo} kcal un plato de 330 g en la base de datos de Fotocal, frente a {kcal} el plato estofado sin embutido. El chorizo es también lo que convierte un plato bajo en grasa en uno con bastante grasa saturada."
+     "a": "{kcal:lentejas-con-chorizo} kcal un plato en la base de datos de Fotocal, frente a {kcal} el plato estofado sin embutido. El chorizo es también lo que convierte un plato bajo en grasa en uno con bastante grasa saturada."
     },
     {
      "q": "¿Engordan las lentejas?",
@@ -2186,6 +2186,216 @@
     }
    ],
    "updated": "2026-11-08"
+  },
+  {
+   "slug": "lentejas-con-chorizo",
+   "app_id": "lentejas-con-chorizo",
+   "name": "lentejas con chorizo",
+   "article": "las",
+   "aliases": [
+    "lentejas con chorizo y patata",
+    "lentejas de la abuela"
+   ],
+   "status": "ready",
+   "published": "2026-11-09",
+   "compare": [
+    "lentejas-estofadas",
+    "fabada-asturiana",
+    "potaje-de-garbanzos",
+    "cocido-madrileno"
+   ],
+   "blog": [
+    "fiber-the-underrated-nutrient",
+    "dietary-fat-how-much-and-which-kinds",
+    "how-much-protein-per-day"
+   ],
+   "calc": "macros",
+   "portion": "<p>El plato de Fotocal son {g} g: 175 g de lentejas cocidas, un poco de patata, 35 g de chorizo (tres o cuatro rodajas) y el sofrito de zanahoria, cebolla, pimiento, ajo y tomate con aceite. Son {kcal} kcal. Un plato hondo con dos cucharones llenos se le parece; si repites, suma unas {per100} kcal por cada 100 g.</p>",
+   "drivers": "<p>Las lentejas ponen casi todos los {carbs} g de hidratos y la fibra, que es mucha. El chorizo y el aceite del sofrito ponen la mayor parte de los {fat} g de grasa: 35 g de chorizo son poca cantidad, pero es lo que más calorías aporta por bocado. La proteína, {protein} g, viene de la lenteja y del chorizo a partes casi iguales.</p>",
+   "lighter": "<p>Sin chorizo, el mismo plato baja a {kcal:lentejas-estofadas} kcal: es la diferencia más grande que puedes hacer. Si no quieres renunciar al sabor, deja una o dos rodajas y retira la grasa que suelta al hervir. El pan de al lado va aparte.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un plato de lentejas con chorizo?",
+     "a": "Un plato de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {fat} g de grasa y {protein} g de proteína. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Cuánto suma el chorizo a las lentejas?",
+     "a": "Las lentejas estofadas sin embutido de la app son {kcal:lentejas-estofadas} kcal el plato; con chorizo, {kcal}. Casi toda la diferencia es grasa del chorizo."
+    },
+    {
+     "q": "¿Son buenas las lentejas con chorizo para perder peso?",
+     "a": "Se pueden comer: sacian mucho por la fibra y la proteína. Lo que importa es el total del día. Si buscas un plato más ligero, quita el chorizo o pon la mitad."
+    }
+   ],
+   "updated": "2026-11-09"
+  },
+  {
+   "slug": "bacalao-al-pil-pil",
+   "app_id": "bacalao-al-pil-pil",
+   "name": "bacalao al pil pil",
+   "article": "el",
+   "aliases": [
+    "bacalao al pilpil",
+    "bacalao pil-pil"
+   ],
+   "status": "ready",
+   "published": "2026-11-09",
+   "compare": [
+    "merluza-en-salsa-verde",
+    "merluza-a-la-plancha",
+    "salmon-a-la-plancha",
+    "gambas-al-ajillo"
+   ],
+   "blog": [
+    "dietary-fat-how-much-and-which-kinds",
+    "how-much-protein-per-day",
+    "high-protein-diet-benefits-and-how-to-start"
+   ],
+   "calc": "macros",
+   "portion": "<p>La ración de Fotocal son {g} g: 150 g de bacalao desalado, 25 g de aceite de oliva y ajo. Son {kcal} kcal. En un restaurante la ración suele ser un lomo de 150 a 200 g con su salsa; cuenta unas {per100} kcal por cada 100 g de plato.</p>",
+   "drivers": "<p>El pil pil es una emulsión de aceite y la gelatina del bacalao, así que casi toda la grasa, {fat} g, viene del aceite: más de la mitad de las calorías del plato. El bacalao pone la proteína, {protein} g, y casi nada más. Hidratos, apenas {carbs} g.</p>",
+   "lighter": "<p>Lo que manda es cuánto aceite acaba en tu plato: si dejas parte de la salsa, la cuenta baja deprisa. El mismo pescado a la plancha queda mucho más ligero, como la merluza a la plancha de la app, {kcal:merluza-a-la-plancha} kcal la ración. Y ojo con mojar pan en la salsa.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene el bacalao al pil pil?",
+     "a": "Una ración de {g} g tiene {kcal} kcal: {protein} g de proteína, {fat} g de grasa y {carbs} g de hidratos. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Por qué tiene tantas calorías si el bacalao es ligero?",
+     "a": "Por el aceite de la salsa: 25 g de aceite de oliva son unas 220 kcal, más de la mitad del plato. El bacalao solo tiene poca grasa."
+    },
+    {
+     "q": "¿Es bueno el bacalao al pil pil para una dieta?",
+     "a": "Tiene mucha proteína y casi nada de hidratos, y la grasa es de aceite de oliva. Cabe en una dieta si cuentas el aceite; para algo más ligero, tómalo con poca salsa."
+    }
+   ],
+   "updated": "2026-11-09"
+  },
+  {
+   "slug": "fideua",
+   "app_id": "fideua",
+   "name": "fideuá",
+   "article": "la",
+   "aliases": [
+    "fideuà",
+    "fideua de marisco"
+   ],
+   "status": "ready",
+   "published": "2026-11-09",
+   "compare": [
+    "paella-de-marisco",
+    "paella-valenciana",
+    "espaguetis-bolonesa",
+    "macarrones-con-tomate"
+   ],
+   "blog": [
+    "carbs-are-not-the-enemy",
+    "eating-out-without-wrecking-your-diet",
+    "portion-control-simple-tricks"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La ración de Fotocal son {g} g: 185 g de fideo cocido, gambas, calamar, tomate, ajo, aceite y una cucharada de alioli (10 g). Son {kcal} kcal. Es la ración de un plato de restaurante; si la comes sin alioli, quita unas 70 kcal.</p>",
+   "drivers": "<p>El fideo pone casi todos los {carbs} g de hidratos. La grasa, {fat} g, viene del aceite del sofrito y del alioli. Las gambas y el calamar suman proteína, {protein} g por ración, con muy poca grasa.</p>",
+   "lighter": "<p>El alioli es lo más fácil de recortar: una cucharada son unas 70 kcal. Una ración más pequeña de fideo con más marisco y una ensalada de primero sacian igual. La paella de marisco de la app tiene {kcal:paella-de-marisco} kcal la ración, algo menos.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una ración de fideuá?",
+     "a": "Una ración de {g} g tiene {kcal} kcal: {carbs} g de hidratos, {fat} g de grasa y {protein} g de proteína. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Qué engorda más, la fideuá o la paella?",
+     "a": "En la app, la fideuá son {kcal} kcal la ración y la paella de marisco {kcal:paella-de-marisco}. La diferencia está sobre todo en el alioli y en el aceite."
+    },
+    {
+     "q": "¿Cuántas calorías tiene el alioli de la fideuá?",
+     "a": "Una cucharada de 10 g son unas 70 kcal, casi todo grasa. En la ración de la app va incluida una cucharada."
+    }
+   ],
+   "updated": "2026-11-09"
+  },
+  {
+   "slug": "marmitako",
+   "app_id": "marmitako",
+   "name": "marmitako",
+   "article": "el",
+   "aliases": [
+    "marmitako de bonito",
+    "marmitako de atún"
+   ],
+   "status": "ready",
+   "published": "2026-11-09",
+   "compare": [
+    "merluza-en-salsa-verde",
+    "lentejas-estofadas",
+    "cocido-madrileno",
+    "salmon-a-la-plancha"
+   ],
+   "blog": [
+    "how-much-protein-per-day",
+    "what-a-balanced-plate-looks-like",
+    "meal-prep-for-beginners"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>El plato de Fotocal son {g} g: 100 g de atún o bonito, 150 g de patata, pimiento verde, cebolla, tomate y 12 g de aceite. Son {kcal} kcal. Un plato hondo de casa con su caldo se le parece mucho; por cada 100 g más, suma unas {per100} kcal.</p>",
+   "drivers": "<p>La patata pone casi todos los {carbs} g de hidratos y el bonito casi toda la proteína, {protein} g. La grasa, {fat} g, viene del aceite del sofrito y del propio pescado. Es un guiso con más proteína y menos grasa que la mayoría de los guisos de cuchara.</p>",
+   "lighter": "<p>Ya es de los guisos más ligeros: {per100} kcal por cada 100 g. Si quieres bajarlo más, pon menos patata y más pimiento y cebolla. El pan para mojar el caldo es lo que más suma aparte.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un plato de marmitako?",
+     "a": "Un plato de {g} g tiene {kcal} kcal: {protein} g de proteína, {carbs} g de hidratos y {fat} g de grasa. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Es el marmitako un plato ligero?",
+     "a": "Sí, para ser un guiso: {per100} kcal por 100 g, frente a {kcal:lentejas-con-chorizo} kcal un plato de lentejas con chorizo. Tiene mucha proteína por el bonito."
+    },
+    {
+     "q": "¿Se puede comer marmitako a dieta?",
+     "a": "Sí. Es un plato completo, con proteína, hidratos de la patata y verdura. Cuenta el pan aparte."
+    }
+   ],
+   "updated": "2026-11-09"
+  },
+  {
+   "slug": "merluza-en-salsa-verde",
+   "app_id": "merluza-en-salsa-verde",
+   "name": "merluza en salsa verde",
+   "article": "la",
+   "aliases": [
+    "merluza a la vasca",
+    "merluza con almejas"
+   ],
+   "status": "ready",
+   "published": "2026-11-09",
+   "compare": [
+    "bacalao-al-pil-pil",
+    "merluza-a-la-plancha",
+    "marmitako",
+    "salmon-a-la-plancha"
+   ],
+   "blog": [
+    "how-much-protein-per-day",
+    "what-a-balanced-plate-looks-like",
+    "dietary-fat-how-much-and-which-kinds"
+   ],
+   "calc": "macros",
+   "portion": "<p>La ración de Fotocal son {g} g: 150 g de merluza, unas almejas, perejil, ajo, 10 g de aceite y un poco de vino blanco. Son {kcal} kcal. En casa y en el restaurante se sirven dos o tres rodajas de merluza; cuenta unas {per100} kcal por cada 100 g de plato.</p>",
+   "drivers": "<p>La merluza y las almejas ponen la proteína: {protein} g por ración, mucha para tan pocas calorías. La grasa, {fat} g, es casi toda el aceite de la salsa. Hidratos, solo {carbs} g, del ajo, el perejil y el vino.</p>",
+   "lighter": "<p>Ya es un plato ligero. Lo que lo sube es el aceite y el pan para la salsa. Comparado con el bacalao al pil pil de la app, {kcal:bacalao-al-pil-pil} kcal la ración, la salsa verde lleva mucho menos aceite.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene la merluza en salsa verde?",
+     "a": "Una ración de {g} g tiene {kcal} kcal: {protein} g de proteína, {fat} g de grasa y {carbs} g de hidratos. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Tiene más calorías que la merluza a la plancha?",
+     "a": "Sí: la merluza a la plancha de la app son {kcal:merluza-a-la-plancha} kcal la ración, y en salsa verde {kcal}. La diferencia es el aceite de la salsa y las almejas."
+    },
+    {
+     "q": "¿Es buena la merluza en salsa verde para perder peso?",
+     "a": "Sí: mucha proteína y pocas calorías. Lo que hay que vigilar es el pan para mojar la salsa."
+    }
+   ],
+   "updated": "2026-11-09"
   }
  ]
 }

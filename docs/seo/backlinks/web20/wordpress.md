@@ -13,7 +13,7 @@ Copy everything between `ARTICLE START` and `ARTICLE END` (not those lines).
 
 ---
 
-<!-- ARTICLE START -->
+**▼ ARTICLE START — copy from the next line ▼**
 
 "Tienes que comer en déficit." Lo has oído mil veces. Pero casi nadie explica cómo se calcula ese déficit. Ni cuánto es demasiado.
 
@@ -150,7 +150,7 @@ Sin magia. Solo cuentas y paciencia.
 
 *Este artículo es informativo. Si tienes una condición médica, estás embarazada o tienes historial de trastornos alimentarios, consulta a un profesional sanitario antes de hacer un déficit.*
 
-<!-- ARTICLE END -->
+**▲ ARTICLE END — copy down to the line above ▲**
 
 ---
 

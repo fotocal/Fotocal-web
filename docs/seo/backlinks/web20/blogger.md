@@ -12,7 +12,7 @@ Copy everything between the two lines `ARTICLE START` and `ARTICLE END`. Do not 
 
 ---
 
-<!-- ARTICLE START -->
+**▼ ARTICLE START — copy from the next line ▼**
 
 Madrid se come de pie, en la barra y a base de raciones. Eso tiene una ventaja: pides poco y pruebas mucho. Y un problema: nadie sabe cuánto ha comido al final de la noche.
 
@@ -96,7 +96,7 @@ Pero da igual la herramienta. Lo importante es mirar. Una noche de tapas no arru
 
 Disfruta de la barra. Ahora, con números.
 
-<!-- ARTICLE END -->
+**▲ ARTICLE END — copy down to the line above ▲**
 
 ---
 

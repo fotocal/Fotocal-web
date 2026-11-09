@@ -417,7 +417,7 @@
          translated here.
          ───────────────────────────────────────────── */
       "blog.kicker": "The Fotocal blog",
-      "blog.title": "Notes on nutrition and calories, <em class=\"accent\">honestly</em>.",
+      "blog.title": "A nutrition and calorie blog, <em class=\"accent\">written honestly</em>.",
       "blog.lead": "Practical, unglamorous writing on nutrition, weight and the habits that hold the whole thing together — the part most of the internet skips on its way to selling you something.",
       "blog.latest": "Latest",
       "blog.all": "All",
@@ -1478,7 +1478,7 @@
          Todo lo que los rodea sí está traducido aquí.
          ───────────────────────────────────────────── */
       "blog.kicker": "El blog de Fotocal",
-      "blog.title": "Notas sobre nutrición y calorías, <em class=\"accent\">con honestidad</em>.",
+      "blog.title": "Blog de nutrición y calorías, <em class=\"accent\">con honestidad</em>.",
       "blog.lead": "Textos prácticos y sin glamur sobre nutrición, peso y los hábitos que lo sostienen todo — justo la parte que casi todo internet se salta camino de venderte algo.",
       "blog.latest": "Lo último",
       "blog.all": "Todos",

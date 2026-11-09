@@ -12,7 +12,7 @@ Copy everything between `ARTICLE START` and `ARTICLE END` (not those lines).
 
 ---
 
-<!-- ARTICLE START -->
+**▼ ARTICLE START — copy from the next line ▼**
 
 El desayuno español es sencillo. Café, tostada y, con suerte, algo de fruta. No hace falta cambiarlo por un bol exótico para comer ligero por la mañana.
 
@@ -109,7 +109,7 @@ El plan gratuito incluye 2 escaneos de foto con IA al día, de sobra para el des
 
 Y tú, ¿cuál de estos diez es tu desayuno de siempre?
 
-<!-- ARTICLE END -->
+**▲ ARTICLE END — copy down to the line above ▲**
 
 ---
 

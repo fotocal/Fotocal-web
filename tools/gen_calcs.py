@@ -529,7 +529,7 @@ def page(c):
 HUB = {
     "es": {"title": "Calculadoras de calorías, IMC, macros y agua",
            "desc": "Ocho calculadoras sin registro: calorías diarias, déficit calórico, IMC, proteínas, macros, agua, TMB y peso saludable, con las mismas fórmulas que la app.",
-           "h1": "Calcula en segundos, gratis y sin registro",
+           "h1": "Calculadoras de calorías, IMC y macros, gratis y sin registro",
            "lead": "Ocho calculadoras de calorías, IMC, macros y más. Escribe tus datos y tendrás el resultado al momento. No se envía nada y dan los mismos números que la app Fotocal.",
            "quick": "Prueba ahora: tu IMC", "all": "Las ocho calculadoras",
            "body": """
@@ -542,7 +542,7 @@ HUB = {
            "disclaimer": "Orientativo, no sustituye a un profesional sanitario."},
     "en": {"title": "Calorie, BMI, macro and water calculators",
            "desc": "Eight calculators, no sign-up: daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight, with the same formulas as the app.",
-           "h1": "Work it out in seconds, free and with no sign-up",
+           "h1": "Calorie, BMI and macro calculators, free and with no sign-up",
            "lead": "Eight calculators for calories, BMI, macros and more. Type in your details and get the result straight away. Nothing is sent anywhere, and they give the same numbers as the Fotocal app.",
            "quick": "Try it now: your BMI", "all": "All eight calculators",
            "body": """

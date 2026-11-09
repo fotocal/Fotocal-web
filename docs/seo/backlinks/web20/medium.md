@@ -13,7 +13,7 @@ Copy everything between `ARTICLE START` and `ARTICLE END` (not those lines).
 
 ---
 
-<!-- ARTICLE START -->
+**▼ ARTICLE START — copy from the next line ▼**
 
 Pesar la comida funciona. Pero casi nadie lo aguanta más de unas semanas. Sacar la báscula para cada plato cansa. Y fuera de casa es imposible.
 
@@ -121,7 +121,7 @@ Haz esto durante tres semanas:
 
 Contar sin pesar no es contar peor. Es contar de forma que puedas seguir haciéndolo dentro de seis meses.
 
-<!-- ARTICLE END -->
+**▲ ARTICLE END — copy down to the line above ▲**
 
 ---
 

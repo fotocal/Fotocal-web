@@ -53,7 +53,12 @@
   "manzana": "apple",
   "almendras": "almonds",
   "pizza": "pizza",
-  "arroz-a-la-cubana": "rice with tomato, fried egg and banana"
+  "arroz-a-la-cubana": "rice with tomato, fried egg and banana",
+  "lentejas-con-chorizo": "lentil stew with chorizo",
+  "bacalao-al-pil-pil": "salt cod in garlic and olive oil emulsion",
+  "fideua": "seafood noodle paella",
+  "marmitako": "Basque tuna and potato stew",
+  "merluza-en-salsa-verde": "hake in green parsley sauce"
  },
  "group_of": {
   "tortilla-de-patatas": "platos",
@@ -108,7 +113,12 @@
   "tinto-de-verano": "bebidas",
   "coca-cola-zero": "bebidas",
   "copa-de-vino-tinto": "bebidas",
-  "tercio-de-cerveza": "bebidas"
+  "tercio-de-cerveza": "bebidas",
+  "lentejas-con-chorizo": "platos",
+  "bacalao-al-pil-pil": "platos",
+  "fideua": "platos",
+  "marmitako": "platos",
+  "merluza-en-salsa-verde": "platos"
  },
  "groups": {
   "platos": {
@@ -240,6 +250,11 @@
   "Vino blanco": "white wine",
   "Vino tinto": "red wine",
   "Zanahoria cocida": "cooked carrot",
-  "Zanahoria cruda": "raw carrot"
+  "Zanahoria cruda": "raw carrot",
+  "Calamares": "squid",
+  "Alioli": "aioli",
+  "Atún fresco a la plancha": "fresh tuna, grilled",
+  "Merluza a la plancha": "hake, cooked",
+  "Almejas cocidas": "cooked clams"
  }
 }

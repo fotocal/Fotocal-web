@@ -50,7 +50,7 @@ Use these exactly. Do not add numbers you cannot prove.
 
 ### English, long (~120 words)
 
-> Fotocal is an Android app that counts the calories in your food from a photo of your plate. You can also scan barcodes, log meals by voice and ask Coach Kal, an AI coach. The free plan needs no card and never expires: it includes 2 AI photo scans a day, 1 voice log a day, and unlimited barcode scanning and Coach Kal. Premium costs €6.99/month or €34.99/year, with a 5-day trial. The website also offers 8 free calculators (daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight) and a free table of calories in Spanish dishes, with 53 dish pages and a 218-food table. Fotocal is made by one person in Madrid.
+> Fotocal is an Android app that counts the calories in your food from a photo of your plate. You can also scan barcodes, log meals by voice and ask Coach Kal, an AI coach. The free plan needs no card and never expires: it includes 2 AI photo scans a day, 1 voice log a day, and unlimited barcode scanning and Coach Kal. Premium costs €6.99/month or €34.99/year, with a 5-day trial. The website also offers 8 free calculators (daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight) and a free table of calories in Spanish dishes, with more than 50 dish pages and a 218-food table. Fotocal is made by one person in Madrid.
 >
 > Web: https://getfotocal.com/ · Google Play: https://play.google.com/store/apps/details?id=com.fotokal.app
 
@@ -60,6 +60,69 @@ Use these exactly. Do not add numbers you cannot prove.
 - Calories of Spanish dishes: https://getfotocal.com/calorias/
 - 218-food table: https://getfotocal.com/calorias/tabla-de-calorias/
 - Google Play: https://play.google.com/store/apps/details?id=com.fotokal.app
+
+## Step by step, in this order (for the owner's assistant)
+
+Do **two listings a week**, in the order below, from the owner's Chrome (signed in to the Fotocal Google account, the one that owns the Play listing). Each listing uses only the texts above. Log every one in `tracker.csv` the same day (how: `docs/seo/ASSISTANT.md`, "How to log a result").
+
+If a site asks for something not in this file (a phone number, a tax ID, a founding date, revenue, number of users), **leave it empty or stop and ask the owner**. Never make it up.
+
+Values that repeat in every form:
+
+| Field | Value |
+|---|---|
+| Name | Fotocal |
+| Website | https://getfotocal.com/ |
+| Google Play | https://play.google.com/store/apps/details?id=com.fotokal.app |
+| Platform | Android |
+| Category | Health & Fitness · Nutrition · Calorie counter |
+| Price | Free plan; Premium €6.99/month or €34.99/year |
+| Location | Madrid, Spain |
+| Contact email | fotocal.app@gmail.com |
+| Logo | https://getfotocal.com/assets/img/logo.png (512 × 512 PNG; open it, right-click → Save image) |
+| Screenshots | the phone screenshots on the Play listing (long-press → Save image) |
+
+### 1. AlternativeTo (week 1)
+1. Go to https://alternativeto.net/ → **Sign up** (use "Continue with Google").
+2. Top menu → **Add app** ("Suggest an application").
+3. Name: Fotocal. Website: https://getfotocal.com/. Description: **English, long**. Platforms: Android. License: Freemium.
+4. Tags: calorie-counter, food-tracking, barcode-scanner, nutrition, ai.
+5. Submit. Then open https://alternativeto.net/software/myfitnesspal/ → **Suggest alternative** → Fotocal. Do the same on the Yazio page (search "Yazio").
+6. Listings are moderated; it can take a few days. Log "submitted", then "live" with the URL when it appears.
+
+### 2. SaaSHub (week 1)
+1. https://www.saashub.com/ → **Submit product** (sign in with Google).
+2. Name, website, **English short** as tagline, **English long** as description, category "Health & Fitness" (or the nearest one).
+3. Add MyFitnessPal and Yazio as alternatives if the form asks.
+4. Submit and log.
+
+### 3. Crunchbase (week 2)
+1. https://www.crunchbase.com/ → sign up free → **Add new profile → Organization**.
+2. Name Fotocal, website, location Madrid, description **English short**, founder: the owner's name (ask the owner if you don't know how he wants it written). Founded date: **ask the owner**; do not guess.
+3. Social links: Instagram, TikTok, YouTube and Facebook from the Social profile checklist below.
+4. Submit and log. Crunchbase reviews edits; it can take a week.
+
+### 4. F6S (week 2)
+1. https://www.f6s.com/ → sign up → **Create a company profile**.
+2. Name, website, **English long** description, location Madrid, industry "Health / Nutrition / Mobile apps".
+3. Save and log.
+
+### 5. Startup Radar madri+d (week 3)
+1. Open https://www.madrimasd.org/emprendedores/startup-radar-madrid → the "Regístrate en el Startup Radar madri+d" link.
+2. Use **Spanish long** for the description. Sector: Salud / Alimentación / Apps.
+3. Submit and log.
+
+### 6. Product Hunt (week 3, listing only; the launch is a separate day planned with the owner)
+1. https://www.producthunt.com/ → sign in with Google → profile → **Submit → New product**.
+2. Link: https://getfotocal.com/. Name: Fotocal. Tagline (60 characters max): "Count calories from a photo of your plate". Description: **English long**. Topics: Health & Fitness, Android, Artificial Intelligence.
+3. Gallery: 3–5 Play screenshots. Choose **"Schedule for later"** or save as draft. Do **not** launch: the owner must be there on launch day to answer comments (`mentions.md` #2).
+4. Log as "draft".
+
+### 7. Uptodown and Softonic (week 4)
+These two review apps themselves. Look for "Developers" / "Publica tu app" / "Publishing Center" in the footer of https://www.uptodown.com/ and https://www.softonic.com/. If you find the form, submit with **Spanish long** and the Play link. If you can't find it in 10 minutes, log "not found" and move on.
+
+### Skip
+G2, Capterra, Startupxplore (low value for a consumer app), Google Business Profile and Bing Places (Fotocal has no premises open to customers, so it is not eligible; a profile could be suspended). Malavida, El Referente, Ecosistema Startup: only through `mentions.md`, they are press contacts, not forms.
 
 ## Social profile checklist
 

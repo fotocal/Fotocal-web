@@ -14,7 +14,7 @@ Copy everything between `ARTICLE START` and `ARTICLE END` (not those lines). Dev
 
 ---
 
-<!-- ARTICLE START -->
+**▼ ARTICLE START — copy from the next line ▼**
 
 Esto no es un hilo de "cómo llegué a X usuarios en 30 días". No tengo esa historia, y no la voy a inventar.
 
@@ -122,7 +122,7 @@ La forma de convivir con esto es la misma que con cualquier método: constancia.
 
 Si estás construyendo algo tú solo, me encantaría leerte en los comentarios. Y si cuentas calorías y tienes Android, prueba la versión gratuita. Las críticas me sirven más que los aplausos.
 
-<!-- ARTICLE END -->
+**▲ ARTICLE END — copy down to the line above ▲**
 
 ---
 

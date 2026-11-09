@@ -1,74 +1,76 @@
-# Six-month SEO plan for getfotocal.com (from November 2026)
+# Six-month SEO plan for getfotocal.com (November 2026 – April 2027)
 
-Plain English. Each month has a goal and a short weekly list for the owner. Tasks for the site itself (new pages, fixes) are done in the repository and checked by the build before they go live.
+Plain English. Since 9 November 2026, **Claude owns this plan end to end**. A weekly routine every Monday and a monthly review on the first Monday do the site work (`tools/seo/RUNBOOK-weekly-post.md`). The owner's assistant does the few steps that need the owner's browser: Search Console, posting links and directory forms. Their list is `docs/seo/ASSISTANT.md`. The owner does not need to do any SEO task. He only answers the rare question the weekly line raises.
 
-Ranking takes time. Expect the first movement in Search Console after 4–8 weeks, and real traffic after 3–6 months. Backlinks and time matter more than anything else on this list.
+Ranking takes time. Expect the first movement in Search Console after 4–8 weeks, and real traffic after 3–6 months. Links and steady new pages matter more than anything else here.
 
-## Month 1: foundations and research (November 2026)
+## Who does what
 
-Goal: Google and Bing know every page, and we know which words to chase.
+| Every… | Claude (automatic) | Owner's assistant (browser) |
+|---|---|---|
+| Monday | 1 blog post (ES + EN); 4–6 dish pages (ES + EN); 1 older page refreshed; build, checks, deploy, sitemap and IndexNow; a line in `weekly-log.md`; a one-line message to the owner | — |
+| Week | — | 2 directory listings (`backlinks/directories.md`) |
+| Second Tuesday | — | 1 Web 2.0 article (`backlinks/web20/`) |
+| First Monday of the month | the monthly review: `kpis.md`, keyword priorities, a 5-line summary in `monthly-report.md` | before 09:00: Search Console export and the AI check (`ASSISTANT.md` M1–M3) |
+| Quarter | re-check the comparison facts (`tools/compare_data.json`) and the AI "new page needed" rows | — |
 
-Already done this round:
+## Month 1: foundations (November 2026)
+
+Goal: Google and Bing know every page, and the routine runs on its own.
+
+Done:
 - Methodology page, comparison pages, guides hub and calculator widget.
-- "Respuesta rápida" boxes on every dish and calculator page.
-- Source links on every dish, calculator and methodology page.
-- The footer "Lo más buscado" list.
-- IndexNow on every deploy.
-- `docs/seo/keywords.csv` (353 keywords) and `docs/seo/gaps.md` (30 gaps).
+- Answer boxes and source links on every dish and calculator page.
+- The footer "Lo más buscado" list, and IndexNow on every deploy.
+- `keywords.csv` (353 keywords), `gaps.md` (30 gaps), `onpage.csv` (all pages).
+- The 6 Web 2.0 articles, the directory pack and the outreach drafts.
+- 9 Nov: the A1 post, 5 new dish pages (58 in total) and the weekly routine extended.
 
-Owner, every week:
-- Monday: the weekly blog post (the existing task keeps running).
-- Once:
-  - Resubmit the sitemap in Search Console.
-  - Add the site to Bing Webmaster Tools; it can import from Search Console in one click.
-  - Note this month's numbers in `docs/seo/kpis.md`.
-- Once: publish the first Web 2.0 article (`docs/seo/backlinks/web20/README.md` gives the order).
-- Once: create the Product Hunt and AlternativeTo listings (`docs/seo/backlinks/directories.md`).
-- Check that every social profile links to getfotocal.com.
+Assistant, once:
+- Resubmit the sitemap.
+- Bing Webmaster Tools import.
+- Check the social profiles.
 
-## Months 2–3: scale the content and start links (December 2026 – January 2027)
+Assistant, from 17 Nov:
+- The first Web 2.0 article (Blogger).
+- Directories, two a week.
 
-Goal: more pages that answer real searches, and the first real links.
+## Months 2–3: scale the content and the links (December 2026 – January 2027)
 
-Site:
-- Add 4–6 dish pages a week, priority 1 rows first in `keywords.csv`. Use only foods with a full ingredient breakdown in the app (`gen_dishes.figures()` shows `composed: True`).
-- Publish 2 blog posts a week from `docs/seo/drafts/`, then new drafts from the keyword clusters.
-- Refresh the comparison facts before 9 December 2026: the check gets stale 90 days after 10 September. Re-read each maker's own pages and update `tools/compare_data.json` with the new date.
+Goal: about 100 dish pages, the cluster posts and the drafts published, and the first real links.
 
-Owner, every week:
-- 1 Web 2.0 article, at most; space them out.
-- Send 3–5 outreach emails (`docs/seo/backlinks/outreach.md`), personalised.
-- Answer 1–2 real questions on Reddit or Quora, and say you are the maker.
-- Log every link in `docs/seo/backlinks/tracker.csv`.
+Claude, every Monday:
+- Blog posts in this order: the remaining cluster articles (C3, E1, E2, A2, B2), then the six drafts in `docs/seo/drafts/`, then new topics from research.
+- Dish pages: priority-1 rows of `keywords.csv` first (`tools/seo/dish_queue.py`).
+- The weekly refresh.
 
-Once a month:
-- Run the AI visibility test (`docs/seo/ai-visibility.md`).
-- Record the numbers in `kpis.md`.
+Claude, by 9 December: refresh the comparison facts. They go stale 90 days after 10 September.
+
+Assistant:
+- Web 2.0 articles #2 and #3 in December, #4 and #5 in January.
+- Directories until the list is done.
+- First monthly export on 7 December.
 
 ## Months 4–6: expand and refresh (February – April 2027)
 
-Goal: 120–150 dish pages, the best posts refreshed, links that keep coming.
+Goal: about 150 dish pages, the best pages sharpened from real Search Console data, and links that keep coming.
 
-Site:
-- Keep 4–6 dish pages a week until about 150. Then refresh instead of adding: re-check any page whose app figure changed.
-- In Search Console → Performance, find pages with many impressions but a low click rate.
-  - Rewrite their title and description, and check the answer box answers the query people actually type.
-- Find pages ranking 8–20, and give each one more internal links and a better first paragraph.
-- New comparison pages only for apps whose own site we have read and dated, the same rules as `tools/compare_data.json`.
+Claude:
+- Dish pages until about 150, then two refreshes a week instead.
+- The monthly review steers the refreshes:
+  - pages at position 8–20 get more internal links and a sharper first paragraph;
+  - pages with many impressions and few clicks get a new title and description.
+- New comparison pages only for apps whose own site has been read and dated.
+- Later, only if the first ones work: the bigger templates from `gaps.md`, i.e. the walking and body-fat calculators, the 1,500 kcal menu guide, and the fruit and drink hubs.
 
-Owner:
-- A Product Hunt launch, once the listing has screenshots and a short video.
-- A widget push: the 20 blogs and dietitians from the outreach file.
-- Local Madrid press and startup lists (`docs/seo/backlinks/mentions.md`).
-- Optional: an "Estudio: lo que comen los españoles" built from anonymised, aggregated app numbers. Only if you approve it and the privacy policy allows it.
+Assistant: Web 2.0 article #6 (Dev.to, after the owner approves the text), and the monthly exports.
 
-## Every month, the same short review (30 minutes)
+Owner, only if he wants to: the Product Hunt launch day, and the outreach and press emails in `backlinks/outreach.md` and `backlinks/mentions.md`. They go out in his name, so they are not automated.
 
-1. Search Console:
-   - clicks, impressions and position for the top 30 keywords (`kpis.md`)
-   - pages indexed versus submitted
-   - new errors
-2. Play Console → Store listing acquisition: installs by `utm_medium` (home, features, blog, tool, dish, compare…).
-3. Ask ChatGPT, Gemini and Perplexity the 20 questions in `ai-visibility.md` and record whether Fotocal is named.
-4. Add new links to `tracker.csv`, and check the old ones still exist.
-5. Pick next month's 10 dish pages and 8 posts from `keywords.csv`.
+## Changes made by the monthly review
+
+The monthly routine adds one row per month: what it changed in the keyword priorities or the plan, and why.
+
+| Month | Change | Why (data) |
+|---|---|---|
+| Nov 2026 | Start: dish queue = priority 1 rows of `keywords.csv`; posts = cluster plan, then drafts | No Search Console data yet |

@@ -6,7 +6,7 @@ Date checked: 2026-11-08. Every site and URL below came from web searches run on
 2. Find the contact route yourself: author byline > "Contacto" / "Publicidad" page > contact form. Where this file says "contact form on site" or "not found", no address was verified. **Do not guess email addresses.**
 3. Personalise the first line using something you actually read on the page.
 
-Facts you may state (nothing else): Android app that counts calories from a photo of food; barcode scanner; voice logging; AI coach (Coach Kal). Free plan, no card, no expiry: 2 AI photo scans/day, 1 voice log/day, barcode scanner and Coach Kal unlimited. Premium €6.99/month or €34.99/year, 5-day trial. 8 free calculators at https://getfotocal.com/calculadoras/. Free table of calories in Spanish dishes at https://getfotocal.com/calorias/ (53 dish pages, 218-food table at /calorias/tabla-de-calorias/). Made by one person in Madrid. Google Play: https://play.google.com/store/apps/details?id=com.fotokal.app
+Facts you may state (nothing else): Android app that counts calories from a photo of food; barcode scanner; voice logging; AI coach (Coach Kal). Free plan, no card, no expiry: 2 AI photo scans/day, 1 voice log/day, barcode scanner and Coach Kal unlimited. Premium €6.99/month or €34.99/year, 5-day trial. 8 free calculators at https://getfotocal.com/calculadoras/. Free table of calories in Spanish dishes at https://getfotocal.com/calorias/ (50+ dish pages, 218-food table at /calorias/tabla-de-calorias/). Made by one person in Madrid. Google Play: https://play.google.com/store/apps/details?id=com.fotokal.app
 
 Never claim ratings, download counts, testimonials, awards, "the best" or accuracy percentages.
 
@@ -74,7 +74,7 @@ I skipped rankings published by competitors (Fitia, Yazio, Nutrola). They will n
 12. Think Big: "Os escribo porque es una app hecha por un desarrollador independiente en Madrid."
 13. Consumer.es: "Comparto vuestra idea de que no hay milagros; por eso explico abiertamente qué incluye gratis y qué es de pago."
 14. Softonic: "Acabo de publicar la ficha de Fotocal; por si encaja en vuestra lista de calculadoras de calorías para Android."
-15. Internet Paso a Paso: "Por si actualizáis la lista: tenemos una tabla gratuita de 218 alimentos y fichas de 53 platos españoles en https://getfotocal.com/calorias/tabla-de-calorias/."
+15. Internet Paso a Paso: "Por si actualizáis la lista: tenemos una tabla gratuita de 218 alimentos y fichas de más de 50 platos españoles en https://getfotocal.com/calorias/tabla-de-calorias/."
 
 ---
 
@@ -136,7 +136,7 @@ Honesty rules: the attribution link must be visible and must say what it is. Nev
 >
 > Soy [tu nombre] y hago Fotocal yo solo desde Madrid. Te escribo solo para ofrecerte un recurso gratuito por si te sirve con tus pacientes o lectores:
 > - Calculadoras (IMC, peso saludable, TMB, proteínas, agua…) que puedes insertar en tu web: https://getfotocal.com/widget/ Solo llevan un pequeño enlace «Calculadora de Fotocal».
-> - Una tabla gratuita de calorías de platos españoles (53 platos y 218 alimentos): https://getfotocal.com/calorias/
+> - Una tabla gratuita de calorías de platos españoles (más de 50 platos y 218 alimentos): https://getfotocal.com/calorias/
 >
 > Son orientativas y no sustituyen la consulta con un profesional; si ves algún dato que corregir, te agradecería mucho que me lo dijeras.
 >

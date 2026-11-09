@@ -795,7 +795,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/blog/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/"/>
@@ -804,7 +804,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/blog/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/"/>
@@ -1011,7 +1011,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/blog/series/calories/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/calories/"/>
@@ -1020,7 +1020,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/blog/series/calories/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/series/calories/"/>
@@ -1496,6 +1496,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/arroz-con-leche/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/bacalao-al-pil-pil/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/bacalao-al-pil-pil/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/bacalao-al-pil-pil/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/bacalao-al-pil-pil/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/bacalao-al-pil-pil/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/bacalao-al-pil-pil/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/bacalao-al-pil-pil/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/bacalao-al-pil-pil/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/barra-de-pan/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -1820,6 +1838,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/fabada-asturiana/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/fideua/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/fideua/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/fideua/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/fideua/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/fideua/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/fideua/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/fideua/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/fideua/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/gambas-al-ajillo/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -1928,6 +1964,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/jamon-serrano/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/lentejas-con-chorizo/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/lentejas-con-chorizo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/lentejas-con-chorizo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/lentejas-con-chorizo/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/lentejas-con-chorizo/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/lentejas-con-chorizo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/lentejas-con-chorizo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/lentejas-con-chorizo/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/lentejas-estofadas/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -1998,6 +2052,42 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/manzana/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/manzana/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/manzana/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/marmitako/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/marmitako/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/marmitako/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/marmitako/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/marmitako/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/marmitako/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/marmitako/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/marmitako/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/calorias/merluza-en-salsa-verde/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/merluza-en-salsa-verde/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/merluza-en-salsa-verde/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/merluza-en-salsa-verde/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/merluza-en-salsa-verde/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/merluza-en-salsa-verde/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/merluza-en-salsa-verde/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/merluza-en-salsa-verde/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/calorias/migas/</loc>
@@ -2631,7 +2721,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/guias/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/guias/"/>
@@ -2640,7 +2730,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/guias/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/guias/"/>

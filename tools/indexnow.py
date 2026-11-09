@@ -8,7 +8,7 @@ Run by .github/workflows/deploy.yml after the deploy. The key is the file
 whose source changed are sent, both languages; a first push or a forced
 history sends the sitemap's URLs instead. Never fails the deploy: IndexNow
 is a hint, and an error here must not take the site down."""
-import glob, json, os, re, subprocess, sys, urllib.request
+import glob, json, os, re, subprocess, sys, time, urllib.request
 
 # In the deploy job the script runs from a copy in /tmp (tools/ is not
 # published), so the checkout is found through GITHUB_WORKSPACE.
@@ -54,13 +54,34 @@ def main():
         print("IndexNow: no page changed")
         return
     k = key()
-    body = json.dumps({"host": HOST, "key": k, "keyLocation": SITE + k + ".txt", "urlList": urls[:10000]}).encode()
-    req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            print("IndexNow: %d URL(s) sent, HTTP %d" % (len(urls), r.status))
-    except Exception as e:
-        print("IndexNow: not sent (%s); the deploy is unaffected" % e)
+    # IndexNow answers 403 when it cannot read the key file. Right after a
+    # deploy the CDN may not serve it yet (first run, 08-11-2026: 403 four
+    # seconds after the deploy), so wait until the live site has it, then
+    # send, and try once more a minute later if it is still refused.
+    key_url = SITE + k + ".txt"
+    for _ in range(18):                      # up to 3 minutes
+        try:
+            with urllib.request.urlopen(key_url + "?t=%d" % time.time(), timeout=15) as r:
+                if r.status == 200 and r.read().decode().strip() == k:
+                    break
+        except Exception:
+            pass
+        time.sleep(10)
+    else:
+        print("IndexNow: the key file is not live yet; not sent (the deploy is unaffected)")
+        return
+    body = json.dumps({"host": HOST, "key": k, "keyLocation": key_url, "urlList": urls[:10000]}).encode()
+    for attempt in (1, 2):
+        req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                print("IndexNow: %d URL(s) sent, HTTP %d" % (len(urls), r.status))
+                return
+        except Exception as e:
+            print("IndexNow: attempt %d not accepted (%s)" % (attempt, e))
+            if attempt == 1:
+                time.sleep(60)
+    print("IndexNow: not sent; the deploy is unaffected")
 
 
 if __name__ == "__main__":

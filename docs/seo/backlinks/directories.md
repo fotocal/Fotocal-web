@@ -65,7 +65,7 @@ Use these exactly. Do not add numbers you cannot prove.
 
 Do **two listings a week**, in the order below, from the owner's Chrome (signed in to the Fotocal Google account, the one that owns the Play listing). Each listing uses only the texts above. Log every one in `tracker.csv` the same day (how: `docs/seo/ASSISTANT.md`, "How to log a result").
 
-If a site asks for something not in this file (a phone number, a tax ID, a founding date, revenue, number of users), **leave it empty or stop and ask the owner**. Never make it up.
+**Never enter a phone number** (owner's rule, 9 Nov 2026: email only). If a form requires one, skip that site and log `skipped: asks for phone`. If a site asks for anything else not in this file (a tax ID, a founding date, revenue, number of users), **leave it empty or stop and ask the owner**. Never make it up.
 
 Values that repeat in every form:
 

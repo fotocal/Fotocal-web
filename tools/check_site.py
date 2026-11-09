@@ -239,6 +239,31 @@ def check_compare_table():
         warn("tools/compare_data.json: competitor facts last checked %d days ago — recheck the makers' sites and update checked_on" % age)
 
 
+# The owner's rule (9-11-2026, after an unwanted call): no phone number
+# anywhere on the site. Contact is by email (fotocal.app@gmail.com) and the
+# contact form only. This fails the build on a tel: or WhatsApp link, a
+# "telephone" schema property, a street address in schema, or anything
+# shaped like a Spanish phone number in a published file.
+PHONE = re.compile(r'tel:|"telephone"|wa\.me/|api\.whatsapp|\+34[\s.]?\d{3}|\b0034\s?\d'
+                   r'|(?<![\d.,/#=\w-])[6789]\d{2}[ .]\d{3}[ .]\d{3}(?![\d\w])'
+                   r'|(?<![\d.,/#=\w-])[6789]\d{2}[ .]\d{2}[ .]\d{2}[ .]\d{2}(?![\d\w])'
+                   r'|"streetAddress"|"postalCode"', re.I)
+
+
+def check_no_phone(rels):
+    files = list(rels) + ["llms.txt", "robots.txt", "sitemap.xml"]
+    for base in ("assets/js", "assets/dist"):
+        d = os.path.join(ROOT, base)
+        if os.path.isdir(d):
+            files += [base + "/" + x for x in os.listdir(d) if x.endswith(".js")]
+    for rel in files:
+        p = os.path.join(ROOT, rel)
+        if not os.path.isfile(p):
+            continue
+        for m in PHONE.finditer(open(p, encoding="utf-8").read()):
+            fail(rel, "phone number or address on the site (owner's rule: email only): %r" % m.group(0))
+
+
 def one(tag, html, group=1):
     m = re.search(tag, html, re.S | re.I)
     return m.group(group).strip() if m else None
@@ -361,6 +386,8 @@ def main():
     # ── pinned defects (tools/check_pins.py): things found live once ──
     import check_pins
     check_pins.run(fail, warn)
+
+    check_no_phone(rels)
 
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}

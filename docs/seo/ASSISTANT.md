@@ -4,10 +4,11 @@ Claude runs the SEO plan for getfotocal.com. Every Monday it publishes a blog po
 
 Everything happens in the owner's Chrome, signed in to the Fotocal Google account (the one that owns the Play listing and Search Console).
 
-**Three rules**
+**Four rules**
 1. Copy texts exactly as written in the files. Don't add numbers, ratings, download counts, reviews or awards.
-2. If a form asks for something the files don't give (a phone number, a founding date, a tax ID), leave it empty or ask the owner. Never guess.
-3. Log everything you do the same day (see "How to log a result" at the end). Claude reads the logs every Monday.
+2. **Never give a phone number, anywhere** (owner's rule since 9 Nov 2026): the only contact is fotocal.app@gmail.com. If a form insists on a phone number, skip that site and log it as `skipped: asks for phone`.
+3. If a form asks for something else the files don't give (a founding date, a tax ID), leave it empty or ask the owner. Never guess.
+4. Log everything you do the same day (see "How to log a result" at the end). Claude reads the logs every Monday.
 
 ---
 

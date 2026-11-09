@@ -68,7 +68,7 @@ URL: https://elreferente.es/ · Contact: contact form on site (no editorial emai
 > Si os encaja para una pieza sobre startups madrileñas o apps de salud con IA, os mando capturas, datos o me presto a una entrevista. Si no, gracias por vuestro tiempo.
 >
 > Un saludo,
-> [nombre] · [teléfono opcional] · https://getfotocal.com/
+> [nombre] · fotocal.app@gmail.com · https://getfotocal.com/
 
 ### 8. Ecosistema Startup
 URL: https://ecosistemastartup.com/ · Contact: contact form on site

@@ -1,5 +1,8 @@
 # Mapa de palabras clave en español — PART 47
 
+> **Nota (9-11-2026):** este archivo es la investigación de octubre y la cola de temas del blog (§8). El mapa vigente de «una palabra clave principal por URL» es `docs/seo/keyword-map.md`, y la lista completa de búsquedas es `docs/seo/keywords.csv`: antes de elegir un título, mira allí.
+
+
 Fecha de la investigación: 13 de octubre de 2026.
 Qué es este archivo: la lista de búsquedas en español que la web intenta
 atraer, agrupadas por intención, con la página que debe responder a cada

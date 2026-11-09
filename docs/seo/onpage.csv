@@ -3,6 +3,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /account-deletion/,page,pass,pass,pass,pass,pass,pass,pass,n/a,n/a,pass,n/a,n/a
 /ai/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /blog/added-sugar-vs-natural-sugar/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
+/blog/app-contar-calorias-gratis/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/best-foods-for-weight-loss/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/building-muscle-while-losing-fat/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/calorias-bocadillo/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -140,6 +141,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/account-deletion/,page,pass,pass,pass,pass,pass,pass,pass,n/a,n/a,pass,n/a,n/a
 /en/ai/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /en/blog/added-sugar-vs-natural-sugar/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
+/en/blog/app-contar-calorias-gratis/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/best-foods-for-weight-loss/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/building-muscle-while-losing-fat/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/calorias-bocadillo/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a

@@ -12,9 +12,10 @@ post; the owner gets one line when it is live, or the reason it is not.
 
 ## 0 · Non-negotiables (from the owner, all still in force)
 
-- Spanish first, written for Spain. An English twin only where it
-  genuinely serves an English query (a global question like "how many
-  calories to lose a kilo"; never for menús, tapas, Mercadona, prices).
+- Spanish first, written for Spain. Since the lang-ux round (8-11-2026)
+  every Spanish page has an English twin, blog included: write the
+  Spanish post first, then a faithful English version in the same JSON
+  (the URL stays the Spanish slug under /en/blog/).
 - Real figures only: the app's own data (`tools/dishes/app-data.json`,
   the published `/calorias/` pages, the calculators' worked examples) or
   a real source quoted with its name and the date it was checked. Nothing

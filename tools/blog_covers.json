@@ -303,5 +303,10 @@
   "category": "Healthy eating",
   "glyph": "leaf",
   "pal": 5
+ },
+ "app-contar-calorias-gratis": {
+  "category": "Calorie counting",
+  "glyph": "shield",
+  "pal": 2
  }
 }

@@ -40,12 +40,12 @@
   },
   "features/scan-food/index.html": {
     "es": {
-      "title": "Calorías con foto: escáner de comida con IA, gratis",
-      "desc": "Apunta la cámara al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA y 1 por voz al día."
+      "title": "Contar calorías con foto: escáner de comida con IA gratis",
+      "desc": "Haz una foto al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA al día. Descárgala en Android."
     },
     "en": {
-      "title": "Calories from a Photo, Free: AI Food Scanner — Fotocal",
-      "desc": "Point the camera at your plate and get calories, macros, ingredients and a health score. Free, no card: 2 AI scans a day; Premium makes them unlimited."
+      "title": "AI Food Scanner: Count Calories from a Photo (Free)",
+      "desc": "AI food scanner for Android: point the camera at your plate and get calories, macros and ingredients. Free, no card: 2 AI scans a day."
     }
   },
   "features/scan-barcode/index.html": {
@@ -60,12 +60,12 @@
   },
   "features/voice-logging/index.html": {
     "es": {
-      "title": "Calorías por voz gratis: di lo que has comido — Fotocal",
-      "desc": "Di «dos huevos y una tostada» y Fotocal lo registra con calorías y macros. Gratis: 1 registro por voz al día, sin tarjeta; sin límite en Premium."
+      "title": "Contar calorías por voz, gratis: di lo que has comido",
+      "desc": "Cuenta calorías por voz: di «dos huevos y una tostada» y Fotocal lo registra con sus macros. Gratis: 1 registro por voz al día, sin tarjeta."
     },
     "en": {
-      "title": "Log Calories by Voice, Free: Just Say What You Ate",
-      "desc": "Say “two eggs and toast” and Fotocal logs each food with its calories and macros, in any language. Free: 1 voice log a day, no card; unlimited on Premium."
+      "title": "Voice Calorie Tracker, Free: Just Say What You Ate",
+      "desc": "A voice calorie tracker: say “two eggs and toast” and Fotocal logs each food with calories and macros. Free: 1 voice log a day, no card."
     }
   },
   "features/recipe/index.html": {
@@ -80,12 +80,12 @@
   },
   "features/weight-loss/index.html": {
     "es": {
-      "title": "Perder peso contando calorías con una foto, gratis",
-      "desc": "Un objetivo realista, un déficit que puedas sostener y cada comida registrada con una foto en vez de báscula. Así lo hace Fotocal, en pantallas reales."
+      "title": "App para adelgazar contando calorías con una foto",
+      "desc": "Una app para adelgazar contando calorías: objetivo realista, déficit que puedas sostener y cada comida registrada con una foto. Gratis: 2 escaneos al día."
     },
     "en": {
-      "title": "Lose Weight by Counting Calories from a Photo, Free",
-      "desc": "A realistic goal, a deficit you can keep and every meal logged with a photo instead of a scale. How Fotocal does it, on real screens, step by step."
+      "title": "Weight Loss Calorie Counter App: Log Meals by Photo",
+      "desc": "A weight loss calorie counter app: a realistic goal, a deficit you can keep and every meal logged with a photo. Free: 2 AI scans a day, no card."
     }
   },
   "features/nutrition-diet/index.html": {

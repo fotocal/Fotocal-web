@@ -632,6 +632,28 @@ def table_page(ready_by_app):
     return "\n".join(out)
 
 # ── the hub ──────────────────────────────────────────────────────────
+def hub_answer(ready, lang):
+    """The hub's direct answer to "¿cuántas calorías tiene un plato?" (the
+    query the page shows for in Search Console, Nov 2026), computed from the
+    main-dish group so it can never drift from the tables below it."""
+    import dishes_en
+    mains = [(figures(d["app_id"]), d) for d in ready if dishes_en.EN["group_of"].get(d["slug"]) == "platos"]
+    mains.sort(key=lambda t: t[0]["kcal"])
+    lo, hi, mid = mains[0], mains[-1], mains[len(mains) // 2]
+    es = lang == "es"
+    fmt = n if es else dishes_en.ne
+    nm = lambda t: '<a href="%s/">%s</a>' % (t[1]["slug"], t[1]["name"] if es else dishes_en.display(t[1]))
+    text = ('<strong>Respuesta rápida:</strong> un plato de comida española tiene entre %s y %s kcal por ración: '
+            'de %s (%s kcal, %s g) a %s (%s kcal, %s g). El plato del medio de los %d de esta tabla es %s, con %s kcal. '
+            'Son las cifras de la base de datos de Fotocal, a partir de USDA y CIQUAL.') if es else (
+            '<strong>Quick answer:</strong> a Spanish dish has between %s and %s kcal per serving: '
+            'from %s (%s kcal, %s g) to %s (%s kcal, %s g). The middle dish of the %d in this table is %s, with %s kcal. '
+            'Figures from the Fotocal database, built from USDA and CIQUAL.')
+    return '      <div class="answer-box reveal"><p>%s</p></div>' % (text % (
+        fmt(lo[0]["kcal"]), fmt(hi[0]["kcal"]), nm(lo), fmt(lo[0]["kcal"]), fmt(lo[0]["serving_g"]), nm(hi), fmt(hi[0]["kcal"]), fmt(hi[0]["serving_g"]),
+        len(mains), nm(mid), fmt(mid[0]["kcal"])))
+
+
 def hub_page(ready):
     title = "Calorías de platos españoles por ración real y por 100 g"
     desc = "Tabla de calorías de %d platos españoles con la ración que se sirve de verdad, por 100 g, proteínas, hidratos y grasas, y la fuente de cada cifra. Sin registro." % len(ready)
@@ -656,6 +678,7 @@ def hub_page(ready):
     o('      </div>\n    </header>\n    <div class="container-narrow">')
     o('      <div class="post-body reveal">')
     import dishes_en
+    o(hub_answer(ready, "es"))
     o(dishes_en.group_tables(ready, "es"))
     o('      <p class="dp-table-note">Por ración: la que fija la app Fotocal para cada plato, en gramos tal como se sirve. Las cifras salen de bases de datos públicas (USDA FoodData Central y CIQUAL 2025) sumadas ingrediente a ingrediente; cada página dice exactamente de qué filas.</p>')
     o('      <h2>Cómo leer la tabla</h2>')

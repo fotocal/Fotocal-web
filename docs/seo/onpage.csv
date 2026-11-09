@@ -307,7 +307,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /features/scan-barcode/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /features/scan-food/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /features/voice-logging/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
-/features/weight-loss/,page,pass,fail,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
+/features/weight-loss/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /guias/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /metodologia/,method,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,n/a

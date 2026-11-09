@@ -215,8 +215,8 @@ def dish(d, fig, ready_by_app):
 
 
 def hub(ready):
-    title = "Calories in Spanish dishes, per serving and 100 g"
-    desc = "Calories in %d Spanish dishes with the serving as it is really served, per 100 g, protein, carbs and fat, and the source of every figure. No sign-up." % len(ready)
+    title = "Calories in Spanish Food: per Serving and per 100 g"
+    desc = "Calories in Spanish food: %d dishes with the serving as it is really served, per 100 g, protein, carbs and fat, and the source of every figure." % len(ready)
     assert len(title) <= G.TITLE_MAX and len(desc) <= 155, (len(title), len(desc))
     url = SITE + "calorias/"
     items = [{"@type": "ListItem", "position": i + 1, "name": "Calories in " + display(d), "url": SITE + "calorias/%s/" % d["slug"]} for i, d in enumerate(ready)]
@@ -228,9 +228,10 @@ def hub(ready):
     ])
     o = ['\n<main id="main">\n  <article class="post dp dp-hub">\n    <header class="post-head">\n      <div class="container-narrow">',
          '        <nav class="post-crumbs reveal" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">Calories in Spanish dishes</a></nav>',
-         '        <h1 class="post-title reveal">Calories in Spanish dishes, per serving and per 100 g</h1>',
-         '        <p class="post-lead reveal">How many calories are in a Spanish dish? A table of what people really eat in Spain: the serving as it is served, its calories, and per 100 g so you can compare. Each dish has its own page with the protein, carbs and fat, what a serving weighs and how it compares.</p>',
+         '        <h1 class="post-title reveal">Calories in Spanish food, per serving and per 100 g</h1>',
+         '        <p class="post-lead reveal">How many calories are in Spanish food? A table of what people really eat in Spain: the serving as it is served, its calories, and per 100 g so you can compare. Each dish has its own page with the protein, carbs and fat, what a serving weighs and how it compares.</p>',
          '      </div>\n    </header>\n    <div class="container-narrow">', '      <div class="post-body reveal">']
+    o.append(G.hub_answer(ready, "en"))
     o.append(group_tables(ready, "en"))
     o.append('      <p class="dp-table-note">Serving: the one the Fotocal app uses for each dish, in grams as served. Figures come from public databases (USDA FoodData Central and CIQUAL 2025) added up ingredient by ingredient; each page says exactly which rows.</p>')
     o.append('      <h2>How to read the table</h2>')

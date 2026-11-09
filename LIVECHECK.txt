@@ -1,0 +1,2 @@
+fetched 319 URLs ok, 0 failed
+TOTAL HITS 0

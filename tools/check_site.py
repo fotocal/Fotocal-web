@@ -292,6 +292,12 @@ def main():
 
     variant_refs = {"es": set(), "en": set()}
     noindex = set()
+    # on-page rule notes (tools/seo/onpage_lint.py, docs/seo/onpage-rules.md):
+    # never a failure; listed in full with --notes
+    sys.path.insert(0, os.path.join(ROOT, "tools", "seo"))
+    import onpage_lint
+    prim = onpage_lint.primaries()
+    notes = []
 
     for rel in rels:
         html = open(os.path.join(ROOT, rel), encoding="utf-8").read()
@@ -333,6 +339,7 @@ def main():
             noindex.add(rel)
 
         if indexable:
+            notes.extend((k, rel, m) for k, m in onpage_lint.lint(rel, html, prim))
             canon = one(r'<link rel="canonical" href="([^"]*)"', html)
             if canon != self_url:
                 fail(rel, "canonical is %r, should be %r" % (canon, self_url))
@@ -405,6 +412,12 @@ def main():
 
     for w in warns:
         print("warn  " + w)
+    if "--notes" in sys.argv:
+        for k, r, m in notes:
+            print("note  %-12s %s: %s" % (k, r, m))
+    kinds = {}
+    for k, _, _ in notes:
+        kinds[k] = kinds.get(k, 0) + 1
     if fails:
         print("%d problem(s):" % len(fails))
         for f in fails:
@@ -412,6 +425,8 @@ def main():
         sys.exit(1)
     print("OK — %d pages (%d es + %d en), %d sitemap URLs, %d warning(s)"
           % (len(rels), len(es), len(en), len(locs), len(warns)))
+    print("on-page notes (rules in docs/seo/onpage-rules.md; list them with --notes): %d%s"
+          % (len(notes), (" — " + ", ".join("%s %d" % kv for kv in sorted(kinds.items()))) if kinds else ""))
 
 
 if __name__ == "__main__":

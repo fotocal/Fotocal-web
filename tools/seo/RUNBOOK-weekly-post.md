@@ -49,6 +49,19 @@ only when every check passes.
   Sonnet 5.5> <noreply@anthropic.com>` and `Claude-Session: <the URL of
   the session doing the work>`. Name the real model, never assume one.
 
+## 0b · On-page rules (summary of `docs/seo/onpage-rules.md`; read it in full once)
+
+1. One primary keyword per URL: look it up in `docs/seo/keyword-map.md` before writing; never use another URL's primary in a title or H1.
+2. Title ≤ 60 characters, primary keyword first, then one differentiator; close to the H1.
+3. Meta description ≤ 155: primary in the first sentence, one concrete fact (kcal, formula, price), then a call to action.
+4. Exactly one H1, containing the primary keyword naturally.
+5. The first 40–60 words answer the question with the number (the answer box), with the primary and one secondary.
+6. Each H2 answers one real question from `docs/seo/serp-notes.md` or `keywords.csv` (source PAA/autocomplete).
+7. FAQ: 4–6 real questions answered in 1–3 sentences, JSON-LD identical to the visible text.
+8. Links: hub + 2–4 siblings + 1 calculator, with the target's primary keyword as the anchor.
+9. Images: alt text with the dish or feature name, width/height, WebP, lazy below the fold.
+10. A page you touched ends with **zero on-page notes** (`python3 tools/check_site.py --notes`), and the change is logged in `docs/seo/onpage-changes.csv`.
+
 ## 1 · Set up (5 minutes)
 
 ```

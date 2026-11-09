@@ -1,0 +1,25 @@
+# Dish pages to build next, in order (MASTER PROMPT v3, section D row 5, 9 Nov 2026).
+# The weekly routine takes 2–3 a week from the top of this list, only while
+# "not indexed" in Search Console is above ~25 % of URLs; tools/seo/dish_queue.py
+# prints these first. One slug per line = an app id in tools/dishes/app-data.json.
+# Each page must pass the uniqueness test (onpage rule 7): its own sourced
+# numbers, a real-serving section, a comparison with similar dishes and at
+# least 3 unique answers to real questions (People also ask).
+# Composed (ingredient-sourced) first; "hand" ones (the app's reference figure)
+# need a sourced base-food row before they are built — see the note in each.
+hamburguesa-casera-con-patatas
+paella-de-marisco
+napolitana-de-chocolate
+garbanzos-con-espinacas
+tostada-con-aguacate
+sandwich-de-atun
+# hand figures: build only once the figure is backed by a sourced row
+pechuga-de-pollo-a-la-plancha
+filete-de-ternera-a-la-plancha
+lomo-de-cerdo-a-la-plancha
+judias-verdes-con-patata
+boquerones-fritos
+ensaimada
+# Not in the app yet (no page until the app has sourced figures): kebab/dürüm,
+# lata de atún, horchata, aceitunas, fuet, queso manchego, boniato asado,
+# helado, palomitas, arroz blanco, paella mixta.

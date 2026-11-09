@@ -26,6 +26,7 @@ with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.St
     import gen_dishes as G  # noqa: E402
 
 CSV = os.path.join(ROOT, "docs", "seo", "keywords.csv")
+PRIORITY = os.path.join(ROOT, "docs", "seo", "dish-priority.txt")   # v3 section D list, first
 DIFF = {"low": 0, "medium": 1, "high": 2}
 
 
@@ -59,6 +60,14 @@ def main():
         print("marked %d keyword rows as existing" % n)
         return
     seen, out = set(), []
+    if os.path.exists(PRIORITY):
+        for line in open(PRIORITY, encoding="utf-8"):
+            s = line.strip()
+            if not s or s.startswith("#") or s in have or s in seen:
+                continue
+            if composed(s) or s in HAND:
+                seen.add(s)
+                out.append((s, "D-list" + ("" if composed(s) else " hand"), "dish-priority.txt"))
     cands = []
     for i, r in enumerate(rows):
         s = slug_of(r["target_url"])

@@ -130,16 +130,34 @@ never does either, so it does not affect you.
 - Mark it in `tools/seo/plan-clusters.md` (status block at the top:
   published date and URL).
 
-## 3b · New dish pages (4–6 a week, until about 150)
+## 3b · New dish pages (2–3 a week while indexing catches up)
+
+**Since 9 Nov 2026 (MASTER PROMPT v3, section C): 2–3 new dish pages a
+week, only from `docs/seo/dish-priority.txt`,** until Search Console shows
+"not indexed" below about 25 % of URLs (it was 90 of 220 known on
+9 Nov). Indexing quality comes before volume. Above that line, go back to
+4–6 a week from `keywords.csv` priority, up to about 150 dishes.
 
 ```
 python3 tools/seo/dish_queue.py 10
 ```
-lists the next candidates in `docs/seo/keywords.csv` order (priority 1
-first; foods with a full ingredient breakdown before foods with only the
-app's reference figure). Take the first 4–6. Stop adding once
-`tools/dishes/dishes.json` holds about 150 dishes; from then on, refresh
-instead (§3c), two pages a week.
+lists the next candidates: the `dish-priority.txt` list first, then
+`docs/seo/keywords.csv` order (priority 1 first; foods with a full
+ingredient breakdown before foods with only the app's reference
+figure). Skip a "hand" entry unless its figure can be tied to a sourced
+row; say so in the log.
+
+**Uniqueness test (spam-policy rule; every page must pass it).** A page
+needs its own sourced numbers, a real-serving section (`portion`), a
+comparison with similar dishes (`compare` plus a `lighter` or `drivers`
+sentence that names one), and at least three FAQ answers that are unique
+to this dish and taken from real questions (People also ask in
+`docs/seo/serp-notes.md` once it exists). Variations ("100 g",
+"Mercadona", "con cebolla", "4 huevos") go in as **sections of the
+existing page**, never as new URLs.
+
+Before choosing a title or H1, grep `docs/seo/keyword-map.md` (once it
+exists): never use another URL's primary keyword.
 
 For each one, add an entry to `tools/dishes/dishes.json` (append at the
 end; copy the shape of the last entry, e.g. `merluza-en-salsa-verde`):

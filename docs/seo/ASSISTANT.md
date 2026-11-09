@@ -47,6 +47,10 @@ Everything happens in the owner's Chrome, signed in to the Fotocal Google accoun
 
 **Every time you post, also add the "read also" line** that the platform file gives you, linking to the previous article. Its live URL is in `tracker.csv`.
 
+## Now, once (10 minutes): the November export
+
+Follow `docs/seo/inventory-2026-11.md`, "Exports needed": the **last 3 months** of performance data, one CSV per "not indexed" reason, and the Generative AI report if Search Console shows it. Upload everything into `docs/seo/gsc/2026-11/`.
+
 ## First Monday of every month, before 09:00 Madrid time
 
 Claude's monthly review runs that morning and reads what you upload. If the files aren't there yet, it reports "no data this month" and keeps the previous priorities.
@@ -59,9 +63,10 @@ Claude's monthly review runs that morning and reads what you upload. If the file
 
 ### M1 · Search Console export
 1. https://search.google.com/search-console → getfotocal.com → **Performance → Search results**.
-2. Date: **Last 28 days**. Search type: **Web**. Tick **Total clicks**, **Total impressions**, **Average CTR** and **Average position**.
+2. Date: **Last 28 days** (the first time, in November: **last 3 months**). Search type: **Web**. Tick **Total clicks**, **Total impressions**, **Average CTR** and **Average position**.
 3. Top right, **Export → Download CSV**. You get a .zip. Unzip it: there are files such as `Queries.csv`, `Pages.csv`, `Countries.csv`, `Devices.csv` and `Dates.csv`.
-4. Left menu **Pages** (under Indexing). Note two numbers: **Indexed** and **Not indexed**.
+4. Left menu **Pages** (under Indexing). Note two numbers: **Indexed** and **Not indexed**. Then open each reason in "Why pages aren't indexed" and **Export** it as CSV too.
+4b. If **Performance → Generative AI** (or a similar "AI" report) appears in the menu, export it as well.
 5. Upload to GitHub:
    1. Open https://github.com/fotocal/Fotocal-web/tree/main/docs/seo/gsc.
    2. Click **Add file → Upload files**.

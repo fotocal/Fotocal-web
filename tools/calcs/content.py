@@ -11,6 +11,8 @@ Links are written relative to /calculadoras/<slug>/. The build keeps links
 to the Spanish-only dish pages on the Spanish URL in the English tree."""
 
 SOURCES = {
+    "roza": {"es": 'Roza AM, Shizgal HM. «The Harris Benedict equation reevaluated: resting energy requirements and the body cell mass». <em>Am J Clin Nutr</em> 1984; 40(1): 168-182 (la fórmula de Harris-Benedict revisada, usada solo en la comparación).',
+             "en": 'Roza AM, Shizgal HM. "The Harris Benedict equation reevaluated: resting energy requirements and the body cell mass". <em>Am J Clin Nutr</em> 1984; 40(1): 168-182 (the revised Harris-Benedict equation, used only in the comparison).'},
     "mifflin": {"es": 'Mifflin MD, St Jeor ST y cols. «A new predictive equation for resting energy expenditure in healthy individuals». <em>Am J Clin Nutr</em> 1990; 51(2): 241-247.',
                 "en": 'Mifflin MD, St Jeor ST et al. "A new predictive equation for resting energy expenditure in healthy individuals". <em>Am J Clin Nutr</em> 1990; 51(2): 241-247.'},
     "who_bmi": {"es": 'Organización Mundial de la Salud. <em>Obesidad y sobrepeso</em>, nota descriptiva, y clasificación del IMC para adultos.',
@@ -43,10 +45,10 @@ CALCS = [
 {"slug": "calorias-diarias", "kind": "tdee", "icon": "flame",
  "dishes": ["tortilla-de-patatas", "paella-valenciana", "lentejas-estofadas", "cafe-con-leche"],
  "blog": ["tdee-how-many-calories-you-need", "understanding-your-basal-metabolic-rate", "how-many-calories-does-exercise-burn"],
- "sources": ["mifflin", "wishnofsky"],
+ "sources": ["mifflin", "roza", "wishnofsky"],
  "es": {
   "short": "Calorías diarias", "card": "Tu mantenimiento y las cifras para perder o ganar peso despacio.",
-  "title": "Calculadora de calorías diarias (Mifflin-St Jeor)",
+  "title": "Calculadora de calorías diarias: cuántas comer al día",
   "desc": "Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso, con la fórmula de Mifflin-St Jeor y la misma cuenta que la app Fotocal.",
   "h1": "Calculadora de calorías diarias",
   "lead": "Cuántas calorías gastas al día y cuántas comer para perder o ganar peso despacio. Gratis, en la página y sin enviar tus datos.",
@@ -72,7 +74,7 @@ CALCS = [
   ]},
  "en": {
   "short": "Daily calories", "card": "Your maintenance, and the numbers to lose or gain weight slowly.",
-  "title": "Daily calorie calculator (Mifflin-St Jeor)",
+  "title": "Daily Calorie Calculator: How Many Calories You Need",
   "desc": "Work out how many calories you need a day to maintain, lose or gain weight, with the Mifflin-St Jeor equation and the same maths as the Fotocal app.",
   "h1": "Daily calorie calculator",
   "lead": "How many calories you burn a day, and how many to eat to lose or gain weight slowly. Free, in the page, nothing sent anywhere.",
@@ -129,7 +131,7 @@ CALCS = [
   ]},
  "en": {
   "short": "Calorie deficit", "card": "How much to cut, at what pace, and how long to reach your weight.",
-  "title": "Calorie deficit calculator for women and men",
+  "title": "Calorie Deficit Calculator for Women and Men (Free)",
   "desc": "Work out your calorie deficit to lose weight: maintenance, how much to cut for your sex and weight, and how long it takes. Free, no sign-up, with examples.",
   "h1": "Calorie deficit calculator for women and men",
   "lead": "How many calories to eat to lose weight at a sensible pace, and how long it takes to reach your goal.",
@@ -376,9 +378,9 @@ CALCS = [
  "sources": ["mifflin", "katch"],
  "es": {
   "short": "TMB", "card": "Tu metabolismo basal con Mifflin-St Jeor, o Katch-McArdle si sabes tu grasa.",
-  "title": "Calculadora de TMB: tu metabolismo basal",
-  "desc": "Calcula tu tasa metabólica basal (TMB) con Mifflin-St Jeor, o Katch-McArdle si sabes tu porcentaje de grasa, y tu gasto diario según tu actividad.",
-  "h1": "Calculadora de TMB (metabolismo basal)",
+  "title": "Calculadora TMB y GET: metabolismo basal, mujer y hombre",
+  "desc": "Calcula tu metabolismo basal (TMB) y tu gasto diario (GET) con Mifflin-St Jeor o Katch-McArdle. Gratis, sin registro y con un ejemplo real.",
+  "h1": "Calculadora de TMB y GET (metabolismo basal)",
   "lead": "Lo que gasta tu cuerpo en reposo absoluto, y lo que gastas al día según cómo te mueves.",
   "bridge": "¿Quieres comer según tu gasto sin pesar la comida?",
   "body": """
@@ -400,8 +402,8 @@ CALCS = [
   ]},
  "en": {
   "short": "BMR", "card": "Your basal metabolic rate with Mifflin-St Jeor, or Katch-McArdle if you know your body fat.",
-  "title": "BMR calculator: your basal metabolic rate",
-  "desc": "Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.",
+  "title": "BMR Calculator: Basal Metabolic Rate for Women & Men",
+  "desc": "Work out your basal metabolic rate (BMR) and daily burn (TDEE) with Mifflin-St Jeor or Katch-McArdle. Free, no sign-up, with a worked example.",
   "h1": "BMR calculator (basal metabolic rate)",
   "lead": "What your body burns at complete rest, and what you burn in a day depending on how you move.",
   "bridge": "Want to eat to what you burn without weighing food?",
@@ -429,10 +431,10 @@ CALCS = [
  "sources": ["who_bmi"],
  "es": {
   "short": "Peso saludable", "card": "El rango de peso saludable para tu altura, no un único «peso ideal».",
-  "title": "Calculadora de peso saludable según tu altura",
-  "desc": "Calcula tu rango de peso saludable según tu altura: el que da un IMC de 18,5 a 24,9 (OMS). Un rango, no un único peso ideal, y lo que te separa de él.",
-  "h1": "Calculadora de peso saludable",
-  "lead": "El rango de peso que la OMS considera saludable para tu altura. Un rango, no un número mágico.",
+  "title": "Peso ideal según tu altura: calculadora y tabla",
+  "desc": "Descubre tu peso ideal según tu altura: el rango de IMC saludable de la OMS, con una tabla de 1,50 a 1,95 m para mujer y hombre. Gratis y sin registro.",
+  "h1": "Peso ideal según tu altura: calculadora y tabla para mujer y hombre",
+  "lead": "Tu peso ideal según tu altura es el rango de peso que la OMS considera saludable. Un rango, no un número mágico.",
   "bridge": "¿Quieres acercarte a tu rango sin pesar la comida?",
   "body": """
       <h2 id="como">Cómo se calcula</h2>
@@ -453,10 +455,10 @@ CALCS = [
   ]},
  "en": {
   "short": "Healthy weight", "card": "The healthy weight range for your height, not one \"ideal weight\".",
-  "title": "Healthy weight calculator for your height",
-  "desc": "Your healthy weight range for your height: a BMI of 18.5 to 24.9 by WHO bands. A range, not one ideal weight, and how far you are from it.",
-  "h1": "Healthy weight calculator",
-  "lead": "The weight range the WHO considers healthy for your height. A range, not a magic number.",
+  "title": "Ideal Weight by Height: Calculator and Chart",
+  "desc": "Find your ideal weight by height: the WHO healthy BMI range, with a chart from 1.50 to 1.95 m for women and men. Free, no sign-up.",
+  "h1": "Ideal weight by height: calculator and chart for women and men",
+  "lead": "Your ideal weight by height is the weight range the WHO considers healthy. A range, not a magic number.",
   "bridge": "Want to move towards your range without weighing food?",
   "body": """
       <h2 id="how">How it is calculated</h2>

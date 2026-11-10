@@ -4,6 +4,7 @@ One line per Monday, newest first. Written by the weekly routine (`tools/seo/RUN
 
 | Week (Monday) | Blog post (keyword) | New dish pages, ES + EN (keyword) | Refreshed page | Pages live | Deploy |
 |---|---|---|---|---|---|
+| 2026-11-10 (v3 PART 4) | — | — | 8 calculator URLs (calorías diarias, déficit, TMB, peso ideal; ES+EN): titles with the modifiers people type; computed tables answering «para no engordar», «déficit para perder 1 kg», «TMB y GET», «tabla de peso ideal según altura» | 58 dish pages | on-page notes 232 → 226; changes in `onpage-changes.csv` |
 | 2026-11-10 (v3 PART 3) | — | — | 9 striking-distance URLs (Search Console, position 8–20): `/calorias/` hub ES+EN (quick answer to «cuántas calorías tiene un plato»; EN retitled "Calories in Spanish Food"), scan-food, voice-logging and weight-loss ES+EN (primary keyword in title, H1 and first paragraph), how-fast-should-you-lose-weight ES title | 58 dish pages | on-page notes 252 → 232; changes in `onpage-changes.csv` |
 | 2026-11-09 (v3 PART 2) | — | — | — | 58 dish pages | On-page rules saved (`onpage-rules.md`) and added to the Monday runbook; check_site now prints on-page notes (H1, alt, primary keyword in title/H1/first 100 words): 252 notes to clear in the rollout, 0 on Spanish dish pages. No page changed. |
 | 2026-11-09 (v3 PART 1) | — | — | — | 58 dish pages | keywords.csv 353 → 824 rows (the owner's 9 Nov autocomplete, PAA and SERP research merged; 8 columns added); 296 primaries, one per URL; new `docs/seo/keyword-map.md` and `serp-notes.md`. No page changed. |

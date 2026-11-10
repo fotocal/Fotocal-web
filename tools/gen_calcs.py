@@ -26,6 +26,11 @@ import json, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_dishes import ld_block, ORG, esc, TITLE_MAX, SITE, ROOT, PLAY, download_card  # noqa: E402
 from calcs.content import CALCS, SOURCES, QUICK  # noqa: E402
+from calcs.extra import EXTRA, FAQ_EXTRA  # noqa: E402
+
+for _c in CALCS:   # extra questions join the page's FAQ (and its FAQPage JSON-LD)
+    for _l, _qa in FAQ_EXTRA.get(_c["slug"], {}).items():
+        _c[_l]["faq"] = list(_c[_l]["faq"]) + _qa
 
 SRC = os.path.join(ROOT, "src", "calculadoras")
 PUB = "2026-10-13"
@@ -217,6 +222,7 @@ BRIDGE_KIND = {"tdee": "kcal", "deficit": "kcal", "macros": "kcal", "protein": "
 # where each reference can be read (DOI or the publisher's page)
 SOURCE_URL = {
     "mifflin": "https://doi.org/10.1093/ajcn/51.2.241",
+    "roza": "https://doi.org/10.1093/ajcn/40.1.168",
     "who_bmi": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
     "efsa_protein": "https://doi.org/10.2903/j.efsa.2012.2557",
     "issn_protein": "https://doi.org/10.1186/s12970-017-0177-8",
@@ -484,6 +490,8 @@ def page_lang(c, lang):
     o.append('     <div class="calc-text post-body">')
     o.append('      <div class="answer-box"><p><strong>%s</strong> %s</p></div>' % ("Respuesta rápida:" if lang == "es" else "Quick answer:", QUICK[c["slug"]][lang]))
     o.append(L["body"])
+    if c["slug"] in EXTRA:
+        o.append(EXTRA[c["slug"]][lang])
     o.append('      <h2 id="faq">%s</h2>\n      <div class="faq-list">' % u["faq"])
     for q, a in L["faq"]:
         o.append('        <details class="faq-item"><summary><span>%s</span><i class="faq-plus" aria-hidden="true"></i></summary><p>%s</p></details>' % (esc(q), a))

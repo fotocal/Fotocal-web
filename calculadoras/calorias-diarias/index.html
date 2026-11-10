@@ -12,7 +12,7 @@ s.setItem(K,T||L);if(!T||T===L)return;
 var p=location.pathname,b=p.indexOf("/en/")===0?p.slice(3):(p==="/en"?"/":p);
 location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal</title>
+  <title>Calculadora de calorías diarias: cuántas comer al día</title>
   <meta property="og:locale" content="es_ES">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="description" content="Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso, con la fórmula de Mifflin-St Jeor y la misma cuenta que la app Fotocal.">
@@ -22,7 +22,7 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/calorias-diarias/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
-  <meta property="og:title" content="Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal">
+  <meta property="og:title" content="Calculadora de calorías diarias: cuántas comer al día">
   <meta property="og:description" content="Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso, con la fórmula de Mifflin-St Jeor y la misma cuenta que la app Fotocal.">
   <meta property="og:url" content="https://getfotocal.com/calculadoras/calorias-diarias/">
   <meta property="og:image" content="https://getfotocal.com/assets/og/calculadoras-calorias-diarias-es.jpg">
@@ -30,7 +30,7 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Calculadora de calorías diarias (Mifflin-St Jeor) — Fotocal">
+  <meta name="twitter:title" content="Calculadora de calorías diarias: cuántas comer al día">
   <meta name="twitter:description" content="Calcula cuántas calorías necesitas al día para mantener, perder o ganar peso, con la fórmula de Mifflin-St Jeor y la misma cuenta que la app Fotocal.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og/calculadoras-calorias-diarias-es.jpg">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
@@ -123,6 +123,18 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
       <h2 id="que-hacer">Qué hacer con este número</h2>
       <p>Tómalo como punto de partida, no como verdad: el error de cualquier fórmula ronda el 10 % en una persona concreta. Come durante dos o tres semanas lo que te sale, apuntándolo todo, y mira la media semanal de la báscula. Si no se mueve y querías perder, recorta 100 o 200 kcal más; si bajas más rápido del 1 % de tu peso a la semana, come algo más. Para repartir esa cifra en proteínas, grasas e hidratos, usa la <a href="../macros/">calculadora de macros</a>; para saber cuánto tarda, la de <a href="../deficit-calorico/">déficit calórico</a>.</p>
       <p>Y para saber cuánto comes de verdad, ayuda tener a mano las calorías de lo que se come aquí: una <a href="../../calorias/tortilla-de-patatas/">ración de tortilla de patatas</a>, un <a href="../../calorias/paella-valenciana/">plato de paella</a>, unas <a href="../../calorias/lentejas-estofadas/">lentejas estofadas</a> o el <a href="../../calorias/cafe-con-leche/">café con leche</a> de cada mañana.</p>
+      <h2 id="no-engordar">¿Cuántas calorías debo comer al día para no engordar?</h2>
+      <p>Las de tu mantenimiento: lo que gastas. Comiendo eso, el peso se queda donde está. Depende de tu sexo, edad, altura, peso y de cómo es tu día, así que la tabla es solo una orientación para dos personas concretas: una mujer de 1,65 m y 65 kg y un hombre de 1,78 m y 80 kg. Son estimaciones con la fórmula de Mifflin-St Jeor; para tu cifra, usa la calculadora de arriba.</p>
+      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Edad</th><th scope="col">Mujer, sentada</th><th scope="col">Mujer, de pie a ratos</th><th scope="col">Hombre, sentado</th><th scope="col">Hombre, de pie a ratos</th></tr></thead><tbody>
+        <tr><th scope="row">25 años</th><td>1.674</td><td>1.918</td><td>2.151</td><td>2.465</td></tr>
+        <tr><th scope="row">35 años</th><td>1.614</td><td>1.850</td><td>2.091</td><td>2.396</td></tr>
+        <tr><th scope="row">45 años</th><td>1.554</td><td>1.781</td><td>2.031</td><td>2.327</td></tr>
+        <tr><th scope="row">55 años</th><td>1.494</td><td>1.712</td><td>1.971</td><td>2.258</td></tr>
+        <tr><th scope="row">65 años</th><td>1.434</td><td>1.643</td><td>1.911</td><td>2.190</td></tr>
+      </tbody></table></div>
+      <p>En kcal al día. Cada diez años el gasto baja entre 60 y 70 kcal, con el mismo peso y la misma actividad. Si lo que buscas es perder peso, el siguiente paso es la <a href="../deficit-calorico/">calculadora de déficit calórico</a>; si quieres ver solo lo que gastas en reposo, la <a href="../tmb/">calculadora de TMB</a>.</p>
+      <h2 id="harris-benedict">¿Mifflin-St Jeor o Harris-Benedict?</h2>
+      <p>Son dos fórmulas para lo mismo, la tasa metabólica basal. La de Harris-Benedict es de 1919 y se revisó en 1984; la de Mifflin-St Jeor es de 1990 y es la que usa esta calculadora y la app. Para la mujer del ejemplo (35 años, 165 cm, 70 kg), Mifflin-St Jeor da 1.395 kcal en reposo y Harris-Benedict revisada, 1.455: unas 60 kcal más. La diferencia es pequeña, pero explica por qué dos calculadoras no siempre coinciden.</p>
       <h2 id="faq">Preguntas frecuentes</h2>
       <div class="faq-list">
         <details class="faq-item"><summary><span>¿Cuántas calorías debo comer al día para adelgazar?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Las de tu mantenimiento menos un recorte moderado: lo que corresponde a un cuarto o medio kilo por semana, sin pasar del 25 % de tu gasto. La calculadora te da las dos cifras. Si te sale por debajo de 1.200 kcal (mujer) o 1.500 (hombre), no bajes más sin un profesional sanitario: baja el ritmo.</p></details>
@@ -130,8 +142,9 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
         <details class="faq-item"><summary><span>¿Por qué me sale distinto que en otra calculadora?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Porque usan otra fórmula (Harris-Benedict suele dar más) u otros factores de actividad. Ninguna acierta tu cifra exacta: el error típico a nivel individual ronda el 10 %. Toma el resultado como punto de partida y ajústalo con la báscula a las dos o tres semanas.</p></details>
         <details class="faq-item"><summary><span>¿Cuento el ejercicio dentro de la actividad?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>No. El factor describe tu día a día: trabajo, desplazamientos, tareas. El ejercicio se suma aparte el día que lo haces, que es como lo hace la app. Si lo metes en los dos sitios, lo cuentas dos veces.</p></details>
         <details class="faq-item"><summary><span>¿Da el mismo número que la app Fotocal?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Sí, para los mismos datos. Usa las mismas fórmulas y los mismos límites: el factor de actividad, el tope del 25 % y los suelos de 1.200 y 1.500 kcal. En la app puedes además fijar un peso objetivo y una fecha.</p></details>
+        <details class="faq-item"><summary><span>¿Cuántas calorías gasto al día en reposo?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Es tu tasa metabólica basal: entre el 58 y el 83 % de lo que gastas en un día, según cuánto te muevas. La mujer del ejemplo gasta 1.395 kcal en reposo y 1.918 en total. La <a href="../tmb/">calculadora de TMB</a> te da la tuya.</p></details>
       </div>
-      <section class="dp-src" id="fuentes"><h2>Fuentes</h2><ul><li>Mifflin MD, St Jeor ST y cols. «A new predictive equation for resting energy expenditure in healthy individuals». <em>Am J Clin Nutr</em> 1990; 51(2): 241-247. <a href="https://doi.org/10.1093/ajcn/51.2.241" target="_blank" rel="noopener">Ver la fuente</a></li><li>Wishnofsky M. «Caloric equivalents of gained or lost weight». <em>Am J Clin Nutr</em> 1958; 6(5): 542-546 (unas 7.700 kcal por kilo). <a href="https://doi.org/10.1093/ajcn/6.5.542" target="_blank" rel="noopener">Ver la fuente</a></li></ul></section>
+      <section class="dp-src" id="fuentes"><h2>Fuentes</h2><ul><li>Mifflin MD, St Jeor ST y cols. «A new predictive equation for resting energy expenditure in healthy individuals». <em>Am J Clin Nutr</em> 1990; 51(2): 241-247. <a href="https://doi.org/10.1093/ajcn/51.2.241" target="_blank" rel="noopener">Ver la fuente</a></li><li>Roza AM, Shizgal HM. «The Harris Benedict equation reevaluated: resting energy requirements and the body cell mass». <em>Am J Clin Nutr</em> 1984; 40(1): 168-182 (la fórmula de Harris-Benedict revisada, usada solo en la comparación). <a href="https://doi.org/10.1093/ajcn/40.1.168" target="_blank" rel="noopener">Ver la fuente</a></li><li>Wishnofsky M. «Caloric equivalents of gained or lost weight». <em>Am J Clin Nutr</em> 1958; 6(5): 542-546 (unas 7.700 kcal por kilo). <a href="https://doi.org/10.1093/ajcn/6.5.542" target="_blank" rel="noopener">Ver la fuente</a></li></ul></section>
       <nav class="dp-related" aria-label="Más calculadoras y tablas">
         <h2>Más calculadoras y tablas</h2>
         <div class="post-nav">
@@ -140,8 +153,8 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
           <a class="post-nav-item" href="../proteinas/"><small>Calculadora</small><strong>Calculadora de proteínas</strong></a>
           <a class="post-nav-item" href="../macros/"><small>Calculadora</small><strong>Calculadora de macros</strong></a>
           <a class="post-nav-item" href="../agua/"><small>Calculadora</small><strong>Calculadora de agua</strong></a>
-          <a class="post-nav-item" href="../tmb/"><small>Calculadora</small><strong>Calculadora de TMB (metabolismo basal)</strong></a>
-          <a class="post-nav-item" href="../peso-saludable/"><small>Calculadora</small><strong>Calculadora de peso saludable</strong></a>
+          <a class="post-nav-item" href="../tmb/"><small>Calculadora</small><strong>Calculadora de TMB y GET (metabolismo basal)</strong></a>
+          <a class="post-nav-item" href="../peso-saludable/"><small>Calculadora</small><strong>Peso ideal según tu altura: calculadora y tabla para mujer y hombre</strong></a>
           <a class="post-nav-item" href="../../calorias/"><small>Tabla</small><strong>Calorías de los platos españoles, por ración y por 100 g</strong></a>
           <a class="post-nav-item" href="../../blog/tdee-how-many-calories-you-need/"><small>Del blog</small><strong>TDEE explicado: cuántas calorías necesitas de verdad</strong></a>
           <a class="post-nav-item" href="../../blog/understanding-your-basal-metabolic-rate/"><small>Del blog</small><strong>Entender tu tasa metabólica basal (TMB)</strong></a>
@@ -252,6 +265,14 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Sí, para los mismos datos. Usa las mismas fórmulas y los mismos límites: el factor de actividad, el tope del 25 % y los suelos de 1.200 y 1.500 kcal. En la app puedes además fijar un peso objetivo y una fecha."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas calorías gasto al día en reposo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es tu tasa metabólica basal: entre el 58 y el 83 % de lo que gastas en un día, según cuánto te muevas. La mujer del ejemplo gasta 1.395 kcal en reposo y 1.918 en total. La calculadora de TMB te da la tuya."
       }
     }
   ]

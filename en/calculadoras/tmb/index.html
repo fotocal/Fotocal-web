@@ -12,26 +12,26 @@ s.setItem(K,T||L);if(!T||T===L)return;
 var p=location.pathname,b=p.indexOf("/en/")===0?p.slice(3):(p==="/en"?"/":p);
 location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMR calculator: your basal metabolic rate — Fotocal</title>
+  <title>BMR Calculator: Basal Metabolic Rate for Women &amp; Men</title>
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta name="description" content="Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.">
+  <meta name="description" content="Work out your basal metabolic rate (BMR) and daily burn (TDEE) with Mifflin-St Jeor or Katch-McArdle. Free, no sign-up, with a worked example.">
   <link rel="canonical" href="https://getfotocal.com/en/calculadoras/tmb/">
   <link rel="alternate" hreflang="es" href="https://getfotocal.com/calculadoras/tmb/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calculadoras/tmb/">
   <link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calculadoras/tmb/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
-  <meta property="og:title" content="BMR calculator: your basal metabolic rate — Fotocal">
-  <meta property="og:description" content="Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.">
+  <meta property="og:title" content="BMR Calculator: Basal Metabolic Rate for Women &amp; Men">
+  <meta property="og:description" content="Work out your basal metabolic rate (BMR) and daily burn (TDEE) with Mifflin-St Jeor or Katch-McArdle. Free, no sign-up, with a worked example.">
   <meta property="og:url" content="https://getfotocal.com/en/calculadoras/tmb/">
   <meta property="og:image" content="https://getfotocal.com/assets/og/calculadoras-tmb-en.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BMR calculator: your basal metabolic rate — Fotocal">
-  <meta name="twitter:description" content="Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.">
+  <meta name="twitter:title" content="BMR Calculator: Basal Metabolic Rate for Women &amp; Men">
+  <meta name="twitter:description" content="Work out your basal metabolic rate (BMR) and daily burn (TDEE) with Mifflin-St Jeor or Katch-McArdle. Free, no sign-up, with a worked example.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og/calculadoras-tmb-en.jpg">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
@@ -119,6 +119,18 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
       <p>A 35-year-old woman, 165 cm and 70 kg: 700 + 1,031.25 − 175 − 161 = 1,395 kcal. A 35-year-old man, 178 cm and 85 kg: 850 + 1,112.5 − 175 + 5 = 1,793 kcal; if he knows he has 20% body fat, his lean mass is 68 kg and Katch-McArdle gives 370 + 21.6 × 68 = 1,839 kcal.</p>
       <h2 id="what-next">What to do with this number</h2>
       <p>Do not eat your BMR: it is what you would burn lying down all day. The number to plan with is your daily energy use (BMR times activity), which the <a href="/en/calculadoras/calorias-diarias/">daily calorie calculator</a> gives you, with the numbers to lose or gain. For a sense of scale: a serving of <a href="/en/calorias/churros-con-chocolate/">churros with chocolate</a>, <a href="/en/calorias/croquetas-de-jamon/">ham croquettes</a> or a <a href="/en/calorias/torrijas/">torrija</a> can be a big share of a BMR (pages in Spanish).</p>
+      <h2 id="bmr-tdee">BMR and TDEE: what is the difference?</h2>
+      <p>BMR (basal metabolic rate) is what you burn at complete rest. TDEE (total daily energy expenditure) is what you burn on a real day: BMR times a factor for how you move. The calculator gives you both. For the two people in the example, with a BMR of 1,395 kcal (woman, 35 years, 165 cm, 70 kg) and 1,792 kcal (man, 35 years, 178 cm, 85 kg):</p>
+      <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th scope="col">Your day</th><th scope="col">Factor</th><th scope="col">TDEE, woman (kcal)</th><th scope="col">TDEE, man (kcal)</th></tr></thead><tbody>
+        <tr><th scope="row">Sitting most of the day</th><td>× 1.2</td><td>1,674</td><td>2,151</td></tr>
+        <tr><th scope="row">On your feet sometimes</th><td>× 1.375</td><td>1,918</td><td>2,465</td></tr>
+        <tr><th scope="row">Standing most of the day</th><td>× 1.465</td><td>2,044</td><td>2,626</td></tr>
+        <tr><th scope="row">Moving all day</th><td>× 1.55</td><td>2,163</td><td>2,778</td></tr>
+        <tr><th scope="row">Hard physical work</th><td>× 1.725</td><td>2,407</td><td>3,092</td></tr>
+      </tbody></table></div>
+      <p>TDEE is your maintenance: the number a deficit is measured against. To set it against your goal, carry on to the <a href="/en/calculadoras/calorias-diarias/">daily calorie calculator</a>.</p>
+      <h2 id="women-men">BMR for women and for men</h2>
+      <p>The equation is the same except for the last term: +5 for men and −161 for women. At the same age, height and weight, a woman's BMR comes out 166 kcal lower, because on average she carries less muscle. If you know your body fat percentage, the Katch-McArdle equation starts from lean mass and no longer needs your sex.</p>
       <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-list">
         <details class="faq-item"><summary><span>What is BMR?</span><i class="faq-plus" aria-hidden="true"></i></summary><p>Basal metabolic rate: the calories your body burns at complete rest just to stay alive. It does not include digestion or movement, which is why your daily energy use is higher.</p></details>
@@ -136,7 +148,7 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
           <a class="post-nav-item" href="/en/calculadoras/proteinas/"><small>Calculator</small><strong>Protein calculator</strong></a>
           <a class="post-nav-item" href="/en/calculadoras/macros/"><small>Calculator</small><strong>Macro calculator</strong></a>
           <a class="post-nav-item" href="/en/calculadoras/agua/"><small>Calculator</small><strong>Water intake calculator</strong></a>
-          <a class="post-nav-item" href="/en/calculadoras/peso-saludable/"><small>Calculator</small><strong>Healthy weight calculator</strong></a>
+          <a class="post-nav-item" href="/en/calculadoras/peso-saludable/"><small>Calculator</small><strong>Ideal weight by height: calculator and chart for women and men</strong></a>
           <a class="post-nav-item" href="/en/calorias/"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g</strong></a>
           <a class="post-nav-item" href="/en/blog/understanding-your-basal-metabolic-rate/"><small>From the blog</small><strong>Understanding Your Basal Metabolic Rate (BMR)</strong></a>
           <a class="post-nav-item" href="/en/blog/tdee-how-many-calories-you-need/"><small>From the blog</small><strong>TDEE Explained: How Many Calories You Really Need</strong></a>
@@ -151,7 +163,7 @@ location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}}
   "@type": "WebApplication",
   "name": "BMR calculator (basal metabolic rate)",
   "url": "https://getfotocal.com/en/calculadoras/tmb/",
-  "description": "Work out your basal metabolic rate (BMR) with Mifflin-St Jeor, or Katch-McArdle if you know your body fat, and your daily burn at five activity levels.",
+  "description": "Work out your basal metabolic rate (BMR) and daily burn (TDEE) with Mifflin-St Jeor or Katch-McArdle. Free, no sign-up, with a worked example.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "Any",
   "browserRequirements": "Requires JavaScript",

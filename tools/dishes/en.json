@@ -1,9 +1,9 @@
 {
  "_comment": "English for the dish pages (lang-ux round, 2026-11): a short gloss per dish page, the hub groups, serving labels and ingredient names. Numbers never live here.",
  "gloss": {
-  "tortilla-de-patatas": "Spanish potato omelette",
+  "tortilla-de-patatas": "Spanish omelette",
   "paella-valenciana": "Valencian paella",
-  "croquetas-de-jamon": "ham croquettes",
+  "croquetas-de-jamon": "Spanish ham croquettes",
   "cocido-madrileno": "Madrid chickpea stew",
   "gazpacho": "cold tomato soup",
   "salmorejo": "cold tomato and bread cream",
@@ -11,7 +11,7 @@
   "fabada-asturiana": "Asturian bean stew",
   "ensaladilla-rusa": "Spanish potato salad",
   "churros-con-chocolate": "churros with hot chocolate",
-  "pulpo-a-la-gallega": "Galician-style octopus",
+  "pulpo-a-la-gallega": "Galician octopus",
   "empanada-gallega": "Galician pie",
   "migas": "fried breadcrumbs",
   "torrijas": "Spanish French toast",
@@ -20,10 +20,10 @@
   "huevos-fritos-con-patatas": "fried eggs with chips",
   "arroz-con-leche": "rice pudding",
   "albondigas-en-salsa": "meatballs in sauce",
-  "pincho-de-tortilla": "slice of potato omelette",
+  "pincho-de-tortilla": "slice of Spanish omelette",
   "patatas-bravas": "fried potatoes with spicy sauce",
-  "bocadillo-de-jamon-serrano": "serrano ham baguette",
-  "calamares-a-la-romana": "battered squid rings",
+  "bocadillo-de-jamon-serrano": "serrano ham sandwich",
+  "calamares-a-la-romana": "fried calamari",
   "callos-a-la-madrilena": "Madrid-style tripe stew",
   "jamon-serrano": "serrano ham",
   "cana-de-cerveza": "small draught beer",
@@ -31,13 +31,13 @@
   "pimientos-de-padron": "fried Padrón peppers",
   "tarta-de-santiago": "Galician almond cake",
   "gambas-al-ajillo": "garlic prawns",
-  "bocadillo-de-calamares": "squid ring baguette",
+  "bocadillo-de-calamares": "calamari sandwich",
   "sopa-castellana": "Castilian garlic soup",
   "tortilla-francesa": "plain omelette",
   "sandwich-mixto": "ham and cheese toastie",
   "platano": "banana",
   "huevo-cocido": "hard-boiled egg",
-  "barra-de-pan": "Spanish baguette",
+  "barra-de-pan": "Spanish bread",
   "aceite-de-oliva": "olive oil",
   "coca-cola-zero": "Coca-Cola Zero",
   "copa-de-vino-tinto": "glass of red wine",
@@ -256,5 +256,182 @@
   "Atún fresco a la plancha": "fresh tuna, grilled",
   "Merluza a la plancha": "hake, cooked",
   "Almejas cocidas": "cooked clams"
+ },
+ "_comment_name": "English-first names (MASTER PROMPT v3, PART 7): what English speakers type, and whether the Spanish name follows in brackets. Dishes not listed here have no English name people search for (gazpacho, salmorejo, fabada, churros…): they keep the Spanish name first and the gloss in brackets. 'title' overrides the page title for one dish.",
+ "name": {
+  "tortilla-de-patatas": {
+   "en": "Spanish omelette",
+   "es": true,
+   "title": "Calories in Spanish Omelette (Tortilla de Patatas)"
+  },
+  "paella-valenciana": {
+   "en": "Valencian paella",
+   "es": true,
+   "title": "Calories in Paella (Valencian): per Serving & 100 g"
+  },
+  "croquetas-de-jamon": {
+   "en": "Spanish ham croquettes",
+   "es": true
+  },
+  "lentejas-estofadas": {
+   "en": "Spanish lentil stew",
+   "es": true
+  },
+  "ensaladilla-rusa": {
+   "en": "Spanish potato salad",
+   "es": true
+  },
+  "churros-con-chocolate": {
+   "en": "churros with chocolate",
+   "es": false
+  },
+  "pulpo-a-la-gallega": {
+   "en": "Galician octopus",
+   "es": true
+  },
+  "arroz-con-leche": {
+   "en": "Spanish rice pudding",
+   "es": true
+  },
+  "albondigas-en-salsa": {
+   "en": "Spanish meatballs in sauce",
+   "es": true
+  },
+  "pincho-de-tortilla": {
+   "en": "Spanish omelette slice",
+   "es": true
+  },
+  "bocadillo-de-jamon-serrano": {
+   "en": "serrano ham sandwich",
+   "es": true
+  },
+  "calamares-a-la-romana": {
+   "en": "fried calamari",
+   "es": true
+  },
+  "jamon-serrano": {
+   "en": "serrano ham",
+   "es": true
+  },
+  "cana-de-cerveza": {
+   "en": "small draught beer",
+   "es": true
+  },
+  "gambas-al-ajillo": {
+   "en": "garlic prawns",
+   "es": true
+  },
+  "bocadillo-de-calamares": {
+   "en": "calamari sandwich",
+   "es": true
+  },
+  "sopa-castellana": {
+   "en": "Castilian garlic soup",
+   "es": true
+  },
+  "tortilla-francesa": {
+   "en": "plain omelette",
+   "es": true
+  },
+  "sandwich-mixto": {
+   "en": "ham and cheese toastie",
+   "es": true
+  },
+  "platano": {
+   "en": "banana",
+   "es": false
+  },
+  "huevo-cocido": {
+   "en": "hard-boiled egg",
+   "es": false
+  },
+  "barra-de-pan": {
+   "en": "Spanish bread",
+   "es": true
+  },
+  "aceite-de-oliva": {
+   "en": "olive oil",
+   "es": false
+  },
+  "copa-de-vino-tinto": {
+   "en": "red wine (150 ml glass)",
+   "es": false
+  },
+  "tercio-de-cerveza": {
+   "en": "beer (33 cl bottle)",
+   "es": false
+  },
+  "magdalena": {
+   "en": "Spanish muffin",
+   "es": true
+  },
+  "salmon-a-la-plancha": {
+   "en": "grilled salmon",
+   "es": false
+  },
+  "macarrones-con-tomate": {
+   "en": "macaroni with tomato sauce",
+   "es": false
+  },
+  "espaguetis-bolonesa": {
+   "en": "spaghetti bolognese",
+   "es": false
+  },
+  "pollo-asado": {
+   "en": "roast chicken",
+   "es": false
+  },
+  "potaje-de-garbanzos": {
+   "en": "Spanish chickpea stew",
+   "es": true
+  },
+  "ensalada-mixta": {
+   "en": "Spanish mixed salad",
+   "es": true
+  },
+  "manzana": {
+   "en": "apple",
+   "es": false
+  },
+  "almendras": {
+   "en": "almonds",
+   "es": false
+  },
+  "arroz-a-la-cubana": {
+   "en": "Cuban-style rice",
+   "es": true
+  },
+  "lentejas-con-chorizo": {
+   "en": "lentils with chorizo",
+   "es": true
+  },
+  "bacalao-al-pil-pil": {
+   "en": "cod pil pil",
+   "es": true
+  },
+  "merluza-en-salsa-verde": {
+   "en": "hake in green sauce",
+   "es": true
+  },
+  "huevos-fritos-con-patatas": {
+   "en": "fried eggs and chips",
+   "es": true
+  },
+  "tostada-con-tomate-y-aceite": {
+   "en": "tomato toast with olive oil",
+   "es": true
+  },
+  "croissant": {
+   "en": "croissant",
+   "es": false
+  },
+  "coca-cola-zero": {
+   "en": "Coca-Cola Zero",
+   "es": false
+  },
+  "pizza": {
+   "en": "pizza",
+   "es": false
+  }
  }
 }

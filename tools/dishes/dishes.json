@@ -475,9 +475,20 @@
     {
      "q": "¿Es la fabada muy salada?",
      "a": "Bastante: el chorizo y la morcilla son embutidos curados y el plato pasa de los 2 g de sal, casi la mitad de los 5 g diarios que recomienda la OMS. Si la tensión es un tema, es el plato en el que el compango importa dos veces."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de fabada?",
+     "a": "{per100} kcal por cada 100 g, con chorizo y morcilla incluidos. Un trozo de {g100kcal} g ya son 100 kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la fabada por 100 g, medio plato y ración de restaurante",
+     "html": "<p>100 g de fabada con su compango tienen {per100} kcal. Medio plato, de primero, son {kcal/2} kcal; el plato de {g} g de la app, {kcal}. Una ración de restaurante asturiano, de las de 500 g, llega a {per100*5} kcal: es un plato único, no un primero.</p>"
+    }
+   ]
   },
   {
    "slug": "ensaladilla-rusa",
@@ -512,9 +523,20 @@
     {
      "q": "¿Cuánta proteína tiene la ensaladilla?",
      "a": "{protein} g por ración, del huevo y el atún: poca para lo que pesa en calorías. Es un primero, no una fuente de proteína; el segundo tiene que poner el resto."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de ensaladilla rusa?",
+     "a": "{per100} kcal por cada 100 g. Una tapa pequeña de 80 g son unas {per100*0.8} kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la ensaladilla rusa por 100 g y por tapa",
+     "html": "<p>100 g de ensaladilla tienen {per100} kcal. La tapa pequeña que viene con la caña, de unos 80 g, son {per100*0.8} kcal; la ración de {g} g, {kcal}. Casi dos tercios de las calorías vienen de la grasa ({fat} g por ración), sobre todo de la mayonesa.</p>"
+    }
+   ]
   },
   {
    "slug": "churros-con-chocolate",
@@ -599,9 +621,20 @@
     {
      "q": "¿Engorda el pulpo a la gallega?",
      "a": "Difícil: {kcal} kcal una ración que sacia como un segundo plato. Lo que engorda en una mesa gallega es lo que rodea al pulpo, el pan, la empanada y el vino, no el pulpo."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de pulpo a la gallega?",
+     "a": "{per100} kcal por cada 100 g del plato servido, con patata y aceite, y {protein/2} g de proteína."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del pulpo a la gallega por 100 g y por media ración",
+     "html": "<p>100 g de pulpo a la gallega, con su patata y su aceite, tienen {per100} kcal. Media ración son {kcal/2} kcal y la ración de {g} g, {kcal}. Es la cifra de referencia de la app para el plato entero; el pulpo cocido solo, sin aceite ni cachelos, queda bastante por debajo.</p>"
+    }
+   ]
   },
   {
    "slug": "empanada-gallega",
@@ -636,9 +669,20 @@
     {
      "q": "¿Engorda la empanada?",
      "a": "Una porción son {kcal} kcal, un segundo plato en toda regla. Dos trozos picoteados de pie en una fiesta son {kcal*2}, una comida entera sin haberse sentado. Ese es el único problema de la empanada: no se cuenta."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de empanada gallega?",
+     "a": "{per100} kcal por cada 100 g. Una porción de {g} g son {kcal} kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la empanada por 100 g, por trozo y por dos trozos",
+     "html": "<p>100 g de empanada gallega tienen {per100} kcal. Un trozo de tapa de 80 g son {per100*0.8} kcal, la porción de {g} g de la app son {kcal}, y dos porciones, una cena, {kcal*2}. Es la cifra de referencia de la app; el relleno cambia poco la cuenta, porque lo que pesa es la masa.</p>"
+    }
+   ]
   },
   {
    "slug": "migas",
@@ -674,9 +718,20 @@
     {
      "q": "¿Las migas engordan?",
      "a": "Un plato de {kcal} kcal es una comida entera de hidratos y grasa, y era comida de trabajo físico. Un día de campo, nada; como cena habitual delante de la televisión, bastante."
+    },
+    {
+     "q": "¿Cuántas calorías tiene medio plato de migas?",
+     "a": "Unas {kcal/2} kcal medio plato de 125 g, con su chorizo o su panceta."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "medio-plato",
+     "h2": "Calorías de medio plato y de un plato de migas",
+     "html": "<p>Medio plato de migas, 125 g, son {kcal/2} kcal; el plato de {g} g, {kcal}. De cada 100 g, {per100} kcal. Como se comen a cucharadas de la sartén, la forma más fácil de saber cuánto llevas es servirte en un plato antes de empezar.</p>"
+    }
+   ]
   },
   {
    "slug": "torrijas",
@@ -712,9 +767,24 @@
     {
      "q": "¿Torrijas al horno o fritas?",
      "a": "Al horno se quita la mayor parte del aceite, que es la grasa del plato; la torrija sigue siendo pan, leche y azúcar, con sus hidratos. Menos calorías, no pocas."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 2 torrijas?",
+     "a": "{kcal*2} kcal dos torrijas caseras de {g} g cada una."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de torrijas?",
+     "a": "{per100} kcal por cada 100 g: algo más de una torrija casera."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "por-unidad",
+     "h2": "Calorías de 1, 2 y 3 torrijas",
+     "html": "<p>Una torrija casera de {g} g tiene {kcal} kcal; dos, {kcal*2}; tres, {kcal*3}. Las de pastelería, de unos 120 g, son {per100*1.2} kcal cada una. Por 100 g, {per100} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "tostada-con-tomate-y-aceite",
@@ -751,9 +821,20 @@
     {
      "q": "¿Tostada con tomate o con mantequilla y mermelada?",
      "a": "{kcal} kcal frente a {kcal:tostada-con-mantequilla-y-mermelada}: parecidas. La diferencia no está en las calorías sino en el tipo de grasa, de oliva en una y saturada en la otra, y en el azúcar de la mermelada."
+    },
+    {
+     "q": "¿Cuántas calorías tienen dos tostadas con tomate y aceite?",
+     "a": "{kcal*2} kcal dos tostadas de {g} g, con {fat*2} g de grasa, casi toda del aceite de oliva."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "medidas",
+     "h2": "Calorías de media tostada, una y dos",
+     "html": "<p>Media tostada son {kcal/2} kcal, una entera de {g} g son {kcal} y dos, {kcal*2}. Por 100 g, {per100} kcal. El pan pone la mayor parte; el aceite es lo que más cambia de un bar a otro, y el tomate casi no cuenta (18 kcal por 100 g en la fila de la app).</p>"
+    }
+   ]
   },
   {
    "slug": "cafe-con-leche",
@@ -793,9 +874,20 @@
     {
      "q": "¿El café con leche engorda?",
      "a": "Una taza, no. El hábito, sí: cuatro al día con azúcar pasan de 400 kcal líquidas que no llenan nada. Es la partida que más gente lleva sin apuntar."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un café con leche grande?",
+     "a": "Unas {per100*2.5} kcal un vaso de 250 ml con leche entera y sin azúcar."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "tipos",
+     "h2": "Café con leche, desnatada, cortado y solo: calorías de cada uno",
+     "html": "<p>Sin azúcar: un café con leche entera de 200 ml tiene {kcal} kcal; con leche desnatada, {kcal:cafe-con-leche-desnatada}; un cortado, {kcal:cafe-cortado}; un café solo, {kcal:cafe-solo}. El vaso grande de bar, de 250 ml, sube a {per100*2.5} kcal. Dos cafés con leche al día son {kcal*2} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "huevos-fritos-con-patatas",
@@ -832,9 +924,20 @@
     {
      "q": "¿Engordan los huevos?",
      "a": "No más que cualquier alimento: la cuenta del huevo frito la hace la sartén. Dos huevos cocidos o a la plancha son bastante menos que fritos, y la proteína es la misma."
+    },
+    {
+     "q": "¿Cuántas calorías tiene medio plato de huevos fritos con patatas?",
+     "a": "Unas {kcal/2} kcal: un huevo frito con media ración de patatas fritas."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los huevos fritos con patatas por 100 g y por medio plato",
+     "html": "<p>100 g del plato tienen {per100} kcal. Medio plato son {kcal/2} kcal y el plato de {g} g con dos huevos, {kcal}. Seis de cada diez calorías vienen de la grasa: {fat} g por plato, entre el aceite de los huevos y el de las patatas.</p>"
+    }
+   ]
   },
   {
    "slug": "arroz-con-leche",
@@ -870,9 +973,20 @@
     {
      "q": "¿Engorda el arroz con leche?",
      "a": "Un bol son {kcal} kcal, menos que un cruasán. Como postre de una comida normal entra sin problema; como merienda diaria de tarrina, es azúcar que suma."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de arroz con leche?",
+     "a": "{per100} kcal por cada 100 g."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del arroz con leche por 100 g, por tarrina y por plato",
+     "html": "<p>100 g de arroz con leche tienen {per100} kcal. La tarrina o el bol de {g} g son {kcal} kcal; un plato de restaurante de 250 g, {per100*2.5}. Las natillas de la app tienen {kcal:natillas} kcal por unidad y el flan de huevo, {kcal:flan-de-huevo}.</p>"
+    }
+   ]
   },
   {
    "slug": "albondigas-en-salsa",
@@ -907,9 +1021,20 @@
     {
      "q": "¿Albóndigas o filete a la plancha?",
      "a": "El filete de 150 g son {kcal:filete-de-ternera-a-la-plancha} kcal frente a {kcal} las albóndigas, con proteína parecida: la diferencia es la fritura y la grasa de la carne picada. No es motivo para dejar de hacer albóndigas; es motivo para contar el pan."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de albóndigas en salsa?",
+     "a": "{per100} kcal por cada 100 g, con su salsa."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de las albóndigas por 100 g y por tapa",
+     "html": "<p>100 g de albóndigas en salsa tienen {per100} kcal. Una tapa de tres albóndigas, la mitad de la ración, son {kcal/2} kcal; la ración de {g} g, {kcal}. El arroz o las patatas de acompañar van aparte.</p>"
+    }
+   ]
   },
   {
    "slug": "pincho-de-tortilla",
@@ -944,9 +1069,20 @@
     {
      "q": "¿Es el pincho de tortilla un buen desayuno?",
      "a": "Es un desayuno de {kcal} kcal con {protein} g de proteína, parecido a un sándwich mixto y mejor que un cruasán. Con el café con leche, un desayuno de bar completo por debajo de 300 kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tienen dos pinchos de tortilla?",
+     "a": "{kcal*2} kcal dos pinchos de {g} g, sin contar el pan."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "tamanos",
+     "h2": "Calorías de un pincho pequeño, uno normal, uno grande y dos",
+     "html": "<p>Un pincho fino de 80 g tiene {per100*0.8} kcal; el normal de {g} g, {kcal}; uno grande y jugoso de 180 g, {per100*1.8}. Dos pinchos normales son {kcal*2} kcal. El pan de debajo suma aparte: una rebanada de 30 g, unas 80 kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "patatas-bravas",
@@ -1033,11 +1169,22 @@
     {
      "q": "¿Bocadillo de jamón o de tortilla?",
      "a": "Parecidos: {kcal} kcal frente a {kcal:bocadillo-de-tortilla} el de tortilla, de 200 g. El de jamón tiene más proteína y mucha más sal; el de tortilla, más grasa del aceite. Por saciedad empatan; por sal, gana el de tortilla."
+    },
+    {
+     "q": "¿Cuántas calorías tiene medio bocadillo de jamón?",
+     "a": "Unas {kcal/2} kcal, con {protein/2} g de proteína."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "medio",
+     "h2": "Calorías de medio bocadillo y de uno entero",
+     "html": "<p>Medio bocadillo de jamón son {kcal/2} kcal y uno entero de {g} g, {kcal}. Por 100 g, {per100} kcal. Casi dos tercios vienen del pan, no del jamón.</p>"
+    }
+   ]
   },
   {
    "slug": "calamares-a-la-romana",
@@ -1073,11 +1220,22 @@
     {
      "q": "¿Cuánta proteína tienen?",
      "a": "{protein} g en la ración de 150 g, más que un filete pequeño. El rebozado añade hidratos y grasa, pero no le quita al calamar lo que tiene."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de calamares a la romana?",
+     "a": "{per100} kcal por cada 100 g, con {protein/1.5} g de proteína."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los calamares a la romana por 100 g, media ración y ración para compartir",
+     "html": "<p>100 g de calamares rebozados y fritos tienen {per100} kcal. Media ración son {kcal/2} kcal, la ración de {g} g son {kcal}, y una ración de bar para compartir de 300 g, {kcal*2}.</p>"
+    }
+   ]
   },
   {
    "slug": "callos-a-la-madrilena",
@@ -1151,11 +1309,22 @@
     {
      "q": "¿Engorda el jamón?",
      "a": "Por calorías, poco para lo que sacia: {kcal} kcal la ración de 50 g. Lo que engorda es el formato: el jamón se come con pan, con queso y con vino, y la ración de celebración son 100 o 150 g. El jamón solo, como tapa, es de lo más razonable de la barra."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una loncha de jamón serrano?",
+     "a": "Unas {per100*0.12} kcal una loncha fina de 12 g."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "loncha",
+     "h2": "Calorías de una loncha, 50 g y 100 g de jamón serrano",
+     "html": "<p>Una loncha fina de unos 12 g tiene {per100*0.12} kcal; cuatro lonchas, el platito de {g} g, {kcal}; 100 g, {per100} kcal y {protein*2} g de proteína.</p>"
+    }
+   ]
   },
   {
    "slug": "cana-de-cerveza",

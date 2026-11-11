@@ -83,8 +83,8 @@
     "isAccessibleForFree": true,
     "offers": [
       { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "{{i18n:ld.app.offerFree}}", "description": "{{i18n:ld.app.offerFreeDesc}}" },
-      { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "name": "{{i18n:ld.app.offerMonth}}", "description": "{{i18n:ld.app.offerTrial}}" },
-      { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR", "name": "{{i18n:ld.app.offerYear}}", "description": "{{i18n:ld.app.offerTrial}}" }
+      { "@type": "Offer", "price": "{{price:month_num}}", "priceCurrency": "EUR", "name": "{{i18n:ld.app.offerMonth}}", "description": "{{i18n:ld.app.offerTrial}}" },
+      { "@type": "Offer", "price": "{{price:year_num}}", "priceCurrency": "EUR", "name": "{{i18n:ld.app.offerYear}}", "description": "{{i18n:ld.app.offerTrial}}"{{offer:schema}} }
     ],
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
     "installUrl": "https://play.google.com/store/apps/details?id=com.fotokal.app",
@@ -147,6 +147,7 @@
             <span class="kicker" data-i18n="hero.eyebrow">AI nutrition tracking · Android</span>
             <h1 class="hero-title" data-i18n-html="hero.title">One photo. All your nutrition, <em class="accent">instantly</em>.</h1>
             <p class="hero-sub" data-i18n="hero.sub">Snap your meal and get calories, macros and a health score in seconds. Free, no card: 2 AI scans a day, unlimited barcode scanner and Coach Kal.</p>
+            <!--offer--><p class="offer-badge">{{offer:badge}}</p><!--/offer-->
             <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
             <span class="hero-note" data-i18n="cta.play">On Google Play · Android</span>
           </div>
@@ -174,7 +175,7 @@
           </div>
           <div class="proof-item reveal" style="--rd:.08s">
             <span class="proof-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V4h7l9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
-            <div class="proof-txt"><b data-i18n="proof.t2">€6.99/month · €34.99/year</b><p data-i18n="proof.b2">Premium removes the two daily limits. 5-day trial on both plans, and the full price before you download.</p><a class="proof-link" href="subscription/" data-i18n="proof.link">See the plans →</a></div>
+            <div class="proof-txt"><b data-i18n="proof.t2">{{price:month}}/month · {{price:year}}/year</b><p data-i18n="proof.b2">Premium removes the two daily limits. 5-day trial on both plans, and the full price before you download.</p><a class="proof-link" href="subscription/" data-i18n="proof.link">See the plans →</a></div>
           </div>
           <div class="proof-item reveal" style="--rd:.16s">
             <span class="proof-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
@@ -403,7 +404,7 @@
               <tr><th data-i18n="cmp.r9"></th><td data-label="Fotocal" class="c-us"><span class="part" data-i18n="cmp.partfree">Free, parts Premium</span></td><td data-label="Cal AI"><span class="na" aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.na">Not stated on the maker's site</span></td><td data-label="MyFitnessPal"><span class="part" data-i18n="cmp.premium">Premium</span></td><td data-label="Yazio"><span class="part" data-i18n="cmp.pro">Pro</span></td></tr>
               <tr><th data-i18n="cmp.r10"></th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="part" data-i18n="cmp.gfit">Google Fit</span></td><td data-label="MyFitnessPal"><span class="yes">✓</span></td><td data-label="Yazio"><span class="part" data-i18n="cmp.pro">Pro</span></td></tr>
               <tr><th data-i18n="cmp.r11"></th><td data-label="Fotocal" class="c-us"><span class="yes">✓</span></td><td data-label="Cal AI"><span class="na" aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.na">Not stated on the maker's site</span></td><td data-label="MyFitnessPal"><span class="yes">✓</span></td><td data-label="Yazio"><span class="yes">✓</span></td></tr>
-              <tr class="compare-price"><th data-i18n="cmp.r12"></th><td data-label="Fotocal" class="c-us"><span class="price">€34.99</span></td><td data-label="Cal AI"><span class="na" aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.na">Not stated on the maker's site</span></td><td data-label="MyFitnessPal"><span class="price">$79.99</span></td><td data-label="Yazio"><span class="na" aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.na">Not stated on the maker's site</span></td></tr>
+              <tr class="compare-price"><th data-i18n="cmp.r12"></th><td data-label="Fotocal" class="c-us"><span class="price">{{price:year}}</span></td><td data-label="Cal AI"><span class="na" aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.na">Not stated on the maker's site</span></td><td data-label="MyFitnessPal"><span class="price">$79.99</span></td><td data-label="Yazio"><span class="na" aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.na">Not stated on the maker's site</span></td></tr>
               <!--# /compare:generated -->
             </tbody>
           </table>
@@ -508,12 +509,12 @@
         <div class="post-body reveal" data-lang-block="es">
           <p><strong>Fotocal es una app de Android para contar calorías con una foto.</strong> Haces una foto del plato y la app identifica los alimentos, estima la ración y devuelve calorías, proteínas, hidratos, grasas y una puntuación de salud, que puedes corregir antes de guardar. También registra por código de barras y por voz, y trae un coach nutricional con IA, Coach Kal, que lee tu diario.</p>
           <p>Está hecha en Madrid y pensada para la comida española: su base de datos tiene 218 platos y alimentos con la ración tal como se sirve aquí, de la <a href="calorias/tortilla-de-patatas/">tortilla de patatas</a> al <a href="calorias/cafe-con-leche/">café con leche</a>. La app está en español y en inglés.</p>
-          <p><strong>Precio:</strong> el plan gratis no caduca ni pide tarjeta: 2 escaneos con IA y 1 registro por voz al día; código de barras y Coach Kal sin límite. Premium cuesta 6,99 € al mes o 34,99 € al año, con 5 días de prueba en los dos. Se descarga en <a href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Google Play</a>; no hay versión para iPhone.</p>
+          <p><strong>Precio:</strong> el plan gratis no caduca ni pide tarjeta: 2 escaneos con IA y 1 registro por voz al día; código de barras y Coach Kal sin límite. Premium cuesta {{price:month}} al mes o {{price:year}} al año{{offer:note}}, con 5 días de prueba en los dos. Se descarga en <a href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Google Play</a>; no hay versión para iPhone.</p>
         </div>
         <div class="post-body reveal" data-lang-block="en">
           <p><strong>Fotocal is an Android app that counts calories from a photo.</strong> You photograph your plate and the app identifies the foods, estimates the portion and returns calories, protein, carbohydrates, fat and a health score, which you can correct before saving. It also logs by barcode and by voice, and includes an AI nutrition coach, Coach Kal, that reads your diary.</p>
           <p>It is made in Madrid and built around Spanish food: its database holds 218 dishes and foods with the portion as it is served in Spain. The app is available in English and Spanish.</p>
-          <p><strong>Price:</strong> the free plan never expires and needs no card: 2 AI scans and 1 voice log a day; barcode scanner and Coach Kal unlimited. Premium costs €6.99 a month or €34.99 a year, with a 5-day trial on both. It is on <a href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Google Play</a>; there is no iPhone version.</p>
+          <p><strong>Price:</strong> the free plan never expires and needs no card: 2 AI scans and 1 voice log a day; barcode scanner and Coach Kal unlimited. Premium costs {{price:month}} a month or {{price:year}} a year{{offer:note}}, with a 5-day trial on both. It is on <a href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener">Google Play</a>; there is no iPhone version.</p>
         </div>
       </div>
     </section>
@@ -540,7 +541,7 @@
           </details>
           <details class="faq-item reveal">
             <summary><span data-i18n="faq.q4">Is Fotocal free?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="faq.a4">Downloading Fotocal is free, and Premium starts with a 5-day free trial so you can test everything: unlimited AI scans, Coach Kal without limits, weekly reports and every premium feature. Cancel before the trial ends and you pay nothing. After that, Premium is €6.99 a month or €34.99 a year.</p>
+            <p data-i18n="faq.a4">Downloading Fotocal is free, and Premium starts with a 5-day free trial so you can test everything: unlimited AI scans, Coach Kal without limits, weekly reports and every premium feature. Cancel before the trial ends and you pay nothing. After that, Premium is {{price:month}} a month or {{price:year}} a year.</p>
           </details>
           <details class="faq-item reveal">
             <summary><span data-i18n="faq.q5">How do I cancel?</span><i class="faq-plus" aria-hidden="true"></i></summary>
@@ -564,7 +565,7 @@
           </details>
           <details class="faq-item reveal">
             <summary><span data-i18n="faq.q10">Which calorie counter is free?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-            <p data-i18n="faq.a10">Fotocal is, with no expiry and no card: 2 AI photo scans and 1 voice log a day, plus the barcode scanner, Coach Kal, the diary, weight, water, steps and the weekly report without limits. Premium is optional, €6.99 a month or €34.99 a year with a 5-day trial on both plans, and it only removes the two daily limits and opens the deeper nutrient panels.</p>
+            <p data-i18n="faq.a10">Fotocal is, with no expiry and no card: 2 AI photo scans and 1 voice log a day, plus the barcode scanner, Coach Kal, the diary, weight, water, steps and the weekly report without limits. Premium is optional, {{price:month}} a month or {{price:year}} a year with a 5-day trial on both plans, and it only removes the two daily limits and opens the deeper nutrient panels.</p>
           </details>
         </div>
       </div>

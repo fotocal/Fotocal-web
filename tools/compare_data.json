@@ -138,7 +138,7 @@
     },
     {
       "key": "cmp.r12",
-      "fotocal": "€34.99",
+      "fotocal": "{{price:year}}",
       "cells": {
         "Cal AI": null,
         "MyFitnessPal": "$79.99",

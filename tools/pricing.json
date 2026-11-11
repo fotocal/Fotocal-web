@@ -1,0 +1,16 @@
+{
+ "_readme": [
+  "THE ONE PLACE the Premium prices and any limited offer live. Every page, the structured data and llms.txt read from here through tools/pricing.py.",
+  "To change a price: edit monthly or yearly_list. To run an offer: fill offer.yearly and offer.ends (last day it is valid, Europe/Madrid). To end one early: set offer.ends to yesterday or offer to null.",
+  "The build decides by date: up to and including offer.ends it shows offer.yearly with the badge and 'antes …'; from the next day it shows yearly_list and hides the badge. The deploy workflow rebuilds at 00:20 Madrid time on the day after offer.ends.",
+  "Prices must match Google Play. After editing: python3 tools/build_site.py && python3 tools/check_site.py"
+ ],
+ "currency": "EUR",
+ "monthly": 6.99,
+ "yearly_list": 34.99,
+ "trial_days": 5,
+ "offer": {
+  "yearly": 19.99,
+  "ends": "2026-12-31"
+ }
+}

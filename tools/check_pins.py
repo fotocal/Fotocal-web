@@ -5,6 +5,9 @@ by tools/check_site.py; each function calls fail()/warn() from there.
 
 Rendered output only: these read the built pages, never the sources."""
 import glob, html as H, json, os, posixpath, re
+import pricing as _pricing   # the single source of the prices
+_y = _pricing.yearly()
+PRICES_OK = {"%.2f" % _pricing.P["monthly"], "%.2f" % _y, "%.2f" % round(_y / 12 + 1e-9, 2)} | ({"%.2f" % _pricing.P["yearly_list"]} if _pricing.offer_active() else set())
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://getfotocal.com/"
@@ -181,8 +184,8 @@ def run(fail, warn):
         t = text_of(re.sub(r"<script\b.*?</script>", "", pages[rel], flags=re.S))
         for price in re.findall(r"(\d+[.,]\d\d)\s?€|€\s?(\d+[.,]\d\d)", t):
             v = (price[0] or price[1]).replace(",", ".")
-            if v not in ("6.99", "34.99", "2.92"):  # 2.92 = 34.99 / 12, the yearly plan per month
-                fail(rel, "price %s € is not one of the two plan prices" % v)
+            if v not in PRICES_OK:   # from tools/pricing.json: monthly, yearly in force, list price, yearly / 12
+                fail(rel, "price %s € is not one of the plan prices in tools/pricing.json" % v)
         for m in re.finditer(r"(\d+)\s+(?:escaneos?|photo scans?|scans?)\b[^.]{0,30}\b(?:al día|a day|por día|per day)", t):
             if m.group(1) != "2":
                 fail(rel, "free-plan scan limit stated as %s a day (it is 2): %r" % (m.group(1), m.group(0)))

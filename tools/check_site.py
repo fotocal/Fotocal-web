@@ -250,6 +250,27 @@ PHONE = re.compile(r'tel:|"telephone"|wa\.me/|api\.whatsapp|\+34[\s.]?\d{3}|\b00
                    r'|"streetAddress"|"postalCode"', re.I)
 
 
+def check_offer(rels):
+    """tools/pricing.json decides the yearly price by date. This catches a
+    site that was not rebuilt after an offer ended (or began): the badge or
+    the offer price still showing, or missing while the offer runs."""
+    import pricing
+    on = pricing.offer_active()
+    offer = (pricing.P.get("offer") or {}).get("yearly")
+    shows = [r for r in rels if 'class="offer-badge' in open(os.path.join(ROOT, r), encoding="utf-8").read()]
+    home = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+    if not on and shows:
+        warn("pricing", "the offer ended on %s but %d page(s) still show the offer badge (e.g. %s): run tools/build_site.py" % (pricing.P["offer"]["ends"], len(shows), shows[0]))
+    if not on and offer and ('"price": "%.2f"' % offer) in home:
+        warn("pricing", "the offer has ended but the home page schema still gives the offer price: run tools/build_site.py")
+    if on and not shows:
+        warn("pricing", "an offer is running (until %s) but no page shows the badge: run tools/build_site.py" % pricing.P["offer"]["ends"])
+    if on:
+        left = (datetime.date.fromisoformat(pricing.P["offer"]["ends"]) - pricing.today()).days
+        if left <= 3:
+            print("note  pricing: the yearly offer ends in %d day(s); the deploy workflow rebuilds the site the next morning" % left)
+
+
 def check_no_phone(rels):
     files = list(rels) + ["llms.txt", "robots.txt", "sitemap.xml"]
     for base in ("assets/js", "assets/dist"):
@@ -395,6 +416,7 @@ def main():
     check_pins.run(fail, warn)
 
     check_no_phone(rels)
+    check_offer(rels)
 
     # ── sitemap ──
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}

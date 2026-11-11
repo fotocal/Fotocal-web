@@ -72,7 +72,7 @@ BODY = {
         <li><strong>Si quieres muchas fotos al día sin pagar.</strong> El plan gratis de Fotocal son dos escaneos con IA al día; el resto del día se apunta con código de barras, por voz o a mano.</li>
       </ul>
       <h2>Qué cuesta cada una</h2>
-      <p>Solo ponemos los precios que cada fabricante publica. Fotocal Premium cuesta 6,99 € al mes o 34,99 € al año, con 5 días de prueba; el plan gratis no caduca ni pide tarjeta. MyFitnessPal publica Premium a 79,99 dólares al año y Premium+ a 99,99. Yazio cambia el precio según el país y no publicaba una cifra anual en las páginas que pudimos leer. Cal AI no publica precio en su web. Antes de pagar ninguna, mira el precio en euros en la pantalla de suscripción de Google Play: es el que cuenta. Cómo leer esa letra pequeña está en <a href="../blog/app-contar-calorias-gratis/">cómo saber si una app para contar calorías es gratis de verdad</a>.</p>
+      <p>Solo ponemos los precios que cada fabricante publica. Fotocal Premium cuesta {{price:month}} al mes o {{price:year}} al año{{offer:note}}, con 5 días de prueba; el plan gratis no caduca ni pide tarjeta. MyFitnessPal publica Premium a 79,99 dólares al año y Premium+ a 99,99. Yazio cambia el precio según el país y no publicaba una cifra anual en las páginas que pudimos leer. Cal AI no publica precio en su web. Antes de pagar ninguna, mira el precio en euros en la pantalla de suscripción de Google Play: es el que cuenta. Cómo leer esa letra pequeña está en <a href="../blog/app-contar-calorias-gratis/">cómo saber si una app para contar calorías es gratis de verdad</a>.</p>
       <h2>Cómo hemos comparado</h2>
       <p>Somos parte interesada: Fotocal es nuestra app. Por eso la comparación sigue reglas que cualquiera puede comprobar:</p>
       <ul>
@@ -103,7 +103,7 @@ BODY = {
         <li><strong>If you want many photo scans a day without paying.</strong> Fotocal's free plan is two AI scans a day; the rest of the day goes in by barcode, by voice or by hand.</li>
       </ul>
       <h2>What each one costs</h2>
-      <p>We only give the prices each maker publishes. Fotocal Premium costs €6.99 a month or €34.99 a year, with a 5-day trial; the free plan never expires and asks for no card. MyFitnessPal publishes Premium at $79.99 a year and Premium+ at $99.99. Yazio's price varies by country and no yearly figure was published on the pages we could read. Cal AI publishes no price on its site. Before paying for any of them, check the price on Google Play's subscription screen: that is the one that counts. How to read that small print is in <a href="../blog/app-contar-calorias-gratis/">how to tell if a calorie counting app is really free</a>.</p>
+      <p>We only give the prices each maker publishes. Fotocal Premium costs {{price:month}} a month or {{price:year}} a year{{offer:note}}, with a 5-day trial; the free plan never expires and asks for no card. MyFitnessPal publishes Premium at $79.99 a year and Premium+ at $99.99. Yazio's price varies by country and no yearly figure was published on the pages we could read. Cal AI publishes no price on its site. Before paying for any of them, check the price on Google Play's subscription screen: that is the one that counts. How to read that small print is in <a href="../blog/app-contar-calorias-gratis/">how to tell if a calorie counting app is really free</a>.</p>
       <h2>How we compared</h2>
       <p>We have a stake: Fotocal is our app. So the comparison follows rules anyone can check:</p>
       <ul>

@@ -56,6 +56,8 @@ import re
 import shutil
 import subprocess
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import pricing  # noqa: E402  (tools/pricing.json: prices and the dated offer)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
@@ -963,6 +965,8 @@ def main():
                 suffix = " — Fotocal"
                 m = {"title": t + suffix if len(t) + len(suffix) <= TITLE_MAX else t,
                      "desc": d}  # fit_desc() in render_head trims at a clause, never mid-word
+            m = {k: (pricing.resolve(v, lang) if isinstance(v, str) else v) for k, v in m.items()}   # prices before the length fit
+            s = pricing.resolve(s, lang)     # structural tokens, before the JSON-LD is parsed
             s = render_head(s, lang, rel, m)
             s = render_jsonld(s, lang, rel, dic[lang], missing, article)
             s = bundle_html(s)
@@ -971,6 +975,7 @@ def main():
             s = inject_chrome(s, lang)
             s = tag_play_links(s, lang, rel)
             s = wrap_pictures(s, lang, rel)
+            s = pricing.resolve(s, lang)     # prices that arrived inside translated strings
 
             out = os.path.join(ROOT, PREFIX[lang], rel)
             os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
@@ -984,6 +989,11 @@ def main():
         sys.exit(1)
 
     urls = write_sitemap(srcs)
+
+    # llms.txt carries the prices too: built from its template, in English
+    tpl = os.path.join(ROOT, "tools", "llms.src.txt")
+    if os.path.exists(tpl):
+        open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(pricing.resolve(open(tpl, encoding="utf-8").read(), "en"))
 
     print("%d source pages -> %d rendered (%s)" % (len(srcs), written, " + ".join(LANGS)))
     json.dump({k: v[1] for k, v in TRIMMED.items()}, open(os.path.join(ROOT, "tools", "seo", "trimmed-descriptions.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

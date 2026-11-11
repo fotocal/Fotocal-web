@@ -162,9 +162,9 @@ CALCS = [
  "sources": ["who_bmi"],
  "es": {
   "short": "IMC", "card": "Tu índice de masa corporal y el rango de la OMS en el que cae.",
-  "title": "Calculadora de IMC (índice de masa corporal)",
-  "desc": "Calcula tu índice de masa corporal con tu peso y altura, mira en qué rango de la OMS cae y qué peso da un IMC normal. Y lo que el IMC no te dice.",
-  "h1": "Calculadora de IMC",
+  "title": "Calculadora de IMC para mujer y hombre, con tabla",
+  "desc": "Calcula tu IMC (índice de masa corporal) con tu peso y altura: rangos de la OMS para mujer y hombre, tabla por altura y lo que el IMC no te dice.",
+  "h1": "Calculadora de IMC para mujer y hombre",
   "lead": "Tu índice de masa corporal, el rango de la Organización Mundial de la Salud en el que cae y el peso que te dejaría en el normal.",
   "bridge": "¿Quieres llegar a tu rango sin pesar la comida?",
   "body": """
@@ -194,9 +194,9 @@ CALCS = [
   ]},
  "en": {
   "short": "BMI", "card": "Your body mass index and the WHO band it falls in.",
-  "title": "BMI calculator (body mass index)",
+  "title": "BMI Calculator for Women and Men, with Chart",
   "desc": "Work out your body mass index from your weight and height, see which WHO band it falls in and what weight gives a normal BMI. And what BMI cannot tell you.",
-  "h1": "BMI calculator",
+  "h1": "BMI calculator for women and men",
   "lead": "Your body mass index, the World Health Organization band it falls in and the weight that would put you in the normal range.",
   "bridge": "Want to reach your range without weighing food?",
   "body": """
@@ -231,9 +231,9 @@ CALCS = [
  "sources": ["efsa_protein", "issn_protein"],
  "es": {
   "short": "Proteínas", "card": "Los gramos de proteína al día para tu peso y tu objetivo.",
-  "title": "Calculadora de proteínas: cuánta proteína al día",
+  "title": "Calculadora de proteínas por kilo de peso al día",
   "desc": "Calcula cuántos gramos de proteína necesitas al día según tu peso y objetivo, de 1,2 a 2,0 g por kilo, con el mínimo de la EFSA y la cuenta de la app.",
-  "h1": "Calculadora de proteínas",
+  "h1": "Calculadora de proteínas: cuántas necesitas al día",
   "lead": "Cuántos gramos de proteína comer al día para tu peso y tu objetivo, con el mínimo oficial y el rango para quien entrena.",
   "bridge": "¿Quieres llegar a tus {X} g de proteína sin pesar la comida?",
   "body": """
@@ -253,9 +253,9 @@ CALCS = [
   ]},
  "en": {
   "short": "Protein", "card": "Grams of protein a day for your weight and goal.",
-  "title": "Protein calculator: how much protein a day",
+  "title": "Protein Calculator: How Much Protein per Day by Weight",
   "desc": "Work out how many grams of protein you need a day for your weight and goal, from 1.2 to 2.0 g per kilo, with the EFSA minimum and the app's maths.",
-  "h1": "Protein calculator",
+  "h1": "Protein calculator: how much you need a day",
   "lead": "How many grams of protein to eat a day for your weight and goal, with the official minimum and the range for people who train.",
   "bridge": "Want to hit your {X} g of protein without weighing food?",
   "body": """
@@ -280,9 +280,9 @@ CALCS = [
  "sources": ["mifflin", "efsa_fat", "issn_protein"],
  "es": {
   "short": "Macros", "card": "Gramos de proteínas, grasas e hidratos para tu objetivo.",
-  "title": "Calculadora de macros: proteínas, grasas e hidratos",
+  "title": "Calculadora de macros y calorías, gratis",
   "desc": "Calcula tus macros: gramos de proteínas, grasas e hidratos al día según tu objetivo y tus calorías, con el mismo reparto que la app Fotocal. Sin registro.",
-  "h1": "Calculadora de macros",
+  "h1": "Calculadora de macros y calorías",
   "lead": "Tus calorías repartidas en gramos de proteínas, grasas e hidratos según tu objetivo, con el mismo reparto que la app.",
   "bridge": "¿Quieres cumplir tus {X} kcal sin pesar la comida?",
   "body": """
@@ -302,9 +302,9 @@ CALCS = [
   ]},
  "en": {
   "short": "Macros", "card": "Grams of protein, fat and carbs for your goal.",
-  "title": "Macro calculator: protein, fat and carbs",
+  "title": "Macro Calculator for Weight Loss and Muscle (Free)",
   "desc": "Work out your macros: grams of protein, fat and carbs a day for your goal and calories, with the same split as the Fotocal app. Free, no sign-up.",
-  "h1": "Macro calculator",
+  "h1": "Macro calculator: protein, fat and carbs",
   "lead": "Your calories split into grams of protein, fat and carbs for your goal, with the same split as the app.",
   "bridge": "Want to hit your {X} kcal without weighing food?",
   "body": """
@@ -329,9 +329,9 @@ CALCS = [
  "sources": ["efsa_water", "iom_water", "mifflin"],
  "es": {
   "short": "Agua", "card": "Cuánta agua beber al día según tu gasto y tu actividad.",
-  "title": "Calculadora de agua: cuánta agua beber al día",
+  "title": "¿Cuánta agua beber al día? Calculadora según tu peso",
   "desc": "Calcula cuánta agua beber al día según tus calorías y tu actividad, con el mínimo de la EFSA y la misma fórmula que la app Fotocal. En litros y en vasos.",
-  "h1": "Calculadora de agua",
+  "h1": "¿Cuánta agua beber al día? Calculadora de agua",
   "lead": "Cuántos litros beber al día según lo que gastas y cómo te mueves, en litros y en vasos de 250 ml.",
   "bridge": "¿Quieres llevar la cuenta de tus {X} litros sin pensar?",
   "body": """
@@ -351,10 +351,10 @@ CALCS = [
   ]},
  "en": {
   "short": "Water", "card": "How much water to drink a day for what you burn and how you move.",
-  "title": "Water intake calculator: how much water a day",
+  "title": "How Much Water to Drink a Day: Water Calculator",
   "desc": "Work out how much water to drink a day from your calories and activity, with the EFSA minimum and the Fotocal app's formula. In litres and glasses.",
-  "h1": "Water intake calculator",
-  "lead": "How many litres to drink a day for what you burn and how you move, in litres and in 250 ml glasses.",
+  "h1": "How much water to drink a day: water intake calculator",
+  "lead": "How much water to drink a day for what you burn and how you move, in litres and in 250 ml glasses.",
   "bridge": "Want to keep track of your {X} litres without thinking?",
   "body": """
       <h2 id="how">How it is calculated</h2>

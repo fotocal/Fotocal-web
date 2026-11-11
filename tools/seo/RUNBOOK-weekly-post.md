@@ -238,6 +238,7 @@ node tools/check_lang.mjs        # language switcher, both trees
 python3 tools/seo/onpage_audit.py  # no new "fail" rows for this week's pages
 node tools/check_mobile.mjs      # 360 px layout: no overflow, no tap target under 24 px
 node tools/check_calcs.mjs       # the four calculators still give the right answers
+node tools/calcs/check_extra.mjs # the tables on the calculator pages still match calc.js
 node tools/check_contact.mjs     # the contact form still submits (intercepted, nothing sent)
 python3 tools/seo/site_tree.py
 python3 tools/seo/titles.py

@@ -535,10 +535,10 @@ def page(c):
 
 
 HUB = {
-    "es": {"title": "Calculadoras de calorías, IMC, macros y agua",
-           "desc": "Ocho calculadoras sin registro: calorías diarias, déficit calórico, IMC, proteínas, macros, agua, TMB y peso saludable, con las mismas fórmulas que la app.",
-           "h1": "Calculadoras de calorías, IMC y macros, gratis y sin registro",
-           "lead": "Ocho calculadoras de calorías, IMC, macros y más. Escribe tus datos y tendrás el resultado al momento. No se envía nada y dan los mismos números que la app Fotocal.",
+    "es": {"title": "Calculadoras de nutrición gratis: calorías, IMC y macros",
+           "desc": "Ocho calculadoras sin registro: calorías diarias, déficit calórico, IMC, proteínas, macros, agua, TMB y peso ideal, con las mismas fórmulas que la app.",
+           "h1": "Calculadoras de nutrición gratis: calorías, IMC, macros y agua, sin registro",
+           "lead": "Ocho calculadoras de nutrición gratis: calorías, IMC, macros y más. Escribe tus datos y tendrás el resultado al momento. No se envía nada y dan los mismos números que la app Fotocal.",
            "quick": "Prueba ahora: tu IMC", "all": "Las ocho calculadoras",
            "body": """
       <h2>En qué orden usarlas</h2>
@@ -548,10 +548,10 @@ HUB = {
       <h2>¿Tienes un blog o una consulta?</h2>
       <p>Puedes poner la calculadora de calorías o la de IMC en tu web, gratis y sin anuncios: está todo en la página del <a href="../widget/">widget de calculadoras</a>.</p>""",
            "disclaimer": "Orientativo, no sustituye a un profesional sanitario."},
-    "en": {"title": "Calorie, BMI, macro and water calculators",
-           "desc": "Eight calculators, no sign-up: daily calories, calorie deficit, BMI, protein, macros, water, BMR and healthy weight, with the same formulas as the app.",
-           "h1": "Calorie, BMI and macro calculators, free and with no sign-up",
-           "lead": "Eight calculators for calories, BMI, macros and more. Type in your details and get the result straight away. Nothing is sent anywhere, and they give the same numbers as the Fotocal app.",
+    "en": {"title": "Free Nutrition Calculators: Calories, BMI and Macros",
+           "desc": "Eight calculators, no sign-up: daily calories, calorie deficit, BMI, protein, macros, water, BMR and ideal weight, with the same formulas as the app.",
+           "h1": "Free nutrition calculators: calories, BMI, macros and water, no sign-up",
+           "lead": "Eight free nutrition calculators for calories, BMI, macros and more. Type in your details and get the result straight away. Nothing is sent anywhere, and they give the same numbers as the Fotocal app.",
            "quick": "Try it now: your BMI", "all": "All eight calculators",
            "body": """
       <h2>Which order to use them in</h2>

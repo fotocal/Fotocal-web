@@ -186,20 +186,22 @@ def fill(text, d, fig):
     """Numbers inside the editorial text, always from the figures:
     {kcal} {per100} {per1000} {g} {protein} {carbs} {fat} {name}
     {kcal:<app-id>}            another app dish's kcal per serving
-    {kcal/4} {per100*3} …      simple arithmetic on this dish's kcal or per-100 g"""
+    {kcal/4} {per100*3} …      simple arithmetic on this dish's kcal or per-100 g
+    {g100kcal}                 the grams of this dish that hold 100 kcal"""
     def rep(m):
         key, arg, op, k = m.group(1), m.group(2), m.group(3), m.group(4)
         if key == "name":
             return d["name"]
         src = figures(arg) if arg else fig
         base = {"kcal": src["kcal"], "per100": src["per100"], "per1000": src["per100"] * 10, "g": src["serving_g"],
-                "protein": src["protein"], "carbs": src["carbs"], "fat": src["fat"]}
+                "protein": src["protein"], "carbs": src["carbs"], "fat": src["fat"],
+                "g100kcal": r0(10000.0 / src["per100"]) if src["per100"] else 0}
         v = base[key]
         if op:
             v = v * float(k) if op == "*" else v / float(k)
             return n(r0(v))
         return n(v)
-    return re.sub(r"\{(kcal|per100|per1000|g|protein|carbs|fat|name)(?::([a-z0-9-]+))?(?:([*/])(\d+(?:\.\d+)?))?\}", rep, text)
+    return re.sub(r"\{(kcal|per100|per1000|g100kcal|g|protein|carbs|fat|name)(?::([a-z0-9-]+))?(?:([*/])(\d+(?:\.\d+)?))?\}", rep, text)
 
 
 # ── head ─────────────────────────────────────────────────────────────
@@ -381,7 +383,7 @@ def dish_page(d, ready_by_app):
     assert len(title) <= TITLE_MAX, (d["slug"], len(title), title)
 
     macros = "%s g de proteínas, %s g de hidratos y %s g de grasas" % (n(fig["protein"]), n(fig["carbs"]), n(fig["fat"]))
-    desc = d.get("desc")
+    desc = fill(d["desc"], d, fig) if d.get("desc") else None
     if not desc:
         bases = [
             "Una ración de %s (%s g) tiene %s kcal, %s por 100 g: %s." % (name, n(g), n(fig["kcal"]), n(fig["per100"]), macros),

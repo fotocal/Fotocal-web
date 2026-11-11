@@ -156,3 +156,132 @@ FAQ_EXTRA = {
         "es": [("¿Cómo calcular el déficit calórico según mi peso?", "Primero tu mantenimiento, que depende de tu peso, altura, edad, sexo y actividad. Después se resta el déficit: entre el 0,5 % y el 1 % de tu peso a la semana es un ritmo sensato. Con 80 kg, eso son de 0,4 a 0,8 kg semanales.")],
         "en": [("How do I work out my calorie deficit for my weight?", "First your maintenance, which depends on your weight, height, age, sex and activity. Then subtract the deficit: 0.5% to 1% of your weight a week is a sensible pace. At 80 kg, that is 0.4 to 0.8 kg a week.")]},
 }
+
+
+# ── PART 5: IMC, macros, proteínas, agua ─────────────────────────────
+# Ports of calc.js plan()/macros()/water() for the cases the tables use
+# (maintain / lose 0.5 kg a week / build muscle, balanced split, no body
+# fat given). tools/calcs/check_extra.mjs compares them with calc.js.
+FACTOR = {"sedentary": 1.2, "light": 1.375, "standing": 1.465, "active": 1.55, "hard": 1.725}
+WATER_RATIO = {"sedentary": 1.0, "light": 1.1, "standing": 1.1, "active": 1.25, "hard": 1.5}
+P_PER_KG = {"lose": 2.0, "maintain": 1.6, "build_muscle": 2.0}
+FAT_PCT = {"lose": 0.25, "maintain": 0.275, "build_muscle": 0.25}
+
+
+def jsround(x):
+    import math
+    return int(math.floor(x + 0.5))
+
+
+def plan(sex, age, cm, kg, activity, goal):
+    tdee = mifflin(sex, kg, cm, age) * FACTOR[activity]
+    daily = tdee - min(0.5 * 7700 / 7, tdee * 0.25) if goal == "lose" else (tdee * 1.1 if goal == "build_muscle" else tdee)
+    kcal = jsround(max(daily, 1500 if sex == "m" else 1200))
+    hm = cm / 100.0
+    ref = 25 * hm * hm if kg / (hm * hm) > 25 else kg
+    p = jsround(P_PER_KG[goal] * ref)
+    f = jsround(FAT_PCT[goal] * kcal / 9)
+    c = jsround((kcal - 4 * p - 9 * f) / 4)
+    return {"kcal": kcal, "protein": p, "fat": f, "carbs": c}
+
+
+def water_ml(sex, age, cm, kg, activity):
+    kcal = plan(sex, age, cm, kg, activity, "maintain")["kcal"]
+    floor = jsround((2500 if sex == "m" else 2000) * 0.8)
+    return jsround(max(min(kcal * WATER_RATIO[activity] * 0.8, 4000), floor))
+
+
+def bmi(lang):
+    es = lang == "es"
+    rows = []
+    for cm in range(150, 200, 5):
+        h2 = (cm / 100.0) ** 2
+        rows.append([n(cm / 100.0, lang, 2) + " m", ("%d a %d kg" if es else "%d to %d kg") % (round(18.5 * h2), round(24.9 * h2)),
+                     ("desde %d kg" if es else "from %d kg") % jsround(25 * h2 + 0.5), ("desde %d kg" if es else "from %d kg") % jsround(30 * h2 + 0.5)])
+    if es:
+        return "\n".join([
+            '      <h2 id="tabla-imc">Tabla de IMC por altura</h2>',
+            '      <p>Los kilos que corresponden a cada rango de la OMS según tu altura, para adultos. Busca tu altura y mira en qué columna cae tu peso.</p>',
+            table(["Altura", "Peso normal (IMC 18,5 a 24,9)", "Sobrepeso (IMC 25)", "Obesidad (IMC 30)"], rows),
+            '      <h2 id="mujer-hombre">IMC en la mujer y en el hombre</h2>',
+            '      <p>La fórmula y los rangos de la OMS son los mismos para mujeres y hombres adultos. Lo que cambia es lo que hay detrás de la cifra: con el mismo IMC, una mujer tiene de media más grasa corporal que un hombre, y un hombre con mucho músculo puede salir en sobrepeso sin que le sobre grasa. Por eso el IMC orienta y no diagnostica.</p>',
+            '      <h2 id="edad">¿Cambia el IMC con la edad?</h2>',
+            '      <p>La cuenta no cambia; lo que cambia es cómo se lee. Entre los 18 y los 65 años se usan los rangos de la tabla. En menores de 18 no sirven: se valoran con percentiles por edad y sexo, y eso lo hace el pediatra. A partir de los 65, un IMC algo más alto puede ser adecuado; consúltalo con tu médico. Tampoco se aplica durante el embarazo.</p>',
+        ])
+    return "\n".join([
+        '      <h2 id="bmi-chart">BMI chart by height</h2>',
+        '      <p>The kilos that match each WHO band for your height, for adults. Find your height and see which column your weight falls in.</p>',
+        table(["Height", "Normal weight (BMI 18.5 to 24.9)", "Overweight (BMI 25)", "Obesity (BMI 30)"], rows),
+        '      <h2 id="women-men">BMI for women and for men</h2>',
+        '      <p>The formula and the WHO bands are the same for adult women and men. What differs is what sits behind the number: at the same BMI a woman carries more body fat on average than a man, and a muscular man can land in the overweight band without excess fat. That is why BMI is a guide, not a diagnosis.</p>',
+        '      <h2 id="age">Does BMI change with age?</h2>',
+        '      <p>The sum does not change; how you read it does. From 18 to 65 the bands in the chart apply. Under 18 they do not: children are assessed with percentiles by age and sex, which is a paediatrician\'s job. From 65 on, a slightly higher BMI can be appropriate; ask your doctor. It does not apply during pregnancy either.</p>',
+    ])
+
+
+def protein(lang):
+    es = lang == "es"
+    rows = [["%d kg" % kg, "%d g" % jsround(0.83 * kg), "%d g" % jsround(1.6 * kg), "%d g" % jsround(2.0 * kg)] for kg in range(50, 100, 10)]
+    if es:
+        return "\n".join([
+            '      <h2 id="por-kilo">¿Cuántas proteínas por kilo de peso necesito al día?</h2>',
+            '      <p>Depende de tu objetivo. El mínimo para un adulto sano son 0,83 g por kilo (EFSA). Para mantenerte, la calculadora usa 1,6 g por kilo, y para perder grasa o ganar músculo, 2,0 g por kilo. En gramos al día:</p>',
+            table(["Tu peso", "Mínimo (0,83 g/kg)", "Mantener (1,6 g/kg)", "Perder grasa o ganar músculo (2,0 g/kg)"], rows),
+            '      <p>La tabla vale si tu IMC es de 25 o menos. Con sobrepeso, la calculadora no usa tu peso total sino el que tendrías con un IMC de 25, para no inflar la cifra. Para repartir esos gramos junto con la grasa y los hidratos, sigue en la <a href="../macros/">calculadora de macros</a>.</p>',
+        ])
+    return "\n".join([
+        '      <h2 id="per-kilo">How much protein per kilo of body weight do I need a day?</h2>',
+        '      <p>It depends on your goal. The minimum for a healthy adult is 0.83 g per kilo (EFSA). To maintain, the calculator uses 1.6 g per kilo, and to lose fat or build muscle, 2.0 g per kilo. In grams a day:</p>',
+        table(["Your weight", "Minimum (0.83 g/kg)", "Maintain (1.6 g/kg)", "Lose fat or build muscle (2.0 g/kg)"], rows),
+        '      <p>The table holds if your BMI is 25 or under. If you are overweight, the calculator does not use your total weight but the weight you would have at a BMI of 25, so the figure is not inflated. To split those grams alongside fat and carbs, carry on to the <a href="../macros/">macro calculator</a>.</p>',
+    ])
+
+
+def macro(lang):
+    es = lang == "es"
+    names = {"lose": ("Perder grasa (0,5 kg por semana)", "Lose fat (0.5 kg a week)"), "maintain": ("Mantener", "Maintain"), "build_muscle": ("Ganar músculo", "Build muscle")}
+    rows = []
+    for g in ("lose", "maintain", "build_muscle"):
+        p = plan("f", 35, 165, 70, "light", g)
+        rows.append([names[g][0 if es else 1], n(p["kcal"], lang), "%d g" % p["protein"], "%d g" % p["fat"], "%d g" % p["carbs"]])
+    if es:
+        return "\n".join([
+            '      <h2 id="objetivo">Macros para perder grasa, mantener o ganar músculo</h2>',
+            '      <p>El reparto cambia con el objetivo. Para la misma persona (mujer, 35 años, 165 cm, 70 kg, de pie a ratos), esto es lo que da la calculadora, con calorías y macros a la vez:</p>',
+            table(["Objetivo", "Calorías al día", "Proteínas", "Grasas", "Hidratos"], rows),
+            '      <p>Para perder grasa sube la proteína (2,0 g por kilo) y baja el total de calorías; los hidratos son lo que queda. Las calorías salen de la <a href="../calorias-diarias/">calculadora de calorías diarias</a> y del <a href="../deficit-calorico/">déficit calórico</a>; si ya tienes tu cifra, escríbela arriba.</p>',
+        ])
+    return "\n".join([
+        '      <h2 id="goal">Macros to lose fat, maintain or build muscle</h2>',
+        '      <p>The split changes with the goal. For the same person (woman, 35 years, 165 cm, 70 kg, on her feet sometimes), this is what the calculator gives, calories and macros together:</p>',
+        table(["Goal", "Calories a day", "Protein", "Fat", "Carbs"], rows),
+        '      <p>To lose fat, protein goes up (2.0 g per kilo) and total calories come down; carbs are what is left. The calories come from the <a href="../calorias-diarias/">daily calorie calculator</a> and the <a href="../deficit-calorico/">calorie deficit</a>; if you already have your number, type it in above.</p>',
+    ])
+
+
+def water(lang):
+    es = lang == "es"
+    rows = []
+    for kg in range(50, 110, 10):
+        w, m = water_ml("f", 35, 165, kg, "light"), water_ml("m", 35, 178, kg, "light")
+        rows.append(["%d kg" % kg, ("%s litros" if es else "%s litres") % n(w / 1000.0, lang, 1), ("%s litros" if es else "%s litres") % n(m / 1000.0, lang, 1)])
+    w70, m70 = water_ml("f", 35, 165, 70, "light"), water_ml("m", 35, 178, 70, "light")
+    if es:
+        return "\n".join([
+            '      <h2 id="segun-peso">¿Cuánta agua beber al día según tu peso?</h2>',
+            '      <p>Cuanto más pesas, más gastas y más agua necesitas. La tabla es para una mujer de 1,65 m y un hombre de 1,78 m, de 35 años y de pie a ratos. Son litros de bebida al día, sin contar el agua de la comida:</p>',
+            table(["Tu peso", "Mujer", "Hombre"], rows),
+            '      <p>Si pesas 70 kilos, eso son unos %s litros si eres mujer y %s si eres hombre: entre %d y %d vasos de 250 ml. En los pesos bajos la cifra no baja del mínimo de la EFSA (1,6 litros en la mujer y 2 en el hombre). Con calor o ejercicio intenso necesitas más; elige una actividad mayor en la calculadora.</p>'
+            % (n(w70 / 1000.0, lang, 1), n(m70 / 1000.0, lang, 1), -(-w70 // 250), -(-m70 // 250)),
+        ])
+    return "\n".join([
+        '      <h2 id="by-weight">How much water to drink a day for your weight</h2>',
+        '      <p>The more you weigh, the more you burn and the more water you need. The table is for a woman of 1.65 m and a man of 1.78 m, aged 35 and on their feet sometimes. These are litres of drink a day, not counting the water in food:</p>',
+        table(["Your weight", "Woman", "Man"], rows),
+        '      <p>At 70 kilos, that is about %s litres for a woman and %s for a man: %d to %d glasses of 250 ml. At lower weights the figure never drops below the EFSA minimum (1.6 litres for women, 2 for men). In heat or with hard exercise you need more; pick a higher activity level in the calculator.</p>'
+        % (n(w70 / 1000.0, lang, 1), n(m70 / 1000.0, lang, 1), -(-w70 // 250), -(-m70 // 250)),
+    ])
+
+
+EXTRA.update({"imc": {l: bmi(l) for l in ("es", "en")}, "proteinas": {l: protein(l) for l in ("es", "en")},
+              "macros": {l: macro(l) for l in ("es", "en")}, "agua": {l: water(l) for l in ("es", "en")}})

@@ -308,7 +308,7 @@ def download_card(lang, headline, sub, link, extra_class=""):
             "\n        <div class=\"dl-body\">"
             "\n          <p class=\"dl-h\">%s</p>"
             "\n          <p class=\"dl-sub\">%s</p>"
-            "\n          <!--offer--><p class=\"offer-badge offer-badge-sm\">{{offer:badge}}</p><!--/offer-->"
+            "\n          <!--offer--><p class=\"offer-badge offer-badge-sm\">{{offer:badge}}</p><p class=\"offer-keep\">{{offer:keep}}</p><!--/offer-->"
             "\n          <a class=\"btn btn-cta dl-btn\" href=\"%s\" target=\"_blank\" rel=\"noopener\" aria-label=\"%s\">%s<span>%s</span></a>"
             "\n          <p class=\"dl-trust\">%s</p>"
             "\n          <p class=\"dl-limits\">%s</p>"

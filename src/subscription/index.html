@@ -81,7 +81,8 @@
           <span class="kicker reveal" data-i18n="sub.t01">Pricing</span>
           <h1 class="hero-title reveal" data-i18n-html="sub.t02">Two prices, one Premium, and a free plan <em class="accent">that is not a demo</em>.</h1>
           <p class="hero-sub reveal" data-i18n="sub.t03">Fotocal is free to use every day, with no card and no time limit. Premium is {{price:month}} a month or {{price:year}} a year, and what it does is lift the daily limits on scanning and open the deeper panels. Everything on this page is what Google Play charges, in euros, tax included.</p>
-          <!--offer--><p class="offer-badge reveal">{{offer:badge}}</p><!--/offer-->
+          <!--offer--><p class="offer-badge reveal">{{offer:badge}}</p>
+          <p class="offer-keep reveal">{{offer:keep}}</p><!--/offer-->
           <p class="price-note reveal" data-i18n="sub.playnote">Google Play shows the final price for your country before you pay.</p>
           <div class="reveal">
             <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
@@ -197,7 +198,8 @@
           <span class="sb-plan-name" data-i18n="sub.p3n">Yearly</span>
           <div class="sb-plan-price"><span data-i18n="sub.p3a">{{price:year}}</span></div>
           <span class="sb-plan-per" data-i18n="sub.p3p">per year</span>
-          <!--offer--><p class="offer-badge offer-badge-sm">{{offer:badge}}</p><!--/offer-->
+          <!--offer--><p class="offer-badge offer-badge-sm">{{offer:badge}}</p>
+          <p class="offer-keep">{{offer:keep}}</p><!--/offer-->
           <!--# Not a badge. The per-month figure and the percentage are
                arithmetic on the two prices above (yearly / 12 against monthly, worked out by tools/pricing.py),
                the same sum the app does in src/lib/pricing.ts. -->

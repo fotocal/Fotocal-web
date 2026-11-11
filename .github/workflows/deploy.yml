@@ -33,7 +33,7 @@ jobs:
         with:
           fetch-depth: 0          # tools/indexnow.py compares this push with the last one
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         with:
           enablement: true
 

@@ -1,7 +1,7 @@
 === SHORT DESCRIPTION (77/80 characters) — paste as is ===
 Fotografía tu plato y ten calorías, macros y puntuación de salud en segundos.
 
-=== FULL DESCRIPTION (2507/4000 characters) — paste as is ===
+=== FULL DESCRIPTION (2657/4000 characters) — paste as is ===
 Fotocal cuenta lo que comes a partir de una foto. Apunta la cámara a tu plato y en segundos tienes las calorías, los macros y una puntuación de salud, listos para registrar. Cuando la foto no es práctica, di lo que has comido en voz alta, escanea un código de barras o escríbelo.
 
 PLAN GRATIS: SIN TARJETA, SIN CADUCIDAD
@@ -28,7 +28,7 @@ Hay un solo Premium, pagado al mes o al año. Desbloquea exactamente estas nueve
 Todo lo demás sigue siendo gratis, y nada de lo que hayas registrado se oculta ni se borra cuando dejas de pagar.
 
 PRECIOS
-En España, Premium cuesta 6,99 € al mes o 34,99 € al año, cobrados a través de Google Play, que te muestra el precio exacto de tu país antes de confirmar. Premium incluye una prueba gratis de 5 días: si cancelas antes de que termine, no pagas nada. Las suscripciones se renuevan solas hasta que las cancelas en Google Play.
+En España, Premium cuesta 6,99 € al mes o 19,99 € al año (oferta hasta el 31 de diciembre de 2026; antes 34,99 €). Si te suscribes antes del 31 de diciembre, mantienes 19,99 € al año mientras sigas suscrito. Se cobra a través de Google Play, que te muestra el precio exacto de tu país antes de confirmar. Premium incluye una prueba gratis de 5 días: si cancelas antes de que termine, no pagas nada. Las suscripciones se renuevan solas hasta que las cancelas en Google Play.
 
 LO QUE FOTOCAL NO ES
 Fotocal estima; no pesa. Una estimación por foto puede fallar, y puedes corregir cualquier registro. La app es información general, no consejo médico. Si estás embarazada, tienes una enfermedad, eres menor de dieciocho años o tienes antecedentes de un trastorno alimentario, habla con un médico o un dietista-nutricionista antes de cambiar cómo comes o de usar un contador de calorías.

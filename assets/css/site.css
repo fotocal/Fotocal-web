@@ -1606,3 +1606,5 @@ picture { display: contents; }
 .offer-badge-sm { margin: .5rem 0 .2rem; font-size: .85rem; border-radius: var(--r-md); }
 .price-note { margin: .6rem 0 0; font-size: .9rem; color: var(--muted); }
 .hero .offer-badge, .sec-ink .offer-badge { color: var(--on-ink); background: rgba(var(--pink-rgb), .22); border-color: rgba(var(--pink-rgb), .6); }
+.offer-keep { margin: .45rem 0 0; font-size: .92rem; font-weight: 600; color: var(--brand-text); }
+.hero .offer-keep, .sec-ink .offer-keep { color: var(--on-ink); }

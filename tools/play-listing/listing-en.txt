@@ -1,7 +1,7 @@
 === SHORT DESCRIPTION (77/80 characters) — paste as is ===
 Photograph your plate and get calories, macros and a health score in seconds.
 
-=== FULL DESCRIPTION (2221/4000 characters) — paste as is ===
+=== FULL DESCRIPTION (2356/4000 characters) — paste as is ===
 Fotocal counts what you eat from a photo. Point the camera at your plate and in seconds you get the calories, the macros and a health score, ready to log. When a photo is not practical, say what you ate out loud, scan a barcode or type it in.
 
 FREE PLAN: NO CARD, NO TIME LIMIT
@@ -28,7 +28,7 @@ There is one Premium, paid monthly or yearly. It unlocks exactly these nine thin
 Everything else stays free, and nothing you logged is hidden or deleted when you stop paying.
 
 PRICES
-In Spain, Premium is €6.99 a month or €34.99 a year, billed through Google Play, which shows the exact price for your country before you confirm. Premium comes with a 5-day free trial: cancel before it ends and you pay nothing. Subscriptions renew automatically until you cancel them in Google Play.
+In Spain, Premium is €6.99 a month or €19.99 a year (offer until 31 December 2026; was €34.99). Subscribe before 31 December and keep €19.99/year for as long as you stay subscribed. It is billed through Google Play, which shows the exact price for your country before you confirm. Premium comes with a 5-day free trial: cancel before it ends and you pay nothing. Subscriptions renew automatically until you cancel them in Google Play.
 
 WHAT FOTOCAL IS NOT
 Fotocal estimates; it does not weigh. A photo estimate can be wrong, and you can correct any entry. The app is general information, not medical advice. If you are pregnant, living with a medical condition, under eighteen, or have a history of an eating disorder, talk to a doctor or a registered dietitian before changing how you eat or using a calorie tracker.

@@ -13,6 +13,8 @@ Europe/Madrid:
   {{price:month_num}} {{price:year_num}}   6.99 / 19.99 (structured data)
   {{offer:note}}         " (oferta hasta el 31 de diciembre de 2026; después, 34,99 € al año)" or ""
   {{offer:badge}}        "Oferta: Premium anual a 19,99 € (antes 34,99 €) · solo hasta el 31 de diciembre" or ""
+  {{offer:keep}}         "Si te suscribes antes del 31 de diciembre, mantienes 19,99 € al año mientras sigas suscrito." or ""
+                         (the owner's rule, 11-11-2026: Play keeps offer subscribers on their price at renewal)
   {{offer:schema}}       , "priceValidUntil": "2026-12-31"   or ""   (inside an Offer object)
   <!--offer-->…<!--/offer-->   kept while the offer runs, removed with its content afterwards
 
@@ -56,20 +58,22 @@ def tokens(lang, day=None):
     t = {"price:month": money(P["monthly"], lang), "price:year": money(y, lang), "price:year_list": money(P["yearly_list"], lang),
          "price:year_month": money(round(y / 12 + 1e-9, 2), lang), "price:year_saving": "%d" % round(100 * (1 - y / (P["monthly"] * 12))),
          "price:month_num": "%.2f" % P["monthly"], "price:year_num": "%.2f" % y,
-         "offer:note": "", "offer:badge": "", "offer:schema": "", "offer:until": ""}
+         "offer:note": "", "offer:badge": "", "offer:schema": "", "offer:until": "", "offer:keep": ""}
     if on:
         e = datetime.date.fromisoformat(P["offer"]["ends"])
         was, now = money(P["yearly_list"], lang), money(y, lang)
         if lang == "es":
             until = "%d de %s" % (e.day, MONTHS["es"][e.month - 1])
             t["offer:until"] = "%s de %d" % (until, e.year)
-            t["offer:note"] = " (oferta hasta el %s de %d; después, %s al año)" % (until, e.year, was)
+            t["offer:note"] = " (oferta hasta el %s de %d: si te suscribes antes, mantienes ese precio; después, %s al año)" % (until, e.year, was)
             t["offer:badge"] = "Oferta: Premium anual a %s (antes %s) · solo hasta el %s" % (now, was, until)
+            t["offer:keep"] = "Si te suscribes antes del %s, mantienes %s al año mientras sigas suscrito." % (until, now)
         else:
             until = "%d %s" % (e.day, MONTHS["en"][e.month - 1])
             t["offer:until"] = "%s %d" % (until, e.year)
-            t["offer:note"] = " (offer until %s %d; after that, %s a year)" % (until, e.year, was)
+            t["offer:note"] = " (offer until %s %d: subscribe before then and you keep that price; after that, %s a year)" % (until, e.year, was)
             t["offer:badge"] = "Offer: yearly Premium %s (was %s) · only until %s" % (now, was, until)
+            t["offer:keep"] = "Subscribe before %s and keep %s/year for as long as you stay subscribed." % (until, now)
         t["offer:schema"] = ', "priceValidUntil": "%s"' % P["offer"]["ends"]
     return t
 

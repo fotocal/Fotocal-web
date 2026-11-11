@@ -296,32 +296,41 @@ def comparativa():
             blocks.append(article(l, h1, lead, "\n".join(body), TODAY, crumbs_html(l, [(home, "../../"), (hub, "../"), (name, "./")]), ld, quick))
         write("comparativa/fotocal-vs-%s/index.html" % slug, page(2, "comparativa/fotocal-vs-%s/" % slug, meta, blocks, "comparativa"))
 
-    meta = {"es": {"title": "Apps para contar calorías en España: comparativa",
-                   "desc": "Fotocal, Cal AI, MyFitnessPal y Yazio, función a función y con fecha: qué incluye cada plan gratis, qué es de pago y cuánto cuesta al año."},
-            "en": {"title": "Calorie counting apps in Spain: a comparison",
-                   "desc": "Fotocal, Cal AI, MyFitnessPal and Yazio, feature by feature and dated: what each free plan includes, what is paid and what it costs a year."}}
+    import compare_hub as CH
+    meta = {l: dict(CH.META[l]) for l in LANGS}
     check(meta)
+    HUB_MOD = CH.CHANGES[0][0]
     blocks = []
     for l in LANGS:
         home, hub = ("Inicio", "Comparativa") if l == "es" else ("Home", "Comparison")
         d = date_text(checked, l)
-        body = [cmp_table(data, data["columns"]), '      <p class="dp-table-note">%s</p>' % esc(data["note"][l].replace("{date}", d))]
+        body = [CH.BODY[l].replace("{date}", d),
+                '      <h2>%s</h2>' % ("La comparación, función a función" if l == "es" else "The comparison, feature by feature"),
+                cmp_table(data, data["columns"]), '      <p class="dp-table-note">%s</p>' % esc(data["note"][l].replace("{date}", d))]
         body.append('      <h2>%s</h2><ul>' % ("Comparaciones una a una" if l == "es" else "One-to-one comparisons"))
         for comp, slug in VS.items():
             body.append('        <li><a href="fotocal-vs-%s/">Fotocal vs %s</a></li>' % (slug, comp))
         body.append('      </ul>')
-        body.append('      <h2>%s</h2>' % ("Cómo elegir app para contar calorías" if l == "es" else "How to choose a calorie counting app"))
-        body.append('      <p>%s</p>' % ({"es": "Mira tres cosas: cuánto te cuesta apuntar una comida (una foto, un código de barras o escribirlo), si la base de datos conoce lo que comes tú (aquí, comida española con raciones reales) y qué incluye el plan gratis sin trucos. No publicamos un «ranking»: cada app encaja con una forma de comer distinta. La tabla dice lo que declara cada fabricante, con fecha.",
-                                            "en": "Look at three things: how much effort logging a meal takes (a photo, a barcode or typing), whether the database knows what you eat (here, Spanish food with real servings) and what the free plan really includes. We do not publish a ranking: each app suits a different way of eating. The table shows what each maker states, with the date."})[l])
+        body.append('      <p>%s</p>' % ('Si dudas entre apps de foto, lee también <a href="../blog/choose-photo-calorie-counter/">cómo elegir una app de calorías con foto</a> y <a href="../blog/photo-calorie-apps-accuracy/">si son precisas las apps de calorías con foto</a>.'
+                                         if l == "es" else 'If you are choosing between photo apps, also read <a href="../blog/choose-photo-calorie-counter/">how to choose a photo calorie app</a> and <a href="../blog/photo-calorie-apps-accuracy/">are photo calorie apps accurate</a>.'))
+        faq = [(q, a.replace("{date}", d)) for q, a in CH.FAQ[l]]
+        body.append('      <h2>%s</h2>' % ("Preguntas frecuentes" if l == "es" else "Frequently asked questions"))
+        for q, a in faq:
+            body.append('      <h3>%s</h3>\n      <p>%s</p>' % (esc(q), a))
+        body.append('      <h2>%s</h2><ul>' % ("Historial de cambios" if l == "es" else "Change history"))
+        for iso, ces, cen in CH.CHANGES:
+            body.append('        <li><time datetime="%s">%s</time>: %s</li>' % (iso, fecha(iso, l), ces if l == "es" else cen))
+        body.append('      </ul>')
+        body.append(GD.download_card(l, "¿Quieres probar Fotocal?" if l == "es" else "Want to try Fotocal?",
+                                     "Gratis y sin tarjeta: 2 escaneos con IA y 1 registro por voz al día; código de barras y Coach Kal sin límite." if l == "es"
+                                     else "Free, no card: 2 AI scans and 1 voice log a day; unlimited barcode scanner and Coach Kal.",
+                                     GD.PLAY + "&utm_source=web&utm_medium=compare&utm_campaign=hub"))
         ld = "\n".join([ld_block({"@context": "https://schema.org", "@type": "Article", "headline": meta[l]["title"], "description": meta[l]["desc"], "inLanguage": l,
-                                  "url": SITE + "comparativa/", "datePublished": TODAY, "dateModified": TODAY, "author": ORG, "publisher": ORG}),
+                                  "url": SITE + "comparativa/", "datePublished": TODAY, "dateModified": HUB_MOD, "author": ORG, "publisher": ORG}),
+                        ld_block({"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": l, "mainEntity": [
+                            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}} for q, a in faq]}),
                         crumbs_ld([(home, SITE), (hub, SITE + "comparativa/")])])
-        quick = ({"es": "Fotocal cuenta calorías con una foto y su plan gratis incluye 2 escaneos con IA al día, 1 registro por voz al día, y código de barras y Coach Kal sin límite, sin tarjeta. Solo para Android. La tabla compara sus funciones con Cal AI, MyFitnessPal y Yazio según lo que cada uno declara (%s)." % d,
-                  "en": "Fotocal counts calories from a photo and its free plan includes 2 AI scans a day, 1 voice log a day, and unlimited barcode scanner and Coach Kal, with no card. Android only. The table compares its features with Cal AI, MyFitnessPal and Yazio from what each one states (%s)." % d})[l]
-        h1 = "Apps para contar calorías en España: comparativa" if l == "es" else "Calorie counting apps in Spain: a comparison"
-        lead = ("Lo que incluye cada app, gratis y de pago, según su propio fabricante y con la fecha en que lo comprobamos."
-                if l == "es" else "What each app includes, free and paid, according to its own maker and with the date we checked.")
-        blocks.append(article(l, h1, lead, "\n".join(body), TODAY, crumbs_html(l, [(home, "../"), (hub, "./")]), ld, quick))
+        blocks.append(article(l, CH.H1[l], CH.LEAD[l], "\n".join(body), HUB_MOD, crumbs_html(l, [(home, "../"), (hub, "./")]), ld, CH.QUICK[l].replace("{date}", d)))
     write("comparativa/index.html", page(1, "comparativa/", meta, blocks, "comparativa"))
 
 

@@ -94,7 +94,7 @@ window.FOTOCAL_I18N = {
     "how.resImg": "assets/img/screens/app-scan-en.webp",
     "how.camAlt": "The scan screen: the camera framing a chicken bowl, ready to detect the items in it",
     "how.camImg": "assets/img/screens/step-camera-en.webp",
-    "hero.title": "The free calorie counter that works <em class=\"accent\">from a photo</em>.",
+    "hero.title": "The free photo calorie counter app: snap your plate, <em class=\"accent\">get the calories</em>.",
     "hero.sub": "Take a photo of your meal and see its calories in seconds, with macros and a health score. Free, no card: 2 AI scans and 1 voice log a day; unlimited barcode scanner and Coach Kal.",
     "proof.aria": "Why trust Fotocal",
     "proof.t1": "Free, no card",

@@ -30,7 +30,7 @@
   },
   "features/index.html": {
     "es": {
-      "title": "Contar calorías con foto, voz y código: 8 funciones gratis",
+      "title": "Funciones de la app para contar calorías: foto, voz, código",
       "desc": "Foto, código de barras, voz, carta, Coach Kal e informe semanal, en pantallas reales. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite."
     },
     "en": {
@@ -50,11 +50,11 @@
   },
   "features/scan-barcode/index.html": {
     "es": {
-      "title": "Escáner de código de barras de alimentos, gratis — Fotocal",
+      "title": "Escáner de código de barras de calorías y alimentos, gratis",
       "desc": "Escanea el código de barras de cualquier producto y mira sus calorías, su puntuación sobre 100 y si choca con tus alergias. Sin límite y gratis en Fotocal."
     },
     "en": {
-      "title": "Food Barcode Scanner, Free: Calories, Score and Allergens",
+      "title": "Free Barcode Scanner Calorie Counter: Scan Any Food",
       "desc": "Scan any product's barcode and see its calories, macros, a score out of 100 and whether it clashes with your allergies. Free and unlimited on any plan."
     }
   },
@@ -90,22 +90,22 @@
   },
   "features/nutrition-diet/index.html": {
     "es": {
-      "title": "Contador de macros y panel de nutrición — Fotocal",
-      "desc": "Macros, fibra, azúcar, vitaminas y minerales de cada comida, con alternativas más sanas y Coach Kal para dudas. La calidad de lo que comes, no solo cuánto."
+      "title": "App de dieta y macros: contador de macros y nutrientes",
+      "desc": "Una app de dieta y macros: proteínas, hidratos, grasas, fibra, vitaminas y minerales de cada comida, con alternativas más sanas y Coach Kal para dudas."
     },
     "en": {
-      "title": "Macro Counter and Nutrition Panel — Fotocal",
-      "desc": "Macros, fibre, sugar, vitamins and minerals for every meal, with healthier swaps and Coach Kal for questions. What you eat matters, not just how much."
+      "title": "Macro Tracker App: Macros, Fibre and Vitamins per Meal",
+      "desc": "A macro tracker app: protein, carbs, fat, fibre, vitamins and minerals for every meal, with healthier swaps and Coach Kal for questions."
     }
   },
   "features/lifestyle-mindset/index.html": {
     "es": {
-      "title": "Hábitos para comer mejor sin obsesionarte — Fotocal",
-      "desc": "Racha, notas de ánimo, registro de actividad e informe semanal: la parte de Fotocal que ayuda a que comer bien se te quede, sin culpa y sin castigos."
+      "title": "Hábitos para adelgazar sin obsesionarte, con una app",
+      "desc": "Hábitos para adelgazar que duran: racha, notas de ánimo, actividad e informe semanal. La parte de Fotocal que ayuda a seguir, sin culpa y sin castigos."
     },
     "en": {
-      "title": "Habits to Eat Better Without Obsessing — Fotocal",
-      "desc": "Streak, mood notes, activity record and the weekly report: the part of Fotocal that helps good eating stick, without guilt and without punishments."
+      "title": "Healthy Eating Habits App: Streaks Without the Guilt",
+      "desc": "A healthy eating habits app: streak, mood notes, activity record and a weekly report. The part of Fotocal that helps good eating stick, without guilt."
     }
   },
   "subscription/index.html": {

@@ -43,8 +43,37 @@ def gloss(d):
 def display(d):
     """'Paella valenciana (Valencian paella)': the Spanish name people search
     for, then what it is. Just one name when the two are the same."""
+    nm = EN.get("name", {}).get(d["slug"])
+    if nm:      # English first: "Spanish omelette (tortilla de patatas)"
+        return G.cap(nm["en"]) + (" (%s)" % d["name"] if nm["es"] else "")
     es, en = G.cap(d["name"]), gloss(d)
     return es if es.lower() == en.lower() else "%s (%s)" % (es, en)
+
+
+SMALL = {"a", "an", "and", "at", "by", "con", "de", "del", "el", "en", "for", "in", "la", "las", "los", "of", "on", "or", "the", "to", "with", "y", "al", "cl", "ml"}
+
+
+def title_case(s):
+    """'Spanish omelette (tortilla de patatas)' -> 'Spanish Omelette (Tortilla de Patatas)'"""
+    out = []
+    for i, w in enumerate(s.split(" ")):
+        core = w.strip("()")
+        out.append(w if (i and core.lower() in SMALL) or core[:1].isdigit() else w.replace(core, core[:1].upper() + core[1:], 1))
+    return " ".join(out)
+
+
+def prose_name(d):
+    """The name used inside sentences: the English one where people type an
+    English name ("Spanish omelette"), the Spanish one where they do not
+    ("gazpacho", "patatas bravas"); never the explanatory gloss."""
+    nm = EN.get("name", {}).get(d["slug"])
+    return re.sub(r"\s*\(.*?\)", "", nm["en"]) if nm else d["name"]
+
+
+def kw_name(d):
+    """The dish name of the page's English primary keyword: 'spanish omelette', 'gazpacho'."""
+    nm = EN.get("name", {}).get(d["slug"])
+    return (nm["en"] if nm else d["name"]).lower()
 
 
 def app_name_en(app_id):
@@ -56,17 +85,20 @@ METHOD = {"boiled": "boiled", "stewed": "stewed", "sauteed": "sautéed", "fried"
 
 
 def title_desc(d, fig):
-    short = G.cap(d["name"])
-    title = "Calories in %s: per serving and per 100 g" % short
-    if len(title) > 50:
-        title = "Calories in %s per serving and 100 g" % short
-    if len(title) > 50:
-        title = "Calories in %s" % short
-    title = title + " — Fotocal" if len(title) + 10 <= G.TITLE_MAX else title
-    assert len(title) <= G.TITLE_MAX, (d["slug"], title)
+    nm = EN.get("name", {}).get(d["slug"], {})
+    full = title_case(display(d))
+    short = title_case(nm["en"]) if nm else G.cap(d["name"])     # without the bracket
+    title = nm.get("title")
+    if not title:
+        for cand in ("Calories in %s: per Serving & 100 g" % full, "Calories in %s: per Serving" % full, "Calories in %s" % full,
+                     "Calories in %s: per Serving & 100 g" % short, "Calories in %s" % short):
+            if len(cand) <= G.TITLE_MAX:
+                title = cand
+                break
+    assert title and len(title) <= G.TITLE_MAX, (d["slug"], title)
     g = fig["serving_g"]
     base = "A serving of %s (%s g) has %s kcal, %s per 100 g: %s g protein, %s g carbs and %s g fat." % (
-        gloss(d), ne(g), ne(fig["kcal"]), ne(fig["per100"]), ne(fig["protein"]), ne(fig["carbs"]), ne(fig["fat"]))
+        prose_name(d), ne(g), ne(fig["kcal"]), ne(fig["per100"]), ne(fig["protein"]), ne(fig["carbs"]), ne(fig["fat"]))
     for tail in (" With the real serving and similar dishes.", " With the real serving.", " Spanish food data.", ""):
         if len(base + tail) <= 155:
             return title, base + tail
@@ -75,7 +107,7 @@ def title_desc(d, fig):
 
 def dish_aside_en(d):
     link = G.PLAY + "&utm_source=web&utm_medium=dish&utm_campaign=" + d["slug"] + "-en"
-    return G.download_card("en", "Snap a photo of your %s and Fotocal works it out" % G.esc(gloss(d)),
+    return G.download_card("en", "Snap a photo of your %s and Fotocal works it out" % G.esc(prose_name(d)),
                            "Fotocal estimates the serving from a photo, with the figures on this page, and lets you fix each ingredient and its grams before saving.", link)
 
 
@@ -85,7 +117,7 @@ def dish(d, fig, ready_by_app):
     url = SITE + "calorias/%s/" % d["slug"]
     title, desc = title_desc(d, fig)
     name = display(d)
-    gl = gloss(d)
+    gl = prose_name(d)
     sp = fig["split"]
     top = max((("protein", sp["p"]), ("carbs", sp["c"]), ("fat", sp["f"]), ("alcohol", sp.get("a", 0))), key=lambda x: x[1])
     faq = [
@@ -99,7 +131,16 @@ def dish(d, fig, ready_by_app):
          "Half a serving (%s g) is about %s kcal; a serving and a half (%s g), about %s kcal. For any other amount, weigh it and multiply the grams by %s, then divide by 100." % (
              ne(round(g / 2)), ne(round(fig["kcal"] / 2)), ne(round(g * 1.5)), ne(round(fig["kcal"] * 1.5)), ne(fig["per100"]))),
     ]
-    crumbs = [("Home", SITE), ("Calories in Spanish dishes", SITE + "calorias/"), (G.cap(d["name"]), url)]
+    grp = EN["group_of"].get(d["slug"])
+    peers = sorted(G.figures(x["app_id"])["per100"] for x in G.DISHES if x.get("status") == "ready" and EN["group_of"].get(x["slug"]) == grp)
+    if len(peers) >= 5 and fig["per100"]:
+        below = sum(1 for p in peers if p < fig["per100"])
+        third = "lower" if below < len(peers) / 3.0 else ("higher" if below >= 2 * len(peers) / 3.0 else "middle")
+        gname = EN["groups"][grp]["en"].lower()
+        faq.append(("Is %s high in calories?" % gl,
+                    "At %s kcal per 100 g it is in the %s third of the %d %s on this site, which run from %s to %s kcal per 100 g. A serving (%s g) is %s kcal." % (
+                        ne(fig["per100"]), third, len(peers), gname, ne(peers[0]), ne(peers[-1]), ne(g), ne(fig["kcal"]))))
+    crumbs = [("Home", SITE), ("Calories in Spanish food", SITE + "calorias/"), (G.cap(kw_name(d)) if d["slug"] in EN.get("name", {}) else G.cap(d["name"]), url)]
     ld = [
         G.ld_block({"@context": "https://schema.org", "@type": "Article", "headline": title.replace(" — Fotocal", ""), "description": desc,
                     "inLanguage": "en", "mainEntityOfPage": url, "url": url, "datePublished": d.get("published"), "dateModified": d.get("updated", d.get("published")),
@@ -113,7 +154,7 @@ def dish(d, fig, ready_by_app):
     o = []
     o.append('\n<main id="main">\n  <article class="post dp">\n    <header class="post-head">\n      <div class="container-narrow">')
     o.append('        <nav class="post-crumbs reveal" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span>'
-             '<a href="../">Calories in Spanish dishes</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">%s</a></nav>' % G.esc(G.cap(d["name"])))
+             '<a href="../">Calories in Spanish food</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">%s</a></nav>' % G.esc(crumbs[-1][0]))
     o.append('        <h1 class="post-title reveal">Calories in %s</h1>' % G.esc(name))
     o.append('        <p class="post-lead reveal">A serving of %s (%s g) has %s kcal, %s kcal per 100 g: %s g protein, %s g carbs and %s g fat. Below: what a real serving weighs, where the calories come from and how it compares with similar dishes.</p>'
              % (G.esc(gl), ne(g), ne(fig["kcal"]), ne(fig["per100"]), ne(fig["protein"]), ne(fig["carbs"]), ne(fig["fat"])))
@@ -224,7 +265,7 @@ def hub(ready):
         G.ld_block({"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": desc, "inLanguage": "en", "url": url, "publisher": G.ORG,
                     "mainEntity": {"@type": "ItemList", "itemListElement": items}}),
         G.ld_block({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE}, {"@type": "ListItem", "position": 2, "name": "Calories in Spanish dishes", "item": url}]}),
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE}, {"@type": "ListItem", "position": 2, "name": "Calories in Spanish food", "item": url}]}),
     ])
     o = ['\n<main id="main">\n  <article class="post dp dp-hub">\n    <header class="post-head">\n      <div class="container-narrow">',
          '        <nav class="post-crumbs reveal" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">Calories in Spanish dishes</a></nav>',

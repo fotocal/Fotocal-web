@@ -62,9 +62,17 @@
     {
      "q": "¿Cuántas calorías tiene una tortilla entera?",
      "a": "Depende del tamaño, así que la cuenta es por peso: {per100} kcal por cada 100 g. Una tortilla de un kilo son unas {per1000} kcal, a repartir entre quienes se la coman."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 200 g de tortilla de patatas?",
+     "a": "{per100*2} kcal, a {per100} kcal por cada 100 g. Es algo más que la ración de la app, que son {g} g y {kcal} kcal."
+    },
+    {
+     "q": "¿Cuánto pesa un trozo de tortilla de 100 kcal?",
+     "a": "Unos {g100kcal} g, poco más de medio pincho de bar."
     }
    ],
-   "updated": "2026-11-08",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "cien-gramos",
@@ -95,6 +103,16 @@
      "id": "trozo",
      "h2": "Un trozo, un pincho, una ración",
      "html": "<p>Un pincho de bar de 120 g son {kcal:pincho-de-tortilla} kcal; la ración de plato de 150 g que usa la app, {kcal}; un octavo de una tortilla de un kilo, 125 g, unas {per100*1.25}. Si el trozo lleva pan debajo, suma unas 80 kcal por cada 30 g de pan. Y si es la tortilla de Mercadona u otra envasada, usa la cifra de su etiqueta, no esta.</p>"
+    },
+    {
+     "id": "tres-seis-huevos",
+     "h2": "Tortilla de 3 y de 6 huevos",
+     "html": "<p>Con la misma proporción que la de cuatro huevos (unos 100 g de patata por huevo), una tortilla de 3 huevos pesa entre 410 y 490 g ya cuajada: de {per100*4.1} a {per100*4.9} kcal entera. Una de 6 huevos pesa entre 825 y 975 g: de {per100*8.25} a {per100*9.75} kcal. Son estimaciones; el peso real de la tuya, multiplicado por {per100} y dividido entre 100, es la cifra buena.</p>"
+    },
+    {
+     "id": "cien-kcal",
+     "h2": "¿Cuánto es un trozo de 100 calorías?",
+     "html": "<p>Unos {g100kcal} g: un trozo pequeño, poco más de medio pincho. 200 g de tortilla, un trozo grande, son {per100*2} kcal.</p>"
     }
    ],
    "title": "Calorías de la tortilla de patatas: ración, 100 g, Mercadona",
@@ -135,9 +153,34 @@
     {
      "q": "¿Paella valenciana o de marisco, cuál tiene menos calorías?",
      "a": "En la base de datos de Fotocal, la de marisco queda en {kcal:paella-de-marisco} kcal por ración frente a {kcal} la valenciana: parecidas, porque el arroz y el aceite son los mismos y el marisco es magro. La diferencia está en la proteína, mayor en la valenciana por el pollo y el conejo."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 300 g de paella?",
+     "a": "Unas {per100*3} kcal la valenciana, a {per100} kcal por cada 100 g. La ración de la app, {g} g, son {kcal} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías hay en 100 gramos de paella?",
+     "a": "{per100} kcal en 100 g de paella valenciana, con {protein/3.07} g de proteínas. La de marisco de la app tiene algo menos por ración: {kcal:paella-de-marisco} kcal."
+    },
+    {
+     "q": "¿Es buena la paella para la dieta?",
+     "a": "Cabe en una dieta: es un plato completo, con arroz, carne y verdura, y {protein} g de proteína por ración. Lo que hay que mirar es la cantidad: una ración son {kcal} kcal y repetir la sube a casi el doble."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la paella por 100 g y por 300 g",
+     "html": "<p>100 g de paella valenciana tienen {per100} kcal. A partir de ahí es multiplicar: 300 g son {per100*3} kcal, la ración de la app ({g} g) son {kcal}, y un plato de domingo de 450 g llega a {per100*4.5}. Un trozo de {g100kcal} g son 100 kcal. Si la pesas una vez en tu plato de siempre, ya tienes la cifra para todas las demás.</p>"
+    },
+    {
+     "id": "tipos",
+     "h2": "Paella valenciana, de marisco y arroz con pollo",
+     "html": "<p>Con las raciones de la app: la paella valenciana tiene {kcal} kcal, la paella de marisco {kcal:paella-de-marisco} y el arroz con pollo {kcal:arroz-con-pollo}. La de marisco queda por debajo porque lleva menos grasa: {fat:paella-de-marisco} g por ración frente a {fat} g. La paella mixta y la de verduras no están en la base de datos de la app, así que aquí no damos cifra: dependen de cuánta carne y cuánto aceite lleven.</p>"
+    }
+   ],
+   "title": "Calorías de la paella valenciana: ración, 100 g y marisco"
   },
   {
    "slug": "croquetas-de-jamon",
@@ -173,9 +216,26 @@
     {
      "q": "¿Las croquetas congeladas tienen las mismas calorías?",
      "a": "Por 100 g suelen moverse en un rango parecido, con diferencias entre marcas: la etiqueta manda. Lo que más cambia la cifra final no es si son caseras o congeladas, sino el aceite que absorben al freírlas."
+    },
+    {
+     "q": "¿Cuántas kcal tienen 4 croquetas?",
+     "a": "{kcal} kcal cuatro croquetas de jamón de 30 g, la ración de la app. Si son grandes, de 45 g, cuatro son unas {per100*1.8} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 2 croquetas?",
+     "a": "Unas {kcal/2} kcal dos croquetas de jamón de 30 g cada una."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "por-unidad",
+     "h2": "Calorías de 1, 2, 4, 5 y 6 croquetas",
+     "html": "<p>Con croquetas de unos 30 g, las de casa o las de una tapa normal: una croqueta tiene {kcal/4} kcal, dos tienen {kcal/2}, cuatro {kcal}, cinco {kcal*1.25} y seis {kcal*1.5}. Las croquetas grandes de bar pesan 45 g o más: cada una son unas {per100*0.45} kcal, así que cuatro de esas ya son {per100*1.8}. Por 100 g, {per100} kcal.</p>"
+    }
+   ],
+   "title": "Calorías de las croquetas de jamón: por unidad y 100 g",
+   "desc": "Cuatro croquetas de jamón ({g} g) tienen {kcal} kcal, {per100} por 100 g. Cuántas kcal tienen 1, 2, 4, 5 o 6 croquetas, y cuánto suman las grandes de bar."
   },
   {
    "slug": "cocido-madrileno",
@@ -211,9 +271,20 @@
     {
      "q": "¿Cuántas calorías tiene el cocido de restaurante?",
      "a": "Más que estas: la ración suele pasar de 400 g y va con sopa, pan y a veces repetición. Pesar no es posible en un restaurante; lo que sí se puede es dejar embutido en la fuente y comer el segundo como lo que es, el plato principal, no uno más."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de cocido madrileño?",
+     "a": "{per100} kcal por cada 100 g del cocido completo, sin la sopa."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del cocido por 100 g y por medio plato",
+     "html": "<p>100 g de cocido completo (garbanzos, verdura, carne y embutido) tienen {per100} kcal. Medio plato, 200 g, son {kcal/2} kcal; el plato de {g} g de la app, {kcal}. La sopa de fideos de primero va aparte.</p>"
+    }
+   ]
   },
   {
    "slug": "gazpacho",
@@ -249,9 +320,24 @@
     {
      "q": "¿Gazpacho o salmorejo, cuál tiene menos calorías?",
      "a": "El gazpacho, con diferencia: {kcal} kcal el bol frente a {kcal:salmorejo} el de salmorejo, por el pan y el aceite que lleva el salmorejo para espesar."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un vaso de gazpacho?",
+     "a": "Unas {per100*2} kcal un vaso de 200 ml, y {kcal} kcal un bol de 250 ml."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un litro de gazpacho?",
+     "a": "Unas {per100*10} kcal, con la cifra de referencia de la app ({per100} kcal por 100 ml)."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "vaso-litro",
+     "h2": "Calorías de un vaso, un bol y un litro de gazpacho",
+     "html": "<p>A {per100} kcal por cada 100 ml: un vaso de 200 ml son {per100*2} kcal, el bol de 250 ml de la app son {kcal}, y un litro entero, {per100*10}. Es la cifra de referencia de la app para el gazpacho; uno casero con mucho aceite o mucho pan queda por encima.</p>"
+    }
+   ]
   },
   {
    "slug": "salmorejo",
@@ -286,9 +372,20 @@
     {
      "q": "¿El salmorejo tiene muchos hidratos?",
      "a": "Más que el gazpacho por el pan, {carbs} g por bol, pero no es un plato de hidratos: más de la mitad de sus calorías son grasa, la del aceite de oliva, que es también lo que lo hace saciante."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de salmorejo?",
+     "a": "{per100} kcal por cada 100 g, sin contar el huevo ni el jamón de encima."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del salmorejo por 100 g y por tapa",
+     "html": "<p>100 g de salmorejo tienen {per100} kcal: es lo que lleva un vasito de tapa. El bol de 250 g de la app son {kcal} kcal. Tiene más del doble de calorías que el gazpacho ({per100:gazpacho} kcal por 100 g) porque lleva más pan y más aceite. El huevo duro y el jamón de encima van aparte.</p>"
+    }
+   ]
   },
   {
    "slug": "lentejas-estofadas",
@@ -326,9 +423,24 @@
     {
      "q": "¿Las lentejas tienen proteína suficiente?",
      "a": "{protein} g por plato, una cantidad respetable, aunque la proteína de la legumbre es algo incompleta por sí sola. Con arroz o pan en la misma comida se completa, que es lo que la cocina tradicional ya hacía sin saberlo."
+    },
+    {
+     "q": "¿Cuántas calorías son 100 g de lentejas cocidas?",
+     "a": "116 kcal las lentejas cocidas solas y {per100} kcal las estofadas con verdura. Un plato de {g} g son {kcal} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, el arroz o las lentejas?",
+     "a": "Cocidos, casi lo mismo: 130 kcal por 100 g el arroz blanco y 116 las lentejas. La diferencia está en lo demás: las lentejas tienen más del triple de proteína (9 g frente a 2,7 g por 100 g) y mucha más fibra."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de las lentejas por 100 g y por plato",
+     "html": "<p>Las lentejas estofadas, ya guisadas con su verdura y su sofrito, tienen {per100} kcal por cada 100 g, y el plato de {g} g, {kcal} kcal. Las lentejas cocidas solas, sin guiso, tienen 116 kcal por 100 g (fila de USDA que usa la app): prácticamente la misma cifra. Con chorizo, el plato sube a {kcal:lentejas-con-chorizo} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "fabada-asturiana",
@@ -439,9 +551,20 @@
     {
      "q": "¿Engordan los churros con chocolate?",
      "a": "Un desayuno de {kcal} kcal es una comida entera. Un domingo al mes no cambia nada; cada fin de semana, suma. Lo que decide no es el churro sino si ese día se come como si no hubiera habido churros."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 6 churros?",
+     "a": "Unas {kcal:churros*2} kcal seis churros de 30 g, sin contar el chocolate."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "por-unidad",
+     "h2": "Calorías de 1, 3 y 6 churros, y de una porra",
+     "html": "<p>Solo los churros, sin el chocolate: un churro normal de 30 g tiene {kcal:churros/3} kcal, tres tienen {kcal:churros} y seis, {kcal:churros*2}. Una porra de 80 g tiene {kcal:porras} kcal, casi como tres churros. La ración de esta página, churros con una taza de chocolate, son {kcal} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "pulpo-a-la-gallega",
@@ -858,11 +981,22 @@
     {
      "q": "¿Bravas o croquetas, qué tiene menos calorías?",
      "a": "La tapa de bravas son {kcal} kcal y cuatro croquetas {kcal:croquetas-de-jamon}; por 100 g, las croquetas pesan más ({per100:croquetas-de-jamon} frente a {per100}) porque son bechamel frita. Las bravas llenan más por caloría."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de patatas bravas?",
+     "a": "{per100} kcal por cada 100 g, con su salsa."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de las bravas por 100 g, media ración y ración para compartir",
+     "html": "<p>100 g de patatas bravas tienen {per100} kcal. Media ración, 100 g, es eso mismo; la tapa de 200 g de la app son {kcal} kcal, y una ración grande para compartir, de 400 g, {kcal*2}. Entre cuatro personas, esa ración grande sale a unas {kcal/2} kcal por cabeza.</p>"
+    }
+   ]
   },
   {
    "slug": "bocadillo-de-jamon-serrano",
@@ -1057,11 +1191,26 @@
     {
      "q": "¿Caña o tinto de verano, qué tiene menos calorías?",
      "a": "Parecidos por vaso: {kcal} kcal la caña de 200 ml y {kcal:tinto-de-verano} el tinto de verano de 250 ml con gaseosa. El tinto de verano con refresco de limón azucarado en lugar de gaseosa sube bastante."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una cerveza de 33 cl?",
+     "a": "{kcal:tercio-de-cerveza} kcal un tercio o una lata de 330 ml de cerveza rubia."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 3 cañas?",
+     "a": "{kcal*3} kcal tres cañas de 200 ml."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "medidas",
+     "h2": "Caña, doble, tercio y litro: calorías de cada medida",
+     "html": "<p>Con cerveza rubia normal, a {per100} kcal por cada 100 ml: una caña de 200 ml son {kcal} kcal, un doble de 400 ml son {kcal*2}, un tercio de 330 ml son {kcal:tercio-de-cerveza} y un litro, {per100*10}. Tres cañas, una tarde normal de bar, suman {kcal*3} kcal antes de contar las tapas.</p>"
+    }
+   ]
   },
   {
    "slug": "tinto-de-verano",
@@ -1422,9 +1571,24 @@
     {
      "q": "¿Es lo mismo el plátano de Canarias que la banana en calorías?",
      "a": "La app usa una sola fila, la de plátano genérico, así que no distingue. Entre variedades la diferencia por 100 g es pequeña; la que importa es el tamaño de la pieza, y el plátano de Canarias suele ser más pequeño que una banana de importación."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de plátano?",
+     "a": "{per100} kcal por cada 100 g de plátano pelado."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 2 plátanos?",
+     "a": "{kcal*2} kcal dos plátanos medianos de {g} g cada uno, sin piel."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del plátano por 100 g y por unidades",
+     "html": "<p>100 g de plátano pelado tienen {per100} kcal. Un plátano mediano ({g} g) son {kcal} kcal; dos, {kcal*2}. Casi todo son hidratos: {carbs} g por pieza.</p>"
+    }
+   ]
   },
   {
    "slug": "huevo-cocido",
@@ -1467,9 +1631,24 @@
     {
      "q": "¿Cuántas calorías tiene un huevo frito frente a uno cocido?",
      "a": "Por 100 g, el huevo frito de la base de datos de la app tiene 196 kcal y el cocido 155: la diferencia es el aceite que se queda en el huevo. Un huevo frito mediano se va a unas 100 kcal frente a las {kcal} del cocido."
+    },
+    {
+     "q": "¿Cuánto son 2 huevos en calorías?",
+     "a": "{kcal*2} kcal dos huevos cocidos medianos, con {protein*2} g de proteína."
+    },
+    {
+     "q": "¿Cuánto aportan 3 huevos?",
+     "a": "{kcal*3} kcal, {protein*3} g de proteína y {fat*3} g de grasa tres huevos cocidos medianos."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "dos-tres",
+     "h2": "Calorías de 2 y 3 huevos cocidos",
+     "html": "<p>Dos huevos cocidos medianos son {kcal*2} kcal y {protein*2} g de proteína; tres, {kcal*3} kcal y {protein*3} g. Por 100 g, {per100} kcal. Cocer el huevo no añade grasa, a diferencia del frito, que suma el aceite de la sartén.</p>"
+    }
+   ]
   },
   {
    "slug": "barra-de-pan",
@@ -2058,9 +2237,24 @@
     {
      "q": "¿Engorda la manzana por la noche?",
      "a": "No más que a otra hora: {kcal} kcal son las mismas. Lo que cuenta es el total del día."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de manzana?",
+     "a": "{per100} kcal por cada 100 g."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 2 manzanas?",
+     "a": "{kcal*2} kcal dos manzanas medianas de {g} g."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la manzana por 100 g y por unidades",
+     "html": "<p>100 g de manzana tienen {per100} kcal. Una manzana mediana ({g} g) son {kcal} kcal; dos, {kcal*2}. Es de las frutas con menos calorías por pieza.</p>"
+    }
+   ]
   },
   {
    "slug": "almendras",
@@ -2142,9 +2336,24 @@
     {
      "q": "¿Qué engorda más, una pizza o una hamburguesa?",
      "a": "Por ración, la hamburguesa casera con patatas de la app tiene {kcal:hamburguesa-casera-con-patatas} kcal, frente a {kcal} de dos porciones de pizza."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una porción de pizza?",
+     "a": "Unas {kcal/2} kcal una porción de 100 g de pizza de queso."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de pizza?",
+     "a": "{per100} kcal por cada 100 g de pizza de queso."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "por-porcion",
+     "h2": "Calorías de una porción, tres porciones y 100 g de pizza",
+     "html": "<p>Con pizza de queso: una porción de 100 g tiene {kcal/2} kcal, dos porciones (la ración de la app) {kcal} y tres, {kcal*1.5}. Por cada 100 g, {per100} kcal. Con embutido o doble queso la cifra sube.</p>"
+    }
+   ]
   },
   {
    "slug": "arroz-a-la-cubana",
@@ -2225,9 +2434,20 @@
     {
      "q": "¿Son buenas las lentejas con chorizo para perder peso?",
      "a": "Se pueden comer: sacian mucho por la fibra y la proteína. Lo que importa es el total del día. Si buscas un plato más ligero, quita el chorizo o pon la mitad."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de lentejas con chorizo?",
+     "a": "{per100} kcal por cada 100 g, frente a {per100:lentejas-estofadas} de las lentejas estofadas sin embutido."
     }
    ],
-   "updated": "2026-11-09"
+   "updated": "2026-11-11",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Lentejas con chorizo por 100 g y medio plato",
+     "html": "<p>Por cada 100 g, {per100} kcal. Medio plato, de primero, son {kcal/2} kcal; el plato entero de {g} g, {kcal}. Un trozo de pan de 40 g al lado añade unas 100 kcal más.</p>"
+    }
+   ]
   },
   {
    "slug": "bacalao-al-pil-pil",

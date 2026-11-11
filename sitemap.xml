@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://getfotocal.com/about/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/about/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
@@ -2577,7 +2577,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/faq/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/faq/"/>
@@ -2586,7 +2586,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/faq/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/faq/"/>
@@ -2739,7 +2739,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/"/>
@@ -2748,7 +2748,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/"/>
@@ -2793,7 +2793,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/subscription/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/subscription/"/>
@@ -2802,7 +2802,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/subscription/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/subscription/"/>
@@ -2811,7 +2811,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/terms/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/terms/"/>
@@ -2820,7 +2820,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/terms/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/terms/"/>

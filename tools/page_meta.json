@@ -111,11 +111,11 @@
   "subscription/index.html": {
     "es": {
       "title": "Precios de Fotocal: plan gratis para siempre y Premium",
-      "desc": "Plan gratis sin tarjeta: 2 escaneos con IA y 1 por voz al día, código de barras y Kal sin límite. Premium 6,99 €/mes o 34,99 €/año, con 5 días de prueba."
+      "desc": "Plan gratis sin tarjeta: 2 escaneos con IA y 1 por voz al día, código de barras y Kal sin límite. Premium {{price:month}}/mes o {{price:year}}/año, con 5 días de prueba."
     },
     "en": {
-      "title": "Fotocal Pricing: Free Plan Forever, Premium €6.99/month",
-      "desc": "Free plan, no card, no expiry: 2 AI scans and 1 voice log a day, unlimited barcode and Kal. Premium €6.99 a month or €34.99 a year, 5-day trial on both."
+      "title": "Fotocal Pricing: Free Plan Forever, Premium {{price:month}}/month",
+      "desc": "Free plan, no card, no expiry: 2 AI scans and 1 voice log a day, unlimited barcode and Kal. Premium {{price:month}} a month or {{price:year}} a year, 5-day trial on both."
     }
   },
   "blog/index.html": {

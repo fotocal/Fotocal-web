@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subscription &amp; pricing — Fotocal Premium</title>
-  <meta name="description" content="Fotocal pricing: free forever with 2 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, each with a 5-day free trial.">
+  <meta name="description" content="Fotocal pricing: free forever with 2 AI scans a day and unlimited Coach Kal. Premium {{price:month}}/month or {{price:year}}/year, each with a 5-day free trial.">
   <meta name="keywords" content="Fotocal pricing, Fotocal premium, calorie app subscription, AI food scanner price">
   <link rel="canonical" href="https://getfotocal.com/subscription/">
   <link rel="alternate" hreflang="en" href="https://getfotocal.com/subscription/">
@@ -16,14 +16,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fotocal">
   <meta property="og:title" content="Subscription &amp; pricing — Fotocal Premium">
-  <meta property="og:description" content="Free forever with 2 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, each with a 5-day free trial.">
+  <meta property="og:description" content="Free forever with 2 AI scans a day and unlimited Coach Kal. Premium {{price:month}}/month or {{price:year}}/year, each with a 5-day free trial.">
   <meta property="og:url" content="https://getfotocal.com/subscription/">
   <meta property="og:image" content="https://getfotocal.com/assets/og-image.png">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Subscription &amp; pricing — Fotocal Premium">
-  <meta name="twitter:description" content="Free forever with 2 AI scans a day and unlimited Coach Kal. Premium €6.99/month or €34.99/year, each with a 5-day free trial.">
+  <meta name="twitter:description" content="Free forever with 2 AI scans a day and unlimited Coach Kal. Premium {{price:month}}/month or {{price:year}}/year, each with a 5-day free trial.">
   <meta name="twitter:image" content="https://getfotocal.com/assets/og-image.png">
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=3">
@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="../assets/css/home.css">
   <link rel="stylesheet" href="../assets/css/features.css">
   <!--# Every price on this page is a Google Play list price, mirrored in the
-       app at src/lib/pricing.ts (LIST_PRICE = { monthly: 6.99, yearly: 34.99 }).
+       app at src/lib/pricing.ts (LIST_PRICE); on this site they come from tools/pricing.json.
        Every free/Premium claim is read off the app's gating code — the
        file is named next to each one below. Marketing copy, the app's own
        paywall included, is not evidence.
@@ -80,7 +80,9 @@
         <div class="hero-copy">
           <span class="kicker reveal" data-i18n="sub.t01">Pricing</span>
           <h1 class="hero-title reveal" data-i18n-html="sub.t02">Two prices, one Premium, and a free plan <em class="accent">that is not a demo</em>.</h1>
-          <p class="hero-sub reveal" data-i18n="sub.t03">Fotocal is free to use every day, with no card and no time limit. Premium is €6.99 a month or €34.99 a year, and what it does is lift the daily limits on scanning and open the deeper panels. Everything on this page is what Google Play charges, in euros, tax included.</p>
+          <p class="hero-sub reveal" data-i18n="sub.t03">Fotocal is free to use every day, with no card and no time limit. Premium is {{price:month}} a month or {{price:year}} a year, and what it does is lift the daily limits on scanning and open the deeper panels. Everything on this page is what Google Play charges, in euros, tax included.</p>
+          <!--offer--><p class="offer-badge reveal">{{offer:badge}}</p><!--/offer-->
+          <p class="price-note reveal" data-i18n="sub.playnote">Google Play shows the final price for your country before you pay.</p>
           <div class="reveal">
             <a class="btn btn-cta btn-lg" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="cta.free">Get it free</a>
             <a class="sb-jump" href="#plans" data-i18n="sub.t04">The two plans ↓</a>
@@ -153,7 +155,7 @@
         <!-- Monthly -->
         <article class="sb-plan reveal" style="--rd:.06s">
           <span class="sb-plan-name" data-i18n="sub.p2n">Monthly</span>
-          <div class="sb-plan-price"><span data-i18n="sub.p2a">€6.99</span></div>
+          <div class="sb-plan-price"><span data-i18n="sub.p2a">{{price:month}}</span></div>
           <span class="sb-plan-per" data-i18n="sub.p2p">per month</span>
           <ul class="check-list check-list-lt sb-plan-list">
             <li data-i18n="sub.p2l1">All nine Premium lines above, the same as every paid plan</li>
@@ -163,8 +165,8 @@
                (app/paywall.tsx trialDaysOf → the package's freePhase);
                Play Console (2026-09-14): offer free-trial-5d on every plan. -->
           <div class="sb-when sb-when-trial">
-            <b data-i18n="sub.p2w1">5-day free trial, then €6.99 a month.</b>
-            <span data-i18n="sub.p2w2">Nothing is charged for five days. On day six Google Play charges €6.99, then €6.99 every month until you cancel. Cancel during the trial and you pay nothing.</span>
+            <b data-i18n="sub.p2w1">5-day free trial, then {{price:month}} a month.</b>
+            <span data-i18n="sub.p2w2">Nothing is charged for five days. On day six Google Play charges {{price:month}}, then {{price:month}} every month until you cancel. Cancel during the trial and you pay nothing.</span>
           </div>
           <a class="btn btn-outline btn-block" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="sub.pcta">Get the app on Google Play</a>
           <span class="sb-plan-fine" data-i18n="sub.pfine">You subscribe from inside the app.</span>
@@ -193,19 +195,20 @@
         <!-- Yearly -->
         <article class="sb-plan sb-plan-year reveal" style="--rd:.12s">
           <span class="sb-plan-name" data-i18n="sub.p3n">Yearly</span>
-          <div class="sb-plan-price"><span data-i18n="sub.p3a">€34.99</span></div>
+          <div class="sb-plan-price"><span data-i18n="sub.p3a">{{price:year}}</span></div>
           <span class="sb-plan-per" data-i18n="sub.p3p">per year</span>
+          <!--offer--><p class="offer-badge offer-badge-sm">{{offer:badge}}</p><!--/offer-->
           <!--# Not a badge. The per-month figure and the percentage are
-               arithmetic on the two prices above (34.99 / 12 against 6.99),
+               arithmetic on the two prices above (yearly / 12 against monthly, worked out by tools/pricing.py),
                the same sum the app does in src/lib/pricing.ts. -->
-          <p class="sb-plan-equiv" data-i18n="sub.p3e">That is €2.92 a month, 58% less than paying monthly.</p>
+          <p class="sb-plan-equiv" data-i18n="sub.p3e">That is {{price:year_month}} a month, 58% less than paying monthly.</p>
           <ul class="check-list check-list-lt sb-plan-list">
             <li data-i18n="sub.p3l1">All nine Premium lines above, the same as every paid plan</li>
             <li data-i18n="sub.p3l2">Renews every year until you cancel</li>
           </ul>
           <div class="sb-when sb-when-trial">
-            <b data-i18n="sub.p3w1">5-day free trial, then €34.99 a year.</b>
-            <span data-i18n="sub.p3w2">Nothing is charged for five days. On day six Google Play charges €34.99, then €34.99 every year until you cancel. Cancel during the trial and you pay nothing.</span>
+            <b data-i18n="sub.p3w1">5-day free trial, then {{price:year}} a year.</b>
+            <span data-i18n="sub.p3w2">Nothing is charged for five days. On day six Google Play charges {{price:year}}, then {{price:year}} every year until you cancel. Cancel during the trial and you pay nothing.</span>
           </div>
           <a class="btn btn-cta btn-block" href="https://play.google.com/store/apps/details?id=com.fotokal.app" target="_blank" rel="noopener" data-i18n="sub.pcta">Get the app on Google Play</a>
           <span class="sb-plan-fine" data-i18n="sub.pfine">You subscribe from inside the app.</span>
@@ -219,7 +222,7 @@
             <ol class="sb-days">
               <li><span class="sb-day" data-i18n="sub.p3d1">Day 1</span><span data-i18n="sub.p3t1">Premium switches on. Nothing is charged.</span></li>
               <li><span class="sb-day" data-i18n="sub.p3d2">Days 1–5</span><span data-i18n="sub.p3t2">Cancel whenever you like. You keep Premium until the trial ends and pay nothing.</span></li>
-              <li><span class="sb-day" data-i18n="sub.p3d3">Day 6</span><span data-i18n="sub.p3t3">If you have not cancelled, Google Play charges the plan you chose, €6.99 for the month or €34.99 for the year, and the same amount again at each renewal until you cancel.</span></li>
+              <li><span class="sb-day" data-i18n="sub.p3d3">Day 6</span><span data-i18n="sub.p3t3">If you have not cancelled, Google Play charges the plan you chose, {{price:month}} for the month or {{price:year}} for the year, and the same amount again at each renewal until you cancel.</span></li>
             </ol>
             <p class="sb-cancel" data-i18n-html="sub.p3c">To cancel: Play Store app → your profile icon → <b>Payments and subscriptions</b> → <b>Subscriptions</b> → Fotocal → <b>Cancel subscription</b>. Two to three days before the charge the app sends you one reminder with the date and the amount.</p>
       </div>
@@ -350,7 +353,7 @@
         </details>
         <details class="faq-item reveal">
           <summary><span data-i18n="sub.fq3">What exactly happens on day six?</span><i class="faq-plus" aria-hidden="true"></i></summary>
-          <p data-i18n="sub.fa3">If you have not cancelled, Google Play charges the plan you chose, €6.99 for the month or €34.99 for the year, and the plan begins. If you cancelled at any point in the five days, nothing is charged and you keep Premium until the trial ends. Two to three days before the charge the app sends a single reminder naming the date and the amount, unless you have switched that reminder off in Settings.</p>
+          <p data-i18n="sub.fa3">If you have not cancelled, Google Play charges the plan you chose, {{price:month}} for the month or {{price:year}} for the year, and the plan begins. If you cancelled at any point in the five days, nothing is charged and you keep Premium until the trial ends. Two to three days before the charge the app sends a single reminder naming the date and the amount, unless you have switched that reminder off in Settings.</p>
         </details>
         <details class="faq-item reveal">
           <summary><span data-i18n="sub.fq4">Do both plans unlock the same things?</span><i class="faq-plus" aria-hidden="true"></i></summary>

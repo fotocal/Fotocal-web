@@ -4,6 +4,13 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # The yearly offer in tools/pricing.json ends on 31 December 2026. The
+  # build decides the price by date, so a rebuild just after midnight in
+  # Madrid puts the list price back and removes the badge on its own.
+  # (Change these two lines when offer.ends changes; cron is in UTC.)
+  schedule:
+    - cron: "20 23 31 12 *"   # 00:20 on 1 January, Europe/Madrid
+    - cron: "20 6 1 1 *"      # and again that morning, in case the first was delayed
 
 permissions:
   contents: read

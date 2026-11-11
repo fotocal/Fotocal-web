@@ -33,6 +33,10 @@ only when every check passes.
 - Do not name competitors. Criteria plus Fotocal is enough.
 - Wherever "gratis" appears, the limits must be on the same screen: 2 AI
   scans a day, 1 voice log a day, barcode and Coach Kal unlimited, no card.
+- Never type a price. Write `{{price:month}}`, `{{price:year}}` (the yearly
+  price in force today) or `{{price:year_month}}`; add `{{offer:note}}` after
+  the yearly price where the page states the price as a fact. The values
+  and any dated offer live in `tools/pricing.json` (see `tools/pricing.py`).
 - No testimonials, review counts, download numbers or awards. Never a
   rating in JSON-LD. The email fotocal.app@gmail.com only on Contact and
   legal pages.

@@ -301,7 +301,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/terms/,page,pass,pass,pass,pass,pass,pass,pass,n/a,n/a,pass,n/a,n/a
 /en/widget/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /faq/,page,pass,fail,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
-/features/,page,pass,fail,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
+/features/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /features/lifestyle-mindset/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /features/nutrition-diet/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
 /features/scan-barcode/,page,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a

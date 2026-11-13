@@ -308,7 +308,7 @@
 
 /* ═══════ 7 · HABITS — light ═══════ */
 .habit-layout { display: grid; gap: 1rem; margin-top: 2.2rem; }
-.habit-grid { display: grid; gap: 1rem; }
+.habit-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
 .habit-card {
   background: var(--bg-2); border: 1px solid var(--border-soft);
   border-radius: var(--r-lg); padding: 1.3rem 1.25rem;
@@ -351,7 +351,7 @@
     padding: 0 0 .55rem; border: 0; text-align: left;
   }
   .compare tbody td {
-    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .2rem 1rem;
     padding: .3rem 0; border: 0; font-size: .9rem; text-align: right;
   }
   .compare tbody td::before { content: attr(data-label); color: var(--muted); font-weight: 600; text-align: left; }

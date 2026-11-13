@@ -355,6 +355,9 @@ JS_TAG = re.compile(r'[ \t]*<script src="((?:\.\./)*|/)assets/js/([a-z0-9-]+)\.j
 JS_CORE = ("i18n", "layout", "main")
 
 
+INLINE_CSS = {("site", "home")}
+
+
 def bundle_html(src):
     """One minified stylesheet and one minified script per page, when the
     bundle exists in assets/dist/; fonts.css inlined; the two above-the-fold
@@ -370,7 +373,15 @@ def bundle_html(src):
             head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % ("/", PRELOAD_FONTS[0])
             head += '  <link rel="preload" as="font" type="font/woff2" href="%sassets/fonts/%s" crossorigin>\n' % ("/", PRELOAD_FONTS[1])
             head += "  <style>%s</style>\n" % FONTS_CSS.replace("url(../fonts/", "url(/assets/fonts/")  # absolute: an inline <style> is not rewritten for /en/ (404s found 05-11-2026)
-        if combo and os.path.isfile(os.path.join(DIST_DIR, bundle)):
+        if combo in INLINE_CSS and os.path.isfile(os.path.join(DIST_DIR, bundle)):
+            # the home page: its stylesheet is used by no other page, so it
+            # travels inside the HTML and nothing blocks the first paint
+            # (PageSpeed "render-blocking requests", mobile LCP, 2026-11)
+            css = open(os.path.join(DIST_DIR, bundle), encoding="utf-8").read()
+            if "url(" in re.sub(r"url\((['\"]?)data:", "", css):
+                raise SystemExit("inline stylesheet %s has a relative url(): make it absolute first" % bundle)
+            head += "  <style>%s</style>\n" % css.replace("</", "<\\/")
+        elif combo and os.path.isfile(os.path.join(DIST_DIR, bundle)):
             head += '  <link rel="stylesheet" href="%sassets/dist/%s">\n' % (prefix, bundle)
         else:
             head += "".join('  <link rel="stylesheet" href="%sassets/css/%s.css">\n' % (prefix, n) for n in combo)
@@ -622,31 +633,32 @@ def fit_desc(d, rel=None):
     return out
 
 
-# First visit only: open the visitor's language (lang-ux, 2026-11). Inline and
-# first in <head>, so the browser never paints the wrong language first.
-#   · runs once: any stored choice (the switcher, an earlier visit, ?lang=)
-#     wins, and main.js stores the language of every page read after this
-#   · never for crawlers (Googlebot must see both trees, through hreflang),
-#     Lighthouse or headless browsers, and never for a visitor arriving
-#     from a search engine (it already chose the language by hreflang)
-#   · ?lang=es|en is an explicit choice: stored, no redirect
-#   · both trees mirror each other path for path, so the twin is computed
-LANG_GATE = """<script>(function(){try{var d=document.documentElement,L=d.lang==="en"?"en":"es",K="fotocal-lang",s=localStorage,q=/[?&]lang=(es|en)\\b/.exec(location.search);
-if(q){s.setItem(K,q[1]);return}if(s.getItem(K))return;
-if(/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit|embedly/i.test(navigator.userAgent))return;
-if(/\\/\\/([^/]*\\.)?(google|bing|duckduckgo|yahoo|ecosia|yandex|baidu|qwant)\\./i.test(document.referrer))return;
-var w=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase(),T=w.indexOf("en")===0?"en":w.indexOf("es")===0?"es":"";
-s.setItem(K,T||L);if(!T||T===L)return;
-var p=location.pathname,b=p.indexOf("/en/")===0?p.slice(3):(p==="/en"?"/":p);
-location.replace((T==="en"?"/en"+b:b)+location.search+location.hash)}catch(e){}})();</script>"""
+# No language redirect (seo-google-fixes, 2026-11). The first-visit redirect by
+# browser language that lived here is gone: Google's testing tool was sent to
+# the English twin of a Spanish page. assets/js/main.js now offers the other
+# language in a small dismissible bar instead, and never moves the visitor.
+
+
+# Structured-data dates carry a time and the Madrid offset for that day
+# (Search Console: "datePublished without a time zone"). The sources keep the
+# plain date, which the sitemap and the blog index read; the published JSON-LD
+# gets 09:00 Europe/Madrid, so +01:00 in winter and +02:00 in summer.
+_SCHEMA_DATE = re.compile(r'("(?:datePublished|dateModified|dateCreated)":\s*")(\d{4})-(\d{2})-(\d{2})(")')
+
+
+def schema_dates(html):
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    def stamp(m):
+        t = datetime(int(m.group(2)), int(m.group(3)), int(m.group(4)), 9, 0, tzinfo=ZoneInfo("Europe/Madrid"))
+        iso = t.strftime("%Y-%m-%dT%H:%M:%S%z")
+        return m.group(1) + iso[:-2] + ":" + iso[-2:] + m.group(5)
+    return _SCHEMA_DATE.sub(stamp, html)
 
 
 def render_head(src, lang, rel_path, meta):
     meta = dict(meta, desc=fit_desc(meta["desc"], "%s:%s" % (lang, rel_path)))
-    # the twin must exist for the first-visit redirect; a page without one
-    # (an es-only blog post) never carries the script
-    if "noindex" not in src and not es_only(rel_path):
-        src = src.replace('<meta charset="UTF-8">', '<meta charset="UTF-8">\n  ' + LANG_GATE, 1)
     t, d = esc_attr(meta["title"]), esc_attr(meta["desc"])
     # <title> takes text, not an attribute value
     src = HEAD_PATTERNS[0][0].sub(lambda _: "<title>%s</title>" % esc_text(meta["title"]), src, count=1)
@@ -976,6 +988,7 @@ def main():
             s = tag_play_links(s, lang, rel)
             s = wrap_pictures(s, lang, rel)
             s = pricing.resolve(s, lang)     # prices that arrived inside translated strings
+            s = schema_dates(s)
 
             out = os.path.join(ROOT, PREFIX[lang], rel)
             os.makedirs(os.path.dirname(out) or ".", exist_ok=True)

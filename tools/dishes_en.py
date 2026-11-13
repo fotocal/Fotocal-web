@@ -244,9 +244,8 @@ def dish(d, fig, ready_by_app):
     o.append('        <p>General information about food, not medical or dietary advice.</p>\n      </section>')
     # related
     o.append('      <nav class="dp-related reveal" aria-label="Related pages">\n        <h2>Keep going</h2>\n        <div class="post-nav">')
-    same = [x for x in ready_by_app.values() if EN["group_of"].get(x) == EN["group_of"].get(d["slug"]) and x != d["slug"]][:4]
-    for s2 in same:
-        dd = next(x for x in G.DISHES if x["slug"] == s2)
+    for dd in G.related(d):
+        s2 = dd["slug"]
         o.append('          <a class="post-nav-item" href="../%s/"><small>Another dish</small><strong>Calories in %s</strong></a>' % (s2, G.esc(display(dd))))
     o.append('          <a class="post-nav-item" href="../"><small>Table</small><strong>Calories in Spanish dishes, per serving and per 100 g</strong></a>')
     o.append('          <a class="post-nav-item" href="../../calculadoras/calorias-diarias/"><small>Calculator</small><strong>Daily calorie calculator</strong></a>')

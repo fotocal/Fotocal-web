@@ -1,0 +1,316 @@
+bmi-en-1280: tap target 32px high: summary «How is it worked out?»
+bmi-en-1280-max: tap target 32px high: summary «How is it worked out?»
+bmi-en-1280-min: tap target 32px high: summary «How is it worked out?»
+bmi-en-1440: tap target 32px high: summary «How is it worked out?»
+bmi-en-360: tap target 32px high: summary «How is it worked out?»
+bmi-en-360-max: tap target 32px high: summary «How is it worked out?»
+bmi-en-360-min: tap target 32px high: summary «How is it worked out?»
+bmi-en-390: tap target 32px high: summary «How is it worked out?»
+bmi-en-390-dark: tap target 32px high: summary «How is it worked out?»
+bmi-en-390-zoom200: page scrolls sideways (489 > 390)
+bmi-en-390-zoom200: outside the screen: .calc «Height (cm)Enter a height between 130 an»
+bmi-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+bmi-en-390-zoom200: outside the screen: .dp-table «BMIWHO classification under 18.5Underwei»
+bmi-en-390-zoom200: outside the screen: .dp-table «HeightNormal weight (BMI 18.5 to 24.9)Ov»
+bmi-en-390-zoom200: label squeezed into 4 lines: «Healthy weight for your height»
+bmi-en-430: tap target 32px high: summary «How is it worked out?»
+bmi-en-768: tap target 32px high: summary «How is it worked out?»
+bmi-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-390-zoom200: page scrolls sideways (487 > 390)
+bmi-es-390-zoom200: label squeezed into 4 lines: «Peso saludable para tu altura»
+bmi-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+bmi-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-en-1280: tap target 32px high: summary «How is it worked out?»
+bmr-en-1280-max: tap target 32px high: summary «How is it worked out?»
+bmr-en-1280-min: tap target 32px high: summary «How is it worked out?»
+bmr-en-1440: tap target 32px high: summary «How is it worked out?»
+bmr-en-360: tap target 32px high: summary «How is it worked out?»
+bmr-en-360-max: tap target 32px high: summary «How is it worked out?»
+bmr-en-360-min: tap target 32px high: summary «How is it worked out?»
+bmr-en-390: tap target 32px high: summary «How is it worked out?»
+bmr-en-390-dark: tap target 32px high: summary «How is it worked out?»
+bmr-en-390-zoom200: page scrolls sideways (489 > 390)
+bmr-en-390-zoom200: outside the screen: .calc «Sex Woman Man Choose woman or man. Age (»
+bmr-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+bmr-en-390-zoom200: outside the screen: .dp-table «Your dayFactorTDEE, woman (kcal)TDEE, ma»
+bmr-en-390-zoom200: label squeezed into 5 lines: «From your age, height and weight»
+bmr-en-430: tap target 32px high: summary «How is it worked out?»
+bmr-en-768: tap target 32px high: summary «How is it worked out?»
+bmr-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-390-zoom200: page scrolls sideways (487 > 390)
+bmr-es-390-zoom200: outside the screen: .calc «Sexo Mujer Hombre Elige mujer u hombre. »
+bmr-es-390-zoom200: outside the screen: .calc-grid «Sexo Mujer Hombre Elige mujer u hombre. »
+bmr-es-390-zoom200: outside the screen: .calc-field «Sexo Mujer Hombre Elige mujer u hombre.»
+bmr-es-390-zoom200: outside the screen: .calc-seg «Mujer Hombre»
+bmr-es-390-zoom200: outside the screen: label «Hombre»
+bmr-es-390-zoom200: outside the screen: .calc-field «Peso (kg)Introduce un peso entre 35 y 25»
+bmr-es-390-zoom200: outside the screen: label «Peso (kg)»
+bmr-es-390-zoom200: outside the screen: input «»
+bmr-es-390-zoom200: outside the screen: .btn «Calcular»
+bmr-es-390-zoom200: outside the screen: .calc-how «¿Cómo se calcula?El detalle de la fórmul»
+bmr-es-390-zoom200: outside the screen: summary «¿Cómo se calcula?»
+bmr-es-390-zoom200: outside the screen: p «El detalle de la fórmula y un ejemplo re»
+bmr-es-390-zoom200: outside the screen: .calc-out «Tu resultado Rellena tus datos y pulsa C»
+bmr-es-390-zoom200: outside the screen: .dp-table «Tu díaFactorGET mujer (kcal)GET hombre (»
+bmr-es-390-zoom200: label squeezed into 4 lines: «Según tu edad, altura y peso»
+bmr-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+bmr-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-en-1280: tap target 32px high: summary «How is it worked out?»
+deficit-en-1280-max: tap target 32px high: summary «How is it worked out?»
+deficit-en-1280-min: tap target 32px high: summary «How is it worked out?»
+deficit-en-1440: tap target 32px high: summary «How is it worked out?»
+deficit-en-360: tap target 32px high: summary «How is it worked out?»
+deficit-en-360-max: tap target 32px high: summary «How is it worked out?»
+deficit-en-360-min: tap target 32px high: summary «How is it worked out?»
+deficit-en-390: tap target 32px high: summary «How is it worked out?»
+deficit-en-390-dark: tap target 32px high: summary «How is it worked out?»
+deficit-en-390-zoom200: page scrolls sideways (489 > 390)
+deficit-en-390-zoom200: outside the screen: .calc «Sex Woman Man Choose woman or man. Age (»
+deficit-en-390-zoom200: text cut off in its box: input «»
+deficit-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+deficit-en-390-zoom200: outside the screen: .dp-table «PaceLossDaily deficit (kcal)Time to lose»
+deficit-en-430: tap target 32px high: summary «How is it worked out?»
+deficit-en-768: tap target 32px high: summary «How is it worked out?»
+deficit-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-390-zoom200: page scrolls sideways (487 > 390)
+deficit-es-390-zoom200: text cut off in its box: input «»
+deficit-es-390-zoom200: label squeezed into 4 lines: «Lo que perderías por semana»
+deficit-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+deficit-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-en-1280: tap target 32px high: summary «How is it worked out?»
+ideal-en-1280-max: tap target 32px high: summary «How is it worked out?»
+ideal-en-1280-min: tap target 32px high: summary «How is it worked out?»
+ideal-en-1440: tap target 32px high: summary «How is it worked out?»
+ideal-en-360: tap target 32px high: summary «How is it worked out?»
+ideal-en-360-max: tap target 32px high: summary «How is it worked out?»
+ideal-en-360-min: tap target 32px high: summary «How is it worked out?»
+ideal-en-390: tap target 32px high: summary «How is it worked out?»
+ideal-en-390-dark: tap target 32px high: summary «How is it worked out?»
+ideal-en-390-zoom200: page scrolls sideways (489 > 390)
+ideal-en-390-zoom200: outside the screen: .calc «Height (cm)Enter a height between 130 an»
+ideal-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+ideal-en-390-zoom200: outside the screen: .dp-table «HeightHealthy weight rangeMiddle of the »
+ideal-en-430: tap target 32px high: summary «How is it worked out?»
+ideal-en-768: tap target 32px high: summary «How is it worked out?»
+ideal-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-390-zoom200: page scrolls sideways (487 > 390)
+ideal-es-390-zoom200: outside the screen: .calc «Altura (cm)Introduce una altura entre 13»
+ideal-es-390-zoom200: outside the screen: .calc-out «Tu resultado Rellena tus datos y pulsa C»
+ideal-es-390-zoom200: outside the screen: .dp-table «AlturaRango de peso saludableCentro del »
+ideal-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+ideal-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+macros-en-1280: tap target 32px high: summary «How is it worked out?»
+macros-en-1280-max: tap target 32px high: summary «How is it worked out?»
+macros-en-1280-min: tap target 32px high: summary «How is it worked out?»
+macros-en-1440: tap target 32px high: summary «How is it worked out?»
+macros-en-360: tap target 32px high: summary «How is it worked out?»
+macros-en-360-max: tap target 32px high: summary «How is it worked out?»
+macros-en-360-min: tap target 32px high: summary «How is it worked out?»
+macros-en-390: tap target 32px high: summary «How is it worked out?»
+macros-en-390-dark: tap target 32px high: summary «How is it worked out?»
+macros-en-390-zoom200: page scrolls sideways (489 > 390)
+macros-en-390-zoom200: outside the screen: .calc «Sex Woman Man Choose woman or man. Age (»
+macros-en-390-zoom200: text cut off in its box: input «»
+macros-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+macros-en-390-zoom200: outside the screen: .dp-table «GoalCalories a dayProteinFatCarbs Lose f»
+macros-en-430: tap target 32px high: summary «How is it worked out?»
+macros-en-768: tap target 32px high: summary «How is it worked out?»
+macros-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-390-zoom200: page scrolls sideways (487 > 390)
+macros-es-390-zoom200: text cut off in its box: input «»
+macros-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+macros-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+protein-en-1280: tap target 32px high: summary «How is it worked out?»
+protein-en-1280-max: tap target 32px high: summary «How is it worked out?»
+protein-en-1280-min: tap target 32px high: summary «How is it worked out?»
+protein-en-1440: tap target 32px high: summary «How is it worked out?»
+protein-en-360: tap target 32px high: summary «How is it worked out?»
+protein-en-360-max: tap target 32px high: summary «How is it worked out?»
+protein-en-360-min: tap target 32px high: summary «How is it worked out?»
+protein-en-390: tap target 32px high: summary «How is it worked out?»
+protein-en-390-dark: tap target 32px high: summary «How is it worked out?»
+protein-en-390-zoom200: page scrolls sideways (489 > 390)
+protein-en-390-zoom200: outside the screen: .calc «Height (cm)Enter a height between 130 an»
+protein-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+protein-en-390-zoom200: outside the screen: .dp-table «Your weightMinimum (0.83 g/kg)Maintain (»
+protein-en-430: tap target 32px high: summary «How is it worked out?»
+protein-en-768: tap target 32px high: summary «How is it worked out?»
+protein-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-390-zoom200: page scrolls sideways (487 > 390)
+protein-es-390-zoom200: label squeezed into 4 lines: «Rango para gente activa»
+protein-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+protein-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-en-1280: tap target 32px high: summary «How is it worked out?»
+tdee-en-1280-max: tap target 32px high: summary «How is it worked out?»
+tdee-en-1280-min: tap target 32px high: summary «How is it worked out?»
+tdee-en-1440: tap target 32px high: summary «How is it worked out?»
+tdee-en-360: tap target 32px high: summary «How is it worked out?»
+tdee-en-360-max: tap target 32px high: summary «How is it worked out?»
+tdee-en-360-min: tap target 32px high: summary «How is it worked out?»
+tdee-en-390: tap target 32px high: summary «How is it worked out?»
+tdee-en-390-dark: tap target 32px high: summary «How is it worked out?»
+tdee-en-390-zoom200: page scrolls sideways (489 > 390)
+tdee-en-390-zoom200: outside the screen: .calc «Sex Woman Man Choose woman or man. Age (»
+tdee-en-390-zoom200: outside the screen: .calc-grid «Sex Woman Man Choose woman or man. Age (»
+tdee-en-390-zoom200: outside the screen: .calc-field «Sex Woman Man Choose woman or man.»
+tdee-en-390-zoom200: outside the screen: .calc-seg «Woman Man»
+tdee-en-390-zoom200: outside the screen: label «Man»
+tdee-en-390-zoom200: outside the screen: .calc-field «Weight (kg)Enter a weight between 35 and»
+tdee-en-390-zoom200: outside the screen: label «Weight (kg)»
+tdee-en-390-zoom200: outside the screen: input «»
+tdee-en-390-zoom200: outside the screen: .calc-field «What is your day like? Choose one Sedent»
+tdee-en-390-zoom200: outside the screen: label «What is your day like?»
+tdee-en-390-zoom200: outside the screen: select «Choose one Sedentary: desk job, little m»
+tdee-en-390-zoom200: outside the screen: .btn «Calculate»
+tdee-en-390-zoom200: outside the screen: .calc-how «How is it worked out?Your daily burn is »
+tdee-en-390-zoom200: outside the screen: summary «How is it worked out?»
+tdee-en-390-zoom200: outside the screen: p «Your daily burn is your basal metabolism»
+tdee-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+tdee-en-390-zoom200: outside the screen: .calc-out-h «Your result»
+tdee-en-390-zoom200: outside the screen: .calc-res «1,918 kcal a day to keep your weight At »
+tdee-en-390-zoom200: outside the screen: .calc-main «1,918 kcal a day to keep your weight»
+tdee-en-390-zoom200: outside the screen: span «kcal a day to keep your weight»
+tdee-en-390-zoom200: outside the screen: .calc-rows «At rest (basal metabolism)1,395 kcal To »
+tdee-en-390-zoom200: outside the screen: .calc-row «At rest (basal metabolism)1,395 kcal»
+tdee-en-390-zoom200: outside the screen: b «1,395 kcal»
+tdee-en-390-zoom200: outside the screen: .calc-row «To lose 0.25 kg a week1,643 kcal»
+tdee-en-390-zoom200: outside the screen: b «1,643 kcal»
+tdee-en-390-zoom200: outside the screen: .calc-row «To lose 0.5 kg a week1,439 kcal»
+tdee-en-390-zoom200: outside the screen: b «1,439 kcal»
+tdee-en-390-zoom200: outside the screen: .calc-row «To gain 0.25 kg a week2,193 kcal»
+tdee-en-390-zoom200: outside the screen: b «2,193 kcal»
+tdee-en-390-zoom200: outside the screen: .calc-share «Copy a link with these numbersLink copie»
+tdee-en-390-zoom200: outside the screen: .dl-card «Want to hit your 1,918 kcal without weig»
+tdee-en-390-zoom200: outside the screen: .dp-table «AgeWoman, sittingWoman, on her feet some»
+tdee-en-430: tap target 32px high: summary «How is it worked out?»
+tdee-en-768: tap target 32px high: summary «How is it worked out?»
+tdee-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-390-zoom200: page scrolls sideways (487 > 390)
+tdee-es-390-zoom200: outside the screen: .calc «Sexo Mujer Hombre Elige mujer u hombre. »
+tdee-es-390-zoom200: outside the screen: .calc-grid «Sexo Mujer Hombre Elige mujer u hombre. »
+tdee-es-390-zoom200: outside the screen: .calc-field «Sexo Mujer Hombre Elige mujer u hombre.»
+tdee-es-390-zoom200: outside the screen: .calc-seg «Mujer Hombre»
+tdee-es-390-zoom200: outside the screen: label «Hombre»
+tdee-es-390-zoom200: outside the screen: .calc-field «Peso (kg)Introduce un peso entre 35 y 25»
+tdee-es-390-zoom200: outside the screen: label «Peso (kg)»
+tdee-es-390-zoom200: outside the screen: input «»
+tdee-es-390-zoom200: outside the screen: .calc-field «¿Cómo es tu día a día? Elige una opción »
+tdee-es-390-zoom200: outside the screen: label «¿Cómo es tu día a día?»
+tdee-es-390-zoom200: outside the screen: select «Elige una opción Sedentario: trabajo sen»
+tdee-es-390-zoom200: outside the screen: .btn «Calcular»
+tdee-es-390-zoom200: outside the screen: .calc-how «¿Cómo se calcula?Tu gasto diario es tu m»
+tdee-es-390-zoom200: outside the screen: summary «¿Cómo se calcula?»
+tdee-es-390-zoom200: outside the screen: p «Tu gasto diario es tu metabolismo basal »
+tdee-es-390-zoom200: outside the screen: .calc-out «Tu resultado Rellena tus datos y pulsa C»
+tdee-es-390-zoom200: outside the screen: .calc-out-h «Tu resultado»
+tdee-es-390-zoom200: outside the screen: .calc-res «1.918 kcal al día para mantener tu peso »
+tdee-es-390-zoom200: outside the screen: .calc-main «1.918 kcal al día para mantener tu peso»
+tdee-es-390-zoom200: outside the screen: span «kcal al día para mantener tu peso»
+tdee-es-390-zoom200: outside the screen: .calc-rows «En reposo (metabolismo basal)1.395 kcal »
+tdee-es-390-zoom200: outside the screen: .calc-row «En reposo (metabolismo basal)1.395 kcal»
+tdee-es-390-zoom200: outside the screen: b «1.395 kcal»
+tdee-es-390-zoom200: outside the screen: .calc-row «Para perder 0,25 kg por semana1.643 kcal»
+tdee-es-390-zoom200: outside the screen: b «1.643 kcal»
+tdee-es-390-zoom200: outside the screen: .calc-row «Para perder 0,5 kg por semana1.439 kcal»
+tdee-es-390-zoom200: outside the screen: b «1.439 kcal»
+tdee-es-390-zoom200: outside the screen: .calc-row «Para ganar 0,25 kg por semana2.193 kcal»
+tdee-es-390-zoom200: outside the screen: b «2.193 kcal»
+tdee-es-390-zoom200: outside the screen: .calc-share «Copiar enlace con estos datosEnlace copi»
+tdee-es-390-zoom200: outside the screen: .dl-card «¿Quieres cumplir tus 1.918 kcal sin pesa»
+tdee-es-390-zoom200: outside the screen: .dl-h «¿Quieres cumplir tus 1.918 kcal sin pesa»
+tdee-es-390-zoom200: outside the screen: .dl-sub «Haz una foto y Fotocal cuenta las calorí»
+tdee-es-390-zoom200: outside the screen: .offer-keep «Si te suscribes antes del 31 de diciembr»
+tdee-es-390-zoom200: outside the screen: .btn «Descárgala gratis»
+tdee-es-390-zoom200: outside the screen: span «Descárgala gratis»
+tdee-es-390-zoom200: outside the screen: .dl-trust «Gratis · sin tarjeta · Android»
+tdee-es-390-zoom200: outside the screen: .dl-limits «Plan gratis: 2 escaneos con IA al día, 1»
+tdee-es-390-zoom200: outside the screen: .dp-table «EdadMujer, sentadaMujer, de pie a ratosH»
+tdee-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+tdee-es-768: tap target 32px high: summary «¿Cómo se calcula?»
+water-en-1280: tap target 32px high: summary «How is it worked out?»
+water-en-1280-max: tap target 32px high: summary «How is it worked out?»
+water-en-1280-min: tap target 32px high: summary «How is it worked out?»
+water-en-1440: tap target 32px high: summary «How is it worked out?»
+water-en-360: tap target 32px high: summary «How is it worked out?»
+water-en-360-max: tap target 32px high: summary «How is it worked out?»
+water-en-360-min: tap target 32px high: summary «How is it worked out?»
+water-en-390: tap target 32px high: summary «How is it worked out?»
+water-en-390-dark: tap target 32px high: summary «How is it worked out?»
+water-en-390-zoom200: page scrolls sideways (489 > 390)
+water-en-390-zoom200: outside the screen: .calc «Sex Woman Man Choose woman or man. Age (»
+water-en-390-zoom200: text cut off in its box: input «»
+water-en-390-zoom200: outside the screen: .calc-out «Your result Fill in your details and tap»
+water-en-390-zoom200: outside the screen: .dp-table «Your weightWomanMan 50 kg1.6 litres2.0 l»
+water-en-390-zoom200: label squeezed into 4 lines: «Based on your daily calories»
+water-en-430: tap target 32px high: summary «How is it worked out?»
+water-en-768: tap target 32px high: summary «How is it worked out?»
+water-es-1280: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-1280-max: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-1280-min: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-1440: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-360: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-360-max: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-360-min: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-390: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-390-dark: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-390-zoom200: page scrolls sideways (487 > 390)
+water-es-390-zoom200: text cut off in its box: input «»
+water-es-390-zoom200: label squeezed into 4 lines: «Según tus calorías del día»
+water-es-430: tap target 32px high: summary «¿Cómo se calcula?»
+water-es-768: tap target 32px high: summary «¿Cómo se calcula?»

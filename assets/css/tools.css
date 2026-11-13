@@ -7,10 +7,10 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── figure cards under the lead ─── */
-.dp-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin: 1.4rem 0 1.8rem; }
+.dp-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: 1.4rem 0 1.8rem; }
 .dp-kpi { padding: .95rem 1.05rem; border-radius: var(--r-md); background: var(--surface); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); }
 .dp-kpi b { display: block; font-family: var(--font-display); font-size: 1.65rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.05; color: var(--text); }
-.dp-kpi b small { font-family: var(--font-body); font-size: .8rem; font-weight: 700; letter-spacing: 0; color: var(--muted); margin-left: .15rem; }
+.dp-kpi b small { font-family: var(--font-body); font-size: .8rem; font-weight: 700; letter-spacing: 0; color: var(--muted); margin-left: .15rem; display: inline-block; }
 .dp-kpi span { display: block; font-size: .8rem; color: var(--muted); margin-top: .35rem; line-height: 1.35; }
 .dp-kpi-main { background: var(--grad-wash); border-color: var(--border-pink); }
 .dp-kpi-main b { color: var(--brand-text); }
@@ -169,7 +169,7 @@
 .calc-mini-more { margin: .7rem 0 0; font-weight: 700; }
 .calc-mini-more a { color: var(--brand-text); }
 .calc-cards-h { font-family: var(--font-display); font-size: clamp(1.35rem, 4vw, 1.6rem); font-weight: 600; margin: 0 0 .2rem; color: var(--text); }
-.calc-cards { list-style: none; margin: .8rem 0 2rem; padding: 0; display: grid; gap: .9rem; grid-template-columns: 1fr; }
+.calc-cards { list-style: none; margin: .8rem 0 2rem; padding: 0; display: grid; gap: .9rem; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 600px) { .calc-cards { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1000px) { .calc-cards { grid-template-columns: repeat(4, 1fr); } }
 .calc-card { display: flex; flex-direction: column; gap: .45rem; height: 100%; padding: 1.1rem 1.1rem 1rem; border-radius: var(--r-xl); background: var(--surface); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); color: inherit; text-decoration: none; transition: transform .2s ease, border-color .2s ease; }

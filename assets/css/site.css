@@ -1608,3 +1608,18 @@ picture { display: contents; }
 .hero .offer-badge, .sec-ink .offer-badge { color: var(--on-ink); background: rgba(var(--pink-rgb), .22); border-color: rgba(var(--pink-rgb), .6); }
 .offer-keep { margin: .45rem 0 0; font-size: .92rem; font-weight: 600; color: var(--brand-text); }
 .hero .offer-keep, .sec-ink .offer-keep { color: var(--on-ink); }
+
+/* ── Header at very large text (200 %) on a phone ─────────────────────
+   The logo, language switch, download pill and menu button are all fixed
+   size, so with doubled text they added up to more than a phone is wide
+   and the whole page scrolled sideways. Nothing here changes the header at
+   ordinary text sizes: the wordmark simply gives way first (it drops out
+   of the one-line logo box when there is no room for it, the mark stays),
+   and the gaps stop growing with the text. */
+.nav { gap: min(1rem, 16px); }
+.nav-actions { gap: min(.5rem, 8px); min-width: 0; }
+.nav-logo { flex: 0 1 auto; min-width: 32px; flex-wrap: wrap; align-content: flex-start; height: max(32px, 1.25em); overflow: hidden; }
+.nav-logo > span { line-height: 1.25; }
+.nav-logo::before { content: ""; width: 0; height: max(32px, 1.25em); margin-right: -.55rem; }   /* keeps the mark centred when the wordmark has dropped out */
+.fc-topbar { gap: min(.6rem, 10px); padding-inline: min(.8rem, 13px) min(.55rem, 9px); }
+.fc-topbar-cta { flex: 0 1 auto; min-width: 0; padding-inline: min(.9rem, 14px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

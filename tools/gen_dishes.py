@@ -54,6 +54,36 @@ CALCS = {
 
 
 # ── the app's arithmetic ────────────────────────────────────────────
+
+# "Related foods": five other dish pages per dish page (seo-google-fixes,
+# 2026-11). Until now every page linked the same first four dishes, so four
+# pages had 270 links each and most had four, and Search Console listed 42 of
+# them as "discovered, not indexed". Now: the dishes this page compares itself
+# with first, then its neighbours in the same food group (a ring, so every
+# dish is linked as often as it links), then the next dishes in the list.
+_GROUP_OF = json.load(open(os.path.join(ROOT, "tools", "dishes", "en.json"), encoding="utf-8")).get("group_of", {})
+
+
+def related(d, k=5):
+    ready = [x for x in DISHES if x.get("status") == "ready"]
+    by = {x["slug"]: x for x in ready}
+    if d["slug"] not in by:
+        return ready[:k]
+    picks = [c for c in d.get("compare", []) if c in by and c != d["slug"]][:2]
+
+    def ring(pool):
+        if d["slug"] not in pool:
+            return
+        i = pool.index(d["slug"])
+        for j in range(1, len(pool)):
+            c = pool[(i + j) % len(pool)]
+            if len(picks) < k and c not in picks:
+                picks.append(c)
+    slugs = [x["slug"] for x in ready]
+    ring([s for s in slugs if _GROUP_OF.get(s) == _GROUP_OF.get(d["slug"])])
+    ring(slugs)
+    return [by[c] for c in picks]
+
 def r1(v):
     """Math.round(v * 10) / 10 — the app's rounding, half up."""
     return None if v is None else math.floor(v * 10 + 0.5) / 10
@@ -556,8 +586,7 @@ def dish_page(d, ready_by_app):
 
     # related
     o('      <nav class="dp-related reveal" aria-label="Páginas relacionadas">\n        <h2>Seguir por aquí</h2>\n        <div class="post-nav">')
-    others = [x for x in DISHES if x.get("status") == "ready" and x["slug"] != d["slug"]][:4]
-    for x in others:
+    for x in related(d):
         o('          <a class="post-nav-item" href="../%s/"><small>Otro plato</small><strong>Calorías %s %s</strong></a>' % (x["slug"], de(x["article"]), esc(x["name"])))
     o('          <a class="post-nav-item" href="../"><small>Tabla</small><strong>Calorías de los platos españoles, por ración y por 100 g</strong></a>')
     # every dish page links the daily-calories calculator (tools-seo, 2026-11), plus its own pick

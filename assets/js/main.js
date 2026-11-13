@@ -455,4 +455,37 @@
     draw();
   }
 
+  /* ═══════════ Language hint ═══════════
+     Nobody is ever sent to the other language automatically (Google's own
+     advice: a redirect by browser language hides one tree from crawlers and
+     testing tools). A visitor whose browser is set to the OTHER language
+     gets a small bar offering this same page in it, until they use it or
+     close it. Fixed to the bottom, so nothing on the page moves. */
+  (function () {
+    try {
+      if (window.top !== window) return;                              /* embedded widget */
+      if (/bot|crawl|spider|slurp|inspectiontool|google|lighthouse|headless|preview|facebookexternalhit|embedly/i.test(navigator.userAgent)) return;
+      if (localStorage.getItem("fotocal-lang-hint")) return;
+      var w = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+      var want = w.indexOf("en") === 0 ? "en" : w.indexOf("es") === 0 ? "es" : "";
+      if (!want || want === PAGE_LANG) return;
+      var twin = document.querySelector('link[rel="alternate"][hreflang="' + want + '"]');
+      if (!twin) return;
+      var T = want === "en"
+        ? { say: "This page is also in English.", go: "View in English", close: "Close" }
+        : { say: "Esta página también está en español.", go: "Ver en español", close: "Cerrar" };
+      var bar = document.createElement("div");
+      bar.className = "lang-hint"; bar.lang = want;
+      bar.setAttribute("role", "region"); bar.setAttribute("aria-label", T.go);
+      var txt = document.createElement("span"); txt.textContent = T.say;
+      var a = document.createElement("a"); a.href = twin.href; a.hreflang = want; a.textContent = T.go;
+      var x = document.createElement("button"); x.type = "button"; x.setAttribute("aria-label", T.close); x.textContent = "×";
+      var done = function () { try { localStorage.setItem("fotocal-lang-hint", "1"); } catch (e) {} };
+      a.addEventListener("click", done);
+      x.addEventListener("click", function () { done(); bar.remove(); });
+      bar.appendChild(txt); bar.appendChild(a); bar.appendChild(x);
+      document.body.appendChild(bar);
+    } catch (e) {}
+  })();
+
 })();

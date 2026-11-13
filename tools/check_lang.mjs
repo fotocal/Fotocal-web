@@ -55,6 +55,35 @@ for (const path of PAGES) {
   if (got !== twin(path)) bad(`${path}: phone menu went to ${got}, expected ${twin(path)}`);
 }
 await m.close();
+// No automatic language redirect (seo-google-fixes, 2026-11): a first visit
+// with the browser in the OTHER language stays on the page it asked for and
+// is offered the twin in a bar that can be closed for good. Google's testing
+// tool and Googlebot never see the bar.
+for (const [locale, path, want] of [['en-GB', '/calculadoras/macros/', 'en'], ['es-ES', '/en/calorias/', 'es'], ['en-US', '/', 'en']]) {
+  const c = await b.newContext({ locale, userAgent: UA });
+  const p = await c.newPage();
+  await p.goto(base + path); await p.waitForTimeout(400);
+  n++; if (new URL(p.url()).pathname !== path) bad(`${path} (${locale}): redirected to ${p.url()}`);
+  const bar = p.locator('.lang-hint');
+  n++; if ((await bar.count()) !== 1) { bad(`${path} (${locale}): no language hint bar`); await c.close(); continue; }
+  const href = new URL(await bar.locator('a').getAttribute('href')).pathname;
+  const twin = want === 'en' ? '/en' + path : path.slice(3);
+  n++; if (href !== twin) bad(`${path}: hint links ${href}, expected ${twin}`);
+  n++; if (await p.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth)) bad(`${path}: hint bar causes sideways scroll`);
+  await bar.locator('button').click();
+  await p.reload(); await p.waitForTimeout(300);
+  n++; if (await p.locator('.lang-hint').count()) bad(`${path}: hint bar came back after closing`);
+  await c.close();
+}
+for (const [ua, locale, path] of [['Mozilla/5.0 (compatible; Google-InspectionTool/1.0;)', 'en-US', '/calculadoras/macros/'], ['Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', 'en-US', '/'], ['Mozilla/5.0 (X11; Linux x86_64) Chrome/130.0 Safari/537.36', 'es-ES', '/calorias/']]) {
+  const c = await b.newContext({ locale, userAgent: ua });
+  const p = await c.newPage();
+  await p.goto(base + path); await p.waitForTimeout(400);
+  n++; if (new URL(p.url()).pathname !== path) bad(`${path} as ${ua.slice(25, 50)}: redirected`);
+  n++; if (await p.locator('.lang-hint').count()) bad(`${path} as ${ua.slice(25, 50)} (${locale}): hint bar shown`);
+  await c.close();
+}
+
 await b.close();
 console.log(fails ? `language switcher: ${fails} problem(s) of ${n}` : `language switcher: OK, ${n} checks (desktop both trees, phone menu)`);
 process.exit(fails ? 1 : 0);

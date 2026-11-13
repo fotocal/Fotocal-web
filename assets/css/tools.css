@@ -226,3 +226,41 @@
 .embed-credit a { color: var(--brand-text); }
 .post-body .compare-wrap { margin: 1rem 0 .6rem; }
 .page-embed .calc-out { margin-top: .8rem; }
+
+/* ── calculator results: one shared, responsive layout (Nov 2026) ─────
+   The download card is a two-column grid (logo | headline) whose other
+   children span both columns; the offer badge and its promise did not, so
+   they fell into the 60px logo column and wrapped one word per line. */
+.dl-card .offer-badge, .dl-card .offer-keep { grid-column: 1 / -1; justify-self: start; }
+.dl-card .offer-badge { margin: 0 0 .45rem; }
+.dl-card .offer-keep { margin: 0 0 .85rem; }
+/* numbers never break: the figure and its unit stay on one line, and the
+   big figure shrinks with the screen instead of wrapping */
+.calc-main b { white-space: nowrap; font-size: clamp(1.9rem, 10vw, 3rem); }
+.calc-macro b, .calc-row b, .dl-h b { white-space: nowrap; }
+/* text may wrap anywhere it has to, numbers may not; a row drops its
+   number under the label when both no longer fit (large text, long labels) */
+.calc-out, .calc-res, .calc-rows, .calc-macros { min-width: 0; }
+.calc-row { flex-wrap: wrap; row-gap: .1rem; }
+.calc-row > span { flex: 1 1 9em; min-width: 0; overflow-wrap: anywhere; }
+.calc-row > b { margin-left: auto; }
+.calc-main span, .calc-macro > span, .calc-warn, .calc-cat, .calc-field label, .calc-field legend, .calc-how p, .dl-sub, .dl-limits { overflow-wrap: anywhere; }
+.calc-share { max-width: 100%; white-space: normal; text-align: center; line-height: 1.3; }
+/* 44px tap targets */
+.calc-how summary { min-height: 44px; }
+/* tables in the explanation keep to their own scroll area, with a soft
+   edge that shows there is more to the side */
+.calc-text .dp-table-wrap { max-width: 100%; background:
+    linear-gradient(to right, var(--surface) 30%, rgba(var(--white-rgb), 0)) left center / 2.2rem 100% no-repeat local,
+    linear-gradient(to left, var(--surface) 30%, rgba(var(--white-rgb), 0)) right center / 2.2rem 100% no-repeat local,
+    linear-gradient(to right, rgba(var(--ink-rgb), .12), rgba(var(--ink-rgb), 0)) left center / .8rem 100% no-repeat scroll,
+    linear-gradient(to left, rgba(var(--ink-rgb), .12), rgba(var(--ink-rgb), 0)) right center / .8rem 100% no-repeat scroll,
+    var(--surface); }
+.calc-text .dp-table { background: none; }
+/* laptop: the result card keeps a comfortable measure and the macro cards sit side by side */
+@media (min-width: 1000px) { .calc-out { max-width: 640px; } .calc-macros { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* very large text (browser text size 200%): the button label may wrap, the
+   fields keep their text visible, and side-by-side fields stack */
+.calc-tool .dl-btn { white-space: normal; text-align: center; line-height: 1.25; }
+.calc-field input, .calc-field select { padding-inline: min(.75rem, 12px); }
+@media (max-width: 21em) { .calc-grid > .calc-field, .calc-grid > .calc-field.third { grid-column: 1 / -1; } }

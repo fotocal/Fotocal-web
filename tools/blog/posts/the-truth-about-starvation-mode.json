@@ -22,10 +22,12 @@
  "caution": true,
  "seo": {
   "es": {
-   "title": "Modo supervivencia del metabolismo: qué hay de verdad"
+   "title": "Modo supervivencia del metabolismo: qué hay de verdad",
+   "desc": "¿Existe el modo supervivencia del metabolismo? La ciencia de la adaptación metabólica, los mitos desmontados y qué pasa de verdad cuando comes poco."
   },
   "en": {
-   "title": "Starvation Mode Myth: What Metabolic Adaptation Really Is"
+   "title": "Starvation Mode Myth: What Metabolic Adaptation Really Is",
+   "desc": "The starvation mode myth: eating too little does change your metabolism, but not the way the forums say. What metabolic adaptation actually is."
   }
  }
 }

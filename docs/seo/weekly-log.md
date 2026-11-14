@@ -26,3 +26,4 @@ One line per Monday, newest first. Written by the weekly routine (`tools/seo/RUN
 | 2026-11-14 | — | — | — | — | v3 PART 11: 14 Spanish posts retitled so the headline and title carry the primary keyword (see onpage-changes.csv). No URL or body change. |
 | 2026-11-14 | — | — | — | — | v3 PART 12: the other 14 Spanish posts retitled the same way. All Spanish posts now pass the keyword lint. |
 | 2026-11-14 | — | — | — | — | v3 PART 13: 19 English posts retitled so the headline and title carry the English primary keyword. No English post has an on-page note left. |
+| 2026-11-14 | — | — | — | — | v3 PART 14: 35 blog meta descriptions rewritten so the first sentence carries the primary keyword (17 ES, 18 EN); English table page retitled «Food calorie chart». Two notes left on purpose: the English home and features titles, kept as decided in PART 6. |

@@ -22,10 +22,12 @@
  "caution": true,
  "seo": {
   "es": {
-   "title": "¿Las dietas détox funcionan? Lo que pasa en realidad"
+   "title": "¿Las dietas détox funcionan? Lo que pasa en realidad",
+   "desc": "¿Las dietas détox funcionan? Los zumos y tés depurativos prometen eliminar toxinas y derretir grasa. Lo que pasa en realidad: tu hígado ya lo hace."
   },
   "en": {
-   "title": "Do Detox Diets Work? The Truth About Cleanses"
+   "title": "Do Detox Diets Work? The Truth About Cleanses",
+   "desc": "Do detox diets work? Juice cleanses and detox teas promise to flush toxins and melt fat. What actually happens: your liver already does the job."
   }
  }
 }

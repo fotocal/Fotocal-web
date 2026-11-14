@@ -21,11 +21,12 @@
  },
  "seo": {
   "es": {
-   "desc": "El número de la báscula oscila por decenas de razones que nada tienen que ver con la grasa. Qué mide de verdad y cómo seguir tu progreso sin agobiarte.",
+   "desc": "La báscula no baja pero adelgazo: el peso oscila por razones que nada tienen que ver con la grasa. Qué mide de verdad y cómo seguir tu progreso.",
    "title": "La báscula no baja pero adelgazo: por qué pasa"
   },
   "en": {
-   "title": "Why the Scale Is Not the Whole Story"
+   "title": "Why the Scale Is Not the Whole Story",
+   "desc": "Why the scale is not the whole story: weight swings for dozens of reasons that have nothing to do with fat. How to measure progress calmly."
   }
  }
 }

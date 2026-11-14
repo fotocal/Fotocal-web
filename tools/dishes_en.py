@@ -312,7 +312,7 @@ SLOTS_EN = {"desayuno": "Breakfasts", "comida": "Lunches", "merienda": "Afternoo
 
 
 def table(ready_by_app):
-    title = "Calorie table of Spanish foods and dishes"
+    title = "Food calorie chart: Spanish foods and dishes"
     desc = ("Printable calorie table of the %d Spanish foods and dishes in the Fotocal app: serving, kcal per serving and per 100 g, protein, carbs and fat." % len(G.HAND))
     title += " — Fotocal"
     assert len(title) <= G.TITLE_MAX and len(desc) <= 155, (len(title), len(desc))
@@ -326,7 +326,7 @@ def table(ready_by_app):
     ])
     o = ['\n<main id="main">\n  <article class="post dp dp-hub">\n    <header class="post-head">\n      <div class="container-narrow">',
          '        <nav class="post-crumbs reveal" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span><a href="../">Calories in Spanish dishes</a><span class="sep" aria-hidden="true">/</span><a href="./" aria-current="page">Calorie table</a></nav>',
-         '        <h1 class="post-title reveal">Calorie table of Spanish foods and dishes</h1>',
+         '        <h1 class="post-title reveal">Food calorie chart of Spanish foods and dishes</h1>',
          '        <p class="post-lead reveal">The %d foods and dishes in the Fotocal database in one table, to look up or print: the serving as served, its calories, per 100 g to compare, and protein, carbs and fat. Grouped by the time of day the app suggests them.</p>' % len(G.HAND),
          '        <p class="tbl-print reveal"><button type="button" class="btn btn-ghost" onclick="window.print()">Print the table</button></p>',
          '      </div>\n    </header>\n    <div class="container-narrow">', '      <div class="post-body reveal">',

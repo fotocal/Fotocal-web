@@ -59,10 +59,12 @@
  },
  "seo": {
   "es": {
-   "title": "¿Beber agua adelgaza? Cuánta necesitas de verdad"
+   "title": "¿Beber agua adelgaza? Cuánta necesitas de verdad",
+   "desc": "¿Beber agua adelgaza? Por sí sola no, pero ayuda con el apetito y sustituye calorías líquidas. Cuánta necesitas al día según la referencia europea."
   },
   "en": {
-   "title": "Does Drinking Water Help Weight Loss? How Much You Need"
+   "title": "Does Drinking Water Help Weight Loss? How Much You Need",
+   "desc": "Does drinking water help weight loss? Not by itself, but it curbs appetite and replaces liquid calories. How much you need, by the European reference."
   }
  }
 }

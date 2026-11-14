@@ -21,11 +21,12 @@
  },
  "seo": {
   "es": {
-   "desc": "Llevamos décadas culpando a los carbohidratos del aumento de peso. Lo que hacen en realidad, cuáles conviene priorizar y por qué no merecen tan mala fama.",
+   "desc": "¿Los carbohidratos engordan? Por sí solos no: engorda el exceso de calorías. Qué hacen en realidad, cuáles priorizar y por qué no merecen tan mala fama.",
    "title": "¿Los carbohidratos engordan? Lo que hacen en realidad"
   },
   "en": {
-   "title": "Are Carbs Bad for Weight Loss? What They Actually Do"
+   "title": "Are Carbs Bad for Weight Loss? What They Actually Do",
+   "desc": "Are carbs bad for weight loss? Not by themselves: excess calories are. What carbohydrates actually do, which to favour, and why the fear is overdone."
   }
  }
 }

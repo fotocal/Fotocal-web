@@ -21,11 +21,12 @@
  },
  "seo": {
   "es": {
-   "desc": "La grasa no engorda por defecto: es esencial. Cuánta necesitas al día, en qué se diferencian los tipos y cómo elegir con criterio sin temerle al aceite.",
+   "desc": "Cuánta grasa comer al día: no engorda por defecto, es esencial. Cuánta necesitas, en qué se diferencian los tipos y cómo elegir sin temer al aceite.",
    "title": "Cuánta grasa comer al día y de qué tipo"
   },
   "en": {
-   "title": "How Much Fat per Day, and Which Kinds to Choose"
+   "title": "How Much Fat per Day, and Which Kinds to Choose",
+   "desc": "How much fat per day? Fat isn't fattening by default: it's essential. How much you need, how the types differ, and how to choose wisely."
   }
  }
 }

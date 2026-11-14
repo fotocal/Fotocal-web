@@ -18,6 +18,21 @@ Claude owns the plan from today. "Done" means it is live on getfotocal.com or wr
 | 9 | Conversion | Done | UTM per page type on every Play link, the phone Play button and the download card. The A/B copy variants are written (`conversion.md`) but not running: the site has no testing tool, and installs by `utm_medium` in Play Console are the measure. |
 | 10 | Measurement | Running | `kpis.md` has the full top-30 keyword table, `plan-6-months.md`, `weekly-log.md` and `monthly-report.md`. The baseline waits for the first Search Console export (assistant, Mon 7 Dec). |
 
+## v3 on-page rollout (master prompt v3, section C)
+
+Last updated: 14 November 2026.
+
+| PART | What | Status |
+|---|---|---|
+| 0–2 | Inventory, keyword map (one primary per URL), on-page rules and lint | Done (9 Nov) |
+| 3–5 | Striking-distance pages, calculators batch 1 and 2 | Done (9–10 Nov) |
+| 6–7 | `/comparativa/` hub, features, EN home H1, English dish titles | Done (10 Nov) |
+| 8–10 | All 58 Spanish dish pages: "por 100 g y por ración" sections and FAQ; hub and table top-10 lists | Done (11–14 Nov) |
+| 11 | Blog, Spanish batch 1: 14 posts, headline and title carry the primary keyword | Done (14 Nov) |
+<!-- v3-rows -->
+
+Also live outside the numbered PARTs: yearly offer from `tools/pricing.json` (11 Nov), calculator result layout, header at 200 % text, Search Console fixes (no language redirect, schema dates with time zone, inlined home CSS, balanced related-dish links), five strengthened posts (13 Nov).
+
 ## Files in `docs/seo/`
 
 | File | What it is |

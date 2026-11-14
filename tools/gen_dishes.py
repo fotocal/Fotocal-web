@@ -648,6 +648,15 @@ def table_page(ready_by_app):
             o('        <tr><td>%s</td><td>%s, %s g</td><td class="hl">%s</td><td>%s</td><td>%s g</td><td>%s g</td><td>%s g</td></tr>'
               % (name, esc(f["serving_label"]), n(f["serving_g"]), n(f["kcal"]), n(f["per100"]), n(f["protein"]), n(f["carbs"]), n(f["fat"])))
         o('      </tbody></table></div>')
+    o('      <h2 id="mas-calorias">Los 10 alimentos con más calorías por 100 g</h2>')
+    o('      <p>De las %d entradas de la tabla, estas son las más densas. Casi todas tienen en común la grasa (aceite, frutos secos, mantequilla de la bollería) y muy poca agua. Que encabecen la lista no las hace peores: se toman en raciones pequeñas, y por eso al lado va lo que suma la ración real.</p>' % len(HAND))
+    o(top_list(list(HAND), "per100", ready_by_app, "../"))
+    o('      <h2 id="mas-calorias-racion">Los 10 con más calorías por ración</h2>')
+    o('      <p>Por ración el orden cambia: mandan los platos grandes, no los alimentos densos. Es la lista que importa para el día a día, porque es lo que de verdad acaba en el plato.</p>')
+    o(top_list(list(HAND), "kcal", ready_by_app, "../"))
+    o('      <h2 id="menos-calorias">Los 10 con menos calorías por 100 g</h2>')
+    o('      <p>En el otro extremo están las bebidas sin azúcar, los caldos, las sopas de verdura y la fruta con mucha agua.</p>')
+    o(top_list(list(HAND), "per100", ready_by_app, "../", reverse=False))
     o('      <h2 id="como-usar">Cómo usar la tabla</h2>')
     o('      <p>Para el día a día, mira la columna de la ración: es lo que apuntas si te comes el plato. Para comparar dos platos, mira la de 100 g. Y para una ración distinta de la de la tabla, pesa la tuya y multiplica: gramos por kcal de 100 g, entre 100. Las bebidas con alcohol llevan parte de su energía en el alcohol, que no aparece en los tres macros; su página lo desglosa.</p>')
     o('      <h2 id="fuentes">De dónde salen las cifras</h2>')
@@ -662,6 +671,32 @@ def table_page(ready_by_app):
     o('    </div>\n  </article>\n</main>')
     o(foot(2))
     return "\n".join(out)
+
+def top_list(ids, key, ready_by_app, href, k=10, reverse=True, names=None):
+    """A ranked list from the app data ("los 10 alimentos con más calorías"),
+    computed, so it can never drift from the tables. One entry per name: the
+    app repeats some foods per meal of the day."""
+    seen, rows = set(), []
+    for i in ids:
+        nm = (names or {}).get(i) or HAND[i]["name_es"]
+        f = figures(i)
+        same = (f["kcal"], f["serving_g"], f["per100"], f["protein"])      # "Palmera" and "Palmera de chocolate" are one row
+        if nm in seen or same in seen:
+            continue
+        seen.update((nm, same))
+        rows.append((f, i, nm))
+    rows.sort(key=lambda t: (t[0][key], t[2]), reverse=reverse)
+    out = ["      <ol>"]
+    for f, i, nm in rows[:k]:
+        slug = ready_by_app.get(i)
+        name = ('<a href="%s%s/">%s</a>' % (href, slug, esc(nm))) if slug else esc(nm)
+        if key == "per100":
+            out.append("        <li>%s: %s kcal por 100 g (%s kcal la ración de %s g)</li>" % (name, n(f["per100"]), n(f["kcal"]), n(f["serving_g"])))
+        else:
+            out.append("        <li>%s: %s kcal la ración de %s g (%s kcal por 100 g)</li>" % (name, n(f["kcal"]), n(f["serving_g"]), n(f["per100"])))
+    out.append("      </ol>")
+    return "\n".join(out)
+
 
 # ── the hub ──────────────────────────────────────────────────────────
 def hub_answer(ready, lang):
@@ -720,6 +755,14 @@ def hub_page(ready):
     o('      <ul><li>El plato de cuchara no es el problema: lentejas, garbanzos o un cocido razonable quedan en el rango de una comida normal. Lo que dispara la cuenta es el embutido que lleva dentro y el pan de al lado.</li>'
       '<li>Lo frito pesa poco y suma mucho: cuatro croquetas o una ración de churros se acercan a un plato de lentejas.</li>'
       '<li>Las sopas frías son casi gratis: un bol de gazpacho tiene menos calorías que una tostada con aceite.</li></ul>')
+    rb = {d["app_id"]: d["slug"] for d in ready}
+    o('      <h2 id="mas-calorias">Los 10 platos con más calorías por ración</h2>')
+    o('      <p>De los %d platos con página propia, estos son los que más suman tal como se sirven. Todos rondan o pasan de las 500 kcal: caben en una comida principal, pero conviene saber que lo son.</p>' % len(ready))
+    nms = {d["app_id"]: d["name"][0].upper() + d["name"][1:] for d in ready}
+    o(top_list([d["app_id"] for d in ready], "kcal", rb, "", names=nms))
+    o('      <h2 id="mas-calorias-100g">Los 10 con más calorías por 100 g</h2>')
+    o('      <p>Por 100 g el orden es otro: suben los alimentos con mucha grasa y poca agua, que se toman en raciones pequeñas.</p>')
+    o(top_list([d["app_id"] for d in ready], "per100", rb, "", names=nms))
     o('      <p>¿Quieres toda la base de datos de la app en una sola tabla, para consultar o imprimir? Está en la <a href="tabla-de-calorias/">tabla de calorías de alimentos y platos españoles</a>, con las %d entradas agrupadas por momento del día.</p>' % len(HAND))
     o('      <h2>Para seguir</h2>')
     o('      <p>Si la pregunta de fondo es cuánto deberías comer tú, y no cuánto tiene el plato, empieza por <a href="../calculadoras/">las ocho calculadoras</a>: la de <a href="../calculadoras/calorias-diarias/">calorías diarias</a> y la de <a href="../calculadoras/deficit-calorico/">déficit calórico</a> son las dos primeras.</p>')

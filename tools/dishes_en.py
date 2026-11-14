@@ -276,6 +276,22 @@ def hub(ready):
     o.append('      <p class="dp-table-note">Serving: the one the Fotocal app uses for each dish, in grams as served. Figures come from public databases (USDA FoodData Central and CIQUAL 2025) added up ingredient by ingredient; each page says exactly which rows.</p>')
     o.append('      <h2>How to read the table</h2>')
     o.append('      <p>The serving column is the one that matters day to day: it is what you log if you eat the dish. Per 100 g is for comparing dishes and for working out a different amount: weigh what you have, multiply by the figure and divide by 100.</p>')
+    def top_en(key, k=10):
+        rows = sorted(((G.figures(d["app_id"]), d) for d in ready), key=lambda t: (t[0][key], t[1]["slug"]), reverse=True)[:k]
+        out = ["      <ol>"]
+        for f, d in rows:
+            nm = '<a href="%s/">%s</a>' % (d["slug"], G.esc(display(d)))
+            if key == "kcal":
+                out.append("        <li>%s: %s kcal per serving of %s g (%s kcal per 100 g)</li>" % (nm, ne(f["kcal"]), ne(f["serving_g"]), ne(f["per100"])))
+            else:
+                out.append("        <li>%s: %s kcal per 100 g (%s kcal per serving of %s g)</li>" % (nm, ne(f["per100"]), ne(f["kcal"]), ne(f["serving_g"])))
+        return "\n".join(out + ["      </ol>"])
+    o.append('      <h2 id="most-calories">The 10 Spanish dishes with the most calories per serving</h2>')
+    o.append('      <p>Of the %d dishes with their own page, these add up to the most as served. All sit around or above 500 kcal: they fit in a main meal, but it helps to know that is what they are.</p>' % len(ready))
+    o.append(top_en("kcal"))
+    o.append('      <h2 id="most-calories-100g">The 10 with the most calories per 100 g</h2>')
+    o.append('      <p>Per 100 g the order changes: foods with a lot of fat and little water move up, and they are eaten in small servings.</p>')
+    o.append(top_en("per100"))
     o.append('      <p>The whole app database, %d foods and dishes, is in the <a href="tabla-de-calorias/">full calorie table</a>. To work out how much you should eat, try the <a href="../calculadoras/">eight calculators</a>, starting with <a href="../calculadoras/calorias-diarias/">daily calories</a>.</p>' % len(G.HAND))
     o.append('      </div>')
     o.append(G.download_card("en", "Want the calories of your own plate, not the average?",

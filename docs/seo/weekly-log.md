@@ -25,3 +25,4 @@ One line per Monday, newest first. Written by the weekly routine (`tools/seo/RUN
 | 2026-11-14 (v3 PART 10) | — | — | — | 58 dish pages | Last 28 Spanish dish pages: a "por 100 g y por ración" section and two new questions each, every figure from the app data. Hub and calorie table: computed top-10 lists (most calories per serving, per 100 g, fewest per 100 g). All 58 Spanish dish pages now done. |
 | 2026-11-14 | — | — | — | — | v3 PART 11: 14 Spanish posts retitled so the headline and title carry the primary keyword (see onpage-changes.csv). No URL or body change. |
 | 2026-11-14 | — | — | — | — | v3 PART 12: the other 14 Spanish posts retitled the same way. All Spanish posts now pass the keyword lint. |
+| 2026-11-14 | — | — | — | — | v3 PART 13: 19 English posts retitled so the headline and title carry the English primary keyword. No English post has an on-page note left. |

@@ -308,5 +308,10 @@
   "category": "Calorie counting",
   "glyph": "shield",
   "pal": 2
+ },
+ "calorias-para-adelgazar-mujer": {
+  "category": "Calorie counting",
+  "glyph": "target",
+  "pal": 5
  }
 }

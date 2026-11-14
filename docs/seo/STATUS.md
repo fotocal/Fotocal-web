@@ -33,6 +33,7 @@ Last updated: 14 November 2026.
 | 13 | Blog, English: 19 posts retitled; no English post has an on-page note left | Done (14 Nov) |
 | 14 | Blog meta descriptions (35) and the English calorie chart title | Done (14 Nov) |
 | 15 | Methodology and about: who writes, who reviews (nobody with a health qualification, stated plainly), corrections, last-reviewed date. Named author and reviewer bios are NOT added: they need real names and credentials from the owner | Done, except bios (14 Nov) |
+| D4 | New article «calorías para adelgazar mujer» (ES + EN), table computed from the calculator | Done (14 Nov) |
 <!-- v3-rows -->
 
 Also live outside the numbered PARTs: yearly offer from `tools/pricing.json` (11 Nov), calculator result layout, header at 200 % text, Search Console fixes (no language redirect, schema dates with time zone, inlined home CSS, balanced related-dish links), five strengthened posts (13 Nov).

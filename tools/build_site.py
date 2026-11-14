@@ -728,11 +728,44 @@ def render_head(src, lang, rel_path, meta):
     og_id = ("home" if rel_path == "index.html" else rel_path[:-len("/index.html")].replace("/", "-")) + "-" + lang
     og_file = "assets/og/%s.jpg" % og_id
     if os.path.isfile(os.path.join(ROOT, og_file)) and re.search(r'<meta property="og:image" content="%sassets/og-image(?:-%s)?\.png">' % (re.escape(SITE), lang), src):
-        og_url = SITE + og_file
-        src = re.sub(r'<meta property="og:image" content="[^"]*">',
-                     '<meta property="og:image" content="%s">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n  <meta property="og:image:type" content="image/jpeg">' % og_url, src, count=1)
-        src = re.sub(r'<meta name="twitter:image" content="[^"]*">', '<meta name="twitter:image" content="%s">' % og_url, src, count=1)
+        # ?v= is the card's own hash: a new card is a new URL, so Facebook,
+        # WhatsApp and Instagram fetch it instead of serving their old copy
+        og_url = SITE + og_file + "?v=" + file_hash(os.path.join(ROOT, og_file))
+        alt = esc_attr(OG_ALTS.get(og_id) or "Fotocal")
+        tags = ['<meta property="og:image" content="%s">' % og_url,
+                '<meta property="og:image:width" content="1200">',
+                '<meta property="og:image:height" content="630">',
+                '<meta property="og:image:type" content="image/jpeg">',
+                '<meta property="og:image:alt" content="%s">' % alt]
+        sq = "assets/og/%s-square.jpg" % og_id
+        if os.path.isfile(os.path.join(ROOT, sq)):
+            # a second, square card for apps that crop to 1:1 (the first one stays the default)
+            tags += ['<meta property="og:image" content="%s?v=%s">' % (SITE + sq, file_hash(os.path.join(ROOT, sq))),
+                     '<meta property="og:image:width" content="1080">',
+                     '<meta property="og:image:height" content="1080">',
+                     '<meta property="og:image:type" content="image/jpeg">',
+                     '<meta property="og:image:alt" content="%s">' % alt]
+        src = re.sub(r'<meta property="og:image" content="[^"]*">(\s*<meta property="og:image:(?:width|height|type|alt)" content="[^"]*">)*',
+                     lambda _: "\n  ".join(tags), src, count=1)
+        src = re.sub(r'<meta name="twitter:image" content="[^"]*">(\s*<meta name="twitter:image:alt" content="[^"]*">)?',
+                     lambda _: '<meta name="twitter:image" content="%s">\n  <meta name="twitter:image:alt" content="%s">' % (og_url, alt), src, count=1)
+    other = "en" if lang == "es" else "es"
+    if ('<meta property="og:locale:alternate"' not in src and '<meta property="og:locale"' in src
+            and re.search(r'<link rel="alternate" hreflang="%s"' % other, src)):
+        src = re.sub(r'(<meta property="og:locale" content="[^"]*">)',
+                     lambda m: m.group(1) + '\n  <meta property="og:locale:alternate" content="%s">' % ("en_US" if other == "en" else "es_ES"), src, count=1)
+    if '<meta property="og:site_name"' not in src and '<meta property="og:title"' in src:
+        src = src.replace('<meta property="og:title"', '<meta property="og:site_name" content="Fotocal">\n  <meta property="og:title"', 1)
     return src
+
+
+_OG_ALTS_FILE = os.path.join(ROOT, "assets", "og", "alts.json")
+OG_ALTS = json.load(open(_OG_ALTS_FILE, encoding="utf-8")) if os.path.isfile(_OG_ALTS_FILE) else {}
+
+
+def file_hash(path):
+    import hashlib
+    return hashlib.sha1(open(path, "rb").read()).hexdigest()[:8]
 
 
 # ── structured data ─────────────────────────────────────────────────

@@ -102,7 +102,7 @@ def run(fail, warn):
         if not m:
             fail(rel, "no og:image"); continue
         url = m.group(1)
-        path = url.replace(SITE, "")
+        path = url.replace(SITE, "").split("?")[0]   # ?v= is the card's cache-busting version
         if not os.path.isfile(os.path.join(ROOT, path)):
             fail(rel, "og:image file missing: %s" % path)
         if path.startswith("assets/og-image"):

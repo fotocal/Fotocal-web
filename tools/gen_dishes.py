@@ -803,6 +803,20 @@ def main():
     open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(bilingual(hub_page(ready), *dishes_en.hub(ready)))
     tdir = os.path.join(SRC, "tabla-de-calorias"); os.makedirs(tdir, exist_ok=True)
     open(os.path.join(tdir, "index.html"), "w", encoding="utf-8").write(bilingual(table_page(ready_by_app), *dishes_en.table(ready_by_app)))
+    # the figures the share cards print (tools/gen_og.mjs), so a card can
+    # never show a number the page does not
+    og = {"n_ready": len(ready), "n_hand": len(HAND), "dishes": {}}
+    for d in ready:
+        f = figures(d["app_id"])
+        nm = dishes_en.EN.get("name", {}).get(d["slug"])
+        en_name = nm["en"] if nm else d["name"]                     # the name English searchers use, as on the page
+        en_sub = d["name"] if nm and nm.get("es") else ("" if nm else dishes_en.gloss(d))
+        en_sub = "" if en_sub.lower() == en_name.lower() else en_sub
+        og["dishes"][d["slug"]] = {"es": d["name"][0].upper() + d["name"][1:], "en": en_name[0].upper() + en_name[1:], "en_sub": en_sub,
+                                   "kcal": f["kcal"], "g": f["serving_g"], "p": f["protein"], "c": f["carbs"], "f": f["fat"],
+                                   "serving_es": f["serving_label"], "serving_en": dishes_en.EN["serving"].get(f["serving_label"], f["serving_label"]),
+                                   "group": dishes_en.EN["group_of"].get(d["slug"], "platos")}
+    json.dump(og, open(os.path.join(ROOT, "tools", "dishes", "og.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("%d dish pages + hub + table -> src/calorias/ (es + en)" % len(ready))
 
 

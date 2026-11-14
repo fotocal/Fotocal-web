@@ -4,15 +4,16 @@
 // The look (owner's spec, Nov 2026): a warm off-white ground, near-black
 // heavy type, grey small print and ONE accent, the brand orange. A short
 // text block on the left, ONE real visual on the right: genuine app
-// captures (tools/captures/) or a real phone-size screenshot of the page
-// itself, in a plain upright phone frame that runs off the bottom edge.
+// captures (tools/captures/), chosen to fit the page, in a plain upright phone
+// frame that runs off the bottom edge. (Website screenshots were tried for
+// calculators, hubs and dishes and rejected: tiny text, and a dish card must
+// not show another dish's kcal. Dishes show the Home diary.)
 // Nothing drawn: no stickers, pills, badges, shapes, tilts or emoji.
 // No price, no offer and no "gratis"/"free" on any card.
 //
 // Every card is built from the page's own data, so it cannot drift:
 //   · dish pages   tools/dishes/og.json (written by tools/gen_dishes.py)
-//   · other pages  the BUILT page: og:title, its category, and for
-//                  calculators, hubs and the table a live screenshot
+//   · other pages  the BUILT page: og:title and its category
 // Type: Plus Jakarta Sans (SIL OFL, tools/og/fonts/), for the cards only.
 //
 // tools/build_site.py points og:image at the card, adds its alt text
@@ -61,11 +62,14 @@ const CALC = {
   'tmb': { es: 'Calculadora de metabolismo basal', en: 'BMR calculator' },
   'peso-saludable': { es: 'Peso ideal según tu altura', en: 'Ideal weight by height' },
 };
-const CALC_Q = { es: 'sexo=mujer&edad=35&altura=165&peso=70&actividad=light&objetivo=perder&ritmo=0.5&meta=62&grasa=25&reparto=balanced&kcal=2150',
-                 en: 'sex=woman&age=35&height=165&weight=70&activity=light&goal=lose&pace=0.5&target=62&bodyfat=25&split=balanced&kcal=2150' };
 // real app captures (tools/captures/): the full phone screens the site's own pictures were cut from
 const cap = (name, lang) => `${base}/tools/captures/${name}-${existsSync(join(ROOT, 'tools', 'captures', `${name}-${lang}.jpg`)) ? lang : 'es'}.jpg`;
-const CAP = { result: 's7/scan-result-top', home: 's7/home-calories', progress: 's7/progress-top', streak: 's7/streak', activity: 's7/home-activity-day', voice: 's7/voice-result', coach: 's2/coach' };
+const CAP = { result: 's7/scan-result-top', home: 's7/home-calories', progress: 's7/progress-top', streak: 's7/streak', activity: 's7/home-activity-day', voice: 's7/voice-result', coach: 's2/coach',
+              macros: 's7/home-macros', water: 's7/water-daily', weight: 's7/weight-monthly', foods: 's7/add-food-desayuno' };
+// the app screen that fits each calculator: the calorie ring unless another screen is closer to the topic
+const CALC_CAP = { macros: CAP.macros, proteinas: CAP.macros, agua: CAP.water, imc: CAP.weight, 'peso-saludable': CAP.weight };
+// a capture that exists in this language, else the Home diary (never a Spanish screen on an English card)
+const capOr = (name, lang) => existsSync(join(ROOT, 'tools', 'captures', `${name}-${lang}.jpg`)) ? cap(name, lang) : cap(CAP.home, lang);
 const BLOG_CAP = { calories: CAP.result, weightloss: CAP.progress, nutrition: CAP.home, eating: CAP.home, mindset: CAP.streak, movement: CAP.activity };
 
 // ── shared pieces ────────────────────────────────────────────────────
@@ -114,7 +118,7 @@ function home(lang, square) {
     ${phone(back, 884, 50)}${phone(front, 694, 90)}`);
 }
 
-function dish(lang, d, shot) {
+function dish(lang, d) {
   const t = T[lang], name = d[lang];
   return doc(lang, `
     <div class="col" style="width:620px">
@@ -126,7 +130,7 @@ function dish(lang, d, shot) {
       </div>
       <p class="sub" data-fit="24,18,1" style="margin-top:20px;font-size:24px;white-space:nowrap">${esc(t.macros(d))}</p>
     </div>
-    ${phone(shot || cap(CAP.result, lang), 800, 80)}`);
+    ${phone(cap(CAP.home, lang), 800, 80)}`);
 }
 
 function titled(lang, title, line, shot, sizes = '76,52,3') {
@@ -150,26 +154,7 @@ function post(lang, label, title, foot, shot) {
     ${phone(shot, 800, 80)}`);
 }
 
-// ── real phone-size screenshots of the site's own pages ──────────────
 const browser = await chromium.launch();
-const shots = new Map();
-async function webShot(lang, path, sel) {
-  const key = lang + path;
-  if (shots.has(key)) return shots.get(key);
-  const ctx = await browser.newContext({ viewport: { width: 390, height: 858 }, deviceScaleFactor: 2, locale: lang === 'es' ? 'es-ES' : 'en-GB' });
-  const p = await ctx.newPage();
-  await p.goto(base + (lang === 'en' ? '/en/' : '/') + path, { waitUntil: 'load' });
-  await p.addStyleTag({ content: // no price or offer may reach a card, so the download card and offer lines are left out of the screenshot
-    '.fc-topbar,.calc-sticky,.lang-hint,.dl-card,.offer-badge,.offer-keep,.price-note{display:none!important}.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto!important}#site-nav{top:0!important}' });
-  if (path.includes('?')) await p.waitForSelector('.calc-out[data-state="ready"]', { timeout: 5000 }).catch(() => {});
-  if (sel) await p.evaluate(s => { const e = document.querySelector(s); if (e) window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 104); }, sel);
-  await p.waitForTimeout(350);
-  const buf = await p.screenshot({ type: 'jpeg', quality: 82 });
-  await ctx.close();
-  const uri = 'data:image/jpeg;base64,' + buf.toString('base64');
-  shots.set(key, uri);
-  return uri;
-}
 
 // ── which card for which page ────────────────────────────────────────
 // "gratis"/"free" never goes on an image: on this site the word must sit next
@@ -182,15 +167,14 @@ async function card(rel, html, lang) {
   if (bare === '') return { html: home(lang), alt: t.home.join(' '), square: home(lang, true) };
   if ((m = bare.match(/^calorias\/([^/]+)\/$/)) && OG.dishes[m[1]]) {
     const d = OG.dishes[m[1]];
-    if (process.env.OG_DISH_PAGE) return { html: dish(lang, d, await webShot(lang, bare, '.dp-kpis')), alt: '' };
     return { html: dish(lang, d), alt: `${d[lang]}: ${num(d.kcal, lang)} ${t.perServing} (${num(d.g, lang)} g). ${t.macros(d)}` };
   }
-  if (bare === 'calorias/') return { html: titled(lang, t.hub, t.hubSub(OG.n_ready), await webShot(lang, bare, '.dp-table-wrap')), alt: `${t.hub}: ${t.hubSub(OG.n_ready)}` };
-  if (bare === 'calorias/tabla-de-calorias/') return { html: titled(lang, t.table, t.tableSub(OG.n_hand), await webShot(lang, bare, '.dp-table-wrap')), alt: `${t.table}: ${t.tableSub(OG.n_hand)}` };
-  if (bare === 'calculadoras/') return { html: titled(lang, t.calcHub, t.calcHubSub, await webShot(lang, bare, '.calc-cards')), alt: `${t.calcHub}: ${t.calcHubSub}` };
+  if (bare === 'calorias/') return { html: titled(lang, t.hub, t.hubSub(OG.n_ready), capOr(CAP.foods, lang)), alt: `${t.hub}: ${t.hubSub(OG.n_ready)}` };
+  if (bare === 'calorias/tabla-de-calorias/') return { html: titled(lang, t.table, t.tableSub(OG.n_hand), capOr(CAP.foods, lang)), alt: `${t.table}: ${t.tableSub(OG.n_hand)}` };
+  if (bare === 'calculadoras/') return { html: titled(lang, t.calcHub, t.calcHubSub, cap(CAP.home, lang)), alt: `${t.calcHub}: ${t.calcHubSub}` };
   if ((m = bare.match(/^calculadoras\/([^/]+)\/$/)) && CALC[m[1]])
-    return { html: titled(lang, CALC[m[1]][lang], t.calcLine, await webShot(lang, bare + '?' + CALC_Q[lang], '.calc-out')), alt: `${CALC[m[1]][lang]}. ${t.calcLine}` };
-  if (bare === 'blog/') return { html: titled(lang, t.blogHub, t.blogHubSub, await webShot(lang, bare, '.habit-grid')), alt: `${t.blogHub}: ${t.blogHubSub}` };
+    return { html: titled(lang, CALC[m[1]][lang], t.calcLine, cap(CALC_CAP[m[1]] || CAP.home, lang)), alt: `${CALC[m[1]][lang]}. ${t.calcLine}` };
+  if (bare === 'blog/') return { html: titled(lang, t.blogHub, t.blogHubSub, cap(CAP.home, lang)), alt: `${t.blogHub}: ${t.blogHubSub}` };
   // posts: the category is the last breadcrumb (…/blog/?cat=<key>); other pages use their first kicker
   const cat = html.match(/<a href="[^"]*\?cat=([a-z]+)[^"]*">([^<]+)<\/a>\s*<\/nav>/);
   if (cat) return { html: post(lang, text(cat[2]), ogTitle, t.blogFoot, cap(BLOG_CAP[cat[1]] || CAP.home, lang)), alt: `${ogTitle} · ${t.blogFoot}` };

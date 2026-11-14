@@ -4,16 +4,17 @@
   "category": "calories",
   "en": {
    "title": "Calories, from the ground up",
-   "intro": "What your body burns, what a deficit is, how fast to lose and how to count without turning it into a second job. Twelve articles in the order the questions come."
+   "intro": "What your body burns, what a deficit is, how fast to lose and how to count without turning it into a second job. Thirteen articles in the order the questions come."
   },
   "es": {
    "title": "Las calorías, desde cero",
-   "intro": "Qué gasta tu cuerpo, qué es un déficit, a qué ritmo perder y cómo contar sin que sea un segundo trabajo. Doce artículos, en el orden en que llegan las dudas."
+   "intro": "Qué gasta tu cuerpo, qué es un déficit, a qué ritmo perder y cómo contar sin que sea un segundo trabajo. Trece artículos, en el orden en que llegan las dudas."
   },
   "posts": [
    "understanding-your-basal-metabolic-rate",
    "tdee-how-many-calories-you-need",
    "calorie-deficit-for-fat-loss",
+   "calorias-para-adelgazar-mujer",
    "deficit-500-calorias-dia",
    "calorias-para-perder-un-kilo",
    "how-fast-should-you-lose-weight",
@@ -76,6 +77,10 @@
    "calorias-para-perder-un-kilo": {
     "en": "The 7,700 kcal per kilo: where it comes from, how many days it takes and why it stops adding up.",
     "es": "Las 7.700 kcal por kilo: de dónde salen, cuántos días son y por qué dejan de cuadrar."
+   },
+   "calorias-para-adelgazar-mujer": {
+    "en": "The figure most women look for: calories to lose weight by age and activity, in one table, and what 1,500 kcal really does.",
+    "es": "La cifra que más se busca: calorías para adelgazar siendo mujer, por edad y actividad, en una tabla, y qué hacen de verdad 1.500 kcal."
    }
   }
  },

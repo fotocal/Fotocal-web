@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://getfotocal.com/about/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/about/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/about/"/>
@@ -198,6 +198,24 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorias-menu-del-dia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/calorias-menu-del-dia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-menu-del-dia/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/blog/calorias-para-adelgazar-mujer/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorias-para-adelgazar-mujer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/calorias-para-adelgazar-mujer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-para-adelgazar-mujer/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/calorias-para-adelgazar-mujer/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/calorias-para-adelgazar-mujer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/calorias-para-adelgazar-mujer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/calorias-para-adelgazar-mujer/"/>
   </url>
   <url>
     <loc>https://getfotocal.com/blog/calorias-para-perder-un-kilo/</loc>
@@ -2721,7 +2739,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/guias/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/guias/"/>
@@ -2730,7 +2748,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/guias/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/guias/"/>

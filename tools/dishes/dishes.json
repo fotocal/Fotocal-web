@@ -1269,11 +1269,26 @@
     {
      "q": "¿Callos o cocido, cuál tiene menos calorías?",
      "a": "La ración de callos, {kcal} kcal, frente al plato de cocido de 400 g, {kcal:cocido-madrileno}. Por peso son parecidos ({per100} y {per100:cocido-madrileno} kcal por 100 g); los callos tienen más proteína y menos hidratos."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de callos?",
+     "a": "{per100} kcal los callos a la madrileña ya guisados, con su chorizo y su morcilla. Los callos de ternera cocidos solos, sin embutido, tienen 103 kcal por 100 g en la fila de USDA que usa la app."
+    },
+    {
+     "q": "¿Cuánta proteína tienen los callos?",
+     "a": "{protein} g en una ración de {g} g: es uno de los platos tradicionales con más proteína por ración. También lleva {fat} g de grasa, que viene sobre todo del chorizo y la morcilla."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los callos por 100 g y por ración",
+     "html": "<p>Los callos a la madrileña tienen {per100} kcal por cada 100 g, y la ración de {g} g, {kcal} kcal. La tripa en sí es magra: los 150 g de callos cocidos de la ración aportan unas 155 kcal y casi toda la proteína. Lo que sube la cuenta es el acompañamiento: 30 g de chorizo y 20 g de morcilla suman unas 205 kcal, cerca del 40 % del plato.</p><p>Media ración, como tapa, son {kcal/2} kcal. Para comparar con otros platos de cuchara: un cocido madrileño completo tiene {kcal:cocido-madrileno} kcal y una fabada, {kcal:fabada-asturiana}.</p>"
+    }
+   ]
   },
   {
    "slug": "jamon-serrano",
@@ -1414,11 +1429,26 @@
     {
      "q": "¿Tiene azúcar el tinto de verano?",
      "a": "Con gaseosa, prácticamente no: la gaseosa va con edulcorante y el vino tinto seco tiene poco azúcar. Con refresco de limón, cada 100 ml añaden unos 10 g de azúcar, y el vaso se convierte en otra bebida."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una jarra de tinto de verano?",
+     "a": "{per1000} kcal una jarra de un litro hecha con vino y gaseosa a partes iguales, que da para cuatro vasos de {kcal} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, el tinto de verano o una copa de vino?",
+     "a": "La copa de vino: {kcal:copa-de-vino-tinto} kcal en 150 ml, frente a {kcal} kcal de un vaso de tinto de verano de 250 ml. El tinto de verano lleva menos vino en más volumen."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del tinto de verano por vaso, por 100 ml y por jarra",
+     "html": "<p>Un vaso de tinto de verano de 250 ml tiene {kcal} kcal: {per100} kcal por cada 100 ml. Todas vienen del vino. La app lo cuenta mitad y mitad: 125 ml de vino tinto, que son unas 106 kcal, y gaseosa blanca, que no aporta calorías.</p><p>Una jarra de un litro son {per1000} kcal, cuatro vasos. Si se hace con refresco de limón azucarado en lugar de gaseosa, la cifra sube según el azúcar del refresco: mira su etiqueta. Para comparar: una copa de vino tinto sola tiene {kcal:copa-de-vino-tinto} kcal y una caña, {kcal:cana-de-cerveza}.</p>"
+    }
+   ]
   },
   {
    "slug": "pimientos-de-padron",
@@ -1453,11 +1483,26 @@
     {
      "q": "¿Unos pican y otros no?",
      "a": "Sí, y no cambia nada en la cuenta: el picante es capsaicina, sin calorías. Lo único que cambia de un pimiento a otro, para la báscula, es cuánto aceite se queda."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de pimientos de Padrón?",
+     "a": "{per100} kcal ya fritos, con el aceite que absorben. El pimiento verde crudo tiene 20 kcal por 100 g: la diferencia es aceite."
+    },
+    {
+     "q": "¿Los pimientos de Padrón tienen hidratos?",
+     "a": "Pocos: {carbs} g en una ración de {g} g. Las calorías vienen casi todas de la grasa del aceite, {fat} g por ración."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los pimientos de Padrón por 100 g y por ración",
+     "html": "<p>Una ración de pimientos de Padrón fritos ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. El pimiento apenas cuenta: los 110 g de la ración son unas 22 kcal. Las otras casi 90 kcal son los 10 g de aceite que se quedan en el pimiento después de freírlo.</p><p>Por eso la cifra depende de cómo se escurran. Hechos a la plancha con una cucharadita de aceite se quedan en menos de la mitad. Y la sal gorda no suma calorías.</p>"
+    }
+   ]
   },
   {
    "slug": "tarta-de-santiago",
@@ -1491,11 +1536,26 @@
     {
      "q": "¿Lleva gluten la tarta de Santiago?",
      "a": "La receta tradicional, no: es almendra en lugar de harina. Las de pastelería a veces llevan una base de masa quebrada, que sí la lleva. Si importa, preguntar."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de tarta de Santiago?",
+     "a": "{per100} kcal. Una porción normal pesa unos {g} g y tiene {kcal} kcal."
+    },
+    {
+     "q": "¿Cuánto azúcar tiene la tarta de Santiago?",
+     "a": "Unos 31 g por porción de {g} g, casi todo azúcar añadido: la receta lleva prácticamente el mismo peso de azúcar que de almendra."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la tarta de Santiago por 100 g y por porción",
+     "html": "<p>La tarta de Santiago tiene {per100} kcal por cada 100 g, y una porción de {g} g, {kcal} kcal. Solo lleva tres ingredientes y los tres cuentan: en una porción hay 32 g de almendra (unas 185 kcal), 30 g de azúcar (unas 115 kcal) y 18 g de huevo (unas 25 kcal).</p><p>Es una tarta densa: no lleva harina ni nata que la aligeren, así que una porción pequeña ya suma. Media porción son {kcal/2} kcal. A cambio, la almendra hace que tenga más proteína ({protein} g) y fibra que la mayoría de los postres.</p>"
+    }
+   ]
   },
   {
    "slug": "gambas-al-ajillo",
@@ -1530,11 +1590,26 @@
     {
      "q": "¿Engordan las gambas?",
      "a": "Las gambas no: son de los alimentos con más proteína por caloría. Engorda la cazuela de aceite y el pan. Pedirlas a la plancha, o escurrirlas bien, cambia el plato sin cambiar la gamba."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de gambas al ajillo?",
+     "a": "{per100} kcal con su aceite. Las gambas cocidas solas tienen 99 kcal por 100 g."
+    },
+    {
+     "q": "¿Cuánta proteína tienen las gambas al ajillo?",
+     "a": "{protein} g por ración de {g} g, con solo {carbs} g de hidratos. La grasa, {fat} g, es casi toda aceite de oliva."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de las gambas al ajillo por 100 g y por ración",
+     "html": "<p>Una ración de gambas al ajillo ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. La gamba es de lo más magro que hay: los 115 g de la ración aportan unas 115 kcal y casi toda la proteína. El resto, unas 195 kcal, es el aceite: la app cuenta 22 g, lo que se come con la gamba y con el primer trozo de pan.</p><p>Por eso la misma ración a la plancha se queda en {kcal:gambas-a-la-plancha} kcal. Y si se rebaña la cazuela con pan, cada cucharada de aceite que se va en el pan suma {kcal:aceite-de-oliva} kcal más.</p>"
+    }
+   ]
   },
   {
    "slug": "bocadillo-de-calamares",
@@ -1568,11 +1643,26 @@
     {
      "q": "¿Bocadillo de calamares o de tortilla?",
      "a": "Casi iguales: {kcal} kcal frente a {kcal:bocadillo-de-tortilla} el de tortilla de 200 g. El de calamares tiene más proteína y menos grasa; el de tortilla llena algo más. Elige por gusto."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de bocadillo de calamares?",
+     "a": "{per100} kcal. El bocadillo entero pesa unos {g} g y tiene {kcal} kcal."
+    },
+    {
+     "q": "¿Cuánta proteína tiene un bocadillo de calamares?",
+     "a": "{protein} g, entre el calamar y el pan. Es sobre todo un bocadillo de hidratos: {carbs} g, casi todos del pan."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del bocadillo de calamares por 100 g y por unidad",
+     "html": "<p>Un bocadillo de calamares de {g} g tiene {kcal} kcal: {per100} kcal por cada 100 g. La mayor parte es pan: los 110 g de barra aportan unas 295 kcal, y los 65 g de calamares a la romana, unas 115.</p><p>Medio bocadillo son {kcal/2} kcal. Con mayonesa o alioli sube: una cucharada son unas 100 kcal más. La ración de calamares a la romana sin pan tiene {kcal:calamares-a-la-romana} kcal, y lleva más del doble de calamar que el bocadillo.</p>"
+    }
+   ]
   },
   {
    "slug": "sopa-castellana",
@@ -1607,11 +1697,26 @@
     {
      "q": "¿Es una cena ligera?",
      "a": "Es una cena completa, no ligera: pan, huevo, jamón y aceite. Con {protein} g de proteína y {kcal} kcal, sustituye a un segundo plato. Como primero antes de un segundo fuerte es demasiado."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de sopa castellana?",
+     "a": "{per100} kcal. Más de la mitad del plato es caldo, y por eso la cifra por 100 g es baja aunque el plato entero sume {kcal} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una sopa de ajo sin huevo?",
+     "a": "Unas 275 kcal el plato: el huevo aporta unas 70 de las {kcal}. Es la misma sopa; sopa de ajo y sopa castellana son dos nombres del mismo plato."
     }
    ],
    "status": "ready",
    "published": "2026-10-15",
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la sopa castellana por 100 g y por plato",
+     "html": "<p>Un plato de sopa castellana ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. Es una sopa de ajo con cuatro cosas dentro, y las cuatro suman parecido: 40 g de pan (unas 105 kcal), 12 g de aceite (unas 105), un huevo (unas 70) y 20 g de jamón serrano (unas 50).</p><p>Sin huevo se queda en unas 275 kcal; con la mitad de pan, en unas 295. Una sopa de fideos, para comparar, tiene {kcal:sopa-de-fideos} kcal el plato.</p>"
+    }
+   ]
   },
   {
    "slug": "tortilla-francesa",
@@ -1655,9 +1760,24 @@
     {
      "q": "¿La tortilla francesa engorda?",
      "a": "No por sí sola: {kcal} kcal con {protein} g de proteína es una de las cenas con mejor relación entre saciedad y calorías. Lo que engorda es el conjunto del día. Lo que más la cambia es el relleno y el pan de al lado, no el huevo."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de tortilla francesa?",
+     "a": "{per100} kcal. Una tortilla de dos huevos pesa unos {g} g."
+    },
+    {
+     "q": "¿Cuánta proteína tiene una tortilla francesa?",
+     "a": "{protein} g la de dos huevos, con {fat} g de grasa y casi nada de hidratos. Es la misma proteína que la de los dos huevos cocidos."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la tortilla francesa por 100 g y por unidad",
+     "html": "<p>Una tortilla francesa de dos huevos ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. Los huevos aportan unas 130 kcal y la cucharadita de aceite de la sartén (5 g), unas 45.</p><p>De ahí salen las demás: con un huevo, {kcal/2} kcal; con tres, {kcal*1.5}. Con jamón, la tortilla de la app sube a {kcal:tortilla-de-jamon} kcal. Y no hay que confundirla con la de patatas, que tiene {kcal:tortilla-espanola} kcal por porción de 150 g y lleva hidratos; la francesa apenas tiene ({carbs} g).</p>"
+    }
+   ]
   },
   {
    "slug": "sandwich-mixto",
@@ -1698,9 +1818,24 @@
     {
      "q": "¿El sándwich mixto engorda?",
      "a": "Como cualquier comida, depende del día entero. {kcal} kcal es una merienda o una cena ligera razonable; el problema del mixto es que suele venir con patatas, refresco o un segundo mixto. Mirado solo, cabe sin problema."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de sándwich mixto?",
+     "a": "{per100} kcal. Uno entero pesa unos {g} g y tiene {kcal} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, un sándwich mixto o un bocadillo de jamón york y queso?",
+     "a": "Casi lo mismo: {kcal} kcal el sándwich y {kcal:bocadillo-de-jamon-york-y-queso} el bocadillo de la app. El bocadillo lleva más pan y el sándwich, la mantequilla de la plancha."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del sándwich mixto por 100 g y por unidad",
+     "html": "<p>Un sándwich mixto de {g} g tiene {kcal} kcal: {per100} kcal por cada 100 g. Por ingredientes: dos rebanadas de pan de molde (80 g, unas 225 kcal), 25 g de queso (unas 100), 35 g de jamón cocido (unas 55) y 5 g de mantequilla para la plancha (unas 35).</p><p>Medio sándwich son {kcal/2} kcal. Lo que más cambia la cifra es el queso y el tamaño del pan, no el jamón. Un sándwich vegetal tiene {kcal:sandwich-vegetal} kcal y uno de atún, {kcal:sandwich-de-atun}.</p>"
+    }
+   ]
   },
   {
    "slug": "platano",
@@ -1858,9 +1993,24 @@
     {
      "q": "¿El pan engorda?",
      "a": "Engorda comer más de lo que gastas, y el pan es fácil de comer de más porque acompaña sin que se cuente. Un trozo de 50 g son {kcal} kcal: dentro de una comida normal cabe; lo que suele sobrar es el segundo y el tercero, y lo que lleva encima."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de pan?",
+     "a": "{per100} kcal el pan blanco de barra. Un trozo de {g} g son {kcal} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tiene media barra de pan?",
+     "a": "Unas {per100*1.25} kcal, contando una barra de 250 g. Es el pan de un bocadillo grande; uno normal lleva unos 110 g, que son {per100*1.1} kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del pan por 100 g, por trozo y por barra",
+     "html": "<p>El pan blanco de barra tiene {per100} kcal por cada 100 g. Un trozo de {g} g, lo que acompaña un plato, son {kcal} kcal. Una barra entera pesa unos 250 g: {per100*2.5} kcal. Media barra, que es lo que lleva un bocadillo grande, {per100*1.25} kcal.</p><p>Casi todo son hidratos: {carbs} g por trozo, con {protein} g de proteína y muy poca grasa. Tostarlo no cambia las calorías del trozo: pierde agua y pesa menos, así que la cifra por 100 g sube, pero la rebanada tiene las mismas.</p>"
+    }
+   ]
   },
   {
    "slug": "aceite-de-oliva",
@@ -1905,9 +2055,24 @@
     {
      "q": "¿Cuánto aceite absorbe la comida al freír?",
      "a": "Depende del alimento y del escurrido: la patata y los rebozados absorben más que una pechuga a la plancha. Fotocal lo tiene en cuenta cuando marcas «frito» en un plato, con un reparto de aceite por tipo de cocción, y te deja cambiar los gramos antes de guardar."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de aceite de oliva?",
+     "a": "{per100} kcal. Nadie toma 100 g de una vez: una cucharada de 10 ml son {kcal} kcal."
+    },
+    {
+     "q": "¿El aceite de oliva virgen extra tiene menos calorías?",
+     "a": "No. Virgen extra, virgen y refinado tienen las mismas calorías, {kcal} por cucharada. La diferencia entre ellos es de sabor y de calidad, no de energía."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del aceite de oliva por 100 g, por cucharada y por cucharadita",
+     "html": "<p>El aceite de oliva tiene {per100} kcal por cada 100 g: es grasa casi pura y el alimento con más calorías por gramo de la cocina. Una cucharada de 10 ml pesa {g} g y tiene {kcal} kcal. Una cucharadita de 5 ml, {kcal/2}. Un chorro generoso sobre una ensalada son fácilmente dos cucharadas: {kcal*2} kcal.</p><p>Virgen extra, virgen o refinado tienen las mismas calorías: cambian el sabor y los compuestos menores, no la grasa. El de girasol también tiene las mismas. Por eso, para la cuenta, lo que importa es la cantidad y no el tipo.</p>"
+    }
+   ]
   },
   {
    "slug": "coca-cola-zero",
@@ -1947,9 +2112,24 @@
     {
      "q": "¿La Coca-Cola Zero engorda?",
      "a": "Con {kcal} kcal por lata, no por las calorías. Lo que se discute es si los edulcorantes cambian el apetito o los hábitos, y ahí la evidencia no es concluyente y varía por persona. Para la cuenta de calorías es cero."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una botella de 2 litros de Coca-Cola Zero?",
+     "a": "Unas {per100*20} kcal con la fila de refresco de cola sin azúcar que usa la app; la etiqueta de la marca lo redondea a cero. A efectos de la cuenta diaria no cambia nada."
+    },
+    {
+     "q": "¿La Coca-Cola Zero tiene azúcar?",
+     "a": "No: 0 g de azúcares por lata. Se endulza con edulcorantes sin calorías, y por eso una lata se queda en {kcal} kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la Coca-Cola Zero por lata, por 100 ml y por botella",
+     "html": "<p>Una lata de Coca-Cola Zero de 330 ml tiene {kcal} kcal: {per100} kcal por cada 100 ml en la fila de refresco de cola sin azúcar que usa la app. En la práctica es cero: no lleva azúcar, y el dulzor viene de edulcorantes que no aportan energía.</p><p>Una botella de medio litro son unas {per100*5} kcal y una de dos litros, unas {per100*20}. La etiqueta de la marca redondea a 0 kcal; la diferencia con la cifra de la base de datos son trazas, y no cambia ninguna cuenta.</p>"
+    }
+   ]
   },
   {
    "slug": "copa-de-vino-tinto",
@@ -1989,9 +2169,24 @@
     {
      "q": "¿Una copa de vino al día engorda?",
      "a": "{kcal} kcal que no sacian y que el cuerpo quema antes que la grasa: una copa al día son unas {kcal*7} kcal a la semana. Dentro de una dieta se cuenta como cualquier otra cosa; lo que no se puede es dejarla fuera de la cuenta."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una botella de vino tinto?",
+     "a": "Unas {per100*7.5} kcal la botella de 750 ml, que son cinco copas de 150 ml a {kcal} kcal cada una."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 ml de vino tinto?",
+     "a": "{per100} kcal. Vienen casi todas del alcohol: el vino tinto seco apenas tiene azúcar."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del vino tinto por copa, por 100 ml y por botella",
+     "html": "<p>Una copa de vino tinto de 150 ml tiene {kcal} kcal: {per100} kcal por cada 100 ml. Casi todas vienen del alcohol, no del azúcar: un tinto seco tiene menos de 1 g de azúcares por copa.</p><p>Una botella de 750 ml son cinco copas: {per100*7.5} kcal. Una copa pequeña de 100 ml, como las de muchos bares, {per100} kcal. El vino blanco seco queda casi igual, 82 kcal por 100 ml. Y rebajado con gaseosa, un tinto de verano tiene {kcal:tinto-de-verano} kcal el vaso.</p>"
+    }
+   ]
   },
   {
    "slug": "tercio-de-cerveza",
@@ -2032,9 +2227,24 @@
     {
      "q": "¿Engorda la cerveza?",
      "a": "Engorda como cualquier caloría que sobra, con dos agravantes: no sacia y suele venir acompañada. Dos tercios son {kcal*2} kcal, lo que una cena ligera. Si la cuentas, cabe; si no la cuentas, es de lo primero que explica una báscula parada."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un litro de cerveza?",
+     "a": "{per1000} kcal un litro de cerveza rubia normal: tres tercios."
+    },
+    {
+     "q": "¿Qué tiene más calorías, un tercio o una caña?",
+     "a": "El tercio, porque es más grande: {kcal} kcal en 330 ml frente a {kcal:cana-de-cerveza} kcal de una caña de 200 ml. Por 100 ml tienen exactamente lo mismo, {per100} kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la cerveza por tercio, por 100 ml y por litro",
+     "html": "<p>Un tercio de cerveza (330 ml) tiene {kcal} kcal: {per100} kcal por cada 100 ml. Por formatos: una caña de 200 ml, {kcal:cana-de-cerveza} kcal; un quinto o botellín de 200 ml, lo mismo; una jarra de medio litro, {per100*5}; y una litrona, {per1000}.</p><p>Son las cifras de una cerveza rubia normal, de unos 5 grados. Las calorías vienen del alcohol y de los hidratos que quedan de la malta ({carbs} g por tercio). Una cerveza sin alcohol tiene bastantes menos y una de más graduación, más: la etiqueta de cada marca lo indica.</p>"
+    }
+   ]
   },
   {
    "slug": "croissant",
@@ -2074,9 +2284,24 @@
     {
      "q": "¿Cuántas calorías tiene un cruasán a la plancha?",
      "a": "El cruasán de {g} g son {kcal} kcal; a la plancha suele llevar mantequilla, y cada 10 g de mantequilla son unas 75 kcal más. Pídelo sin mantequilla y se queda en lo mismo."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de cruasán?",
+     "a": "{per100} kcal. Uno mediano pesa unos {g} g y tiene {kcal} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tiene un cruasán pequeño?",
+     "a": "Unas {per100*0.4} kcal uno de 40 g, y unas {per100*0.25} un mini de 25 g, con la misma cifra por 100 g que el grande."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del cruasán por 100 g y por unidad",
+     "html": "<p>Un cruasán de mantequilla de {g} g tiene {kcal} kcal: {per100} kcal por cada 100 g. Es de las piezas de bollería más densas porque la masa lleva mantequilla en cada capa: {fat} g de grasa por unidad.</p><p>El tamaño manda. Uno pequeño de 40 g se queda en unas {per100*0.4} kcal, y uno grande de cafetería de 80 g, a la plancha con mantequilla, llega a {kcal:croissant-a-la-plancha}. Relleno de chocolate ya es otra pieza: una napolitana tiene {kcal:napolitana-de-chocolate} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "magdalena",
@@ -2115,9 +2340,24 @@
     {
      "q": "¿Es mejor la magdalena o las galletas María?",
      "a": "Depende de la cantidad. Una magdalena son {kcal} kcal; una ración de galletas María de la app, {kcal:galletas-maria}. Por 100 g son parecidas: las dos son harina y azúcar."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de magdalenas?",
+     "a": "{per100} kcal. Una magdalena normal pesa unos {g} g, así que en 100 g entran casi tres."
+    },
+    {
+     "q": "¿Cuánto azúcar tiene una magdalena?",
+     "a": "Unos 10 g por magdalena de {g} g: más de una cuarta parte de su peso es azúcar. Con un café con leche, el desayuno con una magdalena ronda las {kcal:cafe-con-leche-y-magdalena} kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la magdalena por 100 g y por unidad",
+     "html": "<p>Una magdalena de {g} g tiene {kcal} kcal: {per100} kcal por cada 100 g. Pesa poco y suma bastante porque es aceite, azúcar y harina: {fat} g de grasa y unos 10 g de azúcares por unidad.</p><p>Dos magdalenas son {kcal*2} kcal. Las grandes, tipo valenciana, pesan cerca del doble y tienen cerca del doble. Para comparar con otros desayunos: cuatro galletas María son {kcal:galletas-maria} kcal y un cruasán, {kcal:croissant}.</p>"
+    }
+   ]
   },
   {
    "slug": "salmon-a-la-plancha",
@@ -2157,9 +2397,24 @@
     {
      "q": "¿Cuánta proteína tiene el salmón?",
      "a": "{protein} g por ración de {g} g. Para saber cuánta necesitas al día, usa la <a href=\"../../calculadoras/proteinas/\">calculadora de proteínas</a>."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de salmón a la plancha?",
+     "a": "{per100} kcal. Una ración de {g} g son {kcal} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, el salmón o la merluza?",
+     "a": "El salmón, con diferencia: {kcal} kcal la ración a la plancha frente a {kcal:merluza-a-la-plancha} kcal de la merluza. La diferencia es la grasa del pescado, no la forma de cocinarlo."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del salmón a la plancha por 100 g y por ración",
+     "html": "<p>El salmón a la plancha tiene {per100} kcal por cada 100 g, y una ración de {g} g, {kcal} kcal. Casi todo es el propio pescado: la app cuenta solo 3 g de aceite en la plancha, unas 25 kcal.</p><p>Es un pescado graso: {fat} g de grasa por ración, frente a los 1,5 g de una merluza a la plancha, que se queda en {kcal:merluza-a-la-plancha} kcal. A cambio lleva {protein} g de proteína y nada de hidratos. Un lomo de 200 g, que es lo que pesa uno grande, son {per100*2} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "macarrones-con-tomate",
@@ -2199,9 +2454,24 @@
     {
      "q": "¿Engordan los macarrones?",
      "a": "No más que otro plato de {kcal} kcal. Lo que hace que engorden es la cantidad: un plato hondo lleno puede doblarla."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de macarrones con tomate?",
+     "a": "{per100} kcal ya cocinados. La pasta cocida sola tiene 158 kcal por 100 g; el tomate, que es más ligero, baja la media del plato."
+    },
+    {
+     "q": "¿Cuántos hidratos tiene un plato de macarrones?",
+     "a": "{carbs} g en un plato de {g} g, con {protein} g de proteína y solo {fat} g de grasa. Es un plato de hidratos casi puro."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los macarrones con tomate por 100 g y por plato",
+     "html": "<p>Un plato de macarrones con tomate ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. Casi todo es pasta: los 230 g de macarrones ya cocidos aportan unas 365 kcal. El tomate frito (60 g) suma unas 30 y la cucharada de queso rallado (10 g), unas 40.</p><p>Ojo con pesar en crudo: la pasta gana mucho peso al cocerse, y esos 230 g cocidos son unos 80 g en seco. Con chorizo o con carne el plato sube: unos espaguetis a la boloñesa tienen {kcal:espaguetis-bolonesa} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "espaguetis-bolonesa",
@@ -2241,9 +2511,24 @@
     {
      "q": "¿Son buenos para perder peso?",
      "a": "Caben en un déficit si la ración es razonable. Tienen {protein} g de proteína, que ayuda a saciar; calcula cuántas calorías te tocan con la <a href=\"../../calculadoras/calorias-diarias/\">calculadora de calorías diarias</a>."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de espaguetis a la boloñesa?",
+     "a": "{per100} kcal. Un plato normal pesa unos {g} g y tiene {kcal} kcal."
+    },
+    {
+     "q": "¿Cuánta proteína tienen los espaguetis a la boloñesa?",
+     "a": "{protein} g por plato, entre la carne y la propia pasta. Unos macarrones con tomate, sin carne, se quedan en {protein:macarrones-con-tomate} g."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los espaguetis a la boloñesa por 100 g y por plato",
+     "html": "<p>Un plato de espaguetis a la boloñesa ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. La pasta cocida (180 g) aporta unas 285 kcal y la carne picada (50 g), unas 130. El resto es el tomate, la cebolla y el aceite del sofrito.</p><p>La carne es lo que lo separa de un plato de pasta con tomate: sube la proteína a {protein} g y la grasa a {fat} g. Con queso rallado por encima, cada cucharada suma unas 40 kcal más.</p>"
+    }
+   ]
   },
   {
    "slug": "pollo-asado",
@@ -2282,9 +2567,24 @@
     {
      "q": "¿Engorda el pollo asado?",
      "a": "Con {protein} g de proteína por ración es de lo que más sacia. Lo que lo engorda es la piel y las patatas fritas que lo acompañan."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de pollo asado?",
+     "a": "{per100} kcal de carne sin hueso, mezclando muslo y pechuga. Solo pechuga, 165; solo muslo, 179."
+    },
+    {
+     "q": "¿Qué tiene más calorías, el muslo o la pechuga de pollo?",
+     "a": "El muslo, por poco: 179 kcal por 100 g asado frente a 165 de la pechuga. La pechuga tiene más proteína y menos de la mitad de grasa."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del pollo asado por 100 g y por ración",
+     "html": "<p>El pollo asado tiene {per100} kcal por cada 100 g, y una ración de {g} g de carne ya sin hueso, {kcal} kcal. La app la cuenta mitad muslo y mitad pechuga: el muslo asado tiene 179 kcal por 100 g y la pechuga, 165.</p><p>Es de los platos con más proteína por caloría: {protein} g por ración y nada de hidratos. Lo que no está en esta cifra son las patatas de la bandeja ni el jugo con el que se moja el pan, que es donde se va la grasa del asado.</p>"
+    }
+   ]
   },
   {
    "slug": "potaje-de-garbanzos",
@@ -2324,9 +2624,24 @@
     {
      "q": "¿Qué tiene más calorías, el potaje o el cocido?",
      "a": "El cocido madrileño de la app tiene {kcal:cocido-madrileno} kcal por ración, frente a {kcal} del potaje: lleva carnes y embutidos."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de potaje de garbanzos?",
+     "a": "{per100} kcal. Los garbanzos cocidos solos tienen 164 kcal por 100 g; las espinacas y el caldo bajan la media del plato."
+    },
+    {
+     "q": "¿Cuánta proteína tiene el potaje de garbanzos?",
+     "a": "{protein} g por plato, entre los garbanzos, el bacalao y el huevo. Unos garbanzos con espinacas sin bacalao ni huevo se quedan en {protein:garbanzos-con-espinacas} g."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del potaje de garbanzos por 100 g y por plato",
+     "html": "<p>Un plato de potaje de garbanzos ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. Más de la mitad son los garbanzos: 160 g ya cocidos, unas 260 kcal. El aceite del sofrito (10 g) suma unas 90, y el resto se reparte entre la patata, el huevo cocido, el bacalao y las espinacas.</p><p>Es el potaje de vigilia, sin carne ni embutido, y por eso queda por debajo del cocido ({kcal:cocido-madrileno} kcal). Lleva {protein} g de proteína y unos 15 g de fibra por plato, de los platos con más fibra de la tabla.</p>"
+    }
+   ]
   },
   {
    "slug": "ensalada-mixta",
@@ -2365,9 +2680,24 @@
     {
      "q": "¿La ensalada mixta adelgaza?",
      "a": "Es de lo que menos calorías tiene por plato. Pero si es la comida entera, con {protein} g de proteína puede quedarse corta: complétala."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de ensalada mixta?",
+     "a": "{per100} kcal ya aliñada. Sin aceite serían unas 55: el aliño es un tercio de las calorías del plato."
+    },
+    {
+     "q": "¿Qué tiene más calorías, una ensalada mixta o una ensalada César?",
+     "a": "La César: {kcal:ensalada-cesar} kcal el plato frente a {kcal} de la mixta. La salsa, el queso y los picatostes pesan más que el aliño de aceite y vinagre."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la ensalada mixta por 100 g y por plato",
+     "html": "<p>Un plato de ensalada mixta ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. La lechuga, el tomate, la cebolla y la zanahoria juntos suman unas 40 kcal. Lo que suma es lo demás: el aceite del aliño (8 g, unas 70 kcal), el atún en aceite (25 g, unas 50), medio huevo cocido (unas 40) y las aceitunas.</p><p>Por eso la cifra se mueve con el aliño. Con dos cucharadas de aceite en vez de una escasa, el plato pasa de 300 kcal. Sin atún ni huevo, una ensalada de tomate aliñada tiene {kcal:ensalada-de-tomate} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "manzana",
@@ -2463,9 +2793,24 @@
     {
      "q": "¿Engordan las almendras?",
      "a": "Tienen muchas calorías por gramo, {per100} por 100 g, pero sacian. Engordan si se comen sin medida."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de almendras?",
+     "a": "{per100} kcal. Un puñado de {g} g son {kcal} kcal."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una almendra?",
+     "a": "Unas 7 kcal. Una almendra pesa algo más de un gramo, y diez son unas 70 kcal."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de las almendras por 100 g, por puñado y por unidad",
+     "html": "<p>Las almendras tienen {per100} kcal por cada 100 g. Un puñado de {g} g, que son unas 25 almendras, tiene {kcal} kcal: unas 7 kcal por almendra.</p><p>Son densas porque la mitad de su peso es grasa ({fat} g por puñado), pero también llevan {protein} g de proteína y casi 4 g de fibra. Son las cifras de la almendra cruda; tostada sin aceite queda prácticamente igual, y frita y salada sube algo por el aceite. 100 kcal son {g100kcal} g, unas 14 almendras.</p>"
+    }
+   ]
   },
   {
    "slug": "pizza",
@@ -2561,9 +2906,24 @@
     {
      "q": "¿Cómo hacerlo más ligero?",
      "a": "El huevo a la plancha y el plátano sin freír. El arroz, en ración de 70 u 80 g en crudo por persona."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de arroz a la cubana?",
+     "a": "{per100} kcal. El arroz blanco cocido solo tiene 130 kcal por 100 g, casi lo mismo: el huevo sube la media y el tomate la baja."
+    },
+    {
+     "q": "¿Cuántas calorías tiene el arroz a la cubana con dos huevos?",
+     "a": "Unas 510 kcal: cada huevo frito suma unas 100 kcal a las {kcal} del plato con uno."
     }
    ],
-   "updated": "2026-11-08"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del arroz a la cubana por 100 g y por plato",
+     "html": "<p>Un plato de arroz a la cubana ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. Por partes: el arroz blanco cocido (160 g) aporta unas 210 kcal; el huevo frito, unas 100; el aceite, unas 45; el plátano (40 g), unas 35; y el tomate frito (50 g), unas 25.</p><p>La cifra cuenta medio plátano pequeño y sin freír aparte. Con un plátano entero frito y dos huevos, que es como se sirve en muchas casas, el plato ronda las 600 kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "lentejas-con-chorizo",
@@ -2656,9 +3016,24 @@
     {
      "q": "¿Es bueno el bacalao al pil pil para una dieta?",
      "a": "Tiene mucha proteína y casi nada de hidratos, y la grasa es de aceite de oliva. Cabe en una dieta si cuentas el aceite; para algo más ligero, tómalo con poca salsa."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de bacalao al pil pil?",
+     "a": "{per100} kcal con su salsa. El bacalao solo tiene 105 kcal por 100 g: la otra mitad es el aceite del pil pil."
+    },
+    {
+     "q": "¿Cuánta proteína tiene el bacalao al pil pil?",
+     "a": "{protein} g por ración, con apenas {carbs} g de hidratos. La grasa, {fat} g, es casi toda aceite de oliva."
     }
    ],
-   "updated": "2026-11-09"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del bacalao al pil pil por 100 g y por ración",
+     "html": "<p>Una ración de bacalao al pil pil ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. El bacalao es magro: los 150 g de la ración aportan unas 160 kcal y casi toda la proteína. La salsa es aceite emulsionado con la gelatina del pescado, y la app cuenta 25 g: unas 220 kcal, más de la mitad del plato.</p><p>Por eso la cifra depende de cuánta salsa se sirva y de cuánta se rebañe. Un bacalao a la vizcaína, con salsa de pimiento en lugar de aceite, tiene {kcal:bacalao-a-la-vizcaina} kcal la ración.</p>"
+    }
+   ]
   },
   {
    "slug": "fideua",
@@ -2698,9 +3073,24 @@
     {
      "q": "¿Cuántas calorías tiene el alioli de la fideuá?",
      "a": "Una cucharada de 10 g son unas 70 kcal, casi todo grasa. En la ración de la app va incluida una cucharada."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de fideuá?",
+     "a": "{per100} kcal, con el alioli incluido. Una ración pesa unos {g} g."
+    },
+    {
+     "q": "¿Cuántas calorías tiene la fideuá sin alioli?",
+     "a": "Unas 480 kcal la ración: los 10 g de alioli que cuenta la app son casi 70 kcal de las {kcal}."
     }
    ],
-   "updated": "2026-11-09"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la fideuá por 100 g y por ración",
+     "html": "<p>Una ración de fideuá ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. Los fideos ya cocidos (185 g) aportan unas 290 kcal; el aceite del sofrito (12 g), unas 105; las gambas y el calamar, unas 70 entre los dos; y la cucharadita de alioli (10 g), casi 70 ella sola.</p><p>El alioli es lo que más mueve la cuenta: sin él la ración se queda en unas 480 kcal, y con dos cucharadas generosas pasa de 650. Una paella de marisco, con arroz en lugar de fideo, tiene {kcal:paella-de-marisco} kcal.</p>"
+    }
+   ]
   },
   {
    "slug": "marmitako",
@@ -2740,9 +3130,24 @@
     {
      "q": "¿Se puede comer marmitako a dieta?",
      "a": "Sí. Es un plato completo, con proteína, hidratos de la patata y verdura. Cuenta el pan aparte."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de marmitako?",
+     "a": "{per100} kcal. Un plato hondo pesa unos {g} g y tiene {kcal} kcal."
+    },
+    {
+     "q": "¿Cuánta proteína tiene el marmitako?",
+     "a": "{protein} g por plato, casi toda del atún, con {carbs} g de hidratos que vienen de la patata."
     }
    ],
-   "updated": "2026-11-09"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías del marmitako por 100 g y por plato",
+     "html": "<p>Un plato de marmitako ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. El atún o bonito (100 g) aporta unas 130 kcal y casi toda la proteína; la patata (150 g), otras 130; y el aceite del sofrito (12 g), unas 105. El pimiento, la cebolla y el tomate apenas suman.</p><p>Es un guiso con caldo, y por eso la cifra por 100 g es de las más bajas entre los platos de cuchara con {protein} g de proteína. Con más patata y menos pescado, que es como sale en muchos menús, suben los hidratos y baja la proteína, pero las calorías cambian poco.</p>"
+    }
+   ]
   },
   {
    "slug": "merluza-en-salsa-verde",
@@ -2782,9 +3187,24 @@
     {
      "q": "¿Es buena la merluza en salsa verde para perder peso?",
      "a": "Sí: mucha proteína y pocas calorías. Lo que hay que vigilar es el pan para mojar la salsa."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de merluza en salsa verde?",
+     "a": "{per100} kcal con su salsa. La merluza sola tiene 112 kcal por 100 g."
+    },
+    {
+     "q": "¿Cuánta proteína tiene la merluza en salsa verde?",
+     "a": "{protein} g por ración, con solo {carbs} g de hidratos. Es de los platos con más proteína por caloría de la tabla."
     }
    ],
-   "updated": "2026-11-09"
+   "updated": "2026-11-14",
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la merluza en salsa verde por 100 g y por ración",
+     "html": "<p>Una ración de merluza en salsa verde ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. La merluza (150 g) aporta unas 170 kcal; el aceite de la salsa (10 g), unas 90; y las almejas, el vino blanco, el ajo y el perejil, el resto.</p><p>La salsa es aceite, vino y el jugo del pescado, ligada a veces con una cucharadita de harina que apenas cuenta. Si se rebaña con pan, cada trozo de 50 g suma {kcal:barra-de-pan} kcal. La misma merluza a la plancha tiene {kcal:merluza-a-la-plancha} kcal la ración.</p>"
+    }
+   ]
   }
  ]
 }

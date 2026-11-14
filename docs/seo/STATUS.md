@@ -29,6 +29,7 @@ Last updated: 14 November 2026.
 | 6–7 | `/comparativa/` hub, features, EN home H1, English dish titles | Done (10 Nov) |
 | 8–10 | All 58 Spanish dish pages: "por 100 g y por ración" sections and FAQ; hub and table top-10 lists | Done (11–14 Nov) |
 | 11 | Blog, Spanish batch 1: 14 posts, headline and title carry the primary keyword | Done (14 Nov) |
+| 12 | Blog, Spanish batch 2: 14 posts retitled; no Spanish post has an on-page note left | Done (14 Nov) |
 <!-- v3-rows -->
 
 Also live outside the numbered PARTs: yearly offer from `tools/pricing.json` (11 Nov), calculator result layout, header at 200 % text, Search Console fixes (no language redirect, schema dates with time zone, inlined home CSS, balanced related-dish links), five strengthened posts (13 Nov).

@@ -1,17 +1,23 @@
-// Share cards (Open Graph images): one per page and language, 1200×630 JPEG,
-// in assets/og/, plus a square 1080×1080 card for the two home pages.
+// Share cards (Open Graph images), v3: one per page and language, 1200×630
+// JPEG in assets/og/, plus a square 1080×1080 card for the two home pages.
 //
-// Every card is drawn from the page's own data, so it cannot drift:
-//   · dish pages   tools/dishes/og.json (written by tools/gen_dishes.py):
-//                  name, kcal per serving, grams, macros
-//   · other pages  the BUILT page: og:title, the kicker/category, the H1
-// Colours are the site's tokens (assets/css/site.css is loaded into the card
-// and only var(--…) is used below); fonts are the site's two typefaces.
-// No price and no offer ever appears on a card: it would go stale.
+// The look (owner's spec, Nov 2026): a warm off-white ground, near-black
+// heavy type, grey small print and ONE accent, the brand orange. A short
+// text block on the left, ONE real visual on the right: genuine app
+// captures (tools/captures/) or a real phone-size screenshot of the page
+// itself, in a plain upright phone frame that runs off the bottom edge.
+// Nothing drawn: no stickers, pills, badges, shapes, tilts or emoji.
+// No price, no offer and no "gratis"/"free" on any card.
 //
-// tools/build_site.py points og:image at the card when it exists, adds its
-// alt text (assets/og/alts.json, written here) and a version from the file's
-// hash, so run:  build → this → build.  Start the server first:
+// Every card is built from the page's own data, so it cannot drift:
+//   · dish pages   tools/dishes/og.json (written by tools/gen_dishes.py)
+//   · other pages  the BUILT page: og:title, its category, and for
+//                  calculators, hubs and the table a live screenshot
+// Type: Plus Jakarta Sans (SIL OFL, tools/og/fonts/), for the cards only.
+//
+// tools/build_site.py points og:image at the card, adds its alt text
+// (assets/og/alts.json, written here) and a ?v= from the file's hash, so
+// run:  build → this → build.  Start the server first:
 //   python3 -m http.server 8765   (from the repository root)
 //   node tools/gen_og.mjs [id-filter]     e.g. node tools/gen_og.mjs home-
 import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
@@ -29,172 +35,172 @@ const text = h => h.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&am
 const meta = (html, prop) => text((html.match(new RegExp(`<meta property="${prop}" content="([^"]*)"`)) || [, ''])[1]);
 const OG = JSON.parse(readFileSync(join(ROOT, 'tools', 'dishes', 'og.json'), 'utf8'));
 const num = (x, lang) => { const s = String(Math.round(x * 10) / 10); const [i, f] = s.split('.'); const g = i.replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'es' ? '.' : ','); return f ? g + (lang === 'es' ? ',' : '.') + f : g; };
+// the one accent is the site's own orange token, read from the stylesheet
+const ORANGE = (readFileSync(join(ROOT, 'assets', 'css', 'site.css'), 'utf8').match(/--coral:\s*(#[0-9A-Fa-f]{6})/) || [])[1];
+if (!ORANGE) throw new Error('--coral not found in assets/css/site.css');
+const [OR, OG_, OB] = [1, 3, 5].map(i => parseInt(ORANGE.slice(i, i + 2), 16));
 
 // ── words ────────────────────────────────────────────────────────────
 const T = {
-  es: { home1: 'Haz una foto.', home2: 'Fotocal cuenta las calorías.', homeSub: 'Contador de calorías con IA · Android', perServing: 'kcal por ración', protein: 'Proteínas', carbs: 'Hidratos', fat: 'Grasas',
-        dishKick: 'Calorías', calcKick: 'Calculadora gratis', calcLine: 'Tu resultado en 30 segundos · Sin registro', hub1: 'Calorías de la comida española', hubSub: n => `${n} platos · por ración y por 100 g`,
-        table1: 'Tabla de calorías', tableSub: n => `${n} alimentos y platos · para consultar o imprimir`, calcHub1: 'Calculadoras de nutrición', calcHubSub: '8 calculadoras gratis · sin registro', blog: 'Blog', blogHub1: 'El blog de Fotocal', blogHubSub: 'Calorías, hábitos y comida de verdad' },
-  en: { home1: 'Snap a photo.', home2: 'Fotocal counts the calories.', homeSub: 'AI calorie counter · Android', perServing: 'kcal per serving', protein: 'Protein', carbs: 'Carbs', fat: 'Fat',
-        dishKick: 'Calories', calcKick: 'Free calculator', calcLine: 'Your result in 30 seconds · No sign-up', hub1: 'Calories in Spanish food', hubSub: n => `${n} dishes · per serving and per 100 g`,
-        table1: 'Food calorie chart', tableSub: n => `${n} foods and dishes · to look up or print`, calcHub1: 'Nutrition calculators', calcHubSub: '8 free calculators · no sign-up', blog: 'Blog', blogHub1: 'The Fotocal blog', blogHubSub: 'Calories, habits and real food' },
+  es: { home: ['Haz una foto.', 'Sabrás las', 'calorías.'], homeSq: ['Haz una foto.', 'Sabrás las ', 'calorías.'], homeSub: 'Contador de calorías con IA · Android', perServing: 'kcal por ración',
+        macros: d => `Proteínas ${num(d.p, 'es')} g · Hidratos ${num(d.c, 'es')} g · Grasas ${num(d.f, 'es')} g`, calcLine: 'Resultado en 30 segundos · Sin registro',
+        hub: 'Calorías de la comida española', hubSub: n => `${n} platos · por ración y por 100 g`, table: 'Tabla de calorías', tableSub: n => `${n} alimentos y platos españoles`,
+        calcHub: 'Calculadoras de nutrición', calcHubSub: '8 calculadoras · Sin registro', blogHub: 'El blog de Fotocal', blogHubSub: 'Calorías, hábitos y comida de verdad', blogFoot: 'Blog de Fotocal', blog: 'Blog' },
+  en: { home: ['Snap a photo.', 'Know the', 'calories.'], homeSq: ['Snap a photo.', 'Know the ', 'calories.'], homeSub: 'AI calorie counter · Android', perServing: 'kcal per serving',
+        macros: d => `Protein ${num(d.p, 'en')} g · Carbs ${num(d.c, 'en')} g · Fat ${num(d.f, 'en')} g`, calcLine: 'Result in 30 seconds · No sign-up',
+        hub: 'Calories in Spanish food', hubSub: n => `${n} dishes · per serving and per 100 g`, table: 'Food calorie chart', tableSub: n => `${n} Spanish foods and dishes`,
+        calcHub: 'Nutrition calculators', calcHubSub: '8 calculators · No sign-up', blogHub: 'The Fotocal blog', blogHubSub: 'Calories, habits and real food', blogFoot: 'The Fotocal blog', blog: 'Blog' },
 };
 const CALC = {
-  'calorias-diarias': { es: 'Calorías diarias', en: 'Daily calories', icon: 'M12 3c1 3-2 4-2 7a2 2 0 0 0 4 0c0-1 0-2-1-3 3 1 5 4 5 7a6 6 0 0 1-12 0c0-5 4-7 6-11z' },
-  'deficit-calorico': { es: 'Déficit calórico', en: 'Calorie deficit', icon: 'M4 6l6 6 4-4 6 7M20 10v5h-5' },
-  'imc': { es: 'IMC', en: 'BMI', icon: 'M4 16a8 8 0 0 1 16 0M12 16l4-6M4 16h16' },
-  'proteinas': { es: 'Proteínas al día', en: 'Protein per day', icon: 'M12 4c-4 0-6 4-6 8s2.5 8 6 8 6-4 6-8-2-8-6-8zM12 10a3 3 0 1 0 0 6 3 3 0 0 0 0-6z' },
-  'macros': { es: 'Macros y calorías', en: 'Macros and calories', icon: 'M12 3v9l7.5 4.5A9 9 0 1 1 12 3zM12 3a9 9 0 0 1 9 9h-9z' },
-  'agua': { es: 'Agua al día', en: 'Water per day', icon: 'M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z' },
-  'tmb': { es: 'Metabolismo basal (TMB)', en: 'Basal metabolic rate (BMR)', icon: 'M3 12h4l2-5 4 10 2-5h6' },
-  'peso-saludable': { es: 'Peso ideal según altura', en: 'Ideal weight by height', icon: 'M5 20h14M7 20V8l5-4 5 4v12M10 12h4M10 16h4' },
+  'calorias-diarias': { es: 'Calculadora de calorías diarias', en: 'Daily calorie calculator' },
+  'deficit-calorico': { es: 'Calculadora de déficit calórico', en: 'Calorie deficit calculator' },
+  'imc': { es: 'Calculadora de IMC', en: 'BMI calculator' },
+  'proteinas': { es: 'Calculadora de proteínas', en: 'Protein calculator' },
+  'macros': { es: 'Calculadora de macros', en: 'Macro calculator' },
+  'agua': { es: '¿Cuánta agua beber al día?', en: 'How much water to drink a day' },
+  'tmb': { es: 'Calculadora de metabolismo basal', en: 'BMR calculator' },
+  'peso-saludable': { es: 'Peso ideal según tu altura', en: 'Ideal weight by height' },
 };
-// a food tone per dish group, from the site's own macro and glow tokens
-const TONE = { platos: 'var(--coral)', tapas: 'var(--macro-carbs)', desayuno: 'var(--macro-carbs)', basicos: 'var(--macro-protein)', bebidas: 'var(--pink)' };
+const CALC_Q = { es: 'sexo=mujer&edad=35&altura=165&peso=70&actividad=light&objetivo=perder&ritmo=0.5&meta=62&grasa=25&reparto=balanced&kcal=2150',
+                 en: 'sex=woman&age=35&height=165&weight=70&activity=light&goal=lose&pace=0.5&target=62&bodyfat=25&split=balanced&kcal=2150' };
+// real app captures (tools/captures/): the full phone screens the site's own pictures were cut from
+const cap = (name, lang) => `${base}/tools/captures/${name}-${existsSync(join(ROOT, 'tools', 'captures', `${name}-${lang}.jpg`)) ? lang : 'es'}.jpg`;
+const CAP = { result: 's7/scan-result-top', home: 's7/home-calories', progress: 's7/progress-top', streak: 's7/streak', activity: 's7/home-activity-day', voice: 's7/voice-result', coach: 's2/coach' };
+const BLOG_CAP = { calories: CAP.result, weightloss: CAP.progress, nutrition: CAP.home, eating: CAP.home, mindset: CAP.streak, movement: CAP.activity };
 
 // ── shared pieces ────────────────────────────────────────────────────
+const F = `${base}/tools/og/fonts/plus-jakarta-sans-latin-`;
 const CSS = `
-  *{box-sizing:border-box} html,body{margin:0;padding:0}
-  body{width:var(--W);height:var(--H);overflow:hidden;position:relative;font-family:var(--font-body);-webkit-font-smoothing:antialiased;background:var(--dark);color:var(--on-dark)}
-  .cream{background:var(--macro-carbs-bg);color:var(--ink)}
-  .glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
-  .brand{position:absolute;left:64px;top:52px;display:flex;align-items:center;gap:16px;font-family:var(--font-display);font-weight:600;font-size:38px;letter-spacing:-.01em}
-  .brand img{width:60px;height:60px}
-  .url{position:absolute;left:64px;bottom:50px;font-size:26px;font-weight:600;opacity:.82}
-  .kick{font-size:25px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
-  .cream .kick{color:var(--brand-text)}
-  h1{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;line-height:1.04}
-  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .pill{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;font-size:26px;font-weight:700}
-  .bar{position:absolute;left:0;right:0;bottom:0;height:14px;background:var(--grad)}
+@font-face{font-family:"PJS";font-weight:500;src:url(${F}500-normal.woff2) format("woff2")}
+@font-face{font-family:"PJS";font-weight:700;src:url(${F}700-normal.woff2) format("woff2")}
+@font-face{font-family:"PJS";font-weight:800;src:url(${F}800-normal.woff2) format("woff2")}
+:root{--bg:#FBF7F2;--tx:#1A1A1A;--gr:#6B6B6B;--or:${ORANGE}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{overflow:hidden;position:relative;background:var(--bg);color:var(--tx);font-family:"PJS",system-ui,sans-serif;font-weight:800;-webkit-font-smoothing:antialiased}
+.glow{position:absolute;inset:0;background:radial-gradient(circle at 80% 58%,rgba(${OR},${OG_},${OB},.10) 0%,rgba(${OR},${OG_},${OB},0) 46%)}
+.col{position:absolute;left:80px;top:64px;bottom:64px;display:flex;flex-direction:column;justify-content:center}
+.logo{display:flex;align-items:center;gap:16px;font-size:40px;letter-spacing:-.5px;line-height:1}
+.logo img{width:64px;height:64px}.logo.s{font-size:32px;gap:12px}.logo.s img{width:48px;height:48px}
+h1{margin:0;font-weight:800;line-height:1.05;letter-spacing:-1.5px}
+h1 .l{display:block;white-space:nowrap}
+.or{color:var(--or)}
+.sub{margin:0;font-size:26px;font-weight:500;color:var(--gr);line-height:1.3;letter-spacing:0}
+.lab{font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--or);line-height:1.2}
+.phone{position:absolute;width:300px;height:660px;border-radius:48px;border:9px solid var(--tx);background:var(--tx);overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:39px}
 `;
-const logo = `<div class="brand"><img src="${base}/assets/img/logo-96.png" alt=""><span>Fotocal</span></div>`;
-const doc = (lang, cls, inner, W = 1200, H = 630) => `<!doctype html><html lang="${lang}"><head><meta charset="utf-8">
-<link rel="stylesheet" href="${base}/assets/css/fonts.css"><link rel="stylesheet" href="${base}/assets/css/site.css">
-<style>:root{--W:${W}px;--H:${H}px}${CSS}</style></head><body class="${cls}">${inner}</body></html>`;
-const fit = (s, sizes) => { for (const [max, px] of sizes) if (s.length <= max) return px; return sizes[sizes.length - 1][1]; };
+// shrink a heading until it fits its width and its line limit (runs in the card page)
+const FIT = `<script>document.fonts.ready.then(()=>{for(const e of document.querySelectorAll('[data-fit]')){const [max,min,lines]=e.dataset.fit.split(',').map(Number);let s=max;const ok=()=>{e.style.fontSize=s+'px';const lh=parseFloat(getComputedStyle(e).lineHeight);return e.scrollWidth<=e.clientWidth+1&&e.getBoundingClientRect().height<=lines*lh+2};while(!ok()&&s>min)s-=2}document.body.dataset.ready='1'})</script>`;
+const logo = small => `<div class="logo${small ? ' s' : ''}"><img src="${base}/assets/img/logo.png" alt=""><span>Fotocal</span></div>`;
+const doc = (lang, inner, W = 1200, H = 630) => `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><style>${CSS}body{width:${W}px;height:${H}px}</style></head><body><div class="glow"></div>${inner}${FIT}</body></html>`;
+const phone = (src, x, y, extra = '') => `<div class="phone" style="left:${x}px;top:${y}px;${extra}"><img src="${src}" alt=""></div>`;
 
 // ── templates ────────────────────────────────────────────────────────
 function home(lang, square) {
-  const t = T[lang], shot = `${base}/assets/img/screens/app-scan-700-${lang}.webp`;
-  if (square) return doc(lang, '', `
-    <div class="glow" style="width:700px;height:700px;left:-200px;top:-220px;background:var(--glow-coral)"></div>
-    <div class="glow" style="width:700px;height:700px;right:-240px;bottom:-200px;background:var(--glow-pink)"></div>
-    ${logo}
-    <h1 style="position:absolute;left:64px;right:64px;top:170px;font-size:84px">${esc(t.home1)}<br><span class="grad">${esc(t.home2)}</span></h1>
-    <div style="position:absolute;left:50%;top:470px;width:470px;transform:translateX(-50%);border-radius:44px 44px 0 0;overflow:hidden;border:10px solid var(--frame);border-bottom:0;box-shadow:var(--shadow-lift)"><img src="${shot}" style="display:block;width:100%"></div>
-    <div class="bar"></div>`, 1080, 1080);
-  return doc(lang, '', `
-    <div class="glow" style="width:640px;height:640px;left:-220px;top:-260px;background:var(--glow-coral)"></div>
-    <div class="glow" style="width:620px;height:620px;right:60px;bottom:-320px;background:var(--glow-pink)"></div>
-    ${logo}
-    <div style="position:absolute;left:64px;top:176px;width:650px">
-      <h1 style="font-size:${lang === 'es' ? 76 : 78}px">${esc(t.home1)}<br><span class="grad">${esc(t.home2)}</span></h1>
-      <p style="margin:30px 0 0;font-size:30px;font-weight:600;color:var(--on-dark-soft)">${esc(t.homeSub)}</p>
+  const t = T[lang], front = cap(CAP.result, lang), back = cap(CAP.home, lang);
+  if (square) return doc(lang, `
+    <div style="position:absolute;left:64px;right:64px;top:84px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      ${logo()}
+      <h1 style="margin-top:36px;font-size:84px"><span class="l">${esc(t.homeSq[0])}</span><span class="l">${esc(t.homeSq[1])}<span class="or">${esc(t.homeSq[2])}</span></span></h1>
+      <p class="sub" style="margin-top:28px">${esc(t.homeSub)}</p>
     </div>
-    <div class="url">getfotocal.com</div>
-    <div style="position:absolute;right:92px;top:46px;width:330px;border-radius:40px;overflow:hidden;border:9px solid var(--frame);box-shadow:var(--shadow-lift);transform:rotate(3deg)"><img src="${shot}" style="display:block;width:100%"></div>
-    <div class="bar"></div>`);
+    ${phone(back, 560, 470, 'width:340px;height:760px')}${phone(front, 190, 520, 'width:340px;height:760px')}`, 1080, 1080);
+  return doc(lang, `
+    <div class="col" style="width:560px">
+      ${logo()}
+      <h1 style="margin-top:36px;font-size:80px"><span class="l">${esc(t.home[0])}</span><span class="l">${esc(t.home[1])}</span><span class="l or">${esc(t.home[2])}</span></h1>
+      <p class="sub" style="margin-top:28px">${esc(t.homeSub)}</p>
+    </div>
+    ${phone(back, 884, 50)}${phone(front, 694, 90)}`);
 }
 
-function dish(lang, d) {
-  const t = T[lang], name = d[lang], tone = TONE[d.group] || 'var(--coral)';
-  const size = fit(name, [[14, 86], [22, 72], [32, 58], [99, 48]]);
-  const chip = (label, v, c, bg) => `<span class="pill" style="background:${bg};color:${c}">${esc(label)} <b style="font-weight:800">${num(v, lang)} g</b></span>`;
-  return doc(lang, 'cream', `
-    <div class="glow" style="width:620px;height:620px;right:-140px;top:-220px;background:${tone};opacity:.34"></div>
-    <div class="glow" style="width:520px;height:520px;right:180px;bottom:-330px;background:var(--pink);opacity:.20"></div>
-    ${logo}
-    <div style="position:absolute;left:64px;top:150px;width:640px">
-      <div class="kick">${esc(t.dishKick)}</div>
-      <h1 style="margin-top:14px;font-size:${size}px">${esc(name)}</h1>
-      ${lang === 'en' && d.en_sub ? `<p style="margin:14px 0 0;font-size:32px;font-weight:600;color:var(--text-soft)">${esc(d.en_sub)}</p>` : ''}
+function dish(lang, d, shot) {
+  const t = T[lang], name = d[lang];
+  return doc(lang, `
+    <div class="col" style="width:620px">
+      ${logo(true)}
+      <h1 data-fit="84,56,2" style="margin-top:32px;font-size:84px">${esc(name)}</h1>
+      <div style="margin-top:22px;display:flex;align-items:baseline;gap:16px;white-space:nowrap">
+        <span class="or" style="font-size:96px;line-height:1;letter-spacing:-2px">${num(d.kcal, lang)}</span>
+        <span style="font-size:28px;font-weight:500;color:var(--gr)">${esc(t.perServing)}</span>
+      </div>
+      <p class="sub" data-fit="24,18,1" style="margin-top:20px;font-size:24px;white-space:nowrap">${esc(t.macros(d))}</p>
     </div>
-    <div style="position:absolute;left:64px;bottom:112px;display:flex;gap:12px;flex-wrap:wrap;width:760px">
-      ${chip(t.protein, d.p, 'var(--macro-protein-text)', 'var(--macro-protein-bg)')}${chip(t.carbs, d.c, 'var(--macro-carbs-text)', 'var(--surface)')}${chip(t.fat, d.f, 'var(--macro-fats-text)', 'var(--macro-fats-bg)')}
-    </div>
-    <div class="url">getfotocal.com</div>
-    <div style="position:absolute;right:56px;top:128px;width:400px;height:400px;border-radius:50%;background:var(--surface);box-shadow:var(--shadow-lift);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
-      <div class="grad" style="font-family:var(--font-display);font-weight:600;font-size:${d.kcal >= 1000 ? 136 : 168}px;line-height:.95;letter-spacing:-.03em;padding:0 8px">${num(d.kcal, lang)}</div>
-      <div style="margin-top:8px;font-size:30px;font-weight:700;color:var(--ink)">${esc(t.perServing)}</div>
-      <div style="margin-top:4px;font-size:25px;font-weight:600;color:var(--muted)">${esc(d['serving_' + lang])} · ${num(d.g, lang)} g</div>
-    </div>
-    <div class="bar"></div>`);
+    ${phone(shot || cap(CAP.result, lang), 800, 80)}`);
 }
 
-function calc(lang, c) {
-  const t = T[lang], name = c[lang];
-  return doc(lang, '', `
-    <div class="glow" style="width:640px;height:640px;right:-160px;top:-240px;background:var(--glow-coral)"></div>
-    <div class="glow" style="width:560px;height:560px;left:-220px;bottom:-320px;background:var(--glow-pink)"></div>
-    ${logo}
-    <div style="position:absolute;left:64px;top:186px;width:700px">
-      <div class="kick">${esc(t.calcKick)}</div>
-      <h1 style="margin-top:16px;font-size:${fit(name, [[16, 92], [24, 76], [99, 62]])}px">${esc(name)}</h1>
-      <p style="margin:28px 0 0;font-size:30px;font-weight:600;color:var(--on-dark-soft)">${esc(t.calcLine)}</p>
+function titled(lang, title, line, shot, sizes = '76,52,3') {
+  return doc(lang, `
+    <div class="col" style="width:620px">
+      ${logo()}
+      <h1 data-fit="${sizes}" style="margin-top:36px;font-size:76px">${esc(title)}</h1>
+      <p class="sub" style="margin-top:28px">${esc(line)}</p>
     </div>
-    <div class="url">getfotocal.com</div>
-    <div style="position:absolute;right:78px;top:150px;width:330px;height:330px;border-radius:84px;background:var(--grad);box-shadow:var(--shadow-lift);display:grid;place-items:center;transform:rotate(-5deg)">
-      <svg viewBox="0 0 24 24" width="190" height="190" fill="none" stroke="var(--on-brand)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${c.icon}"/></svg>
-    </div>
-    <div class="bar"></div>`);
+    ${phone(shot, 800, 80)}`);
 }
 
-function post(lang, kicker, title) {
-  return doc(lang, '', `
-    <div class="glow" style="width:700px;height:700px;right:-260px;top:-300px;background:var(--glow-coral)"></div>
-    <div class="glow" style="width:620px;height:620px;left:240px;bottom:-420px;background:var(--glow-pink)"></div>
-    <div style="position:absolute;right:-90px;bottom:-110px;width:500px;height:500px;border-radius:50%;overflow:hidden;border:10px solid var(--frame);box-shadow:var(--shadow-lift)"><img src="${base}/assets/img/screens/scan-plate-900.webp" style="width:100%;height:100%;object-fit:cover"></div>
-    ${logo}
-    <div style="position:absolute;left:64px;top:150px;bottom:110px;width:${title.length > 44 ? 820 : 780}px;display:flex;flex-direction:column;justify-content:center">
-      <span class="pill" style="align-self:flex-start;background:var(--grad);color:var(--on-brand);font-size:23px;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px">${esc(kicker)}</span>
-      <h1 style="margin-top:26px;font-size:${fit(title, [[30, 88], [44, 76], [60, 64], [999, 54]])}px">${esc(title)}</h1>
+function post(lang, label, title, foot, shot) {
+  return doc(lang, `
+    <div class="col" style="width:620px">
+      ${logo()}
+      <div class="lab" style="margin-top:36px">${esc(label)}</div>
+      <h1 data-fit="72,60,3" style="margin-top:14px;font-size:72px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;padding-bottom:6px">${esc(title)}</h1>
+      <p class="sub" style="margin-top:22px">${esc(foot)}</p>
     </div>
-    <div class="url">getfotocal.com</div>
-    <div class="bar"></div>`);
+    ${phone(shot, 800, 80)}`);
 }
 
-function hub(lang, title, sub, kicker) {
-  return doc(lang, 'cream', `
-    <div class="glow" style="width:640px;height:640px;right:-180px;top:-240px;background:var(--coral);opacity:.32"></div>
-    <div class="glow" style="width:520px;height:520px;left:-200px;bottom:-330px;background:var(--pink);opacity:.18"></div>
-    <div style="position:absolute;right:-60px;top:70px;width:500px;height:500px;border-radius:50%;overflow:hidden;border:12px solid var(--surface);box-shadow:var(--shadow-lift)"><img src="${base}/assets/img/screens/scan-plate-900.webp" style="width:100%;height:100%;object-fit:cover"></div>
-    ${logo}
-    <div style="position:absolute;left:64px;top:176px;width:690px">
-      <div class="kick">${esc(kicker)}</div>
-      <h1 style="margin-top:14px;font-size:${fit(title, [[18, 86], [28, 72], [99, 60]])}px">${esc(title)}</h1>
-      <p style="margin:26px 0 0;font-size:30px;font-weight:700;color:var(--text-soft)">${esc(sub)}</p>
-    </div>
-    <div class="url">getfotocal.com</div>
-    <div class="bar"></div>`);
+// ── real phone-size screenshots of the site's own pages ──────────────
+const browser = await chromium.launch();
+const shots = new Map();
+async function webShot(lang, path, sel) {
+  const key = lang + path;
+  if (shots.has(key)) return shots.get(key);
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 858 }, deviceScaleFactor: 2, locale: lang === 'es' ? 'es-ES' : 'en-GB' });
+  const p = await ctx.newPage();
+  await p.goto(base + (lang === 'en' ? '/en/' : '/') + path, { waitUntil: 'load' });
+  await p.addStyleTag({ content: // no price or offer may reach a card, so the download card and offer lines are left out of the screenshot
+    '.fc-topbar,.calc-sticky,.lang-hint,.dl-card,.offer-badge,.offer-keep,.price-note{display:none!important}.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto!important}#site-nav{top:0!important}' });
+  if (path.includes('?')) await p.waitForSelector('.calc-out[data-state="ready"]', { timeout: 5000 }).catch(() => {});
+  if (sel) await p.evaluate(s => { const e = document.querySelector(s); if (e) window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 104); }, sel);
+  await p.waitForTimeout(350);
+  const buf = await p.screenshot({ type: 'jpeg', quality: 82 });
+  await ctx.close();
+  const uri = 'data:image/jpeg;base64,' + buf.toString('base64');
+  shots.set(key, uri);
+  return uri;
 }
 
 // ── which card for which page ────────────────────────────────────────
 // "gratis"/"free" never goes on an image: on this site the word must sit next
 // to the free plan's limits, and an image has no room for them.
 const clean = s => s.replace(/\s*\((?:gratis|free)\)/gi, '').replace(/,?\s+(?:gratis|free)\b(?=[:.,]|$)/gi, '').replace(/\b(?:gratis|free)\s+/gi, '').replace(/\s{2,}/g, ' ').trim().replace(/^./, c => c.toUpperCase());
-function card(rel, html, lang) {
+async function card(rel, html, lang) {
   const t = T[lang], bare = rel.replace(/^en\//, '').replace(/index\.html$/, '');
   const ogTitle = clean((meta(html, 'og:title') || text((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [, 'Fotocal'])[1])).replace(/\s+[—|]\s+Fotocal$/, ''));
   let m;
-  if (bare === '') return { html: home(lang), alt: `${t.home1} ${t.home2}`, square: home(lang, true) };
+  if (bare === '') return { html: home(lang), alt: t.home.join(' '), square: home(lang, true) };
   if ((m = bare.match(/^calorias\/([^/]+)\/$/)) && OG.dishes[m[1]]) {
     const d = OG.dishes[m[1]];
-    return { html: dish(lang, d), alt: `${d[lang]}: ${num(d.kcal, lang)} ${t.perServing} (${num(d.g, lang)} g)` };
+    if (process.env.OG_DISH_PAGE) return { html: dish(lang, d, await webShot(lang, bare, '.dp-kpis')), alt: '' };
+    return { html: dish(lang, d), alt: `${d[lang]}: ${num(d.kcal, lang)} ${t.perServing} (${num(d.g, lang)} g). ${t.macros(d)}` };
   }
-  if (bare === 'calorias/') return { html: hub(lang, t.hub1, t.hubSub(OG.n_ready), 'Fotocal'), alt: `${t.hub1}: ${t.hubSub(OG.n_ready)}` };
-  if (bare === 'calorias/tabla-de-calorias/') return { html: hub(lang, t.table1, t.tableSub(OG.n_hand), t.dishKick), alt: `${t.table1}: ${t.tableSub(OG.n_hand)}` };
-  if (bare === 'calculadoras/') return { html: hub(lang, t.calcHub1, t.calcHubSub, 'Fotocal'), alt: `${t.calcHub1}: ${t.calcHubSub}` };
-  if ((m = bare.match(/^calculadoras\/([^/]+)\/$/)) && CALC[m[1]]) return { html: calc(lang, CALC[m[1]]), alt: `${t.calcKick}: ${CALC[m[1]][lang]}. ${t.calcLine}` };
-  if (bare === 'blog/') return { html: hub(lang, t.blogHub1, t.blogHubSub, t.blog), alt: `${t.blogHub1}: ${t.blogHubSub}` };
-  // the post's category is the last breadcrumb (…/blog/?cat=…); other pages use their first kicker
-  let kicker = text((html.match(/<a href="[^"]*\?cat=[^"]*">([^<]+)<\/a>\s*<\/nav>/) || html.match(/class="kicker[^"]*"[^>]*>([\s\S]*?)<\//) || [, ''])[1]);
-  if (!kicker || kicker.length > 34) kicker = bare.startsWith('blog/') ? t.blog : 'Fotocal';
-  return { html: post(lang, kicker, ogTitle), alt: `${ogTitle} · Fotocal` };
+  if (bare === 'calorias/') return { html: titled(lang, t.hub, t.hubSub(OG.n_ready), await webShot(lang, bare, '.dp-table-wrap')), alt: `${t.hub}: ${t.hubSub(OG.n_ready)}` };
+  if (bare === 'calorias/tabla-de-calorias/') return { html: titled(lang, t.table, t.tableSub(OG.n_hand), await webShot(lang, bare, '.dp-table-wrap')), alt: `${t.table}: ${t.tableSub(OG.n_hand)}` };
+  if (bare === 'calculadoras/') return { html: titled(lang, t.calcHub, t.calcHubSub, await webShot(lang, bare, '.calc-cards')), alt: `${t.calcHub}: ${t.calcHubSub}` };
+  if ((m = bare.match(/^calculadoras\/([^/]+)\/$/)) && CALC[m[1]])
+    return { html: titled(lang, CALC[m[1]][lang], t.calcLine, await webShot(lang, bare + '?' + CALC_Q[lang], '.calc-out')), alt: `${CALC[m[1]][lang]}. ${t.calcLine}` };
+  if (bare === 'blog/') return { html: titled(lang, t.blogHub, t.blogHubSub, await webShot(lang, bare, '.habit-grid')), alt: `${t.blogHub}: ${t.blogHubSub}` };
+  // posts: the category is the last breadcrumb (…/blog/?cat=<key>); other pages use their first kicker
+  const cat = html.match(/<a href="[^"]*\?cat=([a-z]+)[^"]*">([^<]+)<\/a>\s*<\/nav>/);
+  if (cat) return { html: post(lang, text(cat[2]), ogTitle, t.blogFoot, cap(BLOG_CAP[cat[1]] || CAP.home, lang)), alt: `${ogTitle} · ${t.blogFoot}` };
+  let kicker = text((html.match(/class="kicker[^"]*"[^>]*>([\s\S]*?)<\//) || [, ''])[1]);
+  if (!kicker || kicker.length > 34) kicker = 'Fotocal';
+  const shot = /voice/.test(bare) ? CAP.voice : /barcode/.test(bare) ? CAP.home : /^ai\//.test(bare) ? CAP.coach : /scan-food|^features\/$/.test(bare) ? CAP.result : CAP.home;
+  return { html: post(lang, kicker, ogTitle, t.homeSub, cap(shot, lang)), alt: `${ogTitle} · Fotocal` };
 }
 
 // ── render ───────────────────────────────────────────────────────────
-const browser = await chromium.launch();
 const ctx = await browser.newContext({ deviceScaleFactor: 1 });
 const page = await ctx.newPage();
 let current = '';
@@ -203,8 +209,9 @@ async function shoot(html, file, W, H) {
   current = html;
   await page.setViewportSize({ width: W, height: H });
   await page.goto(base + '/__og', { waitUntil: 'load' });
-  await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(i => i.decode().catch(() => {}))); });
-  let q = 86, buf;
+  await page.waitForFunction(() => document.body.dataset.ready === '1');
+  await page.evaluate(() => Promise.all([...document.images].map(i => i.decode().catch(() => {}))));
+  let q = 88, buf;
   do { buf = await page.screenshot({ type: 'jpeg', quality: q, clip: { x: 0, y: 0, width: W, height: H } }); q -= 6; } while (buf.length > MAX_BYTES && q > 50);
   writeFileSync(join(ROOT, 'assets', 'og', file), buf);
   return buf.length;
@@ -219,7 +226,7 @@ for (const rel of pages) {
   const bare = rel.replace(/^en\//, '');
   const id = (bare === 'index.html' ? 'home' : bare.replace(/\/index\.html$/, '').replace(/\//g, '-')) + '-' + lang;
   if (only && !id.includes(only)) continue;
-  const c = card(rel, html, lang);
+  const c = await card(rel, html, lang);
   biggest = Math.max(biggest, await shoot(c.html, id + '.jpg', 1200, 630));
   if (c.square) await shoot(c.square, id + '-square.jpg', 1080, 1080);
   alts[id] = c.alt; n++;

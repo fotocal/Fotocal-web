@@ -25,6 +25,7 @@ from compare_table import cell as cmp_cell, date_text        # noqa: E402
 ROOT, SITE, esc, ld_block, ORG = GD.ROOT, GD.SITE, GD.esc, GD.ld_block, GD.ORG
 SRC = os.path.join(ROOT, "src")
 TODAY = "2026-11-08"
+METH_MOD = "2026-11-14"   # last review of /metodologia/ (who writes and reviews, corrections)
 LANGS = ("es", "en")
 MONTHS = {"es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
           "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
@@ -140,7 +141,14 @@ def metodologia():
           <li>Antes de publicar, un programa comprueba cada página: que las cifras de ración y de 100 g cuadran, que los precios y los límites del plan gratis son los mismos en toda la web, y que no hay enlaces rotos.</li>
           <li>Si ves un error, escríbenos desde la <a href="../contact/">página de contacto</a> y lo corregimos.</li></ul>
       <h2 id="quien">Quién hace Fotocal</h2>
-      <p>Fotocal lo diseña y lo programa una sola persona, en Madrid (<a href="../about/">más sobre nosotros</a>). No somos un servicio médico: las cifras y las calculadoras son orientativas y no sustituyen a un profesional sanitario.</p>""",
+      <p>Fotocal lo diseña y lo programa una sola persona, en Madrid (<a href="../about/">más sobre nosotros</a>). No somos un servicio médico: las cifras y las calculadoras son orientativas y no sustituyen a un profesional sanitario.</p>
+      <h2 id="revision">Quién escribe y quién revisa</h2>
+      <ul><li><strong>Quién escribe:</strong> la misma persona que hace la app escribe todas las páginas y artículos de este sitio. No firmamos con nombres ni títulos que no tenemos.</li>
+          <li><strong>Quién revisa:</strong> ningún dietista-nutricionista ni médico revisa el contenido. Por eso las cifras no son opiniones: salen de las bases de datos públicas de arriba, y los artículos que citan estudios enlazan el estudio.</li>
+          <li><strong>Qué no hacemos:</strong> no damos pautas para menores, embarazo, lactancia ni enfermedades; ahí remitimos siempre a un profesional sanitario.</li>
+          <li><strong>Correcciones:</strong> si una cifra o una frase está mal, escríbenos desde la <a href="../contact/">página de contacto</a>. La corregimos y cambia la fecha de la página.</li>
+          <li><strong>Última revisión de esta página:</strong> 14 de noviembre de 2026.</li></ul>
+      <p>Para seguir: las <a href="../guias/">guías para contar calorías</a>, la <a href="../calorias/tabla-de-calorias/">tabla de calorías</a> y las <a href="../calculadoras/">calculadoras</a>.</p>""",
      "en": """
       <h2 id="sources">Data sources</h2>
       <p>The dish figures are the ones in the Fotocal app's database. Each basic food is a row from a public food composition database:</p>
@@ -167,7 +175,14 @@ def metodologia():
           <li>Before publishing, a program checks every page: that serving and per-100 g figures agree, that prices and free-plan limits are the same across the site, and that there are no broken links.</li>
           <li>If you spot an error, write to us from the <a href="../contact/">contact page</a> and we will fix it.</li></ul>
       <h2 id="who">Who makes Fotocal</h2>
-      <p>Fotocal is designed and built by one person in Madrid (<a href="../about/">more about us</a>). We are not a medical service: the figures and calculators are for guidance and do not replace a health professional.</p>"""}
+      <p>Fotocal is designed and built by one person in Madrid (<a href="../about/">more about us</a>). We are not a medical service: the figures and calculators are for guidance and do not replace a health professional.</p>
+      <h2 id="review">Who writes and who reviews</h2>
+      <ul><li><strong>Who writes:</strong> the same person who makes the app writes every page and article on this site. We do not sign with names or titles we do not hold.</li>
+          <li><strong>Who reviews:</strong> no dietitian or doctor reviews the content. That is why the figures are not opinions: they come from the public databases above, and articles that cite studies link the study.</li>
+          <li><strong>What we do not do:</strong> we give no guidance for minors, pregnancy, breastfeeding or illness; there we always point to a health professional.</li>
+          <li><strong>Corrections:</strong> if a figure or a sentence is wrong, write to us from the <a href="../contact/">contact page</a>. We fix it and the page's date changes.</li>
+          <li><strong>This page was last reviewed:</strong> 14 November 2026.</li></ul>
+      <p>Next: the <a href="../guias/">calorie counting guides</a>, the <a href="../calorias/tabla-de-calorias/">food calorie chart</a> and the <a href="../calculadoras/">calculators</a>.</p>"""}
     vals = dict(usda=usda, ciqual=ciqual, nfood=nfood, nhand=nhand, ncomp=ncomp, commit=commit, cdate=cdate)
     quick = {"es": "Las calorías de cada plato salen de sumar, gramo a gramo, sus ingredientes en bases de datos públicas (USDA y CIQUAL), con la ración tal como se sirve en España. Las calculadoras usan las fórmulas de la app: Mifflin-St Jeor, los rangos de la OMS y las referencias de la EFSA.",
              "en": "Each dish's calories come from adding up its ingredients gram by gram, using public databases (USDA and CIQUAL), with the serving as it is served in Spain. The calculators use the app's formulas: Mifflin-St Jeor, the WHO bands and EFSA references."}
@@ -176,12 +191,12 @@ def metodologia():
         home, me = ("Inicio", "Metodología") if l == "es" else ("Home", "Methodology")
         ld = "\n".join([
             ld_block({"@context": "https://schema.org", "@type": "Article", "headline": meta[l]["title"].replace(" — Fotocal", ""), "description": meta[l]["desc"],
-                      "inLanguage": l, "url": SITE + "metodologia/", "datePublished": TODAY, "dateModified": TODAY, "author": ORG, "publisher": ORG}),
+                      "inLanguage": l, "url": SITE + "metodologia/", "datePublished": TODAY, "dateModified": METH_MOD, "author": ORG, "publisher": ORG}),
             crumbs_ld([(home, SITE), (me, SITE + "metodologia/")])])
         h1 = "Cómo calculamos nuestras cifras" if l == "es" else "How we work out our figures"
         lead = ("De dónde salen las calorías de cada plato, cómo se fija la ración y qué fórmulas usan las calculadoras. Para que puedas comprobar cualquier número de esta web."
                 if l == "es" else "Where each dish's calories come from, how the serving is set and which formulas the calculators use, so you can check any number on this site.")
-        blocks.append(article(l, h1, lead, body[l] % vals, TODAY, crumbs_html(l, [(home, "../"), (me, "./")]), ld, quick[l]))
+        blocks.append(article(l, h1, lead, body[l] % vals, METH_MOD, crumbs_html(l, [(home, "../"), (me, "./")]), ld, quick[l]))
     write("metodologia/index.html", page(1, "metodologia/", meta, blocks, "metodologia"))
 
 

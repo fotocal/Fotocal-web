@@ -165,9 +165,13 @@
     {
      "q": "¿Es buena la paella para la dieta?",
      "a": "Cabe en una dieta: es un plato completo, con arroz, carne y verdura, y {protein} g de proteína por ración. Lo que hay que mirar es la cantidad: una ración son {kcal} kcal y repetir la sube a casi el doble."
+    },
+    {
+     "q": "¿Qué tiene menos calorías, la paella valenciana o la de marisco?",
+     "a": "La de marisco: {kcal:paella-de-marisco} kcal la ración en la app, frente a {kcal} de la valenciana. El marisco es más magro que el pollo y el conejo; el arroz y el aceite son casi los mismos."
     }
    ],
-   "updated": "2026-11-11",
+   "updated": "2026-11-16",
    "sections": [
     {
      "id": "cien-gramos",
@@ -3205,6 +3209,121 @@
      "html": "<p>Una ración de merluza en salsa verde ({g} g) tiene {kcal} kcal: {per100} kcal por cada 100 g. La merluza (150 g) aporta unas 170 kcal; el aceite de la salsa (10 g), unas 90; y las almejas, el vino blanco, el ajo y el perejil, el resto.</p><p>La salsa es aceite, vino y el jugo del pescado, ligada a veces con una cucharadita de harina que apenas cuenta. Si se rebaña con pan, cada trozo de 50 g suma {kcal:barra-de-pan} kcal. La misma merluza a la plancha tiene {kcal:merluza-a-la-plancha} kcal la ración.</p>"
     }
    ]
+  },
+  {
+   "slug": "hamburguesa-casera-con-patatas",
+   "app_id": "hamburguesa-casera-con-patatas",
+   "name": "hamburguesa casera con patatas",
+   "article": "la",
+   "aliases": [
+    "hamburguesa con patatas fritas",
+    "hamburguesa completa"
+   ],
+   "status": "ready",
+   "published": "2026-11-16",
+   "compare": [
+    "pizza-2-porciones",
+    "bocadillo-de-jamon-serrano",
+    "huevos-fritos-con-patatas",
+    "sandwich-mixto"
+   ],
+   "blog": [
+    "eating-out-without-wrecking-your-diet",
+    "portion-control-simple-tricks",
+    "how-much-protein-per-day"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>El plato de Fotocal pesa {g} g y tiene {kcal} kcal: una hamburguesa de ternera de 110 g ya hecha, 60 g de pan, unos 90 g de patatas, lechuga, tomate y una cucharadita de kétchup. Es la hamburguesa de casa, con la carne a la plancha y las patatas al horno. Una de hamburguesería suele llevar más carne, queso, salsa y patatas fritas en aceite, y pesa bastante más.</p>",
+   "drivers": "<p>La carne es lo que más suma: los 110 g de hamburguesa aportan unas 275 kcal y casi toda la proteína, {protein} g en el plato. El pan suma unas 160 kcal y las patatas, unas 145. El aceite de la plancha (8 g) añade unas 70. La lechuga, el tomate y el kétchup juntos no llegan a 20.</p>",
+   "lighter": "<p>Lo que más cambia la cuenta son las patatas y el aceite: sin patatas, el plato se queda en unas 520 kcal. Cambiarlas por ensalada ahorra casi todo eso. Añadir una loncha de queso o una cucharada de mayonesa suma cerca de 100 kcal cada una. Comparada con dos porciones de pizza de la app, {kcal:pizza-2-porciones} kcal, la hamburguesa con patatas tiene más calorías pero también casi el doble de proteína.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una hamburguesa con patatas?",
+     "a": "{kcal} kcal el plato de {g} g que usa Fotocal: hamburguesa casera de ternera con pan y unos 90 g de patatas. Lleva {protein} g de proteína, {carbs} g de hidratos y {fat} g de grasa."
+    },
+    {
+     "q": "¿Cuántas calorías tiene una hamburguesa sin patatas?",
+     "a": "Unas 520 kcal: la hamburguesa con su pan, el aceite, la lechuga, el tomate y el kétchup. Las patatas del plato son unas 145 kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, una hamburguesa o una pizza?",
+     "a": "Con las raciones de la app, la hamburguesa con patatas: {kcal} kcal frente a {kcal:pizza-2-porciones} de dos porciones de pizza. Sin patatas quedan casi iguales."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de hamburguesa con patatas?",
+     "a": "{per100} kcal, contando el plato entero. La hamburguesa de ternera a la plancha sola tiene unas 250 kcal por 100 g en la fila de USDA que usa la app."
+    },
+    {
+     "q": "¿Se puede comer hamburguesa a dieta?",
+     "a": "Sí, si cabe en tus calorías del día. {kcal} kcal son una comida completa; lo que la desborda es sumarle refresco con azúcar, queso, salsas y una segunda ración de patatas."
+    }
+   ],
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la hamburguesa por 100 g, por unidad y con patatas",
+     "html": "<p>El plato completo tiene {per100} kcal por cada 100 g y {kcal} kcal en total. Por partes: la hamburguesa de ternera a la plancha (110 g), unas 275 kcal; el pan (60 g), unas 160; las patatas al horno (unos 90 g), unas 145; y el aceite, unas 70.</p><p>La hamburguesa en su pan, sin patatas, ronda las 520 kcal. Solo la carne, sin pan, unas 275. Media hamburguesa con patatas son {kcal/2} kcal. Y una doble, con dos piezas de carne, sube unas 275 kcal más.</p>"
+    }
+   ],
+   "updated": "2026-11-16",
+   "title": "Calorías de la hamburguesa con patatas: plato y 100 g"
+  },
+  {
+   "slug": "paella-de-marisco",
+   "app_id": "paella-de-marisco",
+   "name": "paella de marisco",
+   "article": "la",
+   "aliases": [
+    "arroz de marisco",
+    "paella marinera"
+   ],
+   "status": "ready",
+   "published": "2026-11-16",
+   "compare": [
+    "paella-valenciana",
+    "fideua",
+    "arroz-a-la-cubana",
+    "arroz-con-pollo"
+   ],
+   "blog": [
+    "calorias-menu-del-dia",
+    "eating-out-without-wrecking-your-diet",
+    "portion-control-simple-tricks"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La ración de Fotocal son {g} g y {kcal} kcal: 170 g de arroz ya cocido, 40 g de gambas, 30 g de calamar, 30 g de mejillones, un poco de tomate y pimiento rojo, y 12 g de aceite. Es un plato llano normal. En un restaurante la ración suele ser mayor, y si repites, la cuenta se dobla: cuenta unas {per100} kcal por cada 100 g de paella.</p>",
+   "drivers": "<p>El arroz pone casi todos los hidratos, {carbs} g, y cerca de la mitad de las calorías: unas 220. El aceite del sofrito es lo segundo: 12 g, unas 105 kcal. El marisco aporta la proteína, {protein} g en la ración, con muy poca grasa: gambas, calamar y mejillones suman unas 120 kcal entre los tres.</p>",
+   "lighter": "<p>Tiene menos calorías que la paella valenciana de la app, {kcal:paella-valenciana} kcal la ración, porque el marisco es más magro que el pollo y el conejo con su grasa. Lo que la sube es el aceite del sofrito y el tamaño del plato, más que el marisco. La fideuá, con alioli, llega a {kcal:fideua} kcal.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una ración de paella de marisco?",
+     "a": "{kcal} kcal la ración de {g} g: {carbs} g de hidratos, {protein} g de proteína y {fat} g de grasa. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Qué tiene más calorías, la paella de marisco o la valenciana?",
+     "a": "La valenciana: {kcal:paella-valenciana} kcal la ración frente a {kcal} de la de marisco. La carne aporta más grasa que el marisco."
+    },
+    {
+     "q": "¿Engorda la paella de marisco?",
+     "a": "No más que cualquier plato de {kcal} kcal. Es un plato único razonable; lo que dispara la cuenta es repetir, el pan y el alioli."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de paella de marisco?",
+     "a": "{per100} kcal. El arroz blanco cocido solo tiene 130 kcal por 100 g: el aceite del sofrito sube la media."
+    },
+    {
+     "q": "¿Cuánta proteína tiene la paella de marisco?",
+     "a": "{protein} g por ración, del marisco y algo del arroz. Es menos que la paella valenciana, que tiene {protein:paella-valenciana} g."
+    }
+   ],
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la paella de marisco por 100 g y por ración",
+     "html": "<p>La paella de marisco tiene {per100} kcal por cada 100 g, y la ración de {g} g, {kcal} kcal. Por ingredientes: el arroz cocido (170 g), unas 220 kcal; el aceite (12 g), unas 105; los mejillones, unas 50; las gambas, unas 40; y el calamar, unas 30.</p><p>Media ración, como primer plato de un menú, son {kcal/2} kcal. Un plato grande de 450 g, {per100*4.5}. No hay que confundirla con la paella mixta, que lleva además carne y queda más cerca de la valenciana.</p>"
+    }
+   ],
+   "updated": "2026-11-16"
   }
  ]
 }

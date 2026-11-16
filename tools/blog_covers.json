@@ -313,5 +313,10 @@
   "category": "Calorie counting",
   "glyph": "target",
   "pal": 5
+ },
+ "deficit-para-perder-5-kilos": {
+  "category": "Calorie counting",
+  "glyph": "target",
+  "pal": 2
  }
 }

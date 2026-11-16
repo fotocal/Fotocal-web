@@ -19,6 +19,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /blog/choose-photo-calorie-counter/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/common-calorie-counting-mistakes/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/deficit-500-calorias-dia/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
+/blog/deficit-para-perder-5-kilos/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/dietary-fat-how-much-and-which-kinds/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/do-calories-matter-or-food-quality/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/do-you-need-to-exercise-to-lose-weight/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -105,6 +106,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /calorias/fideua/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/gambas-al-ajillo/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/gazpacho/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/calorias/hamburguesa-casera-con-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/huevo-cocido/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/huevos-fritos-con-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/,dish-hub,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
@@ -117,6 +119,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /calorias/marmitako/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/merluza-en-salsa-verde/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/migas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/calorias/paella-de-marisco/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/paella-valenciana/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/patatas-bravas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/pimientos-de-padron/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
@@ -163,6 +166,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/blog/choose-photo-calorie-counter/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/common-calorie-counting-mistakes/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/deficit-500-calorias-dia/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
+/en/blog/deficit-para-perder-5-kilos/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/dietary-fat-how-much-and-which-kinds/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/do-calories-matter-or-food-quality/,post,pass,fail,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/do-you-need-to-exercise-to-lose-weight/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -249,6 +253,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/calorias/fideua/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/gambas-al-ajillo/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/gazpacho/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/en/calorias/hamburguesa-casera-con-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/huevo-cocido/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/huevos-fritos-con-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/,dish-hub,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,n/a,n/a
@@ -261,6 +266,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/calorias/marmitako/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/merluza-en-salsa-verde/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/migas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/en/calorias/paella-de-marisco/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/paella-valenciana/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/patatas-bravas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/pimientos-de-padron/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass

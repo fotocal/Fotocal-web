@@ -38,6 +38,7 @@ Rows marked *provisional* (blog posts outside §B.1) are a Spanish or English se
 | **new page:** `/comparativa/cal-ai-opiniones/` | cal ai opiniones | cal ai es gratis · cal ai es de pago · cal ai precio app · es fiable cal ai | cal ai alternative for android |
 | **new page:** `/comparativa/yazio-opiniones/` | yazio opiniones | yazio es gratis · yazio es de pago · cuesta dinero yazio | yazio review |
 | `/blog/calorias-para-adelgazar-mujer/` (published 14-11-2026) | calorías para adelgazar mujer | cuántas calorías debe comer una mujer para adelgazar · qué pasa si como 1500 calorías al día · calorías para adelgazar 1 kilo por semana | calories to lose weight for women |
+| `/blog/deficit-para-perder-5-kilos/` (published 16-11-2026) | cuánto se tarda en perder 5 kilos | déficit calórico para perder 5 kilos · perder 5 kilos en un mes · cuántas calorías para perder 5 kg | how long does it take to lose 5 kg |
 | `/blog/app-contar-calorias-gratis/` | app para contar calorías gratis | contador de calorías gratis sin pagar · qué incluye gratis cada app · app calorías sin suscripción | free calorie counter app no subscription |
 | `/blog/calorie-deficit-for-fat-loss/` | déficit calórico qué es y cómo hacerlo | cómo hacer un déficit calórico · qué comer en déficit calórico · qué no comer en déficit calórico | calorie deficit explained |
 | `/blog/deficit-500-calorias-dia/` | déficit de 500 calorías | cuánto se adelgaza con 500 kcal de déficit · déficit de 500 calorías qué comer | 500 calorie deficit |

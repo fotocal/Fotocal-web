@@ -362,6 +362,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/deficit-500-calorias-dia/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/blog/deficit-para-perder-5-kilos/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/deficit-para-perder-5-kilos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/deficit-para-perder-5-kilos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/deficit-para-perder-5-kilos/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/blog/deficit-para-perder-5-kilos/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/blog/deficit-para-perder-5-kilos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/blog/deficit-para-perder-5-kilos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/blog/deficit-para-perder-5-kilos/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/blog/dietary-fat-how-much-and-which-kinds/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -1910,6 +1928,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/gazpacho/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/hamburguesa-casera-con-patatas/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/hamburguesa-casera-con-patatas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/hamburguesa-casera-con-patatas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/hamburguesa-casera-con-patatas/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/hamburguesa-casera-con-patatas/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/hamburguesa-casera-con-patatas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/hamburguesa-casera-con-patatas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/hamburguesa-casera-con-patatas/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/huevo-cocido/</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -2126,8 +2162,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/migas/"/>
   </url>
   <url>
+    <loc>https://getfotocal.com/calorias/paella-de-marisco/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/paella-de-marisco/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/paella-de-marisco/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/paella-de-marisco/"/>
+  </url>
+  <url>
+    <loc>https://getfotocal.com/en/calorias/paella-de-marisco/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/paella-de-marisco/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getfotocal.com/en/calorias/paella-de-marisco/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getfotocal.com/calorias/paella-de-marisco/"/>
+  </url>
+  <url>
     <loc>https://getfotocal.com/calorias/paella-valenciana/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/paella-valenciana/"/>
@@ -2136,7 +2190,7 @@
   </url>
   <url>
     <loc>https://getfotocal.com/en/calorias/paella-valenciana/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://getfotocal.com/calorias/paella-valenciana/"/>

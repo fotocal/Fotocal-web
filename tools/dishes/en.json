@@ -58,7 +58,9 @@
   "bacalao-al-pil-pil": "salt cod in garlic and olive oil emulsion",
   "fideua": "seafood noodle paella",
   "marmitako": "Basque tuna and potato stew",
-  "merluza-en-salsa-verde": "hake in green parsley sauce"
+  "merluza-en-salsa-verde": "hake in green parsley sauce",
+  "hamburguesa-casera-con-patatas": "homemade beef burger with fries",
+  "paella-de-marisco": "seafood paella"
  },
  "group_of": {
   "tortilla-de-patatas": "platos",
@@ -118,7 +120,9 @@
   "bacalao-al-pil-pil": "platos",
   "fideua": "platos",
   "marmitako": "platos",
-  "merluza-en-salsa-verde": "platos"
+  "merluza-en-salsa-verde": "platos",
+  "hamburguesa-casera-con-patatas": "platos",
+  "paella-de-marisco": "platos"
  },
  "groups": {
   "platos": {
@@ -432,6 +436,16 @@
   "pizza": {
    "en": "pizza",
    "es": false
+  },
+  "hamburguesa-casera-con-patatas": {
+   "en": "homemade burger with fries",
+   "es": false,
+   "title": "Calories in a Homemade Burger with Fries: per Plate"
+  },
+  "paella-de-marisco": {
+   "en": "seafood paella",
+   "es": true,
+   "title": "Calories in Seafood Paella (Paella de Marisco)"
   }
  }
 }

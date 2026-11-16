@@ -1,5 +1,5 @@
 {
- "n_ready": 58,
+ "n_ready": 60,
  "n_hand": 218,
  "dishes": {
   "tortilla-de-patatas": {
@@ -752,6 +752,32 @@
    "p": 38.7,
    "c": 3.4,
    "f": 15.0,
+   "serving_es": "1 ración",
+   "serving_en": "1 serving",
+   "group": "platos"
+  },
+  "hamburguesa-casera-con-patatas": {
+   "es": "Hamburguesa casera con patatas",
+   "en": "Homemade burger with fries",
+   "en_sub": "",
+   "kcal": 666,
+   "g": 310,
+   "p": 36.8,
+   "c": 57.0,
+   "f": 32.1,
+   "serving_es": "1 plato",
+   "serving_en": "1 plate",
+   "group": "platos"
+  },
+  "paella-de-marisco": {
+   "es": "Paella de marisco",
+   "en": "Seafood paella",
+   "en_sub": "paella de marisco",
+   "kcal": 458,
+   "g": 302,
+   "p": 27.4,
+   "c": 52.6,
+   "f": 14.5,
    "serving_es": "1 ración",
    "serving_en": "1 serving",
    "group": "platos"

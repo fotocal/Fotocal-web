@@ -325,6 +325,7 @@ def comparativa():
         body.append('      <h2>%s</h2><ul>' % ("Comparaciones una a una" if l == "es" else "One-to-one comparisons"))
         for comp, slug in VS.items():
             body.append('        <li><a href="fotocal-vs-%s/">Fotocal vs %s</a></li>' % (slug, comp))
+        body.append('        <li><a href="fotocal-vs-contar-a-mano/">%s</a></li>' % ("Fotocal vs contar calorías a mano" if l == "es" else "Fotocal vs counting calories by hand"))
         body.append('      </ul>')
         body.append('      <p>%s</p>' % ('Si dudas entre apps de foto, lee también <a href="../blog/choose-photo-calorie-counter/">cómo elegir una app de calorías con foto</a> y <a href="../blog/photo-calorie-apps-accuracy/">si son precisas las apps de calorías con foto</a>.'
                                          if l == "es" else 'If you are choosing between photo apps, also read <a href="../blog/choose-photo-calorie-counter/">how to choose a photo calorie app</a> and <a href="../blog/photo-calorie-apps-accuracy/">are photo calorie apps accurate</a>.'))
@@ -351,6 +352,37 @@ def comparativa():
 
 # ── /widget/ and /embed/ ─────────────────────────────────────────────
 EMBEDS = [("calorias", "calorias-diarias"), ("imc", "imc")]
+
+
+def vs_by_hand():
+    """/comparativa/fotocal-vs-contar-a-mano/ (tools/compare_by_hand.py)."""
+    import compare_by_hand as CB
+    check(CB.META)
+    path = "comparativa/%s/" % CB.SLUG
+    blocks = []
+    for l in LANGS:
+        home, hub = ("Inicio", "Comparativa") if l == "es" else ("Home", "Comparison")
+        name = "Fotocal vs contar a mano" if l == "es" else "Fotocal vs counting by hand"
+        cols = ("A mano", "Con Fotocal") if l == "es" else ("By hand", "With Fotocal")
+        # the home page's comparison table: stacks into one card per row on a phone
+        rows = "\n        ".join('<tr><th>%s</th><td data-label="%s" class="c-us">%s</td><td data-label="%s">%s</td></tr>'
+                                  % (esc(a), cols[1], c, cols[0], esc(b)) for a, b, c in CB.ROWS[l])
+        table = ('      <div class="compare-wrap"><table class="compare compare-text"><thead><tr><th class="col-feat"></th><th class="compare-us">%s</th><th>%s</th></tr></thead><tbody>\n        %s\n      </tbody></table></div>'
+                 % (cols[1], cols[0], rows))
+        faq_h = "Preguntas frecuentes" if l == "es" else "Frequently asked questions"
+        faq = "\n".join('      <h3>%s</h3>\n      <p>%s</p>' % (esc(q), a) for q, a in CB.FAQ[l])
+        body = "\n".join([table, CB.BODY[l], '      <h2>%s</h2>' % faq_h, faq,
+                          GD.download_card(l, "¿Quieres probar la foto?" if l == "es" else "Want to try the photo?",
+                                           "Haz una foto al plato y Fotocal cuenta las calorías por ti." if l == "es" else "Snap your plate and Fotocal counts the calories for you.",
+                                           GD.PLAY + "&utm_source=web&utm_medium=compare&utm_campaign=vs-a-mano")])
+        ld = "\n".join([
+            ld_block({"@context": "https://schema.org", "@type": "Article", "headline": CB.META[l]["title"], "description": CB.META[l]["desc"],
+                      "inLanguage": l, "url": SITE + path, "datePublished": CB.UPDATED, "dateModified": CB.UPDATED, "author": ORG, "publisher": ORG}),
+            ld_block({"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": l, "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in CB.FAQ[l]]}),
+            crumbs_ld([(home, SITE), (hub, SITE + "comparativa/"), (name, SITE + path)])])
+        blocks.append(article(l, CB.H1[l], CB.LEAD[l], body, CB.UPDATED, crumbs_html(l, [(home, "../../"), (hub, "../"), (name, "./")]), ld, CB.QUICK[l]))
+    write(path + "index.html", page(2, path, CB.META, blocks, "comparativa"))
 
 
 def widget():
@@ -409,6 +441,7 @@ def main():
     metodologia()
     guias()
     comparativa()
+    vs_by_hand()
     widget()
 
 

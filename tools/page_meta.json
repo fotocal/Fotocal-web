@@ -10,11 +10,11 @@
   ],
   "index.html": {
     "es": {
-      "title": "Contador de calorías gratis: con una foto, sin pesar nada",
+      "title": "Fotocal: contador de calorías con foto (IA), gratis",
       "desc": "Haz una foto al plato y Fotocal cuenta calorías y macros en segundos. Gratis, sin tarjeta: 2 escaneos con IA, 1 por voz al día; código de barras ilimitado."
     },
     "en": {
-      "title": "Free Calorie Counter from a Photo: No Weighing, No Card",
+      "title": "Fotocal: photo calorie counter app with AI, free",
       "desc": "Snap your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans and 1 voice log a day; unlimited barcode scanner and coach."
     }
   },
@@ -41,7 +41,7 @@
   "features/scan-food/index.html": {
     "es": {
       "title": "Contar calorías con foto: escáner de comida con IA gratis",
-      "desc": "Haz una foto al plato y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA al día. Descárgala en Android."
+      "desc": "Escanea tu comida con la cámara y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA al día."
     },
     "en": {
       "title": "AI Food Scanner: Count Calories from a Photo (Free)",

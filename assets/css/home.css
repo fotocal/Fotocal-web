@@ -391,3 +391,12 @@
 .dish-strip a { display: inline-flex; align-items: baseline; gap: .4rem; padding: .45rem .8rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--border-soft); color: var(--text); text-decoration: none; font-size: .95rem; }
 .dish-strip a b { font-weight: 700; color: var(--brand-text); }
 .dish-strip a:hover { border-color: var(--pink); }
+
+/* comparison tables whose cells are sentences, not ticks
+   (/comparativa/fotocal-vs-contar-a-mano/): left-aligned, and on a phone the
+   label sits above its sentence instead of beside it */
+.compare-text td { text-align: left; vertical-align: top; font-size: .92rem; line-height: 1.45; }
+.compare-text { min-width: 0; }
+@media (max-width: 720px) {
+  .compare-text tbody td { flex-direction: column; align-items: flex-start; gap: .15rem; text-align: left; }
+}

@@ -179,7 +179,8 @@ async function card(rel, html, lang) {
   const cat = html.match(/<a href="[^"]*\?cat=([a-z]+)[^"]*">([^<]+)<\/a>\s*<\/nav>/);
   if (cat) return { html: post(lang, text(cat[2]), ogTitle, t.blogFoot, cap(BLOG_CAP[cat[1]] || CAP.home, lang)), alt: `${ogTitle} · ${t.blogFoot}` };
   let kicker = text((html.match(/class="kicker[^"]*"[^>]*>([\s\S]*?)<\//) || [, ''])[1]);
-  if (!kicker || kicker.length > 34) kicker = 'Fotocal';
+  if (bare.startsWith('comparativa/')) kicker = lang === 'es' ? 'Comparativa' : 'Comparison';
+  else if (!kicker || kicker.length > 34) kicker = 'Fotocal';
   const shot = /voice/.test(bare) ? CAP.voice : /barcode/.test(bare) ? CAP.home : /^ai\//.test(bare) ? CAP.coach : /scan-food|^features\/$/.test(bare) ? CAP.result : CAP.home;
   return { html: post(lang, kicker, ogTitle, t.homeSub, cap(shot, lang)), alt: `${ogTitle} · Fotocal` };
 }

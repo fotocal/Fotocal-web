@@ -190,7 +190,7 @@ def metodologia():
     for l in LANGS:
         home, me = ("Inicio", "Metodología") if l == "es" else ("Home", "Methodology")
         ld = "\n".join([
-            ld_block({"@context": "https://schema.org", "@type": "Article", "headline": meta[l]["title"].replace(" — Fotocal", ""), "description": meta[l]["desc"],
+            ld_block({"@context": "https://schema.org", "@type": "Article", "headline": "Cómo calculamos nuestras cifras" if l == "es" else "How we work out our figures", "description": meta[l]["desc"],
                       "inLanguage": l, "url": SITE + "metodologia/", "datePublished": TODAY, "dateModified": METH_MOD, "author": ORG, "publisher": ORG}),
             crumbs_ld([(home, SITE), (me, SITE + "metodologia/")])])
         h1 = "Cómo calculamos nuestras cifras" if l == "es" else "How we work out our figures"
@@ -302,7 +302,7 @@ def comparativa():
             body.append(GD.download_card(l, "¿Quieres probarla?" if l == "es" else "Want to try it?",
                                          "Haz una foto y Fotocal cuenta las calorías por ti." if l == "es" else "Snap a photo and Fotocal counts the calories for you.",
                                          GD.PLAY + "&utm_source=web&utm_medium=compare&utm_campaign=vs-" + slug))
-            ld = "\n".join([ld_block({"@context": "https://schema.org", "@type": "Article", "headline": meta[l]["title"].replace(" — Fotocal", ""), "description": meta[l]["desc"],
+            ld = "\n".join([ld_block({"@context": "https://schema.org", "@type": "Article", "headline": name + (": ¿qué app para contar calorías elegir?" if l == "es" else ": which calorie app to choose?"), "description": meta[l]["desc"],
                                       "inLanguage": l, "url": SITE + "comparativa/fotocal-vs-%s/" % slug, "datePublished": TODAY, "dateModified": TODAY, "author": ORG, "publisher": ORG}),
                             crumbs_ld([(home, SITE), (hub, SITE + "comparativa/"), (name, SITE + "comparativa/fotocal-vs-%s/" % slug)])])
             h1 = name + (": ¿qué app para contar calorías elegir?" if l == "es" else ": which calorie app to choose?")
@@ -376,7 +376,7 @@ def vs_by_hand():
                                            "Haz una foto al plato y Fotocal cuenta las calorías por ti." if l == "es" else "Snap your plate and Fotocal counts the calories for you.",
                                            GD.PLAY + "&utm_source=web&utm_medium=compare&utm_campaign=vs-a-mano")])
         ld = "\n".join([
-            ld_block({"@context": "https://schema.org", "@type": "Article", "headline": CB.META[l]["title"], "description": CB.META[l]["desc"],
+            ld_block({"@context": "https://schema.org", "@type": "Article", "headline": CB.H1[l], "description": CB.META[l]["desc"],
                       "inLanguage": l, "url": SITE + path, "datePublished": CB.UPDATED, "dateModified": CB.UPDATED, "author": ORG, "publisher": ORG}),
             ld_block({"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": l, "mainEntity": [
                 {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in CB.FAQ[l]]}),

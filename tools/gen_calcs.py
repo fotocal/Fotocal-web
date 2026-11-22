@@ -27,6 +27,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_dishes import ld_block, ORG, esc, TITLE_MAX, SITE, ROOT, PLAY, download_card  # noqa: E402
 from calcs.content import CALCS, SOURCES, QUICK  # noqa: E402
 from calcs.extra import EXTRA, FAQ_EXTRA  # noqa: E402
+import fotocal_data  # noqa: E402
+SHOT_OF = {"calorias-diarias": "home-day", "deficit-calorico": "home-day", "tmb": "home-day",
+           "imc": "progress", "peso-saludable": "progress", "macros": "macros", "proteinas": "macros"}
 
 for _c in CALCS:   # extra questions join the page's FAQ (and its FAQPage JSON-LD)
     for _l, _qa in FAQ_EXTRA.get(_c["slug"], {}).items():
@@ -490,6 +493,8 @@ def page_lang(c, lang):
     o.append('     <div class="calc-text post-body">')
     o.append('      <div class="answer-box"><p><strong>%s</strong> %s</p></div>' % ("Respuesta rápida:" if lang == "es" else "Quick answer:", QUICK[c["slug"]][lang]))
     o.append(L["body"])
+    if c["slug"] in SHOT_OF:                       # a real app screen (GEO round 22-11-2026)
+        o.append(fotocal_data.shot(SHOT_OF[c["slug"]], lang))
     if c["slug"] in EXTRA:
         o.append(EXTRA[c["slug"]][lang])
     o.append('      <h2 id="faq">%s</h2>\n      <div class="faq-list">' % u["faq"])

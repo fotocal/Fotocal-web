@@ -745,6 +745,7 @@ def hub_page(ready):
     o('      </div>\n    </header>\n    <div class="container-narrow">')
     o('      <div class="post-body reveal">')
     import dishes_en
+    o('      <h2 id="cuantas-calorias-plato">¿Cuántas calorías tiene un plato?</h2>')
     o(hub_answer(ready, "es"))
     o(dishes_en.group_tables(ready, "es"))
     o('      <p class="dp-table-note">Por ración: la que fija la app Fotocal para cada plato, en gramos tal como se sirve. Las cifras salen de bases de datos públicas (USDA FoodData Central y CIQUAL 2025) sumadas ingrediente a ingrediente; cada página dice exactamente de qué filas.</p>')

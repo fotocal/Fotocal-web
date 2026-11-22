@@ -20,7 +20,7 @@ Claude owns the plan from today. "Done" means it is live on getfotocal.com or wr
 
 ## v3 on-page rollout (master prompt v3, section C)
 
-Last updated: 21 November 2026.
+Last updated: 22 November 2026.
 
 | PART | What | Status |
 |---|---|---|
@@ -40,6 +40,7 @@ Last updated: 21 November 2026.
 | D5 | New dish pages, 2–3 a week | Running (Monday routine) |
 | D8 | Web photo-scanner demo | Owner decision, not for the agent to build |
 | GEO 21-11 | Audit (report in chat); brand in the home titles; query-led titles and descriptions on 4 pages; new page «Fotocal vs contar calorías a mano»; Spanish summary in `llms.txt`; sitemap committed with the 6 pages it was missing | Done (21 Nov) |
+| SD 22-11 | Striking-distance round from Search Console (22 Nov): 26 direct answers on 18 pages for searches already shown at positions 5–98; no new pages. Measure on 20 Dec and 20 Jan (rows tagged `striking-distance` in onpage-changes.csv) | Done (22 Nov) |
 <!-- v3-rows -->
 
 Also live outside the numbered PARTs: yearly offer from `tools/pricing.json` (11 Nov), calculator result layout, header at 200 % text, Search Console fixes (no language redirect, schema dates with time zone, inlined home CSS, balanced related-dish links), five strengthened posts (13 Nov).

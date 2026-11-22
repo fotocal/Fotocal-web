@@ -142,7 +142,7 @@ def dish(d, fig, ready_by_app):
                         ne(fig["per100"]), third, len(peers), gname, ne(peers[0]), ne(peers[-1]), ne(g), ne(fig["kcal"]))))
     crumbs = [("Home", SITE), ("Calories in Spanish food", SITE + "calorias/"), (G.cap(kw_name(d)) if d["slug"] in EN.get("name", {}) else G.cap(d["name"]), url)]
     ld = [
-        G.ld_block({"@context": "https://schema.org", "@type": "Article", "headline": title.replace(" — Fotocal", ""), "description": desc,
+        G.ld_block({"@context": "https://schema.org", "@type": "Article", "headline": "Calories in %s" % name,   # = the H1 "description": desc,
                     "inLanguage": "en", "mainEntityOfPage": url, "url": url, "datePublished": d.get("published"), "dateModified": d.get("updated", d.get("published")),
                     "author": G.ORG, "publisher": G.ORG, "image": SITE + "assets/og-image.png", "about": {"@type": "Thing", "name": name}}),
         G.ld_block({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -275,6 +275,11 @@ def hub(ready):
     o.append(G.hub_answer(ready, "en"))
     o.append(group_tables(ready, "en"))
     o.append('      <p class="dp-table-note">Serving: the one the Fotocal app uses for each dish, in grams as served. Figures come from public databases (USDA FoodData Central and CIQUAL 2025) added up ingredient by ingredient; each page says exactly which rows.</p>')
+    import fotocal_data
+    o.append('      <h2 id="what-drives">What do a dish\'s calories depend on?</h2>')
+    o.append('      <p>Mostly two things: how much you serve and how much fat it has. You can see the portion on the plate; the oil, you cannot. In Spanish cooking it is what moves the count most from one dish to another, as the app\'s recipes show:</p>')
+    o.append(fotocal_data.box("oil", "en", ""))
+    o.append(fotocal_data.shot("detail", "en"))
     o.append('      <h2>How to read the table</h2>')
     o.append('      <p>The serving column is the one that matters day to day: it is what you log if you eat the dish. Per 100 g is for comparing dishes and for working out a different amount: weigh what you have, multiply by the figure and divide by 100.</p>')
     def top_en(key, k=10):
@@ -287,6 +292,10 @@ def hub(ready):
             else:
                 out.append("        <li>%s: %s kcal per 100 g (%s kcal per serving of %s g)</li>" % (nm, ne(f["per100"]), ne(f["kcal"]), ne(f["serving_g"])))
         return "\n".join(out + ["      </ol>"])
+    o.append('      <h2 id="lightest">The Spanish main dishes with the fewest calories</h2>')
+    o.append('      <p>Among the dishes and stews in the table, these are the five lightest per serving, as served. All of them make a full lunch or dinner.</p>')
+    light = sorted(((G.figures(d["app_id"]), d) for d in ready if EN["group_of"].get(d["slug"]) == "platos"), key=lambda t: (t[0]["kcal"], t[1]["slug"]))[:5]
+    o.append("\n".join(["      <ol>"] + ['        <li><a href="%s/">%s</a>: %s kcal per serving of %s g (%s kcal per 100 g)</li>' % (d["slug"], G.esc(display(d)), ne(f["kcal"]), ne(f["serving_g"]), ne(f["per100"])) for f, d in light] + ["      </ol>"]))
     o.append('      <h2 id="most-calories">The 10 Spanish dishes with the most calories per serving</h2>')
     o.append('      <p>Of the %d dishes with their own page, these add up to the most as served. All sit around or above 500 kcal: they fit in a main meal, but it helps to know that is what they are.</p>' % len(ready))
     o.append(top_en("kcal"))

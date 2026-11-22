@@ -101,7 +101,7 @@ def bmr(lang):
             '      <h2 id="tmb-get">TMB y GET: cuál es la diferencia</h2>',
             '      <p>La TMB (tasa metabólica basal) es lo que gastas en reposo total. El GET (gasto energético total, TDEE en inglés) es lo que gastas en un día de verdad: la TMB multiplicada por un factor según cómo te mueves. La calculadora te da las dos cifras. Para las dos personas del ejemplo, con una TMB de %s kcal (mujer, 35 años, 165 cm, 70 kg) y %s kcal (hombre, 35 años, 178 cm, 85 kg):</p>' % (n(round(w), lang), n(round(m), lang)),
             table(["Tu día", "Factor", "GET mujer (kcal)", "GET hombre (kcal)"], rows),
-            '      <p>El GET es tu mantenimiento: la cifra contra la que se mide un déficit. Si quieres afinarlo con tu objetivo, sigue en la <a href="../calorias-diarias/">calculadora de calorías diarias</a>.</p>',
+            '      <p>El GET es tu mantenimiento: la cifra contra la que se mide un déficit (<a href="../../blog/calorie-deficit-for-fat-loss/">qué es el déficit calórico y cómo hacerlo</a>). Si quieres afinarlo con tu objetivo, sigue en la <a href="../calorias-diarias/">calculadora de calorías diarias</a>.</p>',
             '      <h2 id="como-sacar">Cómo sacar tu metabolismo basal</h2>',
             '      <p>Con la fórmula de Mifflin-St Jeor, la que usan esta calculadora y la app: 10 × peso en kg + 6,25 × altura en cm − 5 × edad, y al final +5 si eres hombre o −161 si eres mujer. Para una mujer de 35 años, 165 cm y 70 kg: 700 + 1.031 − 175 − 161 = 1.395 kcal al día.</p>',
             '      <h2 id="mujer-hombre">TMB en la mujer y en el hombre</h2>',
@@ -111,7 +111,7 @@ def bmr(lang):
         '      <h2 id="bmr-tdee">BMR and TDEE: what is the difference?</h2>',
         '      <p>BMR (basal metabolic rate) is what you burn at complete rest. TDEE (total daily energy expenditure) is what you burn on a real day: BMR times a factor for how you move. The calculator gives you both. For the two people in the example, with a BMR of %s kcal (woman, 35 years, 165 cm, 70 kg) and %s kcal (man, 35 years, 178 cm, 85 kg):</p>' % (n(round(w), lang), n(round(m), lang)),
         table(["Your day", "Factor", "TDEE, woman (kcal)", "TDEE, man (kcal)"], rows),
-        '      <p>TDEE is your maintenance: the number a deficit is measured against. To set it against your goal, carry on to the <a href="../calorias-diarias/">daily calorie calculator</a>.</p>',
+        '      <p>TDEE is your maintenance: the number a deficit is measured against (<a href="../../blog/calorie-deficit-for-fat-loss/">the calorie deficit explained</a>). To set it against your goal, carry on to the <a href="../calorias-diarias/">daily calorie calculator</a>.</p>',
         '      <h2 id="how-to-work-out">How to work out your BMR</h2>',
         '      <p>With the Mifflin-St Jeor equation, the one this calculator and the app use: 10 × weight in kg + 6.25 × height in cm − 5 × age, then +5 for men or −161 for women. For a woman of 35, 165 cm and 70 kg: 700 + 1,031 − 175 − 161 = 1,395 kcal a day.</p>',
         '      <h2 id="women-men">BMR for women and for men</h2>',
@@ -165,8 +165,13 @@ FAQ_EXTRA = {
         "es": [("¿Cuántas calorías gasto al día en reposo?", "Es tu tasa metabólica basal: entre el 58 y el 83 % de lo que gastas en un día, según cuánto te muevas. La mujer del ejemplo gasta 1.395 kcal en reposo y 1.918 en total. La <a href=\"../tmb/\">calculadora de TMB</a> te da la tuya.")],
         "en": [("How many calories do I burn a day at rest?", "That is your basal metabolic rate: 58 to 83% of what you burn in a day, depending on how much you move. The woman in the example burns 1,395 kcal at rest and 1,918 in total. The <a href=\"../tmb/\">BMR calculator</a> gives you yours.")]},
     "deficit-calorico": {
-        "es": [("¿Cómo calcular el déficit calórico según mi peso?", "Primero tu mantenimiento, que depende de tu peso, altura, edad, sexo y actividad. Después se resta el déficit: entre el 0,5 % y el 1 % de tu peso a la semana es un ritmo sensato. Con 80 kg, eso son de 0,4 a 0,8 kg semanales.")],
-        "en": [("How do I work out my calorie deficit for my weight?", "First your maintenance, which depends on your weight, height, age, sex and activity. Then subtract the deficit: 0.5% to 1% of your weight a week is a sensible pace. At 80 kg, that is 0.4 to 0.8 kg a week.")]},
+        "es": [("¿Cómo calcular el déficit calórico según mi peso?", "Primero tu mantenimiento, que depende de tu peso, altura, edad, sexo y actividad. Después se resta el déficit: entre el 0,5 % y el 1 % de tu peso a la semana es un ritmo sensato. Con 80 kg, eso son de 0,4 a 0,8 kg semanales."),
+               ("¿Cada cuánto hay que recalcular el déficit?", "Cuando tu peso cambie unos kilos o cambie tu actividad. Con la fórmula de Mifflin-St Jeor, cada 5 kg menos bajan la TMB 50 kcal y el gasto del día entre 60 y 86 kcal, según cuánto te muevas: el mismo menú deja de dar el mismo déficit.")],
+        "en": [("How do I work out my calorie deficit for my weight?", "First your maintenance, which depends on your weight, height, age, sex and activity. Then subtract the deficit: 0.5% to 1% of your weight a week is a sensible pace. At 80 kg, that is 0.4 to 0.8 kg a week."),
+               ("How often should I recalculate my deficit?", "Whenever your weight changes by a few kilos or your activity changes. With the Mifflin-St Jeor equation, every 5 kg lost lowers BMR by 50 kcal and the day's burn by 60 to 86 kcal, depending on how much you move: the same menu stops giving the same deficit.")]},
+    "peso-saludable": {
+        "es": [("¿Qué diferencia hay entre el IMC y el peso ideal?", "Es la misma cuenta vista desde dos lados. El IMC parte de tu peso y tu altura y da un número; el peso ideal parte de tu altura y da los kilos que corresponden a un IMC de 18,5 a 24,9. Con 1,70 m, ese rango va de 53 a 72 kg. La <a href=\"../imc/\">calculadora de IMC</a> te da tu número.")],
+        "en": [("What is the difference between BMI and ideal weight?", "It is the same sum seen from two sides. BMI starts from your weight and height and gives a number; ideal weight starts from your height and gives the kilos that match a BMI of 18.5 to 24.9. At 1.70 m, that range is 53 to 72 kg. The <a href=\"../imc/\">BMI calculator</a> gives you your number.")]},
 }
 
 

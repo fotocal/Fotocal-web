@@ -63,6 +63,13 @@ def kwset(p):
 
 # ── load ──────────────────────────────────────────────────────────────
 posts = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(POSTS, "*.json")))]
+# «Datos de Fotocal» boxes: a post body may hold <!--datos:NAME-->, replaced
+# here with the box computed from the app catalogue (tools/fotocal_data.py).
+import fotocal_data
+for _p in posts:
+    for _l in ("es", "en"):
+        _p[_l]["body"] = re.sub(r"<!--datos:(\w+)-->", lambda m: fotocal_data.box(m.group(1), _l, "../../calorias/"), _p[_l]["body"])
+        _p[_l]["body"] = re.sub(r"<!--shot:([\w-]+)-->", lambda m: fotocal_data.shot(m.group(1), _l), _p[_l]["body"])
 
 # A post with "langs": ["es"] exists in the Spanish tree only (written for
 # Spain: menús, tapas, prices in euros). The templates still read p["en"],

@@ -454,7 +454,7 @@ def dish_page(d, ready_by_app):
 
     crumbs = [("Inicio", SITE), ("Calorías de platos", SITE + "calorias/"), (cap(name), url)]
     ld = [
-        ld_block({"@context": "https://schema.org", "@type": "Article", "headline": title.replace(" — Fotocal", ""),
+        ld_block({"@context": "https://schema.org", "@type": "Article", "headline": "Calorías %s %s" % (de(art), name),   # = the H1 (structured data matches visible text)
                   "description": desc, "inLanguage": "es", "mainEntityOfPage": url, "url": url,
                   "datePublished": pub, "dateModified": upd, "author": ORG, "publisher": ORG,
                   "image": SITE + "assets/og-image.png",
@@ -752,14 +752,23 @@ def hub_page(ready):
     o('      <h2>Cómo leer la tabla</h2>')
     o('      <p>La columna que importa para el día a día es la de la ración: es lo que apuntas si te comes el plato. La de 100 g sirve para comparar platos entre sí y para calcular una ración distinta: pesa lo que tienes, multiplica por la cifra y divide entre 100.</p>')
     o('      <p>Son valores medios. Un cocido de una casa y el de otra no pesan lo mismo ni llevan el mismo chorizo, y una tortilla puede absorber el doble de aceite que otra. Si quieres el número de tu plato y no el de la media, la app lo estima a partir de una foto y te deja corregir los gramos.</p>')
+    import fotocal_data
+    o('      <h2 id="de-que-depende">¿De qué dependen las calorías de un plato?</h2>')
+    o('      <p>Sobre todo de dos cosas: cuánto te sirves y cuánta grasa lleva. La ración la ves en el plato; el aceite, no. En la cocina española es lo que más mueve la cuenta de un plato a otro, como muestran las recetas de la app:</p>')
+    o(fotocal_data.box("oil", "es", ""))
+    o(fotocal_data.shot("detail", "es"))
     o('      <h2>Lo que suele sorprender</h2>')
     o('      <ul><li>El plato de cuchara no es el problema: lentejas, garbanzos o un cocido razonable quedan en el rango de una comida normal. Lo que dispara la cuenta es el embutido que lleva dentro y el pan de al lado.</li>'
       '<li>Lo frito pesa poco y suma mucho: cuatro croquetas o una ración de churros se acercan a un plato de lentejas.</li>'
       '<li>Las sopas frías son casi gratis: un bol de gazpacho tiene menos calorías que una tostada con aceite.</li></ul>')
     rb = {d["app_id"]: d["slug"] for d in ready}
+    nms = {d["app_id"]: d["name"][0].upper() + d["name"][1:] for d in ready}
+    o('      <h2 id="platos-ligeros">Los platos principales con menos calorías</h2>')
+    o('      <p>Entre los platos y guisos de la tabla, estos son los cinco más ligeros por ración, tal como se sirven. Todos sirven de comida o cena completa.</p>')
+    import dishes_en as _de
+    o(top_list([d["app_id"] for d in ready if _de.EN["group_of"].get(d["slug"]) == "platos"], "kcal", rb, "", k=5, reverse=False, names=nms))
     o('      <h2 id="mas-calorias">Los 10 platos con más calorías por ración</h2>')
     o('      <p>De los %d platos con página propia, estos son los que más suman tal como se sirven. Todos rondan o pasan de las 500 kcal: caben en una comida principal, pero conviene saber que lo son.</p>' % len(ready))
-    nms = {d["app_id"]: d["name"][0].upper() + d["name"][1:] for d in ready}
     o(top_list([d["app_id"] for d in ready], "kcal", rb, "", names=nms))
     o('      <h2 id="mas-calorias-100g">Los 10 con más calorías por 100 g</h2>')
     o('      <p>Por 100 g el orden es otro: suben los alimentos con mucha grasa y poca agua, que se toman en raciones pequeñas.</p>')

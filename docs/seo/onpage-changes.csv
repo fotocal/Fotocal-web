@@ -412,3 +412,25 @@ date,url,field,old_value,new_value,primary_keyword,part
 2026-11-22,https://getfotocal.com/en/features/scan-food/,striking-distance answer,(none),FAQ (+ FAQPage schema) «How do you scan food to get its calories?»,how to scan food for calories,striking-distance
 2026-11-22,https://getfotocal.com/features/scan-barcode/,striking-distance answer,(none),FAQ (+ FAQPage schema) «¿Sirve el escáner de código de barras para comer más sano?»,código de barras alimentos,striking-distance
 2026-11-22,https://getfotocal.com/en/features/scan-barcode/,striking-distance answer,(none),FAQ (+ FAQPage schema) «Is it a barcode scanner for healthier choices?»,barcode scanner health,striking-distance
+2026-11-22,https://getfotocal.com/calorias/,new section,(none),H2 «¿De qué dependen las calorías de un plato?» + «Datos de Fotocal» box: share of calories from olive oil (computed from the app recipes),calorías de un plato,geo-google
+2026-11-22,https://getfotocal.com/en/calorias/,new section,(none),H2 «What do a dish's calories depend on?» + «Fotocal data» box (olive oil share),calories spanish food,geo-google
+2026-11-22,https://getfotocal.com/calorias/,new section,(none),"H2 «Los platos principales con menos calorías» (5 lightest main dishes, computed)",calorías de un plato,geo-google
+2026-11-22,https://getfotocal.com/en/calorias/,new section,(none),H2 «The Spanish main dishes with the fewest calories»,calories spanish food,geo-google
+2026-11-22,https://getfotocal.com/calorias/,image,(none),"Real app screen (food detail) with Spanish alt text, width/height",calorías de un plato,geo-google
+2026-11-22,https://getfotocal.com/blog/how-to-count-calories-accurately/,new section,(none),H2 «¿Cuánto cambia el total si la ración es mayor?» + «Datos de Fotocal» box (±25 % portion on 5 dishes),contar calorías,geo-google
+2026-11-22,https://getfotocal.com/en/blog/how-to-count-calories-accurately/,new section,(none),H2 «How much does the total change if the portion is bigger?» + data box,how to count calories,geo-google
+2026-11-22,https://getfotocal.com/blog/how-to-count-calories-accurately/,FAQ,(none),4 FAQ + FAQPage schema: sin báscula; cuánto tiempo; qué app; aceite,contar calorías,geo-google
+2026-11-22,https://getfotocal.com/en/blog/how-to-count-calories-accurately/,FAQ,(none),4 FAQ + FAQPage schema (EN twins),how to count calories,geo-google
+2026-11-22,https://getfotocal.com/blog/how-to-count-calories-accurately/,image,decorative SVG cover only,+ real app screen (portion sheet) with alt text,contar calorías,geo-google
+2026-11-22,https://getfotocal.com/blog/best-foods-for-weight-loss/,new section,(none),H2 «¿Cuánta comida son 400 kcal?» + «Datos de Fotocal» box; H2 «Para cenar y para picar» with 2 H3 direct answers,alimentos que sacian y tienen pocas calorías,geo-google
+2026-11-22,https://getfotocal.com/en/blog/best-foods-for-weight-loss/,new section,(none),H2 «How much food is 400 kcal?» + data box; H2 «For dinner and for snacks» with 2 H3,low calorie satiating foods,geo-google
+2026-11-22,https://getfotocal.com/blog/best-foods-for-weight-loss/,image,decorative SVG cover only,+ real app screen (food detail) with alt text,alimentos que sacian y tienen pocas calorías,geo-google
+2026-11-22,https://getfotocal.com/features/scan-food/,FAQ,(none),FAQ (+ schema) «¿Hay Fotocal para iPhone?» (Android only) and a links line to barcode scanner and photo-accuracy post,contar calorías con foto,geo-google
+2026-11-22,https://getfotocal.com/en/features/scan-food/,FAQ,(none),FAQ (+ schema) «Is Fotocal available on iPhone?» + links line,photo calorie counter,geo-google
+2026-11-22,https://getfotocal.com/calculadoras/peso-saludable/,FAQ,(none),FAQ (+ schema) «¿Qué diferencia hay entre el IMC y el peso ideal?»,peso ideal,geo-google
+2026-11-22,https://getfotocal.com/en/calculadoras/peso-saludable/,FAQ,(none),FAQ «What is the difference between BMI and ideal weight?»,ideal weight calculator,geo-google
+2026-11-22,https://getfotocal.com/calculadoras/deficit-calorico/,FAQ,(none),FAQ (+ schema) «¿Cada cuánto hay que recalcular el déficit?» (Mifflin: −50 kcal TMB per 5 kg),déficit calórico,geo-google
+2026-11-22,https://getfotocal.com/en/calculadoras/deficit-calorico/,FAQ,(none),FAQ «How often should I recalculate my deficit?»,calorie deficit calculator,geo-google
+2026-11-22,https://getfotocal.com/calculadoras/tmb/,link,(none),link to /blog/calorie-deficit-for-fat-loss/ (cluster),metabolismo basal,geo-google
+2026-11-22,"calculadoras/ (7 calculators, ES+EN)",image,logo only,real app screen (home day / progress / macros) with alt text and width/height,—,geo-google
+2026-11-22,calorias/* (60 dish pages ES+EN) + metodologia + comparativa (ES+EN),schema,Article headline = page title,Article headline = visible H1 (structured data matches visible text),—,geo-google

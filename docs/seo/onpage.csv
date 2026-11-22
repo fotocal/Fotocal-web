@@ -141,6 +141,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /calorias/tortilla-de-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/tortilla-francesa/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/tostada-con-tomate-y-aceite/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/colabora/,page,pass,pass,pass,pass,pass,pass,fail,pass,n/a,pass,n/a,n/a
 /comparativa/fotocal-vs-cal-ai/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /comparativa/fotocal-vs-contar-a-mano/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /comparativa/fotocal-vs-myfitnesspal/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -289,6 +290,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/calorias/tortilla-de-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/tortilla-francesa/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/tostada-con-tomate-y-aceite/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/en/colabora/,page,pass,pass,pass,pass,pass,pass,fail,pass,n/a,pass,n/a,n/a
 /en/comparativa/fotocal-vs-cal-ai/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/comparativa/fotocal-vs-contar-a-mano/,compare,pass,fail,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/comparativa/fotocal-vs-myfitnesspal/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a

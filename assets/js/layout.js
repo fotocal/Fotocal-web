@@ -304,6 +304,7 @@
             '<p class="footer-h">' + t("footer.company") + '</p>' +
             '<a href="' + u("about/") + '">' + t("nav.aboutUs") + '</a>' +
             '<a href="' + u("contact/") + '">' + t("nav.contactUs") + '</a>' +
+            '<a href="' + u("colabora/") + '">' + t("footer.partners") + '</a>' +
             '<a href="' + u("faq/") + '">' + t("nav.faq") + '</a>' +
             '<a href="' + u("privacy-policy/") + '">' + t("footer.privacy") + '</a>' +
             '<a href="' + u("terms/") + '">' + t("footer.terms") + '</a>' +

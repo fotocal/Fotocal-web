@@ -443,6 +443,8 @@ def main():
     comparativa()
     vs_by_hand()
     widget()
+    import partners                      # /colabora/ (approved 22-11-2026)
+    partners.colabora()
 
 
 if __name__ == "__main__":

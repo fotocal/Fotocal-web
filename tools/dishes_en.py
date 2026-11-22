@@ -271,6 +271,7 @@ def hub(ready):
          '        <h1 class="post-title reveal">Calories in Spanish food, per serving and per 100 g</h1>',
          '        <p class="post-lead reveal">How many calories are in Spanish food? A table of what people really eat in Spain: the serving as it is served, its calories, and per 100 g so you can compare. Each dish has its own page with the protein, carbs and fat, what a serving weighs and how it compares.</p>',
          '      </div>\n    </header>\n    <div class="container-narrow">', '      <div class="post-body reveal">']
+    o.append('      <h2 id="calories-in-spain">Calories in Spain: how many in a typical plate?</h2>')
     o.append(G.hub_answer(ready, "en"))
     o.append(group_tables(ready, "en"))
     o.append('      <p class="dp-table-note">Serving: the one the Fotocal app uses for each dish, in grams as served. Figures come from public databases (USDA FoodData Central and CIQUAL 2025) added up ingredient by ingredient; each page says exactly which rows.</p>')

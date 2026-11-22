@@ -79,7 +79,7 @@ Checked on 22 Nov 2026 through live search results. **The pages themselves could
 
 ## 3. Two email templates (Spanish, under 120 words, NOT sent)
 
-**A. To a nutritionist** (≈105 words)
+**A. To a nutritionist** (89 words)
 
 > Asunto: Una app que te manda el resumen semanal de tus pacientes
 >
@@ -96,7 +96,7 @@ Checked on 22 Nov 2026 through live search results. **The pages themselves could
 > Un saludo,
 > [nombre]
 
-**B. To a blogger or creator** (≈100 words)
+**B. To a blogger or creator** (80 words)
 
 > Asunto: Fotocal, para tu artículo sobre apps de calorías
 >

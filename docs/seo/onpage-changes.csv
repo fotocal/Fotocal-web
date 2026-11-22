@@ -434,3 +434,5 @@ date,url,field,old_value,new_value,primary_keyword,part
 2026-11-22,https://getfotocal.com/calculadoras/tmb/,link,(none),link to /blog/calorie-deficit-for-fat-loss/ (cluster),metabolismo basal,geo-google
 2026-11-22,"calculadoras/ (7 calculators, ES+EN)",image,logo only,real app screen (home day / progress / macros) with alt text and width/height,—,geo-google
 2026-11-22,calorias/* (60 dish pages ES+EN) + metodologia + comparativa (ES+EN),schema,Article headline = page title,Article headline = visible H1 (structured data matches visible text),—,geo-google
+2026-11-22,https://getfotocal.com/colabora/,new page (draft),(none),"NEW DRAFT page «Colabora con Fotocal» (noindex, not in sitemap, not linked; branch partners-draft, not merged)",colabora con fotocal,partners
+2026-11-22,https://getfotocal.com/en/colabora/,new page (draft),(none),NEW DRAFT page «Partner with Fotocal» (noindex; EN at /en/colabora/ by site convention),colabora con fotocal,partners

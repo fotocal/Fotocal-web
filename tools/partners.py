@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-"""/colabora/ — «Colabora con Fotocal» (DRAFT, branch partners-draft, 22-11-2026).
+"""/colabora/ — «Colabora con Fotocal» (approved by the owner 22-11-2026).
 
-noindex and linked from nowhere until the owner approves it. Places marked
-[OWNER TO DECIDE] are left for the owner on purpose.
+Owner decisions: contact email fotocal.app@gmail.com; no money mentioned;
+free Premium only through the app's redeem system, which does not work
+(see below), so the page offers none; Google's official badge; footer link.
 
 Facts checked in the app repo (fotocal/fotocal @ 5119c99, read only):
   · «Enviar a mi nutricionista»: a weekly PDF (Monday to Sunday) made on the
@@ -44,16 +45,25 @@ META = {"es": {"title": "Colabora con Fotocal: nutricionistas y creadores — Fo
 SHORT = {"es": "Fotocal es una app para Android que cuenta las calorías de un plato a partir de una foto. Está pensada para la comida española: reconoce el cocido, la tortilla o una ración de bravas, y te deja corregir los gramos antes de guardar. También lee códigos de barras y registra por voz. Hecha en Madrid.",
          "en": "Fotocal is an Android app that counts the calories in a plate from a photo. It is built around Spanish food: it recognises a cocido, a tortilla or a plate of patatas bravas, and lets you correct the grams before saving. It also reads barcodes and logs by voice. Made in Madrid."}
 
-OWNER = '<span class="owner-todo">[%s]</span>'
+
+
+BADGE = {"es": "https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png",
+         "en": "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"}
+EMAIL = "fotocal.app@gmail.com"     # owner's decision 22-11-2026: this address on /colabora/ too
+
+
+def badge(l):
+    """Google's official badge, unmodified, served by Google (the embed code
+    from Google's badge generator) and linked to the Play listing."""
+    alt = "Disponible en Google Play" if l == "es" else "Get it on Google Play"
+    return ('<a class="play-badge" href="%s" target="_blank" rel="noopener"><img src="%s" width="646" height="250" alt="%s" loading="lazy"></a>'
+            % (esc(PLAY + "&utm_source=web&utm_medium=colabora&utm_campaign=badge"), BADGE[l], alt))
 
 
 def body(l):
     es = l == "es"
     o = []
     T = lambda a, b: a if es else b
-    o.append('      <p class="draft-note"><strong>%s</strong> %s</p>' % (
-        T("Borrador.", "Draft."), T("Esta página no está publicada en buscadores ni enlazada desde la web hasta que la apruebe el propietario.",
-                                   "This page is not indexed or linked from the site until the owner approves it.")))
     # nutritionists
     o.append('      <h2 id="%s">%s</h2>' % (T("nutricionistas", "dietitians"), T("Para nutricionistas y dietistas-nutricionistas", "For dietitians and nutritionists")))
     o.append('      <p>%s</p>' % T(
@@ -70,36 +80,32 @@ def body(l):
          "Then “Daily detail”: each meal with its portion, calories and macros.",
          "They send it to you themselves over WhatsApp or email. You need no account and nothing to install.",
          "Meal photos and allergies are only included if your client ticks them, and they can hide their name. The PDF is created on their phone."]))))
-    o.append('      <h3>%s</h3>' % T("Lo que te ofrecemos", "What we offer you"))
+    o.append('      <h3>%s</h3>' % T("Cómo trabajar con nosotros", "How to work with us"))
     o.append('      <ul><li>%s</li><li>%s</li><li>%s</li></ul>' % (
-        T("Premium gratis para que pruebes la app con calma: ", "Free Premium so you can try the app properly: ") + OWNER % T("OWNER TO DECIDE: duración, p. ej. 6 o 12 meses; se activa a mano en tu cuenta", "OWNER TO DECIDE: length, e.g. 6 or 12 months; activated by hand on your account"),
-        T("Para tus clientes, el enlace de descarga. El plan gratis no pide tarjeta: 2 escaneos con IA y 1 registro por voz al día; código de barras y Coach Kal sin límite. El informe semanal se puede enviar desde la app.",
-          "For your clients, the download link. The free plan needs no card: 2 AI scans and 1 voice log a day; barcode scanner and Coach Kal unlimited. The weekly report can be sent from the app."),
-        T("Escuchamos lo que te falte en el informe: si algo te ayudaría a trabajar mejor con tus clientes, nos lo dices.",
-          "We listen to what the report is missing: if something would help you work better with your clients, tell us.")))
+        T("Recomienda la app a tus clientes con el enlace de Google Play. El plan gratis no pide tarjeta: 2 escaneos con IA y 1 registro por voz al día; código de barras y Coach Kal sin límite.",
+          "Recommend the app to your clients with the Google Play link. The free plan needs no card: 2 AI scans and 1 voice log a day; barcode scanner and Coach Kal unlimited."),
+        T("Cuéntanos qué le falta al informe semanal para que te sea más útil en consulta.",
+          "Tell us what the weekly report is missing to make it more useful in your practice."),
+        T("Si escribes sobre alimentación, usa con libertad nuestras cifras y el kit de prensa de abajo.",
+          "If you write about food, feel free to use our figures and the press kit below.")))
     o.append('      <p>%s</p>' % T(
-        "Para que quede claro: la app no tiene ahora un programa de códigos de invitación ni recompensas por traer clientes. Y Fotocal no da consejo médico ni dietético ni sustituye a un profesional: es una herramienta de registro.",
-        "To be clear: the app does not currently have an invite-code programme or rewards for bringing clients. And Fotocal gives no medical or dietary advice and does not replace a professional: it is a logging tool."))
+        "Fotocal no da consejo médico ni dietético ni sustituye a un profesional: es una herramienta de registro.",
+        "Fotocal gives no medical or dietary advice and does not replace a professional: it is a logging tool."))
     # creators
     o.append('      <h2 id="%s">%s</h2>' % (T("creadores", "creators"), T("Para creadores de contenido y blogs de nutrición o fitness", "For nutrition and fitness creators and bloggers")))
     o.append('      <p>%s</p>' % T(
-        "Si hablas de contar calorías, de comer bien o de apps para hacerlo, puedes probar Fotocal y, si te convence, contarlo a tu manera.",
-        "If you talk about counting calories, eating well or the apps that help, you can try Fotocal and, if it convinces you, tell people about it in your own words."))
-    o.append('      <ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>' % (
-        T("Premium gratis para probarla: ", "Free Premium to try it: ") + OWNER % T("OWNER TO DECIDE: duración", "OWNER TO DECIDE: length"),
-        T("Comisión opcional por suscripciones: ", "Optional commission on subscriptions: ") + OWNER % T("OWNER TO DECIDE: importe y condiciones. No hay pagos automáticos: se acordaría por escrito y se pagaría a mano", "OWNER TO DECIDE: amount and terms. There are no automatic payouts: it would be agreed in writing and paid by hand"),
+        "Si hablas de contar calorías, de comer bien o de apps para hacerlo, prueba Fotocal y, si te convence, cuéntalo a tu manera.",
+        "If you talk about counting calories, eating well or the apps that help, try Fotocal and, if it convinces you, tell people about it in your own words."))
+    o.append('      <ul><li>%s</li><li>%s</li><li>%s</li></ul>' % (
         T("Las capturas, el logo y los textos del kit de prensa de abajo, para usar libremente al hablar de Fotocal.",
           "The screenshots, logo and texts in the press kit below, free to use when you write about Fotocal."),
         T("Datos propios para tus artículos: las calorías de 218 platos y alimentos españoles con su ración, en la <a href=\"../calorias/tabla-de-calorias/\">tabla de calorías</a>, con la fuente de cada cifra en la <a href=\"../metodologia/\">metodología</a>.",
-          "Our own data for your articles: the calories of 218 Spanish dishes and foods with their serving, in the <a href=\"../calorias/tabla-de-calorias/\">calorie table</a>, with the source of every figure in the <a href=\"../metodologia/\">methodology</a>.")))
-    o.append('      <h3>%s</h3>' % T("Nuestras reglas", "Our rules"))
-    o.append('      <ul><li>%s</li><li>%s</li><li>%s</li></ul>' % (
-        T("Si recibes algo a cambio (Premium gratis o comisión), dilo a tu audiencia y marca el enlace como patrocinado (<code>rel=\"sponsored\"</code>), como piden Google y la normativa de publicidad.",
-          "If you get something in return (free Premium or a commission), tell your audience and mark the link as sponsored (<code>rel=\"sponsored\"</code>), as Google and advertising rules require."),
-        T("No compramos enlaces ocultos ni pedimos reseñas en Google Play a cambio de nada. Nada de reseñas falsas.",
-          "We do not buy hidden links or ask for Google Play reviews in exchange for anything. No fake reviews."),
-        T("Opina con libertad: si algo no te gusta de la app, también nos sirve saberlo.",
-          "Say what you think: if you dislike something in the app, that is useful to us too.")))
+          "Our own data for your articles: the calories of 218 Spanish dishes and foods with their serving, in the <a href=\"../calorias/tabla-de-calorias/\">calorie table</a>, with the source of every figure in the <a href=\"../metodologia/\">methodology</a>."),
+        T("Si tienes una duda sobre la app o quieres una captura concreta, escríbenos.",
+          "If you have a question about the app or want a particular screenshot, write to us.")))
+    o.append('      <p>%s</p>' % T(
+        "No pedimos enlaces ocultos ni reseñas en Google Play, y nunca reseñas falsas. Opina con libertad: si algo no te gusta de la app, también nos sirve saberlo.",
+        "We do not ask for hidden links or Google Play reviews, and never fake reviews. Say what you think: if you dislike something in the app, that is useful to us too."))
     # press kit
     o.append('      <h2 id="%s">%s</h2>' % (T("kit-de-prensa", "press-kit"), T("Kit de prensa", "Press kit")))
     o.append('      <h3>%s</h3>\n      <p>%s</p>' % (T("Descripción corta", "Short description"), SHORT[l]))
@@ -115,14 +121,16 @@ def body(l):
                                    "Tap a screenshot to download it full size. They are from the real app, in English or Spanish to match this page."))
     o.append('      <h3>%s</h3>' % T("Insignia «Disponible en Google Play»", "“Get it on Google Play” badge"))
     o.append('      <p>%s</p>' % T(
-        "Usa la insignia oficial de Google, sin modificarla, desde su página de insignias (play.google.com/intl/es/badges/), enlazada a nuestra ficha de Google Play. " + OWNER % "OWNER TO DECIDE: ¿la descargamos y la ponemos aquí?",
-        "Use Google's official badge, unmodified, from their badge page (play.google.com/intl/en/badges/), linked to our Google Play listing. " + OWNER % "OWNER TO DECIDE: shall we download it and host it here?"))
+        "La insignia oficial de Google, enlazada a nuestra ficha. Si la usas, cógela de la página de insignias de Google (play.google.com/intl/es/badges/) y no la modifiques.",
+        "Google's official badge, linked to our listing. If you use it, take it from Google's badge page (play.google.com/intl/en/badges/) and do not modify it."))
+    o.append('      <p class="kit-badge">%s</p>' % badge(l))
+    o.append('      <p class="kit-legal">%s</p>' % T("Google Play y el logotipo de Google Play son marcas de Google LLC.", "Google Play and the Google Play logo are trademarks of Google LLC."))
     # contact
     o.append('      <h2 id="%s">%s</h2>' % (T("contacto", "contact"), T("Contacto", "Contact")))
-    o.append('      <p>%s %s</p>' % (
-        T("Escríbenos desde el <a href=\"../contact/\">formulario de contacto</a> y cuéntanos quién eres y qué te interesa, o por email:",
-          "Write to us through the <a href=\"../contact/\">contact form</a> and tell us who you are and what interests you, or by email:"),
-        OWNER % T("OWNER TO DECIDE: qué email poner aquí", "OWNER TO DECIDE: which email to show here")))
+    o.append('      <p>%s <a href="mailto:%s">%s</a>%s</p>' % (
+        T("Escríbenos a", "Write to us at"), EMAIL, EMAIL,
+        T(", o desde el <a href=\"../contact/\">formulario de contacto</a>, y cuéntanos quién eres y qué te interesa.",
+          ", or through the <a href=\"../contact/\">contact form</a>, and tell us who you are and what interests you.")))
     return "\n".join(o)
 
 
@@ -132,12 +140,12 @@ def colabora():
     for l in LANGS:
         home, me = ("Inicio", "Colabora") if l == "es" else ("Home", "Partner with us")
         h1 = "Colabora con Fotocal" if l == "es" else "Partner with Fotocal"
-        lead = ("Para nutricionistas, dietistas y creadores de contenido sobre alimentación y fitness: qué hace la app por tus clientes y tu audiencia, qué te ofrecemos y cómo escribirnos."
-                if l == "es" else "For dietitians, nutritionists and food and fitness creators: what the app does for your clients and audience, what we offer you and how to reach us.")
+        lead = ("Para nutricionistas, dietistas y creadores de contenido sobre alimentación y fitness: qué hace la app por tus clientes y tu audiencia, cómo trabajar con nosotros y cómo escribirnos."
+                if l == "es" else "For dietitians, nutritionists and food and fitness creators: what the app does for your clients and audience, how to work with us and how to reach us.")
         blocks.append(article(l, h1, lead, body(l), UPDATED, crumbs_html(l, [(home, "../"), (me, "./")]), "", extra_class="colabora"))
-    write(PATH + "index.html", page(1, PATH, META, blocks, "colabora", noindex=True))
+    write(PATH + "index.html", page(1, PATH, META, blocks, "colabora"))
 
 
 if __name__ == "__main__":
     colabora()
-    print("draft /colabora/ written (noindex)")
+    print("/colabora/ written")

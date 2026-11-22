@@ -436,3 +436,6 @@ date,url,field,old_value,new_value,primary_keyword,part
 2026-11-22,calorias/* (60 dish pages ES+EN) + metodologia + comparativa (ES+EN),schema,Article headline = page title,Article headline = visible H1 (structured data matches visible text),—,geo-google
 2026-11-22,https://getfotocal.com/colabora/,new page (draft),(none),"NEW DRAFT page «Colabora con Fotocal» (noindex, not in sitemap, not linked; branch partners-draft, not merged)",colabora con fotocal,partners
 2026-11-22,https://getfotocal.com/en/colabora/,new page (draft),(none),NEW DRAFT page «Partner with Fotocal» (noindex; EN at /en/colabora/ by site convention),colabora con fotocal,partners
+2026-11-22,https://getfotocal.com/colabora/,publish,noindex draft,"PUBLISHED «Colabora con Fotocal» (owner OK 22-11): noindex removed, in sitemap, footer link; no Premium/money offers; contact fotocal.app@gmail.com; official Google Play badge",colabora con fotocal,partners
+2026-11-22,https://getfotocal.com/en/colabora/,publish,noindex draft,PUBLISHED «Partner with Fotocal» (same),colabora con fotocal,partners
+2026-11-22,(all pages),footer link,(none),footer: new link «Colabora con Fotocal» / «Partner with us» in the Empresa column,colabora con fotocal,partners

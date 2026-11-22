@@ -443,7 +443,7 @@ def main():
     comparativa()
     vs_by_hand()
     widget()
-    import partners                      # DRAFT /colabora/ (noindex, branch partners-draft)
+    import partners                      # /colabora/ (approved 22-11-2026)
     partners.colabora()
 
 

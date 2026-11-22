@@ -1,10 +1,10 @@
-# Partner and backlink programme: DRAFT, nothing published or sent (22 Nov 2026)
+# Partner and backlink programme (22 Nov 2026)
 
-Branch `partners-draft`. Not merged, and nobody has been contacted. Everything below waits for the owner's OK.
+**Status:** the /colabora/ page is published and linked from the footer, with the owner's decisions applied. Nobody has been contacted. The owner sends the emails.
 
-## 1. Draft page `/colabora/` (ES) and `/en/colabora/` (EN)
+
+## 1. Page `/colabora/` (ES) and `/en/colabora/` (EN)
 - **Source:** `tools/partners.py`, built by `gen_pages.py`.
-- **Not visible to Google:** it is `noindex`, left out of the sitemap and not linked from any page.
 - **Pictures:** `shots/colabora-{es,en}-{phone,laptop}.png`.
 - **EN URL:** this site puts each English page at the same path under `/en/` (for example `/en/calorias/`). That makes the English page `/en/colabora/` rather than `/en/partners/`. To get `/en/partners/` we would need either a second page or a redirect. My recommendation is to keep `/en/colabora/`.
 
@@ -22,18 +22,13 @@ Branch `partners-draft`. Not merged, and nobody has been contacted. Everything b
 - **Free Premium for a professional or creator:** the app has no promo-code feature. It can only be granted by hand (RevenueCat dashboard or the account's `promo_premium_until`).
 - **Platform:** Android only. There is no App Store listing.
 
-### Owner decisions needed (marked `[OWNER TO DECIDE]` on the page)
-1. **Contact email** to show on /colabora/. The site rule is that fotocal.app@gmail.com appears only on Contact and the legal pages. Options:
-   - allow it on /colabora/ as well;
-   - use a new address (for example colabora@…);
-   - link only to the contact form, as the draft does today.
-
-   No phone number and no personal address will be shown either way.
-2. **Free Premium for professionals and creators:** yes or no, and for how long (for example 6 or 12 months). It is activated by hand per person.
-3. **Creator commission:** the amount and terms, or "none". RevenueCat cannot pay affiliates, so any commission would be agreed in writing and paid by hand.
-4. **Referral codes for clients:** the app has none today. Bringing them back would be an app change, not a website change.
-5. **Google Play badge:** should we download the official badge and host it on the page? Google allows this if the badge is not modified.
-6. **Go-live:** remove `noindex`, add a footer link ("Colabora") and merge.
+### Owner decisions (22 Nov 2026) and what was done
+1. **Contact email:** fotocal.app@gmail.com is on the page, with no phone, no address and no personal name.
+2. **Free Premium:** 12 months for nutritionists and 3 for creators, but only through the app's existing redeem/promo-code system. I re-checked that system: it **does not work**. The /redeem and /redeem-code screens send the user to Home, the server's `apply` returns 410 `program_ended`, and the app has no Play offer codes. So the page **offers no free Premium**. To offer it, the app first needs a working code feature (for example Play Console promo codes or a restored redeem screen). That is an app change.
+3. **Commission:** none, and nothing about money appears on the page.
+4. **Badge:** Google's official "Disponible en Google Play" / "Get it on Google Play" badge is used unmodified, linked to the Play listing, with the trademark line. The image is loaded from Google's own server (the embed code from Google's badge generator), because downloading the file was not allowed from this session.
+5. **URL:** /colabora/ and /en/colabora/.
+6. **Published:** `noindex` removed, the page is in the sitemap, and there is a footer link («Colabora con Fotocal» / «Partner with us») in the Empresa column.
 
 ## 2. Outreach list: 30 Spanish-language sites
 Checked on 22 Nov 2026 through live search results. **The pages themselves could not be opened**, because this session's network blocks them. Open each contact page before writing. Every contact is a public business page; there are no personal emails or phones.
@@ -77,9 +72,10 @@ Checked on 22 Nov 2026 through live search results. **The pages themselves could
 - **Left out:** "best apps" articles written by competitors (Fitia, Yazio, Noom and others).
 - **Not searchable here:** 20minutos, El País, ABC, AS, Men's Health ES and Women's Health ES. They are worth adding by hand.
 
-## 3. Two email templates (Spanish, under 120 words, NOT sent)
+## 3. Two email templates (Spanish, under 120 words, for the owner to send; NOT sent)
+Updated 22 Nov after the owner's decisions. There is no free Premium offer, because the app's redeem/promo-code system does not work (see §1), and no money is mentioned.
 
-**A. To a nutritionist** (89 words)
+**A. To a nutritionist**
 
 > Asunto: Una app que te manda el resumen semanal de tus pacientes
 >
@@ -89,14 +85,15 @@ Checked on 22 Nov 2026 through live search results. **The pages themselves could
 >
 > Tiene una función para nutricionistas: cada semana el paciente te envía por WhatsApp o email un PDF con su media de calorías, proteína, peso y el detalle de cada comida. Tú no necesitas cuenta ni app.
 >
-> Si te apetece probarla, te activo Premium gratis [X meses], sin compromiso. Y si no te convence, me encantaría saber por qué.
+> Si te parece útil para tu consulta, me encantaría saber qué le añadirías al informe. Y si no te convence, también.
 >
 > Más información: getfotocal.com/colabora/
 >
 > Un saludo,
 > [nombre]
+> fotocal.app@gmail.com
 
-**B. To a blogger or creator** (80 words)
+**B. To a blogger or creator**
 
 > Asunto: Fotocal, para tu artículo sobre apps de calorías
 >
@@ -104,12 +101,13 @@ Checked on 22 Nov 2026 through live search results. **The pages themselves could
 >
 > He leído tu artículo «[título]» y creo que Fotocal podría encajar. Es una app Android, hecha en Madrid, que cuenta las calorías con una foto y conoce los platos españoles: cocido, tortilla, bravas…
 >
-> El plan gratis no pide tarjeta (2 escaneos con IA al día; código de barras sin límite). Si quieres probarla a fondo, te activo Premium gratis [X meses]. Si la mencionas, márcalo como colaboración: no buscamos nada oculto.
+> El plan gratis no pide tarjeta: 2 escaneos con IA al día y código de barras sin límite. Si la pruebas y te convence, tienes capturas, logo, textos y nuestra tabla de calorías de 218 platos para usar libremente.
 >
-> Capturas, logo y textos: getfotocal.com/colabora/
+> Todo está en getfotocal.com/colabora/
 >
 > Gracias,
 > [nombre]
+> fotocal.app@gmail.com
 
 ## 4. Free quick wins we can do ourselves (no money, no accounts created)
 1. **Google Play listing → website.** In Play Console → Store presence → Store settings → Store listing contact details, set "Website" to `https://getfotocal.com/`. In the long description, add "Más información: getfotocal.com" once, as plain text.

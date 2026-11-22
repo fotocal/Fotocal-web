@@ -1658,9 +1658,10 @@ body:has(.calc-sticky.is-on) .lang-hint { bottom: calc(4.6rem + env(safe-area-in
 /* a line of links under a feature page's FAQ (GEO round 22-11-2026) */
 .faq-more { max-width: 46rem; margin: 1.2rem auto 0; text-align: center; font-size: .95rem; line-height: 1.6; color: var(--text-soft); }
 .faq-more a { color: var(--brand-text); text-decoration: underline; text-underline-offset: 2px; }
-/* /colabora/ draft (partners-draft) */
-.colabora .draft-note { padding: .7rem .9rem; border-radius: var(--r-lg); border: 1px dashed var(--coral); }
-.colabora .owner-todo { background: rgba(var(--coral-rgb), .14); padding: 0 .25rem; border-radius: 4px; font-weight: 600; }
+/* /colabora/ (partner page) */
+.colabora .kit-badge { margin: .2rem 0 0; }
+.colabora .play-badge img { display: block; width: 200px; height: auto; }   /* Google's file, unmodified; its own clear space is inside the image */
+.colabora .kit-legal { font-size: .8rem; color: var(--text-soft); }
 .colabora .kit-logo { display: flex; align-items: center; gap: 1rem; }
 .colabora .kit-logo img { border-radius: 20px; }
 .colabora .kit-shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; margin: .4rem 0 .8rem; }

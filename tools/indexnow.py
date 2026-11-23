@@ -8,7 +8,7 @@ Run by .github/workflows/deploy.yml after the deploy. The key is the file
 whose source changed are sent, both languages; a first push or a forced
 history sends the sitemap's URLs instead. Never fails the deploy: IndexNow
 is a hint, and an error here must not take the site down."""
-import glob, json, os, re, subprocess, sys, time, urllib.request
+import glob, json, os, re, subprocess, sys, time, urllib.error, urllib.request
 
 # In the deploy job the script runs from a copy in /tmp (tools/ is not
 # published), so the checkout is found through GITHUB_WORKSPACE.
@@ -71,16 +71,22 @@ def main():
         print("IndexNow: the key file is not live yet; not sent (the deploy is unaffected)")
         return
     body = json.dumps({"host": HOST, "key": k, "keyLocation": key_url, "urlList": urls[:10000]}).encode()
-    for attempt in (1, 2):
-        req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+    # 23-11-2026: two deploys in a row got 403 from api.indexnow.org with the
+    # key file live. Try Bing's own endpoint too, and print the reply body,
+    # which says why a key is refused.
+    for attempt, endpoint in ((1, "https://api.indexnow.org/indexnow"), (2, "https://www.bing.com/indexnow")):
+        req = urllib.request.Request(endpoint, data=body, headers={"Content-Type": "application/json; charset=utf-8"})
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
-                print("IndexNow: %d URL(s) sent, HTTP %d" % (len(urls), r.status))
+                print("IndexNow: %d URL(s) sent to %s, HTTP %d" % (len(urls), endpoint, r.status))
                 return
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "replace")[:300].replace("\n", " ")
+            print("IndexNow: attempt %d (%s) not accepted (HTTP %d) %s" % (attempt, endpoint, e.code, detail))
         except Exception as e:
-            print("IndexNow: attempt %d not accepted (%s)" % (attempt, e))
-            if attempt == 1:
-                time.sleep(60)
+            print("IndexNow: attempt %d (%s) not accepted (%s)" % (attempt, endpoint, e))
+        if attempt == 1:
+            time.sleep(60)
     print("IndexNow: not sent; the deploy is unaffected")
 
 

@@ -318,5 +318,10 @@
   "category": "Calorie counting",
   "glyph": "target",
   "pal": 2
+ },
+ "funcionan-las-apps-para-adelgazar": {
+  "category": "Weight loss",
+  "glyph": "trend",
+  "pal": 3
  }
 }

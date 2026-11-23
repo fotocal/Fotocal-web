@@ -7,7 +7,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 ## /
 
 - `/404.html` — Página no encontrada — Fotocal  _noindex · ES+EN_
-- `/` — Contador de calorías gratis: con una foto, sin pesar nada  _ES+EN_
+- `/` — Fotocal: contador de calorías con foto (IA), gratis  _ES+EN_
 
 ## /features/
 
@@ -60,6 +60,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/fabada-asturiana/` — Calorías de la fabada asturiana: ración y 100 g — Fotocal  _ES+EN_
 - `/calorias/fideua/` — Calorías de la fideuá: ración y 100 g — Fotocal  _ES+EN_
 - `/calorias/gambas-al-ajillo/` — Calorías de las gambas al ajillo: ración y 100 g — Fotocal  _ES+EN_
+- `/calorias/garbanzos-con-espinacas/` — Calorías de los garbanzos con espinacas: ración y 100 g  _ES+EN_
 - `/calorias/gazpacho/` — Calorías del gazpacho: ración y 100 g — Fotocal  _ES+EN_
 - `/calorias/hamburguesa-casera-con-patatas/` — Calorías de la hamburguesa con patatas: plato y 100 g  _ES+EN_
 - `/calorias/huevo-cocido/` — Calorías del huevo cocido: ración y 100 g — Fotocal  _ES+EN_
@@ -74,6 +75,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/marmitako/` — Calorías del marmitako: ración y 100 g — Fotocal  _ES+EN_
 - `/calorias/merluza-en-salsa-verde/` — Calorías de la merluza en salsa verde: ración y 100 g  _ES+EN_
 - `/calorias/migas/` — Calorías de las migas: ración y 100 g — Fotocal  _ES+EN_
+- `/calorias/napolitana-de-chocolate/` — Calorías de la napolitana de chocolate: ración y 100 g  _ES+EN_
 - `/calorias/paella-de-marisco/` — Calorías de la paella de marisco: ración y 100 g — Fotocal  _ES+EN_
 - `/calorias/paella-valenciana/` — Calorías de la paella valenciana: ración, 100 g y marisco  _ES+EN_
 - `/calorias/patatas-bravas/` — Calorías de las patatas bravas: ración y 100 g — Fotocal  _ES+EN_
@@ -95,6 +97,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/calorias/torrijas/` — Calorías de las torrijas: ración y 100 g — Fotocal  _ES+EN_
 - `/calorias/tortilla-de-patatas/` — Calorías de la tortilla de patatas: ración, 100 g, Mercadona  _ES+EN_
 - `/calorias/tortilla-francesa/` — Calorías de la tortilla francesa: ración y 100 g — Fotocal  _ES+EN_
+- `/calorias/tostada-con-aguacate/` — Calorías de la tostada con aguacate: ración y 100 g  _ES+EN_
 - `/calorias/tostada-con-tomate-y-aceite/` — Calorías de la tostada con tomate y aceite: ración y 100 g  _ES+EN_
 
 ## /calculadoras/
@@ -139,6 +142,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/eating-out-without-wrecking-your-diet/` — Comer fuera sin engordar: cómo pedir y qué raciones  _ES+EN_
 - `/blog/emotional-eating/` — Comer por ansiedad: cómo reconocerlo y manejarlo  _ES+EN_
 - `/blog/fiber-the-underrated-nutrient/` — Fibra para adelgazar: cuánta necesitas y dónde está  _ES+EN_
+- `/blog/funcionan-las-apps-para-adelgazar/` — ¿Funcionan las apps para adelgazar? Qué hacen y qué no  _ES+EN_
 - `/blog/healthy-snacks-that-satisfy/` — Snacks saludables que de verdad sacian  _ES+EN_
 - `/blog/high-protein-breakfast-ideas/` — Desayunos altos en proteína: ideas saciantes  _ES+EN_
 - `/blog/high-protein-diet-benefits-and-how-to-start/` — Dieta alta en proteína: beneficios y cómo empezar — Fotocal  _ES+EN_
@@ -150,7 +154,7 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 - `/blog/how-to-count-calories-accurately/` — Cómo contar calorías con precisión: guía para principiantes  _ES+EN_
 - `/blog/how-to-eat-healthy-on-a-budget/` — Comer sano y barato con los básicos del súper  _ES+EN_
 - `/blog/how-to-handle-cravings-without-guilt/` — Cómo controlar los antojos sin sentir culpa  _ES+EN_
-- `/blog/how-to-lose-weight-sustainably/` — Cómo adelgazar sin dietas exprés y de forma sostenible  _ES+EN_
+- `/blog/how-to-lose-weight-sustainably/` — Pérdida de grasa sostenible: cómo adelgazar sin dietas  _ES+EN_
 - `/blog/how-to-read-nutrition-labels/` — Cómo leer las etiquetas nutricionales: guía práctica  _ES+EN_
 - `/blog/how-to-set-your-macros-for-weight-loss/` — Cómo calcular tus macros para perder peso (paso a paso)  _ES+EN_
 - `/blog/how-to-stay-consistent-with-healthy-habits/` — Cómo ser constante con la dieta y los hábitos saludables  _ES+EN_
@@ -211,9 +215,14 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/account-deletion/` — Eliminar la cuenta de Fotocal y tus datos  _ES+EN_
 
+## /colabora/
+
+- `/colabora/` — Colabora con Fotocal: nutricionistas y creadores — Fotocal  _ES+EN_
+
 ## /comparativa/
 
 - `/comparativa/fotocal-vs-cal-ai/` — Fotocal vs Cal AI: comparativa de apps de calorías  _ES+EN_
+- `/comparativa/fotocal-vs-contar-a-mano/` — Contar calorías a mano o con app: Fotocal frente al papel  _ES+EN_
 - `/comparativa/fotocal-vs-myfitnesspal/` — Fotocal vs MyFitnessPal: comparativa de apps de calorías  _ES+EN_
 - `/comparativa/fotocal-vs-yazio/` — Fotocal vs Yazio: comparativa de apps de calorías  _ES+EN_
 - `/comparativa/` — Mejor app para contar calorías en 2026: 4 comparadas  _ES+EN_
@@ -235,4 +244,4 @@ Raíz: https://getfotocal.com/ (español). Inglés bajo /en/ con la misma estruc
 
 - `/widget/` — Calculadora gratis para tu web — Fotocal  _ES+EN_
 
-Total: 174 páginas en español, 174 con copia inglesa (348 URLs servidas).
+Total: 180 páginas en español, 180 con copia inglesa (360 URLs servidas).

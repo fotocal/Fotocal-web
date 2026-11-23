@@ -1,5 +1,5 @@
 {
- "n_ready": 60,
+ "n_ready": 63,
  "n_hand": 218,
  "dishes": {
   "tortilla-de-patatas": {
@@ -781,6 +781,45 @@
    "serving_es": "1 ración",
    "serving_en": "1 serving",
    "group": "platos"
+  },
+  "napolitana-de-chocolate": {
+   "es": "Napolitana de chocolate",
+   "en": "Chocolate napolitana",
+   "en_sub": "napolitana de chocolate",
+   "kcal": 296,
+   "g": 70,
+   "p": 5.2,
+   "c": 31.8,
+   "f": 15.8,
+   "serving_es": "1 unidad",
+   "serving_en": "1 piece",
+   "group": "desayuno"
+  },
+  "garbanzos-con-espinacas": {
+   "es": "Garbanzos con espinacas",
+   "en": "Chickpeas with spinach",
+   "en_sub": "garbanzos con espinacas",
+   "kcal": 413,
+   "g": 314,
+   "p": 18.9,
+   "c": 55.3,
+   "f": 14.8,
+   "serving_es": "1 plato",
+   "serving_en": "1 plate",
+   "group": "platos"
+  },
+  "tostada-con-aguacate": {
+   "es": "Tostada con aguacate",
+   "en": "Avocado toast",
+   "en_sub": "",
+   "kcal": 277,
+   "g": 110,
+   "p": 5.6,
+   "c": 31.9,
+   "f": 15.1,
+   "serving_es": "1 tostada",
+   "serving_en": "1 slice of toast",
+   "group": "desayuno"
   }
  }
 }

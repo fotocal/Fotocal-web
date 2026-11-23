@@ -28,6 +28,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /blog/eating-out-without-wrecking-your-diet/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/emotional-eating/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/fiber-the-underrated-nutrient/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
+/blog/funcionan-las-apps-para-adelgazar/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/healthy-snacks-that-satisfy/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/high-protein-breakfast-ideas/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /blog/high-protein-diet-benefits-and-how-to-start/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -105,6 +106,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /calorias/fabada-asturiana/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/fideua/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/gambas-al-ajillo/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/calorias/garbanzos-con-espinacas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/gazpacho/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/hamburguesa-casera-con-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/huevo-cocido/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
@@ -119,6 +121,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /calorias/marmitako/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/merluza-en-salsa-verde/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/migas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/calorias/napolitana-de-chocolate/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/paella-de-marisco/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/paella-valenciana/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/patatas-bravas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
@@ -140,6 +143,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /calorias/torrijas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/tortilla-de-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/tortilla-francesa/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/calorias/tostada-con-aguacate/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /calorias/tostada-con-tomate-y-aceite/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /colabora/,page,pass,pass,pass,pass,pass,pass,fail,pass,n/a,pass,n/a,n/a
 /comparativa/fotocal-vs-cal-ai/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -177,6 +181,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/blog/eating-out-without-wrecking-your-diet/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/emotional-eating/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/fiber-the-underrated-nutrient/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
+/en/blog/funcionan-las-apps-para-adelgazar/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/healthy-snacks-that-satisfy/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/high-protein-breakfast-ideas/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
 /en/blog/high-protein-diet-benefits-and-how-to-start/,post,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a
@@ -254,6 +259,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/calorias/fabada-asturiana/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/fideua/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/gambas-al-ajillo/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/en/calorias/garbanzos-con-espinacas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/gazpacho/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/hamburguesa-casera-con-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/huevo-cocido/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
@@ -268,6 +274,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/calorias/marmitako/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/merluza-en-salsa-verde/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/migas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/en/calorias/napolitana-de-chocolate/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/paella-de-marisco/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/paella-valenciana/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/patatas-bravas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
@@ -289,6 +296,7 @@ page,type,title_len,title_has_kw,one_h1,answer_first,desc_len,headings,images,in
 /en/calorias/torrijas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/tortilla-de-patatas/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/tortilla-francesa/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+/en/calorias/tostada-con-aguacate/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/calorias/tostada-con-tomate-y-aceite/,dish,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
 /en/colabora/,page,pass,pass,pass,pass,pass,pass,fail,pass,n/a,pass,n/a,n/a
 /en/comparativa/fotocal-vs-cal-ai/,compare,pass,pass,pass,pass,pass,pass,pass,pass,n/a,pass,pass,n/a

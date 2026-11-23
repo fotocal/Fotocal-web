@@ -104,7 +104,8 @@
    "weight-loss-plateaus",
    "the-truth-about-starvation-mode",
    "why-the-scale-is-not-the-whole-story",
-   "maintaining-weight-loss"
+   "maintaining-weight-loss",
+   "funcionan-las-apps-para-adelgazar"
   ],
   "body": {
    "en": "<p>Most weight-loss advice stops at the moment the scale reaches the number. These five articles are about everything after the first month: the week the scale refuses to move, the story about “starvation mode”, the morning the number jumps for no reason, and what maintenance asks of you once nobody is watching. They are written for someone who has lost weight before and put it back on, which is most people who have ever dieted.</p>\n<p>Read them in order. The first sets the pace that makes the rest possible; the second and third deal with the two stalls that make people quit; the fourth is about reading the scale without being ruled by it; the last is the plan for the day you reach your goal, which is the day most plans end and the weight starts coming back.</p>",
@@ -130,6 +131,10 @@
    "maintaining-weight-loss": {
     "en": "What the people who keep it off actually do, and how to move from a deficit to maintenance without the rebound.",
     "es": "Qué hace de verdad la gente que no lo recupera, y cómo pasar del déficit al mantenimiento sin el rebote."
+   },
+   "funcionan-las-apps-para-adelgazar": {
+    "es": "Lo que una app para adelgazar hace (registrar, calcular el objetivo, enseñar la tendencia) y lo que ninguna puede hacer, con cinco preguntas para elegir.",
+    "en": "What a weight-loss app does (log, set the target, show the trend) and what none can do, with five questions for choosing one."
    }
   }
  },

@@ -3324,6 +3324,165 @@
     }
    ],
    "updated": "2026-11-16"
+  },
+  {
+   "slug": "napolitana-de-chocolate",
+   "app_id": "napolitana-de-chocolate",
+   "name": "napolitana de chocolate",
+   "article": "la",
+   "aliases": [
+    "napolitana",
+    "napolitana rellena de chocolate"
+   ],
+   "status": "ready",
+   "published": "2026-11-23",
+   "compare": [
+    "croissant",
+    "palmera-de-chocolate",
+    "donut-glaseado",
+    "ensaimada"
+   ],
+   "blog": [
+    "calorias-desayuno-espanol",
+    "added-sugar-vs-natural-sugar",
+    "high-protein-breakfast-ideas"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La napolitana de Fotocal es una pieza de {g} g con {kcal} kcal: la de panadería o cafetería, de hojaldre relleno de chocolate. Las hay más pequeñas, de bollería envasada, y más grandes, de obrador; para cualquiera de ellas, cuenta unas {per100} kcal por cada 100 g.</p>",
+   "drivers": "<p>Casi la mitad de las calorías vienen de la grasa del hojaldre: {fat} g en la pieza. Los hidratos, {carbs} g, salen de la harina y del chocolate. La proteína es poca, {protein} g, y por eso sacia poco para lo que suma.</p>",
+   "lighter": "<p>Tiene más calorías que un croissant de la app, {kcal:croissant} kcal, porque pesa más y lleva chocolate, y algo menos que una palmera de chocolate, {kcal:palmera-de-chocolate}. Un donut glaseado se queda en {kcal:donut-glaseado} y una ensaimada en {kcal:ensaimada}. Si buscas un desayuno de bollería más ligero, media napolitana son {kcal/2} kcal.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una napolitana de chocolate?",
+     "a": "{kcal} kcal una pieza de {g} g: {carbs} g de hidratos, {fat} g de grasa y {protein} g de proteína. Por 100 g, {per100} kcal."
+    },
+    {
+     "q": "¿Qué engorda más, una napolitana o un croissant?",
+     "a": "La napolitana: {kcal} kcal frente a {kcal:croissant} del croissant de la app. Pesa más y lleva el relleno de chocolate."
+    },
+    {
+     "q": "¿Cuántas calorías tienen 100 g de napolitana de chocolate?",
+     "a": "{per100} kcal. Es de los dulces con más calorías por gramo: mucha grasa y poca agua."
+    },
+    {
+     "q": "¿Se puede comer una napolitana a dieta?",
+     "a": "Sí, si cabe en las calorías del día. {kcal} kcal son casi un desayuno entero, con solo {protein} g de proteína, así que llena poco: acompañarla de un café con leche o de fruta ayuda a aguantar hasta la comida."
+    }
+   ],
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la napolitana de chocolate por 100 g y por pieza",
+     "html": "<p>La napolitana de chocolate tiene {per100} kcal por cada 100 g, y la pieza de {g} g, {kcal} kcal. Media napolitana son {kcal/2} kcal. Con un café con leche de la app, {kcal:cafe-con-leche} kcal, el desayuno sube de las 380 kcal.</p>"
+    }
+   ],
+   "updated": "2026-11-23"
+  },
+  {
+   "slug": "garbanzos-con-espinacas",
+   "app_id": "garbanzos-con-espinacas",
+   "name": "garbanzos con espinacas",
+   "article": "los",
+   "aliases": [
+    "espinacas con garbanzos",
+    "potaje de garbanzos con espinacas"
+   ],
+   "status": "ready",
+   "published": "2026-11-23",
+   "compare": [
+    "potaje-de-garbanzos",
+    "lentejas-estofadas",
+    "ensalada-de-garbanzos",
+    "cocido-madrileno"
+   ],
+   "blog": [
+    "fiber-the-underrated-nutrient",
+    "calorias-menu-del-dia",
+    "best-foods-for-weight-loss"
+   ],
+   "calc": "macros",
+   "portion": "<p>La ración de Fotocal es un plato de {g} g con {kcal} kcal: 150 g de garbanzos cocidos, 135 g de espinacas, 15 g de pan, un diente de ajo y 10 g de aceite de oliva. Es la receta de casa, con el pan y el ajo majados para espesar. Un plato hondo bien lleno puede pasar de 400 g: cuenta {per100} kcal por cada 100 g.</p>",
+   "drivers": "<p>Los garbanzos ponen casi todo: unas 246 kcal, la mayor parte de los hidratos ({carbs} g) y de la proteína ({protein} g). El aceite suma unas 88 kcal y el pan, unas 40. Las espinacas no llegan a 35 kcal pero dan volumen, y entre los garbanzos y la verdura el plato reúne unos 15 g de fibra.</p>",
+   "lighter": "<p>Es más ligero que el potaje de garbanzos de la app, {kcal:potaje-de-garbanzos} kcal, que es un plato más grande, y tiene algo más que unas lentejas estofadas, {kcal:lentejas-estofadas}. Lo que más mueve la cuenta es el aceite: con 5 g en lugar de 10 ahorras unas 44 kcal. Un cocido madrileño completo llega a {kcal:cocido-madrileno} kcal.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene un plato de garbanzos con espinacas?",
+     "a": "{kcal} kcal el plato de {g} g que usa Fotocal: {carbs} g de hidratos, {protein} g de proteína y {fat} g de grasa."
+    },
+    {
+     "q": "¿Engordan los garbanzos con espinacas?",
+     "a": "No más que cualquier plato de {kcal} kcal. Por 100 g tienen {per100} kcal, y con su fibra y su proteína sacian mucho para lo que suman."
+    },
+    {
+     "q": "¿Cuánta proteína tienen los garbanzos con espinacas?",
+     "a": "{protein} g por plato, casi toda de los garbanzos. Es una buena comida vegetariana si no le falta ración."
+    },
+    {
+     "q": "¿Qué tiene más calorías, los garbanzos con espinacas o las lentejas?",
+     "a": "Con las raciones de la app, los garbanzos con espinacas: {kcal} kcal frente a {kcal:lentejas-estofadas} de las lentejas estofadas. La diferencia está sobre todo en el aceite y el pan."
+    }
+   ],
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de los garbanzos con espinacas por 100 g y por ración",
+     "html": "<p>Los garbanzos con espinacas tienen {per100} kcal por cada 100 g, y el plato de {g} g, {kcal} kcal. Por ingredientes: los garbanzos cocidos (150 g), unas 246 kcal; el aceite (10 g), unas 88; el pan (15 g), unas 40; las espinacas (135 g), unas 31; y el ajo, unas 7.</p><p>Media ración, como primer plato de un menú, son {kcal/2} kcal. Un plato grande de 450 g, {per100*4.5}.</p>"
+    }
+   ],
+   "updated": "2026-11-23"
+  },
+  {
+   "slug": "tostada-con-aguacate",
+   "app_id": "tostada-con-aguacate",
+   "name": "tostada con aguacate",
+   "article": "la",
+   "aliases": [
+    "tostada de aguacate",
+    "pan con aguacate"
+   ],
+   "status": "ready",
+   "published": "2026-11-23",
+   "compare": [
+    "tostada-con-tomate-y-aceite",
+    "tostada-de-aguacate-y-huevo",
+    "pan-integral-con-tomate",
+    "tostada-con-mantequilla-y-mermelada"
+   ],
+   "blog": [
+    "calorias-desayuno-espanol",
+    "high-protein-breakfast-ideas",
+    "dietary-fat-how-much-and-which-kinds"
+   ],
+   "calc": "calorias-diarias",
+   "portion": "<p>La tostada de Fotocal pesa {g} g y tiene {kcal} kcal: 50 g de pan tostado, 55 g de aguacate y 5 g de aceite de oliva por encima. Es una rebanada de pan de barra o de molde grande con una capa generosa de aguacate. Si pones más aguacate, cuenta 160 kcal por cada 100 g de aguacate.</p>",
+   "drivers": "<p>El pan pone la mitad: unas 145 kcal y casi todos los hidratos ({carbs} g). El aguacate suma unas 88 kcal y el chorrito de aceite, unas 44. La grasa, {fat} g, viene del aguacate y del aceite, casi toda insaturada. La proteína es poca: {protein} g.</p>",
+   "lighter": "<p>Tiene más calorías que la tostada con tomate y aceite de la app, {kcal:tostada-con-tomate-y-aceite} kcal, por el aguacate. La tostada de aguacate con huevo, {kcal:tostada-de-aguacate-y-huevo} kcal, suma casi lo mismo y tiene el doble de proteína: sacia más. Sin el aceite de encima, la tostada con aguacate se queda en unas 233 kcal.</p>",
+   "faq": [
+    {
+     "q": "¿Cuántas calorías tiene una tostada con aguacate?",
+     "a": "{kcal} kcal la tostada de {g} g que usa Fotocal: 50 g de pan, 55 g de aguacate y 5 g de aceite. Lleva {carbs} g de hidratos, {fat} g de grasa y {protein} g de proteína."
+    },
+    {
+     "q": "¿Cuántas calorías tiene el aguacate de una tostada?",
+     "a": "Los 55 g de aguacate de la tostada de la app son unas 88 kcal: el aguacate tiene 160 kcal por 100 g. Si pones medio aguacate entero, la cuenta sube."
+    },
+    {
+     "q": "¿Es buena la tostada con aguacate para adelgazar?",
+     "a": "Cabe en un desayuno de dieta: {kcal} kcal, con grasa insaturada y algo de fibra. Le falta proteína ({protein} g); con un huevo encima, como la tostada de aguacate y huevo de la app, sacia más."
+    },
+    {
+     "q": "¿Qué tiene más calorías, la tostada con aguacate o con tomate?",
+     "a": "La de aguacate: {kcal} kcal frente a {kcal:tostada-con-tomate-y-aceite} de la tostada con tomate y aceite de la app."
+    }
+   ],
+   "sections": [
+    {
+     "id": "cien-gramos",
+     "h2": "Calorías de la tostada con aguacate por 100 g y por tostada",
+     "html": "<p>La tostada con aguacate tiene {per100} kcal por cada 100 g, y la tostada entera de {g} g, {kcal} kcal. Por partes: el pan tostado (50 g), unas 145 kcal; el aguacate (55 g), unas 88; y el aceite (5 g), unas 44. Dos tostadas son {kcal*2} kcal.</p>"
+    }
+   ],
+   "updated": "2026-11-23"
   }
  ]
 }

@@ -60,7 +60,10 @@
   "marmitako": "Basque tuna and potato stew",
   "merluza-en-salsa-verde": "hake in green parsley sauce",
   "hamburguesa-casera-con-patatas": "homemade beef burger with fries",
-  "paella-de-marisco": "seafood paella"
+  "paella-de-marisco": "seafood paella",
+  "napolitana-de-chocolate": "chocolate-filled puff pastry, the Spanish pain au chocolat",
+  "garbanzos-con-espinacas": "chickpeas with spinach, an Andalusian stew",
+  "tostada-con-aguacate": "avocado toast with olive oil"
  },
  "group_of": {
   "tortilla-de-patatas": "platos",
@@ -122,7 +125,10 @@
   "marmitako": "platos",
   "merluza-en-salsa-verde": "platos",
   "hamburguesa-casera-con-patatas": "platos",
-  "paella-de-marisco": "platos"
+  "paella-de-marisco": "platos",
+  "napolitana-de-chocolate": "desayuno",
+  "garbanzos-con-espinacas": "platos",
+  "tostada-con-aguacate": "desayuno"
  },
  "groups": {
   "platos": {
@@ -446,6 +452,21 @@
    "en": "seafood paella",
    "es": true,
    "title": "Calories in Seafood Paella (Paella de Marisco)"
+  },
+  "napolitana-de-chocolate": {
+   "en": "chocolate napolitana",
+   "es": true,
+   "title": "Calories in a Chocolate Napolitana (Pain au Chocolat)"
+  },
+  "garbanzos-con-espinacas": {
+   "en": "chickpeas with spinach",
+   "es": true,
+   "title": "Calories in Chickpeas with Spinach (Garbanzos con Espinacas)"
+  },
+  "tostada-con-aguacate": {
+   "en": "avocado toast",
+   "es": false,
+   "title": "Calories in Avocado Toast: per Slice and per 100 g"
   }
  }
 }

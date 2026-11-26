@@ -10,62 +10,62 @@
   ],
   "index.html": {
     "es": {
-      "title": "Fotocal: contador de calorías con foto (IA), gratis",
-      "desc": "Haz una foto al plato y Fotocal cuenta calorías y macros en segundos. Gratis, sin tarjeta: 2 escaneos con IA, 1 por voz al día; código de barras ilimitado."
+      "title": "Fotocal – Contador de calorías con IA y foto para Android",
+      "desc": "Fotocal app: haz una foto al plato y cuenta calorías y macros. Gratis, sin tarjeta: 2 escaneos con IA, 1 por voz al día; código de barras ilimitado."
     },
     "en": {
-      "title": "Fotocal: photo calorie counter app with AI, free",
-      "desc": "Snap your plate and Fotocal counts calories and macros in seconds. Free, no card: 2 AI scans and 1 voice log a day; unlimited barcode scanner and coach."
+      "title": "Fotocal – AI Photo Calorie Counter App for Android",
+      "desc": "Fotocal app: snap your plate and count calories and macros in seconds. Free, no card: 2 AI scans, 1 voice log a day; unlimited barcode scanner and coach."
     }
   },
   "ai/index.html": {
     "es": {
       "title": "Coach de nutrición con IA gratis: pregunta qué comer hoy",
-      "desc": "Coach Kal lee tu diario y te dice qué comer, si un plato te encaja hoy y cómo ajustar tu dieta. Mensajes sin límite en todos los planes, gratis incluido."
+      "desc": "Coach Kal, el coach de Fotocal app, lee tu diario y te dice qué comer y si un plato te encaja hoy. Mensajes sin límite en todos los planes, también gratis."
     },
     "en": {
       "title": "Free AI Nutrition Coach: Ask What to Eat Today",
-      "desc": "Coach Kal reads your diary and answers what to eat, whether a meal fits today and how to adjust your diet. In your language, no message limit, any plan."
+      "desc": "Coach Kal, the coach in the Fotocal app, reads your diary and answers what to eat and whether a meal fits today. No message limit, on any plan."
     }
   },
   "features/index.html": {
     "es": {
       "title": "Funciones de la app para contar calorías: foto, voz, código",
-      "desc": "Foto, código de barras, voz, carta, Coach Kal e informe semanal, en pantallas reales. Gratis sin tarjeta: 2 escaneos con IA al día, el resto sin límite."
+      "desc": "Fotocal app en pantallas reales: foto, código de barras, voz, Coach Kal e informe semanal. Gratis sin tarjeta: 2 escaneos con IA al día, lo demás libre."
     },
     "en": {
       "title": "Count Calories from a Photo: 8 Fotocal Features, Free",
-      "desc": "Photo scan, barcode, voice logging, Coach Kal and a weekly report, on real screens. Free, no card: 2 AI scans and 1 voice log a day, the rest unlimited."
+      "desc": "The Fotocal app on real screens: photo scan, barcode, voice, Coach Kal, weekly report. Free, no card: 2 AI scans and 1 voice log a day, the rest unlimited."
     }
   },
   "features/scan-food/index.html": {
     "es": {
       "title": "Contar calorías con foto: escáner de comida con IA gratis",
-      "desc": "Escanea tu comida con la cámara y obtén calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA al día."
+      "desc": "Escanea tu comida con la cámara de Fotocal app: calorías, macros e ingredientes en segundos, sin pesar. Gratis, sin tarjeta: 2 escaneos con IA al día."
     },
     "en": {
       "title": "AI Food Scanner: Count Calories from a Photo (Free)",
-      "desc": "AI food scanner for Android: point the camera at your plate and get calories, macros and ingredients. Free, no card: 2 AI scans a day."
+      "desc": "AI food scanner in the Fotocal app (Android): point the camera at your plate and get calories, macros and ingredients. Free, no card: 2 AI scans a day."
     }
   },
   "features/scan-barcode/index.html": {
     "es": {
       "title": "Escáner de código de barras de calorías y alimentos, gratis",
-      "desc": "Escanea el código de barras de cualquier producto y mira sus calorías, su puntuación sobre 100 y si choca con tus alergias. Sin límite y gratis en Fotocal."
+      "desc": "Escanea el código de barras de un producto y mira sus calorías, su puntuación sobre 100 y si choca con tus alergias. Sin límite y gratis en Fotocal app."
     },
     "en": {
       "title": "Free Barcode Scanner Calorie Counter: Scan Any Food",
-      "desc": "Scan any product's barcode and see its calories, macros, a score out of 100 and whether it clashes with your allergies. Free and unlimited on any plan."
+      "desc": "Scan any product's barcode and see its calories, macros, a score out of 100 and any clash with your allergies. Free and unlimited in the Fotocal app."
     }
   },
   "features/voice-logging/index.html": {
     "es": {
       "title": "Contar calorías por voz, gratis: di lo que has comido",
-      "desc": "Cuenta calorías por voz: di «dos huevos y una tostada» y Fotocal lo registra con sus macros. Gratis: 1 registro por voz al día, sin tarjeta."
+      "desc": "Cuenta calorías por voz: di «dos huevos y una tostada» y Fotocal app lo registra con sus macros. Gratis: 1 registro por voz al día, sin tarjeta."
     },
     "en": {
       "title": "Voice Calorie Tracker, Free: Just Say What You Ate",
-      "desc": "A voice calorie tracker: say “two eggs and toast” and Fotocal logs each food with calories and macros. Free: 1 voice log a day, no card."
+      "desc": "A voice calorie tracker: say “two eggs and toast” and the Fotocal app logs each food with calories and macros. Free: 1 voice log a day, no card."
     }
   },
   "features/recipe/index.html": {
@@ -81,11 +81,11 @@
   "features/weight-loss/index.html": {
     "es": {
       "title": "App para adelgazar contando calorías con una foto",
-      "desc": "Una app para adelgazar contando calorías: objetivo realista, déficit que puedas sostener y cada comida registrada con una foto. Gratis: 2 escaneos al día."
+      "desc": "Fotocal app para adelgazar contando calorías: objetivo realista, déficit que puedas sostener y cada comida con una foto. Gratis: 2 escaneos al día."
     },
     "en": {
       "title": "Weight Loss Calorie Counter App: Log Meals by Photo",
-      "desc": "A weight loss calorie counter app: a realistic goal, a deficit you can keep and every meal logged with a photo. Free: 2 AI scans a day, no card."
+      "desc": "Fotocal, a weight loss calorie counter app: a realistic goal, a deficit you can keep and every meal logged with a photo. Free: 2 AI scans a day, no card."
     }
   },
   "features/nutrition-diet/index.html": {
@@ -131,11 +131,11 @@
   "about/index.html": {
     "es": {
       "title": "Sobre Fotocal: quién hace el contador de calorías",
-      "desc": "Una persona en Madrid, una app y ninguna historia que venderte. Quién hace Fotocal, por qué existe, de qué vive y qué no hará nunca con tus datos."
+      "desc": "Una persona en Madrid, una app y ninguna historia que venderte. Quién hace Fotocal app, por qué existe, de qué vive y qué no hará nunca con tus datos."
     },
     "en": {
       "title": "About Fotocal: Who Makes the Calorie Counter",
-      "desc": "One person in Madrid, one app and no story to sell you. Who makes Fotocal, why it exists, what it lives on and what it will never do with your data."
+      "desc": "One person in Madrid, one app and no story to sell you. Who makes the Fotocal app, why it exists, how it earns money and what it never does with your data."
     }
   },
   "contact/index.html": {
@@ -191,11 +191,11 @@
   "faq/index.html": {
     "es": {
       "title": "Preguntas frecuentes del contador de calorías Fotocal",
-      "desc": "¿Es gratis? ¿Funciona sin internet? ¿Qué precisión tiene? ¿Sirve en iPhone? Respuestas honestas a lo que más preguntan los usuarios de Fotocal en España."
+      "desc": "¿Es gratis? ¿Funciona sin internet? ¿Qué precisión tiene? ¿Sirve en iPhone? Respuestas honestas a lo que más preguntan sobre Fotocal app en España."
     },
     "en": {
       "title": "Fotocal FAQ: Is It Free? How Accurate Is It?",
-      "desc": "Is it free? Does it work offline? How accurate is it? Does it run on iPhone? Honest answers to what Fotocal users ask most, checked against the app itself."
+      "desc": "Is it free? Does it work offline? How accurate is it? Does it run on iPhone? Honest answers to what Fotocal app users ask most, checked against the app."
     }
   }
 }

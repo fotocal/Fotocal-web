@@ -300,7 +300,7 @@ def ld_block(obj):
     return '  <script type="application/ld+json">%s</script>' % json.dumps(obj, ensure_ascii=False)
 
 
-ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Fotocal", "url": SITE,
+ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Fotocal", "alternateName": "Fotocal app", "url": SITE,
        "logo": {"@type": "ImageObject", "url": SITE + "assets/img/logo.png"}}
 
 APP_ASIDE = """
@@ -407,10 +407,20 @@ def dish_page(d, ready_by_app):
     pub = d.get("published", date.today().isoformat())
     upd = d.get("updated", pub)
 
-    title = d.get("title") or "Calorías %s %s: ración y 100 g" % (de(art), name)
-    if len(title) + len(" — Fotocal") <= TITLE_MAX:
-        title += " — Fotocal"
-    assert len(title) <= TITLE_MAX, (d["slug"], len(title), title)
+    # Title = the H1 plus the figure (owner's decision 26-11-2026, after the
+    # Search Console review: a number in the title, 51-60 characters, starting
+    # with the H1 so Google has no reason to rewrite it). The longest form
+    # that fits is used. The hand-written d["title"] of six dishes is kept in
+    # the data but no longer used.
+    h1 = "Calorías %s %s" % (de(art), name)
+    lab = re.sub(r"\s*\(.*\)", "", fig["serving_label"]).strip()
+    unit = lab[2:] if re.fullmatch(r"1 [a-záéíóúñ]+", lab) else "ración"
+    forms = ["%s: %s kcal por %s y %s por 100 g" % (h1, n(fig["kcal"]), unit, n(fig["per100"])),
+             "%s: %s kcal por %s (%s g)" % (h1, n(fig["kcal"]), unit, n(g)),
+             "%s: %s kcal por %s" % (h1, n(fig["kcal"]), unit),
+             "%s: %s kcal" % (h1, n(fig["kcal"]))]
+    title = next(t for t in forms if len(t) <= TITLE_MAX)
+    assert 46 <= len(title) <= TITLE_MAX, (d["slug"], len(title), title)
 
     macros = "%s g de proteínas, %s g de hidratos y %s g de grasas" % (n(fig["protein"]), n(fig["carbs"]), n(fig["fat"]))
     desc = fill(d["desc"], d, fig) if d.get("desc") else None

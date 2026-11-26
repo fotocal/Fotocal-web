@@ -149,6 +149,15 @@ never does either, so it does not affect you.
 
 ## 3b · New dish pages (2–3 a week while indexing catches up)
 
+> **PAUSED by the owner on 26 Nov 2026, for four weeks.** Add **no** new
+> dish pages on any run dated before **28 Dec 2026** (so none on 30 Nov,
+> 7, 14 or 21 Dec). Reason: "Discovered – currently not indexed" stood at
+> 168 and rising on 23 Nov; the queue needs to drain before more URLs are
+> added. The post and the refresh continue as normal. Write "dish pages
+> paused until 28 Dec" in the weekly log and in the owner's line. From
+> 28 Dec, resume only if the owner has not extended the pause (he reviews
+> the English twins on 20 Dec).
+
 **Since 9 Nov 2026 (MASTER PROMPT v3, section C): 2–3 new dish pages a
 week, only from `docs/seo/dish-priority.txt`,** until Search Console shows
 "not indexed" below about 25 % of URLs (it was 90 of 220 known on

@@ -34,6 +34,10 @@ def changed_urls(before, after):
         out = subprocess.run(["git", "diff", "--name-only", before, after], cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
     except Exception:
         return None
+    # A push that replaces the key file (26-11-2026) sends the whole sitemap,
+    # so the new key is tested, and used, straight away.
+    if any(re.fullmatch(r"[0-9a-f]{32}\.txt", f) for f in out):
+        return None
     live = set(sitemap_urls())
     urls = set()
     for f in out:
